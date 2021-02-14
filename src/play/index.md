@@ -6,6 +6,8 @@ permalink: /play/
 
 # Install Quilt for Minecraft Launcher
 
+<img class="logo right fshadow" alt="Minecraft Logo" src="/assets/img/launchers/minecraft.png" />
+
 The Minecraft version can be selected in the installer, this download works for
 every version we support.
 

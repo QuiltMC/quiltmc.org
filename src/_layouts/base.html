@@ -17,7 +17,7 @@
         {% feed_meta %}
     </head>
     <body class="page">
-        <nav>
+        <nav class="main">
             <div class="container">
                 <a class="logo" href="{{ site.baseurl }}/">
                     <img src="{{ "/assets/img/quilt_square_colors.svg" | relative_url }}"
@@ -29,10 +29,10 @@
                     <img src="/assets/img/hamburger.svg" class="hamburger" alt="Expand Navigation">
                 </a>
                 <div class="links">
-                    <a href="/play/">Play</a>
-                    <a href="/dev/">Develop</a>
-                    <a href="/blog/">Blog</a>
-                    <a href="/community/">Community</a>
+                    {% include nav_link.html text="Play" href="/play/" %}
+                    {% include nav_link.html text="Develop" href="/dev/" %}
+                    {% include nav_link.html text="Blog" href="/blog/" %}
+                    {% include nav_link.html text="Community" href="/community/" %}
                     <a href="#">Wiki</a>
                 </div>
             </div>

@@ -77,8 +77,14 @@ main {
     .logo {
         width: 96px;
         height: 96px;
-        box-shadow: 0px 2px 4px $shadow-color;
-        border-radius: 4px;
+
+        &.shadow {
+            box-shadow: 0px 2px 4px $shadow-color;
+            border-radius: 4px;
+        }
+        &.fshadow {
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .4));
+        }
     }
 }
 
@@ -147,7 +153,7 @@ a.button {
 $nav-logo-height: $logo-size - 8px;
 $nav-link-height: $logo-size - 16px;
 
-nav {
+nav.main {
     height: $nav-height;
     position: fixed;
     top: 0;
@@ -167,7 +173,11 @@ nav {
         transition: background-color 0.2s;
 
         &:hover {
-            background-color: $shadow-color;
+            background-color: rgba(0.0, 0.0, 0.0, 0.3);
+            color: $bg-color;
+        }
+        &:active, &.active {
+            background-color: rgba(0.0, 0.0, 0.0, 0.42);
             color: $bg-color;
         }
     }
@@ -230,6 +240,49 @@ nav {
         }
     }
 }
+
+// Tab navigation
+
+$tabs-border-rad: 6px;
+nav.tabs {
+    display: inline-block;
+    border-radius: $tabs-border-rad;
+    box-shadow: 0px 2px 4px $shadow-color;
+
+    a {
+        margin: 0px;
+        padding: 8px 8px;
+        display: inline-block;
+        float: left;
+
+        font-size: $nav-link-height;
+
+        color: $bg-color;
+        background-color: $button-color;
+        text-decoration: none;
+
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: adjust-color($button-color, $lightness: -8%);
+            color: $bg-color;
+        }
+        &:active {
+            background-color: adjust-color($button-color, $lightness: -16%);
+        }
+        &.active { background-color: $primary; }
+        &:first-child { border-radius: $tabs-border-rad 0px 0px $tabs-border-rad; }
+        &:last-child { border-radius: 0px $tabs-border-rad $tabs-border-rad 0px; }
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
 
 // Blog stuff
 
