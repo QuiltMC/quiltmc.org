@@ -1,0 +1,26 @@
+title: The Quilt Project
+short_title: Quilt
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
+source: "src/"
+
+# Social media handles
+twitter_username: quilt_mc
+github_username:  QuiltMC
+gitlab_username: quiltmc
+twitch_username: quiltmc
+discord_invite: https://discord.gg/aaaaaaaa
+
+plugins:
+  - jekyll-feed
+
+collections:
+  posts:
+    permalink: /blog/:year/:month/:day/:title:output_ext
+
+sass:
+    sass_dir: _sass

@@ -1,0 +1,268 @@
+---
+---
+// Font
+$font-stack: 'Roboto', sans-serif;
+$font-size:  12pt;
+
+// Colors
+$primary: #8d33cc;
+$primary-light: #d5b9e9;
+$secondary: #a39168;
+$body-color: #666;
+$header-color: #555;
+$fade-color: #888;
+$light-color: #aaa;
+$lighter-color: #f9f9f9;
+$bg-color: #fff;
+$shadow-color: rgba(0, 0, 0, 0.32);
+
+// Misc
+$body-width: 800px; // Minimum width of the page's main content. Limited for readability.
+$logo-size: 32px;
+$nav-height: $logo-size + 16px;
+$footer-height: 64px;
+
+$mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
+$logo-hide-width: 460px; // determines when the logo text hides to save space.
+$nav-width: 400px; // determines the screen width at which we collapse the nav into a dropdown.
+
+
+// Main CSS
+
+body {
+    position: relative;
+    min-height: 82vh;
+    padding-top: $nav-height;
+    padding-bottom: $footer-height;
+
+    font-family: $font-stack;
+    font-size: $font-size;
+    color: $body-color;
+    background-color: $bg-color;
+}
+@media (min-width: $mobile-width) { // full size
+    .container {
+        width: $body-width;
+        margin: auto auto;
+    }
+}
+@media (max-width: $mobile-width) { // mobile
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-stack;
+    color: $header-color;
+}
+
+
+a {
+    color: $primary;
+    transition: color 0.2s;
+}
+a:hover { color: $primary-light; }
+a:active { color: $secondary; }
+
+.container {
+    padding: 0 0;
+    max-width: 800px;
+}
+
+main {
+    padding: 10px 30px;
+
+    .logo {
+        width: 96px;
+        height: 96px;
+        box-shadow: 0px 2px 4px $shadow-color;
+        border-radius: 4px;
+    }
+}
+
+.right { float: right; }
+
+$footer-link-color: adjust-color($secondary, $lightness: -13%);
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    border-style: solid;
+    border-color: $light-color;
+    border-width: 0px;
+    border-top-width: 1px;
+    color: adjust-color($body-color, $lightness: 6%);
+
+    p {
+        margin: 4px 30px;
+    }
+    a { color: $footer-link-color; }
+    a:hover { color: adjust-color($footer-link-color, $lightness: -10%); }
+    a:active { color: adjust-color($footer-link-color, $lightness: -30%); }
+}
+
+
+// Buttons
+
+$button-color: adjust-color($secondary, $lightness: -8%);
+
+.button {
+    color: $bg-color;
+    background-color: $button-color;
+    display: inline-block;
+    margin: 4px 4px;
+
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px $shadow-color;
+
+    transition: background-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        background-color: adjust-color($button-color, $lightness: -4%);
+        box-shadow: 0px 3px 6px $shadow-color;
+    }
+    &:active { background-color: adjust-color($button-color, $lightness: -15%); }
+
+    &.primary {
+        background-color: $primary;
+        &:hover {
+            background-color: adjust-color($primary, $lightness: 4%);
+            box-shadow: 0px 3px 6px $shadow-color;
+        }
+        &:active { background-color: adjust-color($primary, $lightness: -15%); }
+    }
+}
+a.button {
+    text-decoration: none;
+    &:hover, &:active { color: $bg-color; }
+}
+
+
+// Nav Bar
+
+$nav-logo-height: $logo-size - 8px;
+$nav-link-height: $logo-size - 16px;
+
+nav {
+    height: $nav-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: $primary;
+    box-shadow: 0px 2px 6px $shadow-color;
+
+    a {
+        padding: 14px 8px;
+        display: inline-block;
+        font-size: $nav-link-height;
+        color: $bg-color;
+        text-decoration: none;
+        vertical-align: middle;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $shadow-color;
+            color: $bg-color;
+        }
+    }
+
+    a.logo {
+        margin-left: -8px;
+        font-size: $nav-logo-height;
+        padding: 9px 8px 8px 8px;
+
+        img {
+            margin-top: -3px;
+            border-radius: 3px;
+            // background-color: adjust-color($primary-light, $lightness: 13%);
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .4));
+            vertical-align: middle;
+            width: $logo-size;
+            height: $logo-size;
+        }
+    }
+
+    a.nav-expand {
+        display: none;
+        float: right;
+    }
+
+    .links {
+        float: right;
+    }
+}
+
+@media (min-width: $nav-width) and (max-width: $logo-hide-width) {
+    .logo-text {
+        display: none;
+    }
+}
+@media (max-width: $nav-width) {
+    nav {
+        a.nav-expand {
+            display: block;
+            padding: 7px 8px 8px 8px;
+
+            img.hamburger {
+                display: inline;
+                width: 28px;
+                height: $logo-size;
+                vertical-align: middle;
+            }
+        }
+        .links {
+            visibility: hidden;
+            background-color: adjust-color($primary, $lightness: -10%);
+            margin: 0px -16px;
+            float: none;
+            a {
+                display: block;
+            }
+        }
+        a.nav-expand:hover + .links, .links:hover {
+            visibility: visible;
+        }
+    }
+}
+
+// Blog stuff
+
+.post-info {
+    color: $fade-color;
+}
+
+
+// Code blocks and other related things
+
+.block {
+    box-shadow: 0px 1px 3px $shadow-color;
+    border-radius: 6px;
+
+    background-color: $lighter-color;
+}
+
+/// styles both highlight figures and ```foo```
+figure, div.highlight {
+    @extend .block;
+    overflow-y: auto;
+    display: block;
+    margin: 0px;
+    padding: 4px 32px;
+}
+
+/// inline code blocks: `foo`
+p code {
+    @extend .block;
+    display: inline-block;
+    font-size: $font-size - 1pt;
+    padding: 2px 4px;
+}
+
+@import "syntax.css";
+
