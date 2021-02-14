@@ -4,15 +4,15 @@ title: Gradle Snippets
 js: true
 ---
 
-<div data-controller="snippets">
+<div data-controller="gradle">
 
-<h1>Gradle Snippets for Minecraft <span data-snippets-target="mcvlabel">(loading...)</span></h1>
+<h1>Gradle Snippets for Minecraft <span data-gradle-target="mcvlabel">(loading...)</span></h1>
 
 <form>
     <label for="vselect">Select version: </label>
     <select id="vselect"
-            data-snippets-target="vselect"
-            data-action="change->snippets#selected_version">
+            data-gradle-target="vselect"
+            data-action="change->gradle#selected_version">
         <option>Loading...</option>
     </select>
 </form>
@@ -20,7 +20,7 @@ js: true
 
 <h2>build.gradle</h2>
 
-<div data-snippets-target="snippet">
+<div data-gradle-target="snippet">
 {% highlight gradle %}
 dependencies {
     minecraft "com.mojang:minecraft:{minecraft_version}"
@@ -36,7 +36,7 @@ dependencies {
 
 <h2>gradle.properties (Template Mod)</h2>
 
-<div data-snippets-target="snippet">
+<div data-gradle-target="snippet">
 {% highlight properties %}
 minecraft_version={minecraft_version}
 yarn_mappings={yarn_version}
@@ -50,7 +50,7 @@ fabric_version={api_version}
 <h2>Mappings Migration</h2>
 <p>Mappings can be auto updated by using the following command. See the wiki page for more help.</p>
 
-<div data-snippets-target="snippet">
+<div data-gradle-target="snippet">
 {% highlight bash %}
 gradlew migrateMappings --mappings "{yarn_version}"
 {% endhighlight %}

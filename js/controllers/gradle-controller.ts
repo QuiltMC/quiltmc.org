@@ -1,58 +1,37 @@
-import { Controller } from "stimulus"
+import SnippetController from "./snippet-controller.ts"
 
 const META_URL_BASE = "https://meta.fabricmc.net/v1/"
 // const META_GAME_VSNS = META_URL_BASE + "versions/game"
 const META_GAME_VSNS = "/test-data/game-versions.json"
 // const META_LOADER = META_URL_BASE + "versions/loader/"
 const META_LOADER = "/test-data/"
-const REPLACEMENTS = [
-    "minecraft_version", "yarn_version", "loader_version", "api_version", "maven"
-]
 
-interface SnippetElem extends Element {
-    originalHTML: string
-}
-
-export default class VsnController extends Controller {
+export default class GradleController extends SnippetController {
     static targets = [ "mcvlabel", "vselect", "snippet" ]
     declare readonly mcvlabelTarget: Element
     declare readonly vselectTarget: HTMLSelectElement
-    declare readonly snippetTargets: SnippetElem[]
+
+    get_all_tags(): string[] {
+        return ["minecraft_version", "yarn_version", "loader_version", "api_version", "maven"]
+    }
 
     gameVersions = []
 
     connect() {
-        this.display_loading_text()
+        super.connect()
+        super.set_all("(loading game versions...)")
         this.load_game_versions()
     }
 
-    display_loading_text() {
-        for (const snip of this.snippetTargets) {
-            if (snip.originalHTML === undefined || snip.originalHTML === null) {
-                snip.originalHTML = snip.innerHTML
-            }
-            for (const r of REPLACEMENTS) {
-                snip.innerHTML = replace_tags(snip.innerHTML, r, "(loading...)")
-            }
-        }
-    }
-
     async selected_version() {
-        this.display_loading_text()
+        super.set_all("(loading...)")
         const sel = this.vselectTarget
         const vsn = this.gameVersions[sel.selectedIndex]
 
         this.mcvlabelTarget.textContent = vsn.name
 
         const vdata = await vsn.get_data()
-        for (const snip of this.snippetTargets) {
-            snip.innerHTML = snip.originalHTML
-            snip.innerHTML = replace_tags(snip.innerHTML, "minecraft_version", vdata.mcVersion)
-            snip.innerHTML = replace_tags(snip.innerHTML, "yarn_version", vdata.yarnVersion)
-            snip.innerHTML = replace_tags(snip.innerHTML, "loader_version", vdata.loaderVersion)
-            snip.innerHTML = replace_tags(snip.innerHTML, "api_version", vdata.apiVersion)
-            snip.innerHTML = replace_tags(snip.innerHTML, "maven", vdata.maven)
-        }
+        super.set_snippets(vdata)
     }
 
     async load_game_versions() {
@@ -85,9 +64,9 @@ export default class VsnController extends Controller {
 class GameVersion {
     readonly name: string
     versionData: VersionData = null
-    ctrl: VsnController
+    ctrl: GradleController
 
-    constructor(name: string, controller: VsnController) {
+    constructor(name: string, controller: GradleController) {
         this.name = name
         this.ctrl = controller
     }
@@ -129,27 +108,23 @@ class GameVersion {
         }
 
         this.versionData = {
-            mcVersion: `${this.name}`,
-            yarnVersion: meta.mappings.version,
-            loaderVersion: meta.loader.version,
+            minecraft_version: `${this.name}`,
+            yarn_version: meta.mappings.version,
+            loader_version: meta.loader.version,
             // TODO: Load API version
-            apiVersion: `&ltapi version todo&gt;`,
+            api_version: `&ltapi version todo&gt;`,
             maven: mavenStr,
         } as VersionData
     }
 }
 
-// Data that is lazy loaded
+// Data that is lazy loaded.
+// Keys are such that this can be passed directly to `set_snippets`
 interface VersionData {
-    readonly mcVersion: string
-    readonly yarnVersion: string
-    readonly loaderVersion: string
-    readonly apiVersion: string
+    readonly minecraft_version: string
+    readonly yarn_version: string
+    readonly loader_version: string
+    readonly api_version: string
     readonly maven: string
-}
-
-
-function replace_tags(str: string, tag: string, content: string): string {
-    return str.replace(new RegExp(`{${tag}}`, 'g'), content)
 }
 
