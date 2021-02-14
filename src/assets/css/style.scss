@@ -75,12 +75,13 @@ main {
     padding: 10px 30px;
 
     .logo {
+        margin: 8px;
         width: 96px;
         height: 96px;
 
         &.shadow {
             box-shadow: 0px 2px 4px $shadow-color;
-            border-radius: 4px;
+            border-radius: 6px;
         }
         &.fshadow {
             filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .4));
@@ -227,7 +228,7 @@ nav.main {
             }
         }
         .links {
-            visibility: hidden;
+            display: none;
             background-color: adjust-color($primary, $lightness: -10%);
             margin: 0px -16px !important;
             float: none !important;
@@ -236,10 +237,11 @@ nav.main {
             }
         }
         a.nav-expand:hover + .links, .links:hover {
-            visibility: visible;
+            display: block;
         }
     }
 }
+
 
 // Tab navigation
 
@@ -251,7 +253,7 @@ nav.tabs {
 
     a {
         margin: 0px;
-        padding: 8px 8px;
+        padding: 8px 12px;
         display: inline-block;
         float: left;
 
@@ -279,6 +281,22 @@ nav.tabs {
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+@media (max-width: $body-width) {
+    nav.tabs {
+        display: block;
+        box-shadow: none;
+        border-radius: 0px;
+        a {
+            display: block;
+            float: none;
+            margin: 4px;
+            border-radius: $tabs-border-rad !important;
+
+            box-shadow: 0px 2px 4px $shadow-color;
+        }
     }
 }
 
