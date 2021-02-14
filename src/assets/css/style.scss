@@ -216,7 +216,7 @@ nav.main {
 @media (max-width: $nav-width) {
     nav {
         a.nav-expand {
-            display: block;
+            display: block !important;
             padding: 7px 8px 8px 8px;
 
             img.hamburger {
@@ -229,8 +229,8 @@ nav.main {
         .links {
             visibility: hidden;
             background-color: adjust-color($primary, $lightness: -10%);
-            margin: 0px -16px;
-            float: none;
+            margin: 0px -16px !important;
+            float: none !important;
             a {
                 display: block;
             }

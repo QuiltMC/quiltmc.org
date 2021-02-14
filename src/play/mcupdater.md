@@ -6,7 +6,7 @@ permalink: /play/mcupdater.html
 
 # Quilt on MCUpdater
 
-<img class="logo fshadow right" alt="MCUpdater Logo" src="/assets/img/launchers/mcupdater.svg" />
+<img class="logo shadow right" alt="MCUpdater Logo" src="/assets/img/launchers/mcupdater.png" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
