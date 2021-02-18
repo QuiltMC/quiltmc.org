@@ -28,10 +28,3 @@ with some slight changes to make development easier. You still only need
    changes.
 4. See the website and your changes at `localhost:4000`.
 
-
-## Note: Test Data
-
-At the moment, data isn't pulled from any meta server because there is none.
-Test data can be downloaded from fabric meta by running the
-`download-test-data.sh` script.
-
