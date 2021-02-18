@@ -1,6 +1,6 @@
 // This implements classes for accessing the Quilt meta API.
 
-const META_URL_BASE = "https://meta.fabricmc.net/v2/"
+const META_URL_BASE = "https://meta.quiltmc.org/v3/"
 const META_GAME_VSNS = META_URL_BASE + "versions/game"
 const META_LOADER = META_URL_BASE + "versions/loader/"
 const META_YARN = META_URL_BASE + "versions/yarn/"
@@ -9,7 +9,7 @@ export async function load_game_versions(): Promise<GameVersion[]> {
     const response = await fetch(META_GAME_VSNS)
     const data = await response.json()
 
-    var vsns = []
+    const vsns = []
     for (const v of data) {
         vsns.push(new GameVersion(v.version, v.stable, vsns))
     }
