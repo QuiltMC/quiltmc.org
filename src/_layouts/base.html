@@ -16,6 +16,9 @@
 
         {% feed_meta %}
     </head>
+    {% comment %}
+    preload class stops CSS animations from playing during page load and is removed by JS
+    {% endcomment %}
     <body class="page">
         <nav class="main">
             <div class="container">
@@ -58,6 +61,11 @@
         {% if page.js %}
         <script src="/assets/js/bundle.js"></script>
         {% endif %}
+        <script>
+            $(window).load(function() {
+                $("body").removeClass("preload");
+            });
+        </script>
     </body>
 </html>
 
