@@ -4,8 +4,8 @@ layout: base
 
 # The Quilt Project
 
-<img alt="Quilt Logo" src="{{ "/assets/img/quilt_square_colors.svg" | relative_url }}"
-     class="logo shadow rad4 right" />
+<img alt="Quilt Logo" src="{{ "/assets/img/logo.svg" | relative_url }}"
+     class="logo rad4 right" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

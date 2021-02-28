@@ -1,20 +1,28 @@
 ---
 ---
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 // Font
 $font-stack: 'Roboto', sans-serif;
 $font-size:  12pt;
 
+$header-font: 'Poppins', sans-serif;
+$header-font-weight: 700;
+
 // Colors
-$primary: #8d33cc;
-$primary-light: #d5b9e9;
-$secondary: #a39168;
-$body-color: #666;
-$header-color: #555;
-$fade-color: #888;
+$primary: #9722FF;
+$primary-light: #DC29DD;
+$secondary: #27cbfd;
+$link: #47d4ff;
+$body-color: #cecece;
+$header-color: #f5f5f5;
+$nav-color: $header-color;
+$nav-color-selected: $primary;
+$fade-color: rgb(167, 167, 167);
 $light-color: #aaa;
-$lighter-color: #f9f9f9;
-$bg-color: #fff;
-$shadow-color: rgba(0, 0, 0, 0.32);
+$lighter-color: #352a46;
+$bg-color: #1B112B;
+$shadow-color: rgba(0, 0, 0, 0.3);
 
 // Misc
 $body-width: 800px; // Minimum width of the page's main content. Limited for readability.
@@ -23,23 +31,42 @@ $nav-height: $logo-size + 16px;
 $footer-height: 64px;
 
 $mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
-$logo-hide-width: 460px; // determines when the logo text hides to save space.
-$nav-width: 400px; // determines the screen width at which we collapse the nav into a dropdown.
-
+$logo-hide-width: 510px; // determines when the logo text hides to save space.
+$nav-width: 445px; // determines the screen width at which we collapse the nav into a dropdown.
 
 // Main CSS
 
+html {
+    overflow-y: overlay;
+}
+  
+html, body {
+    height: 100%;
+}
+  
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
 body {
     position: relative;
-    min-height: 82vh;
-    padding-top: $nav-height;
-    padding-bottom: $footer-height;
+    margin: 0;
 
     font-family: $font-stack;
     font-size: $font-size;
     color: $body-color;
     background-color: $bg-color;
 }
+
 @media (min-width: $mobile-width) { // full size
     .container {
         width: $body-width;
@@ -54,17 +81,22 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: $font-stack;
+    font-family: $header-font;
+    font-weight: $header-font-weight;
     color: $header-color;
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
 }
 
 
 a {
-    color: $primary;
-    transition: color 0.2s;
+    color: $link;
+    text-decoration: none;
 }
-a:hover { color: $primary-light; }
-a:active { color: $secondary; }
+a:hover, a:focus { color: adjust-color($secondary, $lightness: -10%); }
+a:active { color: adjust-color($secondary, $lightness: -20%); }
 
 .container {
     padding: 0 0;
@@ -87,28 +119,24 @@ main {
             filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .4));
         }
     }
+
+    &.container {
+        margin-top: 1rem;
+        margin-bottom: auto;
+    }
 }
 
 .right { float: right; }
 
-$footer-link-color: adjust-color($secondary, $lightness: -13%);
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-
-    border-style: solid;
-    border-color: $light-color;
-    border-width: 0px;
-    border-top-width: 1px;
+    background-color: rgba(0.0, 0.0, 0.0, 0.25);
+    padding: 2rem 0;
     color: adjust-color($body-color, $lightness: 6%);
 
     p {
         margin: 4px 30px;
     }
-    a { color: $footer-link-color; }
-    a:hover { color: adjust-color($footer-link-color, $lightness: -10%); }
-    a:active { color: adjust-color($footer-link-color, $lightness: -30%); }
 }
 
 
@@ -155,31 +183,26 @@ $nav-logo-height: $logo-size - 8px;
 $nav-link-height: $logo-size - 16px;
 
 nav.main {
-    height: $nav-height;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
     background: $primary;
-    box-shadow: 0px 2px 6px $shadow-color;
 
     a {
         padding: 14px 8px;
         display: inline-block;
         font-size: $nav-link-height;
-        color: $bg-color;
+        font-family: $header-font;
+        font-weight: $header-font-weight;
+        color: $nav-color;
         text-decoration: none;
         vertical-align: middle;
         transition: background-color 0.2s;
 
-        &:hover {
-            background-color: rgba(0.0, 0.0, 0.0, 0.3);
-            color: $bg-color;
+        &:hover, &:focus {
+            background-color: rgba(0.0, 0.0, 0.0, 0.1);
+            color: $nav-color;
         }
         &:active, &.active {
-            background-color: rgba(0.0, 0.0, 0.0, 0.42);
-            color: $bg-color;
+            background-color: rgba(0.0, 0.0, 0.0, 0.3);
+            color: $nav-color;
         }
     }
 
@@ -191,8 +214,6 @@ nav.main {
         img {
             margin-top: -3px;
             border-radius: 3px;
-            // background-color: adjust-color($primary-light, $lightness: 13%);
-            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .4));
             vertical-align: middle;
             width: $logo-size;
             height: $logo-size;

@@ -13,3 +13,5 @@ src/assets/js/bundle.min.js
 # Fabric meta test data
 src/test-data/
 
+# IDE
+.idea/
