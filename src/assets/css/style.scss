@@ -28,8 +28,8 @@ $body-width: 800px; // Minimum width of the page's main content. Limited for rea
 $logo-size: 32px;
 
 $mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
-$logo-hide-width: 510px; // determines when the logo text hides to save space.
-$nav-width: 445px; // determines the screen width at which we collapse the nav into a dropdown.
+$logo-hide-width: 600px; // determines when the logo text hides to save space.
+$nav-width: 540px; // determines the screen width at which we collapse the nav into a dropdown.
 
 // Main CSS
 
@@ -133,7 +133,7 @@ footer {
     margin-top: 2rem;
 
     p {
-        margin: 4px 30px;
+        margin: 4px 0;
     }
 }
 
@@ -169,6 +169,15 @@ footer {
 
         &:active, &:focus {
             background-color: adjust-color($lighter-color, $lightness: -2.5%);
+        }
+
+        @media (max-width: $mobile-width) {
+            flex: 0 1 calc(50% - 3rem);
+            padding: 0.5rem 1rem;
+        }
+
+        @media (max-width: 500px) {
+            flex: 0 1 100%;
         }
     }
 }
