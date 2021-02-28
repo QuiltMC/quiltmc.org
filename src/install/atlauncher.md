@@ -1,10 +1,10 @@
 ---
 layout: install
-title: Play Quilt on ATLauncher
-permalink: /play/atlauncher.html
+title: Install
+permalink: /install/atlauncher.html
 ---
 
-# Quilt on ATLauncher
+# Instructions for ATLauncher
 
 <img class="logo fshadow right" alt="ATLauncher Logo" src="/assets/img/launchers/atlauncher.svg" />
 

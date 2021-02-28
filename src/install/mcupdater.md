@@ -1,10 +1,10 @@
 ---
 layout: install
-title: Play Quilt on MCUpdater
-permalink: /play/mcupdater.html
+title: Install
+permalink: /install/mcupdater.html
 ---
 
-# Quilt on MCUpdater
+# Instructions for MCUpdater
 
 <img class="logo shadow right" alt="MCUpdater Logo" src="/assets/img/launchers/mcupdater.png" />
 

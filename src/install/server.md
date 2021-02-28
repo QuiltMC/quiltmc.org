@@ -1,12 +1,12 @@
 ---
 layout: install
-title: Play with Quilt
-permalink: /play/server.html
+title: Install
+permalink: /install/server.html
 jarname: fabric-installer-0.6.1.51.jar
 jarurl: https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.6.1.51/fabric-installer-0.6.1.51.jar
 ---
 
-# Install Quilt for Minecraft Server
+# Instructions for a Minecraft Server
 
 <img class="logo right fshadow" alt="Minecraft Logo" src="/assets/img/launchers/minecraft.png" />
 
@@ -28,6 +28,3 @@ curl {{ page.jarurl }} -o {{ page.jarname }}
 {% highlight bash %}
 java -jar {{ page.jarname }} server -downloadMinecraft
 {% endhighlight %}
-
-**Most mods will also require you to install Quilt API into the mods folder.**
-

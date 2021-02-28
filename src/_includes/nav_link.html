@@ -1,5 +1,11 @@
 {% assign url = include.href -%}
 {% assign class = include.class -%}
 {% assign text = include.text -%}
-<a href="{{ url }}" class="{% if url == page.url %}active {% endif %}{{ class }}">{{ text }}</a>
-
+{% assign icon = include.icon -%}
+{% assign iconalt = include.iconalt -%}
+<a href="{{ url }}" class="{% if url == page.url %}active {% endif %}{{ class }}">
+    {% if icon %}
+        <img alt="{{ text }} icon" src="{{ icon }}" />
+    {% endif %}
+    {{ text }}
+</a>

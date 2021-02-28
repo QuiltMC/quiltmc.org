@@ -11,7 +11,6 @@ $header-font-weight: 700;
 
 // Colors
 $primary: #9722FF;
-$primary-light: #DC29DD;
 $secondary: #27cbfd;
 $link: #47d4ff;
 $body-color: #cecece;
@@ -20,15 +19,13 @@ $nav-color: $header-color;
 $nav-color-selected: $primary;
 $fade-color: rgb(167, 167, 167);
 $light-color: #aaa;
-$lighter-color: #352a46;
+$lighter-color: #392852;
 $bg-color: #1B112B;
 $shadow-color: rgba(0, 0, 0, 0.3);
 
 // Misc
 $body-width: 800px; // Minimum width of the page's main content. Limited for readability.
 $logo-size: 32px;
-$nav-height: $logo-size + 16px;
-$footer-height: 64px;
 
 $mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
 $logo-hide-width: 510px; // determines when the logo text hides to save space.
@@ -133,47 +130,97 @@ footer {
     background-color: rgba(0.0, 0.0, 0.0, 0.25);
     padding: 2rem 0;
     color: adjust-color($body-color, $lightness: 6%);
+    margin-top: 2rem;
 
     p {
         margin: 4px 30px;
     }
 }
 
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+        padding: 1.5rem 1rem;
+        background-color: $lighter-color;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        flex: 0 1 calc(33% - 3rem);
+        justify-content: center;
+        align-items: center;
+        color: $header-color;
+        border: 0.25rem transparent solid;
+        font-family: $header-font;
+        font-weight: $header-font-weight;
+        font-size: 13pt;
+        @extend .col;
+
+        &.active {
+            border: 0.25rem $primary solid;
+        }
+
+        img {
+            width: 3rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, .3));
+        }
+
+        &:active, &:focus {
+            background-color: adjust-color($lighter-color, $lightness: -2.5%);
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 
 // Buttons
 
-$button-color: adjust-color($secondary, $lightness: -8%);
+$button-color: $lighter-color;
 
 .button {
-    color: $bg-color;
+    color: $header-color;
     background-color: $button-color;
     display: inline-block;
-    margin: 4px 4px;
-
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 4px $shadow-color;
-
-    transition: background-color 0.2s, box-shadow 0.2s;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    font-family: $header-font;
+    font-weight: $header-font-weight;
+    margin: 0.25rem;
 
     &:hover {
-        background-color: adjust-color($button-color, $lightness: -4%);
-        box-shadow: 0px 3px 6px $shadow-color;
+        color: $header-color;
+        background-color: adjust-color($button-color, $lightness: -2.5%);
     }
-    &:active { background-color: adjust-color($button-color, $lightness: -15%); }
+    &:active, &:focus {
+        color: $header-color;
+        background-color: adjust-color($button-color, $lightness: -5%);
+    }
 
     &.primary {
         background-color: $primary;
         &:hover {
-            background-color: adjust-color($primary, $lightness: 4%);
-            box-shadow: 0px 3px 6px $shadow-color;
+            color: $header-color;
+            background-color: adjust-color($primary, $lightness: -5%);
         }
-        &:active { background-color: adjust-color($primary, $lightness: -15%); }
+        &:active, &:focus { 
+            color: $header-color;
+            background-color: adjust-color($primary, $lightness: -10%);
+        }
     }
 }
 a.button {
     text-decoration: none;
-    &:hover, &:active { color: $bg-color; }
 }
 
 
@@ -194,14 +241,13 @@ nav.main {
         color: $nav-color;
         text-decoration: none;
         vertical-align: middle;
-        transition: background-color 0.2s;
 
         &:hover, &:focus {
             background-color: rgba(0.0, 0.0, 0.0, 0.1);
             color: $nav-color;
         }
         &:active, &.active {
-            background-color: rgba(0.0, 0.0, 0.0, 0.3);
+            background-color: rgba(0.0, 0.0, 0.0, 0.2);
             color: $nav-color;
         }
     }
@@ -284,14 +330,12 @@ nav.tabs {
         background-color: $button-color;
         text-decoration: none;
 
-        transition: background-color 0.2s;
-
         &:hover {
             background-color: adjust-color($button-color, $lightness: -8%);
             color: $bg-color;
         }
         &:active {
-            background-color: adjust-color($button-color, $lightness: -16%);
+            background-color: adjust-color($button-color, $lightness: -12%);
         }
         &.active { background-color: $primary; }
         &:first-child { border-radius: $tabs-border-rad 0px 0px $tabs-border-rad; }

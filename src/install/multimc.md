@@ -1,10 +1,10 @@
 ---
 layout: install
-title: Play Quilt on MultiMC
-permalink: /play/multimc.html
+title: Install
+permalink: /install/multimc.html
 ---
 
-# Install Quilt in MuliMC
+# Instructions for MuliMC
 
 <img class="logo shadow right" style="border-radius: 12px;"
      alt="MultiMC Logo" src="/assets/img/launchers/multimc.svg" />

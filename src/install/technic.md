@@ -1,10 +1,10 @@
 ---
 layout: install
-title: Play Quilt on Technic
-permalink: /play/technic.html
+title: Install
+permalink: /install/technic.html
 ---
 
-# Quilt on Technic
+# Instructions for Technic
 
 <img class="logo fshadow right" alt="Technic Logo" src="/assets/img/launchers/technic.svg" />
 

@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Develop for Quilt
+title: Development
 permalink: /dev/
 ---
 

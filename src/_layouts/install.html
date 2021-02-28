@@ -2,13 +2,16 @@
 layout: base
 ---
 
-<nav class="tabs bar">
-    {% include nav_link.html text="Minecraft Launcher" href="/play/" %}
-    {% include nav_link.html text="Server" href="/play/server.html" %}
-    {% include nav_link.html text="MultiMC" href="/play/multimc.html" %}
-    {% include nav_link.html text="ATLauncher" href="/play/atlauncher.html" %}
-    {% include nav_link.html text="MCUpdater" href="/play/mcupdater.html" %}
-    {% include nav_link.html text="Technic" href="/play/technic.html" %}
+<h1>Install Quilt</h1>
+<p>Select the launcher you use:</p>
+
+<nav class="options">
+    {% include nav_link.html text="Minecraft Launcher" href="/install/" icon="/assets/img/launchers/minecraft.png" %}
+    {% include nav_link.html text="Minecraft Server" href="/install/server.html" icon="/assets/img/launchers/minecraft.png" %}
+    {% include nav_link.html text="MultiMC" href="/install/multimc.html" icon="/assets/img/launchers/multimc.svg" %}
+    {% include nav_link.html text="ATLauncher" href="/install/atlauncher.html" icon="/assets/img/launchers/atlauncher.svg" %}
+    {% include nav_link.html text="MCUpdater" href="/install/mcupdater.html" icon="/assets/img/launchers/mcupdater.png" %}
+    {% include nav_link.html text="Technic" href="/install/technic.html" icon="/assets/img/launchers/technic.svg" %}
 </nav>
 
 {{ content }}
