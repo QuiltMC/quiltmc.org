@@ -95,6 +95,7 @@ h1, h2 {
 a {
     color: $link;
     text-decoration: none;
+    transition: color 0.2s;
 }
 a:hover, a:focus { color: adjust-color($secondary, $lightness: -10%); }
 a:active { color: adjust-color($secondary, $lightness: -20%); }
@@ -259,6 +260,7 @@ nav.main {
         color: $nav-color;
         text-decoration: none;
         vertical-align: middle;
+        transition: background-color 0.2s;
 
         &:hover, &:focus {
             background-color: rgba(0.0, 0.0, 0.0, 0.1);
