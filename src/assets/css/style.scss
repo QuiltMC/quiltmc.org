@@ -251,15 +251,19 @@ $nav-link-height: $logo-size - 16px;
 nav.main {
     background: $primary;
 
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     a {
         padding: 14px 8px;
-        display: inline-block;
         font-size: $nav-link-height;
         font-family: $header-font;
         font-weight: $header-font-weight;
         color: $nav-color;
         text-decoration: none;
-        vertical-align: middle;
         transition: background-color 0.2s;
 
         &:hover, &:focus {
@@ -273,14 +277,15 @@ nav.main {
     }
 
     a.logo {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
         margin-left: -8px;
         font-size: $nav-logo-height;
         padding: 9px 8px 8px 8px;
 
         img {
-            margin-top: -3px;
             border-radius: 3px;
-            vertical-align: middle;
             width: $logo-size;
             height: $logo-size;
         }
@@ -288,11 +293,11 @@ nav.main {
 
     a.nav-expand {
         display: none;
-        float: right;
     }
 
     .links {
-        float: right;
+        display: flex;
+        flex-direction: row;
     }
 }
 
@@ -302,29 +307,18 @@ nav.main {
     }
 }
 @media (max-width: $nav-width) {
-    nav {
-        a.nav-expand {
-            display: block !important;
-            padding: 7px 8px 8px 8px;
-
-            img.hamburger {
-                display: inline;
-                width: 28px;
-                height: $logo-size;
-                vertical-align: middle;
-            }
+    nav.main {
+        .container {
+            flex-direction: column;
         }
         .links {
-            display: none;
+            display: flex;
+            flex-direction: column;
             background-color: adjust-color($primary, $lightness: -10%);
             margin: 0px -16px !important;
-            float: none !important;
             a {
                 display: block;
             }
-        }
-        a.nav-expand:hover + .links, .links:hover {
-            display: block;
         }
     }
 }
