@@ -11,8 +11,9 @@ $header-font-weight: 700;
 
 // Colors
 $primary: #9722FF;
-$secondary: #27cbfd;
-$link: #47d4ff;
+$secondary: #dc29dd;
+$tertiary: #3344ff;
+$link: #E84FFF;
 $body-color: #cecece;
 $header-color: #f5f5f5;
 $nav-color: $header-color;
@@ -24,12 +25,12 @@ $bg-color: #1B112B;
 $shadow-color: rgba(0, 0, 0, 0.3);
 
 // Misc
-$body-width: 800px; // Minimum width of the page's main content. Limited for readability.
+$body-width: 900px; // Minimum width of the page's main content. Limited for readability.
 $logo-size: 32px;
 
 $mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
-$logo-hide-width: 600px; // determines when the logo text hides to save space.
-$nav-width: 540px; // determines the screen width at which we collapse the nav into a dropdown.
+$logo-hide-width: 500px; // determines when the logo text hides to save space.
+$nav-width: 500px; // determines the screen width at which we collapse the nav into a dropdown.
 
 // Main CSS
 
@@ -97,12 +98,12 @@ a {
     text-decoration: none;
     transition: color 0.2s;
 }
-a:hover, a:focus { color: adjust-color($secondary, $lightness: -10%); }
-a:active { color: adjust-color($secondary, $lightness: -20%); }
+a:hover, a:focus { color: adjust-color($secondary, $lightness: -5%); }
+a:active { color: adjust-color($secondary, $lightness: -10%); }
 
 .container {
     padding: 0 0;
-    max-width: 800px;
+    max-width: $body-width;
 }
 
 main {
@@ -139,6 +140,44 @@ footer {
 
     p {
         margin: 4px 0;
+    }
+
+    .disclaimer {
+        margin-top: 0.5rem;
+        font-size: 10pt;
+    }
+}
+
+.home-header {
+    align-items: center;
+    background-color: $lighter-color;
+    padding: 2rem;
+
+    img {
+        height: 8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.home-columns.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h1 {
+        text-align: center;
+    }
+
+    .col {
+        flex: 0 1 calc(50% - 0.5rem);
+    }
+
+    .button.discord, .button.github {
+        margin: 0.5rem 4rem;
+    }
+
+    @media (max-width: 720px) {
+        flex-direction: column;
     }
 }
 
@@ -210,12 +249,18 @@ $button-color: $lighter-color;
     color: $header-color;
     background-color: $button-color;
     display: inline-block;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 99999rem;
     font-family: $header-font;
     font-weight: $header-font-weight;
     margin: 0.25rem;
     transition: background-color 0.2s;
+    text-align: center;
+
+    img {
+        height: 1.5rem;
+        vertical-align: middle;
+    }
 
     &:hover {
         color: $header-color;
@@ -235,6 +280,58 @@ $button-color: $lighter-color;
         &:active, &:focus { 
             color: $header-color;
             background-color: adjust-color($primary, $lightness: -12%);
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($secondary, $lightness: -7%);
+        }
+        &:active, &:focus { 
+            color: $header-color;
+            background-color: adjust-color($secondary, $lightness: -12%);
+        }
+    }
+
+    &.tertiary {
+        background-color: $tertiary;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($tertiary, $lightness: -7%);
+        }
+        &:active, &:focus { 
+            color: $header-color;
+            background-color: adjust-color($tertiary, $lightness: -12%);
+        }
+    }
+
+    $blurple: #7289DA;
+    &.discord {
+        background-color: $blurple;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($blurple, $lightness: -7%);
+        }
+        &:active, &:focus { 
+            color: $header-color;
+            background-color: adjust-color($blurple, $lightness: -12%);
+        }
+    }
+
+    $github-background: #ffffff;
+    $github-text: #24292E;
+    &.github {
+        color: $github-text;
+        background-color: $github-background;
+        &:hover {
+            color: $github-text;
+            background-color: adjust-color($github-background, $lightness: -7%);
+        }
+        &:active, &:focus { 
+            color: $github-text;
+            background-color: adjust-color($github-background, $lightness: -12%);
         }
     }
 }
@@ -258,7 +355,7 @@ nav.main {
     }
 
     a {
-        padding: 14px 8px;
+        padding: 14px 0.75rem;
         font-size: $nav-link-height;
         font-family: $header-font;
         font-weight: $header-font-weight;

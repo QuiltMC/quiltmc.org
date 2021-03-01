@@ -1,33 +1,21 @@
 ---
-layout: base
+layout: home
 ---
 
 # The Quilt Project
 
-<img alt="Quilt Logo" src="{{ "/assets/img/logo.svg" | relative_url }}"
-     class="logo rad4 right" />
+The Quilt project is designed around three
+main goals: speed, ease of use, and
+modularity. These three pillars of Quilt
+combine to create a slick and modern
+modding toolchain and ecosystem.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+# Links for Users
+- [Installation Guide]()
+- [Updating Quilt Loader]()
+- [Updating QSL and Mods]()
 
-# Another Section
-
-Etiam non dapibus risus. Suspendisse potenti. Sed laoreet sem ut odio dignissim
-cursus. Nunc scelerisque massa at aliquet sagittis. Phasellus quis porta urna.
-Phasellus blandit at arcu eu facilisis. Cras ut cursus risus. Praesent
-consectetur eros id tortor pellentesque sollicitudin. Pellentesque leo sapien,
-sollicitudin vitae lacus ac, imperdiet pretium ligula.
-
-# Another One
-
-Nullam tristique, ante sit amet hendrerit maximus, nisl erat condimentum massa,
-nec elementum metus risus vel lacus. Phasellus eu magna at ligula imperdiet
-accumsan non vitae magna. Nam porta sem aliquet imperdiet pharetra. Aliquam in
-lectus in est ornare finibus. Integer laoreet semper faucibus. Pellentesque
-habitant morbi tristique senectus et netus et malesuada fames ac turpis
-egestas. Donec auctor leo eget urna accumsan lobortis id ullamcorper sem.
-
+# Links for Developers
+- [Getting Started with Quilt]()
+- [Quilt Versions Helper]()
+- [Quilt Mod Template]()

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% if page.title %}
+        <title>{{ page.title }} &ndash; {{ site.title }}</title>
+        {% else %}
+        <title>{{ site.title }}</title>
+        {% endif %}
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="{{ "/assets/css/style.css" | relative_url }}" rel="stylesheet">
+
+        {% feed_meta %}
+    </head>
+    {% comment %}
+    preload class stops CSS animations from playing during page load and is removed by JS
+    {% endcomment %}
+    <body class="page preload">
+        <nav class="main">
+            <div class="container">
+                <a class="logo" href="{{ site.baseurl }}/">
+                    <img src="{{ "/assets/img/logo-white.svg" | relative_url }}"
+                         alt="Quilt Logo"/>
+                    <span class="logo-text">{{ site.short_title }}</span>
+                </a>
+
+                <div class="links">
+                    {% include nav_link.html text="Install" href="/install/" %}
+                    {% include nav_link.html text="Developers" href="/dev/" %}
+                    {% include nav_link.html text="Blog" href="/blog/" %}
+                    {% include nav_link.html text="FAQ" href="/faq/" %}
+                    <a href="#">Wiki</a>
+                </div>
+            </div>
+        </nav>
+        
+        {{ content }}
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2021 Quilt Project</p>
+                <p>
+                    <a href="https://github.com/{{ site.github_username }}">GitHub</a> • 
+                    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a> • 
+                    <a href="https://twitch.tv/{{ site.twitch_username }}">Twitch</a>
+                </p>
+                <div class="disclaimer">
+                    <p>
+                        Quilt is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" 
+                        is a trademark of Mojang Synergies AB and any usage of the Minecraft brand on this site is used in accordance 
+                        with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand">Brand and Asset Guidelines</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        {% if page.js %}
+        <script src="/assets/js/bundle.js"></script>
+        {% endif %}
+        <script>
+            $(window).load(function() {
+                $("body").removeClass("preload");
+            });
+        </script>
+    </body>
+</html>
+
