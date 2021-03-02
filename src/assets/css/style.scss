@@ -494,7 +494,7 @@ nav.tabs {
     background-color: $lighter-color;
 }
 
-/// styles both highlight figures and ```foo```
+// styles both highlight figures and ```foo```
 figure, div.highlight {
     @extend .block;
     overflow-y: auto;
@@ -503,12 +503,25 @@ figure, div.highlight {
     padding: 4px 32px;
 }
 
-/// inline code blocks: `foo`
+// inline code blocks: `foo`
 p code {
     @extend .block;
     display: inline-block;
     font-size: $font-size - 1pt;
     padding: 2px 4px;
+}
+
+// loading animation
+@import "loading.css";
+
+// container for the loading animation
+.loading-container {
+    @extend .block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 @import "syntax.css";

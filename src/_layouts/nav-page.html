@@ -72,8 +72,8 @@
         <script src="/assets/js/bundle.js"></script>
         {% endif %}
         <script>
-            $(window).load(function() {
-                $("body").removeClass("preload");
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.className = document.body.className.replace("preload", "")
             });
         </script>
     </body>
