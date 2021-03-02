@@ -86,7 +86,9 @@ export class GameVersion {
         this.versionData = {
             minecraft_version: `${this.name}`,
             yarn_version: yarn.version,
+            yarn_version_urlenc: encodeURIComponent(yarn.version),
             loader_version: loader.version,
+            loader_version_urlenc: encodeURIComponent(loader.version),
             // TODO: Load API version
             api_version: `&ltapi version todo&gt;`,
             maven: mavenStr,

@@ -1,0 +1,24 @@
+---
+layout: install
+---
+
+<h1>Instructions for {{ page.launcher }}</h2>
+
+<div data-controller="version">
+    <h2>Select a Version</h2>
+
+    <form>
+        <label for="mcselect">Minecraft version: </label>
+        <select id="mcselect"
+                data-version-target="mcSelect"
+                data-action="change->version#selected_mc_version">
+                <option>Loading...</option>
+        </select>
+    </form>
+
+
+    <h2>Install Quilt for Minecraft <span data-version-target="mcLabel">(loading...)</span> in {{ page.launcher }}</h2>
+    {{ content }}
+</div>
+
+

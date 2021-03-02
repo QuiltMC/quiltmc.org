@@ -1,10 +1,10 @@
 ---
-layout: install
-title: Install
+layout: install-vselect
+title: Install Quilt in ATLauncher
+launcher: ATLauncher
 permalink: /install/atlauncher.html
+js: true
 ---
-
-# Instructions for ATLauncher
 
 <img class="logo fshadow right" alt="ATLauncher Logo" src="/assets/img/launchers/atlauncher.svg" />
 
@@ -14,4 +14,12 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum.
+
+<div class="clear"></div>
+
+<div data-version-target="snippet">
+{% highlight plaintext %}
+<loader type="quilt" yarn="{yarn_version}" loader="{loader_version}"/>
+{% endhighlight %}
+</div>
 

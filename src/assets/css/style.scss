@@ -524,5 +524,10 @@ p code {
     overflow: hidden;
 }
 
+// Clear floats
+.clear {
+    clear: both;
+}
+
 @import "syntax.css";
 

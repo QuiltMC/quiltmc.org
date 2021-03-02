@@ -30,7 +30,7 @@ export default class VersionController extends SnippetController {
             this.mcLabelTarget.textContent = vsn.name
         }
 
-        const needYarn = this.has_tag("yarn_version")
+        const needYarn = this.has_tag("yarn_version") || this.has_tag("yarn_version_urlenc")
 
         let vdata
         try {

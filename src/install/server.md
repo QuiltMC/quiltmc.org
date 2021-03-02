@@ -12,7 +12,9 @@ jarurl: https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.6.1.51/fabric
 
 <a href="{{ page.jarurl }}" class="button primary">Download Installer (.jar)</a>
 
+
 ## Or download with wget
+<div class="clear"></div>
 {% highlight bash %}
 wget -O {{ page.jarname }} {{ page.jarurl }}
 {% endhighlight %}

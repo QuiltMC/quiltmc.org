@@ -1,25 +1,10 @@
 ---
-layout: install
-title: Install
+layout: install-vselect
+title: Install Quilt in MultiMC
+launcher: MultiMC
 permalink: /install/multimc.html
 js: true
 ---
-
-# Instructions for MuliMC
-
-## Select a Version
-
-<form>
-    <label for="mcselect">Select version: </label>
-    <select id="mcselect"
-            data-version-target="mcSelect"
-            data-action="change->version#selected_mc_version">
-        <option>Loading...</option>
-    </select>
-</form>
-
-
-# Install Quilt for Minecraft <span data-version-target="mcLabel">(loading...)</span> in MultiMC
 
 <img class="logo shadow right" style="border-radius: 12px;"
      alt="MultiMC Logo" src="/assets/img/launchers/multimc.svg" />
@@ -31,6 +16,8 @@ import into MultiMC. Follow the steps below to install it.
 2. In the window that appears, click on "Import from zip".
 3. Copy and paste the URL below into the "local file or link to a direct
    download" field.
+
+<div class="clear"></div>
 
 <div data-version-target="snippet">
 {% highlight plaintext %}
