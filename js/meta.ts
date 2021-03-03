@@ -9,7 +9,7 @@ export async function load_game_versions(): Promise<GameVersion[]> {
     const response = await fetch(META_GAME_VSNS)
     const data = await response.json()
 
-    const vsns = []
+    const vsns: GameVersion[] = []
     for (const v of data) {
         vsns.push(new GameVersion(v.version, v.stable, vsns))
     }
@@ -109,11 +109,11 @@ export class LoaderVersion {
 }
 
 // JSON object that can be passed directly to the snippet controller to replace parts of the page.
-export interface VersionData {
-    readonly minecraft_version: string
-    readonly yarn_version: string
-    readonly loader_version: string
-    readonly api_version: string
-    readonly maven: string
+export type VersionData = {
+    minecraft_version: string
+    yarn_version: string
+    loader_version: string
+    api_version: string
+    maven: string
 }
 

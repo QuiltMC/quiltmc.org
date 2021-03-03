@@ -3,15 +3,10 @@
     "version": "0.0.1",
     "description": "Website for the Quilt modloader",
     "dependencies": {
-        "@babel/core": "^7.12.16",
-        "@babel/plugin-proposal-class-properties": "^7.12.13",
-        "@babel/polyfill": "^7.12.1",
-        "@babel/preset-env": "^7.12.16",
-        "@babel/preset-typescript": "^7.12.16",
-        "babel": "^6.23.0",
-        "babel-loader": "^8.2.2",
+        "@types/webpack-env": "^1.16.0",
         "core-js": "^3.8.3",
         "stimulus": "^2.0.0",
+        "ts-loader": "^8.0.17",
         "typescript": "^4.1.5",
         "webpack": "^5.21.2"
     },

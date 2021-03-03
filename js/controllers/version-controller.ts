@@ -13,7 +13,7 @@ export default class VersionController extends SnippetController {
         return ["minecraft_version", "yarn_version", "loader_version", "api_version", "maven"]
     }
 
-    gameVersions = []
+    gameVersions: GameVersion[] = []
 
     connect() {
         super.connect()

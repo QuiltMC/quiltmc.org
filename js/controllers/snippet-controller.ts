@@ -56,11 +56,11 @@ export default abstract class SnippetController extends Controller {
 
     // Updates the tags corresponding to each key in `strs` with the string
     // associated with that key.
-    set_snippets(strs: Object) {
+    set_snippets(strs: {[key: string]: string}) {
         for (const snip of this.snippetTargets) {
             let html = snip.originalHTML
-            for (const key in strs) {
-                html = replace_tags(html, key, strs[key])
+            for (const key of Object.keys(strs)) {
+                html = replace_tags(html, key, strs[key] as string)
             }
             snip.innerHTML = html
         }
