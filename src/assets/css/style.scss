@@ -13,15 +13,16 @@ $header-font-weight: 700;
 $primary: #9722FF;
 $secondary: #dc29dd;
 $tertiary: #3344ff;
-$link: #E84FFF;
+$link: #27a2fd;
 $body-color: #cecece;
 $header-color: #f5f5f5;
+$dark-color: #1c1526;
 $nav-color: $header-color;
 $nav-color-selected: $primary;
 $fade-color: rgb(167, 167, 167);
 $light-color: #aaa;
-$lighter-color: #382358;
-$bg-color: #1B112B;
+$lighter-color: #393245;
+$bg-color: #271f33;
 $shadow-color: rgba(0, 0, 0, 0.3);
 
 // Misc
@@ -98,8 +99,8 @@ a {
     text-decoration: none;
     transition: color 0.2s;
 }
-a:hover, a:focus { color: adjust-color($secondary, $lightness: -5%); }
-a:active { color: adjust-color($secondary, $lightness: -10%); }
+a:hover, a:focus { color: adjust-color($link, $lightness: -10%); }
+a:active { color: adjust-color($link, $lightness: -15%); }
 
 .container {
     padding: 0 0;
@@ -150,7 +151,7 @@ footer {
 
 .home-header {
     align-items: center;
-    background-color: $lighter-color;
+    background-color: $dark-color;
     padding: 2rem;
 
     img {
@@ -346,7 +347,7 @@ $nav-logo-height: $logo-size - 8px;
 $nav-link-height: $logo-size - 16px;
 
 nav.main {
-    background: $primary;
+    background: $dark-color;
 
     .container {
         display: flex;
@@ -355,20 +356,22 @@ nav.main {
     }
 
     a {
-        padding: 14px 0.75rem;
+        padding: 0.15rem 0;
         font-size: $nav-link-height;
         font-family: $header-font;
         font-weight: $header-font-weight;
         color: $nav-color;
         text-decoration: none;
-        transition: background-color 0.2s;
+        transition: border-color 0.2s;
+        margin: auto 1rem;
+        border-bottom: 3px solid transparent;
 
         &:hover, &:focus {
-            background-color: rgba(0.0, 0.0, 0.0, 0.1);
+            border-color: $lighter-color;
             color: $nav-color;
         }
         &:active, &.active {
-            background-color: rgba(0.0, 0.0, 0.0, 0.2);
+            border-color: $primary;
             color: $nav-color;
         }
     }
@@ -385,6 +388,7 @@ nav.main {
             border-radius: 3px;
             width: $logo-size;
             height: $logo-size;
+            margin-right: 0.5rem;
         }
     }
 
