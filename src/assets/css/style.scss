@@ -23,7 +23,9 @@ $fade-color: rgb(167, 167, 167);
 $light-color: #aaa;
 $lighter-color: #393245;
 $bg-color: #271f33;
-$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-color: rgba(0, 0, 0, 0.36);
+$shadow-rad: 3px;
+$default-shadow: 0px 2px $shadow-rad $shadow-color;
 
 // Misc
 $body-width: 900px; // Minimum width of the page's main content. Limited for readability.
@@ -46,13 +48,17 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 // Hack to prevent transitions from animating during page load.
 body.preload {
     transition: none !important;
 }
+body.preload * {
+    transition: none !important;
+}
 
-main {
+.content {
     flex: 1 0 auto;
 }
 
@@ -116,7 +122,7 @@ main {
         height: 96px;
 
         &.shadow {
-            box-shadow: 0px 2px 4px $shadow-color;
+            box-shadow: $default-shadow;
             border-radius: 6px;
         }
         &.fshadow {
@@ -130,6 +136,11 @@ main {
     }
 }
 
+.content {
+    box-shadow: 0px 2px 4px $shadow-color;
+    padding-bottom: 1.2rem;
+}
+
 .right { float: right; }
 
 footer {
@@ -137,7 +148,6 @@ footer {
     background-color: rgba(0.0, 0.0, 0.0, 0.25);
     padding: 2rem 0;
     color: adjust-color($body-color, $lightness: 6%);
-    margin-top: 2rem;
 
     p {
         margin: 4px 0;
@@ -200,6 +210,7 @@ footer {
         font-weight: $header-font-weight;
         font-size: 13pt;
         transition: background-color 0.2s;
+        box-shadow: $default-shadow;
         @extend .col;
 
         &.active {
@@ -257,6 +268,7 @@ $button-color: $lighter-color;
     margin: 0.25rem;
     transition: background-color 0.2s;
     text-align: center;
+    box-shadow: $default-shadow;
 
     img {
         height: 1.5rem;
@@ -431,7 +443,7 @@ $tabs-border-rad: 6px;
 nav.tabs {
     display: inline-block;
     border-radius: $tabs-border-rad;
-    box-shadow: 0px 2px 4px $shadow-color;
+    box-shadow: $default-shadow;
 
     a {
         margin: 0px;
@@ -492,7 +504,7 @@ nav.tabs {
 // Code blocks and other related things
 
 .block {
-    box-shadow: 0px 1px 3px $shadow-color;
+    box-shadow: $default-shadow;
     border-radius: 6px;
 
     background-color: $lighter-color;

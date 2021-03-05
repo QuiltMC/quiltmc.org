@@ -11,32 +11,35 @@ layout: nav-page
     </div>
 </div>
 
-<main class="container">
-    <div class="home-columns row">
-        <div class="col">
-            {{ content }}
+<div class="content">
+    <main class="container">
+        <div class="home-columns row">
+            <div class="col">
+                {{ content }}
+            </div>
+            <div class="col">
+                <h1>Join the Community</h1>
+                <p>In Quilt community spaces, you are expected to follow Quilt's <a href="/community-guidelines.html">community guidelines</a></p>
+                <a href="#" class="button discord">
+                    <img alt="Discord Logo" src="/assets/img/icon/discord-light.svg" />
+                    Discord Server
+                </a>
+                <a href="#" class="button github">
+                    <img alt="GitHub Logo" src="/assets/img/icon/github-dark.svg" />
+                    GitHub Discussions
+                </a>
+
+                <h1>Recent Posts</h1>
+                {% for post in site.posts limit:2 %}
+                <article class="blog-post">
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    {% include post_info.html post=post %}
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}">More...</a>
+                </article>
+                {% endfor %}
+            </div>
         </div>
-        <div class="col">
-            <h1>Join the Community</h1>
-            <p>In Quilt community spaces, you are expected to follow Quilt's <a href="/community-guidelines.html">community guidelines</a></p>
-            <a href="#" class="button discord">
-                <img alt="Discord Logo" src="/assets/img/icon/discord-light.svg" />
-                Discord Server
-            </a>
-            <a href="#" class="button github">
-                <img alt="GitHub Logo" src="/assets/img/icon/github-dark.svg" />
-                GitHub Discussions
-            </a>
-            
-            <h1>Recent Posts</h1>
-            {% for post in site.posts limit:2 %}
-            <article class="blog-post">
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                {% include post_info.html post=post %}
-                <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}">More...</a>
-            </article>
-            {% endfor %}
-        </div>
-    </div>
-</main>
+    </main>
+</div>
+
