@@ -3,7 +3,10 @@
 {% assign text = include.text -%}
 {% assign icon = include.icon -%}
 {% assign iconalt = include.iconalt -%}
-<a href="{{ url }}" class="{% if url == page.url %}active {% endif %}{{ class }}">
+{% if include.subpage %}
+{% assign is_subpage = page.url | startswith: url %}
+{% endif %}
+<a href="{{ url }}" class="{% if is_subpage or url == page.url %}active {% endif %}{{ class }}">
     {% if icon %}
         <img alt="{{ text }} icon" src="{{ icon }}" />
     {% endif %}
