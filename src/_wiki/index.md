@@ -3,8 +3,6 @@ permalink: /wiki/
 title: Wiki Home
 ---
 
-# Quilt Wiki
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere sed arcu
 nec hendrerit. Praesent felis tellus, mollis vel lacus ac, viverra tristique
 turpis. Donec est sem, imperdiet sed nibh at, aliquet pulvinar sem. Donec

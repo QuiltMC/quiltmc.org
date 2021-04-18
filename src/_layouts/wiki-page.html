@@ -10,6 +10,10 @@ layout: base
         {% endfor %}
     </nav>
     <main>
+        <h1>{{ page.title }}</h1>
+        <div class="wiki-info">
+            <p>{% edit_date Last updated on %}</p>
+        </div>
         {{ content }}
     </main>
 </div>
