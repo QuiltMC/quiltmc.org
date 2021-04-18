@@ -1,0 +1,321 @@
+$purple: adjust-color($primary, $saturation: 10%);
+$green: #77E684;
+$pink: #FA66FA;
+$blue: #81E3FF;
+$orange: #E6A422;
+
+$base: #cecece;
+
+$keyword: $orange;
+$operator: $keyword;
+
+$name: $base;
+$varname: $green;
+$funcname: $varname;
+$clsname: $varname;
+$builtinname: $keyword;
+
+$comment: adjust_color($blue, $lightness: 0%);
+$preproc: $comment;
+
+$generic: $keyword;
+
+$literal: $pink;
+
+
+.highlight {
+    pre {
+        color: $base;
+
+        code span {
+            font-family: $mono-font;
+            font-weight: $mono-font-weight;
+            font-size: 11pt;
+        }
+    }
+
+    /* Punctuation */
+    .p {
+        color: $base;
+    }
+    /* Error */
+    .err {
+        color: $base;
+    }
+
+    /* Name */
+    .n {
+        color: $name;
+    }
+    /* Name Attribute */
+    .na {
+        color: $varname;
+    }
+    /* Name Builtin */
+    .nb {
+        color: $builtinname;
+    }
+    /* Name Class */
+    .nc {
+        color: $clsname;
+    }
+    /* Name Constant */
+    .no {
+        color: $varname;
+    }
+    /* Name Decorator */
+    .nd {
+        color: $name;
+    }
+    /* Name Entity */
+    .ni {
+        color: $name;
+    }
+    /* Name Exception */
+    .ne {
+        color: $name;
+    }
+    /* Name Function */
+    .nf {
+        color: $funcname;
+    }
+    /* Name Label */
+    .nl {
+        color: $name;
+    }
+    /* Name Namespace */
+    .nn {
+        color: $varname;
+    }
+    /* Name Other */
+    .nx {
+        color: $name;
+    }
+    /* Name Property */
+    .py {
+        color: $varname;
+        font-style: italic;
+    }
+    /* Name Tag */
+    .nt {
+        color: $name;
+    }
+    /* Name Variable */
+    .nv {
+        color: $varname;
+        font-style: italic;
+    }
+    /* Name Variable Class */
+    .vc {
+        color: $varname;
+        font-style: italic;
+    }
+    /* Name Variable Global */
+    .vg {
+        color: $varname;
+    }
+    /* Name Variable Instance */
+    .vi {
+        color: $varname;
+        font-style: italic;
+    }
+    /* Name Builtin Pseudo */
+    .bp {
+        color: $name;
+    }
+
+    /* Operator */
+    .o, .ow {
+        color: $operator;
+    }
+    /* Operator Word */
+    .ow {
+        color: $operator;
+    }
+
+    /* Comment */
+    .c {
+        color: $comment;
+        font-style: italic;
+    }
+    /* Comment Multiline */
+    .cm {
+        color: $comment;
+        font-style: italic;
+    }
+    /* Comment Preproc */
+    .cp {
+        color: $preproc;
+    }
+    /* Comment Single */
+    .c1 {
+        color: $comment;
+        font-style: italic;
+    }
+    /* Comment Special */
+    .cs {
+        color: $comment;
+    }
+
+    /* Keyword */
+    .k {
+        color: $keyword;
+    }
+    /* Keyword Constant */
+    .kc {
+        color: $keyword;
+    }
+    /* Keyword Declaration */
+    .kd {
+        color: $keyword;
+    }
+    /* Keyword Namespace */
+    .kn {
+        color: $keyword;
+    }
+    /* Keyword Pseudo */
+    .kp {
+        color: $keyword;
+    }
+    /* Keyword Reserved */
+    .kr {
+        color: $keyword;
+    }
+    /* Keyword Type */
+    .kt {
+        color: $keyword;
+    }
+
+    /* Literal */
+    .l {
+        color: $literal;
+    }
+    /* Literal Date */
+    .ld {
+        color: $literal;
+    }
+    /* Literal Number */
+    .m {
+        color: $literal;
+    }
+    /* Literal Number Float */
+    .mf {
+        color: $literal;
+    }
+    /* Literal Number Hex */
+    .mh {
+        color: $literal;
+    }
+    /* Literal Number Integer */
+    .mi {
+        color: $literal;
+    }
+    /* Literal Number Oct */
+    .mo {
+        color: $literal;
+    }
+    /* Literal Number Integer Long */
+    .il {
+        color: $literal;
+    }
+    /* Literal String */
+    .s {
+        color: $literal;
+    }
+    /* Literal String Backtick */
+    .sb {
+        color: $literal;
+    }
+    /* Literal String Char */
+    .sc {
+        color: $literal;
+    }
+    /* Literal String Doc */
+    .sd {
+        color: $literal;
+    }
+    /* Literal String Double */
+    .s2 {
+        color: $literal;
+    }
+    /* Literal String Escape */
+    .se {
+        color: $literal;
+    }
+    /* Literal String Heredoc */
+    .sh {
+        color: $literal;
+    }
+    /* Literal String Interpol */
+    .si {
+        color: $literal;
+    }
+    /* Literal String Other */
+    .sx {
+        color: $literal;
+    }
+    /* Literal String Regex */
+    .sr {
+        color: $literal;
+    }
+    /* Literal String Single */
+    .s1 {
+        color: $literal;
+    }
+    /* Literal String Symbol */
+    .ss {
+        color: $literal;
+    }
+
+    /* Generic */
+    .g {
+        color: $generic;
+    }
+    /* Generic Deleted */
+    .gd {
+        color: $generic;
+    }
+    /* Generic Emph */
+    .ge {
+        color: $generic;
+    }
+    /* Generic Error */
+    .gr {
+        color: $generic;
+    }
+    /* Generic Heading */
+    .gh {
+        color: $generic;
+    }
+    /* Generic Inserted */
+    .gi {
+        color: $generic;
+    }
+    /* Generic Output */
+    .go {
+        color: $generic;
+    }
+    /* Generic Prompt */
+    .gp {
+        color: $generic;
+    }
+    /* Generic Strong */
+    .gs {
+        color: $generic;
+    }
+    /* Generic Subheading */
+    .gu {
+        color: $generic;
+    }
+    /* Generic Traceback */
+    .gt {
+        color: $generic;
+    }
+    /* Other */
+    .x {
+        color: $generic;
+    }
+    /* Text Whitespace */
+    .w { }
+}
+

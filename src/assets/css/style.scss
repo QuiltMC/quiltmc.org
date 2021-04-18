@@ -1,6 +1,7 @@
 ---
 ---
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
 
 // Font
 $font-stack: 'Roboto', sans-serif;
@@ -8,6 +9,10 @@ $font-size:  12pt;
 
 $header-font: 'Poppins', sans-serif;
 $header-font-weight: 700;
+
+$mono-font: 'IBM Plex Mono', monospace;
+$mono-font-size: 11pt;
+$mono-font-weight: 400;
 
 // Colors
 $primary: #9722FF;
@@ -21,7 +26,8 @@ $nav-color: $header-color;
 $nav-color-selected: $primary;
 $fade-color: rgb(167, 167, 167);
 $light-color: #aaa;
-$lighter-color: #393245;
+$lighter-color: #30273e;
+$block-color: $dark-color;
 $bg-color: #271f33;
 $shadow-color: rgba(0, 0, 0, 0.36);
 $shadow-rad: 3px;
@@ -563,10 +569,11 @@ nav.tabs {
 // Code blocks and other related things
 
 .block {
-    box-shadow: $default-shadow;
+    background-color: $block-color;
+    box-shadow: 1px 2px 2px $shadow-color inset;
     border-radius: 6px;
 
-    background-color: $lighter-color;
+    background-color: $block-color;
 }
 
 // styles both highlight figures and ```foo```
@@ -604,5 +611,5 @@ p code {
     clear: both;
 }
 
-@import "syntax.css";
+@import "syntax.scss";
 
