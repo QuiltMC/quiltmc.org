@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Community Guidelines
 permalink: /community-guidelines.html
 ---

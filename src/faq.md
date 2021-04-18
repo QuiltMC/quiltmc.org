@@ -1,5 +1,4 @@
 ---
-layout: base
 title: FAQ
 permalink: /faq/
 ---

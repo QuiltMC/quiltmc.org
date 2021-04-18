@@ -1,5 +1,4 @@
 ---
-layout: base
 title: Development
 permalink: /dev/
 ---

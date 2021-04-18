@@ -1,10 +1,81 @@
----
-layout: nav-page
----
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="content">
-    <main class="container">
+        {% if page.title %}
+        <title>{{ page.title }} &ndash; {{ site.title }}</title>
+        {% else %}
+        <title>{{ site.title }}</title>
+        {% endif %}
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="{{ "/assets/css/style.css" | relative_url }}" rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#9722ff">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#1b112b">
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#1b112b">
+
+        {% feed_meta %}
+    </head>
+    {% comment %}
+    preload class stops CSS animations from playing during page load and is removed by JS
+    {% endcomment %}
+    <body class="page preload">
+        <nav class="main">
+            <div class="container">
+                <a class="logo" href="{{ site.baseurl }}/">
+                    <img src="{{ "/assets/img/logo.svg" | relative_url }}"
+                         alt="Quilt Logo"/>
+                    <span class="logo-text">{{ site.short_title }}</span>
+                </a>
+
+                <div class="links">
+                    {% include nav_link.html text="Install" href="/install/" subpage=true %}
+                    {% include nav_link.html text="Developers" href="/dev/" subpage=true %}
+                    {% include nav_link.html text="Blog" href="/blog/" subpage=true %}
+                    {% include nav_link.html text="FAQ" href="/faq/" subpage=true %}
+                    {% include nav_link.html text="Wiki" href="/wiki/" subpage=true %}
+                </div>
+            </div>
+        </nav>
+        
         {{ content }}
-    </main>
-</div>
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2021 Quilt Project</p>
+                <p>
+                    <a href="https://github.com/{{ site.github_username }}">GitHub</a> • 
+                    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a> • 
+                    <a href="https://twitch.tv/{{ site.twitch_username }}">Twitch</a>
+                </p>
+                <div class="disclaimer">
+                    <p>
+                        Quilt is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" 
+                        is a trademark of Mojang Synergies AB and any usage of the Minecraft brand on this site is used in accordance 
+                        with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand">Brand and Asset Guidelines</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        {% if page.js %}
+        <script src="/assets/js/bundle.js"></script>
+        {% endif %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.className = document.body.className.replace("preload", "")
+            });
+        </script>
+    </body>
+</html>
 
