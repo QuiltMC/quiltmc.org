@@ -21,6 +21,25 @@ plugins:
 collections:
   posts:
     permalink: /blog/:year/:month/:day/:title:output_ext
+  wiki:
+    permalink: /wiki/:title:output_ext
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "wiki"
+    values:
+      layout: "wiki-page"
+    order:
+      index.md
 
 sass:
     sass_dir: _sass

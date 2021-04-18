@@ -28,10 +28,10 @@ $shadow-rad: 3px;
 $default-shadow: 0px 2px $shadow-rad $shadow-color;
 
 // Misc
-$body-width: 900px; // Minimum width of the page's main content. Limited for readability.
+$body-width: 56rem; // Minimum width of the page's main content. Limited for readability.
 $logo-size: 32px;
 
-$mobile-width: $body-width + 32px; // Width at which we switch to mobile layout.
+$mobile-width: $body-width + 2rem; // Width at which we switch to mobile layout.
 $logo-hide-width: 500px; // determines when the logo text hides to save space.
 $nav-width: 500px; // determines the screen width at which we collapse the nav into a dropdown.
 
@@ -433,6 +433,65 @@ nav.main {
                 display: block;
             }
         }
+    }
+}
+
+$sidebar-width: 10rem;
+$sidebar-margin: 1rem;
+
+.sidebar-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: -$sidebar-margin - $sidebar-width;
+
+    main {
+        flex: 1 1;
+    }
+    .sidebar {
+        flex: 0 0 $sidebar-width;
+    }
+}
+
+// Sidebar used on the wiki
+nav.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    @extend .block;
+    flex-shrink: 1;
+    margin-left: $sidebar-margin;
+    font-family: $header-font;
+
+    &>h1 {
+        margin: 0px;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 0.9rem;
+        color: $nav-color;
+        padding: 0.2rem 1rem;
+        border-bottom: 3px solid transparent;
+        transition: background-color 0.2s;
+
+        &:hover, &:focus {
+            background-color: adjust_color($bg-color, $lightness: 3%);
+        }
+        &:active, &.active {
+            background-color: adjust_color($bg-color, $lightness: -3%);
+        }
+    }
+}
+
+@media (max-width: $body-width + 2*($sidebar-width + $sidebar-margin)) {
+    .sidebar-container { margin-left: 0; }
+}
+
+@media (max-width: $mobile-width) {
+    .sidebar-container {
+        flex-direction: column;
+        nav.sidebar { margin-left: 0rem; }
     }
 }
 

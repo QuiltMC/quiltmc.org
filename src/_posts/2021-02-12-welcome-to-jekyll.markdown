@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Welcome to Jekyll!"
 date:   2021-02-12 19:45:33 -0600
 author: Mr. Hyde
