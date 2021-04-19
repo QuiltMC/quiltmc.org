@@ -13,8 +13,9 @@ excuse.
 
 #### 1) Follow our Code of Conduct
 
-Make sure you read and follow [our Code of Conduct]({% link _community/code-of-conduct.md %}), which outlines what we expect
-from you and is the basis for these rules.
+Make sure you read and follow [our Code of Conduct]({% link _community/code-of-conduct.md %}), which outlines what we 
+expect from you and is the basis for these rules. It's important that you read and understand the Code of
+Conduct, and the rules on this page - feel free to contact a community team member if you need any clarification.
 
 That said, remember that there will sometimes be situations that are difficult to fit into the Code of Conduct at a
 glance. In these cases, please contact a member of the community team for clarification.
@@ -36,17 +37,7 @@ If you're not a native English speaker, please try to speak English to the best 
 to use a translation tool, or if your English isn't great - we won't make fun of you, and we'll help you figure out the
 right words if you get stuck.
 
-#### 4) Treat everyone with patience & respect
-
-Treat other people how you wish to be treated. If you would not be happy to be treated a certain way, do not treat
-other users that way.
-
-Everyone has a different background, and we expect you to respect that fact. We will not tolerate hateful, abusive or
-discriminatory behaviour in our community. Additionally, please try to be understanding of other users when reading
-their messages - not everyone communicates in the same way or with the same understanding of English, and some users
-may be suffering from disabilities that affect the way they talk.
-
-#### 5) Listen to & respect all community team members
+#### 4) Listen to & respect all community team members
 
 The community team is here to support the community, keep it running smoothly, and ensure that it remains safe and 
 friendly. In order to allow us to do our jobs, we need you to cooperate with us.
@@ -55,7 +46,7 @@ Essentially, please take requests from community team members seriously and list
 something. If you have a problem with what a team member is asking you to do, we advise that you step away from the 
 situation and send a private message to another team member.
 
-#### 6) Keep all projects legal & appropriate
+#### 5) Keep all projects legal & appropriate
 
 If you need help with a project, you will not be provided with it if your project may break laws, breach a Terms of
 Service or EULA (belonging to any organisation, not just the platforms we're using), or be considered malicious or 
@@ -64,7 +55,7 @@ inappropriate.
 Additionally, keep your code appropriate. Do not sexualize your code or use any slurs or other forms of derogatory
 language, either in the code itself or in the assets or filenames that make up your project.
 
-#### 7) Don't spam, or advertise outside the showcase channels
+#### 6) Don't spam, or advertise outside the showcase channels
 
 We provide a number of channels for showcasing and informing users about your Quilt-related projects. Outside of these
 channels, we will not tolerate advertising or any other form of spam. In particular, posting large numbers of images or
@@ -74,7 +65,7 @@ uploading site when sharing a lot of text or images.
 We may remove links to other Discord servers, communities and projects at our discretion if we feel like they've been
 posted inappropriately, rather than to start or contribute to a discussion.
 
-#### 8) Follow the given channel topic, and don't derail a discussion
+#### 7) Follow the given channel topic, and don't derail a discussion
 
 Most of our channels are strictly on-topic, and we expect our users to take note of a channel's topic and stick to it.
 We understand that conversations may span multiple topics and move onto something else, but we may ask you to move if
@@ -84,7 +75,7 @@ Additionally, when entering a channel with an active discussion, please be mindf
 derail it (by talking over it, for example). We have multiple general (off-topic) channels you can use if a channel is
 busy.
 
-#### 9) Keep non-free mappings out of the community spaces
+#### 8) Keep non-free mappings out of the community spaces
 
 Do not mention names from MCP, Mojang or other proprietary mappings in our community spaces. While we understand that
 this may be less than ideal for some users and projects, this rule is necessary to protect all non-proprietary 
@@ -102,7 +93,7 @@ you wish to talk about proprietary mappings (or working with them), you can gain
 the `!proprietary-mappings` command in the `#bot-commands` channel.
 {% endcomment %}
 
-#### 10) Don't import drama or controversy from other communities
+#### 9) Don't import drama or controversy from other communities
 
 We aim to be a safe place for everyone - regardless of their background, identity, or other defining trait. In order 
 to do this, it's important that people are allowed to interact without having to worry about controversies from the
