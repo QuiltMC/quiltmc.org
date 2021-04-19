@@ -258,6 +258,19 @@ footer {
     flex-direction: column;
 }
 
+.text-cols {
+    display: flex;
+    flex-direction: row;
+
+    .column {
+        flex: 1;
+        margin: 0rem 0.5rem;
+
+        &:first-child { margin-left: 0rem; }
+        &:last-child { margin-right: 0rem; }
+    }
+}
+
 
 // Buttons
 

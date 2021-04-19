@@ -42,5 +42,3 @@ end
 Liquid::Template.register_tag('edit_date', Jekyll::EditDateTag)
 {% endhighlight %}
 
-Blah blah blah
-
