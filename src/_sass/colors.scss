@@ -1,0 +1,22 @@
+i, p, span, svg {
+  &.is-blue {
+    color: $blue;
+  }
+
+  &.is-green {
+    color: $green;
+  }
+
+  &.is-orange {
+    color: $orange;
+  }
+
+  &.is-pink {
+    color: $pink;
+  }
+
+  &.is-primary {
+    color: $primary;
+  }
+}
+

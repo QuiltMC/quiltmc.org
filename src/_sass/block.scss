@@ -1,0 +1,29 @@
+// Visual "blocks" on the page such as code blocks and the sidebar background.
+
+.block {
+    background-color: $block-color;
+    box-shadow: 1px 2px 2px $shadow-color inset;
+    border-radius: 6px;
+
+    background-color: $block-color;
+}
+
+// styles both highlight figures and ```foo```
+figure, div.highlight {
+    @extend .block;
+    overflow-y: auto;
+    display: block;
+    margin: 0px;
+    padding: 4px 32px;
+}
+
+// inline code blocks: `foo`
+p code {
+    @extend .block;
+    display: inline-block;
+    font-size: $font-size - 1pt;
+    padding: 2px 4px;
+}
+
+@import "syntax.scss";
+

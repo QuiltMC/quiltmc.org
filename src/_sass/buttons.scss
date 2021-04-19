@@ -1,0 +1,97 @@
+// Buttons
+
+.button {
+    color: $header-color;
+    background-color: $button-color;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 99999rem;
+    font-family: $header-font;
+    font-weight: $header-font-weight;
+    margin: 0.25rem;
+    transition: background-color 0.2s;
+    text-align: center;
+    box-shadow: $default-shadow;
+
+    img {
+        height: 1.5rem;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        color: $header-color;
+        background-color: adjust-color($button-color, $lightness: -2.5%);
+    }
+    &:active, &:focus {
+        color: $header-color;
+        background-color: adjust-color($button-color, $lightness: -5%);
+    }
+
+    &.primary {
+        background-color: $primary;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($primary, $lightness: -7%);
+        }
+        &:active, &:focus {
+            color: $header-color;
+            background-color: adjust-color($primary, $lightness: -12%);
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($secondary, $lightness: -7%);
+        }
+        &:active, &:focus {
+            color: $header-color;
+            background-color: adjust-color($secondary, $lightness: -12%);
+        }
+    }
+
+    &.tertiary {
+        background-color: $tertiary;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($tertiary, $lightness: -7%);
+        }
+        &:active, &:focus {
+            color: $header-color;
+            background-color: adjust-color($tertiary, $lightness: -12%);
+        }
+    }
+
+    $blurple: #7289DA;
+    &.discord {
+        background-color: $blurple;
+        &:hover {
+            color: $header-color;
+            background-color: adjust-color($blurple, $lightness: -7%);
+        }
+        &:active, &:focus {
+            color: $header-color;
+            background-color: adjust-color($blurple, $lightness: -12%);
+        }
+    }
+
+    $github-background: #ffffff;
+    $github-text: #24292E;
+    &.github {
+        color: $github-text;
+        background-color: $github-background;
+        &:hover {
+            color: $github-text;
+            background-color: adjust-color($github-background, $lightness: -7%);
+        }
+        &:active, &:focus {
+            color: $github-text;
+            background-color: adjust-color($github-background, $lightness: -12%);
+        }
+    }
+}
+a.button {
+    text-decoration: none;
+}
+

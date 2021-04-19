@@ -1,0 +1,23 @@
+// Text Styles
+
+h1, h2, h3, h4, h5 {
+    font-family: $header-font;
+    font-weight: $header-font-weight;
+    color: $header-color;
+}
+
+h1, h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+a {
+    color: $link;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover, a:focus { color: adjust-color($link, $lightness: -10%); }
+a:active { color: adjust-color($link, $lightness: -15%); }
+
+
