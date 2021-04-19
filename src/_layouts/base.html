@@ -48,7 +48,17 @@
             </div>
         </nav>
         
+        {% if page.private and jekyll.environment == "production" %}
+        <div class="content">
+            <main class="container">
+                <h1>Coming soon!</h1>
+
+                Thank you for being patient.
+            </main>
+        </div>
+        {% else %}
         {{ content }}
+        {% endif %}
 
         <footer>
             <div class="container">

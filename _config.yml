@@ -21,9 +21,13 @@ plugins:
 collections:
   posts:
     permalink: /blog/:year/:month/:day/:title:output_ext
+    order:
+      index.md
   wiki:
     permalink: /wiki/:title:output_ext
     output: true
+    order:
+      index.md
 
 defaults:
   -
@@ -43,8 +47,24 @@ defaults:
       type: "wiki"
     values:
       layout: "wiki-page"
-    order:
-      index.md
+  # Mark pages private until full launch
+  -
+    scope:
+      path: "install/*"
+    values:
+      private: true
+  -
+    scope:
+      path: "dev/*"
+    values:
+      private: true
+  -
+    scope:
+      path: ""
+      type: "wiki"
+    values:
+      private: true
+
 
 sass:
     sass_dir: _sass
