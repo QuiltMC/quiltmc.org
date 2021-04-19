@@ -4,7 +4,7 @@ title: Moderation
 
 This document outlines a basic idea of what's expected of our community team members, and provides some advice for 
 team members that may be in a pinch. For the sake of transparency, this is a public document - if you have suggestions
-or feedback, please feel free to contact us (either directly or in `#discord-meta`).
+or feedback, please feel free to contact us (either directly or via `#discord-meta`).
 
 All of our community team members are involved with moderation - if there are no community moderators around, you can 
 contact a community manager instead.
@@ -35,12 +35,11 @@ every team member:
 
 We ask that all community team members pledge to put the needs of the community above their own personal viewpoints. 
 That said, all team members are people and real life comes first - team members are not expected to sacrifice their 
-quality of life for the sake of banning a few trolls.
+quality of life for the sake of the Quilt community.
 
 ## Our Hierarchy
 
-We operate a flat hierarchy, where all community team members have access to the same permissions and tools. There are 
-two primary roles:
+While all community team members have equal influence, there are two primary roles:
 
 * **Community Moderators** are responsible for maintaining the safety and welfare of our community members, by 
   enforcing the community policies, aiding in conflict resolution and dealing with problematic users and behaviours. If
@@ -71,6 +70,8 @@ There are some other useful commands too, such as `purge` and `lock` - team memb
 CarlBot's list of commands as soon as they can.
 
 {% comment %}
+NOTE: If we decide to add PK, it should be mentioned here.
+
 We also ask that team members familiarize themselves with [PluralKit](https://pluralkit.me/), as there are several 
 plural systems present in our community that make use of it.
 {% endcomment %}
@@ -163,46 +164,6 @@ endangering any minors.
   high ratio of plural systems. Additionally, many of our users have been alienated from other spaces in the wider
   modding community. This should all factor into your decision-making, and you should think about it when evaluating 
   the points people are making.
-
-## Resources
-
-There are many guides and other resources out there which may be useful to you as a community team member. It always 
-helps to educate oneself, and some concepts covered by them will be extremely important for developing the mindset you 
-need to protect people. The most important resources will be marked with
-<i class="fas fa-exclamation-circle is-orange"></i> below.
-
-### Articles
-
-* <i class="fas fa-exclamation-circle is-orange"></i> **Washington Post (Perspective):** [White parents teach their children to be colorblind. Here’s why that’s bad for everyone.](https://www.washingtonpost.com/nation/2018/10/05/white-parents-teach-their-children-be-colorblind-heres-why-thats-bad-everyone/?outputType=amp)
-* <i class="fas fa-exclamation-circle is-orange"></i> **Wikipedia:** [Psychological Safety](https://en.wikipedia.org/wiki/Psychological_safety)
-
-### Guides
-
-* <i class="fas fa-exclamation-circle is-orange"></i> [Discord Moderator Academy](https://discord.com/moderation), a comprehensive resource for first-time moderators and community veterans alike to learn about moderation, community management and more
-* <i class="fas fa-exclamation-circle is-orange"></i> [More Than One](https://morethanone.info/), a quick guide to plurality and some of the relevant terms
-* **@corpsewthering:** [Tone tags master list](https://tonetags.carrd.co/#masterlist)
-
-### Podcasts
-
-* [The Modcast Podcast](https://modcast.network/), a podcast for moderation teams all over the world, run by people that
-  have tons of moderation experience
-
-### Social Media
-
-* <i class="fas fa-exclamation-circle is-orange"></i> **Thread:** [Why good community management is important](https://twitter.com/pastasauca/status/1363095026599931904)
-* <i class="fas fa-exclamation-circle is-orange"></i> **Thread:** [Why a community manager must like their community ](https://twitter.com/outstarwalker/status/1303640241912283138)
-* [What The Trans!?](https://twitter.com/WhatTheTrans/), a UK-based trans-issues Twitter account that frequently talks
-  about trans issues and also includes a trans-related podcast
-
-### Tools
-
-* **Pixelatomy:** [Discord ID/Snowflake to timestamp converter](https://pixelatomy.com/snow-stamp/)
-
-### Videos
-
-* <i class="fas fa-exclamation-circle is-orange"></i> **Philosophy Tube:** [Transphobia: An Analysis](https://www.youtube.com/watch?v=yCxqdhZkxCo)
-* <i class="fas fa-exclamation-circle is-orange"></i> **ContraPoints:** [J.K. Rowling](https://www.youtube.com/watch?v=7gDKbT_l2us)
-  (An analysis of subtle vs explicit bigotry using J.K. Rowling's tweets as an example)
 
 ## Closing Notes
 

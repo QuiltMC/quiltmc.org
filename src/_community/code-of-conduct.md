@@ -5,47 +5,19 @@ title: Code of Conduct
 Like many communities, our policies are based on a Code of Conduct. Please make sure you read it before making use of
 our spaces, as it provides a set of behavioural guidelines that we expect everyone to adhere to.
 
-{% columns %}
-{% column "is-half" %}
+## Notes
 
-{% comment %}
-
-{% message "is-danger" %}
-{% message_body %}
-
-{% endcomment %}
-
-This Code of Conduct applies to everyone that makes use of all spaces managed by Quilt, which means you
-are required to read it. **Not having read the Code of Conduct is not a valid excuse for breaking it,** and it will
-still be enforced regardless.
-
-{% comment %}
-{% end_message_body %}
-{% endmessage %}
-{% endcomment %}
-
-{% endcolumn %}
-{% column "is-half" %}
-
-{% comment %}
-{% message "is-info" %}
-{% message_body %}
-{% endcomment %}
+This Code of Conduct applies to anyone that makes use of a space managed by the Quilt team. **Not having read the Code 
+of Conduct is not a valid excuse for breaking it,** and all members of the community will be held to this standard.
 
 While we try to go into detail with our examples, it's impossible to cover every possible situation in one document. In
 general, treat others how you wish to be treated - if you wouldn't like to be treated in a particular way, don't treat
 others like that either!
 
-{% comment %}
-{% end_message_body %}
-{% endmessage %}
-{% endcomment %}
-
-{% endcolumn %}
-{% endcolumns %}
-
 This Code of Conduct is the basis for [our rules]({% link _community/index.md %}). We require that all community 
 members read both this document, and the rules document.
+
+---
 
 ## Our Pledge
 
@@ -63,9 +35,9 @@ We expect the members of our community to participate in a positive, authentic a
 respect and empathy are key when it comes to building and supporting a healthy community, and we request that our
 members exercise this through their actions.
 
-Please take into account that online communities bring together people from many different cultures and backgrounds.
+Please take into account that online communities bring people together from many different cultures and backgrounds.
 It's important to understand that sometimes the combination of cultural differences and online interaction can lead to
-misunderstandings — that is why having empathy is very important.
+misunderstandings.
 
 Examples of behavior that contributes to a positive environment for our community include:
 
@@ -79,14 +51,15 @@ Examples of behavior that contributes to a positive environment for our communit
 Examples of unacceptable behavior include:
 
 * The use of sexualized language or imagery, and sexual attention or advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
+* Trolling, insulting or derogatory comments 
+* Personal or political attacks
 * Threats of violence, or violent acts towards others
 * Public or private harassment
 * Intentionally dead-naming or misgendering others
 * Publishing others' private information, such as a physical or email address, without their explicit permission
   ("doxxing")
 * Advocating for, or encouraging, any unacceptable forms of behaviour
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+* Other conduct which could reasonably be considered inappropriate
 
 ## Enforcement Responsibilities
 
@@ -100,7 +73,7 @@ the community, exclusion from any interaction, and loss of all rights in the com
 
 ## Scope
 
-This Code of Conduct applies within all community spaces (both online and offline), and also applies when an individual
+This Code of Conduct applies within all community spaces (both online and offline), as well as when an individual
 is officially representing the community in public spaces. Examples of representing our community include using an
 official e-mail address, posting via an official social media account, or acting as an appointed representative at an
 online or offline event.
@@ -111,9 +84,9 @@ this Code of Conduct when community members violate it in spaces not managed by 
 
 ## Reporting a Problem
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the Quilt community team, 
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the Quilt community team 
 directly on Discord. If your report concerns a specific community team member or group of community team members, 
-please send your report to a team member that is not part of the report.
+please send your report to a team member that is not part of the report, or a member of the administrative board.
 
 All complaints will be reviewed and investigated promptly and fairly, and all team members are obligated to respect the
 privacy and security of the reporter of any incident.
