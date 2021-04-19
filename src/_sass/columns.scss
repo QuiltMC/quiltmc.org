@@ -1,0 +1,20 @@
+// Text columns in a document
+
+.text-cols {
+    display: flex;
+    flex-direction: row;
+
+    .column {
+        flex: 1;
+        margin: 0rem 0.5rem;
+
+        &:first-child { margin-left: 0rem; }
+        &:last-child { margin-right: 0rem; }
+    }
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        .column { margin: 0rem; }
+    }
+}
+

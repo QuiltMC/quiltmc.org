@@ -1,0 +1,79 @@
+// Main navbar
+
+nav.main {
+    background: $dark-color;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    a {
+        padding: 0.15rem 0;
+        font-size: $nav-link-height;
+        font-family: $header-font;
+        font-weight: $header-font-weight;
+        color: $nav-color;
+        text-decoration: none;
+        transition: border-color 0.2s;
+        margin: auto 1rem;
+        border-bottom: 3px solid transparent;
+
+        &:hover, &:focus {
+            border-color: $light-color;
+            color: $nav-color;
+        }
+        &:active, &.active {
+            border-color: $primary;
+            color: $nav-color;
+        }
+    }
+
+    a.logo {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        margin-left: -8px;
+        font-size: $nav-logo-height;
+        padding: 9px 8px 8px 8px;
+
+        img {
+            border-radius: 3px;
+            width: $logo-size;
+            height: $logo-size;
+            margin-right: 0.5rem;
+        }
+    }
+
+    a.nav-expand {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media (max-width: $nav-width) {
+        .container {
+            flex-direction: column;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            background-color: $dark-color;
+            margin: 0px -16px !important;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: $nav-width) and (max-width: $logo-hide-width) {
+    .logo-text {
+        display: none;
+    }
+}
+

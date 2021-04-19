@@ -1,0 +1,59 @@
+$sidebar-width: 10rem;
+$sidebar-margin: 1rem;
+
+.sidebar-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-left: -$sidebar-margin - $sidebar-width;
+
+    @media (max-width: $body-width + 2*($sidebar-width + $sidebar-margin)) {
+        margin-left: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        nav.sidebar { margin-left: 0rem; }
+    }
+
+    main {
+        flex: 1 1;
+    }
+
+    .sidebar {
+        flex: 0 0 $sidebar-width;
+    }
+}
+
+// Sidebar used on the wiki
+nav.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    @extend .block;
+    flex-shrink: 1;
+    margin-left: $sidebar-margin;
+    font-family: $header-font;
+
+    &>h1 {
+        margin: 0px;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 0.9rem;
+        color: $nav-color;
+        padding: 0.2rem 1rem;
+        border-bottom: 3px solid transparent;
+        transition: background-color 0.2s;
+
+        &:hover, &:focus {
+            background-color: $bg-color;
+        }
+        &:active, &.active {
+            background-color: adjust_color($bg-color, $lightness: 5%);
+        }
+    }
+}
+
