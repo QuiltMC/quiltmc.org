@@ -495,10 +495,10 @@ nav.sidebar {
         transition: background-color 0.2s;
 
         &:hover, &:focus {
-            background-color: adjust_color($bg-color, $lightness: 3%);
+            background-color: $bg-color;
         }
         &:active, &.active {
-            background-color: adjust_color($bg-color, $lightness: -3%);
+            background-color: adjust_color($bg-color, $lightness: 5%);
         }
     }
 }
