@@ -13,7 +13,7 @@ twitter_username: quilt_mc
 github_username:  QuiltMC
 gitlab_username: quiltmc
 twitch_username: quiltmc
-discord_invite: https://discord.gg/aaaaaaaa
+discord_invite: https://discord.quiltmc.org
 
 plugins:
   - jekyll-feed

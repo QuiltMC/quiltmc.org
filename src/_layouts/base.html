@@ -46,7 +46,9 @@
                     {% include nav_link.html text="Developers" href="/dev/" subpage=true %}
                     {% endif %}
                     {% include nav_link.html text="Blog" href="/blog/" subpage=true %}
+                    {% if jekyll.environment != 'production' %}
                     {% include nav_link.html text="FAQ" href="/faq/" subpage=true %}
+                    {% endif %}
                     {% include nav_link.html text="Community" href="/community/" subpage=true %}
                     {% if jekyll.environment != 'production' %}
                     {% include nav_link.html text="Wiki" href="/wiki/" subpage=true %}

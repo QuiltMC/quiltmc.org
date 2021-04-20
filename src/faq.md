@@ -1,6 +1,7 @@
 ---
 title: FAQ
 permalink: /faq/
+private: true
 ---
 
 # Frequently Asked Questions
