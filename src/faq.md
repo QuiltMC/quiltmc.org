@@ -82,7 +82,7 @@ However you like! [Join our community](/community/), use Quilt in your
 modpacks, [develop mods for Quilt](/dev/), or [contribute to the project itself](/dev/).
 
 
-## How do I install quilt?
+## How do I install Quilt?
 
 See the [Install page](/install/).
 
