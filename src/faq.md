@@ -8,22 +8,16 @@ private: true
 
 ## What is Quilt?
 
-Quilt is a mod loader and API forked from The Fabric Project with the goal of
-improving on the governance structure of that project.
+Quilt is a modding toolchain developed primarily for Minecraft that has been
+forked from The Fabric Project, primarily due to governing concerns.
 
 ## How does Quilt differ from Fabric?
 
-The Quilt Project is governed by a set of teams overseeing different parts of
-the project. These teams are given power to make decisions for their component
-of the project based on the community consensus. We hope that this will allow
-Quilt to incorporate more PRs and other community suggestions and do so more
-fairly.
+The Quilt Project is governed by a set of autonomous teams overseeing different
+parts of the project. These teams are given power to make decisions for their
+component of the project. We hope that this will allow Quilt to incorporate
+more PRs and other community suggestions and do so more fairly.
 
-## Why does Quilt exist?
-
-We forked Quilt from Fabric due to disagreements we had with that project's
-management. Our primary goal is to solve what we view as critical management
-issues with that project.
 
 ## Which parts of Fabric is Quilt forking?
 
@@ -33,8 +27,8 @@ all projects necessary to exist independently of it.
 
 ## Can Quilt load Fabric mods?
 
-Yes. As Quilt is a fork, all Fabric mods are compatible with Quilt, and you can
-use them with it.
+In most cases, yes. As Quilt is a fork, all Fabric mods should be compatible
+with Quilt, and you can use them with it for the forseeable future.
 
 ## Can Fabric load Quilt mods?
 
@@ -43,7 +37,12 @@ exclusive to Quilt.
 
 ## What kind/amount of work can I expect to need to do to port my Fabric mod completely to Quilt?
 
-None! If your mod works with Fabric already, it works with Quilt.
+Currently none! If your mod works with Fabric already, it works with Quilt.
+
+Note that in the future, Quilt does plan to add some new APIs and other
+changes, and these may require some work in order to take advantage of them,
+but your mod should still work without them.
+
 
 ## How long will this backwards compatibility last?
 
@@ -55,7 +54,7 @@ if the time comes for compatibility to be broken.
 ## Where can I find Quilt mods?
 
 Wherever the mod developer distributes them. This is mostly on CurseForge or
-Modrinth. Fabric mods will also work under Quilt.
+Modrinth.
 
 
 ## Where can I get support for Quilt?
