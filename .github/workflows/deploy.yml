@@ -16,6 +16,7 @@ jobs:
           yarn
           yarn run webpack
           JEKYLL_ENV=production bundle exec jekyll build
+          cp CNAME _site/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
