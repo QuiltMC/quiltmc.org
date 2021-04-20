@@ -16,7 +16,7 @@ While the Fabric Project has made significant progress towards an open and advan
 - Separation of Concerns - Those in charge of technical concerns should not be making important community decisions, and vice versa. Quilt's teams each control a very specific aspect of the project.
 - Quilt Loader Plugins - Will allow other parties to change mod loading behavior in new and exciting ways.
 - Dependency Downloading - Users will no longer have to download every single dependency for each of their mods.
-- Cleaner Bytecode Modifications - A safe, deterministic alternative to mixin and raw assembly.
+- Cleaner Bytecode Modifications - A safe, deterministic alternative to mixin or modifying bytecode by hand.
 - Faster Iteration - The Quilt project aims to fail fast. We would rather try something and fix it then spend countless months debating whether to move forward with it in the first place.
 
 ## Important Documents and RFCs
