@@ -1,10 +1,12 @@
 ---
 title: FAQ
 permalink: /faq/
-private: true
 ---
 
 # Frequently Asked Questions
+
+Quilt is still in early development and some of this is still subject to
+change, but this represents our current plans for the project.
 
 ## What is Quilt?
 
