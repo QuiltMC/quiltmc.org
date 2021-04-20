@@ -39,7 +39,7 @@ will likely not be compatible with Fabric.
 
 ## What kind/amount of work can I expect to need to do to port my Fabric mod completely to Quilt?
 
-Currently none! If your mod works with Fabric already, it works with Quilt.
+Currently none! If your mod works with Fabric already, and does not access internals, it works with Quilt.
 
 Note that in the future, Quilt does plan to add some new APIs and other
 changes, and these may require some work in order to take advantage of them,
@@ -77,7 +77,7 @@ You can find more about this on our [community page](/community/).
 ## How can I support Quilt?
 
 However you like! [Join our community](/community/), use Quilt in your
-modpacks, or [develop mods for Quilt](/dev/) or [contribute](/dev/).
+modpacks, [develop mods for Quilt](/dev/), or [contribute to the project itself](/dev/).
 
 
 ## How do I install quilt?
@@ -92,5 +92,4 @@ controlled by a set of teams which are staffed by members of the community who
 have taken an interest in contributing to the project. These teams vote on
 various measures in order to decide what will happen with the part of the
 project they oversee.
-
 
