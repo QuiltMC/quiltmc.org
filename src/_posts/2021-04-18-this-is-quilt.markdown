@@ -6,7 +6,7 @@ author: Haven King & ToffeeMax
 
 # This is Quilt
 
-This is the Quilt Project: An open, community-driven modding toolchain designed primarily for Minecraft. Quilt builds on many of the technologies developed by [the Fabric Project](www.fabric.net) and is designed to take what worked well and expand on it further.
+This is the Quilt Project: An open, community-driven modding toolchain designed primarily for Minecraft. Quilt builds on many of the technologies developed by [the Fabric Project](https://fabricmc.net/) and is designed to take what worked well and expand on it further.
 
 ## Why the Fork?
 
@@ -25,7 +25,7 @@ Quilt makes use of a Request for Comment system to drive major organizational ch
 
 You can view these documents (accepted and not) via our [GitHub Repository](https://github.com/QuiltMC/rfcs); please use this space to submit new RFCs and comment on currently open ones.
 
-The proccess of RFCs is outlined in RFC-0001.
+The proccess of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/rfc/0001-rfc-process.md).
 
 ## Who is involved?
 
@@ -37,4 +37,4 @@ Fabric mods will be able to run on Quilt initially. There may be a point in the 
 
 ## I have more questions!
 
-We have provided an FAQ which hopes to cover more things that we could not cover here. If it is not covered there, then please ask in our Discord.
+We have written an FAQ which hopes to provide answers to some common questions. If something is not covered there, please ask on our [Discord](https://discord.quiltmc.org) or Matrix.
