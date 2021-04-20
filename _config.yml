@@ -1,9 +1,9 @@
 title: The Quilt Project
 short_title: Quilt
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Quilt project is designed around three main goals: speed, ease of use,
+  and modularity. These three pillars of Quilt combine to create a slick and
+  modern modding toolchain and ecosystem.
 baseurl: ""
 url: ""
 source: "src/"
