@@ -125,7 +125,8 @@ community spaces that have one, which is known as "hoisting".
 #### Avatars
 
 All avatars must adhere to the rules above. Additionally, avatars depicting objectionable or Not Safe For Work (NSFW)
-content are disallowed, as well as avatars that appear to be "blank".
+content are disallowed, as well as fully-transparent avatars or avatars that appear to be fully-transparent by 
+matching the platform's background colour.
 
 #### Custom/Rich Statuses
 
