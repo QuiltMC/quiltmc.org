@@ -28,12 +28,14 @@ all projects necessary to exist independently of it.
 ## Can Quilt load Fabric mods?
 
 In most cases, yes. As Quilt is a fork, all Fabric mods should be compatible
-with Quilt, and you can use them with it for the forseeable future.
+with Quilt initially. See also ["how long will this backwards compatibility
+last?"](#how-long-compatible)
 
 ## Can Fabric load Quilt mods?
 
-Maybe. It depends on whether the mod in question uses features that are
-exclusive to Quilt.
+Probably not. Quilt mods will eventually have their own metadata format which
+will likely not be compatible with Fabric.
+
 
 ## What kind/amount of work can I expect to need to do to port my Fabric mod completely to Quilt?
 
@@ -44,11 +46,12 @@ changes, and these may require some work in order to take advantage of them,
 but your mod should still work without them.
 
 
-## How long will this backwards compatibility last?
+## How long will this backwards compatibility last? {#how-long-compatible}
 
-Probably for quite a long time. We intend to maintain compatibility as long as
-Fabric remains popular, or as long as we can. Rest assured, we will give notice
-if the time comes for compatibility to be broken.
+Probably for quite a while. It is unclear how long it will be until Quilt
+diverges enough from Fabric to be fundamentally incompatible, but compatibility
+will be maintained for as long as it realistically can be. Rest assured, we
+will give notice if the time comes for compatibility to be broken.
 
 
 ## Where can I find Quilt mods?
