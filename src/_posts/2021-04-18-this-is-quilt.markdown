@@ -10,7 +10,7 @@ This is the Quilt Project: An open, community-driven modding toolchain designed 
 
 ## Why the Fork?
 
-While the Fabric Project has made significant progress towards an open and advanced mod loader, it has recently slowed down in technical innovation and not addressed several organisational issues. There are a number of changes the Quilt Project will put into place in the future to differentiate ourselves: 
+While the Fabric Project has made significant progress towards an open and advanced mod loader, it has recently slowed down in technical innovation and failed to address several organisational issues. There are a number of changes the Quilt Project will put into place in the future to differentiate ourselves: 
 
 - Governmental Structure - Quilt's organizational structure has been designed with openness in mind; no one person holds all the keys.
 - Separation of Concerns - Those in charge of technical concerns should not be making important community decisions, and vice versa. Quilt's teams each control a very specific aspect of the project.
@@ -37,4 +37,4 @@ Fabric mods will be able to run on Quilt initially. There may be a point in the 
 
 ## I have more questions!
 
-We have written an FAQ which hopes to provide answers to some common questions. If something is not covered there, please ask on our [Discord](https://discord.quiltmc.org) or Matrix.
+We have written a FAQ which hopes to provide answers to some common questions. If something is not covered there, please ask on our [Discord](https://discord.quiltmc.org) or Matrix.
