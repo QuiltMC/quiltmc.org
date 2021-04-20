@@ -1,0 +1,25 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      stable
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Build
+        run: |
+          bundle install
+          yarn
+          yarn run webpack
+          JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: _site
+
