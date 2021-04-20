@@ -19,6 +19,9 @@ plugins:
   - jekyll-feed
 
 collections:
+  community:
+    permalink: /community/:title:output_ext
+    output: true
   posts:
     permalink: /blog/:year/:month/:day/:title:output_ext
     order:
@@ -30,6 +33,14 @@ collections:
       index.md
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "community"
+    values:
+      layout: "community-document"
+    order:
+      index.md
   -
     scope:
       path: ""

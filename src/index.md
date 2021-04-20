@@ -30,7 +30,7 @@ modding toolchain and ecosystem.
 # Join the Community
 
 In Quilt community spaces, you are expected to follow Quilt's [community
-guidelines](/community-guidelines.html).
+guidelines]({% link _community/index.md %}).
 
 {% columns %}
 <a href="{{ site.discord_invite }}" class="button discord column">
