@@ -14,7 +14,11 @@
 
     @media (max-width: $mobile-width) {
         flex-direction: column;
-        .column { margin: 0rem; }
+        .column {
+            margin: 0.5rem 0rem;
+            &:first-child { margin-top: 0rem; }
+            &:last-child { margin-bottom: 0rem; }
+        }
     }
 }
 
