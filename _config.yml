@@ -13,7 +13,9 @@ twitter_username: quilt_mc
 github_username:  QuiltMC
 gitlab_username: quiltmc
 twitch_username: quiltmc
-discord_invite: https://discord.quiltmc.org
+discord_community: https://discord.quiltmc.org
+discord_toolchain: https://discord.quiltmc.org/toolchain
+matrix_url: https://matrix.to/#/+quiltmc:matrix.org
 
 plugins:
   - jekyll-feed
@@ -25,12 +27,15 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title:output_ext
     order:
-      index.md
+      - index.md
   wiki:
     permalink: /wiki/:title:output_ext
     output: true
     order:
-      index.md
+      - index.md
+      - rules.md
+      - code-of-conduct.md
+      - moderation.md
 
 defaults:
   -

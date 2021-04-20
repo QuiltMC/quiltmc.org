@@ -64,7 +64,7 @@ Modrinth.
 
 ## Where can I get support for Quilt?
 
-We provide user and developer support mostly on [Discord]({{ site.discord_invite }}).
+We provide user and developer support mostly on [Discord]({{ site.discord_community }}).
 
 ## How do I start making Quilt mods?
 

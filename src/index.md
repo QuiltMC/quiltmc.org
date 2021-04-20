@@ -30,14 +30,17 @@ modding toolchain and ecosystem.
 # Join the Community
 
 In Quilt community spaces, you are expected to follow Quilt's [community
-guidelines]({% link _community/index.md %}).
+guidelines]({% link _community/rules.md %}).
 
 {% columns %}
-<a href="{{ site.discord_invite }}" class="button discord column">
-    <img alt="Discord Logo" src="/assets/img/icon/discord-light.svg" /> Discord Server
+<a href="{{ site.discord_community }}" class="button discord column">
+    <img alt="Discord Logo" src="/assets/img/icon/discord-light.svg" /> Discord
 </a>
 <a href="https://github.com/{{ site.github_username }}" class="button github column">
     <img alt="GitHub Logo" src="/assets/img/icon/github-dark.svg" /> GitHub
+</a>
+<a href="{% link _community/index.md %}" class="button column">
+    <i class="fas fa-ellipsis-h"></i> More
 </a>
 {% endcolumns %}
 
