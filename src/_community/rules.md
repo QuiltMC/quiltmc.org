@@ -52,7 +52,7 @@ While anyone may make use of the Quilt toolchain in accordance with the licenses
 developed or promoted in Quilt community spaces must meet the following criteria:
 
 * Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, or 
-  mods that harass specific people or minority groups (for example, by automatically kicking them from servers with 
+  mods that harass specific people or groups of people (for example, by automatically kicking them from servers with 
   the mod installed)
 * Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
   and project assets posted for any purpose
@@ -135,8 +135,8 @@ handle that discussion.
 ### Non-message mediums
 
 Do not change your avatar, nickname, username or custom/rich status to try to evade an infraction, or to attack or 
-harass any user or minority group. If you'd like to appeal an infraction, please send a private message to any 
-community team member.
+harass any user or group. If you'd like to appeal an infraction, please send a private message to any community team 
+member.
 
 #### Nicknames
 
