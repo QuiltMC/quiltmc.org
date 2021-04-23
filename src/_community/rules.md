@@ -72,6 +72,7 @@ developed or promoted in Quilt community spaces must meet the following criteria
 
   * Flight, speed, pathing or other movement-related modifications
   * PVP automation tools, including aura, aimbot or aim-assist mods
+  * Seed-cracking tools
   * Tools that allow you to locate entities or other players that you otherwise can't see - including visually through
     walls, or via a radar-style interface
   * Tools that hide modifications from the server, or change the client brand to match vanilla Minecraft or others,
