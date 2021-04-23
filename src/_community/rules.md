@@ -57,8 +57,8 @@ developed or promoted in Quilt community spaces must meet the following criteria
 * Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
   and project assets posted for any purpose
 * Projects must not break laws, including copyright laws - this includes piracy tools (including mods that use 
-  projects like `youtube-dl` for in-game music streaming), as well as projects that fail to adhere to the licenses of
-  other projects to the best of their ability
+  projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere 
+  to the licenses of other projects to the best of their ability
 * Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, 
   Microsoft, Discord and any other community platforms we use
 * Projects must not hide their functionality and should be upfront with what they do - however, projects with 
