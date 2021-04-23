@@ -56,18 +56,21 @@ developed or promoted in Quilt community spaces must meet the following criteria
   the mod installed)
 * Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
   and project assets posted for any purpose
-* Projects must not break laws, including copyright laws - this includes piracy tools, as well as projects that 
-  ignore or otherwise break the licenses of other projects
+* Projects must not break laws, including copyright laws - this includes piracy tools (including mods that use 
+  projects like `youtube-dl` for in-game music streaming), as well as projects that fail to adhere to the licenses of
+  other projects to the best of their ability
 * Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, 
   Microsoft, Discord and any other community platforms we use
-* Projects must not hide their functionality, and should be upfront with what they do - however, projects with 
+* Projects must not hide their functionality and should be upfront with what they do - however, projects with 
   unfinished documentation or benign "Easter eggs" do not violate this rule
+* Projects must not make use of exploits in order to provide their functionality - this is required by the 
+  [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic 
+  thing to do
 * Projects must not give players an objective advantage over other players in a multiplayer setting, unless they
   provide a simple, documented way for servers to disable their features - aside from the following types of projects,
   which must have an opt-in mechanism instead:
 
   * Flight, speed, pathing or other movement-related modifications
-  * Item-duplication or damage-negation mods, or other tools that make use of server-side exploits
   * PVP automation tools, including aura, aimbot or aim-assist mods
   * Tools that allow you to locate entities or other players that you otherwise can't see - including visually through
     walls, or via a radar-style interface
