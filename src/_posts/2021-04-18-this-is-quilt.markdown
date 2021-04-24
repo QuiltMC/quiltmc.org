@@ -21,7 +21,7 @@ While the Fabric Project has made significant progress towards an open and advan
 
 Quilt makes use of a Request for Comment system to drive major organizational changes. The RFCs are designed to make clear what changes are on the horizon, allow for comment from the community and as a maintained location for how specific parts of The Quilt Project work (eg Governance). 
 
-You can view these documents (accepted and not) via our [GitHub Repository](https://github.com/QuiltMC/rfcs); please use this space to submit new RFCs and comment on currently open ones.
+You are able to view these documents (accepted and not) via our [GitHub Repository](https://github.com/QuiltMC/rfcs); please use this space to submit new RFCs and comment on currently open ones.
 
 The proccess of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/rfc/0001-rfc-process.md).
 
@@ -31,7 +31,7 @@ To view an approximate membership, our [GitHub organization](https://github.com/
 
 ## Can I mod on Fabric and Quilt?
 
-Fabric mods will be able to run on Quilt initially. There may be a point in the future where this is no longer possible.
+All Fabric mods will be able to run on Quilt initially. There may be a point in the future where this is no longer possible.
 
 ## I have more questions!
 
