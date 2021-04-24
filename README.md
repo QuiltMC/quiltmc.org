@@ -1,6 +1,6 @@
-# Quilt Project Website
+# Quiltmc Project Website.
 
-Website for the Quilt Project.
+Website for the Quiltmc Project.
 
 ## Building
 
