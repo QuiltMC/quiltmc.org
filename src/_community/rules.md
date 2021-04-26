@@ -51,37 +51,21 @@ situation and send a private message to another team member.
 While anyone may make use of the Quilt toolchain in accordance with the licenses applied to each project, all projects 
 developed or promoted in Quilt community spaces must meet the following criteria:
 
-* Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, or 
-  mods that harass specific people or groups of people (for example, by automatically kicking them from servers with 
-  the mod installed)
+* Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, mods
+  that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people 
+  or groups of people (for example, by automatically kicking them from servers with the mod installed)
 * Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
   and project assets posted for any purpose
 * Projects must not break laws, including copyright laws - this includes piracy tools (including mods that use 
   projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere 
   to the licenses of other projects to the best of their ability
 * Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, 
-  Microsoft, Discord and any other community platforms we use
+  Microsoft, Discord (including their ban on exploits and hacks) and any other community platforms we use
 * Projects must not hide their functionality and should be upfront with what they do - however, projects with 
   unfinished documentation or benign "Easter eggs" do not violate this rule
 * Projects must not make use of exploits in order to provide their functionality - this is required by the 
   [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic 
   thing to do
-* Projects must not give players an objective advantage over other players in a multiplayer setting, unless they
-  provide a simple, documented way for servers to disable their features - aside from the following types of projects,
-  which must have an opt-in mechanism instead:
-
-  * Flight, speed, pathing or other movement-related modifications
-  * PVP automation tools, including aura, aimbot or aim-assist mods
-  * Seed-cracking tools
-  * Tools that allow you to locate entities or other players that you otherwise can't see - including visually through
-    walls, or via a radar-style interface
-  * Tools that hide modifications from the server, or change the client brand to match vanilla Minecraft or others,
-    on a case-by-case basis
-  * X-ray tools, or mods that expose or allow detection of blocks and objects that should otherwise be hidden
-
-  **Please note:** Defining what tools and mods break this part of Rule 5 is far from a simple task, and the community 
-  team reserves the right to decide whether a server-side opt-in is required or whether a server-side opt-out is 
-  enough.
 
 #### 6) Don't spam, or advertise outside the showcase channels
 
