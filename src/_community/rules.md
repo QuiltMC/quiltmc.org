@@ -49,7 +49,7 @@ situation and send a private message to another team member.
 #### 5) Keep all projects legal, legitimate & appropriate
 
 While anyone may make use of the Quilt toolchain in accordance with the licenses applied to each project, all projects 
-developed or promoted in Quilt community spaces must meet the following criteria:
+developed or promoted **in all Quilt community spaces** must meet the following criteria:
 
 * Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, mods
   that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people 
