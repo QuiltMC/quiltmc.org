@@ -6,11 +6,10 @@ layout: home
 {% column %}
 # The Quilt Project
 
-The Quilt project is designed around three
-main goals: speed, ease of use, and
-modularity. These three pillars of Quilt
-combine to create a slick and modern
-modding toolchain and ecosystem.
+The Quilt project is an open, community-driven modding toolchain designed
+primarily for Minecraft. By focusing on speed, ease of use, and modularity,
+Quilt aims to provide a sleek and modern modding toolchain with an open
+ecosystem.
 
 {% comment %}
 # Links for Users
