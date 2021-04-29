@@ -67,7 +67,7 @@ developed or promoted **in all Quilt community spaces** must meet the following 
   [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic 
   thing to do
 
-#### 6) Don't spam, or advertise outside the showcase channels
+#### 6) Don't spam, and don't advertise outside the showcase channels
 
 We provide a number of channels for showcasing and informing users about your Quilt-related projects. Outside of these
 channels, we will not tolerate advertising or any other form of spam. In particular, posting large numbers of images or
