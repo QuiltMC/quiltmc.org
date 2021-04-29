@@ -46,14 +46,26 @@ Essentially, please take requests from community team members seriously and list
 something. If you have a problem with what a team member is asking you to do, we advise that you step away from the 
 situation and send a private message to another team member.
 
-#### 5) Keep all projects legal & appropriate
+#### 5) Keep all projects legal, legitimate & appropriate
 
-If you need help with a project, you will not be provided with it if your project may break laws, breach a Terms of
-Service or EULA (belonging to any organisation, not just the platforms we're using), or be considered malicious or 
-inappropriate.
+While anyone may make use of the Quilt toolchain in accordance with the licenses applied to each project, all projects 
+developed or promoted **in all Quilt community spaces** must meet the following criteria:
 
-Additionally, keep your code appropriate. Do not sexualize your code or use any slurs or other forms of derogatory
-language, either in the code itself or in the assets or filenames that make up your project.
+* Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, mods
+  that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people 
+  or groups of people (for example, by automatically kicking them from servers with the mod installed)
+* Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
+  and project assets posted for any purpose
+* Projects must not break laws, including copyright laws - this includes piracy tools (including mods that use 
+  projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere 
+  to the licenses of other projects to the best of their ability
+* Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, 
+  Microsoft, Discord (including their ban on exploits and hacks) and any other community platforms we use
+* Projects must not hide their functionality and should be upfront with what they do - however, projects with 
+  unfinished documentation or benign "Easter eggs" do not violate this rule
+* Projects must not make use of exploits in order to provide their functionality - this is required by the 
+  [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic 
+  thing to do
 
 #### 6) Don't spam, or advertise outside the showcase channels
 
@@ -110,8 +122,9 @@ handle that discussion.
 
 ### Non-message mediums
 
-Do not change your avatar, nickname, username or custom/rich status to try to protest a moderation action, or to attack
-or harass any user.
+Do not change your avatar, nickname, username or custom/rich status to try to evade an infraction, or to attack or 
+harass any user or group. If you'd like to appeal an infraction, please send a private message to any community team 
+member.
 
 #### Nicknames
 
