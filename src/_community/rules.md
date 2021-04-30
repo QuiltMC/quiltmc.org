@@ -124,7 +124,8 @@ handle that discussion.
 
 Do not change your avatar, nickname, username or custom/rich status to try to evade an infraction, or to attack or 
 harass any user or group. If you'd like to appeal an infraction, please send a private message to any community team 
-member.
+member, or otherwise contact the community team using the relevant contact methods for the given 
+community space.
 
 #### Nicknames
 
