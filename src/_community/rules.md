@@ -149,9 +149,11 @@ emoji, the advertising of sketchy or NSFW websites, or hateful sentiment.
 ### Reporting
 
 To report rule-breaking behaviour on Discord, mention the **@Moderators** role directly in the channel, and a community 
-team member will be along as soon as they can be. Alternatively, you can send a private message directly to any 
-community team member, or otherwise contact the community team using the relevant contact methods for the given 
-community space.
+team member will be along as soon as they can be. You can also send a private message to the **@ModMail** bot, which
+will open a thread that any currently available community team member can respond to.
+
+Alternatively, you can send a private message directly to any community team member, or otherwise contact the community
+team using the relevant contact methods for the given community space.
 
 If your report concerns a community team member, please send a private message directly to a different 
 member of the community team or a member of the administrative board. All private reports will be treated with 

@@ -1,0 +1,11 @@
+// Admonitions or message blocks, indented content within another block of content
+
+div.admonition {
+  background-color: $block-color;
+  border-radius: 6px;
+  box-shadow: 1px 2px 2px $shadow-color inset;
+
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 0.1rem 1rem;
+}

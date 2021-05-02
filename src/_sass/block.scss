@@ -4,8 +4,6 @@
     background-color: $block-color;
     box-shadow: 1px 2px 2px $shadow-color inset;
     border-radius: 6px;
-
-    background-color: $block-color;
 }
 
 // styles both highlight figures and ```foo```
@@ -27,3 +25,13 @@ p code {
 
 @import "syntax.scss";
 
+// blockquote blocks
+
+blockquote {
+    border-left: 3px solid $base-darker;
+    color: $base-darker;
+    font-style: italic;
+
+    margin: 1rem 1rem 1rem 0;
+    padding-left: 1rem;
+}
