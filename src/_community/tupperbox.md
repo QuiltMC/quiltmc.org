@@ -36,7 +36,7 @@ No commands are available by default.
 ## Applying for Access
 
 If you'd like to make use of Tupperbox, you'll need to ask to be given the **Tupperbox Access** role. You can do this
-by simply sending a private message to the `@ModMail` bot, stating that you'd like to use Tupperbox and providing a
+by simply sending a private message to the **@ModMail** bot, stating that you'd like to use Tupperbox and providing a
 short description of why you'd like to use it.
 
 That's all there is to it - once a moderator has a chance to address your message, you'll be given the role!
