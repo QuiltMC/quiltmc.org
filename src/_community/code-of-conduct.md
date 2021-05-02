@@ -58,6 +58,7 @@ Examples of unacceptable behavior include:
 * Intentionally dead-naming or misgendering others
 * Publishing others' private information, such as a physical or email address, without their explicit permission
   ("doxxing")
+* Gatekeeping others' access to mental health or accessibility tools
 * Advocating for, or encouraging, any unacceptable forms of behaviour
 * Other conduct which could reasonably be considered inappropriate
 
@@ -85,8 +86,9 @@ this Code of Conduct when community members violate it in spaces not managed by 
 ## Reporting a Problem
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the Quilt community team 
-directly on Discord. If your report concerns a specific community team member or group of community team members, 
-please send your report to a team member that is not part of the report, or a member of the administrative board.
+directly on Discord, either via private message or the ModMail bot. If your report concerns a specific community team 
+member or group of community team members, please send your report to a team member that is not part of the report, or 
+a member of the administrative board.
 
 All complaints will be reviewed and investigated promptly and fairly, and all team members are obligated to respect the
 privacy and security of the reporter of any incident.

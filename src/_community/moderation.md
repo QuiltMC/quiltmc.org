@@ -39,6 +39,12 @@ quality of life for the sake of the Quilt community.
 
 ## Our Hierarchy
 
+{% admonition %}
+**Note:** All community team members can act as moderators, regardless of their named role. That said, Community
+Moderators are the people you should contact first if there's a problem - Community Managers should be contacted
+only when Community Moderators are unavailable, or when your concerns relate to a Community Moderator.
+{% endadmonition %}
+
 While all community team members have equal influence, there are two primary roles:
 
 * **Community Moderators** are responsible for maintaining the safety and welfare of our community members, by 
@@ -48,33 +54,26 @@ While all community team members have equal influence, there are two primary rol
   and supporting the community team, maintaining community spaces and automations, and keeping everything running
   smoothly. If you have concerns about how the community is run, these are the people you should contact first.
 
-**Note:** All community team members can act as moderators, regardless of their named role. That said, Community
-Moderators are the people you should contact first if there's a problem - Community Managers should be contacted
-only when Community Moderators are unavailable, or when your concerns relate to a Community Moderator. 
-
 For more information on how the community team is structured and what processes it follows, please read 
 [RFC 7: Community Team](https://github.com/QuiltMC/rfcs/blob/master/rfc/0007-community-team.md).
 
 ## Discord Moderation Tools
 
-We currently have a fairly lightweight set of tools for moderation, provided by [CarlBot](https://carl.gg/). This bot
-provides a set of standard moderation commands, as well as some lightweight automations. Additionally, we make use of
-[CrossLink](https://panleyent.com/crosslink/) to automatically vet and remove links and attachments that are known
-to be problematic or contain viruses.
+We currently have a fairly lightweight set of tools for moderation, provided by [Zeppelin](https://zeppelin.gg/). This 
+bot provides a set of standard moderation commands, as well as some lightweight automations. Additionally, we make use 
+of [CrossLink](https://panleyent.com/crosslink/) to automatically vet and remove links and attachments that are known
+to be problematic or contain viruses, and a [ModMail bot](https://github.com/kyb3r/modmail) to allow users to contact
+the community team if they need anything.
 
-When issuing infractions, community team members **must** use the CarlBot's commands. The prefix is `!`, and community 
-team members can look at the `!help`for the `warn`, `mute`, `kick`, `tempban` and `ban` commands for more information 
-on how they work.
+When issuing infractions, community team members **must** use Zeppelin's commands. The prefix is `!!`, and community 
+team members can look at [the Zeppelin site](https://zeppelin.gg/docs/plugins/mod_actions/usage) for more information 
+on how these commands work.
 
-There are some other useful commands too, such as `purge` and `lock` - team members should familiarize themselves with 
-CarlBot's list of commands as soon as they can.
+There are some other useful commands too, such as `clean` and `search` - team members should familiarize themselves 
+with Zeppelin's full list of commands as soon as they can.
 
-{% comment %}
-NOTE: If we decide to add PK, it should be mentioned here.
-
-We also ask that team members familiarize themselves with [PluralKit](https://pluralkit.me/), as there are several 
-plural systems present in our community that make use of it.
-{% endcomment %}
+We also ask that team members familiarize themselves with [Tupperbox](https://github.com/Runi-c/Tupperbox), as there 
+are several people present in our community that make use of it. 
 
 ## Discord Infraction Policy
 

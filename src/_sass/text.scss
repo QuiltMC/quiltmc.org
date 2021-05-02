@@ -20,4 +20,7 @@ a {
 a:hover, a:focus { color: adjust-color($link, $lightness: -10%); }
 a:active { color: adjust-color($link, $lightness: -15%); }
 
-
+.emoji {
+    height: 1rem;
+    margin-bottom: -0.15rem;
+}
