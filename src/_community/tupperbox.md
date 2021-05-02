@@ -87,9 +87,14 @@ problematic or negative**. As [More Than One](https://morethanone.info/) states:
 In general, this group of entities tends to be known as a **plural system**.
 
 When interacting with plural people, remember to treat each individual member of a plural system with respect. Don't
-ask to meet the "real" person and don't suggest that they need to be "cured" - instead, treat each member as separate
-people, with their own memories, experiences and personality. If they ask you to treat them in a specific way, listen
-to them and follow their lead as best you can - after all, every system is different.
+pathologise their identity (for example, by asking to meet the "real" person or suggesting that they need to be 
+"cured"), and remember that many plural people consider their identity more a matter of philosophy than of medicine. 
+Additionally, treat each system member as separate people, with their own memories, experiences and personality - If 
+they ask you to treat them in a specific way, listen to them and follow their lead as best you can.
+
+It's also worth noting that plurality is a whole world and plural systems often greatly differ from each other,
+sometimes identifying or manifesting themselves in completely different ways. All plural systems are valid, regardless
+of how their members identify or interact, how they were formed, or how they think about themselves.
 
 For more information on plurality, feel free to browse the following resources...
 
@@ -113,5 +118,3 @@ a popular and useful resource for people approaching plurality and plural system
 * [More Than One](https://morethanone.info/), a quick, easy-to-digest overview of plurality - including information on etiquette and myths
 * [r/plural Plurality FAQ](https://www.reddit.com/r/plural/wiki/faqs)
 * [Resource Links from Plurality Resource](https://pluralityresource.org/affiliates/)
-
-*[DID]: Dissociative Identity Disorder

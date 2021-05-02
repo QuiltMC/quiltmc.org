@@ -56,4 +56,4 @@ $blue: #81E3FF;
 $orange: #E6A422;
 
 $base: #cecece;
-$base-darker: darken($base, 20);
+$base-darker: adjust-color($base, $lightness: -20);
