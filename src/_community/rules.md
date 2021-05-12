@@ -173,8 +173,14 @@ Each situation is unique, and will be assessed on a case-by-case basis. All acti
 behaviour is done at the discretion of the community team member in question - however, we will take feedback from 
 the community if its members are not happy with how things were resolved.
 
-We do not currently have a way to appeal community bans. While we're figuring that out, feel free to add any community 
-manager and send your appeal in a private message.
+Appeals for community bans on Discord are handled via the **@ModMail** bot, and banned users are automatically sent an 
+invite to a special server that exists for them to be able to send a private message to **@ModMail**. We advise that
+anyone appealing an infraction approaches their appeal with civility and respect, addressing the infraction reason and,
+if they agree with the infraction, considering the severity of what they did and what they may be able to do to rectify
+it.
+
+Appeals made for lesser infractions may result in a more significant infraction if the person appealing fails to
+approach their appeal with respect, or attempts to abuse the community team members or appeals process.
 
 #### Moderation Guidelines
 

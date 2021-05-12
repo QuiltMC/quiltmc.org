@@ -95,14 +95,27 @@ When issuing infractions, community team members should bear the following point
 
 ## Handling Appeals
 
-While we do not yet have a formal appeals process, the community team is human and mistakes can happen. We expect our 
-community managers to be prepared to receive private messages from users that have been banned that wish to appeal, 
-but we do not require that all community managers are available for this - especially in cases where the user was 
-banned for a clear-cut reason (such as discrimination or hate speech), or where the offense involved harassment 
-towards them.
+All appeals are handled via the **@ModMail** bot. To submit an appeal, users send a private message to **@ModMail** -
+this both allows for a timely response (when possible) and for oversight from the rest of the community team during the
+appeals process.
 
-If a user has been muted, they're also free to send a message to a community manager if they feel that it was 
-unfair.
+Users that are banned from Discord community spaces are sent a private message by **@Zeppelin** that includes a link
+to a special Discord server, which allows banned users to send a private message to **@ModMail** - since a shared 
+server is required.
+
+The community team is human and mistakes can happen - but regardless of whether someone submitting an appeal agrees 
+with their infractions, they're expected to approach their appeal with civility and respect. Appeals should address
+the infraction reason (assuming the user is aware of it).
+
+**Please note:** While the appeals system exists to allow us to rectify mistakes (and as a way for infracted users to
+come back later and prove that they've grown, understand the issue and are willing to work towards fixing their
+reputation), the community team still reserves the right to deny appeals for any reason other than infractions made in
+clear violation of the moderation guidelines. The safety of the users in our community is of utmost importance, and
+appeals will not be successful if the person submitting an appeal is still considered to be a threat to the safety of
+our users - both physical and psychological.
+
+Appeals made for lesser infractions may result in a more significant infraction if the person appealing fails to
+approach their appeal with respect, or attempts to abuse the community team members or appeals process.
 
 ## Health & Safety
 
