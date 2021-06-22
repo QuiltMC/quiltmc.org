@@ -89,21 +89,18 @@ busy.
 
 #### 8) Keep non-free mappings out of the community spaces
 
-Do not mention names from MCP, Mojang or other proprietary mappings in our community spaces. While we understand that
-this may be less than ideal for some users and projects, this rule is necessary to protect all non-proprietary 
-mappings projects (and their contributors).
+Do not mention names from MCP, Mojang or other proprietary mappings in our community spaces outside the designated
+non-Yarn channels. While we understand that this may be less than ideal for some users and projects, this rule is
+necessary to protect all non-proprietary mappings projects (and their contributors).
 
 You're welcome to link to websites and projects that make use of proprietary mappings, but you must always tag your
 message to point out that proprietary names are present, and spoiler your link by surrounding it with double pipes - 
 for example, `[MCP] ||link||`.
 
-{% comment %}
-NOTE: If we decide to go this route, this rule needs to be updated to something like the following.
-
-Do not mention names from MCP, Mojang or other proprietary mappings outside the `#mod-dev-proprietary` channel. If 
-you wish to talk about proprietary mappings (or working with them), you can gain access to this channel by using 
-the `!proprietary-mappings` command in the `#bot-commands` channel.
-{% endcomment %}
+If you'd like to gain access to the designated non-Yarn channels, you can react to the relevant message in `#welcome`
+on the community Discord server. Please note that these channels are likely to have direct mentions of names from
+proprietary mappings, and non-proprietary mappings projects (including any that are part of the Quilt project) may
+reject your contributions based on your presence in these channels.
 
 #### 9) Don't import drama or controversy from other communities
 
