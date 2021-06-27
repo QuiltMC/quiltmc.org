@@ -1,0 +1,49 @@
+---
+title: Minecraft Patchnotes
+permalink: /mc-patchnotes/
+layout: base
+---
+
+<div class="content">
+    <div class="container">
+        <div class="sidebar-container">
+            <nav class="sidebar" id="sidebar">
+                <h1>Versions</h1>
+            </nav>
+            <main>
+                <h1 id="title">Minecraft Patchnotes</h1>
+                <img id="image" style="float: right; border-radius: 10px; margin: 10px;"/>
+                <div id="body"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script>
+    fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
+        .then(response => response.json())
+        .then(data => {
+            // Render body
+            refresh = () => {
+                var version = window.location.hash.substr(1);
+                var entry = data.entries.find(e => e.version == version);
+                if (entry) {
+                    document.getElementById("title").innerText = entry.title;
+                    document.getElementById("body").innerHTML = entry.body;
+                    document.getElementById("image").setAttribute("src", "https://launchercontent.mojang.com" + entry.image.url);
+                }
+            };
+
+            // Create nav-links
+            data.entries.forEach(entry => {
+                var version = window.location.hash.substr(1);
+                var newRef = document.createElement("a");
+                newRef.innerText = entry.version;
+                newRef.setAttribute("href", "/mc-patchnotes/#" + entry.version);
+                document.getElementById("sidebar").appendChild(newRef);
+            });
+
+            window.onhashchange = refresh;
+            refresh();
+        });
+</script>
