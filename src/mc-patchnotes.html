@@ -1,0 +1,59 @@
+---
+title: Minecraft Patchnotes
+permalink: /mc-patchnotes/
+layout: base
+---
+
+<div class="content">
+    <div class="container">
+        <div class="sidebar-container">
+            <nav class="sidebar" id="sidebar">
+                <h1>Versions</h1>
+            </nav>
+            <main>
+                <noscript>
+                    This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
+                    Please enable it and reload the page to continue.
+                </noscript>
+                <h1 id="title">Minecraft Patchnotes</h1>
+                <img id="image" style="float: right; border-radius: 10px; margin: 10px;"/>
+                <div id="body">
+                    Select the specific version from the sidebar.
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fetch launcher metadata
+    fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
+        .then(response => response.json())
+        .then(data => {
+            // Render patchnotes
+            render = () => {
+                // Read the version from the anchor and look it up in the json
+                var version = window.location.hash.substr(1);
+                var entry = data.entries.find(e => e.version == version);
+                if (entry) {
+                    // Replace title, body and image url wtih the selected version
+                    document.getElementById("title").innerText = entry.title;
+                    document.getElementById("body").innerHTML = entry.body;
+                    document.getElementById("image").setAttribute("src", "https://launchercontent.mojang.com" + entry.image.url);
+                }
+            };
+
+            // Create nav-links
+            data.entries.forEach(entry => {
+                var version = window.location.hash.substr(1);
+                var newRef = document.createElement("a");
+                newRef.innerText = entry.version;
+                newRef.setAttribute("href", window.location.pathname + "#" + entry.version);
+                document.getElementById("sidebar").appendChild(newRef);
+            });
+
+            // Rerender the patchnote when the url changes
+            window.onhashchange = render;
+            render();
+        });
+</script>
