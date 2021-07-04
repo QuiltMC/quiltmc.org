@@ -100,7 +100,7 @@ changes, new views and sensitivities emerge which need to be taken into account.
 update this Code of Conduct at any time, pending feedback from the community when possible.
 
 We always welcome feedback and suggestions. If you'd like to provide either, feel free to
-[open an issue on GitHub](https://github.com/QuiltMC/quiltmc.orgissues)!
+[open an issue on GitHub](https://github.com/QuiltMC/quiltmc.org/issues)!
 
 ## Attribution
 
