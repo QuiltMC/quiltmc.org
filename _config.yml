@@ -14,7 +14,6 @@ gitlab_username: quiltmc
 twitch_username: quiltmc
 discord_community: https://discord.quiltmc.org
 discord_toolchain: https://discord.quiltmc.org/toolchain
-matrix_url: https://matrix.to/#/+quiltmc:matrix.org
 
 plugins:
   - jekyll-feed

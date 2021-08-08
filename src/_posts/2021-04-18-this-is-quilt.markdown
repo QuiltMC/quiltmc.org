@@ -35,4 +35,4 @@ Fabric mods will be able to run on Quilt initially. There may be a point in the 
 
 ## I have more questions!
 
-We have written a FAQ which hopes to provide answers to some common questions. If something is not covered there, please ask on our [Discord](https://discord.quiltmc.org) or Matrix.
+We have written a FAQ which hopes to provide answers to some common questions. If something is not covered there, please ask on our [Discord](https://discord.quiltmc.org).
