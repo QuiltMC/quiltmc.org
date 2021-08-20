@@ -87,20 +87,26 @@ Additionally, when entering a channel with an active discussion, please be mindf
 derail it (by talking over it, for example). We have multiple general (off-topic) channels you can use if a channel is
 busy.
 
-#### 8) Keep non-free mappings out of the community spaces
+#### 8) When requesting help, specify your mappings (and other useful, relevant info)
 
-Do not mention names from MCP, Mojang or other proprietary mappings in our community spaces outside the designated
-non-Yarn channels. While we understand that this may be less than ideal for some users and projects, this rule is
-necessary to protect all non-proprietary mappings projects (and their contributors).
+If you're working on a mod and asking for help in one of our many help channels, **make sure you specify what mappings
+you're using**. We recommend creating a thread, and putting the mappings in the thread name - you can use these
+abbreviations to ensure everyone's on the same page:
 
-You're welcome to link to websites and projects that make use of proprietary mappings, but you must always tag your
-message to point out that proprietary names are present, and spoiler your link by surrounding it with double pipes - 
-for example, `[MCP] ||link||`.
+* `MCP` - MCP/Forge mappings
+* `MM` - Mojang Mappings
+* `QM` - Quilt Mappings (The default for Quilt)
+* `YM` - Yarn Mappings (The default for Fabric)
 
-If you'd like to gain access to the designated non-Yarn channels, you can react to the relevant message in `#welcome`
-on the community Discord server. Please note that these channels are likely to have direct mentions of names from
-proprietary mappings, and non-proprietary mappings projects (including any that are part of the Quilt project) may
-reject your contributions based on your presence in these channels.
+An example thread title could be `YM | Entity pathing` or `[MM] Negative Enchants`. That said, we understand that quick
+questions may be more suited to direct discussion in the channels - in those cases, **make sure you're clear about 
+which mappings you're using**. You can also make use of the `:mcp:`, `:mm:`, `:qm:` and `:ym:` (or `:yarn:`) emoji if 
+you'd like to.
+
+Ultimately, it's _your_ responsibility to ensure that it's as easy as possible to help you with your questions. The less
+work it takes for someone to understand your problem, the more likely you are to get a quick response! To that end,
+we also recommend you specify other useful information with your question - such as **the version of Minecraft you're 
+working with**, **error logs** and **relevant code snippets**.
 
 #### 9) Don't import drama or controversy from other communities
 
