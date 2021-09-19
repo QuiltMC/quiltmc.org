@@ -1,4 +1,8 @@
-# Quilt September Update
+---
+title:  "Quilt September Update"
+date:   2021-09-19 16:00:00 -00:00
+author: ToffeeMax
+---
 
 It has been a few months since the last update on the Quilt Project.
 
@@ -73,4 +77,10 @@ However, progress has been made. We are currently waiting on a Gradle Plugin.
 
 Things are largely compatible with loading mods.
 
-Mixin Plugins may not be possible to maintain compatibility.  We may consider contributing to some mods that use them to aid in replacing them.
+Mixin Plugins may not be possible to maintain compatibility.  We may consider contributing to some mods that use them, to aid in replacing them.
+
+## Round-off
+That is all for now! When there are more things to talk about, they will be published here; for more bleeding edge changes and updates on the project, follow along on our [Discords](https://discord.quiltmc.org).
+
+Thank-you to the Quilt Project's team for helping flesh this out; it would have otherwise been just an update on moderators.
+
