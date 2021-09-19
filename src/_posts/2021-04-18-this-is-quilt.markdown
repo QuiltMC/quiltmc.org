@@ -8,13 +8,13 @@ This is the Quilt Project: An open, community-driven modding toolchain designed 
 
 ## Why the Fork?
 
-While the Fabric Project has made significant progress towards an open and advanced mod loader, it has recently slowed down in technical innovation and failed to address several organisational issues. There are a number of changes the Quilt Project will put into place in the future to differentiate ourselves: 
+While the Fabric Project has made significant progress towards an open and advanced mod loader, it has recently slowed down in technical innovation and failed to address several organizational issues. There are a number of changes the Quilt Project will put into place in the future to differentiate ourselves: 
 
 - Governmental Structure - Quilt's organizational structure has been designed with openness in mind; no one person holds all the keys.
 - Separation of Concerns - Those in charge of technical concerns should not be making important community decisions, and vice versa. Quilt's teams each control a very specific aspect of the project.
 - Quilt Loader Plugins - Will allow other parties to change mod loading behavior in new and exciting ways.
 - Dependency Downloading - Users will no longer have to download every single dependency for each of their mods.
-- Cleaner Bytecode Modifications - A safe, deterministic alternative to mixin or modifying bytecode by hand.
+- Cleaner Bytecode Modifications - A safe, deterministic alternative to "Mixin" or modifying bytecode by hand.
 - Faster Iteration & Experimentation - The Quilt project aims to fail fast. We would rather try something and fix it then spend countless months debating whether to move forward with it in the first place.
 
 ## Important Documents and RFCs
@@ -23,7 +23,7 @@ Quilt makes use of a Request for Comment system to drive major organizational ch
 
 You can view these documents (accepted and not) via our [GitHub Repository](https://github.com/QuiltMC/rfcs); please use this space to submit new RFCs and comment on currently open ones.
 
-The proccess of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/rfc/0001-rfc-process.md).
+The process of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/rfc/0001-rfc-process.md).
 
 ## Who is involved?
 
