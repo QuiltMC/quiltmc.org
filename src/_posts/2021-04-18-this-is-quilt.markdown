@@ -23,7 +23,7 @@ Quilt makes use of a Request for Comment system to drive major organizational ch
 
 You can view these documents (accepted and not) via our [GitHub Repository](https://github.com/QuiltMC/rfcs); please use this space to submit new RFCs and comment on currently open ones.
 
-The process of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/rfc/0001-rfc-process.md).
+The process of RFCs is outlined in [RFC-0001](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
 
 ## Who is involved?
 
