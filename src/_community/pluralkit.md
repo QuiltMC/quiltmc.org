@@ -25,8 +25,8 @@ If you already have a system set up on Tupperbox, you can easily import that sys
 steps:
 
 1. Send a private message to Tupperbox: `tul!export`
-2. Copy the link that PluralKit gives you, to use in the next step
-3. Send a private message to PluralKit: `pk;export <link>`
+2. Copy the link that Tupperbox gives you, to use in the next step
+3. Send a private message to PluralKit: `pk;import <link>`
 
 ## Moderation Notes
 
