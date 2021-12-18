@@ -11,7 +11,8 @@ won't be available.
 
 PluralKit has all kinds of fun and interesting uses, but in Quilt community spaces it should only be used for [plurality](#plurality) or self-identity purposes, or as a mental health aid. We do not allow users to make use of PluralKit for role-playing.
 
-If you see users talking with the bot tag, they're talking through PluralKit. You can react to any message sent this way with the `question` emote (❓) for information on which Discord account the message belongs to.
+If you see users talking with the bot tag, they're talking through PluralKit. You can react to any message sent this
+way with the `question` emote (❓) for information on which Discord account the message belongs to.
 
 ## General Usage
 
@@ -30,7 +31,9 @@ steps:
 
 ## Moderation Notes
 
-When working with PluralKit, please note that our moderation policy is one of system accountability, meaning that [plural systems](#plurality) are responsible for their members. Unfortunately, there's no practical way to moderate system members individually - the community team is only able to target the Discord account you're using when acting
+When working with PluralKit, please note that our moderation policy is one of system accountability, meaning that
+[plural systems](#plurality) are responsible for their members. Unfortunately, there's no practical way to moderate
+system members individually - the community team is only able to target the Discord account you're using when acting
 as moderators.
 
 If you're part of a plural system, we suggest that you talk with the other members of your system and make sure they're
@@ -41,10 +44,13 @@ aware of this.
 ## Plurality?
 
 {% admonition %}
-**Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most common use for it in our community spaces - so we created this section to help explain the concept. Any gatekeeping of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member of the community team directly if you have any concerns.
+**Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most common use for it in our community spaces - so we created this section to help explain the concept. Any gatekeeping of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member of 
+the community team directly if you have any concerns.
 {% endadmonition %}
 
-Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first (or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other situations that can cause something like this to happen - and in many cases, **the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
+Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first
+(or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other
+situations that can cause something like this to happen - and in many cases, **the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
 
 > Plurality (or multiplicity) is the existence of multiple self-aware entities inside one physical brain.
 > 
@@ -52,18 +58,24 @@ Plurality is the concept of multiple people sharing a single body, inhabiting th
 
 In general, a group of plural entities sharing one body tends to be known as a **plural system**.
 
-When interacting with plural people, remember to treat each individual member of a plural system with respect. Don't pathologise their identity (for example, by asking to meet the "real" person or suggesting that they need to be "cured"), and remember that many plural people consider their identity more a matter of philosophy than of medicine. 
+When interacting with plural people, remember to treat each individual member of a plural system with respect. Don't
+pathologise their identity (for example, by asking to meet the "real" person or suggesting that they need to be 
+"cured"), and remember that many plural people consider their identity more a matter of philosophy than of medicine. 
+Additionally, treat each system member as separate people, with their own memories, experiences and personality - If 
+they ask you to treat them in a specific way, listen to them and follow their lead as best you can.
 
-Additionally, treat each system member as separate people, with their own memories, experiences and personality - If they ask you to treat them in a specific way, listen to them and follow their lead as best you can.
-
-It's also worth noting that plurality is a whole world and plural systems often greatly differ from each other, sometimes identifying or manifesting themselves in completely different ways. All plural systems are valid, regardless of how their members identify or interact, how they were formed, or how they think about themselves.
+It's also worth noting that plurality is a whole world and plural systems often greatly differ from each other,
+sometimes identifying or manifesting themselves in completely different ways. All plural systems are valid, regardless
+of how their members identify or interact, how they were formed, or how they think about themselves.
 
 For more information on plurality, feel free to browse the following resources...
 
 ### Ex Uno Plures
 
 {% admonition %}
-**Note:** This site belongs to a specific plural system, and much of what's written there is related to their personal experiences of plurality. Additionally, some articles there were written quite some time ago, and may contain vulgar language and outdated terminology - including terms that exist outside the plural community. Nonetheless, it remains a popular and useful resource for people approaching plurality and plural systems from the outside.
+**Note:** This site belongs to a specific plural system, and much of what's written there is related to their personal
+experiences of plurality. Additionally, some articles there were written quite some time ago, and may contain vulgar
+language and outdated terminology - including terms that exist outside the plural community. Nonetheless, it remains a popular and useful resource for people approaching plurality and plural systems from the outside.
 {% endadmonition %}
 
 * [Fictive Identities](https://www.exunoplures.org/main/fictive-identities/) by Noël Dawkins
