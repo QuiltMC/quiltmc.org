@@ -15,7 +15,7 @@ If you see users talking with the bot tag, they're talking through PluralKit. Yo
 
 ## General Usage
 
-The primary function of PluralKit is automatically proxying messages that people using it send, in order to make those messages appear to come from someone else. This is done by making use of Discord webhooks - which has the unfortunate side effect of Discord stating that the messages were sent by a bot. Rest assured that this isn't the case - while the messages were proxied by PluralKit, they were written by another (human) member of the community
+The primary function of PluralKit is automatically proxying messages that people using it send, in order to make those messages appear to come from someone else. This is done by making use of Discord webhooks - which has the unfortunate side effect of Discord stating that the messages were sent by a bot. Rest assured that this isn't the case - while the messages were proxied by PluralKit, they were written by a real member of the community.
 
 As a member of the community, there's only one PluralKit feature available to you by default - the ability to figure out which Discord account was used to send a proxied message. You can do this by reacting to any proxied message using the `question` emote (❓), which will cause PluralKit to send you a private message with information about the Discord account who sent the message, such as username, nickname, and roles.
 
@@ -44,7 +44,7 @@ aware of this.
 **Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most common use for it in our community spaces - so we created this section to help explain the concept. Any gatekeeping of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member of the community team directly if you have any concerns.
 {% endadmonition %}
 
-Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other situations that can cause something like this to happen - and in many cases, **the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
+Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first (or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other situations that can cause something like this to happen - and in many cases, **the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
 
 > Plurality (or multiplicity) is the existence of multiple self-aware entities inside one physical brain.
 > 
@@ -52,7 +52,7 @@ Plurality is the concept of multiple people sharing a single body, inhabiting th
 
 In general, a group of plural entities sharing one body tends to be known as a **plural system**.
 
-When interacting with plural people, remember to treat each individual member of a plural system with respect. Don'tpathologise their identity (for example, by asking to meet the "real" person or suggesting that they need to be "cured"), and remember that many plural people consider their identity more a matter of philosophy than of medicine. 
+When interacting with plural people, remember to treat each individual member of a plural system with respect. Don't pathologise their identity (for example, by asking to meet the "real" person or suggesting that they need to be "cured"), and remember that many plural people consider their identity more a matter of philosophy than of medicine. 
 
 Additionally, treat each system member as separate people, with their own memories, experiences and personality - If they ask you to treat them in a specific way, listen to them and follow their lead as best you can.
 
