@@ -17,6 +17,7 @@ discord_toolchain: https://discord.quiltmc.org/toolchain
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 collections:
   community:

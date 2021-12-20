@@ -1,5 +1,7 @@
 ---
 title: PluralKit
+redirect_from:
+  - /community/tupperbox
 ---
 
 {% admonition %}
@@ -7,18 +9,32 @@ title: PluralKit
 won't be available.
 {% endadmonition %}
 
-[PluralKit](https://pluralkit.me) is a Discord bot that exists to allow users to proxy their messages via Discord webhooks. This has many practical applications, especially given that Discord doesn't have any features that support the plural community, or any built-in mental health aids.
+[PluralKit](https://pluralkit.me) is a Discord bot that exists to allow users to proxy their messages via Discord 
+webhooks. This has many practical applications, especially given that Discord doesn't have any features that support 
+the plural community, or any built-in mental health aids.
 
-PluralKit has all kinds of fun and interesting uses, but in Quilt community spaces it should only be used for [plurality](#plurality) or self-identity purposes, or as a mental health aid. We do not allow users to make use of PluralKit for role-playing.
+PluralKit has all kinds of fun and interesting uses, but in Quilt community spaces it should only be used for 
+[plurality](#plurality) or self-identity purposes, or as a mental health aid. We do not allow users to make use of 
+PluralKit for role-playing.
 
 If you see users talking with the bot tag, they're talking through PluralKit. You can react to any message sent this
 way with the `question` emote (❓) for information on which Discord account the message belongs to.
 
 ## General Usage
 
-The primary function of PluralKit is automatically proxying messages that people using it send, in order to make those messages appear to come from someone else. This is done by making use of Discord webhooks - which has the unfortunate side effect of Discord stating that the messages were sent by a bot. Rest assured that this isn't the case - while the messages were proxied by PluralKit, they were written by a real member of the community.
+The primary function of PluralKit is automatically proxying messages that people using it send, in order to make 
+those messages appear to come from someone else. This is done by making use of Discord webhooks - which has the 
+unfortunate side effect of Discord stating that the messages were sent by a bot. Rest assured that this isn't the 
+case - while the messages were proxied by PluralKit, they were written by a real member of the community.
 
-As a member of the community, there's only one PluralKit feature available to you by default - the ability to figure out which Discord account was used to send a proxied message. You can do this by reacting to any proxied message using the `question` emote (❓), which will cause PluralKit to send you a private message with information about the Discord account who sent the message, such as username, nickname, and roles.
+Even if you aren't making use of PluralKit yourself, you can still leave reactions on messages that PluralKit has
+proxied. The following reactions allow you to interact directly with the system that sent the message, or to look up
+information about it: 
+
+* ❓ (`question`) - Get a private message with information about the Discord account that sent the message, such as 
+  username, nickname and roles.
+* 🔔 (`bell`) - Mention the Discord account that sent the proxied message, to make sure the system using it sees your
+  reply. We advise using this sparingly, as it gets annoying and spammy quickly.
 
 ## Moving from Tupperbox
 
@@ -44,13 +60,16 @@ aware of this.
 ## Plurality?
 
 {% admonition %}
-**Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most common use for it in our community spaces - so we created this section to help explain the concept. Any gatekeeping of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member of 
-the community team directly if you have any concerns.
+**Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most 
+common use for it in our community spaces - so we created this section to help explain the concept. Any gatekeeping 
+of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member 
+of the community team directly if you have any concerns.
 {% endadmonition %}
 
 Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first
 (or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other
-situations that can cause something like this to happen - and in many cases, **the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
+situations that can cause something like this to happen - and in many cases, 
+**the existence of a plurality is not problematic or negative**. As [More Than One](https://morethanone.info/) states:
 
 > Plurality (or multiplicity) is the existence of multiple self-aware entities inside one physical brain.
 > 
@@ -75,7 +94,8 @@ For more information on plurality, feel free to browse the following resources..
 {% admonition %}
 **Note:** This site belongs to a specific plural system, and much of what's written there is related to their personal
 experiences of plurality. Additionally, some articles there were written quite some time ago, and may contain vulgar
-language and outdated terminology - including terms that exist outside the plural community. Nonetheless, it remains a popular and useful resource for people approaching plurality and plural systems from the outside.
+language and outdated terminology - including terms that exist outside the plural community. Nonetheless, it remains a 
+popular and useful resource for people approaching plurality and plural systems from the outside.
 {% endadmonition %}
 
 * [Fictive Identities](https://www.exunoplures.org/main/fictive-identities/) by Noël Dawkins
