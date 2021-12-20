@@ -32,7 +32,7 @@ proxied. The following reactions allow you to interact directly with the system 
 information about it: 
 
 * ❓ (`question`) - Get a private message with information about the Discord account that sent the message, such as 
-  username, nickname and roles.
+  username, nickname, pronouns, system/member descriptions and roles.
 * 🔔 (`bell`) - Mention the Discord account that sent the proxied message, to make sure the system using it sees your
   reply. We advise using this sparingly, as it gets annoying and spammy quickly.
 
