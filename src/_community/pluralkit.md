@@ -25,7 +25,7 @@ way with the `question` emote (❓) for information on which Discord account the
 The primary function of PluralKit is automatically proxying messages that people using it send, in order to make 
 those messages appear to come from someone else. This is done by making use of Discord webhooks - which has the 
 unfortunate side effect of Discord stating that the messages were sent by a bot. Rest assured that this isn't the 
-case - while the messages were proxied by PluralKit, they were written by a real member of the community.
+case - while the messages were proxied by PluralKit, they were written by a real member of the community!
 
 Even if you aren't making use of PluralKit yourself, you can still leave reactions on messages that PluralKit has
 proxied. The following reactions allow you to interact directly with the system that sent the message, or to look up
