@@ -33,21 +33,23 @@ guidelines]({% link _community/rules.md %}).
 
 <div class="field is-grouped is-grouped-centered font-header">
     <p class="control">
-        <a href="{{ site.discord_community }}" class="button is-rounded is-discord">
+        <a href="{{ site.discord_community }}" class="button is-discord">
             <span class="icon"><i class="fab fa-discord"></i></span>
             <span>Discord</span>
         </a>
     </p>
-    
+
     <p class="control">
-        <a href="https://github.com/{{ site.github_username }}" class="button is-rounded is-github">
+        <a href="https://github.com/{{ site.github_username }}" class="button is-github">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>GitHub</span>
         </a>
     </p>
-    
+</div>
+
+<div class="field is-grouped is-grouped-centered font-header">
     <p class="control">
-        <a href="{% link _community/index.md %}" class="button is-rounded">
+        <a href="{% link _community/index.md %}" class="button is-primary">
             <span class="icon"><i class="fas fa-ellipsis-h"></i></span> 
             <span>More</span>
         </a>

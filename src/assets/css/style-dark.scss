@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
 
-@import "base";
+@import "base-dark";
 
 .hero, .navbar, .font-header, .font-header > * {
   font-family: $header-font;
@@ -13,22 +13,22 @@
 
 .button.is-discord {
   background-color: $blurple;
-  border-color: $blurple-light;
+  border-color: $blurple;
   color: $white;
 
   &:hover, &:active {
+    background-color: $blurple-dark;
     border-color: $blurple-dark;
-    color: $link-hover;
   }
 }
 
 .button.is-github {
   background-color: $white;
-  border-color: $grey;
+  border-color: $white;
   color: $black;
 
   &:hover, &:active {
-    border-color: $black-ter;
-    color: $black-ter;
+    border-color: $grey-lightest;
+    background-color: $grey-lightest;
   }
 }

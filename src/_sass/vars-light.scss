@@ -1,0 +1,33 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+
+$body-font: 'Roboto', sans-serif;
+$header-font: 'Poppins', sans-serif;
+$mono-font: 'IBM Plex Mono', monospace;
+
+$custom-colors: (
+        "blurple": (#5865F2),
+        "pink": (#DC29DD),
+);
+
+$pink: #DC29DD;
+
+$primary: #9722FF;
+$link: #27A2FD;
+$info: #3041F2;
+$success: #3CFF22;
+$warning: #FCFF22;
+$danger: #FF2222;
+$dark: $white-bis;
+
+$blurple: #5865F2;
+$blurple-dark: darken($blurple, 2%);
+$blurple-light: lighten($blurple, 2%);
+
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+
+$link-hover: $link-dark;
+$link-active: $link-dark;
+
+$family-sans-serif: $body-font;
+$family-secondary: $header-font;
+$family-monospace: $mono-font;
