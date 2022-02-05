@@ -1,0 +1,34 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+
+@import "base";
+
+.hero, .navbar, .font-header, .font-header > * {
+  font-family: $header-font;
+}
+
+.button.is-discord {
+  background-color: $blurple;
+  border-color: $blurple;
+  color: $white;
+
+  &:hover, &:active {
+    background-color: $blurple-dark;
+    border-color: $blurple-dark;
+  }
+}
+
+.button.is-github {
+  background-color: $white;
+  border-color: $black;
+  color: $black;
+
+  &:hover, &:active {
+    border-color: $black;
+    background-color: $white-bis;
+  }
+}
