@@ -2,20 +2,31 @@
 layout: base
 ---
 
-<div class="home-header col">
-    <img alt="Quilt Banner" src="/assets/img/banner.svg" />
-    {% if jekyll.environment != 'production' %}
-    <div class="row">
-        <a href="/install/" class="button primary">Install</a>
-        <a href="/dev/" class="button secondary">Create</a>
-        <a href="/dev/" class="button tertiary">Contribute</a>
+<section class="hero is-dark">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img class="is-center" style="margin:auto; height: 8rem;" alt="Quilt Banner" src="/assets/img/banner.svg"/>
+            {% if jekyll.environment != 'production' %}
+            <br/>
+            <br/>
+            <div class="field is-grouped is-grouped-centered">
+                <p class="control">
+                    <a href="/install/" class="button is-primary">Install</a>
+                </p>
+                <p class="control">
+                    <a href="/dev/" class="button is-link">Create</a>
+                </p>
+                <p class="control">
+                    <a href="/dev/" class="button is-link">Contribute</a>
+                </p>
+            </div>
+            {% endif %}
+        </div>
     </div>
-    {% endif %}
-</div>
+</section>
 
-<div class="content">
-    <main class="container">
+<section class="section">
+    <main class="content container">
         {{ content }}
     </main>
-</div>
-
+</section>

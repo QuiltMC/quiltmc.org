@@ -6,7 +6,7 @@
 {% if include.subpage %}
 {% assign is_subpage = page.url | startswith: url %}
 {% endif %}
-<a href="{{ url }}" class="{% if is_subpage or url == page.url %}active {% endif %}{{ class }}">
+<a href="{{ url }}" class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}">
     {% if icon %}
         <img alt="{{ text }} icon" src="{{ icon }}" />
     {% endif %}

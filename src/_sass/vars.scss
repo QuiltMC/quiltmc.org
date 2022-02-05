@@ -1,59 +1,29 @@
-// Font
-$font-stack: 'Roboto', sans-serif;
-$font-size:  12pt;
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
 
+$body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
-$header-font-weight: 700;
-
 $mono-font: 'IBM Plex Mono', monospace;
-$mono-font-size: 11pt;
-$mono-font-weight: 400;
 
-// Colors
 $primary: #9722FF;
-$secondary: #dc29dd;
-$tertiary: #3344ff;
-$light-color: #30273e;
-$dark-color: #1c1526;
-$fade-color: rgb(167, 167, 167);
+$dark: #1c1526;
 
-// Buttons
-$button-color: adjust_color($light-color, $lightness: 3%);
+$blurple: #7289DA;
+$blurple-dark: darken($blurple, 10%);
+$blurple-light: lighten($blurple, 10%);
 
-// Text colors and background
-$link: #27a2fd;
-$body-color: #cecece;
-$header-color: #f5f5f5;
-$bg-color: #271f33;
+$text: $white;
+$text-light: $white;
+$text-strong: $white;
 
-// Visual blocks
-$block-color: $dark-color;
+$background: #271F33;
+$body-background-color: #271F33;
 
-// Nav bar
-$nav-color: $header-color;
-$nav-color-selected: $primary;
-$nav-width: 500px; // determines the screen width at which we collapse the nav into a dropdown.
-$logo-size: 32px;
-$nav-logo-height: $logo-size - 8px;
-$nav-link-height: $logo-size - 16px;
+$link-hover: $grey-lighter;
+$link-active: $grey;
 
-// Shadows
-$shadow-color: rgba(0, 0, 0, 0.36);
-$shadow-rad: 3px;
-$default-shadow: 0px 2px $shadow-rad $shadow-color;
+$scheme-main: $body-background-color;
+$scheme-invert: $white;
 
-// Misc
-$body-width: 56rem; // Minimum width of the page's main content. Limited for readability.
-
-$mobile-width: $body-width + 2rem; // Width at which we switch to mobile layout.
-$logo-hide-width: 580px; // determines when the logo text hides to save space.
-
-// Syntax and funny text colors
-$purple: adjust-color($primary, $saturation: 10%);
-$green: #77E684;
-$pink: #FA66FA;
-$blue: #81E3FF;
-$orange: #E6A422;
-
-$base: #cecece;
-$base-darker: adjust-color($base, $lightness: -20);
+$family-sans-serif: $body-font;
+$family-secondary: $header-font;
+$family-monospace: $mono-font;

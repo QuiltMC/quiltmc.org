@@ -4,6 +4,7 @@
     "description": "Website for the Quilt modloader",
     "dependencies": {
         "@types/webpack-env": "^1.16.0",
+        "bulma": "^0.9.3",
         "core-js": "^3.8.3",
         "stimulus": "^2.0.0",
         "ts-loader": "^8.0.17",

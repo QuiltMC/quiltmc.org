@@ -7,7 +7,7 @@ layout: home
 # The Quilt Project
 
 The Quilt project is an open, community-driven modding toolchain designed
-primarily for Minecraft. By focusing on speed, ease of use, and modularity,
+primarily for Minecraft. By focusing on speed, ease of use and modularity,
 Quilt aims to provide a sleek and modern modding toolchain with an open
 ecosystem.
 
@@ -31,26 +31,37 @@ ecosystem.
 In Quilt community spaces, you are expected to follow Quilt's [community
 guidelines]({% link _community/rules.md %}).
 
-{% columns %}
-<a href="{{ site.discord_community }}" class="button discord column">
-    <img alt="Discord Logo" src="/assets/img/icon/discord-light.svg" /> Discord
-</a>
-<a href="https://github.com/{{ site.github_username }}" class="button github column">
-    <img alt="GitHub Logo" src="/assets/img/icon/github-dark.svg" /> GitHub
-</a>
-<a href="{% link _community/index.md %}" class="button column">
-    <i class="fas fa-ellipsis-h"></i> More
-</a>
-{% endcolumns %}
+<div class="field is-grouped is-grouped-centered font-header">
+    <p class="control">
+        <a href="{{ site.discord_community }}" class="button is-rounded is-discord">
+            <span class="icon"><i class="fab fa-discord"></i></span>
+            <span>Discord</span>
+        </a>
+    </p>
+    
+    <p class="control">
+        <a href="https://github.com/{{ site.github_username }}" class="button is-rounded is-github">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>GitHub</span>
+        </a>
+    </p>
+    
+    <p class="control">
+        <a href="{% link _community/index.md %}" class="button is-rounded">
+            <span class="icon"><i class="fas fa-ellipsis-h"></i></span> 
+            <span>More</span>
+        </a>
+    </p>
+</div>
 
 {% endcolumn %}
 {% endcolumns %}
 
-# Recent posts
+# Recent Posts
 
 {% for post in site.posts limit:2 %}
 <article class="blog-post">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2 class="subtitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
     {% include post_info.html post=post %}
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url }}">More...</a>

@@ -1,0 +1,11 @@
+@import "vars";
+
+@media (prefers-color-scheme: dark) {
+  @import "vars-dark";
+}
+
+@media (prefers-color-scheme: light) {
+  @import "vars-light";
+}
+
+@import "../../node_modules/bulma/bulma";

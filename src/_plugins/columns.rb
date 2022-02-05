@@ -2,7 +2,7 @@ module Jekyll
   class ColumnsBlock < Liquid::Block
     def render(context)
       text = super
-      "<div class='text-cols'>#{text}</div>"
+      "<div class='columns'>#{text}</div>"
     end
   end
 
