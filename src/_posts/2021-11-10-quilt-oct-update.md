@@ -24,18 +24,21 @@ Benefits of Quilt Mappings:
    - While not complete, Quilt Mappings has the goal of 100% mapping coverage for Minecraft. Any help toward this goal would be appreciated as well!
 
 ### How to use Quilt Mapping (Gradle Plugin)
+
 How to use Quilt Mappings:
 
-**settings.gradle**
+#### settings.gradle
+
 ```
 pluginManagement {
     repositories {
         maven { url = "https://maven.oroarmor.com" }
     }
 }
- 
 ```
-**build.gradle**
+
+#### build.gradle
+
 ```
 plugins {
   // ...

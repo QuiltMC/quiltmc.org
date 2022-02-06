@@ -67,6 +67,8 @@ guidelines]({% link _community/rules.md %}).
     {% include post_info.html post=post %}
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url }}">More...</a>
+    <br />
+    <br />
 </article>
 {% endfor %}
 

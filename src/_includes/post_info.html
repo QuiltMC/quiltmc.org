@@ -1,8 +1,28 @@
 {% assign post = include.post %}
-<div class="post-info">
-    Posted by {{ post.author }} on
-    <time datetime="{{ post.date | date: "%Y/%m/%d"}}">
-        {{ post.date | date_to_long_string }}
-    </time>
+
+<div class="field is-grouped is-grouped-multiline">
+    <div class="control" title="Author">
+        <div class="tags has-addons">
+            <span class="tag is-dark">
+                <i class="fas fa-user"></i>
+            </span>
+
+            <span class="tag is-primary">
+                {{ post.author }}
+            </span>
+        </div>
+    </div>
+
+    <div class="control" title="Post date">
+        <div class="tags has-addons">
+            <span class="tag is-dark">
+                <i class="fas fa-clock"></i>
+            </span>
+
+            <time class="tag is-info" datetime="{{ post.date | date: " %Y/%m/%d"}}">
+                {{ post.date | date_to_long_string }}
+            </time>
+        </div>
+    </div>
 </div>
 

@@ -1,3 +1,13 @@
 @import "vars-light";
 
 @import "../../node_modules/bulma/bulma";
+
+.content {
+  h4:not(:first-child) {
+    margin-top: 1.1428em;
+  }
+
+  h5:not(:first-child) {
+    margin-top: 1.1428em;
+  }
+}
