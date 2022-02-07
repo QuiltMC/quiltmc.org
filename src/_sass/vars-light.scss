@@ -12,8 +12,8 @@ $custom-colors: (
 
 $pink: #DC29DD;
 
-$primary: bulmaLighten(#9722FF, 20%);
-$primary-lighter: bulmaLighten($primary, 21%);
+$primary: #9722FF;
+$primary-lighter: bulmaLighten($primary, 41%);
 
 $link: #27A2FD;
 $info: #3041F2;
