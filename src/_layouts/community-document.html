@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-narrow">
+            <div class="box">
+                <aside class="menu">
+                    <p class="menu-label">Documents</p>
+
+                    <ul class="menu-list">
+                        {% for p in site.community %}
+                        <li>
+                            <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <div class="content column">
+            <h1>{{ page.title }}</h1>
+
+            {{ content }}
+
+            <hr />
+
+            <div class="wiki-info">
+                <p>{% edit_date Last updated on %}</p>
+            </div>
+        </div>
+    </div>
+</section>

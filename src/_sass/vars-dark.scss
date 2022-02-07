@@ -18,25 +18,48 @@ $success: #3CFF22;
 $warning: #FCFF22;
 $danger: #FF2222;
 $dark: #1c1526 !default;
+$light: lighten($dark, 50%) !default;
 
 $blurple: #5865F2;
 $blurple-dark: darken($blurple, 2%);
 $blurple-light: lighten($blurple, 2%);
 
-$text: $white-bis;
+$text: $white-bis !default;
 $text-light: $white-ter;
 $text-strong: $white;
 
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
 
-$background: #271F33;
+//$background: #271F33;
 $body-background-color: #271F33;
 $footer-background-color: #1c1526;
 
 $code-background: $dark;
 $pre-background: $dark;
 
+$box-background-color: $dark;
 $tag-background-color: $dark;
+
+$message-background-color: $dark;
+$message-body-border-color: lighten($dark, 15%);
+$message-body-color: $text !important;
+$message-body-border-width: 0.1rem;
+$message-header-background-color: lighten($dark, 15%);
+$message-header-color: $text;
+
+$message-colors: (
+        "light": ($light, $light-invert, darken($light, 20%)),
+        "dark": (lighten($dark, 15%), $dark-invert, $dark),
+        "primary": ($primary, $primary-invert, darken($primary-dark, 20%), $primary-dark),
+        "link": ($link, $link-invert, darken($link-dark, 20%), $link-dark),
+        "info": ($info, $info-invert, darken($info-dark, 20%), $info-dark),
+        "success": ($success, $success-invert, darken($success-dark, 20%), $success-dark),
+        "warning": ($warning, $warning-invert, darken($warning-dark, 20%), $warning-dark),
+        "danger": ($danger, $danger-invert, darken($danger-dark, 20%), $danger-dark)
+);
+
+$content-blockquote-background-color: $dark;
+$content-blockquote-border-left: 5px solid lighten($dark, 15%);
 
 $link-hover: $link-dark;
 $link-active: $link-dark;
@@ -47,3 +70,5 @@ $family-monospace: $mono-font;
 
 $scheme-main: $body-background-color;
 $scheme-invert: $white;
+
+$menu-item-active-background-color: $primary;

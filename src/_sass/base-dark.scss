@@ -1,3 +1,7 @@
 @import "vars-dark";
 
 @import "../../node_modules/bulma/bulma";
+
+hr {
+  border: 1px solid darken($text, 30%);
+}

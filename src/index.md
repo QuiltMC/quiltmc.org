@@ -64,11 +64,12 @@ guidelines]({% link _community/rules.md %}).
 {% for post in site.posts limit:2 %}
 <article class="blog-post">
     <h2 class="subtitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
     {% include post_info.html post=post %}
+
     <p>{{ post.excerpt }}</p>
+
     <a href="{{ post.url }}">More...</a>
-    <br />
-    <br />
 </article>
 {% endfor %}
 
