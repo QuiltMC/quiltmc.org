@@ -71,4 +71,16 @@ $family-monospace: $mono-font;
 $scheme-main: $body-background-color;
 $scheme-invert: $white;
 
+$menu-item-hover-background-color: darken($primary, 30%);
 $menu-item-active-background-color: $primary;
+
+$navbar-background-color: $dark;
+
+$navbar-item-active-background-color: $primary;
+$navbar-item-active-color: $text;
+$navbar-item-hover-background-color: $primary;
+$navbar-item-hover-color: $text;
+
+$navbar-box-shadow-color: rgba(0, 0, 0, 0);
+$navbar-box-shadow-size: 0px;
+

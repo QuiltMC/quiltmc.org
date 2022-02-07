@@ -24,3 +24,18 @@ img.emoji {
   height: 1.05rem;
   vertical-align: middle;
 }
+
+$transparent-text: transparentize($text, 0.7);
+
+.menu-label {
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid $transparent-text;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    box-shadow: none;
+    border-bottom: 2px solid $transparent-text;
+    border-top: 2px solid $transparent-text;
+  }
+}

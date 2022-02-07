@@ -4,8 +4,17 @@ layout: base
 
 <section class="section">
     <div class="columns">
-        <div class="column is-narrow">
-            <div class="box">
+        <div class="column is-narrow" data-controller="sidebar">
+            <div class="is-hidden-tablet">
+                <button data-action="click->sidebar#toggle" class="button is-dark">
+                    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <span>Documents</span>
+                </button>
+                <br />
+                <br />
+            </div>
+
+            <div class="box is-hidden-mobile" data-sidebar-target="sidebar">
                 <aside class="menu">
                     <p class="menu-label">Documents</p>
 
@@ -23,13 +32,21 @@ layout: base
         <div class="content column">
             <h1>{{ page.title }}</h1>
 
-            {{ content }}
+            <div class="field is-grouped">
+                <div class="control" title="Last updated">
+                    <div class="tags has-addons">
+                        <span class="tag is-primary">
+                            <i class="fas fa-pencil"></i>
+                        </span>
 
-            <hr />
-
-            <div class="wiki-info">
-                <p>{% edit_date Last updated on %}</p>
+                        <time class="tag" datetime="{% edit_date %}">
+                            {% edit_date %}
+                        </time>
+                    </div>
+                </div>
             </div>
+
+            {{ content }}
         </div>
     </div>
 </section>

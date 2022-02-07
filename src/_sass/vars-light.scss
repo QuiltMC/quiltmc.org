@@ -1,4 +1,5 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
 
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
@@ -11,19 +12,23 @@ $custom-colors: (
 
 $pink: #DC29DD;
 
-$primary: lighten(#9722FF, 20%);
+$primary: bulmaLighten(#9722FF, 20%);
+$primary-lighter: bulmaLighten($primary, 21%);
+
 $link: #27A2FD;
 $info: #3041F2;
 $success: #3CFF22;
 $warning: #FCFF22;
 $danger: #FF2222;
-$dark: $white-bis;
+$dark: $primary-lighter;
 
 $blurple: #5865F2;
 $blurple-dark: darken($blurple, 2%);
 $blurple-light: lighten($blurple, 2%);
 
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
+
+$footer-background-color: $primary-lighter;
 
 $link-hover: $link-dark;
 $link-active: $link-dark;
@@ -32,14 +37,27 @@ $family-sans-serif: $body-font;
 $family-secondary: $header-font;
 $family-monospace: $mono-font;
 
-$message-background-color: $primary-light;
+$message-background-color: $primary-lighter;
 $message-body-border-color: $primary;
 $message-body-color: $text !important;
 $message-body-border-width: 0.1rem;
 $message-header-background-color: $primary;
 $message-header-color: $text;
 
-$menu-item-active-background-color: $primary;
+$code-background: $primary-lighter;
+$code: $primary-dark;
 
-$content-blockquote-background-color: $primary-light;
+$pre-background: $primary-lighter;
+
+$tag-background-color: $primary-lighter;
+
+$menu-item-active-background-color: $primary;
+$menu-item-hover-background-color: $primary-lighter;
+
+$content-blockquote-background-color: $primary-lighter;
 $content-blockquote-border-left: 5px solid $primary;
+
+$navbar-item-active-background-color: $primary-lighter;
+$navbar-item-active-color: $text;
+$navbar-item-hover-background-color: $primary-lighter;
+$navbar-item-hover-color: $text;

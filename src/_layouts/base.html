@@ -29,11 +29,13 @@
     <script src="https://kit.fontawesome.com/b1b70f724e.js" crossorigin="anonymous"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
+
 {% comment %}
 preload class stops CSS animations from playing during page load and is removed by JS
 {% endcomment %}
 <body class="page preload">
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation" data-controller="navbar">
     <div class="navbar-brand">
         <a class="navbar-item pr-6" href="{{ site.baseurl }}/">
             <img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="Quilt Logo" />
@@ -41,14 +43,14 @@ preload class stops CSS animations from playing during page load and is removed 
             <span class="ml-2">QuiltMC</span>
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <a role="button" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu" data-navbar-target="menu">
         <div class="navbar-end">
             {% if jekyll.environment != 'production' %}
             {% include nav_link.html text="Install" href="/install/" subpage=true %}
@@ -127,9 +129,7 @@ preload class stops CSS animations from playing during page load and is removed 
     </div>
 </footer>
 
-{% if page.js %}
 <script src="/assets/js/bundle.js"></script>
-{% endif %}
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {

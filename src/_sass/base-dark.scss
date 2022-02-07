@@ -5,3 +5,18 @@
 hr {
   border: 1px solid darken($text, 30%);
 }
+
+$transparent-text: transparentize($text, 0.7);
+
+.menu-label {
+  border-bottom: 2px solid $transparent-text;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    box-shadow: none;
+    border-bottom: 2px solid $transparent-text;
+    border-top: 2px solid $transparent-text;
+  }
+}
+
