@@ -7,4 +7,9 @@ export default class extends Controller {
     toggle () {
         this.sidebarTarget.classList.toggle("is-hidden-mobile")
     }
+
+    toggleToTop () {
+        this.toggle()
+        window.scrollTo(0, 0)
+    }
 }

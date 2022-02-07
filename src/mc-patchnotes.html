@@ -4,26 +4,45 @@ permalink: /mc-patchnotes/
 layout: base
 ---
 
-<div class="content">
-    <div class="container">
-        <div class="sidebar-container">
-            <nav class="sidebar" id="sidebar">
-                <h1>Versions</h1>
-            </nav>
-            <main>
-                <noscript>
-                    This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
-                    Please enable it and reload the page to continue.
-                </noscript>
-                <h1 id="title">Minecraft Patchnotes</h1>
-                <img id="image" style="float: right; border-radius: 10px; margin: 10px;"/>
-                <div id="body">
-                    Select the specific version from the sidebar.
-                </div>
-            </main>
+<section class="section">
+    <div class="columns">
+        <div class="column is-narrow" data-controller="sidebar">
+            <div class="is-hidden-tablet">
+                <button data-action="click->sidebar#toggle" class="button is-dark">
+                    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <span>Versions</span>
+                </button>
+                <br />
+                <br />
+            </div>
+
+            <div class="box is-hidden-mobile" data-sidebar-target="sidebar">
+                <aside class="menu">
+                    <p class="menu-label">Versions</p>
+
+                    <ul class="menu-list" id="sidebar">
+
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <div class="column">
+            <noscript class="message is-danger">
+                This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
+                Please enable it and reload the page to continue.
+            </noscript>
+
+            <h1 id="title" class="title">Minecraft Patchnotes</h1>
+
+            <img id="image" class="is-pulled-right" style="border-radius: 10px; margin: 10px;" />
+
+            <div id="body" class="content">
+                Select the version you'd like to see patch notes for.
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <script>
     // Fetch launcher metadata
@@ -45,11 +64,15 @@ layout: base
 
             // Create nav-links
             data.entries.forEach(entry => {
-                var version = window.location.hash.substr(1);
-                var newRef = document.createElement("a");
+                const listItem = document.createElement("li")
+                const newRef = document.createElement("a");
+
+                newRef.dataset["action"] = "click->sidebar#toggleToTop"
                 newRef.innerText = entry.version;
                 newRef.setAttribute("href", window.location.pathname + "#" + entry.version);
-                document.getElementById("sidebar").appendChild(newRef);
+
+                listItem.appendChild(newRef)
+                document.getElementById("sidebar").appendChild(listItem);
             });
 
             // Rerender the patchnote when the url changes

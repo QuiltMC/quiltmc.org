@@ -39,3 +39,24 @@ $transparent-text: transparentize($text, 0.7);
     border-top: 2px solid $transparent-text;
   }
 }
+
+.navbar-item .icon {
+  margin-right: 0.5rem;
+}
+
+.grid-picker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  & > * {
+    margin: 1rem !important;
+  }
+
+  img {
+    width: 4rem !important;
+  }
+}

@@ -27,14 +27,6 @@ collections:
     permalink: /blog/:year/:month/:day/:title:output_ext
     order:
       - index.md
-  wiki:
-    permalink: /wiki/:title:output_ext
-    output: true
-    order:
-      - index.md
-      - rules.md
-      - code-of-conduct.md
-      - moderation.md
 
 defaults:
   -

@@ -8,7 +8,8 @@
 {% endif %}
 <a href="{{ url }}" class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}">
     {% if icon %}
-        <img alt="{{ text }} icon" src="{{ icon }}" />
+        <span class="icon"><i class="fas fa-{{ icon }}"></i></span>
     {% endif %}
-    {{ text }}
+
+    <span>{{ text }}</span>
 </a>
