@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
 
 @import "base-dark";
+@import "monokai";
 
 .hero, .navbar, .font-header, .font-header > * {
   font-family: $header-font;

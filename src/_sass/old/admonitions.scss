@@ -1,9 +1,0 @@
-// Admonitions or message blocks, indented content within another block of content
-
-div.admonition {
-  @extend .block;
-
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding: 0.1rem 1rem;
-}

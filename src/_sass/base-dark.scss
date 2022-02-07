@@ -20,3 +20,10 @@ $transparent-text: transparentize($text, 0.7);
   }
 }
 
+
+figure.highlight {
+  & > pre {
+    background-color: $dark;
+    border: 1px solid lighten($dark, 20%);
+  }
+}

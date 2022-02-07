@@ -60,3 +60,17 @@ $transparent-text: transparentize($text, 0.7);
     width: 4rem !important;
   }
 }
+
+figure.highlight {
+  text-align: left !important;
+
+  & > pre {
+    background-color: $dark;
+    border: 1px solid darken($dark, 20%);
+    border-radius: 0.2rem;
+  }
+
+  & td {
+    padding: 0 !important;
+  }
+}
