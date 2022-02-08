@@ -2,7 +2,7 @@
 layout: install-vselect
 title: Install Quilt in MultiMC
 launcher: MultiMC
-permalink: /install/multimc.html
+permalink: /install/multimc
 js: true
 ---
 

@@ -2,7 +2,7 @@
 layout: install-vselect
 title: Install Quilt in ATLauncher
 launcher: ATLauncher
-permalink: /install/atlauncher.html
+permalink: /install/atlauncher
 js: true
 ---
 

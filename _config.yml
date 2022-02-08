@@ -6,6 +6,7 @@ description: >-
 baseurl: ""
 url: ""
 source: "src/"
+permalink: pretty
 
 # Social media handles
 twitter_username: quilt_mc
@@ -21,10 +22,10 @@ plugins:
 
 collections:
   community:
-    permalink: /community/:title:output_ext
+    permalink: /community/:title
     output: true
   posts:
-    permalink: /blog/:year/:month/:day/:title:output_ext
+    permalink: /blog/:year/:month/:day/:title
     order:
       - index.md
 
@@ -71,7 +72,6 @@ defaults:
       type: "wiki"
     values:
       private: true
-
 
 sass:
     sass_dir: _sass

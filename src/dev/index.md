@@ -8,7 +8,7 @@ permalink: /dev/
 If you'd like to learn how to get started developing Quilt mods, check out our
 [wiki]().
 
-You can find a list of available versions [here](/dev/versions.html).
+You can find a list of available versions [here](/dev/versions).
 
 
 # Contribute to Quilt

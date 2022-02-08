@@ -1,5 +1,4 @@
 ---
-permalink: /community/rules.html
 title: Rules
 ---
 
