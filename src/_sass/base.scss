@@ -44,6 +44,23 @@ $transparent-text: transparentize($text, 0.7);
   margin-right: 0.5rem;
 }
 
+.button-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-bottom: 0.4rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  & > * {
+    margin: 0.4rem !important;
+  }
+}
+
 .grid-picker {
   display: flex;
   flex-direction: row;
@@ -73,4 +90,24 @@ figure.highlight {
   & td {
     padding: 0 !important;
   }
+}
+
+.hero .tabs.is-boxed li.is-active a {
+  background-color: $white !important;
+  border-color: transparent !important;
+  color: $text !important;
+}
+
+.message.is-fullheight {
+  height: 100%;
+
+  .message-body {
+    height: 100%;
+  }
+}
+
+.has-background-patches {
+  background-image: url("/assets/img/hero-bg-light.svg");
+  background-position: center;
+  background-size: cover;
 }

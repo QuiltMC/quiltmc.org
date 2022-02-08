@@ -23,6 +23,17 @@
   }
 }
 
+.button.is-twitter {
+  background-color: $twitter-blue;
+  border-color: $twitter-blue;
+  color: $white;
+
+  &:hover, &:active {
+    border-color: $twitter-blue-dark;
+    background-color: $twitter-blue-dark;
+  }
+}
+
 .button.is-github {
   background-color: $white;
   border-color: $black;

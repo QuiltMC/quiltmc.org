@@ -1,0 +1,30 @@
+{% assign style = include.style | default: "is-dark" -%}
+
+<nav class="navbar {{ style }}" role="navigation" aria-label="main navigation" data-controller="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item pr-6" href="{{ site.baseurl }}/">
+            <img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="Quilt Logo" />
+
+            <span class="ml-2">QuiltMC</span>
+        </a>
+
+        <a role="button" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" data-navbar-target="menu">
+        <div class="navbar-end">
+            {% if jekyll.environment != 'production' %}
+            {% include nav_link.html text="Install" href="/install/" subpage=true %}
+            {% include nav_link.html text="Developers" href="/dev/" subpage=true %}
+            {% endif %}
+            {% include nav_link.html text="Blog" href="/blog/" subpage=true %}
+            {% include nav_link.html text="FAQ" href="/faq/" subpage=true %}
+            {% include nav_link.html text="Community" href="/community/" subpage=true %}
+        </div>
+    </div>
+</nav>
+

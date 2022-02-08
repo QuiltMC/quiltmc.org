@@ -18,11 +18,25 @@ $success: #3CFF22;
 $warning: #FCFF22;
 $danger: #FF2222;
 $dark: #1c1526 !default;
-$light: lighten($dark, 50%) !default;
+
+$lighten-amount: 15%;
+
+$primary-light: lighten($primary, $lighten-amount);
+$link-light: lighten($link, $lighten-amount);
+$info-light: lighten($info, $lighten-amount);
+$success-light: lighten($success, $lighten-amount);
+$warning-light: lighten($warning, $lighten-amount);
+$danger-light: lighten($danger, $lighten-amount);
+
+$dark-light: lighten($dark, 50%) !default;
 
 $blurple: #5865F2;
 $blurple-dark: darken($blurple, 2%);
 $blurple-light: lighten($blurple, 2%);
+
+$twitter-blue: #1DA1F2;
+$twitter-blue-dark: darken($twitter-blue, 2%);
+$twitter-blue-light: lighten($twitter-blue, 2%);
 
 $text: $white-bis !default;
 $text-light: $white-ter;
@@ -33,6 +47,8 @@ $text-strong: $white;
 //$background: #271F33;
 $body-background-color: #271F33;
 $footer-background-color: #1c1526;
+
+$tabs-boxed-link-active-background-color: $body-background-color;
 
 $code: lighten($primary, 20%);
 $code-background: $dark;
@@ -49,11 +65,11 @@ $message-header-background-color: lighten($dark, 15%);
 $message-header-color: $text;
 
 $message-colors: (
-        "light": ($light, $light-invert, darken($light, 20%)),
+        "light": ($dark-light, $light-invert, darken($light, 20%)),
         "dark": (lighten($dark, 15%), $dark-invert, $dark),
-        "primary": ($primary, $primary-invert, darken($primary-dark, 20%), $primary-dark),
+        "primary": ($primary, $primary-invert, darken($primary-dark, 25%), $primary-dark),
         "link": ($link, $link-invert, darken($link-dark, 20%), $link-dark),
-        "info": ($info, $info-invert, darken($info-dark, 20%), $info-dark),
+        "info": ($info, $info-invert, darken($info-dark, 25%), $info-dark),
         "success": ($success, $success-invert, darken($success-dark, 20%), $success-dark),
         "warning": ($warning, $warning-invert, darken($warning-dark, 20%), $warning-dark),
         "danger": ($danger, $danger-invert, darken($danger-dark, 20%), $danger-dark)

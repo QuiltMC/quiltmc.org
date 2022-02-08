@@ -1,8 +1,12 @@
 ---
-layout: base
+layout: base-navless
 ---
 
-<section class="hero is-dark">
+<section class="hero is-dark has-background-patches">
+    <div class="hero-head">
+        {% include navbar.html style="no-style" %}
+    </div>
+
     <div class="hero-body">
         <div class="container has-text-centered">
             <picture>
@@ -28,8 +32,4 @@ layout: base
     </div>
 </section>
 
-<section class="section">
-    <main class="content container">
-        {{ content }}
-    </main>
-</section>
+{{ content }}

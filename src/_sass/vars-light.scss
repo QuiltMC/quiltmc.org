@@ -26,9 +26,15 @@ $blurple: #5865F2;
 $blurple-dark: darken($blurple, 2%);
 $blurple-light: lighten($blurple, 2%);
 
+$twitter-blue: #1DA1F2;
+$twitter-blue-dark: darken($twitter-blue, 2%);
+$twitter-blue-light: lighten($twitter-blue, 2%);
+
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
 
 $footer-background-color: $primary-lighter;
+$tabs-boxed-link-active-background-color: $white;
+$tabs-boxed-link-active-color: $text;
 
 $link-hover: $link-dark;
 $link-active: $link-dark;

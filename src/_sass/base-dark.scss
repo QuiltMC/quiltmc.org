@@ -27,3 +27,15 @@ figure.highlight {
     border: 1px solid lighten($dark, 20%);
   }
 }
+
+.hero .tabs.is-boxed li.is-active a {
+  background-color: $body-background-color !important;
+  border-color: transparent !important;
+  color: $text !important;
+}
+
+.has-background-patches {
+  background-image: url("/assets/img/hero-bg.svg");
+  background-position: center;
+  background-size: cover;
+}
