@@ -58,11 +58,11 @@ automatically download the Quilt libraries needed to run your mods.
 {% endcolumn %}
 
 {% column has-text-centered %}
-{% admonition /info has-text-left is-fullheight %}
+{% admonition /success has-text-left is-fullheight %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
-    <span class="icon has-text-info">
+    <span class="icon has-text-success">
       <i class="fas fa-wrench"></i>
     </span>
 
@@ -143,10 +143,16 @@ If you're looking for specific jobs, the following places are always worth check
     {% include post_info.html post=post %}
 
     <p>{{ post.excerpt }}</p>
-
-    <a href="{{ post.url }}">More...</a>
 </article>
 {% endfor %}
+
+<div class="is-flex mt-4 font-header is-justify-content-right">
+<a class="button is-primary" href="/blog">
+    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+    <span>More Posts</span>
+</a>
+</div>
+
 {% endcolumn %}
 {% endcolumns %}
 {% endcolumn %}

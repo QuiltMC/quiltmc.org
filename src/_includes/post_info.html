@@ -1,28 +1,11 @@
 {% assign post = include.post %}
+{% assign style = include.style | default: "" %}
 
-<div class="field is-grouped">
-    <div class="control" title="Author">
-        <div class="tags has-addons">
-            <span class="tag is-primary">
-                <i class="fas fa-user"></i>
-            </span>
-
-            <span class="tag">
-                {{ post.author }}
-            </span>
-        </div>
-    </div>
-
-    <div class="control" title="Post date">
-        <div class="tags has-addons">
-            <span class="tag is-primary">
-                <i class="fas fa-clock"></i>
-            </span>
-
-            <time class="tag" datetime="{{ post.date | date: " %Y/%m/%d"}}">
-                {{ post.date | date_to_long_string }}
-            </time>
-        </div>
+<div class="media">
+    <div class="media-content">
+        <p class="title is-5">{{ post.author }}</p>
+        <p class="subtitle is-6" datetime="{{ post.date | date: " %Y/%m/%d"}}">
+            {{ post.date | date_to_long_string }}
+        </p>
     </div>
 </div>
-

@@ -39,3 +39,7 @@ figure.highlight {
   background-position: center;
   background-size: cover;
 }
+
+article.blog-post:not(:last-child) {
+  border-bottom: 1px solid darken($text, 40%);
+}
