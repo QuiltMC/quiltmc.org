@@ -77,6 +77,10 @@ toolchain, you can be sure that **your mod is in good hands**.
 {% endcolumn %}
 {% endcolumns %}
 
+
+{% columns is-centered %}
+{% column is-10 %}
+
 {% columns %}
 {% column %}
 # Join the Community
@@ -143,5 +147,7 @@ If you're looking for specific jobs, the following places are always worth check
     <a href="{{ post.url }}">More...</a>
 </article>
 {% endfor %}
+{% endcolumn %}
+{% endcolumns %}
 {% endcolumn %}
 {% endcolumns %}
