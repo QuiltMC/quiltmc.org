@@ -113,8 +113,10 @@ figure.highlight {
   background-size: 25rem;
 }
 
-.hero.has-background-patches .navbar-menu {
-  background-color: transparentize($dark, 0.3);
+.hero.has-background-patches {
+  .navbar-menu, .navbar-brand {
+    background-color: transparentize($dark, 0.3);
+  }
 }
 
 article.blog-post:not(:last-child) {
