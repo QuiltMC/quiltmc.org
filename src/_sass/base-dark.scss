@@ -50,3 +50,8 @@ figure.highlight {
 article.blog-post:not(:last-child) {
   border-bottom: 1px solid darken($text, 40%);
 }
+
+.button, h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
