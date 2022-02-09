@@ -36,8 +36,13 @@ figure.highlight {
 
 .has-background-patches {
   background-image: url("/assets/img/hero-bg.svg");
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-repeat: repeat;
+  background-size: 25rem;
+}
+
+.hero.has-background-patches .navbar-menu {
+  background-color: transparentize($dark, 0.3);
 }
 
 article.blog-post:not(:last-child) {
