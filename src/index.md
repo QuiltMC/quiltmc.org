@@ -2,7 +2,7 @@
 layout: hero-content
 ---
 
-{% columns is-centered %}
+{% columns is-centered mb-5 %}
 {% column is-10 %}
 # The Quilt Project
 
@@ -16,14 +16,14 @@ transparency. For more information on how we hope to do this, [please see our FA
 {% endcolumn %}
 {% endcolumns %}
 
-{% columns %}
+{% columns mb-5 %}
 {% column %}
 
 {% admonition /primary is-fullheight %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
-    <span class="icon has-text-primary">
+    <span class="icon has-text-primary mr-3">
       <i class="fas fa-heart"></i>
     </span>
 
@@ -43,7 +43,7 @@ exists for your needs** - not in spite of them.
 
 <h2 class="has-text-centered">
   <span class="icon-text">
-    <span class="icon has-text-link">
+    <span class="icon has-text-link mr-3">
       <i class="fas fa-cubes"></i>
     </span>
 
@@ -62,7 +62,7 @@ automatically download the Quilt libraries needed to run your mods.
 
 <h2 class="has-text-centered">
   <span class="icon-text">
-    <span class="icon has-text-success">
+    <span class="icon has-text-success mr-3">
       <i class="fas fa-wrench"></i>
     </span>
 
