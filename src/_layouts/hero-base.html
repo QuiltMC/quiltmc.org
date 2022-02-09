@@ -10,19 +10,20 @@ layout: base-navless
     <div class="hero-body">
         <div class="container has-text-centered">
             <picture>
-                <source srcset="/assets/img/banner-light.svg" media="(prefers-color-scheme: light)">
-                <img class="is-center" style="margin:auto; height: 8rem;" alt="Quilt Banner" src="/assets/img/banner.svg"/>
+                <source srcset="/assets/img/banner.svg" media="(prefers-color-scheme: dark)">
+                <img class="is-center" style="margin:auto; height: 8rem;" alt="Quilt Banner" src="/assets/img/banner-light.svg"/>
             </picture>
+
             {% if jekyll.environment != 'production' %}
-            <br/>
-            <br/>
-            <div class="field is-grouped is-grouped-centered">
+            <div class="field is-grouped is-grouped-centered mt-5">
                 <p class="control">
                     <a href="/install/" class="button is-primary">Install</a>
                 </p>
+
                 <p class="control">
                     <a href="/dev/" class="button is-info">Create</a>
                 </p>
+
                 <p class="control">
                     <a href="/dev/" class="button is-link">Contribute</a>
                 </p>
