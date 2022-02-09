@@ -119,10 +119,17 @@ figure.highlight {
   }
 }
 
-article.blog-post:not(:last-child) {
+article.with-divider.blog-post:not(:last-child) {
   border-bottom: 1px solid lighten($text, 40%);
 }
 
-.button, h1, h2, h3, h4, h5, h6 {
+.button, .title, h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: $header-font;
+  font-weight: 600;
+  color: $grey-light;
 }

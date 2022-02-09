@@ -90,7 +90,7 @@ Please feel free to join us on one of our official community spaces by clicking 
 [our Code of Conduct](/community/code-of-conduct/) and [our rules](/community/rules/).** We recommend that you read 
 and become familiar with them before joining or interacting with us.
 
-<div class="button-grid font-header">
+<div class="button-grid">
     <a href="{{ site.discord_community }}" class="button is-discord">
         <span class="icon"><i class="fab fa-discord"></i></span>
         <span>Community</span>
@@ -112,7 +112,7 @@ and become familiar with them before joining or interacting with us.
 If you'd like to help us, the best thing you can do right now is to join us on GitHub or the toolchain Discord server,
 and offer your expertise. There's plenty of things to do, so we can always use more help!
 
-<div class="button-grid font-header">
+<div class="button-grid">
     <a href="{{ site.discord_toolchain }}" class="button is-discord">
         <span class="icon"><i class="fab fa-discord"></i></span>
         <span>Toolchain</span>
@@ -137,7 +137,7 @@ If you're looking for specific jobs, the following places are always worth check
 # Latest Posts
 
 {% for post in site.posts limit:3 %}
-<article class="blog-post">
+<article class="blog-post with-divider">
     <h2 class="subtitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
     {% include post_info.html post=post %}
@@ -146,11 +146,11 @@ If you're looking for specific jobs, the following places are always worth check
 </article>
 {% endfor %}
 
-<div class="is-flex mt-4 font-header is-justify-content-right">
-<a class="button is-primary" href="/blog">
-    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-    <span>More Posts</span>
-</a>
+<div class="is-flex mt-4 is-justify-content-right">
+    <a class="button is-primary" href="/blog">
+        <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+        <span>More Posts</span>
+    </a>
 </div>
 
 {% endcolumn %}

@@ -4,7 +4,7 @@
 <div class="media">
     <div class="media-content">
         <p class="title is-5">{{ post.author }}</p>
-        <p class="subtitle is-6" datetime="{{ post.date | date: " %Y/%m/%d"}}">
+        <p class="subtitle is-6">
             {{ post.date | date_to_long_string }}
         </p>
     </div>
