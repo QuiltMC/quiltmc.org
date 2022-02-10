@@ -1,5 +1,7 @@
 ---
 title: Rules
+redirect_from:
+- /community/rules.html
 ---
 
 We expect everyone that makes use of any Quilt community spaces to adhere to the following rules. If you have any

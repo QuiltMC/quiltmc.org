@@ -1,5 +1,7 @@
 ---
 title: Moderation
+redirect_from:
+- /community/moderation.html
 ---
 
 This document outlines a basic idea of what's expected of our community team members, and provides some advice for 

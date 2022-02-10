@@ -22,10 +22,10 @@ plugins:
 
 collections:
   community:
-    permalink: /community/:title
+    permalink: /community/:title/
     output: true
   posts:
-    permalink: /blog/:year/:month/:day/:title
+    permalink: /blog/:year/:month/:day/:title/
     order:
       - index.md
 

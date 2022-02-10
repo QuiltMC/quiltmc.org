@@ -2,6 +2,8 @@
 title: PluralKit
 redirect_from:
   - /community/tupperbox
+  - /community/tupperbox.html
+  - /community/pluralkit.html
 ---
 
 {% admonition %}

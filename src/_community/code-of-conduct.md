@@ -1,5 +1,7 @@
 ---
 title: Code of Conduct
+redirect_from:
+- /community/code-of-conduct.html
 ---
 
 Like many communities, our policies are based on a Code of Conduct. Please make sure you read it before making use of
