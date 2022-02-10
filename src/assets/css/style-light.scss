@@ -40,6 +40,17 @@
   }
 }
 
+.button.is-gradle {
+   background-color: $gradle-blue;
+   border-color: $gradle-blue;
+   color: $white;
+
+   &:hover, &:active {
+     border-color: $gradle-blue-dark;
+     background-color: $gradle-blue-dark;
+   }
+ }
+
 .button.is-github {
   background-color: $white;
   border-color: $black;

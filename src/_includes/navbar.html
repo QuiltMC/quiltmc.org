@@ -24,6 +24,25 @@
             {% endif %}
             {% include nav_link.html text="Blog" href="/blog/" subpage=true %}
             {% include nav_link.html text="Community" href="/community/" subpage=true %}
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <span class="is-hidden-desktop">
+                        More Pages
+                    </span>
+                    <span class="icon is-hidden-mobile is-hidden-tablet-only">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    {% include nav_link.html text="Maven Repo" href="https://maven.quiltmc.org" icon="fak fa-gradle" %}
+
+                    <hr class="navbar-divider" />
+
+                    {% include nav_link.html text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" %}
+                </div>
+            </div>
         </div>
     </div>
 </nav>

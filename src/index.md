@@ -81,6 +81,24 @@ toolchain, you can be sure that **your mod is in good hands**.
 {% columns is-centered %}
 {% column is-10 %}
 
+<div class="button-grid">
+    <a href="/mc-patchnotes/" class="button is-info">
+        <span class="icon"><i class="fas fa-notebook"></i></span>
+        <span>Minecraft Patch Notes</span>
+    </a>
+
+    <a href="https://maven.quiltmc.org" class="button is-gradle">
+        <span class="icon"><i class="fak fa-gradle"></i></span>
+        <span>Maven Repo</span>
+    </a>
+</div>
+
+{% endcolumn %}
+{% endcolumns %}
+
+{% columns is-centered %}
+{% column is-10 %}
+
 {% columns %}
 {% column %}
 # Join the Community

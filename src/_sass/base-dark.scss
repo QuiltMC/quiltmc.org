@@ -62,6 +62,34 @@ article.with-divider.blog-post:not(:last-child) {
   color: $grey-light;
 }
 
+// Copied the Bulma selector since nothing else seems to work
+.navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-item.has-dropdown {
+  color: $text;
+
+  &, > a, > .navbar-link {
+    &:hover, &:focus, &:focus-within, &.is-active {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .navbar-link, .navbar-item {
+    color: $text !important;
+  }
+
+  .navbar-dropdown {
+    box-shadow: none;
+    border-top-width: 1px;
+
+    @media screen and (min-width: 1024px) {
+      border: 1px solid transparentize($text, 0.5);
+    }
+  }
+}
+
 * {
   scrollbar-color: transparentize($text, 0.5) rgba(0, 0, 0, 0.2) !important;
   scrollbar-width: thin;
@@ -79,4 +107,8 @@ article.with-divider.blog-post:not(:last-child) {
   &::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.2) !important;
   }
+}
+
+.media .media-content {
+  overflow-y: hidden;
 }

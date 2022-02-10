@@ -31,12 +31,16 @@ $danger-light: lighten($danger, $lighten-amount);
 $dark-light: lighten($dark, 50%) !default;
 
 $blurple: #5865F2;
-$blurple-dark: darken($blurple, 2%);
-$blurple-light: lighten($blurple, 2%);
+$blurple-dark: darken($blurple, 3%);
+$blurple-light: lighten($blurple, 3%);
 
 $twitter-blue: #1DA1F2;
-$twitter-blue-dark: darken($twitter-blue, 2%);
-$twitter-blue-light: lighten($twitter-blue, 2%);
+$twitter-blue-dark: darken($twitter-blue, 3%);
+$twitter-blue-light: lighten($twitter-blue, 3%);
+
+$gradle-blue: #28B3C7;
+$gradle-blue-dark: darken($gradle-blue, 3%);
+$gradle-blue-light: lighten($gradle-blue, 3%);
 
 $text: $white-bis !default;
 $text-light: $white-ter;

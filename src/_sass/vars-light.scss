@@ -23,12 +23,16 @@ $danger: #FF2222;
 $dark: $primary-lighter;
 
 $blurple: #5865F2;
-$blurple-dark: darken($blurple, 2%);
-$blurple-light: lighten($blurple, 2%);
+$blurple-dark: darken($blurple, 3%);
+$blurple-light: lighten($blurple, 3%);
 
 $twitter-blue: #1DA1F2;
-$twitter-blue-dark: darken($twitter-blue, 2%);
-$twitter-blue-light: lighten($twitter-blue, 2%);
+$twitter-blue-dark: darken($twitter-blue, 3%);
+$twitter-blue-light: lighten($twitter-blue, 3%);
+
+$gradle-blue: #28B3C7;
+$gradle-blue-dark: darken($gradle-blue, 3%);
+$gradle-blue-light: lighten($gradle-blue, 3%);
 
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
 
