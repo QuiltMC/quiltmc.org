@@ -1,7 +1,7 @@
 ---
 layout: install
 title: Install
-permalink: /install/server
+permalink: /install/server/
 jarname: fabric-installer-0.6.1.51.jar
 jarurl: https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.6.1.51/fabric-installer-0.6.1.51.jar
 ---

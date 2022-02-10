@@ -2,7 +2,7 @@
 layout: install-vselect
 title: Install Quilt in MCUpdater
 launcher: MCUpdater
-permalink: /install/mcupdater
+permalink: /install/mcupdater/
 js: true
 ---
 

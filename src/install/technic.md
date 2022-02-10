@@ -1,7 +1,7 @@
 ---
 layout: install
 title: Install
-permalink: /install/technic
+permalink: /install/technic/
 ---
 
 # Instructions for Technic
