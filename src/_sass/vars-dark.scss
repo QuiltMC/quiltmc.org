@@ -76,7 +76,7 @@ $message-colors: (
         "info": ($info, $info-invert, darken($info-dark, 30%), $info-dark),
         "success": ($success, $success-invert, darken($success-dark, 20%), $success-dark),
         "warning": ($warning, $warning-invert, darken($warning-dark, 20%), $warning-dark),
-        "danger": ($danger, $danger-invert, darken($danger-dark, 20%), $danger-dark)
+        "danger": ($danger, $danger-invert, darken($danger-dark, 30%), $danger-dark)
 );
 
 $content-blockquote-background-color: $dark;
