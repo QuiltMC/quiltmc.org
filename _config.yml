@@ -21,6 +21,9 @@ plugins:
   - jekyll-redirect-from
 
 collections:
+  about:
+    permalink: /about/:title/
+    output: true
   community:
     permalink: /community/:title/
     output: true
@@ -30,6 +33,14 @@ collections:
       - index.md
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "about"
+    values:
+      layout: "about-page"
+    order:
+      index.md
   -
     scope:
       path: ""

@@ -17,12 +17,12 @@
 
     <div class="navbar-menu" data-navbar-target="menu">
         <div class="navbar-end">
+            {% include nav_link.html text="About" href="/about/" subpage=true %}
             {% if jekyll.environment != 'production' %}
             {% include nav_link.html text="Install" href="/install/" subpage=true %}
             {% include nav_link.html text="Developers" href="/dev/" subpage=true %}
             {% endif %}
             {% include nav_link.html text="Blog" href="/blog/" subpage=true %}
-            {% include nav_link.html text="FAQ" href="/faq/" subpage=true %}
             {% include nav_link.html text="Community" href="/community/" subpage=true %}
         </div>
     </div>

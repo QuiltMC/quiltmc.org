@@ -1,9 +1,10 @@
 ---
-title: FAQ
-permalink: /faq/
----
+title: Frequently Asked Questions
 
-# Frequently Asked Questions
+redirect_from:
+- /faq/
+- /faq.html
+---
 
 Quilt is still in early development and some of this is still subject to
 change, but this represents our current plans for the project.

@@ -11,7 +11,7 @@ layout: base
             <div class="is-hidden-tablet">
                 <button data-action="click->sidebar#toggle" class="button is-dark">
                     <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-                    <span>Documents</span>
+                    <span>Pages</span>
                 </button>
                 <br />
                 <br />
@@ -19,10 +19,10 @@ layout: base
 
             <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
                 <aside class="menu">
-                    <p class="menu-label">Documents</p>
+                    <p class="menu-label">Pages</p>
 
                     <ul class="menu-list">
-                        {% assign pages = site.community | sort: "title" %}
+                        {% assign pages = site.about | sort: "title" %}
                         {% for p in pages %}
                         <li>
                             <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
@@ -39,6 +39,7 @@ layout: base
                     <h1 class="title">
                         {{ page.title }}
                     </h1>
+
                     <p class="subtitle is-6">
                         Edited: {% edit_date %}
                     </p>

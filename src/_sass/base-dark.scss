@@ -61,3 +61,22 @@ article.with-divider.blog-post:not(:last-child) {
   font-weight: 600;
   color: $grey-light;
 }
+
+* {
+  scrollbar-color: transparentize($text, 0.5) rgba(0, 0, 0, 0.2) !important;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparentize($text, 0.5);
+    border-radius: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+}
