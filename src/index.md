@@ -13,7 +13,7 @@ on speed, ease of use and modularity, Quilt aims to provide a sleek and modern m
 Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many
 experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of
 the past - whether those mistakes relate to community management, diversity and inclusivity, project governance or
-transparency. For more information on how we hope to do this, [please see our FAQ](/faq/).
+transparency. For more information on how we hope to do this, [please see our "about" pages](/about/).
 {% endcolumn %}
 
 {% column is-4 %}

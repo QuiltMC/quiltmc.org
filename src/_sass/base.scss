@@ -198,3 +198,15 @@ article.with-divider.blog-post:not(:last-child) {
 .media .media-content {
   overflow-y: hidden;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  a.is-anchor {
+    display: none;
+  }
+
+  &:hover, &:focus, &:active {
+    a.is-anchor {
+      display: inline;
+    }
+  }
+}
