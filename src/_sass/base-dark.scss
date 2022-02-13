@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .message a:not(.button):not(.tag):not(.dropdown-item) {
   color: $link;
+  text-decoration: none;
 
   &:hover, &:active {
     color: $link-dark;
