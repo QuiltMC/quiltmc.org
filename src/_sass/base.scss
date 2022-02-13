@@ -225,3 +225,11 @@ h1, h2, h3, h4, h5, h6 {
 .timeline-item .is-icon + .timeline-content .heading {
   margin-top: 1.2rem;
 }
+
+.message a:not(.button):not(.tag):not(.dropdown-item) {
+  color: $link;
+
+  &:hover, &:active {
+    color: $link-dark;
+  }
+}

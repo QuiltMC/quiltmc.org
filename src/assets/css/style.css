@@ -1,2 +1,7 @@
 @import "style-light.css";
 @import "style-dark.css" (prefers-color-scheme: dark);
+
+.columns {
+    margin-left: 0;
+    margin-right: 0;
+}

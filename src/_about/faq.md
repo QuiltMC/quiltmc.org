@@ -1,10 +1,20 @@
 ---
 title: Frequently Asked Questions
+layout: about-page-faq
 
 redirect_from:
 - /faq/
 - /faq.html
 ---
+
+<h1 id="general-questions">General Questions</h1>
+
+{% admonition %}
+## What is Quilt?
+
+Quilt is a modding toolchain developed primarily for Minecraft that has been
+forked from The Fabric Project, primarily due to governing concerns.
+{% endadmonition %}
 
 Quilt is still in early development and some of this is still subject to
 change, but this represents our current plans for the project.
