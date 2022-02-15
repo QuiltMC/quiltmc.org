@@ -20,27 +20,43 @@ where it came from on [the About Us page](/about).
 {% endadmonition %}
 {% admonition %}
 
-## How does Quilt differ from Fabric?
+## Which parts of Fabric is Quilt forking?
 
-The Quilt Project is governed by a set of autonomous teams overseeing different parts of the project. These teams are 
-given power to make decisions for their component of the project. We hope that this will allow Quilt to incorporate 
-more PRs and other community suggestions and do so more fairly.
+All of them. Quilt is a hard fork of Fabric, and we aim to fork and maintain all projects necessary to exist
+independently of it.
 
 {% endadmonition %}
 {% admonition %}
 
-## Which parts of Fabric is Quilt forking?
+## Why should I use Quilt?
 
-All of them. Quilt is a hard fork of Fabric, and we aim to fork and maintain all projects necessary to exist 
-independently of it.
+For users, Quilt provides the following advantages:
+
+* Mods that should be more compatible with each other, despite their use of powerful modding tools
+* Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly - and only - what you 
+  need for your mods to work
+* Better errors when your mod list has problems with missing or incompatible mods, with more friendly instructions
+* Initial compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
+* An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff 
+  team, and works with its users to improve over time
 
 {% endadmonition %}
 {% admonition %}
 
 ## How can I support Quilt?
 
-However you like! [Join our community](/community/), use Quilt in your modpacks, [develop mods for Quilt](/dev/), or 
-[contribute to the project itself](/dev/).
+If you'd like to help us out, here's just a few ways we've come up with:
+
+* Join [our community spaces](/community), hang out and give your input
+* Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and
+  opinions
+* Support other projects that make use of Quilt, or Quilt's tools and libraries
+* Spread the good word on social media (in a responsible manner)
+
+[//]: # (* Help with ongoing costs by [supporting us financially on OpenCollective]&#40;https://opencollective.com/quiltmc&#41;)
+
+Ultimately, even simply making use of Quilt or hanging out in our community spaces helps us. All activity, input and
+contributions are appreciated!
 
 {% endadmonition %}
 
@@ -72,28 +88,18 @@ developers that need an alternative approach for Quilt.
 
 ## Can Fabric load Quilt mods?
 
-Probably not. Quilt mods will eventually have their own metadata format which will likely not be compatible with Fabric.
+No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
 
 {% endadmonition %}
 {% admonition %}
 
-## Where can I find Quilt mods?
+## When will Quilt be released?
 
-Wherever the mod developer distributes them. This is mostly on CurseForge or Modrinth.
+As of this writing, we're not providing any final ETAs. Projects like this have a lot of moving parts and are generally
+difficult to develop, so it can take quite a long time for things to be considered stable.
 
-{% endadmonition %}
-{% admonition %}
-
-## Where can I get support for Quilt?
-
-We provide user and developer support mostly on [Discord]({{ site.discord_community }}).
-
-{% endadmonition %}
-{% admonition %}
-
-## How do I install Quilt?
-
-See the [Install page](/install/).
+That said, we're tentatively aiming to start releasing basic beta builds around April 20th, 2022. 
+[<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
 
 {% endadmonition %}
 
@@ -101,17 +107,35 @@ See the [Install page](/install/).
 
 {% admonition %}
 
-## How will the administration and moderation teams be managed?
+## How is Quilt structured?
 
-You can find more about this on our [community page](/community/).
+Quilt's staff is split into three distinct groups:
+
+* The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
+* The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
+* The development teams, which independently oversee specific project that are assigned to them
+
+Between these three groups, the structure is more or less flat - no one group of people has the final say over the
+whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community 
+spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
+
+You can find more about this in the governance section on [the About Us page](/about/#governance).
 
 {% endadmonition %}
 {% admonition %}
 
-## Who owns Quilt?
+## What's an RFC? How do they work?
 
-The community! Quilt doesn't really have the concept of an owner per-se. It is controlled by a set of teams which are 
-staffed by members of the community who have taken an interest in contributing to the project. These teams vote on 
-various measures in order to decide what will happen with the part of the project they oversee.
+**RFC** is short for **R**equest **F**or **C**omment. The RFC process refers to a system whereby important process and
+policy changes, technical standards and definitions are created, discussed and approved by the community before being
+put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the
+rationale is for the proposal.
+
+RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs), with the RFC
+number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we
+recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
+
+Quilt's RFC process is documented in 
+[RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
 
 {% endadmonition %}
