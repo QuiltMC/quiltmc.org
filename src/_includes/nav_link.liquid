@@ -3,9 +3,11 @@
 {% assign text = include.text -%}
 {% assign icon = include.icon -%}
 {% assign iconalt = include.iconalt -%}
+
 {% if include.subpage %}
-{% assign is_subpage = page.url | startswith: url %}
+    {% assign is_subpage = page.url | startswith: url %}
 {% endif %}
+
 <a href="{{ url }}" class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}">
     {% if icon %}
         <span class="icon"><i class="{{ icon }}"></i></span>

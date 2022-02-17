@@ -1,4 +1,9 @@
+@import "vars-common-initial";
+
+$role-modifier-amount-secondary: 40%;
+
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "vars-common";
 
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
@@ -28,6 +33,7 @@ $success-light: lighten($success, $lighten-amount);
 $warning-light: lighten($warning, $lighten-amount);
 $danger-light: lighten($danger, $lighten-amount);
 
+$dark-lightish: lighten($dark, 20%) !default;
 $dark-light: lighten($dark, 50%) !default;
 
 $blurple: #5865F2;
@@ -47,9 +53,17 @@ $text-light: $white-ter;
 $text-strong: $white;
 
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
+@import "vars-common-derived";
 
-//$background: #271F33;
-$body-background-color: #271F33;
+$admin-background: $admin-dark;
+$community-background: $community-dark;
+$developer-background: $developer-dark;
+$keyholder-background: $keyholder-dark;
+$moderator-background: $moderator-dark;
+$trainee-background: $trainee-dark;
+$neutral-background: #271F33;
+
+$body-background-color: $neutral-background;
 $footer-background-color: #1c1526;
 
 $tabs-boxed-link-active-background-color: $body-background-color;
@@ -97,6 +111,8 @@ $menu-item-active-background-color: $primary;
 
 $navbar-background-color: $dark;
 
+$navbar-dropdown-item-hover-background-color: $primary;
+
 $navbar-item-active-background-color: $primary;
 $navbar-item-active-color: $text;
 $navbar-item-hover-background-color: $primary;
@@ -110,4 +126,9 @@ $timeline-line-width: 2px;
 $timeline-marker-background-color: darken($dark, 10%);
 $timeline-marker-border: 2px solid $white;
 
+$card-background-color: $dark-lightish;
+$card-shadow: 0;
+
+@import "../../node_modules/bulma/sass/utilities/mixins";
 @import "../../node_modules/bulma-timeline/src/sass/index";
+@import "../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";

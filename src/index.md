@@ -182,7 +182,7 @@ If you're looking for specific jobs, the following places are always worth check
 <article class="blog-post with-divider">
     <h2 class="subtitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-    {% include post_info.html post=post %}
+    {% include post_info.liquid post=post %}
 
     <p>{{ post.excerpt }}</p>
 </article>

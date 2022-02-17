@@ -34,7 +34,7 @@
 preload class stops CSS animations from playing during page load and is removed by JS
 {% endcomment %}
 <body class="page preload">
-{% include navbar.html %}
+{% include navbar.liquid %}
 
 {% if page.private and jekyll.environment == "production" %}
 <section class="content">
@@ -48,7 +48,7 @@ preload class stops CSS animations from playing during page load and is removed 
 {{ content }}
 {% endif %}
 
-{% include footer.html %}
+{% include footer.liquid %}
 
 <script src="/assets/js/bundle.js"></script>
 

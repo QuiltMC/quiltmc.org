@@ -1,5 +1,12 @@
+@import "vars-common-initial";
+
+$role-modifier-amount: 40%;
+$role-modifier-amount-secondary: 25%;
+$role-modifier-amount-tertiary: 40%;
+
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../node_modules/bulma/sass/utilities/functions";
+@import "vars-common";
 
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
@@ -35,6 +42,7 @@ $gradle-blue-dark: darken($gradle-blue, 3%);
 $gradle-blue-light: lighten($gradle-blue, 3%);
 
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
+@import "vars-common-derived";
 
 $footer-background-color: $primary-lighter;
 $tabs-boxed-link-active-background-color: $white;
@@ -78,4 +86,8 @@ $timeline-line-color: $text;
 $timeline-marker-background-color: darken($dark, 10%);
 $timeline-marker-border: 2px solid $text;
 
+$card-background-color: $dark;
+
+@import "../../node_modules/bulma/sass/utilities/mixins";
 @import "../../node_modules/bulma-timeline/src/sass/index";
+@import "../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";

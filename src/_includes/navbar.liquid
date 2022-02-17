@@ -1,0 +1,78 @@
+{% assign style = include.style | default: "is-dark" -%}
+
+<nav class="navbar {{ style }}" role="navigation" aria-label="main navigation" data-controller="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item pr-6" href="{{ site.baseurl }}/">
+            <img src="{{ "/assets/img/logo.svg" | relative_url }}" alt="Quilt Logo" />
+
+            <span class="ml-2">QuiltMC</span>
+        </a>
+
+        <a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" data-navbar-target="menu">
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                {% assign is_about = page.url | startswith: "/about/" -%}
+                <a href="/about/" class="navbar-link is-arrowless {% if is_about %}is-active{% endif %}">
+                    About
+                </a>
+
+                <div class="navbar-dropdown is-boxed">
+                    {% assign pages = site.about | sort: "title" %}
+
+                    {% for p in pages %}
+                        {% include nav_link.liquid text=p.title href=p.url %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% if jekyll.environment != 'production' %}
+            {% include nav_link.liquid text="Install" href="/install/" subpage=true %}
+            {% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}
+            {% endif %}
+            {% include nav_link.liquid text="Blog" href="/blog/" subpage=true %}
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                {% assign is_community = page.url | startswith: "/community/" -%}
+
+                <a href="/community/" class="navbar-link is-arrowless {% if is_community %}is-active{% endif %}">
+                    Community
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    {% assign pages = site.community | sort: "title" %}
+
+                    {% for p in pages %}
+                        {% include nav_link.liquid text=p.title href=p.url %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <span class="is-hidden-desktop">
+                        More Pages
+                    </span>
+                    <span class="icon is-hidden-mobile is-hidden-tablet-only">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    {% include nav_link.liquid text="Maven Repo" href="https://maven.quiltmc.org" icon="fak fa-gradle" %}
+
+                    <hr class="navbar-divider" />
+
+                    {% include nav_link.liquid text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

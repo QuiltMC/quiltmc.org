@@ -23,12 +23,27 @@ layout: base
 
                     <ul class="menu-list">
                         {% assign pages = site.about | sort: "title" %}
-
                         {% for p in pages %}
                         <li>
                             <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
                         </li>
                         {% endfor %}
+                    </ul>
+
+                    <p class="menu-label">Teams</p>
+
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#admin-board">Admin Board</a>
+                            <a href="#community-team">Community</a>
+                            <a href="#development-teams">Development</a>
+
+                            <ul>
+                                <li><a href="#quilt-standard-libraries-qsl">QSL (API)</a></li>
+                            </ul>
+
+                            <a href="#triage-teams">Triage</a>
+                        </li>
                     </ul>
                 </aside>
             </div>
@@ -47,7 +62,7 @@ layout: base
                 </div>
             </div>
 
-            {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i class='fas fa-sm fa-link-simple'></i>" %}
+            {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i class='far fa-sm fa-paragraph'></i>" %}
         </div>
     </div>
 </section>
