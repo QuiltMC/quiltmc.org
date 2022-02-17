@@ -222,11 +222,11 @@ instrumental for Quilt's success.
     name = "Southpaw1496"
     discord = "Southpaw1496"
     github = "Southpaw1496"
-    avatar = "https://www.gravatar.com/avatar/d357970001cdbe299dd790817dee30af.jpg"
+    avatar = "https://www.gravatar.com/avatar/d357970001cdbe299dd790817dee30af"
 
     description = "
         Inside of Quilt I help moderate community spaces and produce the podcast. Outside of Quilt I tinker with things 
-        to varying degrees of failure, and write things now and then.
+        to varying degrees of failure, and write things now and then. I also like cats,
     "
 
     links = "
@@ -348,10 +348,11 @@ compilation tooling and build system plugins. This team is responsible for the f
 
 {% include team_member.liquid
     class = "developer"
-    name = "glitch"
+    name = "Glitch"
     discord = "glitch"
-    github = "glitch"
-    avatar = "/assets/img/team/glitch.png"
+    github = "TheGlitch76"
+    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
+    avatar_pixelate = true
 %}
 </div>
 
@@ -451,10 +452,11 @@ This team is responsible for the following projects:
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/glitch.png"
-    name = "glitch"
+    name = "Glitch"
     discord = "glitch"
-    github = "glitch"
+    github = "TheGlitch76"
+    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
+    avatar_pixelate = true
 %}
 
 {% include team_member.liquid
@@ -598,10 +600,11 @@ metadata. This team is responsible for the following projects:
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/glitch.png"
-    name = "glitch"
+    name = "Glitch"
     discord = "glitch"
-    github = "glitch"
+    github = "TheGlitch76"
+    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
+    avatar_pixelate = true
 %}
 
 {% include team_member.liquid
@@ -762,10 +765,11 @@ team members from the QSL sub-teams.
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/glitch.png"
-    name = "glitch"
+    name = "Glitch"
     discord = "glitch"
-    github = "glitch"
+    github = "TheGlitch76"
+    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
+    avatar_pixelate = true
 %}
 </div>
 
