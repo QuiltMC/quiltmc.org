@@ -509,10 +509,16 @@ they need to do to extend the game. This team is responsible for the following p
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/MartrixX.png"
+    avatar = "https://avatars.githubusercontent.com/u/47987888"
     name = "MartrixX"
     discord = "MartrixX"
-    github = "MartrixX"
+    github = "ByMartrixx"
+
+    description = "Java programmer and Minecraft modder."
+
+    links = "
+        fas fa-link | https://bymartrixx.me/
+    "
 %}
 
 {% include team_member.liquid
@@ -674,10 +680,16 @@ is responsible for the following projects:
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/MartrixX.png"
+    avatar = "https://avatars.githubusercontent.com/u/47987888"
     name = "MartrixX"
     discord = "MartrixX"
-    github = "MartrixX"
+    github = "ByMartrixx"
+
+    description = "Java programmer and Minecraft modder."
+
+    links = "
+        fas fa-link | https://bymartrixx.me/
+    "
 %}
 
 {% include team_member.liquid
@@ -903,18 +915,31 @@ This team is responsible for handling triage tasks for the following projects:
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/jamalam.png"
-    name = "jamalam"
+    avatar = "https://avatars.githubusercontent.com/Jamalam360"
+    name = "Jamalam"
     discord = "jamalam"
-    github = "jamalam"
+    github = "Jamalam360"
+
+    description = "Modder and programmer trying to create cool things using Java, Kotlin, and TypeScript/Deno."
+
+    links = "
+        fas fa-link    | https://jamalam.tech/             ||
+        fab fa-twitter | https://twitter.com/jamalamisadev
+    "
 %}
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/MartrixX.png"
+    avatar = "https://avatars.githubusercontent.com/u/47987888"
     name = "MartrixX"
     discord = "MartrixX"
-    github = "MartrixX"
+    github = "ByMartrixx"
+
+    description = "Java programmer and Minecraft modder."
+
+    links = "
+        fas fa-link | https://bymartrixx.me/
+    "
 %}
 
 {% include team_member.liquid
