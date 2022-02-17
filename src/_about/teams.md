@@ -10,57 +10,11 @@ restructuring and elections.
 Additionally, each team also has its own responsibilities. Below, you'll find a full list of each team and a list of
 team members, including a description of the team and any relevant subteams and team roles.
 
-<div class="team-grid">
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "/assets/img/team/gdude2002.png"
-    name = "Gareth Coles"
-    discord = "gdude"
-    github = "gdude2002"
-    description = "Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience."
-
-    links = "
-        fas fa-link | https://gserv.me ||
-        fab fa-twitter | https://twitter.com/gdude2002
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "NiAndromedae ($*)"
-    discord = "NiAndromedae"
-    github = "P03W"
-    avatar = "/assets/img/team/systems/NiAndromedae.png"
-    avatar_pixelate = true
-
-    description = "Plural system who enjoys kotlin and dropping projects faster than making new ones."
-
-    system_members = "
-        Silver | /assets/img/team/systems/NiAndromedae/Silver.png ||
-        Viv    | /assets/img/team/systems/NiAndromedae/Viv.png    ||
-        Snow   | /assets/img/team/systems/NiAndromedae/Snow.jpg   ||
-        Xavier | /assets/img/team/systems/NiAndromedae/Xavier.png
-    "
-%}
-
-{% include team_member.liquid
-    class = "community"
-    name = "Octal"
-    discord = "Octal"
-    github = "Oliver-makes-code"
-    avatar = "/assets/img/team/Octal.png"
-
-    description = "An autistic programmer that likes to talk about their interests, a lot."
-
-    system_members = "---"
-%}
-</div>
-
 # Admin Board
 
-The Admin Board is responsible for breaking ties, managing permissions on GitHub, managing operational platforms that
-concern multiple teams and steering the project's general direction. The Admin Board must always have an odd number of
-members, to help ensure that ties can be broken cleanly.
+The Admin Board is responsible for breaking voting ties, managing permissions on GitHub, managing operational platforms 
+that concern multiple teams and steering the project's general direction. The Admin Board must always have an odd 
+number of members, to help ensure that ties can be broken cleanly.
 
 <div class="team-grid">
 {% include team_member.liquid
@@ -824,14 +778,10 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 <div class="team-grid">
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/OroArmor.jpg"
-    name = "OroArmor"
-    discord = "OroArmor"
-    github = "OroArmor"
-
-    links = "
-        fab fa-twitter | https://twitter.com/realOroArmor
-    "
+    avatar = "/assets/img/team/WillBL.png"
+    name = "Will BL"
+    discord = "Will BL"
+    github = "Will BL"
 %}
 </div>
 
@@ -873,8 +823,23 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 ## Sub-Team: Entity
 
-- Bubblie
-- Will BL
+<div class="team-grid">
+{% include team_member.liquid
+    class = "developer"
+    avatar = "/assets/img/team/Bubblie.png"
+    name = "Bubblie"
+    discord = "Bubblie"
+    github = "Bubblie01"
+%}
+
+{% include team_member.liquid
+    class = "developer"
+    avatar = "/assets/img/team/WillBL.png"
+    name = "Will BL"
+    discord = "Will BL"
+    github = "Will BL"
+%}
+</div>
 
 ## Sub-Team: GUI
 
