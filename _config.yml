@@ -68,6 +68,7 @@ defaults:
     values:
       layout: "default"
       excerpt_separator: "<!-- MORE -->"
+      image: /assets/logo-square.png
   -
     scope:
       path: ""
