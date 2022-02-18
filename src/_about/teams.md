@@ -17,33 +17,9 @@ that concern multiple teams and steering the project's general direction. The Ad
 number of members, to help ensure that ties can be broken cleanly.
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "admin"
-    avatar = "/assets/img/team/HavenKing.png"
-    name = "Haven King"
-    discord = "Haven King"
-    github = "Haven-King"
-%}
-
-{% include team_member.liquid
-    class = "admin"
-    avatar = "/assets/img/team/MrMangoHands.png"
-    name = "MrMangoHands"
-    discord = "Mrn'tMangoHands"
-    github = "mrmangohands"
-%}
-
-{% include team_member.liquid
-    class = "admin"
-    avatar = "/assets/img/team/OroArmor.jpg"
-    name = "OroArmor"
-    discord = "OroArmor"
-    github = "OroArmor"
-
-    links = "
-        fab fa-twitter | https://twitter.com/realOroArmor
-    "
-%}
+    {% include team/HavenKing.liquid %}
+    {% include team/MrMangoHands.liquid %}
+    {% include team/OroArmor.liquid %}
 </div>
 
 # Community Team
@@ -64,13 +40,7 @@ involvement or investment in the Quilt project, is important to try to avoid sit
 space may be possible.
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "keyholder"
-    avatar = "https://avatars.githubusercontent.com/u/5474071?v=4"
-    name = "kashike"
-    discord = "kashike"
-    github = "kashike"
-%}
+    {% include team/kashike.liquid %}
 </div>
 
 ## Community Managers
@@ -82,35 +52,9 @@ spaces, writing and receiving feedback on Quilt's community policies - while als
 the responsibilities from that position.
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "/assets/img/team/AppleTheGolden.png"
-    name = "AppleTheGolden"
-    discord = "AppleTheGolden"
-    github = "Scotsguy"
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "/assets/img/team/gdude2002.png"
-    name = "Gareth Coles"
-    discord = "gdude"
-    github = "gdude2002"
-    description = "Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience."
-
-    links = "
-        fas fa-link    | https://gserv.me              ||
-        fab fa-twitter | https://twitter.com/gdude2002
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "/assets/img/team/MrMangoHands.png"
-    name = "MrMangoHands"
-    discord = "Mrn'tMangoHands"
-    github = "mrmangohands"
-%}
+    {% include team/AppleTheGolden.liquid %}
+    {% include team/gdude2002.liquid %}
+    {% include team/MrMangoHands.liquid class="moderator" %}
 </div>
 
 ## Moderators
@@ -121,147 +65,17 @@ backbone of any Community Team, and Quilt's is no exception - a diverse, active 
 instrumental for Quilt's success.
 
 <div class="team-grid">
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Alizée"
-    discord = "Alizée"
-    avatar = "https://thursday.akarys.me/avatars/alizee.png"
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Akarys"
-    discord = "Akarys"
-    github = "Akarys42"
-    avatar = "https://thursday.akarys.me/avatars/akarys.png"
-
-    description = "Engineering student who loves programming"
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "https://avatars.githubusercontent.com/u/60205699?v=4"
-    name = "Emmaffle"
-    discord = "Emmaffle"
-    github = "wafflecoffee"
-
-    description = "Tries to be well-intentioned, ends up causing problems anyway."
-
-    links = "
-        fas fa-link           | https://waffle.coffee/             ||
-        fas fa-user           | https://en.pronouns.page/@emmaffle ||
-        fak fa-modrinth-small | https://modrinth.com/user/emmaffle
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "https://avatars.githubusercontent.com/u/1300078?v=4"
-    name = "Forkk"
-    discord = "Forkk"
-    github = "Forkk"
-
-    description = "Resident silverware expert."
-
-    links = "
-        fas fa-link | https://forkk.net/
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    avatar = "/assets/img/team/Larry.jpg"
-    name = "Larry"
-    discord = "Larry"
-    github = "Laarryy"
-
-    description = "A big fan of the Minecraft server community, always looking for ways to help out!"
-
-    links = "
-        fas fa-link         | https://laarryy.dev               ||
-        fab fa-reddit-alien | https://old.reddit.com/r/Syscraft
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Lauren"
-    discord = "Lauren"
-    avatar = "https://thursday.akarys.me/avatars/lauren.png"
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "NiAndromedae ($*)"
-    discord = "NiAndromedae"
-    github = "P03W"
-    avatar = "/assets/img/team/systems/NiAndromedae.png"
-    avatar_pixelate = true
-
-    description = "Plural system who enjoys kotlin and dropping projects faster than making new ones."
-
-    system_members = "
-        Silver | /assets/img/team/systems/NiAndromedae/Silver.png ||
-        Viv    | /assets/img/team/systems/NiAndromedae/Viv.png    ||
-        Snow   | /assets/img/team/systems/NiAndromedae/Snow.jpg   ||
-        Xavier | /assets/img/team/systems/NiAndromedae/Xavier.png
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Southpaw1496"
-    discord = "Southpaw1496"
-    github = "Southpaw1496"
-    avatar = "https://www.gravatar.com/avatar/d357970001cdbe299dd790817dee30af"
-
-    description = "
-        Inside of Quilt I help moderate community spaces and produce the podcast. Outside of Quilt I tinker with things 
-        to varying degrees of failure, and write things now and then. I also like cats,
-    "
-
-    links = "
-        fal fa-globe   | https://southpaw1496.me          ||
-        fab fa-twitter | https://twitter.com/Southpaw1496
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "ToffeeMax"
-    discord = "ToffeeMax"
-    github = "ToffeeMax"
-    avatar = "/assets/img/team/ToffeeMax.jpg"
-
-    description = "
-        I am a Moderator for Quilt and a Community Manager for Gamemode 4!  I am also British, tea is important to me
-        and I will end you if you prefer coffee.
-    "
-
-    links = "
-        fab fa-twitter | https://twitter.com/ToffeeMax
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Valentin Ricard"
-    discord = "Redblueflame"
-    github = "Redblueflame"
-    avatar = "/assets/img/team/Redblueflame.png"
-
-    links = "
-        fas fa-link | https://redblueflame.com/
-    "
-%}
-
-{% include team_member.liquid
-    class = "moderator"
-    name = "Xavier"
-    discord = "Xavier"
-    avatar = "https://thursday.akarys.me/avatars/xavier.png"
-%}
+    {% include team/Alizee.liquid %}
+    {% include team/Akarys.liquid %}
+    {% include team/Emmaffle.liquid %}
+    {% include team/Forkk.liquid %}
+    {% include team/Larry.liquid %}
+    {% include team/Lauren.liquid %}
+    {% include team/NiAndromedae.liquid %}
+    {% include team/Southpaw.liquid %}
+    {% include team/ToffeeMax.liquid %}
+    {% include team/Redblueflame.liquid %}
+    {% include team/Xavier.liquid %}
 </div>
 
 ## Events Team
@@ -271,35 +85,9 @@ anything from AMAs to fully-blown online modding conventions. While they aren't 
 by the rest of the Community Team, and also have the ability to directly moderate events.
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "community"
-    avatar = "/assets/img/team/Fusion.png"
-    name = "Fusion"
-    discord = "Fusion Flux"
-    github = "Fusion-Flux"
-%}
-
-{% include team_member.liquid
-    class = "community"
-    avatar = "/assets/img/team/LemmaEOF.png"
-    name = "LemmaEOF"
-    discord = "LemmaEOF"
-    github = "LemmaEOF"
-
-    description = "A former Fabric modder who tinkers with all sorts of projects and helps run events."
-%}
-
-{% include team_member.liquid
-    class = "community"
-    name = "Octal"
-    discord = "Octal"
-    github = "Oliver-makes-code"
-    avatar = "/assets/img/team/Octal.png"
-
-    description = "An autistic programmer that likes to talk about their interests, a lot."
-
-    system_members = "---"
-%}
+    {% include team/Fusion.liquid %}
+    {% include team/Lemma.liquid %}
+    {% include team/Octal.liquid %}
 </div>
 
 # Development Teams
@@ -320,32 +108,9 @@ compilation tooling and build system plugins. This team is responsible for the f
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/49926638?v=4"
-    name = "CheaterCodes"
-    discord = "CheaterCodes"
-    github = "CheaterCodes"
-
-    description = "Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/Cypher.png"
-    name = "Cypher"
-    discord = "Cypher"
-    github = "Cypher"
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Glitch"
-    discord = "glitch"
-    github = "TheGlitch76"
-    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
-    avatar_pixelate = true
-%}
+    {% include team/CheaterCodes.liquid %}
+    {% include team/Cypher.liquid %}
+    {% include team/glitch.liquid %}
 </div>
 
 ## CHASM
@@ -365,49 +130,10 @@ This team is responsible for the following projects:
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/49926638?v=4"
-    name = "CheaterCodes"
-    discord = "CheaterCodes"
-    github = "CheaterCodes"
-
-    description = "Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/Earthcomputer.png"
-    name = "Earthcomputer"
-    discord = "Earthcomputer"
-    github = "Earthcomputer"
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Kropp"
-    discord = "Kropp"
-    github = "Kropp"
-    avatar = "/assets/img/team/Kropp.png"
-%}
-
-{% include team_member.liquid
-    class = "developer with-neutral"
-    name = "Pyrofab"
-    discord = "Pyrofab"
-    github = "Pyrofab"
-    avatar = "https://avatars.githubusercontent.com/u/25536265"
-
-    description = "Busy blowing up new things."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Symmetry"
-    discord = "Symmetry"
-    github = "Symmetry"
-    avatar = "/assets/img/team/Symmetry.png"
-%}
+    {% include team/CheaterCodes.liquid %}
+    {% include team/Earthcomputer.liquid %}
+    {% include team/Kropp.liquid %}
+    {% include team/Pyrofab.liquid %}
 </div>
 
 ## Community Tooling
@@ -420,52 +146,10 @@ This team is responsible for the following projects:
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/AppleTheGolden.png"
-    name = "AppleTheGolden"
-    discord = "AppleTheGolden"
-    github = "Scotsguy"
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/gdude2002.png"
-    name = "Gareth Coles"
-    discord = "gdude"
-    github = "gdude2002"
-    description = "Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience."
-
-    links = "
-        fas fa-link    | https://gserv.me              ||
-        fab fa-twitter | https://twitter.com/gdude2002
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Glitch"
-    discord = "glitch"
-    github = "TheGlitch76"
-    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
-    avatar_pixelate = true
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/sschr15.png"
-    name = "sschr15"
-    discord = "sschr15"
-    github = "sschr15"
-
-    description = "
-        A person who used to know nothing about programming and now makes fun of himself for it. Also likes Kotlin.
-    "
-
-    links = "
-        fas fa-link | https://concern.i.ng
-    "
-%}
+    {% include team/AppleTheGolden.liquid class="developer" %}
+    {% include team/gdude2002.liquid class="developer" %}
+    {% include team/glitch.liquid %}
+    {% include team/sschr15.liquid %}
 </div>
 
 ## Decompilers
@@ -481,63 +165,11 @@ they need to do to extend the game. This team is responsible for the following p
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/50148430?v=4"
-    name = "Geolykt"
-    discord = "Geolykt"
-    github = "Geolykt"
-
-    description = "JVM Bytecode enthusiast. Primarily a bukkit plugin developer, but always up to something different."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/Kropp.png"
-    name = "Kropp"
-    discord = "Kropp"
-    github = "Kropp"
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/47987888"
-    name = "MartrixX"
-    discord = "MartrixX"
-    github = "ByMartrixx"
-
-    description = "Java programmer and Minecraft modder."
-
-    links = "
-        fas fa-link | https://bymartrixx.me/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/skyrising.png"
-    name = "Simon Wanner"
-    discord = "skyrising"
-    github = "skyrising"
-
-    links = "
-        fab fa-twitter | https://twitter.com/skyrising97
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/25208576?v=4"
-    name = "Jasmine"
-    discord = "SuperCoder79"
-    github = "SuperCoder7979"
-
-    description = "Minecraft modder and Java reverse engineer."
-
-    links = "
-        fab fa-twitter | https://twitter.com/SuperCoder79
-    "
-%}
+    {% include team/Geolykt.liquid %}
+    {% include team/SuperCoder79.liquid %}
+    {% include team/Kropp.liquid %}
+    {% include team/MartrixX.liquid %}
+    {% include team/skyrising.liquid %}
 </div>
 
 ## Infrastructure
@@ -550,13 +182,7 @@ tooling, file repositories and API services for modders. This team is responsibl
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/HavenKing.png"
-    name = "Haven King"
-    discord = "Haven King"
-    github = "Haven-King"
-%}
+    {% include team/HavenKing.liquid class="developer" %}
 </div>
 
 ## Loader
@@ -575,43 +201,10 @@ metadata. This team is responsible for the following projects:
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/AlexIIL.png"
-    name = "AlexIIL"
-    discord = "AlexIIL"
-    github = "AlexIIL"
-
-    links = "
-        fas fa-link | https://alexiil.uk ||
-        fak fa-curseforge | https://www.curseforge.com/members/alexiil/projects
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/Earthcomputer.png"
-    name = "Earthcomputer"
-    discord = "Earthcomputer"
-    github = "Earthcomputer"
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Glitch"
-    discord = "glitch"
-    github = "TheGlitch76"
-    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
-    avatar_pixelate = true
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/HavenKing.png"
-    name = "Haven King"
-    discord = "Haven King"
-    github = "Haven-King"
-%}
+    {% include team/AlexIIL.liquid %}
+    {% include team/Earthcomputer.liquid %}
+    {% include team/glitch.liquid %}
+    {% include team/HavenKing.liquid class="developer" %}
 </div>
 
 ## Mappings
@@ -634,89 +227,12 @@ is responsible for the following projects:
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/3987560"
-    name = "2xsaiko"
-    discord = "2xsaiko"
-    github = "2xsaiko"
-
-    description = "Modder and software developer who has way too many ambitious projects."
-
-    links = "
-        fas fa-link | https://dblsaiko.net/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/49926638?v=4"
-    name = "CheaterCodes"
-    discord = "CheaterCodes"
-    github = "CheaterCodes"
-
-    description = "Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62"
-    name = "LambdAurora"
-    discord = "LambdAurora"
-    github = "LambdAurora"
-
-    description = "
-        Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my
-        mod designs and my work on Quilt.
-    "
-
-    links = "
-        fas fa-link    | https://lambdaurora.dev/     ||
-        fab fa-git-alt | https://git.lambdaurora.dev/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/47987888"
-    name = "MartrixX"
-    discord = "MartrixX"
-    github = "ByMartrixx"
-
-    description = "Java programmer and Minecraft modder."
-
-    links = "
-        fas fa-link | https://bymartrixx.me/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/67918617?v=4"
-    name = "NoComment"
-    discord = "NoComment"
-    github = "NoComment1105"
-
-    description = "
-        Chaotic person that helps out mapping and in The Iris Project. Enjoys programming mods and discord bots.
-    "
-
-    links = "
-        fas fa-link | https://nocomment1105.github.io
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/OroArmor.jpg"
-    name = "OroArmor"
-    discord = "OroArmor"
-    github = "OroArmor"
-
-    links = "
-        fab fa-twitter | https://twitter.com/realOroArmor
-    "
-%}
+    {% include team/2xsaiko.liquid %}
+    {% include team/CheaterCodes.liquid %}
+    {% include team/LambdAurora.liquid %}
+    {% include team/MartrixX.liquid %}
+    {% include team/NoComment.liquid %}
+    {% include team/OroArmor.liquid class="developer" %}
 </div>
 
 # Quilt Standard Libraries (QSL)
@@ -742,45 +258,9 @@ the QSL project, as well as setting project standards and handling governance ta
 team members from the QSL sub-teams.
 
 <div class="team-grid">
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62"
-    name = "LambdAurora"
-    discord = "LambdAurora"
-    github = "LambdAurora"
-
-    description = "
-        Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my
-        mod designs and my work on Quilt.
-    "
-
-    links = "
-        fas fa-link    | https://lambdaurora.dev/     ||
-        fab fa-git-alt | https://git.lambdaurora.dev/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/OroArmor.jpg"
-    name = "OroArmor"
-    discord = "OroArmor"
-    github = "OroArmor"
-
-    links = "
-        fab fa-twitter | https://twitter.com/realOroArmor
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    name = "Glitch"
-    discord = "glitch"
-    github = "TheGlitch76"
-    avatar = "https://avatars.githubusercontent.com/u/19521552?v=4"
-    avatar_pixelate = true
-%}
+    {% include team/glitch.liquid %}
+    {% include team/LambdAurora.liquid %}
+    {% include team/OroArmor.liquid class="developer" %}
 </div>
 
 ## Sub-Team: Block
@@ -790,85 +270,21 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Command
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/5115825?v=4"
-    name = "Will BL"
-    discord = "Will BL"
-    github = "williambl"
-
-    description = "Java and Kotlin developer who enjoys making Minecraft mods."
-
-    links = "
-        fas fa-link | https://willbl.dev
-    "
-%}
+    {% include team/WillBL.liquid %}
 </div>
 
 ## Sub-Team: Data
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/ADudeCalledLeo.png"
-    name = "ADudeCalledLeo"
-    discord = "ADudeCalledLeo"
-    github = "Leo40Git"
-
-    description = "The local project abandoning expert. Also may or may not exist."
-
-    links = "
-        fab fa-twitter | https://twitter.com/ADudeCalledLeo
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62"
-    name = "LambdAurora"
-    discord = "LambdAurora"
-    github = "LambdAurora"
-
-    description = "
-        Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my
-        mod designs and my work on Quilt.
-    "
-
-    links = "
-        fas fa-link    | https://lambdaurora.dev/     ||
-        fab fa-git-alt | https://git.lambdaurora.dev/
-    "
-%}
+    {% include team/ADudeCalledLeo.liquid %}
+    {% include team/LambdAurora.liquid %}
 </div>
 
 ## Sub-Team: Entity
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/44305719?v=4"
-    name = "Bubblie"
-    discord = "Bubblie"
-    github = "Bubblie01"
-
-    links = "
-        fab fa-youtube | https://www.youtube.com/channel/UCTocwYOu2vxGTo0W8GsfIvg/videos
-    "
-%}
-
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/5115825?v=4"
-    name = "Will BL"
-    discord = "Will BL"
-    github = "williambl"
-
-    description = "Java and Kotlin developer who enjoys making Minecraft mods."
-
-    links = "
-        fas fa-link | https://willbl.dev
-    "
+    {% include team/Bubblie.liquid %}
+    {% include team/WillBL.liquid %}
 %}
 </div>
 
@@ -879,17 +295,7 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Item
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "/assets/img/team/OroArmor.jpg"
-    name = "OroArmor"
-    discord = "OroArmor"
-    github = "OroArmor"
-
-    links = "
-        fab fa-twitter | https://twitter.com/realOroArmor
-    "
-%}
+    {% include team/OroArmor.liquid class="developer" %}
 </div>
 
 ## Sub-Team: Rendering
@@ -920,70 +326,9 @@ This team is responsible for handling triage tasks for the following projects:
 </div>
 
 <div class="team-grid">
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/44305719?v=4"
-    name = "Bubblie"
-    discord = "Bubblie"
-    github = "Bubblie01"
-
-    links = "
-        fab fa-youtube | https://www.youtube.com/channel/UCTocwYOu2vxGTo0W8GsfIvg/videos
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/Jamalam360"
-    name = "Jamalam"
-    discord = "jamalam"
-    github = "Jamalam360"
-
-    description = "Modder and programmer trying to create cool things using Java, Kotlin, and TypeScript/Deno."
-
-    links = "
-        fas fa-link    | https://jamalam.tech/             ||
-        fab fa-twitter | https://twitter.com/jamalamisadev
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/47987888"
-    name = "MartrixX"
-    discord = "MartrixX"
-    github = "ByMartrixx"
-
-    description = "Java programmer and Minecraft modder."
-
-    links = "
-        fas fa-link | https://bymartrixx.me/
-    "
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/64978191?v=4"
-    name = "Sylv"
-    discord = "Niko"
-    github = "AlsoSylv"
-
-    description = "Novice programmer and open-source supported, enjoys Java and Python in my free time."
-%}
-
-{% include team_member.liquid
-    class = "developer"
-    avatar = "https://avatars.githubusercontent.com/u/67918617?v=4"
-    name = "NoComment"
-    discord = "NoComment"
-    github = "NoComment1105"
-
-    description = "
-        Chaotic person that helps out mapping and in The Iris Project. Enjoys programming mods and discord bots.
-    "
-
-    links = "
-        fas fa-link | https://nocomment1105.github.io
-    "
-%}
+    {% include team/Bubblie.liquid %}
+    {% include team/Jamalam.liquid %}
+    {% include team/MartrixX.liquid %}
+    {% include team/NoComment.liquid %}
+    {% include team/Sylv.liquid %}
 </div>

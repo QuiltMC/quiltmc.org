@@ -1,0 +1,15 @@
+{% assign class = include.class | default: "moderator" %}
+
+{% include team_member.liquid
+        class=class
+        avatar="https://avatars.githubusercontent.com/u/1300078?v=4"
+        name="Forkk"
+        discord="Forkk"
+        github="Forkk"
+
+        description="Resident silverware expert."
+
+        links="
+            fas fa-link | https://forkk.net/
+        "
+%}

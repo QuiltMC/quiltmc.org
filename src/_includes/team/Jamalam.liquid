@@ -1,0 +1,16 @@
+{% assign class = include.class | default: "developer" %}
+
+{% include team_member.liquid
+        class=class
+        avatar="https://avatars.githubusercontent.com/Jamalam360"
+        name="Jamalam"
+        discord="jamalam"
+        github="Jamalam360"
+
+        description="Modder and programmer trying to create cool things using Java, Kotlin, and TypeScript/Deno."
+
+        links="
+            fas fa-link    | https://jamalam.tech/             ||
+            fab fa-twitter | https://twitter.com/jamalamisadev
+        "
+%}

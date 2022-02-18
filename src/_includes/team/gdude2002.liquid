@@ -1,0 +1,15 @@
+{% assign class = include.class | default: "moderator" %}
+
+{% include team_member.liquid
+        class=class
+        avatar="/assets/img/team/gdude2002.png"
+        name="Gareth Coles"
+        discord="gdude"
+        github="gdude2002"
+        description="Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience."
+
+        links="
+            fas fa-link    | https://gserv.me              ||
+            fab fa-twitter | https://twitter.com/gdude2002
+        "
+%}

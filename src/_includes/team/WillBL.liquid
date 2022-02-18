@@ -1,0 +1,15 @@
+{% assign class = include.class | default: "developer" %}
+
+{% include team_member.liquid
+        class=class
+        avatar="https://avatars.githubusercontent.com/u/5115825?v=4"
+        name="Will BL"
+        discord="Will BL"
+        github="williambl"
+
+        description="Java and Kotlin developer who enjoys making Minecraft mods."
+
+        links="
+            fas fa-link | https://willbl.dev
+        "
+%}

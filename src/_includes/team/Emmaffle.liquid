@@ -1,0 +1,17 @@
+{% assign class = include.class | default: "moderator" %}
+
+{% include team_member.liquid
+        class=class
+        avatar="https://avatars.githubusercontent.com/u/60205699?v=4"
+        name="Emmaffle"
+        discord="Emmaffle"
+        github="wafflecoffee"
+
+        description="Tries to be well-intentioned, ends up causing problems anyway."
+
+        links="
+            fas fa-link           | https://waffle.coffee/             ||
+            fas fa-user           | https://en.pronouns.page/@emmaffle ||
+            fak fa-modrinth-small | https://modrinth.com/user/emmaffle
+        "
+%}
