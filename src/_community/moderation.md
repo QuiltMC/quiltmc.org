@@ -1,5 +1,7 @@
 ---
 title: Moderation
+description: Quilt's standard moderation policy - a guide for moderation staff.
+
 redirect_from:
 - /community/moderation.html
 ---

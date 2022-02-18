@@ -1,5 +1,7 @@
 ---
 title: Rules
+description: Quilt's core rules, which build upon the Code of Conduct to provide a set of concrete guidelines for behaviour.
+
 redirect_from:
 - /community/rules.html
 ---

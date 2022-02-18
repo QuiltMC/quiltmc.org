@@ -1,6 +1,7 @@
 ---
 permalink: /about/
 title: About Us
+description: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
 ---
 
 Quilt is a mod-loader project - primarily aimed at Minecraft. It was founded by users and contributors from the Fabric 

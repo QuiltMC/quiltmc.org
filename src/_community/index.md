@@ -1,6 +1,7 @@
 ---
 permalink: /community/
 title: Community
+description: Learn about Quilt's community spaces, and what we expect of our users.
 ---
 
 You can find the Quilt in the following places.

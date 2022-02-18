@@ -1,6 +1,7 @@
 ---
 title: Team Listings
 layout: about-page-teams
+description: Learn about Quilt's team structure, and find out who's involved.
 ---
 
 Quilt's governance is split up into many independent teams, some of which have their own subteams and/or leadership

@@ -2,6 +2,7 @@
 title: FAQ (Developers)
 layout: about-page
 permalink: /about/faq/developers/
+description: Frequently asked questions, but for developers.
 ---
 
 {% admonition %}

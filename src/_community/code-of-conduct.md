@@ -1,5 +1,7 @@
 ---
 title: Code of Conduct
+description: Quilt's Code of Conduct, for all community interactions.
+
 redirect_from:
 - /community/code-of-conduct.html
 ---
