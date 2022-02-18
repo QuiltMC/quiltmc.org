@@ -1,10 +1,8 @@
 title: The Quilt Project
 short_title: Quilt
-description: >-
-  The Quilt project is an open, community-driven modding toolchain designed
-  primarily for Minecraft.
+description: The mod-loader that cares.
 baseurl: ""
-url: ""
+url: "https://quiltmc.org"
 source: "src/"
 permalink: pretty
 
@@ -16,9 +14,24 @@ twitch_username: quiltmc
 discord_community: https://discord.quiltmc.org
 discord_toolchain: https://discord.quiltmc.org/toolchain
 
+twitter:
+  username: quilt_mc
+  card: summary
+
+logo: /assets/logo-square.png
+
+social:
+  name: QuiltMC
+
+  links:
+    - https://twitter.com/quilt_mc
+    - https://github.com/QuiltMC
+    - https://twitch.tv/quiltmc
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 collections:
   about:
@@ -61,6 +74,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      seo:
+        type: BlogPosting
   -
     scope:
       path: ""
