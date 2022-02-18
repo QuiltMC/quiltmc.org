@@ -6,6 +6,8 @@ author: ToffeeMax
 
 It is now _well_ past the End of October and closer to Halloween then I'd like to admit. Here is some of the more fleshed out updates about the Quilt Project:
 
+<!-- MORE -->
+
 ## Quilt Mappings are now usable in Loom!
 Have you wanted to use mappings other than Yarn or MojMap? 
 

@@ -6,6 +6,8 @@ author: Haven King & ToffeeMax
 
 This is the Quilt Project: An open, community-driven modding toolchain designed primarily for Minecraft. Quilt builds on many of the technologies developed by [the Fabric Project](https://fabricmc.net/) and is designed to take what worked well and expand on it further.
 
+<!-- MORE -->
+
 ## Why the Fork?
 
 While the Fabric Project has made significant progress towards an open and advanced mod loader, it has recently slowed down in technical innovation and failed to address several organizational issues. There are a number of changes the Quilt Project will put into place in the future to differentiate ourselves: 
