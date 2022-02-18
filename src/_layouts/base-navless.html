@@ -24,6 +24,23 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#1b112b">
 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://quiltmc.org{{ page.url }}" />
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }} &ndash; {{ site.title }}" />
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}" />
+    {% endif %}
+
+    {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}" />
+    {% else if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    {% else %}
+    <meta property="og:description" content="Quilt: The mod-loader that cares." />
+    {% endif %}
+
     {% feed_meta %}
 
     <script src="https://kit.fontawesome.com/b1b70f724e.js" crossorigin="anonymous"></script>
