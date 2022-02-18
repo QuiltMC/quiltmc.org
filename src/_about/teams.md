@@ -31,10 +31,6 @@ number of members, to help ensure that ties can be broken cleanly.
     name = "MrMangoHands"
     discord = "Mrn'tMangoHands"
     github = "mrmangohands"
-
-    links = "
-        fab fa-twitter | https://twitter.com/MrMangoHands
-    "
 %}
 
 {% include team_member.liquid
@@ -114,10 +110,6 @@ the responsibilities from that position.
     name = "MrMangoHands"
     discord = "Mrn'tMangoHands"
     github = "mrmangohands"
-
-    links = "
-        fab fa-twitter | https://twitter.com/MrMangoHands
-    "
 %}
 </div>
 
@@ -644,10 +636,16 @@ is responsible for the following projects:
 <div class="team-grid">
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/2xsaiko.png"
+    avatar = "https://avatars.githubusercontent.com/u/3987560"
     name = "2xsaiko"
     discord = "2xsaiko"
     github = "2xsaiko"
+
+    description = "Modder and software developer who has way too many ambitious projects."
+
+    links = "
+        fas fa-link | https://dblsaiko.net/
+    "
 %}
 
 {% include team_member.liquid
@@ -794,10 +792,16 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 <div class="team-grid">
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/WillBL.png"
+    avatar = "https://avatars.githubusercontent.com/u/5115825?v=4"
     name = "Will BL"
     discord = "Will BL"
-    github = "Will BL"
+    github = "williambl"
+
+    description = "Java and Kotlin developer who enjoys making Minecraft mods."
+
+    links = "
+        fas fa-link | https://willbl.dev
+    "
 %}
 </div>
 
@@ -842,18 +846,29 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 <div class="team-grid">
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/Bubblie.png"
+    avatar = "https://avatars.githubusercontent.com/u/44305719?v=4"
     name = "Bubblie"
     discord = "Bubblie"
     github = "Bubblie01"
+
+    links = "
+        fab fa-youtube | https://www.youtube.com/channel/UCTocwYOu2vxGTo0W8GsfIvg/videos
+    "
 %}
+
 
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/WillBL.png"
+    avatar = "https://avatars.githubusercontent.com/u/5115825?v=4"
     name = "Will BL"
     discord = "Will BL"
-    github = "Will BL"
+    github = "williambl"
+
+    description = "Java and Kotlin developer who enjoys making Minecraft mods."
+
+    links = "
+        fas fa-link | https://willbl.dev
+    "
 %}
 </div>
 
@@ -907,10 +922,14 @@ This team is responsible for handling triage tasks for the following projects:
 <div class="team-grid">
 {% include team_member.liquid
     class = "developer"
-    avatar = "/assets/img/team/Bubblie.png"
+    avatar = "https://avatars.githubusercontent.com/u/44305719?v=4"
     name = "Bubblie"
     discord = "Bubblie"
     github = "Bubblie01"
+
+    links = "
+        fab fa-youtube | https://www.youtube.com/channel/UCTocwYOu2vxGTo0W8GsfIvg/videos
+    "
 %}
 
 {% include team_member.liquid
