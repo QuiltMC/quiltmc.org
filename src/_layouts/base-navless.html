@@ -33,12 +33,18 @@
     <meta property="og:title" content="{{ site.title }}" />
     {% endif %}
 
-    {% if page.description %}
-    <meta property="og:description" content="{{ page.description }}" />
-    {% else if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    {% if page.collection == "posts" %}
+        {% assign description = page.excerpt | strip_html | strip -%}
     {% else %}
+        {% assign description = page.description | strip_html | strip -%}
+    {% endif %}
+
+    {% assign desc_words = description | number_of_words %}
+
+    {% if desc_words < 1 %}
     <meta property="og:description" content="Quilt: The mod-loader that cares." />
+    {% else %}
+    <meta property="og:description" content="{{ description }}" />
     {% endif %}
 
     {% feed_meta %}

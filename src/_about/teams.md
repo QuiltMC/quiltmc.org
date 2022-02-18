@@ -286,7 +286,6 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 <div class="team-grid">
     {% include team/Bubblie.liquid %}
     {% include team/WillBL.liquid %}
-%}
 </div>
 
 ## Sub-Team: GUI
