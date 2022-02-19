@@ -35,15 +35,21 @@ plugins:
 
 collections:
   about:
-    permalink: /about/:title/
+    permalink: /about/:path/
     output: true
+
   community:
-    permalink: /community/:title/
+    permalink: /community/:path/
     output: true
+
   posts:
     permalink: /blog/:year/:month/:day/:title/
     order:
       - index.md
+
+  staff:
+    permalink: /staff/:path/
+    output: true
 
 defaults:
   -
@@ -52,16 +58,21 @@ defaults:
       type: "about"
     values:
       layout: "about-page"
-    order:
-      index.md
+
   -
     scope:
       path: ""
       type: "community"
     values:
       layout: "community-document"
-    order:
-      index.md
+
+  -
+    scope:
+      path: ""
+      type: "staff"
+    values:
+      layout: "staff-document"
+
   -
     scope:
       path: ""
@@ -69,6 +80,7 @@ defaults:
       layout: "default"
       excerpt_separator: "<!-- MORE -->"
       image: /assets/img/logo-square.png
+
   -
     scope:
       path: ""
@@ -77,23 +89,28 @@ defaults:
       layout: "post"
       seo:
         type: BlogPosting
+
   -
     scope:
       path: ""
       type: "wiki"
     values:
       layout: "wiki-page"
+
   # Mark pages private until full launch
+
   -
     scope:
       path: "install/*"
     values:
       private: true
+
   -
     scope:
       path: "dev/*"
     values:
       private: true
+
   -
     scope:
       path: ""

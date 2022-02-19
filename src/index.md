@@ -112,7 +112,7 @@ toolchain, you can be sure that **your mod is in good hands**.
     </a>
 
     <a href="https://maven.quiltmc.org" class="button is-gradle">
-        <span class="icon"><i class="fak fa-gradle"></i></span>
+        <span class="icon"><i class="fas fa-feather-pointed"></i></span>
         <span>Maven Repo</span>
     </a>
 </div>

@@ -33,8 +33,8 @@
             </div>
 
             {% if jekyll.environment != 'production' %}
-            {% include nav_link.liquid text="Install" href="/install/" subpage=true %}
-            {% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}
+            {% comment %}{% include nav_link.liquid text="Install" href="/install/" subpage=true %}{% endcomment %}
+            {% comment %}{% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}{% endcomment %}
             {% endif %}
             {% include nav_link.liquid text="Blog" href="/blog/" subpage=true %}
 
@@ -65,11 +65,15 @@
                 </a>
 
                 <div class="navbar-dropdown is-right is-boxed">
-                    {% include nav_link.liquid text="Maven Repo" href="https://maven.quiltmc.org" icon="fak fa-gradle" %}
+                    {% include nav_link.liquid text="Maven Repo" href="https://maven.quiltmc.org" icon="fas fa-feather-pointed" %}
 
                     <hr class="navbar-divider" />
 
                     {% include nav_link.liquid text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" %}
+
+                    <hr class="navbar-divider" />
+
+                    {% include nav_link.liquid text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" %}
                 </div>
             </div>
         </div>
