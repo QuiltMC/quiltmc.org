@@ -133,7 +133,7 @@ This team is responsible for the following projects:
 <div class="team-grid">
     {% include team/CheaterCodes.liquid %}
     {% include team/Earthcomputer.liquid %}
-    {% include team/Kropp.liquid %}
+    {% include team/Kroppeb.liquid %}
     {% include team/Pyrofab.liquid %}
 </div>
 
@@ -168,7 +168,7 @@ they need to do to extend the game. This team is responsible for the following p
 <div class="team-grid">
     {% include team/Geolykt.liquid %}
     {% include team/SuperCoder79.liquid %}
-    {% include team/Kropp.liquid %}
+    {% include team/Kroppeb.liquid %}
     {% include team/MartrixX.liquid %}
     {% include team/skyrising.liquid %}
 </div>
