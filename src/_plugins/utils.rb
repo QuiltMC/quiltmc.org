@@ -11,6 +11,10 @@ module Jekyll
     def filter_count_gte(arr, key, query, minimum)
       return arr.select { |item| item[key].count(query) >= minimum }
     end
+
+    def filter_gt(value, comparison)
+      return value > comparison
+    end
   end
 end
 

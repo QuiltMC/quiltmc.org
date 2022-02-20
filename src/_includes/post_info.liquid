@@ -1,9 +1,17 @@
 {% assign post = include.post %}
-{% assign style = include.style | default: "" %}
 
 <div class="media">
     <div class="media-content">
-        <p class="title is-5">{{ post.author }}</p>
+        {% if post.author %}
+            <p class="title is-5">
+                {{ post.author }}
+            </p>
+        {% else if post.authors %}
+            <p class="title is-5">
+                {{ post.authors | join: ', ' }}
+            </p>
+        {% endif %}
+
         <p class="subtitle is-6">
             {{ post.date | date_to_long_string }}
         </p>
