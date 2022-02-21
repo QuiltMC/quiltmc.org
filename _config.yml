@@ -5,6 +5,10 @@ baseurl: ""
 url: "https://quiltmc.org"
 source: "src/"
 permalink: pretty
+author: QuiltMC
+
+paginate_path: "/blog/p/:num/"
+paginate: 5
 
 # Social media handles
 twitter_username: quilt_mc
@@ -30,6 +34,7 @@ social:
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
 
@@ -43,7 +48,8 @@ collections:
     output: true
 
   posts:
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: "/blog/:year/:month/:day/:title/"
+
     order:
       - index.md
 

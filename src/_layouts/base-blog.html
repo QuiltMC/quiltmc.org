@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+{% columns is-centered %}
+{% column is-10 %}
+
+<section class="section">
+    <main class="content container">
+        {{ content }}
+    </main>
+
+    {% include paginator.liquid paginator=paginator %}
+</section>
+
+{% endcolumn %}
+{% endcolumns %}

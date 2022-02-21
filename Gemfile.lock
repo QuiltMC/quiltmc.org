@@ -35,6 +35,7 @@ GEM
       terminal-table (~> 2.0)
     jekyll-feed (0.16.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.1.0)
@@ -90,6 +91,7 @@ DEPENDENCIES
   git (~> 1.8, >= 1.8.1)
   jekyll (~> 4.2.0)
   jekyll-feed (~> 0.12)
+  jekyll-paginate
   jekyll-redirect-from
   jekyll-seo-tag
   minima (~> 2.5)
