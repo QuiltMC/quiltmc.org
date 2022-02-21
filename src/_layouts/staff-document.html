@@ -98,10 +98,12 @@ layout: base
                         <p class="subtitle is-6">
                             Author: {{ page.author }}
                         </p>
-                    {% else if page.authors %}
-                        <p class="subtitle is-6">
-                            Authors: {{ page.authors | join: ', ' }}
-                        </p>
+                    {% else %}
+                        {% if page.authors %}
+                            <p class="subtitle is-6">
+                                Authors: {{ page.authors | join: ', ' }}
+                            </p>
+                        {% endif %}
                     {% endif %}
 
                     <p class="subtitle is-6">

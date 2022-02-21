@@ -276,6 +276,17 @@ For blog posts, the following Front Matter variables may be useful:
 
 * `date` - This is the post's publishing date, which should be in a standard ISO format. This is required for all blog
   posts, as the site relies on it for post ordering and to display metadata.
+* `tags` - An array or space-separated string containing post tags. These are mostly used for metadata, but could be 
+  displayed if we think that's a good idea.
+
+## Categories
+
+When writing a blog post, you can place the file within a subfolder. Subfolders like this are known as Categories, and
+these can be used both for display and metadata. A post may have multiple categories too, specified using the 
+`categories` variable in the post's Front Matter - either a space-separated string, or an array.
+
+Ideally, all posts should have at least one category. If you're creating categories, **please list them here with a 
+description so that other editors will know when to use them.**
 
 ## Excerpts
 
