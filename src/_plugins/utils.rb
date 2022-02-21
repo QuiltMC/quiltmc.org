@@ -15,6 +15,18 @@ module Jekyll
     def filter_gt(value, comparison)
       return value > comparison
     end
+
+    def filter_lt(value, comparison)
+      return value < comparison
+    end
+
+    def filter_gte(value, comparison)
+      return value >= comparison
+    end
+
+    def filter_lte(value, comparison)
+      return value <= comparison
+    end
   end
 end
 

@@ -1,54 +1,72 @@
 {% assign paginator = include.paginator -%}
 
 {% if paginator.total_posts > paginator.per_page %}
-    <div class="columns is-centered">
-        <div class="column is-half">
-            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                {% if paginator.previous_page %}
-                    <a class="pagination-previous" href="{{ paginator.previous_page_path }}">
-                        <span class="icon"><i class="fas fa-arrow-left"></i></span>
-                        <span>Previous</span>
-                    </a>
-                {% else %}
-                    <a class="is-disabled pagination-previous" disabled>
-                        <span class="icon"><i class="fas fa-arrow-left"></i></span>
-                        <span>Previous</span>
-                    </a>
-                {% endif %}
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        {% if paginator.previous_page %}
+            <a class="pagination-previous" href="/blog/"
+               aria-label="Goto page 1">
+                <span class="icon"><i class="fas fa-angles-left"></i></span>
+                <span>First</span>
+            </a>
 
-                {% if paginator.next_page %}
-                    <a class="pagination-next" href="{{ paginator.next_page_path }}">
-                        <span>Next</span>
-                        <span class="icon"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                {% else %}
-                    <a class="is-disabled pagination-next" disabled>
-                        <span>Next</span>
-                        <span class="icon"><i class="fas fa-arrow-right"></i></span>
-                    </a>
-                {% endif %}
+            <a class="pagination-previous" href="{{ paginator.previous_page_path }}">
+                <span class="icon"><i class="fas fa-angle-left"></i></span>
+                <span>Previous</span>
+            </a>
+        {% else %}
+            <a class="is-disabled pagination-previous" disabled>
+                <span class="icon"><i class="fas fa-angles-left"></i></span>
+                <span>First</span>
+            </a>
 
-                <ul class="pagination-list">
-                    {% if paginator.previous_page %}
-                        <li>
-                            <a class="pagination-link" href="{{ paginator.previous_page_path }}"
-                               aria-label="Goto page {{ paginator.previous_page }}">{{ paginator.previous_page }}</a>
-                        </li>
-                    {% endif %}
+            <a class="is-disabled pagination-previous" disabled>
+                <span class="icon"><i class="fas fa-angle-left"></i></span>
+                <span>Previous</span>
+            </a>
+        {% endif %}
 
-                    <li>
-                        <a class="pagination-link is-current" aria-label="Page {{ paginator.page }}"
-                           aria-current="page">{{ paginator.page }}</a>
-                    </li>
+        {% if paginator.next_page %}
+            <a class="pagination-next" href="{{ paginator.next_page_path }}">
+                <span>Next</span>
+                <span class="icon"><i class="fas fa-angle-right"></i></span>
+            </a>
 
-                    {% if paginator.next_page %}
-                        <li>
-                            <a class="pagination-link" href="{{ paginator.next_page_path }}"
-                               aria-label="Goto page {{ paginator.next_page }}">{{ paginator.next_page }}</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </div>
-    </div>
+            <a class="pagination-next" href="/blog/p/{{ paginator.total_pages }}/"
+               aria-label="Goto page {{ paginator.total_pages }}">
+                <span>Last</span>
+                <span class="icon"><i class="fas fa-angles-right"></i></span>
+            </a>
+        {% else %}
+            <a class="is-disabled pagination-next" disabled>
+                <span>Next</span>
+                <span class="icon"><i class="fas fa-angle-right"></i></span>
+            </a>
+
+            <a class="is-disabled pagination-next" disabled>
+                <span>Last</span>
+                <span class="icon"><i class="fas fa-angles-right"></i></span>
+            </a>
+        {% endif %}
+
+        <ul class="pagination-list">
+            {% if paginator.previous_page %}
+                <li>
+                    <a class="pagination-link" href="{{ paginator.previous_page_path }}"
+                       aria-label="Goto page {{ paginator.previous_page }}">{{ paginator.previous_page }}</a>
+                </li>
+            {% endif %}
+
+            <li>
+                <a class="pagination-link is-current" aria-label="Page {{ paginator.page }}"
+                   aria-current="page">{{ paginator.page }}</a>
+            </li>
+
+            {% if paginator.next_page %}
+                <li>
+                    <a class="pagination-link" href="{{ paginator.next_page_path }}"
+                       aria-label="Goto page {{ paginator.next_page }}">{{ paginator.next_page }}</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
 {% endif %}
