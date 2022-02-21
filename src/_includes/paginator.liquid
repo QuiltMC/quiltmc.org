@@ -6,7 +6,7 @@
             <a class="pagination-previous" href="/blog/"
                aria-label="Goto page 1">
                 <span class="icon"><i class="fas fa-angles-left"></i></span>
-                <span>First</span>
+                <span class="is-hidden-mobile">First</span>
             </a>
 
             <a class="pagination-previous" href="{{ paginator.previous_page_path }}">
@@ -16,7 +16,7 @@
         {% else %}
             <a class="is-disabled pagination-previous" disabled>
                 <span class="icon"><i class="fas fa-angles-left"></i></span>
-                <span>First</span>
+                <span class="is-hidden-mobile">First</span>
             </a>
 
             <a class="is-disabled pagination-previous" disabled>
@@ -33,7 +33,7 @@
 
             <a class="pagination-next" href="/blog/p/{{ paginator.total_pages }}/"
                aria-label="Goto page {{ paginator.total_pages }}">
-                <span>Last</span>
+                <span class="is-hidden-mobile">Last</span>
                 <span class="icon"><i class="fas fa-angles-right"></i></span>
             </a>
         {% else %}
@@ -43,7 +43,7 @@
             </a>
 
             <a class="is-disabled pagination-next" disabled>
-                <span>Last</span>
+                <span class="is-hidden-mobile">Last</span>
                 <span class="icon"><i class="fas fa-angles-right"></i></span>
             </a>
         {% endif %}

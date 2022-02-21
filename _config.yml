@@ -8,7 +8,7 @@ permalink: pretty
 author: QuiltMC
 
 paginate_path: "/blog/p/:num/"
-paginate: 5
+paginate: 1
 
 # Social media handles
 twitter_username: quilt_mc
