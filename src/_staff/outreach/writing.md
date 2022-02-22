@@ -8,9 +8,14 @@ Writing work can be tricky at times, and Quilt doesn't have a large group of pro
 This document is intended to be a set of guidelines, tips and tricks to use when writing documents, articles, blog posts
 and other written content for the site.
 
-# General Tips
+# General Info
 
-The following concepts apply to all written content you might end up working on.
+When writing any type of document, you'll need to do the following things:
+
+* Include a title in the document's Front Matter
+* Wrap your document's lines at 120 characters
+
+For more information on these concepts - and for some other ideas and tips - please see the following sections.
 
 ## Spelling & Grammar
 
@@ -247,9 +252,9 @@ A few miscellaneous Liquid filters have been defined for use in templates.
 * `startswith: "string"` - Returns `true` if the given argument is contained within the value being  filtered, `false` 
   otherwise.
 * `count: "string"` - Returns the number of times `string` was found withing the value being filtered
-* `filter_gt: comparison` - Equivalent to `value > comparison`, checking whether the filtered value is greater than the
-  comparison value
-* `filter_count_gte: key, query, minimum` - This is an excessively on the nose filter that, when the filtered value is
+* `gt: comparison` - Equivalent to `value > comparison`, checking whether the filtered value is greater than the
+  comparison value - `lt`, `gte` and `lte` are also included, matching `<`, `>=` and `<=` respectively.
+* `count_gte: key, query, minimum` - This is an excessively on the nose filter that, when the filtered value is
   an array, returns a new array based on whether the number of times `query` is found within the variable contained
   within `item` referenced by `key` is greater than or equal to `minimum`. This really only exists because there was no
   other way to do this in Liquid.
@@ -267,8 +272,15 @@ For non-blog content, the following Front Matter variables may be useful:
 
 # Blog Posts
 
-As writing blog posts is somewhat different from writing an article or document, you'll want to bear the following
-concepts in mind.
+As writing blog posts is somewhat different from writing an article or document, you'll need to do the following things
+**in addition to [the requirements for any other type of page](#general-info)**:
+
+* Include a date in the post's Front Matter
+* Include author information in the post's Front Matter, [as detailed above](#author-information).
+* Include at least one category, if possible
+* Define an excerpt in your post
+
+For more information on these concepts, please see the following sections.
 
 ## Front Matter (Blog)
 

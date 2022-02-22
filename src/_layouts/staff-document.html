@@ -61,7 +61,7 @@ layout: base
                         {% assign page_slash_count = page.path | count: "/" %}
 
                         {% assign matched_pages = pages | where_exp: "item", "item.url contains page.url" %}
-                        {% assign matched_pages = matched_pages | filter_count_gte: "url", "/", 3 %}
+                        {% assign matched_pages = matched_pages | count_gte: "url", "/", 3 %}
 
                         {% if page_slash_count < 2 %}
                         {% assign matched_pages = matched_pages | where_exp: "item", "item.url != page.url" %}

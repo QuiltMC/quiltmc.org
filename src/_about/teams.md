@@ -66,8 +66,8 @@ backbone of any Community Team, and Quilt's is no exception - a diverse, active 
 instrumental for Quilt's success.
 
 <div class="team-grid">
-    {% include team/Alizee.liquid %}
     {% include team/Akarys.liquid %}
+    {% include team/Alizee.liquid %}
     {% include team/Emmaffle.liquid %}
     {% include team/Forkk.liquid %}
     {% include team/Larry.liquid %}
@@ -147,10 +147,14 @@ This team is responsible for the following projects:
 </div>
 
 <div class="team-grid">
+    {% include team/Akarys.liquid %}
+    {% include team/Alizee.liquid %}
     {% include team/AppleTheGolden.liquid class="developer" %}
     {% include team/gdude2002.liquid class="developer" %}
     {% include team/glitch.liquid %}
+    {% include team/Lauren.liquid %}
     {% include team/sschr15.liquid %}
+    {% include team/Xavier.liquid %}
 </div>
 
 ## Decompilers
