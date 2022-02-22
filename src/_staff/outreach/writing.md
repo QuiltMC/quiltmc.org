@@ -15,7 +15,7 @@ The following concepts apply to all written content you might end up working on.
 ## Spelling & Grammar
 
 This goes without saying, but proper spelling and grammar is fairly important. That said, nobody is perfect and there
-are tools out there that make everyone's lives easier. I highly recommend the use of one, even if you usually have
+are tools out there that make everyone's lives easier. The use of one is highly recommended, even if you usually have
 excellent spelling and grammar - everyone makes mistakes!
 
 * [LanguageTool](https://languagetool.org) remains one of the best tools available for this, even the free version.
@@ -25,7 +25,7 @@ excellent spelling and grammar - everyone makes mistakes!
 * [Grammarly](https://www.grammarly.com) exists as an alternative, but LanguageTool's open-source approach tends to
   result in a more trustable tool.
 
-I also recommend taking a somewhat formal tone in your writing, but there's absolutely no need to completely avoid an
+A somewhat formal tone in your writing is also recommended, but there's absolutely no need to completely avoid an
 informal approach. The site even supports emojis (`WIN` + `.` on Windows), if that's something you're into. 🥔
 
 ## Front Matter
