@@ -25,7 +25,7 @@ transparency. For more information on how we hope to do this, [please see our "a
       <i class="fas fa-warning"></i>
     </span>
 
-    <span>Developing...</span>
+    <span>WIP</span>
   </span>
 </h2>
 
