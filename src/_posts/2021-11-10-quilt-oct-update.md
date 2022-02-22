@@ -31,7 +31,7 @@ How to use Quilt Mappings:
 
 #### settings.gradle
 
-```
+```groovy
 pluginManagement {
     repositories {
         maven { url = "https://maven.oroarmor.com" }
@@ -41,7 +41,7 @@ pluginManagement {
 
 #### build.gradle
 
-```
+```groovy
 plugins {
   // ...
   id "quilt-mappings-on-loom" version "2.0.0"
