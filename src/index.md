@@ -40,10 +40,10 @@ Discord using the links you'll find further down this page.
 
 {% endcolumns %}
 
-{% columns mb-5 %}
+{% columns mb-5 mt-2 %}
 {% column %}
 
-{% admonition /primary is-fullheight %}
+{% admonition /primary is-fullheight mr-1 %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -61,9 +61,9 @@ exists for your needs** - not in spite of them.
 {% endadmonition %}
 {% endcolumn %}
 
-{% column has-text-centered %}
+{% column %}
 
-{% admonition /link has-text-left is-fullheight %}
+{% admonition /link has-text-left is-fullheight ml-1 mr-1 %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -81,8 +81,8 @@ automatically download the Quilt libraries needed to run your mods.
 {% endadmonition %}
 {% endcolumn %}
 
-{% column has-text-centered %}
-{% admonition /success has-text-left is-fullheight %}
+{% column %}
+{% admonition /success has-text-left is-fullheight ml-1 %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -111,7 +111,7 @@ toolchain, you can be sure that **your mod is in good hands**.
         <span>Minecraft Patch Notes</span>
     </a>
 
-    <a href="https://maven.quiltmc.org" class="button is-gradle">
+    <a href="https://maven.quiltmc.org" target="_blank" class="button is-gradle">
         <span class="icon"><i class="fas fa-feather-pointed"></i></span>
         <span>Maven Repo</span>
     </a>
@@ -121,10 +121,8 @@ toolchain, you can be sure that **your mod is in good hands**.
 {% endcolumns %}
 
 {% columns is-centered %}
-{% column is-10 %}
 
-{% columns %}
-{% column %}
+{% column is-5 %}
 # Join the Community
 
 Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that 
@@ -133,12 +131,12 @@ Please feel free to join us on one of our official community spaces by clicking 
 and become familiar with them before joining or interacting with us.
 
 <div class="button-grid">
-    <a href="{{ site.discord_community }}" class="button is-discord">
+    <a href="{{ site.discord_community }}" target="_blank" class="button is-discord">
         <span class="icon"><i class="fab fa-discord"></i></span>
         <span>Community</span>
     </a>
 
-    <a href="https://twitter.com/{{ site.twitter_username }}" class="button is-twitter">
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button is-twitter">
         <span class="icon"><i class="fab fa-twitter"></i></span> 
         <span>Twitter</span>
     </a>
@@ -155,12 +153,12 @@ If you'd like to help us, the best thing you can do right now is to join us on G
 and offer your expertise. There's plenty of things to do, so we can always use more help!
 
 <div class="button-grid">
-    <a href="{{ site.discord_toolchain }}" class="button is-discord">
+    <a href="{{ site.discord_toolchain }}" target="_blank" class="button is-discord">
         <span class="icon"><i class="fab fa-discord"></i></span>
         <span>Toolchain</span>
     </a>
 
-    <a href="https://github.com/{{ site.github_username }}" class="button is-github">
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="button is-github">
         <span class="icon"><i class="fab fa-github"></i></span>
         <span>GitHub</span>
     </a>
@@ -175,7 +173,7 @@ If you're looking for specific jobs, the following places are always worth check
 </ul>
 {% endcolumn %}
 
-{% column %}
+{% column is-5 %}
 # Latest Posts
 
 {% for post in site.posts limit:3 %}
@@ -195,7 +193,5 @@ If you're looking for specific jobs, the following places are always worth check
     </a>
 </div>
 
-{% endcolumn %}
-{% endcolumns %}
 {% endcolumn %}
 {% endcolumns %}
