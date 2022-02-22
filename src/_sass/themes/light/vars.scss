@@ -1,12 +1,12 @@
-@import "vars-common-initial";
+@import "../../common/modifiers";
 
 $role-modifier-amount: 40%;
 $role-modifier-amount-secondary: 25%;
 $role-modifier-amount-tertiary: 40%;
 
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-@import "../../node_modules/bulma/sass/utilities/functions";
-@import "vars-common";
+@import "../../../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../../../node_modules/bulma/sass/utilities/functions";
+@import "../../common/colours";
 
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
@@ -41,8 +41,11 @@ $gradle-blue: #28B3C7;
 $gradle-blue-dark: darken($gradle-blue, 3%);
 $gradle-blue-light: lighten($gradle-blue, 3%);
 
-@import "../../node_modules/bulma/sass/utilities/derived-variables";
-@import "vars-common-derived";
+@import "../../../../node_modules/bulma/sass/utilities/derived-variables";
+@import "../../common/derived";
+
+$neutral-background: $white;
+$body-background-color: $neutral-background;
 
 $footer-background-color: $primary-lighter;
 $tabs-boxed-link-active-background-color: $white;
@@ -88,6 +91,6 @@ $timeline-marker-border: 2px solid $text;
 
 $card-background-color: $dark;
 
-@import "../../node_modules/bulma/sass/utilities/mixins";
-@import "../../node_modules/bulma-timeline/src/sass/index";
-@import "../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";
+@import "../../../../node_modules/bulma/sass/utilities/mixins";
+@import "../../../../node_modules/bulma-timeline/src/sass/index";
+@import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";

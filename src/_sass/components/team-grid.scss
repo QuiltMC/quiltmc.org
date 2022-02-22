@@ -1,0 +1,88 @@
+.team-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.card.is-team-member {
+  width: 16rem;
+
+  margin: 5rem 1rem 0;
+
+  .card-image img {
+    height: 8rem;
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding-top: 4rem;
+
+    .system-members {
+      display: flex;
+      flex-flow: row wrap;
+
+      justify-content: center;
+
+      div {
+        height: 2rem;
+        width: 2rem;
+
+        &:not(:last-child) {
+          margin-right: 0.2rem;
+        }
+
+        img {
+          height: 2rem;
+          width: 2rem;
+
+          border-radius: 100%;
+          border: 1px solid $text;
+        }
+      }
+    }
+
+    .media.system-member-title {
+      margin-bottom: 0.2rem;
+    }
+
+    .media .subtitle {
+      color: transparentize($text, 0.2);
+
+      &.system-members {
+        margin-bottom: 0.3rem;
+      }
+
+      &.is-links {
+        margin-top: 0.5rem;
+
+        a:not(:last-child) {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+    .avatar {
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      img {
+        display: inline-block;
+        height: 7rem;
+        width: 7rem;
+
+        background-color: $card-background-color;
+        border-radius: 100%;
+        border: 2px solid $text;
+      }
+    }
+  }
+}

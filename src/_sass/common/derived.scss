@@ -1,0 +1,19 @@
+@import "colours";
+
+$admin-background: $admin-light !default;
+$community-background: $community-light !default;
+$developer-background: $developer-light !default;
+$keyholder-background: $keyholder-light !default;
+$moderator-background: $moderator-light !default;
+$trainee-background: $trainee-light !default;
+
+$neutral-background: white !default;
+
+$pagination-current-background-color: $primary !default;
+$pagination-current-border-color: $primary !default;
+
+$default-border: 1px solid lighten($text, 20%) !default;
+$pre-border: 1px solid darken($dark, 20%);
+$navbar-transparent-background: rgba(255, 255, 255, 0.3) !default;
+
+$transparent-text: transparentize($text, 0.7);

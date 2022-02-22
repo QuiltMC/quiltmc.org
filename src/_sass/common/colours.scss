@@ -1,4 +1,4 @@
-@import "vars-common-initial";
+@import "modifiers";
 
 $admin: #e5aa01 !default;
 $admin-dark: darken($admin, $role-modifier-amount) !default;

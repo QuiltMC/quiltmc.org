@@ -1,9 +1,9 @@
-@import "vars-common-initial";
+@import "../../common/modifiers";
 
 $role-modifier-amount-secondary: 40%;
 
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-@import "vars-common";
+@import "../../../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../common/colours";
 
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Poppins', sans-serif;
@@ -52,8 +52,8 @@ $text: $white-bis !default;
 $text-light: $white-ter;
 $text-strong: $white;
 
-@import "../../node_modules/bulma/sass/utilities/derived-variables";
-@import "vars-common-derived";
+@import "../../../../node_modules/bulma/sass/utilities/derived-variables";
+@import "../../common/derived";
 
 $admin-background: $admin-dark;
 $community-background: $community-dark;
@@ -129,6 +129,10 @@ $timeline-marker-border: 2px solid $white;
 $card-background-color: $dark-lightish;
 $card-shadow: 0;
 
-@import "../../node_modules/bulma/sass/utilities/mixins";
-@import "../../node_modules/bulma-timeline/src/sass/index";
-@import "../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";
+$default-border: 1px solid darken($text, 30%);
+$pre-border: 1px solid lighten($dark, 20%);
+$navbar-transparent-background: rgba(0, 0, 0, 0.3);
+
+@import "../../../../node_modules/bulma/sass/utilities/mixins";
+@import "../../../../node_modules/bulma-timeline/src/sass/index";
+@import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";

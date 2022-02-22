@@ -4,6 +4,7 @@ description: Quilt's standard moderation policy - a guide for moderation staff.
 
 redirect_from:
 - /community/moderation.html
+- /community/moderation
 ---
 
 This document outlines a basic idea of what's expected of our community team members, and provides some advice for 

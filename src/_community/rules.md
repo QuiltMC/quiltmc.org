@@ -195,7 +195,7 @@ it's impossible to enumerate every possible situation (and some situations will 
 our best to explain how we come to a decision, and what we expect from our community team.
 
 For more information on this, feel free to read
-[our moderation guidelines]({% link _community/moderation.md %}). If you have any feedback on this document, feel free to 
+[our moderation guidelines]({% link _staff/moderation/moderation.md %}). If you have any feedback on this document, feel free to 
 contact us!
 
 *[NSFW]: Not Safe For Work
