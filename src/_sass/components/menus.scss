@@ -10,17 +10,30 @@
   }
 }
 
-// Copied the Bulma selector since nothing else seems to work
-.navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-  background-color: rgba(0, 0, 0, 0.3);
-}
+//.hero.is-dark {
+//  .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+//    background-color: rgba(0, 0, 0, 0.3);
+//  }
+//}
 
-.navbar-item.has-dropdown {
+.navbar-item {
   color: $text;
 
-  &, > a, > .navbar-link {
-    &:hover, &:focus, &:focus-within, &.is-active {
-      background-color: $navbar-transparent-background;
+  &.has-dropdown {
+    &:focus, &:hover, &.is-active {
+      .navbar-link {
+        background-color: $navbar-transparent-background !important;
+      }
+    }
+  }
+
+  &:hover, &:focus, &:focus-within, &.is-active, {
+    background-color: $navbar-transparent-background !important;
+  }
+
+  > a, > .navbar-link, {
+    &:hover, &:focus, &:focus-within, &.is-active, {
+      background-color: $navbar-transparent-background !important;
     }
   }
 
