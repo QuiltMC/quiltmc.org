@@ -33,8 +33,8 @@
             </div>
 
             {% if jekyll.environment != 'production' %}
-            {% comment %}{% include nav_link.liquid text="Install" href="/install/" subpage=true %}{% endcomment %}
-            {% comment %}{% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}{% endcomment %}
+            {% include nav_link.liquid text="Install" href="/install/" subpage=true %}
+            {% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}
             {% endif %}
             {% include nav_link.liquid text="Blog" href="/blog/" subpage=true %}
 
