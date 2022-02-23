@@ -3,6 +3,7 @@
 {% assign text = include.text -%}
 {% assign icon = include.icon -%}
 {% assign iconalt = include.iconalt -%}
+{% assign target = include.target -%}
 {% assign subpage = include.subpage | default: false -%}
 
 {% assign is_subpage = false %}
@@ -11,7 +12,10 @@
     {% assign is_subpage = page.url | startswith: url %}
 {% endif %}
 
-<a href="{{ url }}" class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}">
+<a href="{{ url }}"
+   {% if target %}target="{{ target }}"{% endif %}
+   class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}"
+>
     {% if icon %}
         <span class="icon"><i class="fa-xl {{ icon }}"></i></span>
     {% endif %}

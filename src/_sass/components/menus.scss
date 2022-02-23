@@ -41,3 +41,26 @@
 .navbar-item .icon {
   margin-right: 0.5rem;
 }
+
+.navbar-dropdown .divider {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  color: $default-border-color;
+
+  &::before, &::after {
+    background-color: $default-border-color;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-dropdown .divider {
+    &::before {
+      margin-left: 1rem;
+    }
+
+    &::after {
+      margin-right: 1rem;
+    }
+  }
+}

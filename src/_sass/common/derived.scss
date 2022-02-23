@@ -12,7 +12,8 @@ $neutral-background: white !default;
 $pagination-current-background-color: $primary !default;
 $pagination-current-border-color: $primary !default;
 
-$default-border: 1px solid lighten($text, 20%) !default;
+$default-border-color: lighten($text, 20%);
+$default-border: 1px solid $default-border-color;
 $pre-border: 1px solid darken($dark, 20%);
 $navbar-transparent-background: rgba(255, 255, 255, 0.3) !default;
 

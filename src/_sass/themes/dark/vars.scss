@@ -129,10 +129,12 @@ $timeline-marker-border: 2px solid $white;
 $card-background-color: $dark-lightish;
 $card-shadow: 0;
 
-$default-border: 1px solid darken($text, 30%);
+$default-border-color: darken($text, 30%);
+$default-border: 1px solid $default-border-color;
 $pre-border: 1px solid lighten($dark, 20%);
 $navbar-transparent-background: rgba(0, 0, 0, 0.3);
 
 @import "../../../../node_modules/bulma/sass/utilities/mixins";
 @import "../../../../node_modules/bulma-timeline/src/sass/index";
+@import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";
