@@ -19,23 +19,29 @@
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
                 {% assign is_about = page.url | startswith: "/about/" -%}
+
                 <a href="/about/" class="navbar-link is-arrowless {% if is_about %}is-active{% endif %}">
                     About
                 </a>
 
                 <div class="navbar-dropdown is-boxed">
-                    {% assign pages = site.about | sort: "title" %}
+                    {% assign about_pages = site.about | sort: "title" %}
 
-                    {% for p in pages %}
-                        {% include nav_link.liquid text=p.title href=p.url %}
+                    {% for p in about_pages %}
+                        {% include nav_link.liquid text=p.title href=p.url subpage=false %}
                     {% endfor %}
                 </div>
             </div>
 
             {% if jekyll.environment != 'production' %}
-            {% include nav_link.liquid text="Install" href="/install/" subpage=true %}
-            {% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}
+                {% comment %}
+                   So this conditional only works when building for prod and not when serving. Thanks Jekyll.
+                {% endcomment %}
+
+                {% comment %}{% include nav_link.liquid text="Install" href="/install/" subpage=true %}{% endcomment %}
+                {% comment %}{% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}{% endcomment %}
             {% endif %}
+
             {% include nav_link.liquid text="Blog" href="/blog/" subpage=true %}
 
             <div class="navbar-item has-dropdown is-hoverable">
@@ -46,10 +52,10 @@
                 </a>
 
                 <div class="navbar-dropdown is-right is-boxed">
-                    {% assign pages = site.community | sort: "title" %}
+                    {% assign community_pages = site.community | sort: "title" %}
 
-                    {% for p in pages %}
-                        {% include nav_link.liquid text=p.title href=p.url %}
+                    {% for p in community_pages %}
+                        {% include nav_link.liquid text=p.title href=p.url subpage=false %}
                     {% endfor %}
                 </div>
             </div>
@@ -73,7 +79,7 @@
 
                     <hr class="navbar-divider" />
 
-                    {% include nav_link.liquid text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" %}
+                    {% include nav_link.liquid text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" subpage=true %}
                 </div>
             </div>
         </div>

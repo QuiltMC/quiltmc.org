@@ -3,8 +3,11 @@
 {% assign text = include.text -%}
 {% assign icon = include.icon -%}
 {% assign iconalt = include.iconalt -%}
+{% assign subpage = include.subpage | default: false -%}
 
-{% if include.subpage %}
+{% assign is_subpage = false %}
+
+{% if subpage %}
     {% assign is_subpage = page.url | startswith: url %}
 {% endif %}
 
