@@ -1,5 +1,3 @@
-
-
 .card, .message {
   &.admin {
     border: 0.1rem solid $admin;
@@ -117,14 +115,6 @@
       img {
         background-color: $trainee-background !important;
         border-color: $trainee !important;
-      }
-    }
-  }
-
-  &.with-neutral {
-    .avatar {
-      img {
-        background-color: $neutral-background !important;
       }
     }
   }

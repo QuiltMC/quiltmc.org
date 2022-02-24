@@ -1,4 +1,4 @@
-{% assign class = include.class | default: "developer" -%}
+{% assign class = include.class -%}
 {% assign _class = class | append: " with-neutral" -%}
 
 {% include team_member.liquid

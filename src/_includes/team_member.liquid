@@ -9,7 +9,7 @@
 {% assign system_members = include.system_members -%}
 {% assign links = include.links -%}
 
-<div class="card is-team-member {{ class }}">
+<div class="card is-team-member{% if class %} {{ class }}{% endif %}">
     <div class="card-content">
         {% if avatar %}
         <div class="avatar">

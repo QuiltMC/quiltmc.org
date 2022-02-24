@@ -17,7 +17,7 @@ The Admin Board is responsible for breaking voting ties, managing permissions on
 that concern multiple teams and steering the project's general direction. The Admin Board must always have an odd 
 number of members, to help ensure that ties can be broken cleanly.
 
-<div class="team-grid">
+<div class="admin team-grid">
     {% include team/HavenKing.liquid %}
     {% include team/MrMangoHands.liquid %}
     {% include team/OroArmor.liquid %}
@@ -40,7 +40,7 @@ Keyholders are well-known, reputable members of the wider Minecraft modding comm
 involvement or investment in the Quilt project, is important to try to avoid situations where a hostile takeover of a
 space may be possible.
 
-<div class="team-grid">
+<div class="keyholder team-grid">
     {% include team/kashike.liquid %}
 </div>
 
@@ -52,10 +52,10 @@ running elections, interviewing and training new Community Team members, managin
 spaces, writing and receiving feedback on Quilt's community policies - while also acting as a moderator and inheriting
 the responsibilities from that position.
 
-<div class="team-grid">
+<div class="moderator team-grid">
     {% include team/AppleTheGolden.liquid %}
     {% include team/gdude2002.liquid %}
-    {% include team/MrMangoHands.liquid class="moderator" %}
+    {% include team/MrMangoHands.liquid %}
 </div>
 
 ## Moderators
@@ -65,7 +65,7 @@ resolution, defensive and reactive moderation tasks and general rule and policy 
 backbone of any Community Team, and Quilt's is no exception - a diverse, active Moderator team has always been
 instrumental for Quilt's success.
 
-<div class="team-grid">
+<div class="moderator team-grid">
     {% include team/Akarys.liquid %}
     {% include team/Alizee.liquid %}
     {% include team/Emmaffle.liquid %}
@@ -85,7 +85,7 @@ The Events Team is responsible for organising and managing events within our com
 anything from AMAs to fully-blown online modding conventions. While they aren't Moderators, they are always backed up
 by the rest of the Community Team, and also have the ability to directly moderate events.
 
-<div class="team-grid">
+<div class="community team-grid">
     {% include team/Fusion.liquid %}
     {% include team/Lemma.liquid %}
     {% include team/Octal.liquid %}
@@ -108,7 +108,7 @@ compilation tooling and build system plugins. This team is responsible for the f
     {% include project_button.liquid name="sponge-mixin-compile-extensions" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/CheaterCodes.liquid %}
     {% include team/Cypher.liquid %}
     {% include team/glitch.liquid %}
@@ -130,7 +130,7 @@ This team is responsible for the following projects:
     {% include project_button.liquid name="chasm" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/CheaterCodes.liquid %}
     {% include team/Earthcomputer.liquid %}
     {% include team/Kroppeb.liquid %}
@@ -146,11 +146,11 @@ This team is responsible for the following projects:
     {% include project_button.liquid name="cozy-discord" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/Akarys.liquid %}
     {% include team/Alizee.liquid %}
-    {% include team/AppleTheGolden.liquid class="developer" %}
-    {% include team/gdude2002.liquid class="developer" %}
+    {% include team/AppleTheGolden.liquid %}
+    {% include team/gdude2002.liquid %}
     {% include team/glitch.liquid %}
     {% include team/Lauren.liquid %}
     {% include team/sschr15.liquid %}
@@ -169,7 +169,7 @@ they need to do to extend the game. This team is responsible for the following p
     {% include project_button.liquid name="quiltflower" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/Geolykt.liquid %}
     {% include team/SuperCoder79.liquid %}
     {% include team/Kroppeb.liquid %}
@@ -186,8 +186,8 @@ tooling, file repositories and API services for modders. This team is responsibl
     {% include project_button.liquid name="quilt-meta" %}
 </div>
 
-<div class="team-grid">
-    {% include team/HavenKing.liquid class="developer" %}
+<div class="developer team-grid">
+    {% include team/HavenKing.liquid %}
 </div>
 
 ## Loader
@@ -205,11 +205,11 @@ metadata. This team is responsible for the following projects:
     {% include project_button.liquid name="quilt-loader-sat4j" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/AlexIIL.liquid %}
     {% include team/Earthcomputer.liquid %}
     {% include team/glitch.liquid %}
-    {% include team/HavenKing.liquid class="developer" %}
+    {% include team/HavenKing.liquid %}
 </div>
 
 ## Mappings
@@ -231,13 +231,13 @@ is responsible for the following projects:
     {% include project_button.liquid name="unpick" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/2xsaiko.liquid %}
     {% include team/CheaterCodes.liquid %}
     {% include team/LambdAurora.liquid %}
     {% include team/MartrixX.liquid %}
     {% include team/NoComment.liquid %}
-    {% include team/OroArmor.liquid class="developer" %}
+    {% include team/OroArmor.liquid %}
 </div>
 
 # Quilt Standard Libraries (QSL)
@@ -262,10 +262,10 @@ The Core QSL team represents the QSL team's leadership. The QSL Core team is res
 the QSL project, as well as setting project standards and handling governance tasks, including assigning and removing
 team members from the QSL sub-teams.
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/glitch.liquid %}
     {% include team/LambdAurora.liquid %}
-    {% include team/OroArmor.liquid class="developer" %}
+    {% include team/OroArmor.liquid %}
 </div>
 
 ## Sub-Team: Block
@@ -274,20 +274,20 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 ## Sub-Team: Command
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/WillBL.liquid %}
 </div>
 
 ## Sub-Team: Data
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/ADudeCalledLeo.liquid %}
     {% include team/LambdAurora.liquid %}
 </div>
 
 ## Sub-Team: Entity
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/Bubblie.liquid %}
     {% include team/WillBL.liquid %}
 </div>
@@ -329,10 +329,9 @@ This team is responsible for handling triage tasks for the following projects:
     {% include project_button.liquid name="quilt-mappings" %}
 </div>
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/Bubblie.liquid %}
+    {% include team/Emmaffle.liquid %}
     {% include team/Jamalam.liquid %}
-    {% include team/MartrixX.liquid %}
-    {% include team/NoComment.liquid %}
     {% include team/Sylv.liquid %}
 </div>
