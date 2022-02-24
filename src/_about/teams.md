@@ -298,13 +298,13 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 ## Sub-Team: Item
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/OroArmor.liquid %}
 </div>
 
 ## Sub-Team: Rendering
 
-<div class="team-grid">
+<div class="developer team-grid">
     {% include team/Pepper.liquid %}
 </div>
 
