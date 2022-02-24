@@ -299,12 +299,14 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Item
 
 <div class="team-grid">
-    {% include team/OroArmor.liquid class="developer" %}
+    {% include team/OroArmor.liquid %}
 </div>
 
 ## Sub-Team: Rendering
 
-This sub-team doesn't have any members, so its modules are maintained by the Core team.
+<div class="team-grid">
+    {% include team/Pepper.liquid %}
+</div>
 
 ## Sub-Team: Transfer
 
@@ -333,5 +335,6 @@ This team is responsible for handling triage tasks for the following projects:
     {% include team/Bubblie.liquid %}
     {% include team/Emmaffle.liquid %}
     {% include team/Jamalam.liquid %}
+    {% include team/supersaiyansubtlety.liquid %}
     {% include team/Sylv.liquid %}
 </div>
