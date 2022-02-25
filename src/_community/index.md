@@ -26,11 +26,11 @@ several specific intentions in mind while creating it:
   input to shape our spaces
 * To act with transparency where possible and reasonable without trying to hide our actions, and explaining moderation
   decisions when asked about them
-* To provide room for defensive moderation tools, and investigative moderation approaches - allowing our staff to react
+* To provide room for defensive moderation tools, and investigative moderation approaches -- allowing our staff to react
   to issues in the wider modding community, and solve problems before they're apparent to the userbase
 
 We think we've largely succeeded at this and our community has been excellent at correcting us when we make mistakes,
-holding us accountable, and helping us to understand issues that we otherwise have no direct experience with - whether
+holding us accountable, and helping us to understand issues that we otherwise have no direct experience with -- whether
 that's through lack of information, or just being privileged enough to never have encountered them directly. We always
-encourage our community members to contact us whenever they notice something untoward - if you've been doing that, then
+encourage our community members to contact us whenever they notice something untoward -- if you've been doing that, then
 thank you!

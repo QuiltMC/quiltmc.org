@@ -34,7 +34,7 @@ independently of it.
 For users, Quilt provides the following advantages:
 
 * Mods that should be more compatible with each other, despite their use of powerful modding tools
-* Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly - and only - what you 
+* Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly -- and only -- what you 
   need for your mods to work
 * Better errors when your mod list has problems with missing or incompatible mods, with more friendly instructions
 * Initial compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
@@ -68,19 +68,19 @@ contributions are appreciated!
 ## Can Quilt load Forge mods?
 
 No, Quilt can't load Forge mods and support for this is not planned. There are third-party projects (such as Patchwork)
-that plan to add this functionality, but they're not maintained by Quilt - and they're not part of The Quilt Project.
+that plan to add this functionality, but they're not maintained by Quilt -- and they're not part of The Quilt Project.
 
 {% endadmonition %}
 {% admonition %}
 
 ## Can Quilt load Fabric mods?
 
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt initially - but this may not be
+In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt initially -- but this may not be
 the case forever. Once Quilt is properly-established, we do plan on dropping first-party support for Fabric mods. That
 said, there's no reason the community can't continue to maintain that support, and we'll provide the required resources
 if someone else decides to continue that part of the project after we stop maintaining it.
 
-It's also worth noting that - as of this writing - Fabric mods that contain conditional mixins are not supported. This
+It's also worth noting that -- as of this writing -- Fabric mods that contain conditional mixins are not supported. This
 isn't a major issue as the vast majority of mods don't use conditional mixins, but we're happy to work with mod 
 developers that need an alternative approach for Quilt.
 
@@ -116,7 +116,7 @@ Quilt's staff is split into three distinct groups:
 * The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
 * The development teams, which independently oversee specific project that are assigned to them
 
-Between these three groups, the structure is more or less flat - no one group of people has the final say over the
+Between these three groups, the structure is more or less flat -- no one group of people has the final say over the
 whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community 
 spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
 

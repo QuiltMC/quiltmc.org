@@ -12,7 +12,7 @@ on speed, ease of use and modularity, Quilt aims to provide a sleek and modern m
 
 Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many
 experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of
-the past - whether those mistakes relate to community management, diversity and inclusivity, project governance or
+the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or
 transparency. For more information on how we hope to do this, [please see our "about" pages](/about/).
 {% endcolumn %}
 
@@ -57,7 +57,7 @@ Discord using the links you'll find further down this page.
 
 Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether
 you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: **Quilt
-exists for your needs** - not in spite of them.
+exists for your needs** -- not in spite of them.
 {% endadmonition %}
 {% endcolumn %}
 
@@ -75,7 +75,7 @@ exists for your needs** - not in spite of them.
   </span>
 </h2>
 
-Quilt's modularity doesn't just exist to help with organising its code - **it extends to its users and modders too**.
+Quilt's modularity doesn't just exist to help with organising its code -- **it extends to its users and modders too**.
 If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can
 automatically download the Quilt libraries needed to run your mods.
 {% endadmonition %}

@@ -27,7 +27,7 @@ For developers, Quilt provides the following advantages over Fabric:
   [Fabric's fork of Fernflower](https://github.com/FabricMC/intellij-fernflower)) that provides much more readable,
   accurate and understandable output for when you need to dig into Minecraft's code
 * An alternative approach to mappings, which is based on Yarn but removes the clean-room, which allows for more 
-  accurate names without compromising on quality - and makes it simpler to ask for support in official spaces when
+  accurate names without compromising on quality -- and makes it simpler to ask for support in official spaces when
   you're using a different set of mappings
 * A new Collision Handling ASM backend (CHASM) which acts as the backbone for our mixin and access widener 
   implementations, allowing those and other bytecode manipulation tools to function without any special handling
@@ -50,13 +50,13 @@ Quilt Mappings (shortened to QM below), on the other hand, takes a different app
 [Creative Commons Zero License](https://creativecommons.org/share-your-work/public-domain/cc0/) (similarly to Yarn),
 QM explicitly doesn't claim ownership of the names and instead any names contributed that may be derivatives of other
 mappings projects still have that ownership assigned to them. This, along with including license notices that 
-explicitly show that ownership of some names may lie with other mappings projects (and that provide proper credit) - 
-among other things - allows QM contributors to refer to other mappings projects to figure out what the best name for 
+explicitly show that ownership of some names may lie with other mappings projects (and that provide proper credit) -- 
+among other things -- allows QM contributors to refer to other mappings projects to figure out what the best name for 
 something should be. It also means that we don't have to disallow discussions involving names from other projects in
 our official community spaces.
 
 It's worth noting, however, that **a name being present in some other mappings project does not mean we'll accept it.**
-All names contributed must stand up on their own, regardless of what Mojang - or any other organisation - provides as
+All names contributed must stand up on their own, regardless of what Mojang -- or any other organisation -- provides as
 a name.
 
 {% endadmonition %}
@@ -64,11 +64,11 @@ a name.
 
 ## How hard will it be to port my Fabric mods?
 
-We plan on trying to make this transition as painless as possible - by matching Fabric's API surface, allowing you to
+We plan on trying to make this transition as painless as possible -- by matching Fabric's API surface, allowing you to
 stick with Yarn mappings if you'd like, and providing support for developers that are porting their mods. It's worth
-noting that - as of this writing - Fabric mods that contain conditional mixins are not supported by Quilt's
+noting that -- as of this writing -- Fabric mods that contain conditional mixins are not supported by Quilt's
 backwards-compatibility efforts. However, Quilt will provide an alternative approach with proper toolchain support 
-instead - and we'll help you figure out how to move to it if you need support.
+instead -- and we'll help you figure out how to move to it if you need support.
 
 Most Fabric mods will also be usable without any modifications to begin with, via Quilt's built-in support for
 Fabric mods.
@@ -78,8 +78,8 @@ Fabric mods.
 
 ## How long will backwards compatibility for loading Fabric mods last?
 
-Quilt will likely continue to support Fabric mods directly for quite some time - at least until Quilt is properly
-established. However, at that point, we do plan on dropping first-party support for Fabric mods - although, there's 
+Quilt will likely continue to support Fabric mods directly for quite some time -- at least until Quilt is properly
+established. However, at that point, we do plan on dropping first-party support for Fabric mods -- although, there's 
 no reason the community can't continue to maintain that support, and we'll provide the required resources if someone 
 else decides to continue that part of the project after we stop maintaining it.
 
@@ -93,6 +93,6 @@ intended for use via separate frontends, rather than for mods to use directly. I
 modify bytecode at runtime, handling collisions automatically and trying to help mods to stay compatible.
 
 Frontends for use with CHASM include Access Wideners and, of course, Mixin. However, there's no reason additional
-frontends couldn't be written - by Quilt, or by the community.
+frontends couldn't be written -- by Quilt, or by the community.
 
 {% endadmonition %}

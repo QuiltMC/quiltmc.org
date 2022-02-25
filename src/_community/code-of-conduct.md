@@ -15,7 +15,7 @@ This Code of Conduct applies to anyone that makes use of a space managed by the 
 of Conduct is not a valid excuse for breaking it,** and all members of the community will be held to this standard.
 
 While we try to go into detail with our examples, it's impossible to cover every possible situation in one document. In
-general, treat others how you wish to be treated - if you wouldn't like to be treated in a particular way, don't treat
+general, treat others how you wish to be treated -- if you wouldn't like to be treated in a particular way, don't treat
 others like that either!
 
 This Code of Conduct is the basis for [our rules]({% link _community/index.md %}). We require that all community 

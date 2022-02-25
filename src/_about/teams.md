@@ -49,7 +49,7 @@ space may be possible.
 Community Managers are administrative Community Team members that deal with the day-to-day tasks of maintaining Quilt's
 community spaces, as well as supporting and managing the rest of the community team. They're responsible for properly
 running elections, interviewing and training new Community Team members, managing the structure of Quilt's community
-spaces, writing and receiving feedback on Quilt's community policies - while also acting as a moderator and inheriting
+spaces, writing and receiving feedback on Quilt's community policies -- while also acting as a moderator and inheriting
 the responsibilities from that position.
 
 <div class="moderator team-grid">
@@ -62,7 +62,7 @@ the responsibilities from that position.
 
 Quilt's Moderator team is responsible for daily moderation tasks in Quilt community spaces. This includes conflict
 resolution, defensive and reactive moderation tasks and general rule and policy enforcement. Moderators are the
-backbone of any Community Team, and Quilt's is no exception - a diverse, active Moderator team has always been
+backbone of any Community Team, and Quilt's is no exception -- a diverse, active Moderator team has always been
 instrumental for Quilt's success.
 
 <div class="moderator team-grid">
@@ -247,7 +247,7 @@ creating their mods. These APIs are designed to make certain tasks easier, and t
 other.
 
 The QSL team is divided into subteams, and each team is responsible for specific QSL modules. These modules represent
-specific, distinct sets of library functionality - while they may depend on each other, they're maintained individually.
+specific, distinct sets of library functionality -- while they may depend on each other, they're maintained individually.
 
 This team is responsible for the following projects:
 

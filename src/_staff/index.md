@@ -9,4 +9,4 @@ They act as a set of extra guidelines that staff members can use to guide their 
 efficient and consistent.
 
 These documents are made public here for the sake of transparency. Of course, we're always happy to take suggestions
-and feedback too - feel free to send us a message on Discord and we'll have a chat.
+and feedback too -- feel free to send us a message on Discord and we'll have a chat.

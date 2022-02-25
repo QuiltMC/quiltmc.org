@@ -4,10 +4,10 @@ title: About Us
 description: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
 ---
 
-Quilt is a mod-loader project - primarily aimed at Minecraft. It was founded by users and contributors from the Fabric 
+Quilt is a mod-loader project -- primarily aimed at Minecraft. It was founded by users and contributors from the Fabric 
 project, as a last-resort attempt to address the controversies and issues stemming from that project. Because Fabric 
 had a solid technological foundation with code that still did many things right, Quilt's founders decided that the 
-best option would be to take the standard open source approach to disagreements over management - they forked the 
+best option would be to take the standard open source approach to disagreements over management -- they forked the 
 Fabric project into a new mod-loader project, with the following ideas in mind:
 
 * Allowing contributors to move fast and break things when appropriate, and allowing for experimental work
@@ -32,12 +32,12 @@ approaching it in a few specific ways:
 * Electing an Admin Board which exists to oversee the project's direction, manage permissions on GitHub, and break
   voting ties
 * Electing a key-holder to act as the de-facto owner for Quilt's official community spaces, who is a reputable, 
-  respected and well-known face in the Minecraft modding sphere - but otherwise doesn't have any involvement with Quilt
+  respected and well-known face in the Minecraft modding sphere -- but otherwise doesn't have any involvement with Quilt
 * Electing a Community Team to run Quilt's official community spaces and social media accounts, which acts somewhat
   independently of the rest of the organisation and consists of staff members that can focus on community management,
   rather than the development of Quilt's projects
 * Splitting the responsibilities for each development project into individual teams, each with its own leadership and
-  hierarchy - including subteams and triage teams, as required
+  hierarchy -- including sub-teams and triage teams, as required
 * Providing sets of process documents that need to be followed for actions such as forming new teams, electing team
   members, electing new Admin Board members, and other project management tasks
 
