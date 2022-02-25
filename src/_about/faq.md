@@ -34,12 +34,11 @@ independently of it.
 For users, Quilt provides the following advantages:
 
 * Mods that should be more compatible with each other, despite their use of powerful modding tools
-* Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly -- and only -- what you 
-  need for your mods to work
-* Better errors when your mod list has problems with missing or incompatible mods, with more friendly instructions
 * Initial compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
 * An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff 
   team, and works with its users to improve over time
+* **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly --
+  and only -- what you need for your mods to work
 
 {% endadmonition %}
 {% admonition %}
@@ -52,7 +51,7 @@ If you'd like to help us out, here's just a few ways we've come up with:
 * Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and
   opinions
 * Support other projects that make use of Quilt, or Quilt's tools and libraries
-* Spread the good word on social media (in a responsible manner)
+* Talk about Quilt on social media (in a responsible manner)
 
 [//]: # (* Help with ongoing costs by [supporting us financially on OpenCollective]&#40;https://opencollective.com/quiltmc&#41;)
 
@@ -80,9 +79,9 @@ the case forever. Once Quilt is properly-established, we do plan on dropping fir
 said, there's no reason the community can't continue to maintain that support, and we'll provide the required resources
 if someone else decides to continue that part of the project after we stop maintaining it.
 
-It's also worth noting that -- as of this writing -- Fabric mods that contain conditional mixins are not supported. This
-isn't a major issue as the vast majority of mods don't use conditional mixins, but we're happy to work with mod 
-developers that need an alternative approach for Quilt.
+It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this 
+will change in future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be happy 
+to work with mod developers that need an alternative approach for Quilt.
 
 {% endadmonition %}
 {% admonition %}
@@ -127,7 +126,7 @@ You can find more about this in the governance section on [the About Us page](/a
 
 ## What's an RFC? How do they work?
 
-**RFC** is short for **R**equest **F**or **C**omment. The RFC process refers to a system whereby important process and
+**RFC** is short for **R**equest **F**or **C**omments. The RFC process refers to a system whereby important process and
 policy changes, technical standards and definitions are created, discussed and approved by the community before being
 put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the
 rationale is for the proposal.

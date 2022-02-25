@@ -13,7 +13,8 @@ Fabric project into a new mod-loader project, with the following ideas in mind:
 * Allowing contributors to move fast and break things when appropriate, and allowing for experimental work
 * Building transparency into official community spaces and policies
 * Creating a community team that understands the importance of Quilt's values, and that fosters inclusivity, diversity 
-  and safety through an understanding hands-on moderation approach
+  and safety through an understanding hands-on moderation approach, which is backed by a strong 
+  [Code of Conduct](/community/code-of-conduct)
 * Providing a governance structure that doesn't give anyone too much power, and avoids creating opportunities for 
   staff members to operate without oversight
 * Providing ways to keep the community involved with important project decisions
@@ -29,8 +30,8 @@ the project as a whole. This isn't a particularly easy task, especially when it 
 (and platforms like Discord that don't have the concept of group ownership). Quilt attempts to solve this problem by
 approaching it in a few specific ways:
 
-* Electing an Admin Board which exists to oversee the project's direction, manage permissions on GitHub, and break
-  voting ties
+* Electing an Admin Board from its members, which exists to oversee the project's direction, manage permissions on 
+  GitHub, and break voting ties
 * Electing a key-holder to act as the de-facto owner for Quilt's official community spaces, who is a reputable, 
   respected and well-known face in the Minecraft modding sphere -- but otherwise doesn't have any involvement with Quilt
 * Electing a Community Team to run Quilt's official community spaces and social media accounts, which acts somewhat

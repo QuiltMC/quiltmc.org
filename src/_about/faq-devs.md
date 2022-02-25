@@ -29,11 +29,11 @@ For developers, Quilt provides the following advantages over Fabric:
 * An alternative approach to mappings, which is based on Yarn but removes the clean-room, which allows for more 
   accurate names without compromising on quality -- and makes it simpler to ask for support in official spaces when
   you're using a different set of mappings
-* A new Collision Handling ASM backend (CHASM) which acts as the backbone for our mixin and access widener 
-  implementations, allowing those and other bytecode manipulation tools to function without any special handling
-  required in Quilt's build tools or loader, and helping mods to remain compatible with each other
 * A more community-oriented approach that ensures that everyone's voice is heard when raising issues and opinions,
-  regardless of how prolific a developer (or how well-known) they are
+  regardless of how prolific a developer is, or how well-known they are
+* **Future goal:** A new Collision Handling ASM backend (CHASM) which acts as the backbone for our mixin and access 
+  widener implementations, allowing those and other bytecode manipulation tools to function without any special handling
+  required in Quilt's build tools or loader, and helping mods to remain compatible with each other
 
 {% endadmonition %}
 {% admonition %}
@@ -66,12 +66,10 @@ a name.
 
 We plan on trying to make this transition as painless as possible -- by matching Fabric's API surface, allowing you to
 stick with Yarn mappings if you'd like, and providing support for developers that are porting their mods. It's worth
-noting that -- as of this writing -- Fabric mods that contain conditional mixins are not supported by Quilt's
-backwards-compatibility efforts. However, Quilt will provide an alternative approach with proper toolchain support 
-instead -- and we'll help you figure out how to move to it if you need support.
-
-Most Fabric mods will also be usable without any modifications to begin with, via Quilt's built-in support for
-Fabric mods.
+noting that -- as of this writing -- Fabric mods that contain mixin plugins (for example, for conditional mixins)  are 
+supported by Quilt's backwards-compatibility efforts, but this will not be the case once [CHASM](#CHASM) has been 
+added to the toolchain. Quilt will provide an alternative approach with proper toolchain support later on -- and we'll 
+help you figure out how to move to it if you need support.
 
 {% endadmonition %}
 {% admonition %}
@@ -86,13 +84,15 @@ else decides to continue that part of the project after we stop maintaining it.
 {% endadmonition %}
 {% admonition %}
 
-## What the heck is CHASM, exactly?
+## What the heck is CHASM, exactly? {#CHASM}
 
 CHASM is short for **_Collision Handling ASM_**. CHASM is a bytecode transformation library, acting as a backend that's
 intended for use via separate frontends, rather than for mods to use directly. It intends to provide a safer way to
 modify bytecode at runtime, handling collisions automatically and trying to help mods to stay compatible.
 
-Frontends for use with CHASM include Access Wideners and, of course, Mixin. However, there's no reason additional
+Frontends for use with CHASM will include Access Wideners and, of course, Mixin. However, there's no reason additional
 frontends couldn't be written -- by Quilt, or by the community.
+
+CHASM has not yet been implemented, but we're working on it!
 
 {% endadmonition %}

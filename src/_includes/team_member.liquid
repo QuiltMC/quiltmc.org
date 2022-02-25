@@ -1,6 +1,5 @@
 {% assign name = include.name -%}
 {% assign class = include.class -%}
-{% assign pronouns = include.pronouns -%}
 {% assign discord = include.discord -%}
 {% assign github = include.github -%}
 {% assign description = include.description -%}
@@ -46,16 +45,6 @@
                     N/A
                     {% endif %}
                 </p>
-
-                {% comment %}
-                <p class="subtitle is-6">
-                    {% if pronouns %}
-                    <i class="fas fa-fw fa-comment-quote"></i> {{ pronouns }}
-                    {% else %}
-                    &nbsp;
-                    {% endif %}
-                </p>
-                {% endcomment %}
 
                 <p class="subtitle is-6 is-links">
                     {% if links %}
