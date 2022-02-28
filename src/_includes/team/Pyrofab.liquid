@@ -1,0 +1,12 @@
+{% assign class = include.class -%}
+{% assign _class = class | append: " with-neutral" -%}
+
+{% include team_member.liquid
+        class=_class
+        name="Pyrofab"
+        discord="Pyrofab"
+        github="Pyrofab"
+        avatar="https://avatars.githubusercontent.com/u/25536265"
+
+        description="Busy blowing up new things."
+%}

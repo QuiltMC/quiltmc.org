@@ -1,0 +1,43 @@
+.button.is-discord {
+  background-color: $blurple;
+  border-color: $blurple;
+  color: $white;
+
+  &:hover, &:active {
+    background-color: $blurple-dark;
+    border-color: $blurple-dark;
+  }
+}
+
+.button.is-twitter {
+  background-color: $twitter-blue;
+  border-color: $twitter-blue;
+  color: $white;
+
+  &:hover, &:active {
+    border-color: $twitter-blue-dark;
+    background-color: $twitter-blue-dark;
+  }
+}
+
+.button.is-gradle {
+  background-color: $gradle-blue;
+  border-color: $gradle-blue;
+  color: $white;
+
+  &:hover, &:active {
+    border-color: $gradle-blue-dark;
+    background-color: $gradle-blue-dark;
+  }
+}
+
+.button.is-github {
+  background-color: $white;
+  border-color: $white;
+  color: $black;
+
+  &:hover, &:active {
+    border-color: $grey-lightest;
+    background-color: $grey-lightest;
+  }
+}

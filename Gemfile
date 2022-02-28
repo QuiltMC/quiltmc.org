@@ -33,3 +33,12 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Plugin allowing for pages to have extra redirects
 gem "jekyll-redirect-from"
+
+# Plugin allowing generation of SEO data
+gem 'jekyll-seo-tag'
+
+# Plugin allowing for pagination of pages that need it
+gem 'jekyll-paginate'
+
+# Not included with Ruby 3.x
+gem "webrick", "~> 1.7"

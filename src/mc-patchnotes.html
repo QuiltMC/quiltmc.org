@@ -1,58 +1,100 @@
 ---
-title: Minecraft Patchnotes
+title: Minecraft Patch-notes
 permalink: /mc-patchnotes/
 layout: base
+description: Quilt's Minecraft launcher patch-notes viewer.
 ---
 
-<div class="content">
-    <div class="container">
-        <div class="sidebar-container">
-            <nav class="sidebar" id="sidebar">
-                <h1>Versions</h1>
-            </nav>
-            <main>
-                <noscript>
-                    This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
-                    Please enable it and reload the page to continue.
-                </noscript>
-                <h1 id="title">Minecraft Patchnotes</h1>
-                <img id="image" style="float: right; border-radius: 10px; margin: 10px;"/>
-                <div id="body">
-                    Select the specific version from the sidebar.
-                </div>
-            </main>
+{% columns is-centered %}
+{% column is-10 %}
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-narrow" data-controller="sidebar">
+            <div class="is-hidden-tablet">
+                <button data-action="click->sidebar#toggle" class="button is-dark">
+                    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <span>Versions</span>
+                </button>
+                <br />
+                <br />
+            </div>
+
+            <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar">
+                <aside class="menu">
+                    <p class="menu-label">Versions</p>
+
+                    <ul class="menu-list" id="sidebar">
+
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <div class="column">
+            <noscript class="message is-danger">
+                This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
+                Please enable it and reload the page to continue.
+            </noscript>
+
+            <h1 id="title" class="title">Minecraft Patch-notes</h1>
+
+            <img id="image" class="is-pulled-right" style="border-radius: 10px; margin: 10px;" />
+
+            <div id="body" class="content">
+                Select the version you'd like to see patch notes for.
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+{% endcolumn %}
+{% endcolumns %}
 
 <script>
     // Fetch launcher metadata
     fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
         .then(response => response.json())
         .then(data => {
-            // Render patchnotes
-            render = () => {
+            // Render patch notes
+            const render = () => {
                 // Read the version from the anchor and look it up in the json
-                var version = window.location.hash.substr(1);
-                var entry = data.entries.find(e => e.version == version);
+                var version = window.location.hash.substring(1);
+                var entry = data.entries.find(e => e.version === version);
+
                 if (entry) {
-                    // Replace title, body and image url wtih the selected version
+                    document.getElementById("title").scrollIntoView()
+
+                    // Replace title, body and image url with the selected version
                     document.getElementById("title").innerText = entry.title;
                     document.getElementById("body").innerHTML = entry.body;
                     document.getElementById("image").setAttribute("src", "https://launchercontent.mojang.com" + entry.image.url);
+
+                    for (let elem of document.getElementsByClassName("version-item is-active")) {
+                        elem.classList.remove("is-active")
+                    }
+
+                    document.getElementById(entry.version).classList.add("is-active")
+                    // document.getElementsByClassName("menu")[0].scrollIntoView()
                 }
             };
 
             // Create nav-links
             data.entries.forEach(entry => {
-                var version = window.location.hash.substr(1);
-                var newRef = document.createElement("a");
+                const listItem = document.createElement("li")
+                const newRef = document.createElement("a");
+
+                newRef.classList.add("version-item")
+                newRef.dataset["action"] = "click->sidebar#toggle"
+                newRef.id = entry.version
                 newRef.innerText = entry.version;
                 newRef.setAttribute("href", window.location.pathname + "#" + entry.version);
-                document.getElementById("sidebar").appendChild(newRef);
+
+                listItem.appendChild(newRef)
+                document.getElementById("sidebar").appendChild(listItem);
             });
 
-            // Rerender the patchnote when the url changes
+            // Rerender the patch note when the url changes
             window.onhashchange = render;
             render();
         });

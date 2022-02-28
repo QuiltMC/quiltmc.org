@@ -1,0 +1,97 @@
+@import "../../common/modifiers";
+
+$role-modifier-amount: 40%;
+$role-modifier-amount-secondary: 25%;
+$role-modifier-amount-tertiary: 40%;
+
+@import "../../../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../../../node_modules/bulma/sass/utilities/functions";
+@import "../../common/colours";
+
+$body-font: 'Roboto', sans-serif;
+$header-font: 'Poppins', sans-serif;
+$mono-font: 'IBM Plex Mono', monospace;
+
+$custom-colors: (
+        "blurple": (#5865F2),
+        "pink": (#DC29DD),
+);
+
+$pink: #DC29DD;
+
+$primary: #9722FF;
+$primary-lighter: bulmaLighten($primary, 41%);
+
+$link: #2291E6;
+$info: #3041F2;
+$success: #41D02A;
+$warning: #FCFF22;
+$danger: #FF2222;
+$dark: $primary-lighter;
+
+$blurple: #5865F2;
+$blurple-dark: darken($blurple, 3%);
+$blurple-light: lighten($blurple, 3%);
+
+$twitter-blue: #1DA1F2;
+$twitter-blue-dark: darken($twitter-blue, 3%);
+$twitter-blue-light: lighten($twitter-blue, 3%);
+
+$gradle-blue: #28B3C7;
+$gradle-blue-dark: darken($gradle-blue, 3%);
+$gradle-blue-light: lighten($gradle-blue, 3%);
+
+@import "../../../../node_modules/bulma/sass/utilities/derived-variables";
+@import "../../common/derived";
+
+$neutral-background: $white;
+$body-background-color: $neutral-background;
+
+$footer-background-color: $primary-lighter;
+$tabs-boxed-link-active-background-color: $white;
+$tabs-boxed-link-active-color: $text;
+
+$link-hover: $link-dark;
+$link-active: $link-dark;
+
+$family-sans-serif: $body-font;
+$family-secondary: $header-font;
+$family-monospace: $mono-font;
+
+$message-background-color: $primary-lighter;
+$message-body-border-color: $primary;
+$message-body-color: $text !important;
+$message-body-border-width: 0.1rem;
+$message-header-background-color: $primary;
+$message-header-color: $text;
+
+$code-background: $primary-lighter;
+$code: $primary-dark;
+
+$pre-background: $primary-lighter;
+
+$tag-background-color: $primary-lighter;
+
+$menu-item-active-background-color: $primary;
+$menu-item-hover-background-color: $primary-lighter;
+
+$content-blockquote-background-color: $primary-lighter;
+$content-blockquote-border-left: 5px solid $primary;
+
+$navbar-item-active-background-color: $primary-lighter;
+$navbar-item-active-color: $text;
+$navbar-item-hover-background-color: $primary-lighter;
+$navbar-item-hover-color: $text;
+
+$timeline-icon-size: 1.5rem;
+$timeline-line-width: 2px;
+$timeline-line-color: $text;
+$timeline-marker-background-color: darken($dark, 10%);
+$timeline-marker-border: 2px solid $text;
+
+$card-background-color: $dark;
+
+@import "../../../../node_modules/bulma/sass/utilities/mixins";
+@import "../../../../node_modules/bulma-timeline/src/sass/index";
+@import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";
+@import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";

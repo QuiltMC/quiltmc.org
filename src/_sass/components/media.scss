@@ -1,0 +1,23 @@
+.media .media-content {
+  overflow-y: hidden;
+}
+
+.media .subtitle {
+  margin-bottom: 0 !important;
+}
+
+img.emoji {
+  height: 1.05rem;
+  vertical-align: middle;
+}
+
+img.is-pixelated, .is-pixelated img {
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+
+  -ms-interpolation-mode: nearest-neighbor;
+}

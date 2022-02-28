@@ -6,6 +6,8 @@ author: ToffeeMax
 
 It is now _well_ past the End of October and closer to Halloween then I'd like to admit. Here is some of the more fleshed out updates about the Quilt Project:
 
+<!-- MORE -->
+
 ## Quilt Mappings are now usable in Loom!
 Have you wanted to use mappings other than Yarn or MojMap? 
 
@@ -24,19 +26,22 @@ Benefits of Quilt Mappings:
    - While not complete, Quilt Mappings has the goal of 100% mapping coverage for Minecraft. Any help toward this goal would be appreciated as well!
 
 ### How to use Quilt Mapping (Gradle Plugin)
+
 How to use Quilt Mappings:
 
-**settings.gradle**
-```
+#### settings.gradle
+
+```groovy
 pluginManagement {
     repositories {
         maven { url = "https://maven.oroarmor.com" }
     }
 }
- 
 ```
-**build.gradle**
-```
+
+#### build.gradle
+
+```groovy
 plugins {
   // ...
   id "quilt-mappings-on-loom" version "2.0.0"

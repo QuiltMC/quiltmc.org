@@ -1,0 +1,121 @@
+.card, .message {
+  &.admin {
+    border: 0.1rem solid $admin;
+    background: $admin-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $admin;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $admin-background !important;
+        border-color: $admin !important;
+      }
+    }
+  }
+
+  &.community {
+    border: 0.1rem solid $community;
+    background: $community-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $community !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $community-background !important;
+        border-color: $community !important;
+      }
+    }
+  }
+
+  &.developer {
+    border: 0.1rem solid $developer;
+    background: $developer-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $developer !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $developer-background !important;
+        border-color: $developer !important;
+      }
+    }
+  }
+
+  &.keyholder {
+    border: 0.1rem solid $keyholder;
+    background: $keyholder-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $keyholder !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $keyholder-background !important;
+        border-color: $keyholder !important;
+      }
+    }
+  }
+
+  &.moderator {
+    border: 0.1rem solid $moderator;
+    background: $moderator-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $moderator !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $moderator-background !important;
+        border-color: $moderator !important;
+      }
+    }
+  }
+
+  &.trainee {
+    border: 0.1rem solid $trainee;
+    background: $trainee-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $trainee !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $trainee-background !important;
+        border-color: $trainee !important;
+      }
+    }
+  }
+}

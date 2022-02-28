@@ -1,0 +1,216 @@
+.team-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  &.admin .card {
+    border: 0.1rem solid $admin;
+    background: $admin-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $admin;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $admin-background !important;
+        border-color: $admin !important;
+      }
+    }
+  }
+
+  &.community .card {
+     border: 0.1rem solid $community;
+     background: $community-background;
+
+     .system-members {
+       div {
+         img {
+           border: 1px solid $community !important;
+         }
+       }
+     }
+
+     .avatar {
+       img {
+         background-color: $community-background !important;
+         border-color: $community !important;
+       }
+     }
+   }
+
+  &.developer .card {
+    border: 0.1rem solid $developer;
+    background: $developer-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $developer !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $developer-background !important;
+        border-color: $developer !important;
+      }
+    }
+  }
+
+  &.keyholder .card {
+    border: 0.1rem solid $keyholder;
+    background: $keyholder-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $keyholder !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $keyholder-background !important;
+        border-color: $keyholder !important;
+      }
+    }
+  }
+
+  &.moderator .card {
+    border: 0.1rem solid $moderator;
+    background: $moderator-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $moderator !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $moderator-background !important;
+        border-color: $moderator !important;
+      }
+    }
+  }
+
+  &.trainee .card {
+    border: 0.1rem solid $trainee;
+    background: $trainee-background;
+
+    .system-members {
+      div {
+        img {
+          border: 1px solid $trainee !important;
+        }
+      }
+    }
+
+    .avatar {
+      img {
+        background-color: $trainee-background !important;
+        border-color: $trainee !important;
+      }
+    }
+  }
+
+  &.with-neutral .card {
+    .avatar {
+      img {
+        background-color: $neutral-background !important;
+      }
+    }
+  }
+}
+
+.card.is-team-member {
+  width: 17rem;
+
+  margin: 5rem 0.5rem 0;
+
+  .card-image img {
+    height: 8rem;
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding-top: 4rem;
+
+    .system-members {
+      display: flex;
+      flex-flow: row wrap;
+
+      justify-content: center;
+
+      div {
+        height: 2rem;
+        width: 2rem;
+
+        &:not(:last-child) {
+          margin-right: 0.2rem;
+        }
+
+        img {
+          height: 2rem;
+          width: 2rem;
+
+          border-radius: 100%;
+          border: 1px solid $text;
+        }
+      }
+    }
+
+    .media.system-member-title {
+      margin-bottom: 0.2rem;
+    }
+
+    .media .subtitle {
+      color: transparentize($text, 0.2);
+
+      &.system-members {
+        margin-bottom: 0.3rem;
+      }
+
+      &.is-links {
+        margin-top: 0.5rem;
+
+        a:not(:last-child) {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+    .avatar {
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      img {
+        display: inline-block;
+        height: 7rem;
+        width: 7rem;
+
+        background-color: $card-background-color;
+        border-radius: 100%;
+        border: 2px solid $text;
+      }
+    }
+  }
+}

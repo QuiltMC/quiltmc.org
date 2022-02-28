@@ -1,6 +1,9 @@
 ---
-permalink: /community/rules.html
 title: Rules
+description: Quilt's core rules, which build upon the Code of Conduct to provide a set of concrete guidelines for behaviour.
+
+redirect_from:
+- /community/rules.html
 ---
 
 We expect everyone that makes use of any Quilt community spaces to adhere to the following rules. If you have any
@@ -15,7 +18,7 @@ excuse.
 
 Make sure you read and follow [our Code of Conduct]({% link _community/code-of-conduct.md %}), which outlines what we 
 expect from you and is the basis for these rules. It's important that you read and understand the Code of
-Conduct, and the rules on this page - feel free to contact a community team member if you need any clarification.
+Conduct, and the rules on this page -- feel free to contact a community team member if you need any clarification.
 
 That said, remember that there will sometimes be situations that are difficult to fit into the Code of Conduct at a
 glance. In these cases, please contact a member of the community team for clarification.
@@ -25,7 +28,7 @@ glance. In these cases, please contact a member of the community team for clarif
 In all community spaces, everyone must also follow the Discord [Community Guidelines](https://discord.com/guidelines) 
 and [Terms of Service](https://discord.com/terms).
 
-These aren't just good to follow as a general rule of thumb - this is also a requirement when operating a large 
+These aren't just good to follow as a general rule of thumb -- this is also a requirement when operating a large 
 community on Discord, especially if that community is aiming to be partnered or verified.
 
 #### 3) Try to speak English
@@ -34,7 +37,7 @@ The world is a big place, and many people will have a different native language.
 English, but we understand that not everyone speaks English at the same level.
 
 If you're not a native English speaker, please try to speak English to the best of your ability. Don't worry if you need
-to use a translation tool, or if your English isn't great - we won't make fun of you, and we'll help you figure out the
+to use a translation tool, or if your English isn't great -- we won't make fun of you, and we'll help you figure out the
 right words if you get stuck.
 
 #### 4) Listen to & respect all community team members
@@ -51,19 +54,19 @@ situation and send a private message to another team member.
 While anyone may make use of the Quilt toolchain in accordance with the licenses applied to each project, all projects 
 developed or promoted **in all Quilt community spaces** must meet the following criteria:
 
-* Projects must not be malicious - which includes (but is not limited to) malware, mods that include backdoors, mods
+* Projects must not be malicious -- which includes (but is not limited to) malware, mods that include backdoors, mods
   that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people 
   or groups of people (for example, by automatically kicking them from servers with the mod installed)
 * Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code 
   and project assets posted for any purpose
-* Projects must not break laws, including copyright laws - this includes piracy tools (including mods that use 
+* Projects must not break laws, including copyright laws -- this includes piracy tools (including mods that use 
   projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere 
   to the licenses of other projects to the best of their ability
 * Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, 
   Microsoft, Discord (including their ban on exploits and hacks) and any other community platforms we use
-* Projects must not hide their functionality and should be upfront with what they do - however, projects with 
+* Projects must not hide their functionality and should be upfront with what they do -- however, projects with 
   unfinished documentation or benign "Easter eggs" do not violate this rule
-* Projects must not make use of exploits in order to provide their functionality - this is required by the 
+* Projects must not make use of exploits in order to provide their functionality -- this is required by the 
   [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic 
   thing to do
 
@@ -90,32 +93,32 @@ busy.
 #### 8) When requesting help, specify your mappings (and other useful, relevant info)
 
 If you're working on a mod and asking for help in one of our many help channels, **make sure you specify what mappings
-you're using**. We recommend creating a thread, and putting the mappings in the thread name - you can use these
+you're using**. We recommend creating a thread, and putting the mappings in the thread name -- you can use these
 abbreviations to ensure everyone's on the same page:
 
-* `MCP` - MCP/Forge mappings
-* `MM` - Mojang Mappings
-* `QM` - Quilt Mappings (The default for Quilt)
-* `YM` - Yarn Mappings (The default for Fabric)
+* `MCP` -- MCP/Forge mappings
+* `MM` -- Mojang Mappings
+* `QM` -- Quilt Mappings (The default for Quilt)
+* `YM` -- Yarn Mappings (The default for Fabric)
 
 An example thread title could be `YM | Entity pathing` or `[MM] Negative Enchants`. That said, we understand that quick
-questions may be more suited to direct discussion in the channels - in those cases, **make sure you're clear about 
+questions may be more suited to direct discussion in the channels -- in those cases, **make sure you're clear about 
 which mappings you're using**. You can also make use of the `:mcp:`, `:mm:`, `:qm:` and `:ym:` (or `:yarn:`) emoji if 
 you'd like to.
 
 Ultimately, it's _your_ responsibility to ensure that it's as easy as possible to help you with your questions. The less
 work it takes for someone to understand your problem, the more likely you are to get a quick response! To that end,
-we also recommend you specify other useful information with your question - such as **the version of Minecraft you're 
+we also recommend you specify other useful information with your question -- such as **the version of Minecraft you're 
 working with**, **error logs** and **relevant code snippets**.
 
 #### 9) Don't import drama or controversy from other communities
 
-We aim to be a safe place for everyone - regardless of their background, identity, or other defining trait. In order 
+We aim to be a safe place for everyone -- regardless of their background, identity, or other defining trait. In order 
 to do this, it's important that people are allowed to interact without having to worry about controversies from the
 wider modding community that they may be seeking refuge from.
 
 Additionally, we expect a certain level of professionalism from our members. For both of these reasons, discussion
-of drama or controversies from other communities is banned - including the numerous controversies that have unfolded 
+of drama or controversies from other communities is banned -- including the numerous controversies that have unfolded 
 within other spaces in the wider modding community.
 
 If you'd like to discuss these controversies with other users, start a DM group or join a community that's designed to 
@@ -173,7 +176,7 @@ including the following:
 * Temporarily or permanently removing users from the community (kicking, tempbanning, banning)
 
 Each situation is unique, and will be assessed on a case-by-case basis. All actions taken in response to rule-breaking
-behaviour is done at the discretion of the community team member in question - however, we will take feedback from 
+behaviour is done at the discretion of the community team member in question -- however, we will take feedback from 
 the community if its members are not happy with how things were resolved.
 
 Appeals for community bans on Discord are handled via the **@ModMail** bot, and banned users are automatically sent an 
@@ -192,7 +195,7 @@ it's impossible to enumerate every possible situation (and some situations will 
 our best to explain how we come to a decision, and what we expect from our community team.
 
 For more information on this, feel free to read
-[our moderation guidelines]({% link _community/moderation.md %}). If you have any feedback on this document, feel free to 
+[our moderation guidelines]({% link _staff/moderation/moderation.md %}). If you have any feedback on this document, feel free to 
 contact us!
 
 *[NSFW]: Not Safe For Work

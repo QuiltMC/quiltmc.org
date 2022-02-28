@@ -1,0 +1,25 @@
+@import "modifiers";
+
+$admin: #e5aa01 !default;
+$admin-dark: darken($admin, $role-modifier-amount) !default;
+$admin-light: lighten($admin, $role-modifier-amount) !default;
+
+$community: #2ac48e !default;
+$community-dark: darken($community, $role-modifier-amount) !default;
+$community-light: lighten($community, $role-modifier-amount) !default;
+
+$developer: #41D02A !default;
+$developer-dark: darken($developer, $role-modifier-amount-tertiary) !default;
+$developer-light: lighten($developer, $role-modifier-amount-tertiary) !default;
+
+$keyholder: #05c5ff !default;
+$keyholder-dark: darken($keyholder, $role-modifier-amount-tertiary) !default;
+$keyholder-light: lighten($keyholder, $role-modifier-amount-tertiary) !default;
+
+$moderator: #e68675 !default;
+$moderator-dark: darken($moderator, $role-modifier-amount-secondary) !default;
+$moderator-light: lighten($moderator, $role-modifier-amount-secondary) !default;
+
+$trainee: #dea4b4 !default;
+$trainee-dark: darken($trainee, $role-modifier-amount) !default;
+$trainee-light: lighten($trainee, $role-modifier-amount) !default;

@@ -1,24 +1,54 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="sidebar-container">
-    <nav class="sidebar">
-        <h1>Documents</h1>
-        {% for p in site.community %}
-        {% include nav_link.html text=p.title href=p.url %}
-        {% endfor %}
-    </nav>
-    <main>
-        <h1>{{ page.title }}</h1>
+{% columns is-centered %}
+{% column is-10 %}
 
-        {{ content }}
+<section class="section">
+    <div class="columns">
+        <div class="column is-narrow" data-controller="sidebar">
+            <div class="is-hidden-tablet">
+                <button data-action="click->sidebar#toggle" class="button is-dark">
+                    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <span>Documents</span>
+                </button>
+                <br />
+                <br />
+            </div>
 
-        <hr />
+            <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
+                <aside class="menu">
+                    <p class="menu-label">Documents</p>
 
-        <div class="wiki-info">
-            <p>{% edit_date Last updated on %}</p>
+                    <ul class="menu-list">
+                        {% assign pages = site.community | sort: "title" %}
+                        {% for p in pages %}
+                        <li>
+                            <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </div>
         </div>
-    </main>
-</div>
 
+        <div class="content column">
+            <div class="media mb-5">
+                <div class="media-content">
+                    <h1 class="title">
+                        {{ page.title }}
+                    </h1>
+                    <p class="subtitle is-6">
+                        Edited: {% edit_date %}
+                    </p>
+                </div>
+            </div>
+
+            {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i class='fas fa-sm fa-link-simple'></i>" %}
+        </div>
+    </div>
+</section>
+
+{% endcolumn %}
+{% endcolumns %}

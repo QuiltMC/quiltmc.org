@@ -2,9 +2,14 @@
 layout: base
 ---
 
-<div class="content">
-    <main class="container">
+{% columns is-centered %}
+{% column is-10 %}
+
+<section class="section">
+    <main class="content container">
         {{ content }}
     </main>
-</div>
+</section>
 
+{% endcolumn %}
+{% endcolumns %}

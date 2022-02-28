@@ -1,0 +1,16 @@
+.message.is-fullheight {
+  height: 100%;
+
+  .message-body {
+    height: 100%;
+  }
+}
+
+.message a:not(.button):not(.tag):not(.dropdown-item) {
+  color: $link;
+  text-decoration: none;
+
+  &:hover, &:active {
+    color: $link-dark;
+  }
+}
