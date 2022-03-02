@@ -91,6 +91,22 @@ by the rest of the Community Team, and also have the ability to directly moderat
     {% include team/Octal.liquid %}
 </div>
 
+## Outreach Team
+
+The outreach team is responsible for communications outside of and within Quilt. They write blog posts, manage social media and website content, and run developer meetings, among other things.
+
+<div class="community team-grid">
+   {% include team/Akarys.liquid %}
+   {% include team/Alizee.liquid %}
+   {% include team/Emmaffle.liquid %}
+   {% include team/gdude2002.liquid %}
+   {% include team/Lauren.liquid %}
+   {% include team/Southpaw.liquid %}
+   {% include team/ToffeeMax.liquid %}
+   {% include team/Xavier.liquid %}
+</div>
+
+
 # Development Teams
 
 Development teams are responsible for specific parts of The Quilt Project, which itself comprises a number of projects.
