@@ -41,3 +41,14 @@
     background-color: $grey-lightest;
   }
 }
+
+.button.is-rss {
+  background-color: $rss;
+  border-color: $rss;
+  color: $white;
+
+  &:hover, &:active {
+    border-color: $rss-dark;
+    background-color: $rss-dark;
+  }
+}
