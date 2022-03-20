@@ -2,7 +2,10 @@
 title: Openings
 description: Current Openings for positions on the Quilt Staff Team
 ---
-
+# Openings
+<p class="subtitle is-6">
+    Last Updated: {% edit_date %}
+</p>
 The Quilt Project is extremely community-oriented, and that means that it needs your help to succeed. This page is a list of team openings - voluntary positions within teams that need more members.
 
 {% admonition %}
