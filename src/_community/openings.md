@@ -19,7 +19,7 @@ The Build Tools team is responsible for building the tools that make Quilt moddi
 
 This team is currently focused on improving Sponge's VanillaGradle and bringing it into a state where it can be used for Quilt. Until this is completed, Quilt projects are reliant on Fabric's Loom and a set of additional Gradle plugins, so we're hoping to prioritise development in this team.
 
-If you're interested in helping out with Quilt's build tools or would like to join this team, please send a message in `#build-tools-general` on the [Toolchain Discord server](https://discord.quiltmc.org/toolchain).
+If you're interested in helping out with Quilt's build tools or would like to join this team, please send a message in `#build-tools-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
 ### Mappings Triage
 
