@@ -29,12 +29,6 @@ This isn't a high-stress position, but it's still important - especially as we'd
 
 If you'd like to join this team, please send a message in `#mappings-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
-### Worldgen Developers
-
-Both the Mappings and QSL teams are in need of developers experienced with Minecraft's world generation. While this is technically a specialist position, you don't need to be a definitive expert, just someone with experience in this area of modding.
-
-If this sounds like you and you'd like to help out, please send a message in `#mappings-general` or `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
-
 ### QSL
 
 There are several QSL teams that don't yet have any members, and this means that the parts of QSL that they are responsible for is overseen by the core QSL team instead, which isn't ideal as they already have a lot of work to do. The following teams are empty, and need members:
@@ -50,18 +44,24 @@ Additionally, the following QSL teams are looking for more members:
 
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on the Toolchain Discord Server, which you can find a link to in toolchain-development.
 
+### Worldgen Developers
+
+Both the Mappings and QSL teams are in need of developers experienced with Minecraft's world generation. While this is technically a specialist position, you don't need to be a definitive expert, just someone with experience in this area of modding.
+
+If this sounds like you and you'd like to help out, please send a message in `#mappings-general` or `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
+
 ## Community Team
 
 The Community Team is responsible for taking care of our community, helping it grow, and keeping it safe, welcoming and running smoothly. Joining it is a great way to contribute if you're not a developer, or just not interested in developing modding technologies.
-
-### Moderators
-
-Moderators are the backbone of our community, ensuring that everyone is safe, that rules are enforced, and that discussions are conducted in a productive manner. While the current team can handle the amount of activity, the team needs to be expanded to deal with the increasing interest and community activity and as development progresses.
-
-If you'd like to apply to be a Moderator, please join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. It is recommended that you read our [Rules](https://quiltmc.org/community/rules/) and [Code of Conduct](https://quiltmc.org/community/code-of-conduct/) before applying.
 
 ### Events Team
 
 The Events Team is responsible for organising and running community events, anything from AMAs to modding conventions. While there hasn't yet been much in the way of events, this will change as we get nearer to release, so if you think this is something you'd be good at, we'd love your help!
 
 While the Events Team isn't a Moderation position, applications go through the same system - join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. Make sure to include any previous experience you have with running events, either virtual or in person.
+
+### Moderators
+
+Moderators are the backbone of our community, ensuring that everyone is safe, that rules are enforced, and that discussions are conducted in a productive manner. While the current team can handle the amount of activity, the team needs to be expanded to deal with the increasing interest and community activity and as development progresses.
+
+If you'd like to apply to be a Moderator, please join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. It is recommended that you read our [Rules](https://quiltmc.org/community/rules/) and [Code of Conduct](https://quiltmc.org/community/code-of-conduct/) before applying.
