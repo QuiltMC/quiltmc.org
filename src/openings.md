@@ -65,6 +65,6 @@ While the Events Team isn't a Moderation position, applications go through the s
 
 ### Moderators
 
-Moderators are the backbone of our community, ensuring that everyone is safe, that rules are enforced, and that discussions are conducted in a productive manner. While the current team can handle the amount of activity, the team needs to be expanded to deal with the increasing interest and community activity and as development progresses.
+Moderators are the backbone of our community, ensuring that everyone is safe, that rules are enforced, and that discussions are conducted in a productive manner. While the current team can handle the amount of activity that our communities receive, the team needs to be expanded to deal with the increasing interest and community activity and as development progresses.
 
 If you'd like to apply to be a Moderator, please join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. It is recommended that you read our [Rules](https://quiltmc.org/community/rules/) and [Code of Conduct](https://quiltmc.org/community/code-of-conduct/) before applying.
