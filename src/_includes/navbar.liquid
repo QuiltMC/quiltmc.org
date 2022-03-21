@@ -60,8 +60,6 @@
                 </div>
             </div>
 
-            {% include nav_link.liquid text="Openings" href="/openings/" %}
-
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <span class="is-hidden-desktop">
@@ -74,6 +72,7 @@
 
                 <div class="navbar-dropdown is-right is-boxed">
                     {% include nav_link.liquid text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" %}
+                    {% include nav_link.liquid text="Openings" href="/openings/" icon= "fas fa-briefcase" %}
                     {% include nav_link.liquid text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" subpage=true %}
 
                     <div class="divider"> External Links </div>
