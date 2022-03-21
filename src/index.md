@@ -149,13 +149,12 @@ and become familiar with them before joining or interacting with us.
 
 # Get Involved
 
-If you'd like to help us, the best thing you can do right now is to join us on GitHub or the toolchain Discord server,
-and offer your expertise. There's plenty of things to do, so we can always use more help!
+There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the [openings page](/openings/). There’s plenty of things to do, so we can always use more help! 
 
 <div class="button-grid">
-    <a href="{{ site.discord_toolchain }}" target="_blank" class="button is-discord">
-        <span class="icon"><i class="fab fa-discord"></i></span>
-        <span>Toolchain</span>
+    <a href="/openings" target="_blank" class="button is-primary">
+        <span class="icon"><i class="fas fa-briefcase"></i></span>
+        <span>Openings</span>
     </a>
 
     <a href="https://github.com/{{ site.github_username }}" target="_blank" class="button is-github">
@@ -164,13 +163,6 @@ and offer your expertise. There's plenty of things to do, so we can always use m
     </a>
 </div>
 
-If you're looking for specific jobs, the following places are always worth checking:
-
-<ul>
-    <li><a href="https://github.com/QuiltMC/rfcs/pulls">RFCs with open Pull Requests</a></li>
-    <li><a href="https://github.com/QuiltMC/quilt-mappings/pulls">Quilt Mappings Pull Requests</a></li>
-    <li><a href="https://github.com/orgs/QuiltMC/projects/1">Quilt's Launch Roadmap project</a></li>
-</ul>
 {% endcolumn %}
 
 {% column is-5 %}
