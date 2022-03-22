@@ -52,7 +52,7 @@ Additionally, the following QSL teams are looking for more members:
 
 -  Entities
 
-If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on the Toolchain Discord Server, which you can find a link to in toolchain-development.
+If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
 
 ### Worldgen Developers
 
