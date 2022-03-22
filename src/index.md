@@ -149,9 +149,12 @@ and become familiar with them before joining or interacting with us.
 
 # Get Involved
 
-There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the [openings page](/openings/).
+There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be 
+found on the [openings page](/openings/).
 
-If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do is join us on GitHub or the [Toolchain Discord Server]({{ site.discord_toolchain }}). There’s plenty of things to do, so we can always use more help!
+If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do 
+is join us on GitHub or the [Toolchain Discord Server]({{ site.discord_toolchain }}). There’s plenty of things to do, 
+so we can always use more help!
 
 <div class="button-grid">
     <a href="/openings" target="_blank" class="button is-primary">
