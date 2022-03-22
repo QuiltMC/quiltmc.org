@@ -1,3 +1,15 @@
+.blog-post > {
+  .title:first-child, .subtitle:first-child, h1:first-child {
+    margin-bottom: 0.5rem;
+  }
+}
+
+div.blog-post {
+  > .media {
+    margin-bottom: 1rem;
+  }
+}
+
 .media .media-content {
   overflow-y: hidden;
 }

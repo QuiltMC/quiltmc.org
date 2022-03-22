@@ -1,5 +1,6 @@
 ---
-title: Openings description: Current Openings for positions on the Quilt Staff Team
+title: Openings
+description: Current Openings for positions on the Quilt Staff Team
 ---
 
 <div class="media mb-5">
