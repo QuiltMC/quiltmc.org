@@ -14,7 +14,7 @@ It is important to remember that this is a **beta**, not a full release. Beta so
 ## Instability
 
 
-Beta software is inherintly unstable. This means that could be a lot of bugs and crashes, but it also means that *anything could change at any time, with no regard for compatibility between one version and the next.*
+Beta software is inherently unstable. This means that there could be a lot of bugs and crashes, but it also means that *anything could change at any time, with no regard for compatibility between one version and the next.*
 
 It may be frustrating, but trying different approaches and iterating is an essential part of our development, and during this pre-release stage it is essential to not be held back by backwards compatibility.
 
@@ -39,11 +39,11 @@ While we are currently confident that we can make the April 20th target, the tru
 
 You can even [subscribe to this blog via RSS](https://quiltmc.org/feed.xml) and get updates delivered straight to your RSS reader of choice.
 
-We also hold a Public Developer Meeting on the [Toolchain Discord Server](https://discord.quiltmc.org) every second Saturday at 5PM UTC, where the teams get together and discuss the progress made on their respective projects, and also answer questions from the community. Even though it's called a Developer meeting, anyone interested in Quilt's future development is welcome.
+We also hold a Public Developer Meeting on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) every second Saturday at 5PM UTC, where the teams get together and discuss the progress made on their respective projects, and also answer questions from the community. Even though it's called a Developer meeting, anyone interested in Quilt's future development is welcome.
 
 ## Get Involved
 
-If you want to get involved, we could always use some extra help. A list of current openings for positions on our various teams can be found on the [Openings page]("/openings"), but if none of them speak to you, or if you want to contribute without joining a team, the best thing to do is to join the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) and offer your expertise.
+If you want to get involved, we could always use some extra help. A list of current openings for positions on our various teams can be found on the [Openings page]("https://quiltmc.org/openings/"), but if none of them speak to you, or if you want to contribute without joining a team, the best thing to do is to join the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) and offer your expertise.
 
 
 
