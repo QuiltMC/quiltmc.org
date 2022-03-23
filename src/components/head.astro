@@ -1,0 +1,45 @@
+---
+import * as site from "../site.ts";
+const content = Astro.props.content || {};
+
+const title = content.title ? (content.title + " | " + site.title) : (site.title + " | " + site.description);
+const author = content.author || site.author;
+const description = content.description || site.description;
+---
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style lang="scss">
+        @import "../styles/style-dark";
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#9722ff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b112b">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#1b112b">
+
+    <title>{title}</title>
+    <meta property="og:title" content={title}>
+    <meta name="author" content={author}>
+    <meta name="og:locale" content={site.lang}>
+    <meta name="description" content={description}>
+    <meta name="og:description" content={description}>
+    <link rel="canonical" content={Astro.canonicalURL}>
+    <meta property="og:url" content={Astro.canonicalURL}>
+    <meta property="og:site_name" content={site.title}>
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content={content.title}>
+    <meta property="twitter:creator" content={"@" + site.twitter}>
+
+    <script src="https://kit.fontawesome.com/b1b70f724e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+</head>

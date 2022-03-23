@@ -1,0 +1,23 @@
+---
+import Head from "../components/head.astro";
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en-us">
+    <Head content={Astro.props.content} />
+
+    <!-- Preload class stops CSS animations from playing during page load and is removed by JS -->
+    <body class="page preload">
+        <slot />
+
+        <Footer />
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.className = document.body.className.replace("preload", "")
+            });
+
+            twemoji.parse(document.body);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+---
+const {href, class, text, icon, iconalt, target} = Astro.props;
+const subpage = Astro.props.subpage || false;
+const is_subpage = subpage && Astro.site.pathname.startsWith(href);
+---
+
+<a href={href} target={target} class={"navbar-item" + (is_subpage ? " is-active" : "")}>
+    {icon ? <span class="icon"><i class={"fa-xl " + icon}></i></span> : ""}
+
+    <span>{text}</span>
+</a>

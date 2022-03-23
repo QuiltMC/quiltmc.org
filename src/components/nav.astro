@@ -1,0 +1,80 @@
+---
+import Navlink from "./navlink.astro";
+const pathname = Astro.request.url.pathname;
+
+const style = Astro.props.style || "is-dark";
+const is_about = pathname.startsWith("/about");
+const about_pages = Astro.fetchContent("../pages/about/*");
+const is_community = pathname.startsWith("/community");
+const community_pages = Astro.fetchContent("../pages/community/*");
+---
+
+<nav class={"navbar " + style} role="navigation" aria-label="main navigation" data-controller="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item pr-6" href="/">
+            <img src="/assets/img/logo.svg" alt="Quilt Logo" />
+
+            <span class="ml-2">QuiltMC</span>
+        </a>
+
+        <a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" data-navbar-target="menu">
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="/about/" class={"navbar-link is-arrowless" + (is_about ? " is-active" : "")}>
+                    About
+                </a>
+
+                <div class="navbar-dropdown is-boxed">
+                    {about_pages.map((page) => (
+                        <Navlink text={page.title} href={page.url} />
+                    ))}
+                </div>
+            </div>
+
+            <!-- <Navlink text="Install" href="/install/" subpage=true />
+            <Navlink text="Developers" href="/dev/" subpage=true /> -->
+
+            <Navlink text="Blog" href="/blog/" subpage=true />
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="/community/" class={"navbar-link is-arrowless" + (is_community ? " is-active" : "")}>
+                    Community
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    {community_pages.map((page) => (
+                        <Navlink text={page.title} href={page.url} />
+                    ))}
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <span class="is-hidden-desktop">
+                        More Pages
+                    </span>
+                    <span class="icon is-hidden-mobile is-hidden-tablet-only">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    <Navlink  text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" />
+                    <Navlink  text="Openings" href="/openings/" icon= "fas fa-briefcase" />
+                    <Navlink  text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" subpage=true />
+
+                    <div class="divider"> External Links </div>
+
+                    <Navlink  target="_blank" text="Maven Repository" href="https://maven.quiltmc.org" icon="fas fa-feather-pointed" />
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

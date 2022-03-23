@@ -1,0 +1,11 @@
+---
+import BaseNavless from "./base-navless.astro";
+import Nav from "../components/nav.astro";
+import BaseContent from "./base-content.astro";
+---
+<BaseNavless content={Astro.props.content} >
+    <Nav />
+    <BaseContent>
+        <slot />
+    </BaseContent>
+</BaseNavless>
