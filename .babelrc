@@ -1,0 +1,10 @@
+{
+    "presets": [
+        ["@babel/typescript", { "allowDeclareFields": true }],
+        ["@babel/preset-env", { "useBuiltIns": "usage", "corejs": 3 }]
+    ],
+    "plugins": [
+        ["@babel/plugin-transform-typescript", { "allowDeclareFields": true }],
+        "@babel/plugin-proposal-class-properties"
+    ]
+}

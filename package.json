@@ -19,5 +19,6 @@
         "serialize-javascript": "^6.0.0",
         "shiki": "^0.10.1",
         "shorthash": "^0.0.2"
-    }
+    },
+    "packageManager": "yarn@3.2.0"
 }

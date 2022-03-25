@@ -1,24 +1,20 @@
-@import "../../common/modifiers";
+@import "../../common/modifiers.scss";
 
 $role-modifier-amount: 40%;
 $role-modifier-amount-secondary: 25%;
 $role-modifier-amount-tertiary: 40%;
 
-@import "bulma/sass/utilities/initial-variables";
-@import "bulma/sass/utilities/functions";
-@import "../../common/colours";
+@import "bulma/sass/utilities/initial-variables.sass";
+@import "bulma/sass/utilities/functions.sass";
+@import "../../common/colours.scss";
 
 $body-font: "Roboto", sans-serif;
 $header-font: "Poppins", sans-serif;
 $mono-font: "IBM Plex Mono", monospace;
 
 $custom-colors: (
-    "blurple": (
-        #5865f2,
-    ),
-    "pink": (
-        #dc29dd,
-    ),
+    "blurple": #5865f2,
+    "pink": #dc29dd,
 );
 
 $pink: #dc29dd;
@@ -50,10 +46,8 @@ $gradle-blue: #28b3c7;
 $gradle-blue-dark: darken($gradle-blue, 3%);
 $gradle-blue-light: lighten($gradle-blue, 3%);
 
-// TODO fix sass crashing with custom colors set
-$custom-colors: null;
-@import "bulma/sass/utilities/derived-variables";
-@import "../../common/derived";
+@import "bulma/sass/utilities/derived-variables.sass";
+@import "../../common/derived.scss";
 
 $neutral-background: $white;
 $body-background-color: $neutral-background;
@@ -102,7 +96,7 @@ $timeline-marker-border: 2px solid $text;
 
 $card-background-color: $dark;
 
-@import "bulma/sass/utilities/mixins";
-@import "bulma-timeline/src/sass/index";
-@import "@creativebulma/bulma-divider/src/sass/index";
-@import "@creativebulma/bulma-tooltip/src/sass/index";
+@import "bulma/sass/utilities/mixins.sass";
+@import "bulma-timeline/src/sass/index.sass";
+@import "@creativebulma/bulma-divider/src/sass/index.sass";
+@import "@creativebulma/bulma-tooltip/src/sass/index.sass";

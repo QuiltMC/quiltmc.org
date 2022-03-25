@@ -1,16 +1,16 @@
 .button-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  margin-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 
-  & > * {
-    margin: 0.4rem !important;
-  }
+    & > * {
+        margin: 0.4rem !important;
+    }
 }

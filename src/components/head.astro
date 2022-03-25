@@ -1,4 +1,5 @@
 ---
+import "../styles/style.scss";
 import * as site from "../site.ts";
 const content = Astro.props.content || {};
 
@@ -13,9 +14,6 @@ const description = content.description || site.description;
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <style lang="scss">
-        @import "../styles/style-dark";
-    </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">

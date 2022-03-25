@@ -1,21 +1,17 @@
-@import "../../common/modifiers";
+@import "../../common/modifiers.scss";
 
 $role-modifier-amount-secondary: 40%;
 
-@import "bulma/sass/utilities/initial-variables";
-@import "../../common/colours";
+@import "bulma/sass/utilities/initial-variables.sass";
+@import "../../common/colours.scss";
 
 $body-font: "Roboto", sans-serif;
 $header-font: "Poppins", sans-serif;
 $mono-font: "IBM Plex Mono", monospace;
 
 $custom-colors: (
-    "blurple": (
-        #5865f2,
-    ),
-    "pink": (
-        #dc29dd,
-    ),
+    "blurple": #5865f2,
+    "pink": #dc29dd,
 );
 
 $pink: #dc29dd;
@@ -60,10 +56,8 @@ $text: $white-bis !default;
 $text-light: $white-ter;
 $text-strong: $white;
 
-// TODO fix sass crashing with custom colors set
-$custom-colors: null;
-@import "bulma/sass/utilities/derived-variables";
-@import "../../common/derived";
+@import "bulma/sass/utilities/derived-variables.sass";
+@import "../../common/derived.scss";
 
 $admin-background: $admin-dark;
 $community-background: $community-dark;
@@ -182,7 +176,7 @@ $default-border: 1px solid $default-border-color;
 $pre-border: 1px solid lighten($dark, 20%);
 $navbar-transparent-background: rgba(0, 0, 0, 0.3);
 
-@import "bulma/sass/utilities/mixins";
-@import "bulma-timeline/src/sass/index";
-@import "@creativebulma/bulma-divider/src/sass/index";
-@import "@creativebulma/bulma-tooltip/src/sass/index";
+@import "bulma/sass/utilities/mixins.sass";
+@import "bulma-timeline/src/sass/index.sass";
+@import "@creativebulma/bulma-divider/src/sass/index.sass";
+@import "@creativebulma/bulma-tooltip/src/sass/index.sass";

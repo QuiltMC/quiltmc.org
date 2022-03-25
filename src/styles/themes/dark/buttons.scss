@@ -1,54 +1,59 @@
 .button.is-discord {
-  background-color: $blurple;
-  border-color: $blurple;
-  color: $white;
+    background-color: $blurple;
+    border-color: $blurple;
+    color: $white;
 
-  &:hover, &:active {
-    background-color: $blurple-dark;
-    border-color: $blurple-dark;
-  }
+    &:hover,
+    &:active {
+        background-color: $blurple-dark;
+        border-color: $blurple-dark;
+    }
 }
 
 .button.is-twitter {
-  background-color: $twitter-blue;
-  border-color: $twitter-blue;
-  color: $white;
+    background-color: $twitter-blue;
+    border-color: $twitter-blue;
+    color: $white;
 
-  &:hover, &:active {
-    border-color: $twitter-blue-dark;
-    background-color: $twitter-blue-dark;
-  }
+    &:hover,
+    &:active {
+        border-color: $twitter-blue-dark;
+        background-color: $twitter-blue-dark;
+    }
 }
 
 .button.is-gradle {
-  background-color: $gradle-blue;
-  border-color: $gradle-blue;
-  color: $white;
+    background-color: $gradle-blue;
+    border-color: $gradle-blue;
+    color: $white;
 
-  &:hover, &:active {
-    border-color: $gradle-blue-dark;
-    background-color: $gradle-blue-dark;
-  }
+    &:hover,
+    &:active {
+        border-color: $gradle-blue-dark;
+        background-color: $gradle-blue-dark;
+    }
 }
 
 .button.is-github {
-  background-color: $white;
-  border-color: $white;
-  color: $black;
+    background-color: $white;
+    border-color: $white;
+    color: $black;
 
-  &:hover, &:active {
-    border-color: $grey-lightest;
-    background-color: $grey-lightest;
-  }
+    &:hover,
+    &:active {
+        border-color: $grey-lightest;
+        background-color: $grey-lightest;
+    }
 }
 
 .button.is-rss {
-  background-color: $rss;
-  border-color: $rss;
-  color: $white;
+    background-color: $rss;
+    border-color: $rss;
+    color: $white;
 
-  &:hover, &:active {
-    border-color: $rss-dark;
-    background-color: $rss-dark;
-  }
+    &:hover,
+    &:active {
+        border-color: $rss-dark;
+        background-color: $rss-dark;
+    }
 }

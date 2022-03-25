@@ -1,6 +1,7 @@
 ---
 import {Markdown} from "astro/components";
 import Hero from "../layouts/hero.astro";
+import Message from "../components/message.astro";
 
 import * as site from "../site.ts";
 ---
@@ -22,7 +23,7 @@ transparency. For more information on how we hope to do this, [please see our "a
 </div>
 
 <div class="column is-4">
-<article class="message is-danger">
+<Message class="message is-danger">
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -38,7 +39,7 @@ transparency. For more information on how we hope to do this, [please see our "a
 We're aiming for the 20th of April for Quilt's first beta release. For more information, please read
 [this blog post](https://quiltmc.org/blog/2022/03/22/quilt-enters-beta/).
 
-</article>
+</Message>
 </div>
 
 </div>
@@ -46,7 +47,7 @@ We're aiming for the 20th of April for Quilt's first beta release. For more info
 <div class="columns mb-5 mt-2">
 <div class="column">
 
-<article class="message is-primary is-fullheight mr-1">
+<Message class="message is-primary is-fullheight mr-1">
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -61,12 +62,12 @@ Quilt is community-driven, and couldn't exist without its users and contributors
 you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: **Quilt
 exists for your needs** -- not in spite of them.
 
-</article>
+</Message>
 </div>
 
 <div class="column">
 
-<article class="message is-link has-text-left is-fullheight ml-1 mr-1">
+<Message class="message is-link has-text-left is-fullheight ml-1 mr-1">
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -81,11 +82,11 @@ Quilt's modularity doesn't just exist to help with organising its code -- **it e
 If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can
 automatically download the Quilt libraries needed to run your mods.
 
-</article>
+</Message>
 </div>
 
 <div class="column">
-<article class="message is-success has-text-left is-fullheight ml-1">
+<Message class="message is-success has-text-left is-fullheight ml-1">
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -100,7 +101,7 @@ Quilt has the extra features and tools your mods need to succeed. From a rich li
 more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding
 toolchain, you can be sure that **your mod is in good hands**.
 
-</article>
+</Message>
 </div>
 </div>
 

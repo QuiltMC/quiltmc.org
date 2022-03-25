@@ -4,7 +4,7 @@ import path from 'path';
 import moduleExports, { Module } from 'module';
 
 var PathType;
-(function(PathType2) {
+(function (PathType2) {
   PathType2[PathType2["File"] = 0] = "File";
   PathType2[PathType2["Portable"] = 1] = "Portable";
   PathType2[PathType2["Native"] = 2] = "Native";
@@ -20,7 +20,7 @@ ppath.resolve = (...segments) => {
     return path.posix.resolve(ppath.cwd(), ...segments);
   }
 };
-const contains = function(pathUtils, from, to) {
+const contains = function (pathUtils, from, to) {
   from = pathUtils.normalize(from);
   to = pathUtils.normalize(to);
   if (from === to)
@@ -184,7 +184,7 @@ const pathRegExp = /^(?![a-zA-Z]:[\\/]|\\\\|\.{0,2}(?:\/|$))((?:node:)?(?:@[^/]+
 const isRelativeRegexp = /^\.{0,2}\//;
 async function resolve$1(originalSpecifier, context, defaultResolver) {
   var _a;
-  const {findPnpApi} = moduleExports;
+  const { findPnpApi } = moduleExports;
   if (!findPnpApi || isBuiltinModule(originalSpecifier))
     return defaultResolver(originalSpecifier, context, defaultResolver);
   let specifier = originalSpecifier;
@@ -194,7 +194,7 @@ async function resolve$1(originalSpecifier, context, defaultResolver) {
       return defaultResolver(originalSpecifier, context, defaultResolver);
     specifier = fileURLToPath(url);
   }
-  const {parentURL, conditions = []} = context;
+  const { parentURL, conditions = [] } = context;
   const issuer = parentURL ? fileURLToPath(parentURL) : process.cwd();
   const pnpapi = (_a = findPnpApi(issuer)) != null ? _a : url ? findPnpApi(specifier) : null;
   if (!pnpapi)
@@ -233,7 +233,7 @@ async function resolve$1(originalSpecifier, context, defaultResolver) {
 const binding = process.binding(`fs`);
 const originalfstat = binding.fstat;
 const ZIP_FD = 2147483648;
-binding.fstat = function(...args) {
+binding.fstat = function (...args) {
   const [fd, useBigint, req] = args;
   if ((fd & ZIP_FD) !== 0 && useBigint === false && req === void 0) {
     try {
