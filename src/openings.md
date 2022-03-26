@@ -65,19 +65,9 @@ Additionally, the following QSL teams are looking for more members:
 - Entities
 - GUI
 - Rendering
-- Worldgen
 
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
-
-### Worldgen Developers
-
-Both the Mappings and QSL teams are in need of developers experienced with Minecraft's world generation. While this is
-technically a specialist position, you don't need to be a definitive expert, just someone with experience in this area
-of modding.
-
-If this sounds like you and you'd like to help out, please send a message in `#mappings-general` or `#qsl-general` on
-the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
 ## Community Team
 
