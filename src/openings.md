@@ -58,13 +58,14 @@ responsible for is overseen by the core QSL team instead, which isn't ideal as t
 The following teams are empty, and need members:
 
 - Block
-- Worldgen
+- Transfer
 
 Additionally, the following QSL teams are looking for more members:
 
 - Entities
 - GUI
 - Rendering
+- Worldgen
 
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
