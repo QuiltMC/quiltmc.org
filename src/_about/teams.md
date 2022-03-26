@@ -333,8 +333,10 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Worldgen
 
 <div class="developer team-grid">
-    {% include team/snoozestudios.liquid %}
+    {% include team/Noah.liquid %}
     {% include team/OliviaTheVampire.liquid %}
+    {% include team/snoozestudios.liquid %}
+    
 </div>
 
 # Triage Teams
