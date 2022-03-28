@@ -389,7 +389,6 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
     <Noah />
     <OliviaTheVampire />
     <SnoozeStudios />
-
 </div>
 
 # Triage Teams
