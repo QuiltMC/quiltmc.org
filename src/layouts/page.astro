@@ -53,8 +53,17 @@ if (!no_sidebar) {
                     <h1 class="title">
                         {title}
                     </h1>
+
+                    {author && <p class="subtitle is-6">
+                        Author: {author}
+                    </p>}
+
+                    {authors && <p class="subtitle is-6">
+                        Authors: {authors}
+                    </p>}
+
                     {edit_date && <p class="subtitle is-6">
-                        Edited: { edit_date }
+                        Edited: {edit_date}
                     </p>}
                 </div>
             </div>
