@@ -1,14 +1,18 @@
 ---
 import Base from "./base.astro";
 
-const pages = Array.isArray(Astro.props.pages[0]) ? Astro.props.pages : [["Pages", Astro.props.pages]];
-const headers = Astro.props.content.astro.headers.filter(header => header.depth == 1);
+const {author, authors, edit_date, no_sidebar, title} = Astro.props.content;
+let pages, headers;
+if (!no_sidebar) {
+    pages = Array.isArray(Astro.props.pages[0]) ? Astro.props.pages : [["Pages", Astro.props.pages]];
+    headers = Astro.props.content.astro.headers.filter(header => header.depth == 1);
+}
 ---
 
 <Base content={Astro.props.content}>
 <section class="section">
     <div class="columns">
-        <div class="column is-one-fifth" data-controller="sidebar">
+        {!no_sidebar && (<div class="column is-one-fifth" data-controller="sidebar">
             <div class="is-hidden-tablet">
                 <button data-action="click->sidebar#toggle" class="button is-dark">
                     <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
@@ -41,17 +45,17 @@ const headers = Astro.props.content.astro.headers.filter(header => header.depth 
                     </ul>
                 </aside>
             </div>
-        </div>
+        </div>)}
 
         <div class="content column">
             <div class="media mb-5">
                 <div class="media-content">
                     <h1 class="title">
-                        { Astro.props.content.title }
+                        {title}
                     </h1>
-                    <p class="subtitle is-6">
-                        Edited: { Astro.props.content.edit_date }
-                    </p>
+                    {edit_date && <p class="subtitle is-6">
+                        Edited: { edit_date }
+                    </p>}
                 </div>
             </div>
 
