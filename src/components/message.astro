@@ -1,5 +1,8 @@
-<article class={Astro.props.class}>
-<div class="message-body">
-<slot />
-</div>
+<article class={"message" + (Astro.props.class ? " " + Astro.props.class : "")}>
+    {Astro.props.title && <div class="message-header">
+        {Astro.props.title}
+    </div>}
+    <div class="message-body">
+        <slot />
+    </div>
 </article>

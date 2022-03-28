@@ -1,0 +1,15 @@
+---
+import Page from "./page.astro";
+
+const pages = [
+    ["Pages", Astro.fetchContent("../pages/staff/index.md")],
+    ["Teams", Astro.fetchContent("../pages/staff/{moderation,outreach}*")]
+];
+if (Astro.props.pages) {
+    pages.push(...Astro.props.pages);
+}
+---
+
+<Page content={Astro.props.content} pages={pages}>
+    <slot />
+</Page>

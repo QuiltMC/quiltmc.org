@@ -1,0 +1,62 @@
+---
+import Base from "./base.astro";
+
+const pages = Array.isArray(Astro.props.pages[0]) ? Astro.props.pages : [["Pages", Astro.props.pages]];
+const headers = Astro.props.content.astro.headers.filter(header => header.depth == 1);
+---
+
+<Base content={Astro.props.content}>
+<section class="section">
+    <div class="columns">
+        <div class="column is-one-fifth" data-controller="sidebar">
+            <div class="is-hidden-tablet">
+                <button data-action="click->sidebar#toggle" class="button is-dark">
+                    <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                    <span>Pages</span>
+                </button>
+                <br />
+                <br />
+            </div>
+
+            <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
+                <aside class="menu">
+                    {pages.map(pages => (
+                    <p class="menu-label">{pages[0]}</p>
+                    <ul class="menu-list">
+                        <!-- TODO put index.md above all the other pages -->
+                        {pages[1].map(page => (
+                        <li>
+                            <a href={page.url + "/"} class={page.url + "/" == Astro.request.url.pathname ? "is-active" :
+                                undefined}>{page.title}</a>
+                        </li>
+                        ))}
+                    </ul>
+                    ))}
+
+                    {headers.length > 0 && <p class="menu-label">Contents</p>}
+                    <ul class="menu-list">
+                        {headers.map(header => (
+                            <a href={"#" + header.slug}>{header.text}</a>
+                        ))}
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <div class="content column">
+            <div class="media mb-5">
+                <div class="media-content">
+                    <h1 class="title">
+                        { Astro.props.content.title }
+                    </h1>
+                    <p class="subtitle is-6">
+                        Edited: { Astro.props.content.edit_date }
+                    </p>
+                </div>
+            </div>
+
+            <slot />
+        </div>
+    </div>
+</section>
+</Base>

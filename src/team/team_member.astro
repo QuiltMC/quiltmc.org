@@ -1,0 +1,65 @@
+---
+const {name, discord, github, description, avatar, system_members, links} = Astro.props;
+const custom_class = Astro.props.class;
+const avatar_pixelate = Astro.props.avatar_pixelate || false;
+---
+
+<div class={"card is-team-member" + (custom_class ? (" " + custom_class) : "")}>
+    <div class="card-content">
+    {avatar && <div class="avatar">
+        <img class={avatar_pixelate ? "is-pixelated" : undefined} src={avatar} alt="Avatar">
+    </div>}
+
+    <div class="media">
+        <div class="media-content">
+        <p class="title is-5 mb-5">
+            {name ? name : ""}
+        </p>
+
+        <p class="subtitle is-6">
+            <i class="fab fa-fw fa-discord"></i>
+
+            {discord ? discord : "N/A"}
+        </p>
+
+        <p class="subtitle is-6">
+            <i class="fab fa-fw fa-github"></i>
+
+            {github ? <a href={"https://github.com/" + github}>{github}</a> : "N/A"}
+        </p>
+
+        <p class="subtitle is-6 is-links">
+            {links && links.map(link => (
+            <a href={link[1]}>
+                <i class={"fa-lg " + link[0]}></i>
+            </a>
+            ))}
+        </p>
+        </div>
+    </div>
+
+    {(description || system_members) && <div class="content">
+        {system_members && <div class="media system-member-title">
+            <div class="media-content">
+            <p class="subtitle is-6 has-text-centered">Plural System</p>
+            </div>
+        </div>
+
+        <div class={"system-members" + (description ? " mb-4" : "")}>
+            {system_members == "---" ?
+            <div class="has-tooltip-arrow" data-tooltip="Member list redacted by request ❤️">
+                <i class="fa-2xl pl-1 fas fa-box-heart"></i>
+            </div>
+            :
+            system_members.map(member => (
+                <div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={member[0]}>
+                <img src={member[1]} />
+                </div>
+            ))
+            }
+        </div>}
+
+        {description ? description : ""}
+    </div>}
+    </div>
+</div>

@@ -1,0 +1,7 @@
+---
+import Page from "./page.astro";
+---
+
+<Page content={Astro.props.content} pages={Astro.fetchContent("../pages/community/*")}>
+    <slot />
+</Page>

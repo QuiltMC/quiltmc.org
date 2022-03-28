@@ -1,24 +1,20 @@
 {
-    "name": "@example/starter",
+    "name": "quiltmc.org",
     "version": "0.0.1",
     "private": true,
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro build",
+        "build": "astro build; minifyall -d ./dist/",
         "preview": "astro preview"
     },
     "devDependencies": {
         "@creativebulma/bulma-divider": "^1.1.0",
         "@creativebulma/bulma-tooltip": "^1.2.0",
-        "astro": "^0.24.3",
+        "@josee9988/minifyall": "^1.2.2",
+        "astro": "^0.25.2",
         "bulma": "^0.9.3",
         "bulma-timeline": "^3.0.5",
-        "prismjs": "^1.27.0",
-        "sass": "^1.49.9",
-        "serialize-javascript": "^6.0.0",
-        "shiki": "^0.10.1",
-        "shorthash": "^0.0.2"
-    },
-    "packageManager": "yarn@3.2.0"
+        "sass": "^1.49.9"
+    }
 }

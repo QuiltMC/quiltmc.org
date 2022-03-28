@@ -33,7 +33,7 @@ const community_pages = Astro.fetchContent("../pages/community/*");
 
                 <div class="navbar-dropdown is-boxed">
                     {about_pages.map((page) => (
-                        <Navlink text={page.title} href={page.url} />
+                        <Navlink text={page.title} href={page.url} subpage="true" />
                     ))}
                 </div>
             </div>
@@ -50,7 +50,7 @@ const community_pages = Astro.fetchContent("../pages/community/*");
 
                 <div class="navbar-dropdown is-right is-boxed">
                     {community_pages.map((page) => (
-                        <Navlink text={page.title} href={page.url} />
+                        <Navlink text={page.title} href={page.url} subpage="true" />
                     ))}
                 </div>
             </div>
