@@ -4,7 +4,7 @@ specifiers:
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
   '@josee9988/minifyall': ^1.2.2
-  astro: ^0.25.2
+  astro: ^0.25.4
   bulma: ^0.9.3
   bulma-timeline: ^3.0.5
   sass: ^1.49.9
@@ -13,7 +13,7 @@ devDependencies:
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
   '@josee9988/minifyall': 1.2.2
-  astro: 0.25.2_sass@1.49.9
+  astro: 0.25.4_sass@1.49.9
   bulma: 0.9.3
   bulma-timeline: 3.0.5
   sass: 1.49.9
@@ -540,8 +540,8 @@ packages:
       util: 0.12.4
     dev: true
 
-  /astro/0.25.2_sass@1.49.9:
-    resolution: {integrity: sha512-jOKqCTzcaHaWZVQvrkoW8wHRhn4feYdeSfh+u7/oq7kzo5c9xUMPUTIBGk7Wwl+O7pvQIKCKZtnsU6v1xFN9/g==}
+  /astro/0.25.4_sass@1.49.9:
+    resolution: {integrity: sha512-ax2QfleG9UM/eSictu1Lo5f5w8Jy5Qfx+tpwiKKQkSAE68w7a0ow5Dx3elJYN5nKCHSJ2r3mFLjrPyHHvanciA==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
