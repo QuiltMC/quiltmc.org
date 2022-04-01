@@ -17,5 +17,5 @@
         "bulma-timeline": "^3.0.5",
         "sass": "^1.49.10"
     },
-    "packageManager": "pnpm@6.32.3"
+    "packageManager": "pnpm@6.32.4"
 }
