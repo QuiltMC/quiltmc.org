@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro build; minifyall -d ./dist/",
+        "build": "astro build && minifyall -d ./dist/",
         "preview": "astro preview"
     },
     "devDependencies": {

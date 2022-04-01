@@ -3329,7 +3329,7 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
     dependencies:
-      esbuild: 0.14.25
+      esbuild: 0.14.29
     dev: true
 
   /type-fest/0.13.1:
