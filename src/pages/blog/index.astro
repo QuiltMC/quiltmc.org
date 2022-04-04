@@ -1,0 +1,23 @@
+---
+import Default from "/src/layouts/default.astro";
+import PostInfo from "/src/components/post_info.astro";
+import {Markdown} from "astro/components";
+
+const posts = await Astro.glob("./*.md");
+posts.sort((a, b) => {
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+});
+---
+
+<Default>
+    <h1>Quilt Blog</h1>
+
+    {posts.map(post => (
+        <article class="blog-post">
+            <h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
+            <PostInfo post={post.frontmatter} />
+            <Markdown content={post.frontmatter.description} />
+            <a href={post.url}>More...</a>
+        </article>
+    ))}
+</Default>

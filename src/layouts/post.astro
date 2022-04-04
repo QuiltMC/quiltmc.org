@@ -1,0 +1,15 @@
+---
+import Default from "./default.astro";
+import PostInfo from "../components/post_info.astro";
+import {Markdown} from "astro/components";
+
+const {content} = Astro.props;
+---
+
+<Default {content}>
+    <h1>{content.title}</h1>
+    <PostInfo post={content} />
+    <br>
+    <Markdown content={content.description} />
+    <slot />
+</Default>
