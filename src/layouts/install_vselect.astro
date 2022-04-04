@@ -1,0 +1,34 @@
+---
+import Install from "./install.astro";
+const {content} = Astro.props;
+---
+
+<Install {content}>
+  <h1 class="title">Instructions for {content.launcher}</h1>
+
+  <div data-controller="version">
+      <h2 class="subtitle">Select a Minecraft version</h2>
+
+      <form>
+          <div class="field">
+              <div class="control">
+                  <div class="select">
+                      <select id="mcselect"
+                              data-version-target="mcSelect"
+                              data-action="change->version#selected_mc_version">
+                          <option>Loading...</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      </form>
+
+      <h2 class="subtitle">
+          Install Quilt for Minecraft
+          <span data-version-target="mcLabel">(loading...)</span>
+          with {content.launcher}
+      </h2>
+
+      <slot />
+  </div>
+</Install>
