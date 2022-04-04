@@ -1,7 +1,7 @@
 ---
 setup: |
-    import Message from "../components/message.astro";
-    import * as site from "../site.ts";
+  import Message from "../components/message.astro";
+  import * as site from "../site.ts";
 layout: ../layouts/hero.astro
 ---
 

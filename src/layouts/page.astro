@@ -30,8 +30,8 @@ if (!no_sidebar) {
                         <!-- TODO put index.md above all the other pages -->
                         {pages[1].map(page => (
                         <li>
-                            <a href={page.url + "/"} class={page.url + "/" == Astro.request.url.pathname ? "is-active" :
-                                undefined}>{page.title}</a>
+                            <a href={page.url + "/"} class={page.url + "/" == Astro.canonicalURL.pathname ? "is-active" :
+                                undefined}>{page.frontmatter.title}</a>
                         </li>
                         ))}
                     </ul>

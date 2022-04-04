@@ -2,8 +2,8 @@
 import Page from "./page.astro";
 
 const pages = [
-    ["Pages", Astro.fetchContent("../pages/staff/index.md")],
-    ["Teams", Astro.fetchContent("../pages/staff/{moderation,outreach}*")]
+    ["Pages", await Astro.glob("../pages/staff/index.md")],
+    ["Teams", await Astro.glob("../pages/staff/{moderation,outreach}*.md")]
 ];
 if (Astro.props.pages) {
     pages.push(...Astro.props.pages);

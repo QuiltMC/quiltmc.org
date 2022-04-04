@@ -2,7 +2,7 @@
 const {href, class, text, icon, iconalt, target} = Astro.props;
 const subpage = Astro.props.subpage || false;
 
-const is_subpage = subpage && (href == Astro.request.url.pathname || href + "/" == Astro.request.url.pathname);
+const is_subpage = subpage && (href == Astro.canonicalURL.pathname || href + "/" == Astro.canonicalURL.pathname);
 ---
 
 <a href={href} target={target} class={"navbar-item" + (is_subpage ? " is-active" : "")}>

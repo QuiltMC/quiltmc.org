@@ -3,7 +3,7 @@ import Staff from "./staff.astro";
 ---
 
 <Staff content={Astro.props.content} pages={[
-    ["Documents", Astro.fetchContent("../pages/staff/moderation/*")]
+    ["Documents", await Astro.glob("../pages/staff/moderation/*.md")]
 ]}>
     <slot />
 </Staff>

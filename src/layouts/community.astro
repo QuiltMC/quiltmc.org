@@ -2,6 +2,6 @@
 import Page from "./page.astro";
 ---
 
-<Page content={Astro.props.content} pages={Astro.fetchContent("../pages/community/*")}>
+<Page content={Astro.props.content} pages={await Astro.glob("../pages/community/*.md")}>
     <slot />
 </Page>
