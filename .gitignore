@@ -18,6 +18,3 @@ yarn-error.log*
 # Environment variables
 .env
 .env.production
-
-# Lockfile
-pnpm-lock.yaml
