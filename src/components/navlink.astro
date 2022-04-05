@@ -5,7 +5,7 @@ const subpage = Astro.props.subpage || false;
 const is_subpage = subpage && (href == Astro.canonicalURL.pathname || href + "/" == Astro.canonicalURL.pathname);
 ---
 
-<a href={href} target={target} class={"navbar-item" + (is_subpage ? " is-active" : "")}>
+<a {href} {target} class={"navbar-item" + (is_subpage ? " is-active" : "")}>
     {icon && <span class="icon"><i class={"fa-xl " + icon}></i></span>}
 
     <span>{text}</span>
