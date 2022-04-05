@@ -69,6 +69,12 @@ Additionally, the following QSL teams are looking for more members:
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
 
+### Fabric API Over QSL Maintainer
+
+Fabric API Over QSL is a re-implementation of Fabric API using QSL. As a maintainer, you will be responsible for merging changes for upstream Fabric API, ensuring that it doesn't conflict with QSL, and re-implement Fabric API features in QSL once they become available.
+
+If you're interested in taking up this role, please send a message in `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) 
+
 ## Community Team
 
 The Community Team is responsible for taking care of our community, helping it grow, and keeping it safe, welcoming and
