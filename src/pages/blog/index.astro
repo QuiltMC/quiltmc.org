@@ -16,7 +16,7 @@ posts.sort((a, b) => {
         <article class="blog-post">
             <h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
             <PostInfo post={post.frontmatter} />
-            <Markdown content={post.frontmatter.description} />
+            <p><Markdown content={post.frontmatter.description} /></p>
             <a href={post.url}>More...</a>
         </article>
     ))}

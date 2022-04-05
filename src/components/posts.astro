@@ -1,0 +1,18 @@
+---
+import PostInfo from "./post_info.astro";
+import {Markdown} from "astro/components";
+
+let posts = await Astro.glob("../pages/blog/*.md");
+posts.sort((a, b) => { // Sort by date
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+});
+posts.length = 3; // Why does this work lmao
+---
+
+{posts.map(post => (
+    <article class="blog-post with-divider">
+        <h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
+        <PostInfo post={post.frontmatter} />
+        <p><Markdown content={post.frontmatter.description} /></p>
+    </article>
+))}

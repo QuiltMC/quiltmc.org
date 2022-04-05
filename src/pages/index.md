@@ -1,6 +1,7 @@
 ---
 setup: |
   import Message from "../components/message.astro";
+  import Posts from "../components/posts.astro";
   import * as site from "../site.ts";
 layout: ../layouts/hero.astro
 ---
@@ -158,6 +159,8 @@ If none of the available openings speak to you, or you want to contribute withou
 <div class="column is-5">
 
 # Latest Posts
+
+<Posts num=3 />
 
 <div class="is-flex mt-4 is-justify-content-right">
     <a class="button is-primary" href="/blog">

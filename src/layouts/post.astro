@@ -9,7 +9,6 @@ const {content} = Astro.props;
 <Default {content}>
     <h1>{content.title}</h1>
     <PostInfo post={content} />
-    <br>
-    <Markdown content={content.description} />
+    <p><Markdown content={content.description} /></p>
     <slot />
 </Default>
