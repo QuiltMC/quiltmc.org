@@ -4,9 +4,8 @@ import PostInfo from "/src/components/post_info.astro";
 import {Markdown} from "astro/components";
 
 const posts = await Astro.glob("./*.md");
-posts.sort((a, b) => {
-    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
-});
+posts.sort((a, b) =>
+    new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
 <Default>

@@ -5,8 +5,10 @@ const pathname = Astro.canonicalURL.pathname;
 const style = Astro.props.style || "is-dark";
 const is_about = pathname.startsWith("/about");
 const about_pages = await Astro.glob("../pages/about/*.md");
+about_pages.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 const is_community = pathname.startsWith("/community");
 const community_pages = await Astro.glob("../pages/community/*.md");
+community_pages.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
 <nav class={"navbar " + style} role="navigation" aria-label="main navigation" data-controller="navbar">

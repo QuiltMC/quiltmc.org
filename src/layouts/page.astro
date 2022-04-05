@@ -2,11 +2,15 @@
 import Base from "./base.astro";
 
 const {author, authors, edit_date, no_sidebar, title} = Astro.props.content;
-let pages, headers;
+let pagesets, headers;
 if (!no_sidebar) {
-    pages = Array.isArray(Astro.props.pages[0]) ? Astro.props.pages : [["Pages", Astro.props.pages]];
+    pagesets = Array.isArray(Astro.props.pages[0]) ? Astro.props.pages : [["Pages", Astro.props.pages]];
     headers = Astro.props.content.astro.headers.filter(header => header.depth == 1);
 }
+// Sort by title instead of filename
+pagesets.forEach(pages => {
+    pages[1].sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
+});
 ---
 
 <Base content={Astro.props.content}>
@@ -24,7 +28,7 @@ if (!no_sidebar) {
 
             <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
                 <aside class="menu">
-                    {pages.map(pages => (
+                    {pagesets.map(pages => (
                     <p class="menu-label">{pages[0]}</p>
                     <ul class="menu-list">
                         <!-- TODO put index.md above all the other pages -->
