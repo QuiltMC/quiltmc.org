@@ -4,6 +4,7 @@ layout: ../layouts/page.astro
 no_sidebar: true
 title: Openings
 description: Current Openings for positions on the Quilt Staff Team
+edit_date: 5 March 2022
 ---
 
 The Quilt Project is extremely community-oriented, and that means that it needs your help to succeed. This page is a list of team openings - voluntary positions within teams that need more members.
@@ -38,16 +39,22 @@ If you'd like to join this team, please send a message in `#mappings-general` on
 
 There are several QSL teams that don't yet have any members, and this means that the parts of QSL that they are responsible for is overseen by the core QSL team instead, which isn't ideal as they already have a lot of work to do. The following teams are empty, and need members:
 
--   Block
--   Transfer
+- Block
+- Transfer
 
 Additionally, the following QSL teams are looking for more members:
 
--   Entities
--   GUI
--   Rendering
+- Entities
+- GUI
+- Rendering
 
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
+
+### Fabric API Over QSL Maintainer
+
+Fabric API Over QSL is a re-implementation of Fabric API using QSL. As a maintainer, you will be responsible for merging changes for upstream Fabric API, ensuring that it doesn't conflict with QSL, and re-implement Fabric API features in QSL once they become available.
+
+If you're interested in taking up this role, please send a message in `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
 
 ## Community Team
 
@@ -57,8 +64,7 @@ The Community Team is responsible for taking care of our community, helping it g
 
 The Events Team is responsible for organising and running community events, anything from AMAs to modding conventions. While there hasn't yet been much in the way of events, this will change as we get nearer to release, so if you think this is something you'd be good at, we'd love your help!
 
-While the Events Team isn't a Moderation position, applications go through the same system - join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. Make sure to
-include any previous experience you have with running events, either virtual or in person.
+While the Events Team isn't a Moderation position, applications go through the same system - join the [Community Discord Server](https://discord.quiltmc.org) and DM ModMail to send in your application. Make sure to include any previous experience you have with running events, either virtual or in person.
 
 ### Moderators
 

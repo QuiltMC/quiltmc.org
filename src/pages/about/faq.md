@@ -5,7 +5,7 @@ setup: |
 layout: /src/layouts/about.astro
 title: FAQ
 description: Frequently asked questions, for the burning topics that need addressing regularly.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 
 redirect_from:
     - /faq/

@@ -1,15 +1,15 @@
 ---
 setup: |
-    import Message from "/src/components/message.astro";
-    import * as site from "/src/site.ts";
+  import Message from "/src/components/message.astro";
+  import * as site from "/src/site.ts";
 layout: /src/layouts/community.astro
 title: PluralKit
 description: Learn about PluralKit, a tool we use to help plural systems to interact more comfortably on Discord.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 redirect_from:
-    - /community/tupperbox
-    - /community/tupperbox.html
-    - /community/pluralkit.html
+  - /community/tupperbox
+  - /community/tupperbox.html
+  - /community/pluralkit.html
 ---
 
 <Message>
@@ -30,8 +30,8 @@ The primary function of PluralKit is automatically proxying messages that people
 
 Even if you aren't making use of PluralKit yourself, you can still leave reactions on messages that PluralKit has proxied. The following reactions allow you to interact directly with the system that sent the message, or to look up information about it:
 
--   ❓ (`question`) -- Get a private message with information about the Discord account that sent the message, such as username, nickname, pronouns, system/member descriptions and roles.
--   🔔 (`bell`) -- Mention the Discord account that sent the proxied message, to make sure the system using it sees your reply. We advise using this sparingly, as it gets annoying and spammy quickly.
+- ❓ (`question`) -- Get a private message with information about the Discord account that sent the message, such as username, nickname, pronouns, system/member descriptions and roles.
+- 🔔 (`bell`) -- Mention the Discord account that sent the proxied message, to make sure the system using it sees your reply. We advise using this sparingly, as it gets annoying and spammy quickly.
 
 ## Moving from Tupperbox
 
@@ -79,13 +79,13 @@ For more information on plurality, feel free to browse the following resources..
 
 </Message>
 
--   [Fictive Identities](https://www.exunoplures.org/main/fictive-identities/) by Noël Dawkins
--   [Plurality for Skeptics](https://www.exunoplures.org/main/articles/skeptics/) by Em Flynn
--   [Rules of Engagement: Plural Etiquette](https://www.exunoplures.org/main/articles/rules/) by Em Flynn, Hess Sakal and Kerry Dawkins
+- [Fictive Identities](https://www.exunoplures.org/main/fictive-identities/) by Noël Dawkins
+- [Plurality for Skeptics](https://www.exunoplures.org/main/articles/skeptics/) by Em Flynn
+- [Rules of Engagement: Plural Etiquette](https://www.exunoplures.org/main/articles/rules/) by Em Flynn, Hess Sakal and Kerry Dawkins
 
 ### Other Resources
 
--   [Cerberus Plural](https://cerberusplural.com/), the plural news and media watchdog
--   [More Than One](https://morethanone.info/), a quick, easy-to-digest overview of plurality -- including information on etiquette and myths
--   [r/plural Plurality FAQ](https://www.reddit.com/r/plural/wiki/faqs)
--   [Resource Links from Plurality Resource](https://pluralityresource.org/affiliates/)
+- [Cerberus Plural](https://cerberusplural.com/), the plural news and media watchdog
+- [More Than One](https://morethanone.info/), a quick, easy-to-digest overview of plurality -- including information on etiquette and myths
+- [r/plural Plurality FAQ](https://www.reddit.com/r/plural/wiki/faqs)
+- [Resource Links from Plurality Resource](https://pluralityresource.org/affiliates/)

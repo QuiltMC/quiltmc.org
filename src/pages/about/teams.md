@@ -54,7 +54,7 @@ setup: |
 layout: /src/layouts/about.astro
 title: Team Listings
 description: Learn about Quilt's team structure, and find out who's involved.
-edit_date: March 26, 2022
+edit_date: 26 March 2022
 ---
 
 Quilt's governance is split up into many independent teams, some of which have their own subteams and/or leadership structure. Teams are largely responsible for their own management, taking an internally democratic approach towards restructuring and elections.

@@ -4,7 +4,7 @@ setup: |
 layout: /src/layouts/about.astro
 title: FAQ (Developers)
 description: Frequently asked questions, but for developers.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 ---
 
 <Message>

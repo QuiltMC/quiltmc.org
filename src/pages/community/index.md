@@ -1,19 +1,19 @@
 ---
 setup: |
-    import * as site from "/src/site.ts";
+  import * as site from "/src/site.ts";
 layout: /src/layouts/community.astro
 title: Community
 description: Learn about Quilt's community spaces, and what we expect of our users.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 ---
 
 You can find the Quilt in the following places.
 
 <!-- TODO change these links back to markdown syntax after Astro devs fix variables in markdown links -->
 
--   Our <a href={site.discord_community}>community Discord</a>
--   Our <a href={site.discord_toolchain}>toolchain Discord</a>
--   Our <a href={site.github_link}>GitHub organization</a>
+- Our <a href={site.discord_community}>community Discord</a>
+- Our <a href={site.discord_toolchain}>toolchain Discord</a>
+- Our <a href={site.github_link}>GitHub organization</a>
 
 In all of these places you are expected to follow our [rules](/community/rules/)
 and [Code of Conduct](/community/code-of-conduct/).
@@ -22,10 +22,10 @@ and [Code of Conduct](/community/code-of-conduct/).
 
 Quilt's official community spaces exist to address issues in the wider modding community as much as the rest of the project does. While it's certainly true that no large project should be without official community spaces, we had several specific intentions in mind while creating it:
 
--   To build inclusivity and diversity into policy from the beginning, creating a safe community for minority groups as best we can
--   To create a plural-friendly space by including tools like [PluralKit](/community/pluralkit/) from a very early stage
--   To get the community involved in community and policy decisions, allowing their voices to be heard and using their input to shape our spaces
--   To act with transparency where possible and reasonable without trying to hide our actions, and explaining moderation decisions when asked about them
--   To provide room for defensive moderation tools, and investigative moderation approaches -- allowing our staff to react to issues in the wider modding community, and solve problems before they're apparent to the userbase
+- To build inclusivity and diversity into policy from the beginning, creating a safe community for minority groups as best we can
+- To create a plural-friendly space by including tools like [PluralKit](/community/pluralkit/) from a very early stage
+- To get the community involved in community and policy decisions, allowing their voices to be heard and using their input to shape our spaces
+- To act with transparency where possible and reasonable without trying to hide our actions, and explaining moderation decisions when asked about them
+- To provide room for defensive moderation tools, and investigative moderation approaches -- allowing our staff to react to issues in the wider modding community, and solve problems before they're apparent to the userbase
 
 We think we've largely succeeded at this and our community has been excellent at correcting us when we make mistakes, holding us accountable, and helping us to understand issues that we otherwise have no direct experience with -- whether that's through lack of information, or just being privileged enough to never have encountered them directly. We always encourage our community members to contact us whenever they notice something untoward -- if you've been doing that, then thank you!

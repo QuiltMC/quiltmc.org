@@ -1,12 +1,12 @@
 ---
 setup: |
-    import * as site from "/src/site.ts";
+  import * as site from "/src/site.ts";
 layout: /src/layouts/community.astro
 title: Code of Conduct
 description: Quilt's Code of Conduct, for all community interactions.
 redirect_from:
-    - /community/code-of-conduct.html
-edit_date: February 28, 2022
+  - /community/code-of-conduct.html
+edit_date: 28 February 2022
 ---
 
 Like many communities, our policies are based on a Code of Conduct. Please make sure you read it before making use of our spaces, as it provides a set of behavioural guidelines that we expect everyone to adhere to.
@@ -35,25 +35,25 @@ Please take into account that online communities bring people together from many
 
 Examples of behavior that contributes to a positive environment for our community include:
 
--   Demonstrating empathy, patience and kindness toward other people
--   Being respectful of differing opinions, viewpoints, and experiences
--   Giving and gracefully accepting constructive feedback
--   Respecting others' personal choices, even when they don't line up with yours
--   Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
--   Focusing on what is best not just for us as individuals, but for the overall community
+- Demonstrating empathy, patience and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and gracefully accepting constructive feedback
+- Respecting others' personal choices, even when they don't line up with yours
+- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
+- Focusing on what is best not just for us as individuals, but for the overall community
 
 Examples of unacceptable behavior include:
 
--   The use of sexualized language or imagery, and sexual attention or advances of any kind
--   Trolling, insulting or derogatory comments
--   Personal or political attacks
--   Threats of violence, or violent acts towards others
--   Public or private harassment
--   Intentionally dead-naming or misgendering others
--   Publishing others' private information, such as a physical or email address, without their explicit permission ("doxxing")
--   Gatekeeping others' access to mental health or accessibility tools
--   Advocating for, or encouraging, any unacceptable forms of behaviour
--   Other conduct which could reasonably be considered inappropriate
+- The use of sexualized language or imagery, and sexual attention or advances of any kind
+- Trolling, insulting or derogatory comments
+- Personal or political attacks
+- Threats of violence, or violent acts towards others
+- Public or private harassment
+- Intentionally dead-naming or misgendering others
+- Publishing others' private information, such as a physical or email address, without their explicit permission ("doxxing")
+- Gatekeeping others' access to mental health or accessibility tools
+- Advocating for, or encouraging, any unacceptable forms of behaviour
+- Other conduct which could reasonably be considered inappropriate
 
 ## Enforcement Responsibilities
 

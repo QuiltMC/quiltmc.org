@@ -2,7 +2,7 @@
 title: Timeline
 layout: /src/layouts/about.astro
 description: Quilt's official timeline -- from beginning to today.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 ---
 
 <div class="timeline">

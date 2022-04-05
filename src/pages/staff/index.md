@@ -2,7 +2,7 @@
 layout: /src/layouts/staff.astro
 title: Staff Resources
 description: Documents to help our staff members do their jobs.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 ---
 
 This section of the site contains staff guidance documents, split up by the specific teams that they're intended for. They act as a set of extra guidelines that staff members can use to guide their work, which helps to keep things efficient and consistent.

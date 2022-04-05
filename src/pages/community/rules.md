@@ -1,13 +1,13 @@
 ---
 setup: |
-    import Message from "/src/components/message.astro";
-    import * as site from "/src/site.ts";
+  import Message from "/src/components/message.astro";
+  import * as site from "/src/site.ts";
 layout: /src/layouts/community.astro
 title: Rules
 description: Quilt's core rules, which build upon the Code of Conduct to provide a set of concrete guidelines for behaviour.
-edit_date: February 28, 2022
+edit_date: 28 February 2022
 redirect_from:
-    - /community/rules.html
+  - /community/rules.html
 ---
 
 We expect everyone that makes use of any Quilt community spaces to adhere to the following rules. If you have any questions or suggestions, please feel free to contact a member of the community team or ask your question in the `#discord-meta` channel.
@@ -42,12 +42,12 @@ Essentially, please take requests from community team members seriously and list
 
 While anyone may make use of the Quilt toolchain in accordance with the licenses applied to each project, all projects developed or promoted **in all Quilt community spaces** must meet the following criteria:
 
--   Projects must not be malicious -- which includes (but is not limited to) malware, mods that include backdoors, mods that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people or groups of people (for example, by automatically kicking them from servers with the mod installed)
--   Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code and project assets posted for any purpose
--   Projects must not break laws, including copyright laws -- this includes piracy tools (including mods that use projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere to the licenses of other projects to the best of their ability
--   Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, Microsoft, Discord (including their ban on exploits and hacks) and any other community platforms we use
--   Projects must not hide their functionality and should be upfront with what they do -- however, projects with unfinished documentation or benign "Easter eggs" do not violate this rule
--   Projects must not make use of exploits in order to provide their functionality -- this is required by the [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic thing to do
+- Projects must not be malicious -- which includes (but is not limited to) malware, mods that include backdoors, mods that modify Quilt in an attempt to hide themselves from servers they connect to, or mods that harass specific people or groups of people (for example, by automatically kicking them from servers with the mod installed)
+- Projects must not be sexualised, hateful or otherwise inappropriate in nature, and this also applies to all code and project assets posted for any purpose
+- Projects must not break laws, including copyright laws -- this includes piracy tools (including mods that use projects like `youtube-dl` for in-game music streaming) and hacked clients, as well as projects that fail to adhere to the licenses of other projects to the best of their ability
+- Projects must not break the Terms of Service or EULA of any organisation, including (but not limited to) Mojang, Microsoft, Discord (including their ban on exploits and hacks) and any other community platforms we use
+- Projects must not hide their functionality and should be upfront with what they do -- however, projects with unfinished documentation or benign "Easter eggs" do not violate this rule
+- Projects must not make use of exploits in order to provide their functionality -- this is required by the [Discord Terms of Service](https://discord.com/terms) (among others), and is widely considered to be a problematic thing to do
 
 #### 6) Don't spam, and don't advertise outside the showcase channels
 
@@ -65,10 +65,10 @@ Additionally, when entering a channel with an active discussion, please be mindf
 
 If you're working on a mod and asking for help in one of our many help channels, **make sure you specify what mappings you're using**. We recommend creating a thread, and putting the mappings in the thread name -- you can use these abbreviations to ensure everyone's on the same page:
 
--   `MCP` -- MCP/Forge mappings
--   `MM` -- Mojang Mappings
--   `QM` -- Quilt Mappings (The default for Quilt)
--   `YM` -- Yarn Mappings (The default for Fabric)
+- `MCP` -- MCP/Forge mappings
+- `MM` -- Mojang Mappings
+- `QM` -- Quilt Mappings (The default for Quilt)
+- `YM` -- Yarn Mappings (The default for Fabric)
 
 An example thread title could be `YM | Entity pathing` or `[MM] Negative Enchants`. That said, we understand that quick questions may be more suited to direct discussion in the channels -- in those cases, **make sure you're clear about which mappings you're using**. You can also make use of the `:mcp:`, `:mm:`, `:qm:` and `:ym:` (or `:yarn:`) emoji if you'd like to.
 
@@ -114,10 +114,10 @@ If your report concerns a community team member, please send a private message d
 
 Our community team members have multiple tools at their disposal when dealing with those who violate the rules, including the following:
 
--   Verbally/textually warning or correcting users
--   Forcibly changing a user's nickname
--   Temporarily muting users
--   Temporarily or permanently removing users from the community (kicking, tempbanning, banning)
+- Verbally/textually warning or correcting users
+- Forcibly changing a user's nickname
+- Temporarily muting users
+- Temporarily or permanently removing users from the community (kicking, tempbanning, banning)
 
 Each situation is unique, and will be assessed on a case-by-case basis. All actions taken in response to rule-breaking behaviour is done at the discretion of the community team member in question -- however, we will take feedback from the community if its members are not happy with how things were resolved.
 
