@@ -362,4 +362,5 @@ This team is responsible for handling triage tasks for the following projects:
     {% include team/RTTV.liquid %}
     {% include team/supersaiyansubtlety.liquid %}
     {% include team/Sylv.liquid %}
+    {% include team/Zoe.liquid %}
 </div>
