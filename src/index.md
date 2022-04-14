@@ -42,7 +42,7 @@ We're aiming for the 20th of April for Quilt's first beta release. For more info
 {% columns mb-5 mt-2 %}
 {% column %}
 
-{% admonition /primary is-fullheight mr-1 %}
+{% admonition /primary is-fullheight %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -62,7 +62,7 @@ exists for your needs** -- not in spite of them.
 
 {% column %}
 
-{% admonition /link has-text-left is-fullheight ml-1 mr-1 %}
+{% admonition /link has-text-left is-fullheight %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
@@ -81,7 +81,7 @@ automatically download the Quilt libraries needed to run your mods.
 {% endcolumn %}
 
 {% column %}
-{% admonition /success has-text-left is-fullheight ml-1 %}
+{% admonition /success has-text-left is-fullheight %}
 
 <h2 class="has-text-centered">
   <span class="icon-text">
