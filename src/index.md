@@ -3,7 +3,7 @@ layout: hero-content
 ---
 
 {% columns is-centered mb-5 %}
-{% column is-6 mt-2 %}
+{% column is-6 %}
 
 # The Quilt Project
 
