@@ -1,27 +1,20 @@
 ---
-layout: install-vselect
-title: Install Quilt in MultiMC
-launcher: MultiMC
+layout: install
+title: "Install: MultiMC"
 permalink: /install/multimc/
-js: true
 ---
 
-<img class="logo shadow right" style="border-radius: 12px;"
-     alt="MultiMC Logo" src="/assets/img/launchers/multimc.svg" />
+# MultiMC <a href="https://multimc.org" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-For MultiMC, we provide an instance with Quilt pre-installed which you can
-import into MultiMC. Follow the steps below to install it.
+### Status: Work In Progress
 
-1. Open MultiMC and click on "Add Instance" in the top left.
-2. In the window that appears, click on "Import from zip".
-3. Copy and paste the URL below into the "local file or link to a direct
-   download" field.
+MultiMC does not currently support Quilt, but a member of the community has 
+[submitted a pull request](https://github.com/MultiMC/Launcher/pull/3760) that adds Quilt support. If you're 
+interested in seeing Quilt support in GDLauncher, feel free to take a look at that PR.
 
-<div class="clear"></div>
+# Manual Installation
 
-<div data-version-target="snippet">
-{% highlight plaintext %}
-https://quiltmc.org/multimc/quilt_mc-{minecraft_version}_loader-{loader_version}.zip
-{% endhighlight %}
-</div>
-
+While it is technically possible to add Quilt to any MultiMC instance manually, it's a somewhat technical process that
+involves adding a JSON file to your instance manually. For that reason, we're not publishing instructions on how to do 
+that here &mdash; however, we are working on automatically generating MultiMC instances you can import to easily get 
+set up with Quilt.

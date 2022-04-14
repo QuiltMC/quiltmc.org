@@ -27,6 +27,20 @@ article.with-divider.blog-post:not(:last-child) {
   border-bottom: 1px solid darken($text, 40%);
 }
 
+@media screen and (min-width: 769px) {
+  .is-sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: scroll;
+  }
+}
+
 .grid-picker {
   display: flex;
   flex-direction: row;
@@ -44,16 +58,43 @@ article.with-divider.blog-post:not(:last-child) {
   }
 }
 
-@media screen and (min-width: 769px) {
-  .is-sticky {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: sticky;
+.notification.is-installer-button {
+  height: 12rem;
+  width: 12rem;
 
-    top: 1rem;
-    max-height: calc(100vh - 2rem);
-    overflow-y: scroll;
+  margin: 1rem;
+  padding: 1rem;
+
+  &:hover, &:active {
+    background-color: darken($dark, 5%);
+  }
+
+  div {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    width: 100%;
+    height: 100%;
+
+    p {
+      grid-row: 1;
+      grid-column: 1;
+
+      justify-self: center;
+      width: 10rem;
+      height: 3.2rem;
+    }
+
+    img {
+      grid-row: 2;
+      grid-column: 1;
+
+      margin-bottom: 2rem;
+
+      justify-self: center;
+      width: 10rem;
+    }
   }
 }

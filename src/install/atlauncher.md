@@ -1,25 +1,21 @@
 ---
-layout: install-vselect
-title: Install Quilt in ATLauncher
-launcher: ATLauncher
+layout: install
+title: "Install: ATLauncher"
 permalink: /install/atlauncher/
-js: true
 ---
 
-<img class="logo fshadow right" alt="ATLauncher Logo" src="/assets/img/launchers/atlauncher.svg" />
+# ATLauncher <a href="https://atlauncher.com" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+ATLauncher is a simple, easy-to-use launcher, built around the concept of building game instances from "packs". To set 
+up your own Quilt instance, simply follow these steps:
 
-<div class="clear"></div>
+1. Download and install ATLauncher from [their website](https://atlauncher.com)
+2. Open ATLauncher and click on the **Vanilla Packs** tab on the right side
+3. Fill out the **Instance Name** and **Instance Description** boxes as required
+4. Pick the version of Minecraft you'd like to use for your instance
+5. Pick **Quilt** from the list of loaders below the Minecraft versions section
+6. Select the Quilt Loader version you'd like to use
+7. Click **Create Instance** to create your instance
 
-<div data-version-target="snippet">
-{% highlight plaintext %}
-<loader type="quilt" yarn="{yarn_version}" loader="{loader_version}"/>
-{% endhighlight %}
-</div>
-
+That's all there is to it! You can find your new instance in the **Instances** tab on the right side of the ATLauncher
+window.

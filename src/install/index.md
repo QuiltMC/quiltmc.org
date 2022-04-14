@@ -1,34 +1,42 @@
 ---
-layout: install
-title: Install
+layout: install 
+title: "Install: Minecraft Launcher"
 permalink: /install/
-jarurl:
-exeurl:
 ---
 
-# Instructions for Minecraft Launcher
+# Minecraft Launcher <a href="https://www.minecraft.net/en-us/download" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-<img class="logo right fshadow" alt="Minecraft Logo" src="/assets/img/launchers/minecraft.png" />
+First, download the Quilt Installer. Don't worry about the Minecraft version yet.
 
-First, download the Quilt Installer. Don't worry about Minecraft version yet.
+<div class="button-grid">
+<a href="#" class="button primary">Universal (.jar)</a>
+<a href="#" class="button">Windows (.exe, 64-bit)</a>
+</div>
 
-<a href="{{ page.jarurl }}" class="button primary">Universal Download (.jar)</a>
-<a href="{{ pakge.exeurl }}" class="button">Windows Download (.exe)</a>
+Before you run the installer, make sure to close the Minecraft Launcher if you have it opened.
 
-Before you run the installer, make sure to close the Minecraft Launcher if you have it opened. 
+Then, run the installer and select the version of Minecraft you wish to install Quilt for. If you are installing for a
+snapshot version, you may have to select the "Show snapshots" box.
 
-Then, run the installer and select the version of Minecraft you wish to install Quilt for. If you are installing for a snapshot version, you may have to select the "Show snapshots" box.
+Click "Install", and Quilt Loader will be installed.
 
-Click "Install", and Quilt Loader will be installed. 
-
-If you left the "Create profile" box checked, when you open your Minecraft Launcher, there should be a new installation for Quilt. Note that you may need to go to the "Installations" tab in your Minecraft Launcher and on the top right select "Modded" versions in order to be able to see it. 
+If you left the "Create profile" box checked, when you open your Minecraft Launcher, there should be a new installation
+for Quilt. Note that you may need to go to the "Installations" tab in your Minecraft Launcher and on the top right
+select "Modded" versions in order to be able to see it.
 
 ## Which should I use?
-#### Universal (.jar)
-The Universal (.jar) download will work on any operating system, however you must have Java installed in order to use it.
 
-#### Windows (.exe)
-The Windows (.exe) download will try to detect and use the Java installation that Minecraft: Java Edition uses.
+### Universal (.jar)
 
-Please note that the it may show a SmartScreen warning message about an "Unknown publisher". Unfortunately, we cannot currently do anything about
-this. If it makes you feel uncomfortable, use the Universal (.jar) option or try another launcher such as MultiMC.
+The Universal (.jar) download will work on any operating system, however you must have Java installed in order to use
+it.
+
+### Windows (.exe)
+
+The Windows (.exe) download will try to detect and use the Java installation that Minecraft: Java Edition uses. However,
+it's only designed for use on 64-bit versions of Windows - if you're using a 32-bit version of Windows, use the 
+Universal (.jar) option instead.
+
+Please note that you may be shown a SmartScreen warning message about an "Unknown publisher". Unfortunately, we cannot
+currently do anything about this. If it makes you feel uncomfortable, use the Universal (.jar) option, or try another
+launcher.

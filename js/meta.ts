@@ -10,9 +10,11 @@ export async function load_game_versions(): Promise<GameVersion[]> {
     const data = await response.json()
 
     const vsns: GameVersion[] = []
+
     for (const v of data) {
         vsns.push(new GameVersion(v.version, v.stable, vsns))
     }
+
     return vsns
 }
 
@@ -32,11 +34,12 @@ export class GameVersion {
 
     // This does lazy loading of the data for this game version. Will load once
     // from the meta server and then cache for subsequent calls.
-    async get_data(need_yarn = false): Promise<VersionData> {
+    async get_data(needYarn = false): Promise<VersionData> {
         if (this.versionData != null) {
             return this.versionData
         } else {
-            await this.load_data(need_yarn)
+            await this.load_data(needYarn)
+
             return this.versionData
         }
     }
@@ -45,35 +48,45 @@ export class GameVersion {
     async get_loader_versions(): Promise<LoaderVersion[]> {
         if (this.loaderVsns != null) { return this.loaderVsns; }
 
-        const loaders_r = await fetch(META_LOADER + this.name)
-        const loaders = await loaders_r.json()
+        const result = await fetch(META_LOADER + this.name)
+        const loaders = await result.json()
 
-        let list = []
+        const list = []
+
         for (let data of loaders) {
             data = data.loader
+
             list.push(new LoaderVersion(data.version, data.build, data.maven))
         }
+
         this.loaderVsns = list
+
         return this.loaderVsns
     }
 
     // Does the actual loading of data from the server.
-    async load_data(need_yarn = false): Promise<void> {
+    async load_data(needYarn = false): Promise<void> {
         let yarn
-        if (need_yarn) {
-            const yarn_r = await fetch(META_YARN + this.name)
-            if (yarn_r.status == 404) { throw Error("No yarn for this version.") }
-            const yarn_json = await yarn_r.json()
-            if (yarn_json.length < 1) { throw Error("No yarn for this version.") }
-            yarn = yarn_json[0]
+
+        if (needYarn) {
+            const result = await fetch(META_YARN + this.name)
+
+            if (result.status === 404) { throw Error("No yarn for this version.") }
+
+            const yarnJson = await result.json()
+
+            if (yarnJson.length < 1) { throw Error("No yarn for this version.") }
+
+            yarn = yarnJson[0]
         } else {
             yarn = { version: "No yarn for this version." }
         }
 
-        const loader_r = await this.get_loader_versions()
-        const loader = loader_r[0]
+        const loaderResult = await this.get_loader_versions()
+        const loader = loaderResult[0]
 
         let mavenStr = "net.fabricmc:fabric:"
+
         for (const vi of this.vsnList) {
             if (vi.name === "1.14") {
                 mavenStr = "net.fabricmc.fabric-api:fabric-api:"
@@ -89,6 +102,7 @@ export class GameVersion {
             yarn_version_urlenc: encodeURIComponent(yarn.version),
             loader_version: loader.version,
             loader_version_urlenc: encodeURIComponent(loader.version),
+
             // TODO: Load API version
             api_version: `&ltapi version todo&gt;`,
             maven: mavenStr,

@@ -2,64 +2,92 @@
 layout: default
 ---
 
+<div class="columns">
+    <div class="column is-5">
+        <div class="has-text-centered content mb-0 pb-0">
+            <h1 class="mb-0">Direct Installation</h1>
+        </div>
 
-{% columns is-centered %}
-{% column is-10 %}
+        <div class="grid-picker">
+            <a class="notification is-dark is-installer-button" href="/install/">
+                <div>
+                    <p class="subtitle has-text-centered">Minecraft Launcher</p>
 
-<h1>Install Quilt</h1>
-<p>Select the launcher you use:</p>
+                    <img src="/assets/img/launchers/minecraft.png" alt="Minecraft logo" />
+                </div>
+            </a>
 
-<div class="grid-picker">
-    <a class="notification is-primary" href="/install/">
-        <p class="subtitle has-text-centered">Mojang</p>
+            <a class="notification is-dark is-installer-button" href="/install/server">
+                <div>
+                    <p class="subtitle has-text-centered">Server</p>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/minecraft.png" />
-        </figure>
-    </a>
+                    <img src="/assets/img/launchers/server.svg" alt="Java logo" />
+                </div>
+            </a>
+        </div>
 
-    <a class="notification is-dark" href="/install/server">
-        <p class="subtitle has-text-centered">Server</p>
+        <div class="has-text-centered content mb-0 pb-0">
+            <h1 class="mb-0">Launchers</h1>
+        </div>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/minecraft.png" />
-        </figure>
-    </a>
+        <div class="grid-picker">
+            <a class="notification is-dark is-installer-button" href="/install/atlauncher">
+                <div>
+                    <p class="subtitle has-text-centered">ATLauncher</p>
 
-    <a class="notification is-dark" href="/install/multimc">
-        <p class="subtitle has-text-centered">MultiMC</p>
+                    <img src="/assets/img/launchers/atlauncher.svg" alt="ATLauncher logo" />
+                </div>
+            </a>
+        </div>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/multimc.svg" />
-        </figure>
-    </a>
+        <div class="has-text-centered content mb-0 pb-0">
+            <h1>Awaiting Support</h1>
 
-    <a class="notification is-dark" href="/install/atlauncher">
-        <p class="subtitle has-text-centered">ATLauncher</p>
+            <div class="message is-primary">
+                <div class="message-body has-text-left">
+                    Launchers in this list don't currently support Quilt &mdash; but someone has asked them to, or
+                    they're already working on it. You can click on them to find out more about how they're doing
+                    &mdash; or how to manually install Quilt with them, where possible.
+                </div>
+            </div>
+        </div>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/atlauncher.svg" />
-        </figure>
-    </a>
+        <div class="grid-picker">
+            <a class="notification is-dark is-installer-button" href="/install/curseforge">
+                <div>
+                    <p class="subtitle has-text-centered">CurseForge</p>
 
-    <a class="notification is-dark" href="/install/mcupdater">
-        <p class="subtitle has-text-centered">MCUpdater</p>
+                    <img src="/assets/img/launchers/curseforge.svg" alt="CurseForge logo" />
+                </div>
+            </a>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/mcupdater.png" />
-        </figure>
-    </a>
+            <a class="notification is-dark is-installer-button" href="/install/gdlauncher">
+                <div>
+                    <p class="subtitle has-text-centered">GDLauncher</p>
 
-    <a class="notification is-dark" href="/install/technic">
-        <p class="subtitle has-text-centered">Technic</p>
+                    <img src="/assets/img/launchers/gdlauncher.webp" alt="GDLauncher logo" />
+                </div>
+            </a>
 
-        <figure class="image is-centered">
-            <img src="/assets/img/launchers/technic.svg" />
-        </figure>
-    </a>
+            <a class="notification is-dark is-installer-button" href="/install/multimc">
+                <div>
+                    <p class="subtitle has-text-centered">MultiMC</p>
+
+                    <img src="/assets/img/launchers/multimc.svg" alt="MultiMC logo" />
+                </div>
+            </a>
+
+            <a class="notification is-dark is-installer-button" href="/install/polymc">
+                <div>
+                    <p class="subtitle has-text-centered">PolyMC</p>
+
+                    <img src="/assets/img/launchers/polymc.svg" alt="PolyMC logo" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="column is-7">
+        {{ content }}
+    </div>
 </div>
-
-{{ content }}
-
-{% endcolumn %}
-{% endcolumns %}
