@@ -1,0 +1,12 @@
+hr {
+  background-color: $grey-dark;
+  border-color: $grey-dark;
+}
+
+.notification {
+  background-color: lighten($dark, 10%);
+}
+
+a.notification {
+  color: white;
+}

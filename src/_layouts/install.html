@@ -3,91 +3,49 @@ layout: default
 ---
 
 <div class="columns">
-    <div class="column is-5">
-        <div class="has-text-centered content mb-0 pb-0">
-            <h1 class="mb-0">Direct Installation</h1>
-        </div>
-
-        <div class="grid-picker">
-            <a class="notification is-dark is-installer-button" href="/install/">
-                <div>
-                    <p class="subtitle has-text-centered">Minecraft Launcher</p>
-
-                    <img src="/assets/img/launchers/minecraft.png" alt="Minecraft logo" />
-                </div>
+    <div class="column is-5" data-controller="sidebar">
+        <div class="is-hidden-tablet">
+            <a class="button is-link" href="/install">
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                <span>Back to list</span>
             </a>
 
-            <a class="notification is-dark is-installer-button" href="/install/server">
-                <div>
-                    <p class="subtitle has-text-centered">Server</p>
+            <button data-action="click->sidebar#toggle" class="button is-primary">
+                <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+                <span>Install Options</span>
+            </button>
 
-                    <img src="/assets/img/launchers/server.svg" alt="Java logo" />
-                </div>
+            <br/>
+            <br/>
+        </div>
+
+        <div class="is-hidden-mobile" data-sidebar-target="sidebar" data-scroll-to-top="true">
+            <a class="is-hidden-mobile button is-link mb-2" href="/install">
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                <span>Back to list</span>
             </a>
-        </div>
 
-        <div class="has-text-centered content mb-0 pb-0">
-            <h1 class="mb-0">Launchers</h1>
-        </div>
-
-        <div class="grid-picker">
-            <a class="notification is-dark is-installer-button" href="/install/atlauncher">
-                <div>
-                    <p class="subtitle has-text-centered">ATLauncher</p>
-
-                    <img src="/assets/img/launchers/atlauncher.svg" alt="ATLauncher logo" />
-                </div>
-            </a>
-        </div>
-
-        <div class="has-text-centered content mb-0 pb-0">
-            <h1>Awaiting Support</h1>
-
-            <div class="message is-primary">
-                <div class="message-body has-text-left">
-                    Launchers in this list don't currently support Quilt &mdash; but someone has asked them to, or
-                    they're already working on it. You can click on them to find out more about how they're doing
-                    &mdash; or how to manually install Quilt with them, where possible.
-                </div>
+            <div class="grid-picker mb-0">
+                {% include install/main.liquid %}
             </div>
-        </div>
 
-        <div class="grid-picker">
-            <a class="notification is-dark is-installer-button" href="/install/curseforge">
-                <div>
-                    <p class="subtitle has-text-centered">CurseForge</p>
+            <hr class="my-0" />
 
-                    <img src="/assets/img/launchers/curseforge.svg" alt="CurseForge logo" />
-                </div>
-            </a>
+            <div class="grid-picker mb-0">
+                {% include install/launchers.liquid %}
+            </div>
 
-            <a class="notification is-dark is-installer-button" href="/install/gdlauncher">
-                <div>
-                    <p class="subtitle has-text-centered">GDLauncher</p>
+            <hr class="my-0" />
 
-                    <img src="/assets/img/launchers/gdlauncher.webp" alt="GDLauncher logo" />
-                </div>
-            </a>
+            <div class="grid-picker">
+                {% include install/awaiting.liquid %}
+            </div>
 
-            <a class="notification is-dark is-installer-button" href="/install/multimc">
-                <div>
-                    <p class="subtitle has-text-centered">MultiMC</p>
-
-                    <img src="/assets/img/launchers/multimc.svg" alt="MultiMC logo" />
-                </div>
-            </a>
-
-            <a class="notification is-dark is-installer-button" href="/install/polymc">
-                <div>
-                    <p class="subtitle has-text-centered">PolyMC</p>
-
-                    <img src="/assets/img/launchers/polymc.svg" alt="PolyMC logo" />
-                </div>
-            </a>
+            <hr class="is-hidden-desktop is-hidden-tablet my-0" />
         </div>
     </div>
 
-    <div class="column is-7">
+    <div class="column">
         {{ content }}
     </div>
 </div>

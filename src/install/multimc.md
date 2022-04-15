@@ -10,11 +10,11 @@ permalink: /install/multimc/
 
 MultiMC does not currently support Quilt, but a member of the community has 
 [submitted a pull request](https://github.com/MultiMC/Launcher/pull/3760) that adds Quilt support. If you're 
-interested in seeing Quilt support in GDLauncher, feel free to take a look at that PR.
+interested in seeing Quilt support in MultiMC, feel free to take a look at that PR.
 
 # Manual Installation
 
 While it is technically possible to add Quilt to any MultiMC instance manually, it's a somewhat technical process that
-involves adding a JSON file to your instance manually. For that reason, we're not publishing instructions on how to do 
+involves writing your own JSON component definition. For that reason, we're not publishing instructions on how to do 
 that here &mdash; however, we are working on automatically generating MultiMC instances you can import to easily get 
 set up with Quilt.

@@ -1,7 +1,7 @@
 ---
 layout: install 
 title: "Install: Minecraft Launcher"
-permalink: /install/
+permalink: /install/client
 ---
 
 # Minecraft Launcher <a href="https://www.minecraft.net/en-us/download" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>

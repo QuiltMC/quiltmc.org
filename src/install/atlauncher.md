@@ -17,5 +17,4 @@ up your own Quilt instance, simply follow these steps:
 6. Select the Quilt Loader version you'd like to use
 7. Click **Create Instance** to create your instance
 
-That's all there is to it! You can find your new instance in the **Instances** tab on the right side of the ATLauncher
-window.
+That's all there is to it! You can find your new instance in the **Instances** tab on the right side of the window.
