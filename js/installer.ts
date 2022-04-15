@@ -3,11 +3,8 @@ const MAVEN_METADATA_URL = INSTALLER_URL_BASE + "maven-metadata.xml"
 
 const NATIVE_INSTALLER_URL_BASE = "https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer-native-bootstrap/"
 
-const JAR_DOWNLOAD_TEMPLATE = INSTALLER_URL_BASE + "{VERSION}/quilt-installer-{VERSION}.jar"
-const NATIVE_DOWNLOAD_TEMPLATE = NATIVE_INSTALLER_URL_BASE + "{PLATFORM}-{ARCH}/{VERSION}/{PLATFORM}-{ARCH}-{VERSION}.{EXT}"
-
 // Get all possible installer versions from the Maven
-export async function getVersions(): Promise<string []> {
+export async function getInstallerVersions(): Promise<string []> {
     return fetch(MAVEN_METADATA_URL)
         .then(response => response.text())
         .then(str => new DOMParser().parseFromString(str, "application/xml"))
@@ -18,7 +15,7 @@ export async function getVersions(): Promise<string []> {
 }
 
 // Get the latest installer version from the Maven
-export async function getLatestVersion(): Promise<string> {
+export async function getLatestInstallerVersion(): Promise<string> {
     return fetch(MAVEN_METADATA_URL)
         .then(response => response.text())
         .then(str => new DOMParser().parseFromString(str, "application/xml"))
@@ -27,13 +24,13 @@ export async function getLatestVersion(): Promise<string> {
 }
 
 // Given a specific version, platform and architecture, construct the corresponding direct download URL
-export function getDownloadUrl(
+export function getInstallerDownloadUrl(
     version: string,
     platform: PLATFORM,
     arch: ARCH = ARCH.NONE
 ): string {
     if (platform === PLATFORM.JAR) {
-        return JAR_DOWNLOAD_TEMPLATE.replace("{VERSION}", version)
+        return INSTALLER_URL_BASE + `${version}/quilt-installer-${version}.jar`
     }
 
     let ext: EXT
@@ -47,11 +44,7 @@ export function getDownloadUrl(
             throw Error("Platform not configured: " + platform)
     }
 
-    return NATIVE_DOWNLOAD_TEMPLATE
-        .replace("{PLATFORM}", platform)
-        .replace("{ARCH}", arch)
-        .replace("{VERSION}", version)
-        .replace("{EXT}", ext)
+    return NATIVE_INSTALLER_URL_BASE + `${platform}-${arch}/${version}/${platform}-${arch}-${version}.${ext}`
 }
 
 export enum PLATFORM {

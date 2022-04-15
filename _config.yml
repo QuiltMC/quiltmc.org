@@ -96,31 +96,11 @@ defaults:
       seo:
         type: BlogPosting
 
-  -
-    scope:
-      path: ""
-      type: "wiki"
-    values:
-      layout: "wiki-page"
-
   # Mark pages private until full launch
 
   -
     scope:
-      path: "install/*"
-    values:
-      private: true
-
-  -
-    scope:
       path: "dev/*"
-    values:
-      private: true
-
-  -
-    scope:
-      path: ""
-      type: "wiki"
     values:
       private: true
 

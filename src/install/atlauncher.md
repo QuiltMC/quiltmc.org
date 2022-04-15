@@ -6,6 +6,25 @@ permalink: /install/atlauncher/
 
 # ATLauncher <a href="https://atlauncher.com" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
+{% admonition /danger %}
+Quilt support is included with ATLauncher's stable builds, but is not currently enabled for everyone. To do so, you'll
+need to enable it yourself. To avoid adding to the ATLauncher project's support burden, we're not going to detail
+exactly how to enable it early -- but if you know what you're doing, the following JSON may be of use to you.
+
+```json
+{
+    "loaders": {
+        "quilt": {
+            "enabled": true
+        }
+    }
+}
+```
+
+We expect Quilt support to be enabled around the beginning of Quilt's beta releases. This message will be removed at
+that point.
+{% endadmonition %}
+
 ATLauncher is a simple, easy-to-use launcher, built around the concept of building game instances from "packs". To set 
 up your own Quilt instance, simply follow these steps:
 

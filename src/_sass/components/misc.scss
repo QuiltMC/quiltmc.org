@@ -98,3 +98,13 @@ article.with-divider.blog-post:not(:last-child) {
     }
   }
 }
+
+span.inline-divider {
+  border: 1px solid transparent;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-bottom: 1rem;
+  width: 1px;
+}

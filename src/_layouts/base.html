@@ -23,6 +23,14 @@ preload class stops CSS animations from playing during page load and is removed 
 
 {% include footer.liquid %}
 
+<script>
+    {% if page.has_downloads %}
+    window.pageHasDownloads = true
+    {% else %}
+    window.pageHasDownloads = false
+    {% endif %}
+</script>
+
 <script src="/assets/js/bundle.js"></script>
 
 <script>
@@ -32,6 +40,3 @@ preload class stops CSS animations from playing during page load and is removed 
 
     twemoji.parse(document.body);
 </script>
-</body>
-</html>
-
