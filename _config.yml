@@ -57,6 +57,10 @@ collections:
     permalink: /staff/:path/
     output: true
 
+  usage:
+    permalink: /usage/:path/
+    output: true
+
 defaults:
   -
     scope:
@@ -71,6 +75,13 @@ defaults:
       type: "community"
     values:
       layout: "community-document"
+
+  -
+    scope:
+      path: ""
+      type: "usage"
+    values:
+      layout: "usage-document"
 
   -
     scope:
