@@ -14,24 +14,15 @@ you'd rather just use the Java installation that comes with Minecraft, then you 
 
 If you're not sure which to pick, just [install Java](https://java.com/en/download/) and use the **Universal** download.
 
-<noscript>
-<div class="message is-danger">
-<div class="message-body">
-Unfortunately, we don't quite have the ability to offer the latest downloads without JavaScript enabled. We're working 
-on this -- but for the time being, **please enable JavaScript.**
-</div>
-</div>
-</noscript>
-
 <div class="field is-horizontal">
     <div class="field-label is-normal mt-1">
-        <span class="title is-6" id="launcher-version">Loading...</span>
+        <span class="title is-6" id="launcher-version">Download</span>
     </div>
     <div class="field-body">
         <div class="field">
             <div class="control">
-               <a id="universal-download" href="#" class="button is-primary mt-1">Universal (.jar)</a>
-               <a id="windows-download" href="#" class="button mt-1">Windows (.exe)</a>
+               <a id="universal-download" href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/latest/quilt-installer-latest.jar" class="button is-primary mt-1">Universal (.jar)</a>
+               <a id="windows-download" href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer-native-bootstrap/windows-x86_64/latest/windows-x86_64-latest.exe" class="button mt-1">Windows (.exe)</a>
             </div>
         </div>
     </div>

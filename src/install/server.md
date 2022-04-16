@@ -10,23 +10,14 @@ has_downloads: true
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make
 sure you've [installed Java](https://java.com/en/download/).
 
-<noscript>
-<div class="message is-danger">
-<div class="message-body">
-Unfortunately, we don't quite have the ability to offer the latest downloads without JavaScript enabled. We're working 
-on this -- but for the time being, **please enable JavaScript.**
-</div>
-</div>
-</noscript>
-
 <div class="field is-horizontal">
     <div class="field-label is-normal mt-1">
-        <span class="title is-6" id="launcher-version">Loading...</span>
+        <span class="title is-6" id="launcher-version">Download</span>
     </div>
     <div class="field-body">
         <div class="field">
             <div class="control">
-               <a id="universal-download" href="#" class="button is-primary mt-1">Universal (.jar)</a>
+               <a id="universal-download" href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/latest/quilt-installer-latest.jar" class="button is-primary mt-1">Universal (.jar)</a>
             </div>
         </div>
     </div>
