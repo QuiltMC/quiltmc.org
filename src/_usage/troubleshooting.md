@@ -1,7 +1,7 @@
 ---
 permalink: /usage/troubleshooting
-title: Usage Overview
-description: Learn how to use Quilt, and how to make the most of it.
+title: Troubleshooting
+description: How to troubleshoot Quilt when there's an issue
 redirect-from:
 - /troubleshooting.html
 - /support/
