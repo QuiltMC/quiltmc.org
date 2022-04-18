@@ -33,15 +33,6 @@
                 </div>
             </div>
 
-            {% if jekyll.environment != 'production' %}
-                {% comment %}
-                   So this conditional only works when building for prod and not when serving. Thanks Jekyll.
-                {% endcomment %}
-
-                {% comment %}{% include nav_link.liquid text="Install" href="/install/" subpage=true %}{% endcomment %}
-                {% comment %}{% include nav_link.liquid text="Developers" href="/dev/" subpage=true %}{% endcomment %}
-            {% endif %}
-
             {% include nav_link.liquid text="Blog" href="/blog/" subpage=true %}
 
             <div class="navbar-item has-dropdown is-hoverable">
@@ -55,6 +46,24 @@
                     {% assign community_pages = site.community | sort: "title" %}
 
                     {% for p in community_pages %}
+                        {% include nav_link.liquid text=p.title href=p.url subpage=false %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% include nav_link.liquid text="Install" href="/install/" subpage=true %}
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                {% assign is_usage = page.url | startswith: "/usage/" -%}
+
+                <a href="/usage/" class="navbar-link is-arrowless {% if is_usage %}is-active{% endif %}">
+                    Usage
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    {% assign usage_pages = site.usage | sort: "title" %}
+
+                    {% for p in usage_pages %}
                         {% include nav_link.liquid text=p.title href=p.url subpage=false %}
                     {% endfor %}
                 </div>

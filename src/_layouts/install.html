@@ -29,23 +29,47 @@ layout: default
                 {% include install/main.liquid %}
             </div>
 
-            <hr class="my-0" />
+            <hr class="my-0"/>
 
             <div class="grid-picker mb-0">
                 {% include install/launchers.liquid %}
             </div>
 
-            <hr class="my-0" />
+            <hr class="my-0"/>
 
             <div class="grid-picker">
                 {% include install/awaiting.liquid %}
             </div>
 
-            <hr class="is-hidden-desktop is-hidden-tablet my-0" />
+            <hr class="is-hidden-desktop is-hidden-tablet my-0"/>
         </div>
     </div>
 
     <div class="column">
+        <div class="message is-danger">
+            <div class="message-body">
+                <h2 class="has-text-centered">
+                    <span class="icon-text">
+                        <span class="icon has-text-danger mr-3">
+                            <i class="fas fa-warning"></i>
+                        </span>
+
+                        <span>WIP</span>
+                    </span>
+                </h2>
+
+                <p>
+                    <strong>Quilt is currently still in development.</strong> This means that it's not ready for wide
+                    use just yet, but we're working on it!
+                </p>
+
+                <p>
+                    If you'd like to help us test Quilt and prepare for the eventual stable release, please feel free
+                    to install it, try it, and let us know how you get on!
+                </p>
+            </div>
+        </div>
+
         {{ content }}
     </div>
 </div>
