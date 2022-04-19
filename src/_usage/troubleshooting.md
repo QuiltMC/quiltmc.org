@@ -9,7 +9,7 @@ redirect-from:
 - /help/
 - /help.html
 ---
-# General Issues (#general-issues)
+# General Issues
 {% admonition %}
 ## My game is crashing. Why is this happening?
 Your game is most likely crashing because something's gone wrong in a mod you have installed. The best way
