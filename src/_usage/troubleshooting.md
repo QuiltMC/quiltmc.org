@@ -4,10 +4,6 @@ title: Troubleshooting
 description: How to troubleshoot Quilt when there's an issue
 redirect-from:
 - /troubleshooting.html
-- /support/
-- /support.html
-- /help/
-- /help.html
 ---
 # General Issues
 {% admonition %}
