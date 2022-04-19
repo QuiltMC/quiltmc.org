@@ -6,11 +6,12 @@ permalink: /install/curseforge/
 
 # CurseForge <a href="https://download.curseforge.com" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-### Status: Pending Submission
+### Status: Suggestion Submitted
 
-CurseForge does not currently support Quilt. We've been in contact with them about adding Quilt support, but they don't
-feel that adding support while Quilt is still in beta is the right decision. For that reason, we're holding off on
-approaching them for now.
+CurseForge does not currently support Quilt. We've been instructed to create a suggestions on CurseForge Ideas, to
+collect votes from people that would like to see them support Quilt. We'd very much appreciate if anyone interested in
+this would do so - but either way, you can 
+[click here to find the suggestion.](https://curseforge-ideas.overwolf.com/ideas/CF-I-2662)
 
 # Manual Installation
 

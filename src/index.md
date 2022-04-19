@@ -29,10 +29,11 @@ transparency. For more information on how we hope to do this, [please see our "a
   </span>
 </h2>
 
-**Quilt is currently still in development.** This means that it's not ready for use just yet, but we're working on it!
+**Quilt is currently still in development.**  This means that it's not ready for wide use just yet, but we're working 
+on it!
 
-We're aiming for the 20th of April for Quilt's first beta release. For more information, please read 
-[this blog post](https://quiltmc.org/blog/2022/03/22/quilt-enters-beta/).
+If you'd like to help us test Quilt and prepare for the eventual stable release, please feel free to 
+[install it](/install/), try it, and let us know how you get on!
 
 {% endadmonition %}
 {% endcolumn %}

@@ -15,12 +15,22 @@ layout: base-navless
                      src="/assets/img/banner-light.svg"/>
             </picture>
 
-            {% comment %}
             <div class="field is-grouped is-grouped-centered mt-5">
                 <p class="control">
-                    <a href="/install/" class="button is-primary">Install</a>
+                    <a href="/install/" class="button is-primary">
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span>Install</span>
+                    </a>
                 </p>
 
+                <p class="control">
+                    <a href="/usage/" class="button is-info">
+                        <span class="icon"><i class="fas fa-book"></i></span>
+                        <span>Usage Docs</span>
+                    </a>
+                </p>
+
+                {% comment %}
                 <p class="control">
                     <a href="/dev/" class="button is-info">Create</a>
                 </p>
@@ -28,8 +38,8 @@ layout: base-navless
                 <p class="control">
                     <a href="/dev/" class="button is-link">Contribute</a>
                 </p>
+                {% endcomment %}
             </div>
-            {% endcomment %}
         </div>
     </div>
 </section>
