@@ -44,3 +44,20 @@ created for you. Otherwise, you can click on the **Installations** tab at the to
 Quilt entry from the **Version** dropdown.
 
 That's all there is to it - install some mods, launch your new installation, and have fun playing!
+
+# Installing Mods
+
+Installing mods is a fairly simple process:
+
+1. Download the mods you'd like to install
+2. Open the Minecraft Launcher and click on the **Installations** tab
+3. Hover your mouse cursor over the Quilt installation you'd like to add mods to
+4. Click on the button that looks like a folder icon
+5. In the folder that opens, create a folder named `mods` if one doesn't already exist
+6. Copy your mod files into the `mods/` folder
+7. Ensure you have also added the **Quilt Standard Libraries**, which you can find 
+   [on Modrinth](https://modrinth.com/mod/qsl)
+
+Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look
+at the [troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for 
+support!

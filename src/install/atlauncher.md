@@ -18,3 +18,19 @@ up your own Quilt instance, simply follow these steps:
 7. Click **Create Instance** to create your instance
 
 That's all there is to it! You can find your new instance in the **Instances** tab on the right side of the window.
+
+# Installing Mods
+
+To install mods to your ATLauncher instance, simply follow these steps:
+
+1. Click on the **Instances** tab on the right side
+2. Find the instance you'd like to add mods to, and click on **Add Mods**
+3. Find a Fabric or Quilt mod from CurseForge or Modrinth, and click the **Add** button
+4. Ensure you have the **Quilt Standard Libraries** installed, which you can find 
+   [on Modrinth](https://modrinth.com/mod/qsl)
+
+If you can't find the mod you'd like to install using the built-in search, you can click on **Open Folder** and copy
+any mod files you'd like to use into the `mods/` folder.
+
+Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the
+[troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!

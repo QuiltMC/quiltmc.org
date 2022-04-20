@@ -60,3 +60,18 @@ Windows and a `.sh` script for Mac and Linux.
 
 That's all there is to it - use the corresponding launch script to start the server for the first time, then stop it
 and set it up as you normally would.
+
+
+# Installing Mods
+
+Installing mods is a fairly simple process:
+
+1. Download the mods you'd like to install
+2. Create a folder named `mods` alongside your server files, if one doesn't already exist
+3. Copy your mod files into the `mods/` folder
+4. Ensure you have also added the **Quilt Standard Libraries**, which you can find
+   [on Modrinth](https://modrinth.com/mod/qsl)
+
+Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look
+at the [troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for
+support!

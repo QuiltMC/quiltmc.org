@@ -23,3 +23,21 @@ instances. To set up a Quilt instance, simply follow these steps:
 
 That's all there is to it! Once you've followed these steps, your instance should be ready to go &mdash; just add your 
 mods and get playing.
+
+# Installing Mods
+
+To install mods to your PolyMC instance, simply follow these steps:
+
+1. Right-click on the instance you'd like to install mods to and select **Edit Instance**, or click on it once and 
+   select **Edit Instance** from the menu on the right of the window
+2. Select **Mods** from the list on the left, and click on the **Download mods** button in the menu on the right side
+   of the window
+3. Find a Fabric or Quilt mod from CurseForge or Modrinth, and click the **OK** button
+4. Ensure you have the **Quilt Standard Libraries** installed, which you can find
+   [on Modrinth](https://modrinth.com/mod/qsl)
+
+If you can't find the mod you'd like to install using the built-in search, you can simply drag-and-drop any mod files 
+you've downloaded into the mod list, and PolyMC will ensure it's installed properly.
+
+Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the
+[troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!
