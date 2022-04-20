@@ -10,6 +10,6 @@ so if you have a problem or question that you feel should be covered here, pleas
 
 ## Links
 
-* [Installing Quilt](/install)
+* [Installing Quilt and mods](/install)
 * [Discord: Quilt Community](https://discord.quiltmc.org) (For chat, support and modding discussions)
 * [Discord: Quilt Toolchain](https://discord.quiltmc.org/toolchain) (For topics relating to The Quilt Project itself)
