@@ -10,8 +10,12 @@ redirect-from:
 
 ## Why am I getting an "Incompatible mod set!" error?
 
-There are a few versions of this, but they all ultimately mean the same thing: You're missing something another mod
+There are a few versions of this error, but they all ultimately mean the same thing: You're missing something another mod
 needs to work, or your mods are incompatible with each other.
+
+**Note:** We understand that these error pop-ups are ugly, difficult to read and extremely confusing. While we haven't
+had time to fix this in time for our first beta, we are planning on solving this problem and providing something that
+everyone can understand.
 
 ### Missing dependency
 
