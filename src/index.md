@@ -29,11 +29,10 @@ transparency. For more information on how we hope to do this, [please see our "a
   </span>
 </h2>
 
-**Quilt is currently still in development.**  This means that it's not ready for wide use just yet, but we're working 
-on it!
+**Quilt is currently in beta.** Here be dragons - there may be issues, but we'll fix them as quickly as we can!
 
-If you'd like to help us test Quilt and prepare for the eventual stable release, please feel free to 
-[install it](/install/), try it, and let us know how you get on!
+If you'd like to help us test Quilt, please feel free to [install it](/install/), try it, and let us know how you get 
+on!
 
 {% endadmonition %}
 {% endcolumn %}

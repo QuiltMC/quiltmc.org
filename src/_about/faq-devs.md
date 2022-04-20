@@ -84,6 +84,15 @@ else decides to continue that part of the project after we stop maintaining it.
 {% endadmonition %}
 {% admonition %}
 
+## How do I get started with writing a Quilt mod?
+
+While we're currently still working on developer documentation, we do have an 
+[example mod](https://github.com/QuiltMC/quilt-example-mod) that you can use as a template, or just to get started.
+We'll be working on docs throughout the beta period and beyond, so please keep an eye out for them!
+
+{% endadmonition %}
+{% admonition %}
+
 ## What the heck is CHASM, exactly? {#CHASM}
 
 CHASM is short for **_Collision Handling ASM_**. CHASM is a bytecode transformation library, acting as a backend that's
