@@ -13,7 +13,7 @@ redirect-from:
 There are a few versions of this, but they all ultimately mean the same thing: You're missing something another mod
 needs to work, or your mods are incompatible.
 
-### Missing dpendency
+### Missing dependency
 
 The following errors mean you're missing the [Quilt Standard Libraries](https://modrinth.com/mod/qsl) -- please download
 them and add them to your `mods` folder or launcher mod list.
