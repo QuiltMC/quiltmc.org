@@ -86,6 +86,20 @@ to work with mod developers that need an alternative approach for Quilt.
 {% endadmonition %}
 {% admonition %}
 
+## If I'm using Fabric mods, do I need Fabric API installed?
+
+**No, you don't** - in fact, we recommend against this for compatibility reasons.
+
+Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To 
+deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard
+QSL distribution, which you can [download them from Modrinth](https://modrinth.com/mod/qsl).
+
+As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work
+correctly with QSL.
+
+{% endadmonition %}
+{% admonition %}
+
 ## Can Fabric load Quilt mods?
 
 No. Quilt mods are distinct from Fabric mods, and not defined in the same way.

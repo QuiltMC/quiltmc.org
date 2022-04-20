@@ -8,6 +8,40 @@ redirect-from:
 
 {% admonition %}
 
+## Why am I getting an "Incompatible mod set!" error?
+
+There are a few versions of this, but they all ultimately mean the same thing: You're missing something another mod
+needs to work, or your mods are incompatible.
+
+### Missing dpendency
+
+The following errors mean you're missing the [Quilt Standard Libraries](https://modrinth.com/mod/qsl) -- please download
+them and add them to your `mods` folder or launcher mod list.
+
+* Dependency for mod 'mod-id' on fabric versions ...
+* Dependency for mod 'mod-id' on quilt_ ...
+
+Any other dependencies listed in similar are other mods, and you'll need to download them separately and add them to 
+your `mods` folder or launcher mod list.
+
+### Incompatible mod versions
+
+If the error specifies that a mod exists but isn't valid for resolution, you have incompatible mod versions. You'll 
+need to double-check that all your mods are up-to-date and, if they are, contact the developers behind the mods that
+are causing problems.
+
+### Jar-in-jar resolution error
+
+![JiJ resolution error](/assets/img/misc/jij-resolution-error.png)
+
+If the error you're getting looks something like thism then this is a problem with a mod you're using -- you should 
+report it to that mod's developers. The mod you're looking for in this example has been circled in red above for 
+clarity -- in this case, the mod would be QuickCarpet.
+
+{% endadmonition %}
+
+{% admonition %}
+
 ## My game is crashing. Why is this happening?
 
 If your game is crashing, the most likely cause is a problem with a mod you have installed. It's always worth trying
