@@ -203,7 +203,11 @@ tooling, file repositories and API services for modders. This team is responsibl
 </div>
 
 <div class="developer team-grid">
+    {% include team/Akarys.liquid %}
+    {% include team/Alizee.liquid %}
     {% include team/HavenKing.liquid %}
+    {% include team/Lauren.liquid %}
+    {% include team/Xavier.liquid %}
 </div>
 
 ## Loader
@@ -268,8 +272,8 @@ specific, distinct sets of library functionality -- while they may depend on eac
 This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="fabric-api-qsl" %}
     {% include project_button.liquid name="quilt-standard-libraries" %}
+    {% include project_button.liquid name="quilted-fabric-api" %}
 </div>
 
 ## Core (Team Leaders)
@@ -311,6 +315,7 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: GUI
 
 <div class="developer team-grid">
+    {% include team/AlphaMode.liquid %}
     {% include team/maximum.liquid %}
 </div>
 
@@ -328,7 +333,9 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 ## Sub-Team: Transfer
 
-This sub-team doesn't have any members, so its modules are maintained by the Core team.
+<div class="developer team-grid">
+    {% include team/AlphaMode.liquid %}
+</div>
 
 ## Sub-Team: Worldgen
 
@@ -336,7 +343,13 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
     {% include team/Noah.liquid %}
     {% include team/OliviaTheVampire.liquid %}
     {% include team/snoozestudios.liquid %}
-    
+</div>
+
+## Sub-Team: Quilted Fabric API
+
+<div class="developer team-grid">
+    {% include team/Emmaffle.liquid %}
+    {% include team/EnnuiL.liquid %}
 </div>
 
 # Triage Teams
