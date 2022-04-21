@@ -372,7 +372,6 @@ This team is responsible for handling triage tasks for the following projects:
     {% include team/Emmaffle.liquid %}
     {% include team/Jamalam.liquid %}
     {% include team/Noah.liquid %}
-    {% include team/RTTV.liquid %}
     {% include team/supersaiyansubtlety.liquid %}
     {% include team/Sylv.liquid %}
     {% include team/Zoe.liquid %}
