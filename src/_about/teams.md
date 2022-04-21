@@ -120,6 +120,7 @@ compilation tooling and build system plugins. This team is responsible for the f
 <div class="button-grid">
     {% include project_button.liquid name="dev-launch-injector" %}
     {% include project_button.liquid name="gradle-convention-plugins" %}
+    {% include project_button.liquid name="quilt-example-mod" %}
     {% include project_button.liquid name="quilt-loom" %}
     {% include project_button.liquid name="sponge-mixin-compile-extensions" %}
 </div>
