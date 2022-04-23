@@ -47,7 +47,7 @@ Right now, the following things are already true:
 * Quilt Mappings, Quilt's mappings project, has been set up and is accepting contributions -- providing a set of
   mappings without a clean-room requirement means that developers are welcome to use whatever mappings they'd prefer,
   and they'll still be able to get support for their modding questions in Quilt spaces
-* Quilt's Standard Libraries (QSL) already provide a larger API surface than Fabric's FAPI in some instances, such as
+* Quilt's Standard Libraries (QSL) already provide a larger API surface than Fabric's API in some instances, such as
   the QSL dynamic recipe module and the resource loader improvements
 
 We're also planning on the following:
