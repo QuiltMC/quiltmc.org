@@ -21,7 +21,7 @@ instances. To set up a Quilt instance, simply follow these steps:
 8. Select the Quilt Loader version you'd like to use and click **OK**
 9. Set up the rest of your instance as normal
 
-That's all there is to it! Once you've followed these steps, your instance should be ready to go &mdash; just add your 
+That's all there is to it! Once you've followed these steps, your instance should be ready to go -- just add your 
 mods and get playing.
 
 # Installing Mods

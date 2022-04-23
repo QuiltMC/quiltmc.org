@@ -6,18 +6,30 @@ permalink: /install/multimc/
 
 # MultiMC <a href="https://multimc.org" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-### Status: Work In Progress
+{% admonition /danger %}
+<h2>Development version required</h2>
+Quilt is currently only supported on the development version of MultiMC. To switch to the development version,
+click the **Settings** button at the top of the window, and change the **Update Channel** to **Development**.
+Then, close the settings and press **Update** then **Update Now** to update to the latest development build.
+{% endadmonition %}
 
-MultiMC does not currently support Quilt, but a member of the community has 
-[submitted a pull request](https://github.com/MultiMC/Launcher/pull/3760) that adds Quilt support. If you're 
-interested in seeing Quilt support in MultiMC, feel free to take a look at that PR.
+MultiMC is a launcher with advanced features to allow power users to manage separate instances of Minecraft.
+To set up a Quilt instance with MultiMC, follow these steps:
 
-# Manual Installation
+1. Download and install MultiMC from [their website](https://multimc.org)
+2. Open MultiMC, follow the setup steps and click on the **Add Instance** button at the top of the window
+3. Fill out the **Name** and **Group** boxes as required
+4. Select **Vanilla** from the list on the left, and pick the version of Minecraft you'd like to use for your instance
+5. Click **OK** to create a new vanilla instance
+6. Right-click on the instance and select **Edit Instance**, or click on it once and select **Edit Instance** from the 
+   menu on the right of the window
+7. Select **Version** from the list on the left, and click the **Install Quilt** button in the menu on the right side 
+   of the window
+8. Select the Quilt Loader version you'd like to use and click **OK**
+9. Set up the rest of your instance as normal
 
-While it is technically possible to add Quilt to any MultiMC instance manually, it's a somewhat technical process that
-involves writing your own JSON component definition. For that reason, we're not publishing instructions on how to do 
-that here &mdash; however, we are working on automatically generating MultiMC instances you can import to easily get 
-set up with Quilt.
+That's all there is to it! Once you've followed these steps, your instance should be ready to go -- just add your 
+mods and get playing.
 
 # Installing Mods
 
