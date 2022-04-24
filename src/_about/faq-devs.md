@@ -86,8 +86,8 @@ else decides to continue that part of the project after we stop maintaining it.
 
 ## How do I get started with writing a Quilt mod?
 
-While we're currently still working on developer documentation, we do have an 
-[example mod](https://github.com/QuiltMC/quilt-example-mod) that you can use as a template, or just to get started.
+While we're currently still working on developer documentation, we do have a
+[template mod](https://github.com/QuiltMC/quilt-template-mod) that you can use as a template, or just to get started.
 We'll be working on docs throughout the beta period and beyond, so please keep an eye out for them!
 
 {% endadmonition %}
