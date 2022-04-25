@@ -22,6 +22,17 @@ While it's true that some of this work will appear abstract to some types of Qui
 worth doing, then it's worth doing right -- and we all strive to make the Minecraft modding sphere better through our
 work.
 
+# Why not just contribute to other mod-loaders?
+
+We aim for Quilt to be an alternative mod-loader for users, rather than directly competing with other mod-loader
+projects. We believe that multiple projects that take different approaches to solving the problems that writing 
+Minecraft mods presents will push the ecosystem forward in a more productive way than a single mod-loader monopoly,
+and we hope that our work inspires other mod-loaders and motivates them to improve themselves alongside us.
+
+We currently work directly with Forge on moderation-related issues, events, and some technical problems. We also
+contribute relevant fixes to them, for cases where we've forked their projects -- such as
+[QuiltFlower](https://github.com/quiltMC/quiltflower).
+
 # Questions and Concerns
 
 Below, you'll find a list of common questions and concerns. Because some answers are quite long, they've been 
@@ -120,9 +131,9 @@ to do better, or the extra room for technical and modding innovation.
 
 Regardless, it's difficult to say what precisely will happen. As is always the case with a project like this, the
 earlier days of Quilt's life will most likely cause some friction in the modding sphere, as mod developers decide
-whether they wish to support, as the case may be. This isn't one of Quilt's goals, nor is it our goal to try to eclipse 
-other mod-loaders and force them into obscurity. Quilt is ultimately just trying to do its best in a crowded market, 
-and that has both advantages and drawbacks.
+whether they wish to support Quilt. This isn't one of Quilt's goals, nor is it our goal to try to eclipse other 
+mod-loaders and force them into obscurity. Quilt is ultimately just trying to do its best in a crowded market, and that 
+has both advantages and drawbacks.
 
 Ultimately, though, we believe that the benefits of user choice outweigh the drawbacks of a shakeup of the modding
 sphere. One of the reasons we decided to support Fabric mods on Quilt going forward was to try to help soften this 
