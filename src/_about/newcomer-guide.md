@@ -29,6 +29,10 @@ projects. We believe that multiple projects that take different approaches to so
 Minecraft mods presents will push the ecosystem forward in a more productive way than a single mod-loader monopoly,
 and we hope that our work inspires other mod-loaders and motivates them to improve themselves alongside us.
 
+As we have different goals and approaches to community management and governance (among other things), we realised that
+starting a separate project was the best way to achieve our goals -- rather than trying to force other projects to
+align with our ideals.
+
 We currently work directly with Forge on moderation-related issues, and we're looking to work with them on some 
 technical problems. We also contribute relevant fixes to them, for cases where we've forked their projects -- such 
 as with [QuiltFlower](https://github.com/quiltMC/quiltflower) and 
