@@ -24,14 +24,14 @@ work.
 
 # Why not just contribute to other mod-loaders?
 
+As we have different goals and approaches to community management and governance (among other things), we realised that
+starting a separate project was the best way to achieve our goals -- rather than trying to force other projects to
+align with our ideals.
+
 We aim for Quilt to be an alternative mod-loader for users, rather than directly competing with other mod-loader
 projects. We believe that multiple projects that take different approaches to solving the problems that writing 
 Minecraft mods presents will push the ecosystem forward in a more productive way than a single mod-loader monopoly,
 and we hope that our work inspires other mod-loaders and motivates them to improve themselves alongside us.
-
-As we have different goals and approaches to community management and governance (among other things), we realised that
-starting a separate project was the best way to achieve our goals -- rather than trying to force other projects to
-align with our ideals.
 
 We currently work directly with Forge on moderation-related issues, and we're looking to work with them on some 
 technical problems. We also contribute relevant fixes to them, for cases where we've forked their projects -- such 
@@ -48,9 +48,10 @@ forgotten to cover something here -- we'd love to hear from you if you think of 
 {% details %}
 {% summary %}What does Quilt provide over other mod-loaders?{% endsummary %}
 
-At the time of writing, Quilt is in beta -- that means that it's still in a testing phase, so not everything we'd like to
-do has been done quite yet. It also means that many of the things we've done to the project itself are 
-developer-oriented (although this can still result in better mods for everyone).
+At the time of writing, Quilt is in beta -- that means that it's still in a testing phase, so not everything we'd like 
+to do has been done quite yet. It also means that many of the things we've done to the project itself are 
+developer-oriented (although this can still result in better mods for everyone) -- because we believe it's important to
+build a solid technical foundation before working on quality-of-life features.
 
 Right now, the following things are already true:
 
@@ -74,7 +75,8 @@ The following improvements are also planned for a full release:
   runtime, eliminating the requirement for users to download the entirety of QSL for Quilt mods using it to
   function (but this will be able to be reconfigured and disabled by users, if they'd prefer)
 * An inclusive implementation for loader plugins, which will allow developers to modify how Quilt loads mods, and to
-  load them from other sources, if they'd like to
+  load them from other sources -- for example, this would allow a project like Sponge to natively integrate its
+  plugins with Quilt's Loader, if its developers wish to
 * An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
   are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are released. Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released.
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
@@ -147,8 +149,8 @@ support for projects that attempt to make it easier for developers to create mod
 
 That said, there's only so much we can do -- developers have the right to develop mods for the mod-loaders that they
 choose, and we'd never wish to take that away from them. For most people, modding is a hobby -- there will never be a
-good reason to deny developers more choice, and an understanding of this issue is not an excuse to write off 
-developers' hard work.
+good reason to deny developers more choice, and it's important that nobody tries to undermine their right to develop
+mods using the tools that they prefer.
 
 We all have the power to approach this issue in a mature way, and we owe it to the hard-working mod developers to do 
 that. Speaking of which, if you're a mod developer that would like to look into writing cross-loader mods, please feel 
