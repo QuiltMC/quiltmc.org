@@ -15,10 +15,10 @@ To start with, though, let's get the basics out of the way...
 Quilt is a new mod-loader project for Minecraft. As explained on [the main "About" page](/about/), it exists in order
 to address the issues that have cropped up in other mod-loader projects over time, building upon the technical
 foundations provided by The Fabric Project. It aims to excel in many areas -- not just when it comes to its
-technology, but also in its decentralised and community-centric approaches to governance, its attempts to avoid 
-user-hostile software design, and its inclusive, harm-reducing approach to community management.
+technology, but also in its decentralised and community-centric approaches to governance, its attempts to practice
+user-friendly software design, and its inclusive, harm-reducing approach to community management.
 
-While it's true that some of this work will appear abstract to some types of Quilt user, we believe that if a job is
+While it's true that some of this work will appear abstract to some types of Quilt users, we believe that if a job is
 worth doing, then it's worth doing right -- and we all strive to make the Minecraft modding sphere better through our
 work.
 
@@ -76,11 +76,11 @@ The following improvements are also planned for a full release:
 * An inclusive implementation for loader plugins, which will allow developers to modify how Quilt loads mods, and to
   load them from other sources, if they'd like to
 * An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
-  are released, making mappings updates relatively trivial
+  are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are released. Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released.
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
 * The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
-  Mixin implementation, but also allowing developers to easily add their own ASM-manipulation tools. This is a
+  Mixin implementation, but also allowing developers to easily add their own bytecode-manipulation tools. This is a
   project with implications far wider than just the modding community, and we're very excited about it!
 
 It's worth noting that while many of these improvements are developer-oriented, they should allow for higher-quality
@@ -122,15 +122,15 @@ As Forge's popularity grew and its range of mods expanded, many users became use
 Forge, find some mods and, since Forge was the only really viable mod-loader for a long time, those mods probably
  just worked. Later on, other mod-loaders started appearing and disappearing. Liteloader showed 
 up with its client-side modding framework. Rift appeared, and then died. Fabric appeared, and started gaining 
-momentum -- and that's when people _really_ started getting upset.
+momentum -- and that's when the first major rift in compatibility between modern Minecraft mods formed.
 
 Since then, there's been a lot of complaints about additional mod-loaders "fracturing the community". We don't have
 a crystal ball, but of course the concept has some merit: as more mod-loaders pop up and more mods appear, it's
 inevitable that users are going to run into mods that they want to play with, but that are incompatible with their 
 favourite mod-loader. This can certainly be annoying, but it doesn't merit the harassment 
-that many mod developers have gotten for refusing to bring their mods to a different mod-loader. We also believe in
+that many mod developers have gotten for refusing to bring their mods to a different mod-loader. We believe that
 the benefits that come with providing users with more choice -- for example, motivating every project to do better, or 
-the extra room for technical and modding innovation.
+the extra room for technical and modding innovation -- outweigh the inconveniences of fragmentation.
 
 ---
 
