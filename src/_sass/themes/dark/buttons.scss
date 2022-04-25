@@ -20,6 +20,17 @@
   }
 }
 
+.button.is-mastodon {
+  background-color: $mastodon-blue;
+  border-color: $mastodon-blue;
+  color: $white;
+
+  &:hover, &:active {
+    border-color: $mastodon-blue-dark;
+    background-color: $mastodon-blue-dark;
+  }
+}
+
 .button.is-gradle {
   background-color: $gradle-blue;
   border-color: $gradle-blue;
