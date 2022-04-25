@@ -61,9 +61,9 @@ Right now, the following things are already true:
 * QuiltFlower, Quilt's decompiler project, has been vastly improved compared to FernFlower and the other FernFlower 
   forks used in the modding sphere, producing far more readable and more accurate decompiled code for modders to work
   with
-* Quilt Mappings, Quilt's mappings project, does not have a clean-room policy, which means that
-  developers are welcome to use whatever mappings they'd prefer,
-  and they'll still be able to get mod development support in Quilt community spaces
+* Quilt Mappings, Quilt's mappings project, does not have a clean-room policy, which means that developers are welcome 
+  to use whatever mappings they'd prefer, and they'll still be able to get mod development support in Quilt community 
+  spaces; we also hope that this will result in higher-quality names going forward
 * Quilt's Standard Libraries (QSL) already provide a larger API surface than Fabric's API in some instances, such as
   the QSL dynamic recipe module and the resource loader improvements
 
@@ -265,8 +265,8 @@ running (unless that specific member of the Events Team also happens to be a Mod
 
 The Outreach Team is responsible for running Quilt's social media accounts, creating and posting mixed-media relating
 to Quilt (including the [developer meetings podcast](https://anchor.fm/quiltmc-dev-meetings/)), and producing blog posts
-and articles for this website. They're Quilt's connection with the rest of the world in many cases, and the work they
-do is incredibly important.
+and articles for this website. They're Quilt's connection with the rest of the world in many cases, keeping the world
+updated on Quilt news and keeping track of how people perceive Quilt online.
 
 Outreach Team members are not Moderators, and don't engage as Moderators (unless that specific member of the 
 Outreach Team also happens to be a Moderator or Community manager).
