@@ -140,6 +140,11 @@ and become familiar with them before joining or interacting with us.
         <span>Twitter</span>
     </a>
 
+    <a href="https://tech.lgbt/@quiltmc" target="_blank" class="button is-mastodon">
+        <span class="icon"><i class="fab fa-mastodon"></i></span> 
+        <span>Mastodon</span>
+    </a>
+
     <a href="{% link _community/index.md %}" class="button is-primary">
         <span class="icon"><i class="fas fa-ellipsis-h"></i></span> 
         <span>More</span>
