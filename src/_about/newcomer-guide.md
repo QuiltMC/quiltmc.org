@@ -60,19 +60,19 @@ Right now, the following things are already true:
 * QuiltFlower, Quilt's decompiler project, has been vastly improved compared to FernFlower and the other FernFlower 
   forks used in the modding sphere, producing far more readable and more accurate decompiled code for modders to work
   with
-* Quilt Mappings, Quilt's mappings project, has been set up and is accepting contributions -- providing a set of
-  mappings without a clean-room requirement means that developers are welcome to use whatever mappings they'd prefer,
-  and they'll still be able to get support for their modding questions in Quilt spaces
+* Quilt Mappings, Quilt's mappings project, does not have a clean-room policy, which means that
+  developers are welcome to use whatever mappings they'd prefer,
+  and they'll still be able to get mod development support in Quilt community spaces
 * Quilt's Standard Libraries (QSL) already provide a larger API surface than Fabric's API in some instances, such as
   the QSL dynamic recipe module and the resource loader improvements
 
-We're also planning on the following:
+The following improvements are also planned for a full release:
 
 * Clearer errors when required mods are missing or mods are incompatible with each other -- user-friendly errors are
   a large focus of some of our work, and we're hoping to get some dedicated people working on that soon
 * Automatic detection of QSL modules used by mods at compile-time, and automatic downloading of those modules at
   runtime, eliminating the requirement for users to download the entirety of QSL for Quilt mods using it to
-  function -- but this will be able to be reconfigured and disabled by users, if they'd prefer
+  function (but this will be able to be reconfigured and disabled by users, if they'd prefer)
 * An inclusive implementation for loader plugins, which will allow developers to modify how Quilt loads mods, and to
   load them from other sources, if they'd like to
 * An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
@@ -80,7 +80,7 @@ We're also planning on the following:
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
 * The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
-  Mixin implementation, but also allowing developers to easily add their own ASM-manipulation tools -- this is a
+  Mixin implementation, but also allowing developers to easily add their own ASM-manipulation tools. This is a
   project with implications far wider than just the modding community, and we're very excited about it!
 
 It's worth noting that while many of these improvements are developer-oriented, they should allow for higher-quality
@@ -118,16 +118,16 @@ The concept of Minecraft modding has existed almost as long as Minecraft itself 
 mods, mod-loaders and communities being created and finding their niches. That said, one mod-loader ended up taking
 the crown for a very long time -- Forge.
 
-As Forge's popularity grew and its range of mods expanded, many users became used to their workflow - they'd install
+As Forge's popularity grew and its range of mods expanded, many users became used to their workflow: they'd install
 Forge, find some mods and, since Forge was the only really viable mod-loader for a long time, those mods probably
-worked without any further concerns. Later on, other mod-loaders started appearing and disappearing. Liteloader showed 
+ just worked. Later on, other mod-loaders started appearing and disappearing. Liteloader showed 
 up with its client-side modding framework. Rift appeared, and then died. Fabric appeared, and started gaining 
 momentum -- and that's when people _really_ started getting upset.
 
 Since then, there's been a lot of complaints about additional mod-loaders "fracturing the community". We don't have
 a crystal ball, but of course the concept has some merit: as more mod-loaders pop up and more mods appear, it's
 inevitable that users are going to run into mods that they want to play with, but that are incompatible with their 
-favourite mod-loader. This can certainly be annoying -- although, in our opinion, it doesn't merit the harassment 
+favourite mod-loader. This can certainly be annoying, but it doesn't merit the harassment 
 that many mod developers have gotten for refusing to bring their mods to a different mod-loader. We also believe in
 the benefits that come with providing users with more choice -- for example, motivating every project to do better, or 
 the extra room for technical and modding innovation.
@@ -239,7 +239,7 @@ because most platforms require that to be the case.
 #### Moderators and Trainee Moderators
 
 Moderators are in charge of watching over Quilt's official community spaces, resolving conflicts and removing bad
-actors. They're the most important line of defense for our spaces, enforcing Quilt's
+actors. They're the most important line of defense for our community spaces, enforcing Quilt's
 [rules](/community/rules/) and [Code of Conduct](/community/code-of-conduct/), and keeping our users safe and 
 discussions productive.
 
@@ -256,7 +256,7 @@ modding community) to collate ideas and information relating to possible communi
 to fruition and go smoothly.
 
 Events Team members are not Moderators, and don't engage as Moderators outside the context of the events they're 
-running -- unless that specific member of the Events Team also happens to be a Moderator or Community manager.
+running (unless that specific member of the Events Team also happens to be a Moderator or Community manager).
 
 #### Outreach Team
 
@@ -320,7 +320,7 @@ them to prevent issues before they happen.
 The reason our approach feels so different to other communities' is because we investigate and act upon issues that
 appear in the wider community, even if they don't directly affect Quilt. We believe that nothing happens in a vacuum,
 and a problematic situation somewhere else is good evidence that the people involve may cause similar situations in our
-spaces. We're not shy about banning problem users before they even set foot in Quilt community spaces, and some people
+spaces. We're not shy about banning problematic users before they even set foot in Quilt community spaces, and some people
 find this perplexing -- but we believe in this approach, and it's been a big contributor in keeping Quilt users safe
 from discrimination and other harmful behaviours.
 
@@ -349,7 +349,7 @@ Since then, better ideas have appeared. One example is in the in-progress
 [RFC #17](https://github.com/QuiltMC/rfcs/pull/17), which proposes a standard feature toggle system -- allowing servers
 to tell clients what they expect of them, and for mods to configure themselves based on those expectations.
 
-We prefer a solution that doesn't impact the privacy of our users -- we're still looking at alternatives, but we do
+We prefer a solution that doesn't impact the privacy of our users -- we're still open to alternative suggestions, but we do
 believe that the above RFC may be the correct solution.
 
 {% enddetails %}
