@@ -78,7 +78,8 @@ The following improvements are also planned for a full release:
   load them from other sources -- for example, this would allow a project like Sponge to natively integrate its
   plugins with Quilt's Loader, if its developers wish to
 * An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
-  are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are released. Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released.
+  are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are released. 
+  Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released.
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
 * The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
@@ -322,14 +323,14 @@ them to prevent issues before they happen.
 The reason our approach feels so different to other communities' is because we investigate and act upon issues that
 appear in the wider community, even if they don't directly affect Quilt. We believe that nothing happens in a vacuum,
 and a problematic situation somewhere else is good evidence that the people involve may cause similar situations in our
-spaces. We're not shy about banning problematic users before they even set foot in Quilt community spaces, and some people
-find this perplexing -- but we believe in this approach, and it's been a big contributor in keeping Quilt users safe
-from discrimination and other harmful behaviours.
+spaces. We're not shy about banning problematic users before they even set foot in Quilt community spaces, and some 
+people find this perplexing -- but we believe in this approach, and it's been a big contributor in keeping Quilt users 
+safe from discrimination and other harmful behaviours.
 
 Similarly, Quilt itself doesn't operate in a vacuum - we operate a program known as Quilt Community Collab, where we
 work with other related communities on moderation-related issues and events. Working alongside organisations such as
-Forge, Geyser and Paper means that we can contribute to improving the _entire_ community sphere, for everyone -- and
-in return, those organisations help us with our investigations and moderation-related issues.
+Forge means that we can contribute to improving the _entire_ community sphere, for everyone -- and in return, those 
+organisations help us with our investigations and moderation-related issues.
 
 We believe that all communities can contribute positively to the well-being of their users, and that they have a
 responsibility to create safe, inclusive spaces, and to set a trend doing so -- encouraging more communities to do the
@@ -351,8 +352,8 @@ Since then, better ideas have appeared. One example is in the in-progress
 [RFC #17](https://github.com/QuiltMC/rfcs/pull/17), which proposes a standard feature toggle system -- allowing servers
 to tell clients what they expect of them, and for mods to configure themselves based on those expectations.
 
-We prefer a solution that doesn't impact the privacy of our users -- we're still open to alternative suggestions, but we do
-believe that the above RFC may be the correct solution.
+We prefer a solution that doesn't impact the privacy of our users -- we're still open to alternative suggestions, but 
+we do believe that the above RFC may be the correct solution.
 
 {% enddetails %}
 {% endadmonition %}
