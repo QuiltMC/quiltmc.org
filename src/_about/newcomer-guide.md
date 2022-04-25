@@ -44,7 +44,7 @@ forgotten to cover something here -- we'd love to hear from you if you think of 
 {% details %}
 {% summary %}What does Quilt provide over other mod-loaders?{% endsummary %}
 
-As of this writing, Quilt is in beta -- that means that it's still in a testing phase, so not everything we'd like to
+At the time of writing, Quilt is in beta -- that means that it's still in a testing phase, so not everything we'd like to
 do has been done quite yet. It also means that many of the things we've done to the project itself are 
 developer-oriented (although this can still result in better mods for everyone).
 
