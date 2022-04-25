@@ -13,7 +13,7 @@ To start with, though, let's get the basics out of the way...
 # What is Quilt?
 
 Quilt is a new mod-loader project for Minecraft. As explained on [the main "About" page](/about/), it exists in order
-to address the issues that have cropped up in other mod-loader projects over time, building upon the solid technical
+to address the issues that have cropped up in other mod-loader projects over time, building upon the technical
 foundations provided by The Fabric Project. It aims to excel in many areas -- not just when it comes to its
 technology, but also in its decentralised and community-centric approaches to governance, its attempts to avoid 
 user-hostile software design, and its inclusive, harm-reducing approach to community management.
