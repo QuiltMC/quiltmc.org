@@ -68,15 +68,15 @@ Right now, the following things are already true:
 
 We're also planning on the following:
 
-* Easier errors when required mods are missing or mods are incompatible with each other -- user-friendly errors are
+* Clearer errors when required mods are missing or mods are incompatible with each other -- user-friendly errors are
   a large focus of some of our work, and we're hoping to get some dedicated people working on that soon
 * Automatic detection of QSL modules used by mods at compile-time, and automatic downloading of those modules at
   runtime, eliminating the requirement for users to download the entirety of QSL for Quilt mods using it to
   function -- but this will be able to be reconfigured and disabled by users, if they'd prefer
 * An inclusive implementation for loader plugins, which will allow developers to modify how Quilt loads mods, and to
   load them from other sources, if they'd like to
-* Automatically-generated "intermediary" (what we call Hashed Mojmap) when new versions of Minecraft are released,
-  making mappings updates relatively trivial
+* An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
+  are released, making mappings updates relatively trivial
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
 * The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
@@ -129,8 +129,8 @@ a crystal ball, but of course the concept has some merit: as more mod-loaders po
 inevitable that users are going to run into mods that they want to play with, but that are incompatible with their 
 favourite mod-loader. This can certainly be annoying -- although, in our opinion, it doesn't merit the harassment 
 that many mod developers have gotten for refusing to bring their mods to a different mod-loader. We also believe in
-the benefits that come with providing users with more choice -- for example, competition that motivates every project
-to do better, or the extra room for technical and modding innovation.
+the benefits that come with providing users with more choice -- for example, motivating every project to do better, or 
+the extra room for technical and modding innovation.
 
 ---
 
@@ -141,9 +141,9 @@ mod-loaders and force them into obscurity. Quilt is ultimately just trying to do
 has both advantages and drawbacks.
 
 Ultimately, though, we believe that the benefits of user choice outweigh the drawbacks of a shakeup of the modding
-sphere. One of the reasons we decided to support Fabric mods on Quilt going forward was to try to help soften this 
-blow -- but we've also been working with Forge on various issues, and we've been clear in our support for projects 
-that attempt to make it easier for developers to create mods that work across mod-loaders.
+sphere. One of the reasons we decided to support Fabric mods on Quilt going forward was to try to help soften the
+negative impact of its release -- but we've also been working with Forge on various issues, and we've been clear in our 
+support for projects that attempt to make it easier for developers to create mods that work across mod-loaders.
 
 That said, there's only so much we can do -- developers have the right to develop mods for the mod-loaders that they
 choose, and we'd never wish to take that away from them. For most people, modding is a hobby -- there will never be a
@@ -265,8 +265,8 @@ to Quilt (including the [developer meetings podcast](https://anchor.fm/quiltmc-d
 and articles for this website. They're Quilt's connection with the rest of the world in many cases, and the work they
 do is incredibly important.
 
-Outreach Team members are not Moderators, and don't engage as Moderators  -- unless that specific member of the 
-Outreach Team also happens to be a Moderator or Community manager.
+Outreach Team members are not Moderators, and don't engage as Moderators (unless that specific member of the 
+Outreach Team also happens to be a Moderator or Community manager).
 
 ### The Development Teams
 
@@ -277,6 +277,9 @@ a specific development team, and that team oversees all aspects of that project'
 Development teams may also be split into sub-teams. This is generally done for larger projects or when a team has
 multiple projects to look after, as it allows team members to specialize and prevents any one team from having to take
 on too many concurrent responsibilities.
+
+It's worth noting that anyone can contribute to any of Quilt's projects without joining one of the development teams,
+but contributors will still be interacting directly with whatever team is running the project they're working with.
 
 {% enddetails %}
 {% endadmonition %}
@@ -319,7 +322,7 @@ appear in the wider community, even if they don't directly affect Quilt. We beli
 and a problematic situation somewhere else is good evidence that the people involve may cause similar situations in our
 spaces. We're not shy about banning problem users before they even set foot in Quilt community spaces, and some people
 find this perplexing -- but we believe in this approach, and it's been a big contributor in keeping Quilt users safe
-from discrimination and other issues.
+from discrimination and other harmful behaviours.
 
 Similarly, Quilt itself doesn't operate in a vacuum - we operate a program known as Quilt Community Collab, where we
 work with other related communities on moderation-related issues and events. Working alongside organisations such as
