@@ -319,6 +319,25 @@ same, and making the Internet a better place for everyone.
 
 {% admonition %}
 {% details %}
+{% summary %}Does Quilt send my mods to the servers I play on?{% endsummary %}
+
+This is a misconception based on poor communication: at one point, to help ease the moderation burden in Quilt's
+community spaces, we were thinking about potentially sending the client's list of mods to the servers they connect to
+(like what Forge does). However, this was never formalized -- no RFC was made, and nothing like this was
+implemented for the beta.
+
+Since then, better ideas have appeared. One example is in the in-progress 
+[RFC #17](https://github.com/QuiltMC/rfcs/pull/17), which proposes a standard feature toggle system -- allowing servers
+to tell clients what they expect of them, and for mods to configure themselves based on those expectations.
+
+We prefer a solution that doesn't impact the privacy of our users -- we're still looking at alternatives, but we do
+believe that the above RFC may be the correct solution.
+
+{% enddetails %}
+{% endadmonition %}
+
+{% admonition %}
+{% details %}
 {% summary %}Why don't you explain the Fabric drama here?{% endsummary %}
 
 This is a question we've been getting a lot since Quilt entered beta -- it's something that sounds reasonable on paper, 
