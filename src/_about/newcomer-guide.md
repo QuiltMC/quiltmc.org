@@ -57,7 +57,7 @@ Right now, the following things are already true:
 
 * Quilt takes a community-focused approach to just about everything, making plenty of room for people to voice their
   opinions and weigh in on important development decisions before they happen, and working with the community to meet
-  its member's needs in community spaces
+  its members' needs in community spaces
 * QuiltFlower, Quilt's decompiler project, has been vastly improved compared to FernFlower and the other FernFlower 
   forks used in the modding sphere, producing far more readable and more accurate decompiled code for modders to work
   with
@@ -78,12 +78,12 @@ The following improvements are also planned for a full release:
   load them from other sources -- for example, this would allow a project like Sponge to natively integrate its
   plugins with Quilt's Loader, if its developers wish to
 * An intermediary mapping system called Hashed Mojmap which is automatically generated when new versions of Minecraft 
-  are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are released. 
-  Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released.
+  are released, meaning that Quilt's core toolchain is usable on new snapshots immediately after they are 
+  released -- Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
 * The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
-  Mixin implementation, but also allowing developers to easily add their own bytecode-manipulation tools. This is a
+  Mixin implementation, but also allowing developers to easily add their own bytecode-manipulation tools -- This is a
   project with implications far wider than just the modding community, and we're very excited about it!
 
 It's worth noting that while many of these improvements are developer-oriented, they should allow for higher-quality
@@ -101,7 +101,8 @@ mods or more well-known mod developers.
 
 If you already use Fabric, we have good news -- Quilt is also compatible with most Fabric mods! As long as the mods
 don't make use of internal Fabric APIs, you should be able to add them to your `mods` folder as you always have and,
-assuming you have our Quilted Fabric API installed (which is part of QSL), things should just work.
+assuming you have our Quilted Fabric API installed ([which is part of QSL](https://modrinth.com/mod/qsl)), things 
+should just work.
 
 We plan on maintaining Fabric support for as long as we can -- we'll only stop it if it becomes infeasible to maintain
 it as part of Quilt itself. That said, if it does happen, we'll be gifting that part of the project to the community,
@@ -259,7 +260,7 @@ modding community) to collate ideas and information relating to possible communi
 to fruition and go smoothly.
 
 Events Team members are not Moderators, and don't engage as Moderators outside the context of the events they're 
-running (unless that specific member of the Events Team also happens to be a Moderator or Community manager).
+running (unless that specific member of the Events Team also happens to be a Moderator or Community Manager).
 
 #### Outreach Team
 
@@ -269,7 +270,7 @@ and articles for this website. They're Quilt's connection with the rest of the w
 updated on Quilt news and keeping track of how people perceive Quilt online.
 
 Outreach Team members are not Moderators, and don't engage as Moderators (unless that specific member of the 
-Outreach Team also happens to be a Moderator or Community manager).
+Outreach Team also happens to be a Moderator or Community Manager).
 
 ### The Development Teams
 
@@ -322,12 +323,12 @@ them to prevent issues before they happen.
 
 The reason our approach feels so different to other communities' is because we investigate and act upon issues that
 appear in the wider community, even if they don't directly affect Quilt. We believe that nothing happens in a vacuum,
-and a problematic situation somewhere else is good evidence that the people involve may cause similar situations in our
-spaces. We're not shy about banning problematic users before they even set foot in Quilt community spaces, and some 
+and a problematic situation somewhere else is good evidence that the people involved may cause similar situations in 
+our spaces. We're not shy about banning problematic users before they even set foot in Quilt community spaces, and some 
 people find this perplexing -- but we believe in this approach, and it's been a big contributor in keeping Quilt users 
 safe from discrimination and other harmful behaviours.
 
-Similarly, Quilt itself doesn't operate in a vacuum - we operate a program known as Quilt Community Collab, where we
+Similarly, Quilt itself doesn't operate in a vacuum -- we operate a program known as Quilt Community Collab, where we
 work with other related communities on moderation-related issues and events. Working alongside organisations such as
 Forge means that we can contribute to improving the _entire_ community sphere, for everyone -- and in return, those 
 organisations help us with our investigations and moderation-related issues.
