@@ -9,7 +9,7 @@ permalink: /install/technic/
 ### Status: Suggested
 
 The Technic Launcher does not currently support Quilt. If you'd like to see Technic add Quilt support to their 
-launcher, please feel free to join[their Discord server](https://discord.gg/technic), leave a positive reaction on our 
+launcher, please feel free to join [their Discord server](https://discord.gg/technic), leave a positive reaction on our 
 post in their `#suggestions` channel, and mention that you'd like to see support in `#suggestions-discussion`.
 
 # Manual Installation
