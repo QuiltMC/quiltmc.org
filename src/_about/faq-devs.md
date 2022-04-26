@@ -76,10 +76,11 @@ help you figure out how to move to it if you need support.
 
 ## How long will backwards compatibility for loading Fabric mods last?
 
-Quilt will likely continue to support Fabric mods directly for quite some time -- at least until Quilt is properly
-established. However, at that point, we do plan on dropping first-party support for Fabric mods -- although, there's 
-no reason the community can't continue to maintain that support, and we'll provide the required resources if someone 
-else decides to continue that part of the project after we stop maintaining it.
+As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it 
+does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and 
+provide its developers with the support they need to keep working on it.
+
+In short, backwards compatibility will live on until it's no longer possible to maintain it.
 
 {% endadmonition %}
 {% admonition %}
