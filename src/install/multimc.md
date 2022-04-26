@@ -6,7 +6,7 @@ permalink: /install/multimc/
 
 # MultiMC <a href="https://multimc.org" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-{% admonition /danger %}
+{% admonition %}
 <h2>Development version required</h2>
 Quilt is currently only supported on the development version of MultiMC. To switch to the development version,
 click the **Settings** button at the top of the window, and change the **Update Channel** to **Development**.
