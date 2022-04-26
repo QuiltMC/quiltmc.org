@@ -34,7 +34,7 @@ independently of it.
 For users, Quilt provides the following advantages:
 
 * Mods that should be more compatible with each other, despite their use of powerful modding tools
-* Initial compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
+* Compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
 * An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff 
   team, and works with its users to improve over time
 * **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly --
@@ -74,14 +74,14 @@ that plan to add this functionality, but they're not maintained by Quilt -- and 
 
 ## Can Quilt load Fabric mods?
 
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt initially -- but this may not be
-the case forever. Once Quilt is properly-established, we do plan on dropping first-party support for Fabric mods. That
-said, there's no reason the community can't continue to maintain that support, and we'll provide the required resources
-if someone else decides to continue that part of the project after we stop maintaining it.
+In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric 
+compatibility doesn't negatively impact the project, we'll keep doing it -- but if it does get to the point where
+maintaining it is no longer feasible, we'll help move it to a community-run project and provide its developers with
+the support they need to keep working on it.
 
 It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this 
-will change in future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be happy 
-to work with mod developers that need an alternative approach for Quilt.
+will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be 
+happy to work with mod developers that need an alternative approach for Quilt.
 
 {% endadmonition %}
 {% admonition %}
