@@ -1,3 +1,7 @@
+.button.is-disabled {
+  color: $button-disabled-color;
+}
+
 .button.is-discord {
   background-color: $blurple;
   border-color: $blurple;
