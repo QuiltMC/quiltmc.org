@@ -293,12 +293,6 @@ team members from the QSL sub-teams.
 
 This sub-team doesn't have any members, so its modules are maintained by the Core team.
 
-## Sub-Team: Command
-
-<div class="developer team-grid">
-    {% include team/WillBL.liquid %}
-</div>
-
 ## Sub-Team: Data
 
 <div class="developer team-grid">
@@ -324,6 +318,12 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 <div class="developer team-grid">
     {% include team/OroArmor.liquid %}
+</div>
+
+## Sub-Team: Management
+
+<div class="developer team-grid">
+    {% include team/WillBL.liquid %}
 </div>
 
 ## Sub-Team: Rendering
