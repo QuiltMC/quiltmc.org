@@ -105,14 +105,19 @@ toolchain, you can be sure that **your mod is in good hands**.
 {% column is-10 %}
 
 <div class="button-grid">
+    <a href="https://maven.quiltmc.org" target="_blank" class="button is-gradle">
+        <span class="icon"><i class="fas fa-feather-pointed"></i></span>
+        <span>Maven Repo</span>
+    </a>
+
     <a href="/mc-patchnotes/" class="button is-info">
         <span class="icon"><i class="fas fa-notebook"></i></span>
         <span>Minecraft Patch Notes</span>
     </a>
 
-    <a href="https://maven.quiltmc.org" target="_blank" class="button is-gradle">
-        <span class="icon"><i class="fas fa-feather-pointed"></i></span>
-        <span>Maven Repo</span>
+    <a href="/openings/" class="button is-primary">
+        <span class="icon"><i class="fas fa-briefcase"></i></span>
+        <span>Openings</span>
     </a>
 </div>
 
@@ -135,14 +140,19 @@ and become familiar with them before joining or interacting with us.
         <span>Community</span>
     </a>
 
-    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button is-twitter">
-        <span class="icon"><i class="fab fa-twitter"></i></span> 
-        <span>Twitter</span>
+    <a href="https://forum.quiltmc.org" target="_blank" class="button is-gradle">
+        <span class="icon"><i class="fab fa-discourse"></i></span>
+        <span>Forum</span>
     </a>
 
     <a href="https://tech.lgbt/@quiltmc" target="_blank" class="button is-mastodon">
         <span class="icon"><i class="fab fa-mastodon"></i></span> 
         <span>Mastodon</span>
+    </a>
+
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button is-twitter">
+        <span class="icon"><i class="fab fa-twitter"></i></span> 
+        <span>Twitter</span>
     </a>
 
     <a href="{% link _community/index.md %}" class="button is-primary">
@@ -161,6 +171,16 @@ is join us on GitHub or the [Toolchain Discord Server]({{ site.discord_toolchain
 so we can always use more help!
 
 <div class="button-grid">
+    <a href="https://forum.quiltmc.org" target="_blank" class="button is-gradle">
+        <span class="icon"><i class="fab fa-discourse"></i></span>
+        <span>Forum</span>
+    </a>
+
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="button is-github">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>GitHub</span>
+    </a>
+
     <a href="/openings" target="_blank" class="button is-primary">
         <span class="icon"><i class="fas fa-briefcase"></i></span>
         <span>Openings</span>
@@ -170,11 +190,6 @@ so we can always use more help!
          <span class="icon"><i class="fab fa-discord"></i></span>
          <span>Toolchain</span>
      </a>
-
-    <a href="https://github.com/{{ site.github_username }}" target="_blank" class="button is-github">
-        <span class="icon"><i class="fab fa-github"></i></span>
-        <span>GitHub</span>
-    </a>
 </div>
 
 {% endcolumn %}
