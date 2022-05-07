@@ -14,3 +14,7 @@
     margin: 0.4rem !important;
   }
 }
+
+.button-grid + .button-grid {
+  margin-top: -0.8rem;
+}
