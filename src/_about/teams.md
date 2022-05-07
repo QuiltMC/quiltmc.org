@@ -344,6 +344,7 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
     {% include team/Noah.liquid %}
     {% include team/OliviaTheVampire.liquid %}
     {% include team/snoozestudios.liquid %}
+    {% include team/zOnlyKroks.liquid %}
 </div>
 
 ## Sub-Team: Quilted Fabric API
