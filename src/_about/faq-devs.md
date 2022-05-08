@@ -31,7 +31,7 @@ For developers, Quilt provides the following advantages over Fabric:
   you're using a different set of mappings
 * A more community-oriented approach that ensures that everyone's voice is heard when raising issues and opinions,
   regardless of how prolific a developer is, or how well-known they are
-* **Future goal:** A new Collision Handling ASM backend (CHASM) which acts as the backbone for our mixin and access 
+* **Future goal:** A new Collision Handling ASM backend (Chasm) which acts as the backbone for our mixin and access 
   widener implementations, allowing those and other bytecode manipulation tools to function without any special handling
   required in Quilt's build tools or loader, and helping mods to remain compatible with each other
 
@@ -67,7 +67,7 @@ a name.
 We plan on trying to make this transition as painless as possible -- by matching Fabric's API surface, allowing you to
 stick with Yarn mappings if you'd like, and providing support for developers that are porting their mods. It's worth
 noting that -- as of this writing -- Fabric mods that contain mixin plugins (for example, for conditional mixins)  are 
-supported by Quilt's backwards-compatibility efforts, but this will not be the case once [CHASM](#CHASM) has been 
+supported by Quilt's backwards-compatibility efforts, but this will not be the case once [Chasm](#Chasm) has been 
 added to the toolchain. Quilt will provide an alternative approach with proper toolchain support later on -- and we'll 
 help you figure out how to move to it if you need support.
 
@@ -94,15 +94,15 @@ We'll be working on docs throughout the beta period and beyond, so please keep a
 {% endadmonition %}
 {% admonition %}
 
-## What the heck is CHASM, exactly? {#CHASM}
+## What the heck is Chasm, exactly? {#Chasm}
 
-CHASM is short for **_Collision Handling ASM_**. CHASM is a bytecode transformation library, acting as a backend that's
+Chasm is short for **_Collision Handling ASM_**. Chasm is a bytecode transformation library, acting as a backend that's
 intended for use via separate frontends, rather than for mods to use directly. It intends to provide a safer way to
 modify bytecode at runtime, handling collisions automatically and trying to help mods to stay compatible.
 
-Frontends for use with CHASM will include Access Wideners and, of course, Mixin. However, there's no reason additional
+Frontends for use with Chasm will include Access Wideners and, of course, Mixin. However, there's no reason additional
 frontends couldn't be written -- by Quilt, or by the community.
 
-CHASM has not yet been implemented, but we're working on it!
+Chasm has not yet been implemented, but we're working on it!
 
 {% endadmonition %}

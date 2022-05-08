@@ -82,7 +82,7 @@ The following improvements are also planned for a full release:
   released -- Hashed Mojmap, unlike MCP and Intermediary, never requires human intervention to be released
 * A new Gradle-based toolchain that replaces the existing one, which is currently based on Quilt's fork of Fabric's
   Loom
-* The CHASM project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
+* The Chasm project, which will provide safer tooling for working with Java bytecode; acting as the backend for our
   Mixin implementation, but also allowing developers to easily add their own bytecode-manipulation tools -- This is a
   project with implications far wider than just the modding community, and we're very excited about it!
 

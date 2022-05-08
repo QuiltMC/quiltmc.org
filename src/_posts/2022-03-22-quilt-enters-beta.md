@@ -22,7 +22,7 @@ It may be frustrating, but trying different approaches and iterating is an essen
 
 Beta software is also generally missing features that will be included in the full release, and Quilt is no exception. All our projects are at a stage where we feel that they are usable, but most of them are still missing features that will be included in the final release. Namely:
 - Mods will be built using a fork of Fabric's Loom with Intermediary, instead of Quilt-Gradle with Hashed MojMap.
-- The CHASM bytecode transformer is not yet ready for use and will not be available.
+- The Chasm bytecode transformer is not yet ready for use and will not be available.
 - Loader plugins will not exist.
 - QSL (Quilt Standard Libraries) will not be automatically downloaded as a dependency.
 - Many QSL Modules will not be available to use.
