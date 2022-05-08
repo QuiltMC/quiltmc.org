@@ -131,14 +131,14 @@ compilation tooling and build system plugins. This team is responsible for the f
     {% include team/glitch.liquid %}
 </div>
 
-## CHASM
+## Chasm
 
-The CHASM team is responsible for maintaining CHASM, the Collision Handling ASM toolset. CHASM aims to provide a safer
+The Chasm team is responsible for maintaining Chasm, the Collision Handling ASM toolset. Chasm aims to provide a safer
 backend for modifying JVM bytecode at runtime, allowing for more compatible mixins and extra bytecode modification 
 frontends. 
 
 **Note:** You may see projects with "ASMR" in the name on the QuiltMC GitHub organisation. This was the old, internal
-codename for CHASM, so those projects are associated with the CHASM team.
+codename for Chasm, so those projects are associated with the CHASM team.
 
 This team is responsible for the following projects:
 
