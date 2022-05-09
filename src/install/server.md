@@ -32,15 +32,19 @@ Once you have a copy of the Quilt installer downloaded, follow these steps:
 3. Select the version of Minecraft you wish to install Quilt for
 4. Select the version of the Quilt loader you'd like to use
 5. Select the location you'd like to install the server to
-6. Check the **Download server jar** and **Generate launch script** boxes
+6. Check the **Download server jar** box
 7. Click the **Install** button
 
 This will download a copy of the Minecraft server to the location you specified, and install Quilt to it, providing a 
-launcher JAR to start the server with. It'll also create a set of scripts you can use to launch the server - a `.bat` 
-script for Windows and a `.sh` script for Mac and Linux.
+launcher JAR to start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file,
+with the following contents:
 
-That's all there is to it - use the corresponding launch script to start the server for the first time, then stop it
-and set it up as you normally would.
+```sh
+java -jar quilt-server-launch.jar nogui
+```
+
+That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then 
+stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
 ## CLI Installation
 
@@ -50,17 +54,19 @@ Once you have a copy of the Quilt installer downloaded, you'll need to run it fr
 ```bash
 java -jar quilt-installer-INSTALLER_VERSION.jar \
   install server MINECRAFT_VERSION \
-  --download-server \
-  --create-scripts
+  --download-server
 ```
 
 This will download a copy of the Minecraft server to `server/` and install Quilt to it, providing a launcher JAR to
-start the server with. It'll also create a set of scripts you can use to launch the server - a `.bat` script for
-Windows and a `.sh` script for Mac and Linux.
+start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file, with the 
+following contents:
 
-That's all there is to it - use the corresponding launch script to start the server for the first time, then stop it
-and set it up as you normally would.
+```sh
+java -jar quilt-server-launch.jar nogui
+```
 
+That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then
+stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
 # Installing Mods
 
