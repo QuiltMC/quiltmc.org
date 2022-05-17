@@ -109,10 +109,9 @@ No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
 
 ## When will Quilt be released?
 
-As of this writing, we're not providing any final ETAs. Projects like this have a lot of moving parts and are generally
-difficult to develop, so it can take quite a long time for things to be considered stable.
+Quilt's first beta released on the 20th of April 2022, and we've been full steam ahead since then!
 
-That said, we're tentatively aiming to start releasing basic beta builds around April 20th, 2022. 
+If you'd like to try Quilt out, please take a look at [the install page](/install/).
 [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
 
 {% endadmonition %}
