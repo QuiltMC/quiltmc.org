@@ -72,7 +72,7 @@ instrumental for Quilt's success.
     {% include team/Forkk.liquid %}
     {% include team/Larry.liquid %}
     {% include team/Lauren.liquid %}
-    {% include team/NiAndromedae.liquid %}
+    {% include team/SilverAndro.liquid %}
     {% include team/Southpaw.liquid %}
     {% include team/ToffeeMax.liquid %}
     {% include team/Redblueflame.liquid %}
@@ -127,8 +127,8 @@ compilation tooling and build system plugins. This team is responsible for the f
 
 <div class="developer team-grid">
     {% include team/CheaterCodes.liquid %}
-    {% include team/Cypher.liquid %}
     {% include team/glitch.liquid %}
+    {% include team/TibiNonEst.liquid %}
 </div>
 
 ## Chasm
@@ -284,6 +284,7 @@ the QSL project, as well as setting project standards and handling governance ta
 team members from the QSL sub-teams.
 
 <div class="developer team-grid">
+    {% include team/EnnuiL.liquid %}
     {% include team/glitch.liquid %}
     {% include team/LambdAurora.liquid %}
     {% include team/OroArmor.liquid %}
@@ -311,6 +312,7 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 <div class="developer team-grid">
     {% include team/AlphaMode.liquid %}
+    {% include team/EnnuiL.liquid %}
     {% include team/maximum.liquid %}
 </div>
 
