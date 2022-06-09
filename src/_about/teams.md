@@ -211,6 +211,16 @@ tooling, file repositories and API services for modders. This team is responsibl
     {% include team/Xavier.liquid %}
 </div>
 
+## Kotlin
+
+The Kotlin Team is responsible for maintaining the Quilt Kotlin Libraries (QKL), a set of libraries based off QSL and designed for use with the Kotlin programming language. These libraries provide an official way to use Kotlin on Quilt, as well as wrappers for QSL and the Minecraft codebase for easier use in Kotlin.
+
+<div class="developer team-grid">
+    {% include team/Octal.liquid %}
+    {% include team/NoComment.liquid %}
+    {% include team/sschr15.liquid %}
+</div>
+
 ## Loader
 
 The Loader team is responsible for projects releating to Quilt Loader, the project that actually handles loading mods
