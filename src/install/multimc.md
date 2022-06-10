@@ -6,13 +6,6 @@ permalink: /install/multimc/
 
 # MultiMC <a href="https://multimc.org" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
 
-{% admonition %}
-<h2>Development version required</h2>
-Quilt is currently only supported on the development version of MultiMC. To switch to the development version,
-click the **Settings** button at the top of the window, and change the **Update Channel** to **Development**.
-Then, close the settings and press **Update** then **Update Now** to update to the latest development build.
-{% endadmonition %}
-
 MultiMC is a launcher with advanced features to allow power users to manage separate instances of Minecraft.
 To set up a Quilt instance with MultiMC, follow these steps:
 
