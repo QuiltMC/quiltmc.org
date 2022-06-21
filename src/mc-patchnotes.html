@@ -65,9 +65,13 @@ description: Quilt's Minecraft launcher patch-notes viewer.
                 if (entry) {
                     document.getElementById("title").scrollIntoView()
 
+                    const body = entry.body
+                        .replaceAll("​", "")
+                        .replaceAll("<p></p>", "")
+
                     // Replace title, body and image url with the selected version
                     document.getElementById("title").innerText = entry.title;
-                    document.getElementById("body").innerHTML = entry.body;
+                    document.getElementById("body").innerHTML = body;
                     document.getElementById("image").setAttribute("src", "https://launchercontent.mojang.com" + entry.image.url);
 
                     for (let elem of document.getElementsByClassName("version-item is-active")) {
