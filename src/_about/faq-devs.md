@@ -9,9 +9,8 @@ description: Frequently asked questions, but for developers.
 
 ## Where's the developer documentation?
 
-As Quilt hasn't yet reached a proper release, we haven't yet started working on our developer documentation. However,
-when the time comes, we are planning on setting up an expansive wiki, as well as a forum where developers can seek
-support (as an alternative to using Discord).
+Quilt's developer documentation is **incredibly work-in-progress**, and nowhere near a usable state. However, it is
+being worked on, and you may preview what's done so far on [modder.wiki.quiltmc.org](https://modder.wiki.quiltmc.org).
 
 {% endadmonition %}
 {% admonition %}
