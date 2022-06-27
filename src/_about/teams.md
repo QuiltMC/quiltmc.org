@@ -218,6 +218,7 @@ The Kotlin Team is responsible for maintaining the Quilt Kotlin Libraries (QKL),
 <div class="developer team-grid">
     {% include team/NoComment.liquid %}
     {% include team/Octal.liquid %}
+    {% include team/Potatoboy.liquid %}
     {% include team/SilverAndro.liquid %}
 </div>
 
