@@ -16,8 +16,8 @@ description: Quilt's Minecraft launcher patch-notes viewer.
                     <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
                     <span>Versions</span>
                 </button>
-                <br />
-                <br />
+                <br/>
+                <br/>
             </div>
 
             <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar">
@@ -32,14 +32,42 @@ description: Quilt's Minecraft launcher patch-notes viewer.
         </div>
 
         <div class="column">
-            <noscript class="message is-danger">
-                This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
-                Please enable it and reload the page to continue.
-            </noscript>
+            <div class="columns is-centered">
+                <div class="column max-width-50">
+                    <noscript class="message is-danger mb-4">
+                        This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
+                        Please enable it and reload the page to continue.
+                    </noscript>
+
+                    <div class="message is-info" id="missing-versions-warning">
+                        <div class="message-body content">
+                            <div class="is-flex is-flex-direction-row is-fullwidth">
+                                <h2 class="is-justify-content-start is-flex-grow-1">Missing versions?</h2>
+
+                                <div class="is-justify-content-end">
+                                    <a class="has-tooltip-arrow has-tooltip-bottom" data-tooltip="Dismiss" id="missing-versions-close">
+                                        <span class="icon"><i class="fas fa-2x fa-circle-xmark"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <p>
+                                If a new version of Minecraft has just released, it may be not be shown here
+                                immediately. This is because the patch notes are not always available right away,
+                                and may even become available at different times in different regions.
+                            </p>
+
+                            <p>
+                                It should never take more than an hour for a new set of patch notes to appear here.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <h1 id="title" class="title">Minecraft Patch-notes</h1>
 
-            <img id="image" class="is-pulled-right" style="border-radius: 10px; margin: 10px;" />
+            <img id="image" class="is-pulled-right" style="border-radius: 10px; margin: 10px;"/>
 
             <div id="body" class="content">
                 Select the version you'd like to see patch notes for.
@@ -52,6 +80,11 @@ description: Quilt's Minecraft launcher patch-notes viewer.
 {% endcolumns %}
 
 <script>
+    document.getElementById("missing-versions-close").onclick = (event) => {
+        event.preventDefault()
+
+        document.getElementById("missing-versions-warning").remove()
+    }
     // Fetch launcher metadata
     fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
         .then(response => response.json())
