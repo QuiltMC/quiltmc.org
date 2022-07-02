@@ -112,3 +112,11 @@ span.inline-divider {
 .max-width-50 {
   max-width: 50rem;
 }
+
+body > * {
+  transition: all 1s ease;
+}
+
+#theme-normal-contrast, #theme-low-contrast {
+  display: none;
+}

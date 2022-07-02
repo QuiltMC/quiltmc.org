@@ -1,3 +1,5 @@
+@import "vars";
+
 .button.is-disabled {
   color: $button-disabled-color;
 }
@@ -48,7 +50,7 @@
 
 .button.is-github {
   background-color: $white;
-  border-color: $white;
+  border-color: transparent;
   color: $black;
 
   &:hover, &:active {

@@ -15,3 +15,32 @@ span.inline-divider {
   background-color: $grey-dark;
   border-color: $grey-dark;
 }
+
+#theme-normal-contrast {
+  display: block;
+}
+
+body[data-contrast=low] > * {
+  filter: opacity(70%) contrast(90%) saturate(90%);
+}
+
+body[data-contrast=low] {
+  #theme-low-contrast {
+    display: block;
+  }
+
+  #theme-normal-contrast {
+    display: none;
+  }
+}
+
+/* For the low-contrast peeps out there, we'll do some filtering. Best we can do for now. */
+@media (prefers-contrast: less) { // This is not an error, your editor is just wrong.
+  body > * {
+    filter: opacity(70%) contrast(90%) saturate(90%);
+  }
+
+  #theme-normal-contrast, #theme-low-contrast {
+    display: none !important;
+  }
+}
