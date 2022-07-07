@@ -363,7 +363,6 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Quilted Fabric API
 
 <div class="developer team-grid">
-    {% include team/Emmaffle.liquid %}
     {% include team/EnnuiL.liquid %}
 </div>
 
