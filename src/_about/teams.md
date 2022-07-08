@@ -56,6 +56,7 @@ the responsibilities from that position.
     {% include team/AppleTheGolden.liquid %}
     {% include team/gdude2002.liquid %}
     {% include team/MrMangoHands.liquid %}
+    {% include team/Starchild.liquid %}
 </div>
 
 ## Moderators
@@ -66,17 +67,14 @@ backbone of any Community Team, and Quilt's is no exception -- a diverse, active
 instrumental for Quilt's success.
 
 <div class="moderator team-grid">
-    {% include team/Akarys.liquid %}
-    {% include team/Alizee.liquid %}
-    {% include team/Emmaffle.liquid %}
     {% include team/Forkk.liquid %}
     {% include team/Larry.liquid %}
-    {% include team/Lauren.liquid %}
+    {% include team/NoComment.liquid %}
+    {% include team/Orchid.liquid %}
     {% include team/SilverAndro.liquid %}
     {% include team/Southpaw.liquid %}
     {% include team/ToffeeMax.liquid %}
     {% include team/Redblueflame.liquid %}
-    {% include team/Xavier.liquid %}
 </div>
 
 ## Events Team
@@ -96,14 +94,11 @@ by the rest of the Community Team, and also have the ability to directly moderat
 The outreach team is responsible for communications outside of and within Quilt. They write blog posts, manage social media and website content, and run developer meetings, among other things.
 
 <div class="community team-grid">
-   {% include team/Akarys.liquid %}
-   {% include team/Alizee.liquid %}
-   {% include team/Emmaffle.liquid %}
-   {% include team/gdude2002.liquid %}
-   {% include team/Lauren.liquid %}
-   {% include team/Southpaw.liquid %}
-   {% include team/ToffeeMax.liquid %}
-   {% include team/Xavier.liquid %}
+    {% include team/gdude2002.liquid %}
+    {% include team/Orchid.liquid %}
+    {% include team/Southpaw.liquid %}
+    {% include team/Starchild.liquid %}
+    {% include team/ToffeeMax.liquid %}
 </div>
 
 
@@ -164,14 +159,12 @@ This team is responsible for the following projects:
 </div>
 
 <div class="developer team-grid">
-    {% include team/Akarys.liquid %}
-    {% include team/Alizee.liquid %}
     {% include team/AppleTheGolden.liquid %}
     {% include team/gdude2002.liquid %}
     {% include team/glitch.liquid %}
-    {% include team/Lauren.liquid %}
+    {% include team/Redblueflame.liquid %}
     {% include team/sschr15.liquid %}
-    {% include team/Xavier.liquid %}
+    {% include team/Starchild.liquid %}
 </div>
 
 ## Decompilers
@@ -204,11 +197,8 @@ tooling, file repositories and API services for modders. This team is responsibl
 </div>
 
 <div class="developer team-grid">
-    {% include team/Akarys.liquid %}
-    {% include team/Alizee.liquid %}
     {% include team/HavenKing.liquid %}
-    {% include team/Lauren.liquid %}
-    {% include team/Xavier.liquid %}
+    {% include team/Starchild.liquid %}
 </div>
 
 ## Kotlin
@@ -383,10 +373,9 @@ This team is responsible for handling triage tasks for the following projects:
 
 <div class="developer team-grid">
     {% include team/Bubblie.liquid %}
-    {% include team/Emmaffle.liquid %}
     {% include team/Jamalam.liquid %}
     {% include team/Noah.liquid %}
+    {% include team/Orchid.liquid %}
     {% include team/supersaiyansubtlety.liquid %}
     {% include team/Sylv.liquid %}
-    {% include team/Zoe.liquid %}
 </div>

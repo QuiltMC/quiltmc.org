@@ -1,4 +1,5 @@
 require 'net/https'
+require 'time'
 
 module Jekyll
   module PluralkitFilters
@@ -14,7 +15,7 @@ module Jekyll
         data = JSON.parse(response.body)
 
         # Sort by creation date
-        data = data.sort_by { |member| member['created'] }
+        data = data.sort_by { |member| Time.parse(member['created']) }
 
         # Join the list members into a pipe separated string
         data.map { |member| "#{member['name']} | #{member['avatar_url']}" }.join('||')

@@ -79,7 +79,7 @@
                             <i class="fa-2xl pl-1 fas fa-box-heart"></i>
                         </div>
                     {% else %}
-                        {% assign member_pairs = system_members | strip | split: "||" -%}
+                        {% assign member_pairs = system_members | pk_list_members | strip | split: "||" -%}
 
                         {% for pair in member_pairs %}
                             {% assign member = pair | strip | split: "|" -%}
