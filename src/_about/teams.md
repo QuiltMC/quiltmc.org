@@ -73,7 +73,6 @@ instrumental for Quilt's success.
     {% include team/Orchid.liquid %}
     {% include team/SilverAndro.liquid %}
     {% include team/Southpaw.liquid %}
-    {% include team/ToffeeMax.liquid %}
     {% include team/Redblueflame.liquid %}
 </div>
 
@@ -98,7 +97,6 @@ The outreach team is responsible for communications outside of and within Quilt.
     {% include team/Orchid.liquid %}
     {% include team/Southpaw.liquid %}
     {% include team/Starchild.liquid %}
-    {% include team/ToffeeMax.liquid %}
 </div>
 
 
