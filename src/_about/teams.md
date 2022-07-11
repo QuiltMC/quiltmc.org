@@ -69,6 +69,7 @@ instrumental for Quilt's success.
 <div class="moderator team-grid">
     {% include team/Forkk.liquid %}
     {% include team/Larry.liquid %}
+    {% include team/Dichotomy.liquid %}
     {% include team/NoComment.liquid %}
     {% include team/Orchid.liquid %}
     {% include team/SilverAndro.liquid %}
