@@ -19,7 +19,7 @@ module Jekyll
           data = JSON.parse(response.body)
 
           # Sort by creation date
-          data = data.sort_by { |member| Time.parse(member['created']) }
+          data = data.sort_by { |member| Time.parse(member['created'] || "0000-01-01T00:00:00+0000") }
 
           # Join the list members into a pipe separated string
           formatted = data.map { |member| "#{member['name']} | #{member['avatar_url']}" }.join('||')

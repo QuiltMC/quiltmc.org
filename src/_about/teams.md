@@ -255,7 +255,7 @@ is responsible for the following projects:
 <div class="developer team-grid">
     {% include team/2xsaiko.liquid %}
     {% include team/CheaterCodes.liquid %}
-    {% include team/LambdAurora.liquid %}
+    {% include team/LambdaFoxes.liquid %}
     {% include team/MartrixX.liquid %}
     {% include team/NoComment.liquid %}
     {% include team/OroArmor.liquid %}
@@ -286,7 +286,7 @@ team members from the QSL sub-teams.
 <div class="developer team-grid">
     {% include team/EnnuiL.liquid %}
     {% include team/glitch.liquid %}
-    {% include team/LambdAurora.liquid %}
+    {% include team/LambdaFoxes.liquid %}
     {% include team/OroArmor.liquid %}
 </div>
 
@@ -298,7 +298,7 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 
 <div class="developer team-grid">
     {% include team/ADudeCalledLeo.liquid %}
-    {% include team/LambdAurora.liquid %}
+    {% include team/LambdaFoxes.liquid %}
 </div>
 
 ## Sub-Team: Entity
