@@ -39,11 +39,21 @@ we're hoping to prioritise development in this team.
 If you're interested in helping out with Quilt's build tools or would like to join this team, please send a message
 in `#build-tools-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
+### Chasm
+
+The Chasm team is responsible for building and maintaining the [Chasm project](https://github.com/QuiltMC/chasm). Chasm
+is a bytecode transformer project, designed to handle collisions between transformers in as compatible a way as
+possible.
+
+This is a fairly technical project, but it's also one of our most interesting ones! If you're interested in helping out
+with the Chasm project, please sent a message in `#chasm-general` on the 
+[Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
+
 ### Mappings Triage
 
 The Mappings team is responsible for Quilt Mappings and its backbone projects, such as Hashed Mojmap. This team is
-currently looking for triage members, who are mostly responsible for reviewing Pull Requests to Quilt Mappings, ensuring
-they're up to spec and meet the project's requirements.
+currently looking for triage members, who are mostly responsible for reviewing Pull Requests to Quilt Mappings, 
+ensuring that they're up to spec and meet the project's requirements.
 
 This isn't a high-stress position, but it's still important - especially as we'd like to be able to allow Quilt Mappings
 PRs to move quickly and be merged without unnecessary delay.
@@ -53,27 +63,30 @@ the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
 ### QSL
 
-There are several QSL teams that don't yet have any members, and this means that the parts of QSL that they are
-responsible for is overseen by the core QSL team instead, which isn't ideal as they already have a lot of work to do.
-The following teams are empty, and need members:
+There are QSL teams that don't yet have any members, and this means that the parts of QSL that they are
+responsible for is overseen by the core QSL team instead -- which isn't ideal as they already have a lot of work to 
+do. The following teams are empty, and need members:
 
 - Block
-- Transfer
 
 Additionally, the following QSL teams are looking for more members:
 
 - Entities
 - GUI
 - Rendering
+- Transfer
 
 If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
 
 ### Quilted Fabric API
 
-Quilted Fabric API is a re-implementation of Fabric API using QSL. As a maintainer, you will be responsible for merging changes for upstream Fabric API, ensuring that it doesn't conflict with QSL, and re-implement Fabric API features in QSL once they become available.
+Quilted Fabric API is a re-implementation of Fabric API using QSL. As a maintainer, you will be responsible for 
+merging changes for upstream Fabric API, ensuring that it doesn't conflict with QSL, and re-implement Fabric API 
+features in QSL once they become available.
 
-If you're interested in taking up this role, please send a message in `#qsl-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) 
+If you're interested in taking up this role, please send a message in `#qsl-general` on the 
+[Toolchain Discord Server](https://discord.quiltmc.org/toolchain) 
 
 ## Community Team
 
@@ -98,6 +111,7 @@ discussions are conducted in a productive manner. While the current team can han
 communities receive, the team needs to be expanded to deal with the increasing interest and community activity over
 time, and as development progresses.
 
-If you'd like to apply to be a Moderator, please join the [Community Discord Server](https://discord.quiltmc.org) and DM
-ModMail to send in your application. It is recommended that you read our [Rules](https://quiltmc.org/community/rules/)
-and [Code of Conduct](https://quiltmc.org/community/code-of-conduct/) before applying.
+If you'd like to apply to be a Moderator, please join the [Community Discord Server](https://discord.quiltmc.org) and 
+DM ModMail to send in your application. It is recommended that you read our 
+[Rules](https://quiltmc.org/community/rules/) and [Code of Conduct](https://quiltmc.org/community/code-of-conduct/) 
+before applying.
