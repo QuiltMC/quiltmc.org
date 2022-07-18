@@ -146,6 +146,7 @@ This team is responsible for the following projects:
     {% include team/Earthcomputer.liquid %}
     {% include team/Kroppeb.liquid %}
     {% include team/Pyrofab.liquid %}
+    {% include team/RTTV.liquid %}
 </div>
 
 ## Community Tooling
