@@ -6,7 +6,7 @@ permalink: /dev/
 # Develop Mods for Quilt
 
 If you'd like to learn how to get started developing Quilt mods, check out our
-[wiki]().
+[wiki](https://modder.wiki.quiltmc.org).
 
 You can find a list of available versions [here](/dev/versions).
 

@@ -11,6 +11,7 @@ so if you have a problem or question that you feel should be covered here, pleas
 ## Links
 
 * [Installing Quilt and mods](/install)
+* [Quilt Developer Wiki](https://modder.wiki.quiltmc.org)
 * Aurora's [Quilt Import Utility](https://lambdaurora.dev/tools/import_quilt.html) (Versioning info for your Gradle projects)
 * [Discord: Quilt Community](https://discord.quiltmc.org) (For chat, support and modding discussions)
 * [Discord: Quilt Toolchain](https://discord.quiltmc.org/toolchain) (For topics relating to The Quilt Project itself)
