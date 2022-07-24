@@ -287,7 +287,6 @@ team members from the QSL sub-teams.
 
 <div class="developer team-grid">
     {% include team/EnnuiL.liquid %}
-    {% include team/glitch.liquid %}
     {% include team/LambdaFoxes.liquid %}
     {% include team/OroArmor.liquid %}
 </div>
