@@ -128,3 +128,14 @@ body > * {
 .columns {
   overflow-x: auto;
 }
+
+body {
+  /* Use CSS grid */
+  display: grid;
+  /* Configure three rows, corresponding to the header, main content, and footer
+   * Header and footer are sized to fit, main content fills up the rest of free space
+   */
+  grid-template-rows: fit-content(100%) 1fr fit-content(100%);
+  /* Force minimum height of document body to be the viewport height */
+  min-height: 100vh;
+}
