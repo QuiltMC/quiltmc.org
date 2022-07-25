@@ -120,3 +120,11 @@ body > * {
 #theme-normal-contrast, #theme-low-contrast {
   display: none;
 }
+
+.column {
+  min-width: 0;
+}
+
+.columns {
+  overflow-x: auto;
+}

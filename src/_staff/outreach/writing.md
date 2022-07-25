@@ -175,9 +175,6 @@ Columns aren't particularly complex, but this gives you a simple way to define t
 the option to provide extra classes as arguments if you need them. Columns on this site will collapse nicely for mobile
 users, with the leftmost column showing first.
 
-{% columns %}
-{% column %}
-
 ##### Example
 
 {% raw %}
@@ -185,7 +182,7 @@ users, with the leftmost column showing first.
 ```liquid
 {% columns %}
 
-{% column is-narrow %}
+{% column %}
 {% admonition %}
 This is column 1.
 {% endadmonition %}
@@ -201,13 +198,10 @@ This is column 2.
 ```
 {% endraw %}
 
-{% endcolumn %}
-{% column %}
-
 ##### Result
 
 {% columns %}
-{% column is-narrow %}
+{% column %}
 {% admonition %}
 This is column 1.
 {% endadmonition %}
@@ -217,9 +211,6 @@ This is column 1.
 {% admonition %}
 This is column 2.
 {% endadmonition %}
-{% endcolumn %}
-{% endcolumns %}
-
 {% endcolumn %}
 {% endcolumns %}
 
