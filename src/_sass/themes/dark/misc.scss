@@ -48,3 +48,9 @@ body[data-contrast=low] {
 #theme-switcher {
   display: flex;
 }
+
+.modal-close {
+  &::before, &::after {
+    background-color: white;
+  }
+}

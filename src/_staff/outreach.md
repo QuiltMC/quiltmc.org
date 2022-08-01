@@ -1,5 +1,5 @@
 ---
-title: titles.staff.outreach-team
+title: titles.staff.outreach.team
 description: Documents to help guide the Outreach Team.
 ---
 

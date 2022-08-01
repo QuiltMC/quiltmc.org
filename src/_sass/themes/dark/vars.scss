@@ -155,6 +155,9 @@ $button-disabled-border-color: $grey;
 $button-disabled-color: $grey;
 $button-disabled-background-color: $dark;
 
+$modal-close-dimensions: 80px;
+$modal-background-background-color: rgba(0, 0, 0, 0.86);
+
 @import "../../../../node_modules/bulma/sass/utilities/mixins";
 @import "../../../../node_modules/bulma-timeline/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";

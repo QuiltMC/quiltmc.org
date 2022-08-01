@@ -1,5 +1,5 @@
 ---
-title: titles.faq.general
+title: titles.about.faq.general
 layout: about-page-faq
 description: Frequently asked questions, for the burning topics that need addressing regularly.
 

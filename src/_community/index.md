@@ -1,6 +1,6 @@
 ---
 permalink: /community/
-title: titles.community
+title: titles.community.community
 description: Learn about Quilt's community spaces, and what we expect of our users.
 ---
 

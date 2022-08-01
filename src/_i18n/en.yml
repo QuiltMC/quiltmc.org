@@ -8,26 +8,27 @@ settings:
 # Translations go here
 
 titles:
-  about: About Us
   blog: Blog
-  coc: Code of Conduct
-  community: Community
   development: Development
   gradle-snippets: Gradle Snippets
   mc-patchnotes: Minecraft Patch-notes
-  newcomers-guide: Newcomers' Guide
   openings: Openings
-  pluralkit: PluralKit
-  rules: Rules
-  staff-resources: Staff Resources
-  team-listings: Team Listings
-  timeline: Timeline
-  usage-overview: Usage Overview
-  troubleshooting: Troubleshooting
 
-  faq:
-    devs: FAQ (Developers)
-    general: FAQ
+  about:
+    about: About Us
+    newcomer-guide: Newcomers' Guide
+    teams: Team Listings
+    timeline: Timeline
+
+    faq:
+      devs: FAQ (Developers)
+      general: FAQ
+
+  community:
+    coc: Code of Conduct
+    community: Community
+    pluralkit: PluralKit
+    rules: Rules
 
   install:
     install: Install
@@ -42,7 +43,16 @@ titles:
     technic: "Install: Technic Launcher"
 
   staff:
-    moderation-team: Moderation Team
-    moderation: Moderation
-    outreach-team: Outreach Team
-    writing-guidelines: Writing Guidelines
+    staff: Staff Resources
+
+    moderation:
+      team: Moderation Team
+      moderation: Moderation
+
+    outreach:
+      team: Outreach Team
+      writing-guidelines: Writing Guidelines
+
+  usage:
+    usage: Usage Overview
+    troubleshooting: Troubleshooting

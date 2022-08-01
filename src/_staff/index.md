@@ -1,6 +1,6 @@
 ---
 permalink: /staff/
-title: titles.staff-resources
+title: titles.staff.staff
 description: Documents to help our staff members do their jobs.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: titles.team-listings
+title: titles.about.teams
 layout: about-page-teams
 description: Learn about Quilt's team structure, and find out who's involved.
 ---

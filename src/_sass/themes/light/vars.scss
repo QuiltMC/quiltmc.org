@@ -105,6 +105,8 @@ $timeline-marker-border: 2px solid $text;
 
 $card-background-color: $dark;
 
+$modal-close-dimensions: 80px;
+
 @import "../../../../node_modules/bulma/sass/utilities/mixins";
 @import "../../../../node_modules/bulma-timeline/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";

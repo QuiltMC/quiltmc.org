@@ -9,6 +9,7 @@
 {% comment %}
 preload class stops CSS animations from playing during page load and is removed by JS
 {% endcomment %}
+
 <body class="page preload">
 {% include navbar.liquid %}
 
@@ -25,6 +26,7 @@ preload class stops CSS animations from playing during page load and is removed 
 {% endif %}
 
 {% include footer.liquid %}
+{% include language-modal.liquid %}
 
 <script>
     {% if page.has_downloads %}
