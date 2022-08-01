@@ -9,21 +9,20 @@ end
 
 module Jekyll
   class EditDateTag < Liquid::Tag
-
-    def initialize(tag_name, text, tokens)
+    def initialize(tag_name, markup, tokens)
       super
-      @text = text
+      @format = markup
     end
 
     def render(context)
       site = context.registers[:site]
       path = File.expand_path(context.registers[:page]["path"], site.source)
-
       last = Git.open(find_git_dir(site)).log.path(path).first
+
       if last != nil then
-        "#{@text} #{last.date.strftime('%B %-d, %Y')}"
+        "#{last.date.strftime(context[@format] || @format)}"
       else
-        "#{@text} &lt;no commits found&gt;"
+        "&nbsp;"  # We can't do a translation here, so don't return anything.
       end
     end
   end

@@ -1,5 +1,5 @@
 ---
-title: PluralKit
+title: titles.pluralkit
 description: Learn about PluralKit, a tool we use to help plural systems to interact more comfortably on Discord.
 
 redirect_from:

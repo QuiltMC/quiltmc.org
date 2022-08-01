@@ -1,5 +1,5 @@
 ---
-title: FAQ (Developers)
+title: titles.faq.devs
 layout: about-page
 permalink: /about/faq/developers/
 description: Frequently asked questions, but for developers.

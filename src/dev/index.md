@@ -1,5 +1,5 @@
 ---
-title: Development
+title: titles.development
 permalink: /dev/
 ---
 

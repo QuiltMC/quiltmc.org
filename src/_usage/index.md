@@ -1,6 +1,6 @@
 ---
 permalink: /usage/
-title: Usage Overview
+title: titles.usage-overview
 description: Learn how to use Quilt, and how to make the most of it.
 ---
 

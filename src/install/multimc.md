@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: MultiMC"
+title: titles.install.multimc
 permalink: /install/multimc/
 ---
 

@@ -1,8 +1,10 @@
 ---
-title: Writing Guidelines
+title: titles.staff.writing-guidelines
 description: Tips and best-practices for writing content on the site.
 author: gdude2002
 ---
+
+{% include variables.liquid %}
 
 Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers to hand for advice.
 This document is intended to be a set of guidelines, tips and tricks to use when writing documents, articles, blog posts
@@ -214,8 +216,8 @@ This is column 2.
 
 #### Git: Edit Date
 
-This tag simply inserts the date of the last commit this file was edited within. It also supports specifying some extra
-text.
+This tag simply inserts the date of the last commit this file was edited within. You should also provide a date 
+format - in this case, from the `format-date` variable, which represents the date format for the current translation.
 
 {% columns %}
 {% column %}
@@ -224,7 +226,7 @@ text.
 
 {% raw %}
 ```liquid
-{% edit_date Edited at: %}
+Edited at: {% edit_date format-date %}
 ```
 {% endraw %}
 
@@ -233,7 +235,7 @@ text.
 
 ##### Result
 
-{% edit_date Edited at: %}
+ Edited at: {% edit_date format-date %}
 
 {% endcolumn %}
 {% endcolumns %}

@@ -1,7 +1,9 @@
 ---
-title: Openings
+title: titles.openings
 description: Current Openings for positions on the Quilt Staff Team
 ---
+
+{% include variables.liquid %}
 
 <div class="media mb-5">
     <div class="media-content">
@@ -9,7 +11,7 @@ description: Current Openings for positions on the Quilt Staff Team
             {{ page.title }}
         </h1>
         <p class="subtitle is-6">
-            Last Updated: {% edit_date %}
+            Last Updated: {% edit_date format-date %}
         </p>
     </div>
 </div>

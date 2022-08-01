@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: About Us
+title: titles.about
 description: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
 ---
 

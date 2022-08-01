@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: ATLauncher"
+title: titles.install.atlauncher
 permalink: /install/atlauncher/
 ---
 

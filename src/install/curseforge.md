@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: CurseForge"
+title: titles.install.curseforge
 permalink: /install/curseforge/
 ---
 

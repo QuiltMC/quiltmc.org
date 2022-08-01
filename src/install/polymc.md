@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: PolyMC"
+title: titles.install.polymc
 permalink: /install/polymc/
 ---
 

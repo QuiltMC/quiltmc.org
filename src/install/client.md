@@ -1,6 +1,6 @@
 ---
 layout: install 
-title: "Install: Client"
+title: titles.install.client
 permalink: /install/client
 has_downloads: true
 ---

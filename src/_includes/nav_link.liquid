@@ -12,6 +12,9 @@
     {% assign is_subpage = page.url | startswith: url %}
 {% endif %}
 
+{% capture translated-text %}{% t text %}{% endcapture %}
+{% assign translation-count = translated-text | size %}
+
 <a href="{{ url }}"
    {% if target %}target="{{ target }}"{% endif %}
    class="navbar-item {% if is_subpage or url == page.url %}is-active {% endif %}{{ class }}"
@@ -20,5 +23,9 @@
         <span class="icon"><i class="fa-xl {{ icon }}"></i></span>
     {% endif %}
 
-    <span>{{ text }}</span>
+    {% if translation-count > 0 %}
+        <span>{{ translated-text }}</span>
+    {% else %}
+        <span>{{ text }}</span>
+    {% endif %}
 </a>

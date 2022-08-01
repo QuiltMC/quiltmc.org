@@ -1,4 +1,48 @@
-# This is here so that individual languages can specify their text direction - ltr or rtl.
-text-direction: "ltr"
+settings:
+  text-direction: "ltr"
+  title-separator: "|"
+
+  formats:
+    date: "%B %-d, %Y"
 
 # Translations go here
+
+titles:
+  about: About Us
+  blog: Blog
+  coc: Code of Conduct
+  community: Community
+  development: Development
+  gradle-snippets: Gradle Snippets
+  mc-patchnotes: Minecraft Patch-notes
+  newcomers-guide: Newcomers' Guide
+  openings: Openings
+  pluralkit: PluralKit
+  rules: Rules
+  staff-resources: Staff Resources
+  team-listings: Team Listings
+  timeline: Timeline
+  usage-overview: Usage Overview
+  troubleshooting: Troubleshooting
+
+  faq:
+    devs: FAQ (Developers)
+    general: FAQ
+
+  install:
+    install: Install
+
+    atlauncher: "Install: ATLauncher"
+    client: "Install: Client"
+    curseforge: "Install: CurseForge"
+    gdlauncher: "Install: GDLauncher"
+    multimc: "Install: MultiMC"
+    polymc: "Install: PolyMC"
+    server: "Install: Server"
+    technic: "Install: Technic Launcher"
+
+  staff:
+    moderation-team: Moderation Team
+    moderation: Moderation
+    outreach-team: Outreach Team
+    writing-guidelines: Writing Guidelines

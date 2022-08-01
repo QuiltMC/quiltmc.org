@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: GDLauncher"
+title: titles.install.gdlauncher
 permalink: /install/gdlauncher/
 ---
 

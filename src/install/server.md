@@ -1,6 +1,6 @@
 ---
 layout: install
-title: "Install: Server"
+title: titles.install.server
 permalink: /install/server/
 has_downloads: true
 ---

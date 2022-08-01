@@ -1,5 +1,5 @@
 ---
-title: Moderation Team
+title: titles.staff.moderation-team
 description: Documents to help guide the Moderation Team.
 ---
 

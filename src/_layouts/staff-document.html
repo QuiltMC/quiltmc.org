@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{% include variables.liquid %}
+
 {% columns is-centered %}
 {% column is-10 %}
 
@@ -46,11 +48,11 @@ layout: base
                         {% if slash_count == 1 %}
                         {% if page_slash_count == 1 %}
                         <li>
-                            <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
+                            <a href="{{p.url}}" class="{% if page.url == p.url %}is-active{% endif %}">{% t p.title %}</a>
                         </li>
                         {% else %}
                         <li>
-                            <a href="{{p.url}}" class="{% if is_subpage %}is-active{% endif %}">{{p.title}}</a>
+                            <a href="{{p.url}}" class="{% if is_subpage %}is-active{% endif %}">{% t p.title %}</a>
                         </li>
                         {% endif %}
                         {% endif %}
@@ -76,7 +78,7 @@ layout: base
                             {% for p in matched_pages %}
                             <li>
                                 <a href="{{p.url}}"
-                                   class="{% if page.url == p.url %}is-active{% endif %}">{{p.title}}</a>
+                                   class="{% if page.url == p.url %}is-active{% endif %}">{% t p.title %}</a>
                             </li>
                             {% endfor %}
                         </ul>
@@ -91,7 +93,7 @@ layout: base
             <div class="media mb-5">
                 <div class="media-content">
                     <h1 class="title">
-                        {{ page.title }}
+                        {{ title }}
                     </h1>
 
                     {% if page.author %}
@@ -107,7 +109,7 @@ layout: base
                     {% endif %}
 
                     <p class="subtitle is-6">
-                        Edited: {% edit_date %}
+                        Edited: {% edit_date format-date %}
                     </p>
                 </div>
             </div>

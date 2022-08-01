@@ -1,5 +1,5 @@
 ---
-title: Newcomers' Guide
+title: titles.newcomers-guide
 layout: about-page
 description: A newcomers' guide to Quilt - information, questions and concerns
 ---
