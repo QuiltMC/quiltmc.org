@@ -92,11 +92,10 @@ PLATFORMS
 DEPENDENCIES
   git (~> 1.8, >= 1.8.1)
   jekyll (~> 4.2.0)
-  jekyll-feed (~> 0.12)
+  jekyll-feed
   jekyll-multiple-languages-plugin (< 1.8.0)
   jekyll-paginate
   jekyll-redirect-from
-  jekyll-seo-tag
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data

@@ -15,8 +15,17 @@ gem "minima", "~> 2.5"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  # Plugin allowing for feed generation
+  gem "jekyll-feed"
+
+  # Plugin allowing for i18n, pinned below 1.8.0 because of a bug
   gem "jekyll-multiple-languages-plugin", "< 1.8.0"
+
+  # Plugin allowing for pagination of pages that need it
+  gem 'jekyll-paginate'
+
+  # Plugin allowing for pages to have extra redirects
+  gem "jekyll-redirect-from"
 end
 
 # Needed for git metadata
@@ -31,15 +40,6 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-
-# Plugin allowing for pages to have extra redirects
-gem "jekyll-redirect-from"
-
-# Plugin allowing generation of SEO data
-gem 'jekyll-seo-tag'
-
-# Plugin allowing for pagination of pages that need it
-gem 'jekyll-paginate'
 
 # Not included with Ruby 3.x
 gem "webrick", "~> 1.7"

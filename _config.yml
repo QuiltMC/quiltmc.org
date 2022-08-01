@@ -40,7 +40,6 @@ plugins:
   - jekyll-multiple-languages-plugin
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-seo-tag
 
 collections:
   about:
@@ -108,8 +107,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      seo:
-        type: BlogPosting
 
   # Mark pages private until full launch
 
