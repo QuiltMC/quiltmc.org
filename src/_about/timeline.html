@@ -4,15 +4,18 @@ layout: about-page-timeline
 description: Quilt's official timeline -- from beginning to today.
 ---
 
-<div class="timeline">
+{% include variables.liquid %}
+
+<div class="timeline {% if rtl %}is-rtl{% endif %}">
     <header class="timeline-header">
         <span class="tag is-medium is-primary">2021</span>
     </header>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-wrench"></i>
         </div>
+
         <div class="timeline-content">
             <h6 class="heading" id="2021-02-02">February 2nd, 2021</h6>
 
@@ -33,9 +36,10 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-people-carry-box"></i>
         </div>
+
         <div class="timeline-content">
             <h6 class="heading" id="2021-04-04">April 4th, 2021</h6>
 
@@ -48,7 +52,7 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-eyes"></i>
         </div>
         <div class="timeline-content">
@@ -74,7 +78,7 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fab fa-github"></i>
         </div>
         <div class="timeline-content">
@@ -97,7 +101,7 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-message-smile"></i>
         </div>
         <div class="timeline-content">
@@ -126,7 +130,7 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-pumpkin"></i>
         </div>
         <div class="timeline-content">
@@ -151,7 +155,7 @@ description: Quilt's official timeline -- from beginning to today.
     </div>
 
     <div class="timeline-item">
-        <div class="timeline-marker is-icon">
+        <div class="timeline-marker is-icon is-dark">
             <i class="fas fa-tags"></i>
         </div>
         <div class="timeline-content">

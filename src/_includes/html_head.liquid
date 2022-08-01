@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.bunny.net/css?family=Roboto" rel="stylesheet">
-    <link href="{{ "/assets/css/style.css" | relative_url }}" rel="stylesheet">
+
+    {% if site.translations[site.lang].text-direction == "rtl" %}
+        <link href="{{ "/assets/css/style-rtl.css" | prepend: site.baseurl_root }}" rel="stylesheet">
+    {% else %}
+        <link href="{{ "/assets/css/style.css" | prepend: site.baseurl_root }}" rel="stylesheet">
+    {% endif %}
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">

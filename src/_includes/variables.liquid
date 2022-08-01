@@ -1,0 +1,11 @@
+{% if site.translations[site.lang].text-direction == "rtl" %}
+    {% assign rtl = true %}
+{% endif %}
+
+{% if rtl %}
+    {% assign left = "right" %}
+    {% assign right = "left" %}
+{% else %}
+    {% assign left = "left" %}
+    {% assign right = "right" %}
+{% endif %}

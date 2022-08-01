@@ -27,7 +27,8 @@ module Jekyll
 
       "
 <summary class='#{@args}'>
-    <i class=\"summary-icon fa-solid fa-lg fa-circle-chevron-right\"></i>
+    <i class=\"summary-icon is-ltr fa-solid fa-lg fa-circle-chevron-right\"></i>
+    <i class=\"summary-icon is-rtl fa-solid fa-lg fa-circle-chevron-left\"></i>
     <span>#{converter.convert(text)}</span>
 </summary>
 "

@@ -9,7 +9,11 @@ div.highlighter-rouge {
 }
 
 figure.highlight {
-  text-align: left !important;
+  @if $rtl {
+    text-align: right !important;
+  } @else {
+    text-align: left !important;
+  }
 
   & > pre {
     background-color: $dark;

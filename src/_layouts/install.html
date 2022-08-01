@@ -2,11 +2,14 @@
 layout: default
 ---
 
+{% include variables.liquid %}
+
 <div class="columns">
     <div class="column is-5" data-controller="sidebar">
         <div class="is-hidden-tablet">
             <a class="button is-link" href="/install">
-                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                <span class="icon"><i class="fas fa-arrow-{{ left }}"></i></span>
+
                 <span>Back</span>
             </a>
 
@@ -21,7 +24,12 @@ layout: default
 
         <div class="is-hidden-mobile" data-sidebar-target="sidebar" data-scroll-to-top="true">
             <a class="is-hidden-mobile button is-link mb-2" href="/install">
-                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                {% if rtl %}
+                    <span class="icon"><i class="fas fa-arrow-right"></i></span>
+                {% else %}
+                    <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                {% endif %}
+
                 <span>Back to list</span>
             </a>
 

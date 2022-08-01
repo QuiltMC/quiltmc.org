@@ -102,7 +102,12 @@ $message-colors: (
 );
 
 $content-blockquote-background-color: $dark;
-$content-blockquote-border-left: 5px solid lighten($dark, 15%);
+
+@if $rtl {
+  $content-blockquote-border-right: 5px solid lighten($dark, 15%);
+} @else {
+  $content-blockquote-border-left: 5px solid lighten($dark, 15%);
+}
 
 $link-hover: $link-dark;
 $link-active: $link-dark;
@@ -154,3 +159,5 @@ $button-disabled-background-color: $dark;
 @import "../../../../node_modules/bulma-timeline/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";
+
+@import "../../components/timeline";

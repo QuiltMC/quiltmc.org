@@ -1,0 +1,4 @@
+# This is here so that individual languages can specify their text direction - ltr or rtl.
+text-direction: "ltr"
+
+# Translations go here

@@ -139,3 +139,91 @@ body {
   /* Force minimum height of document body to be the viewport height */
   min-height: 100vh;
 }
+
+.navbar .navbar-brand .navbar-logo {
+  @include ltr {
+    padding-right: 3em;
+
+    img {
+      margin-right: 0.5em;
+    }
+  }
+
+  @include rtl {
+    padding-left: 3em;
+
+    img {
+      margin-left: 1em;
+    }
+  }
+}
+
+@include rtl {
+  .navbar-dropdown {
+    left: auto;
+    right: 0;
+
+    .icon {
+      margin-right: 0;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .navbar-dropdown.is-right {
+    left: 0;
+    right: auto;
+  }
+}
+
+.patchnotes-image {
+  @include ltr {
+    float: right;
+    margin-left: 2em;
+  }
+
+  @include rtl {
+    float: left;
+    margin-right: 2em;
+  }
+}
+
+@include rtl {
+  pre, pre * {
+    direction: ltr;
+  }
+}
+
+.heading-with-button {
+  display: flex;
+  flex-direction: row;
+
+  h1, h2, h3, h4, h5, h6 {
+    flex-grow: 1;
+  }
+
+  .button, button {
+    flex-shrink: 1;
+  }
+}
+
+@include rtl {
+  @media screen and (min-width: 769px), print {
+    .field-label {
+      text-align: left;
+      margin-left: 1.5rem;
+      margin-right: 0;
+    }
+  }
+}
+
+@include ltr {
+  .is-rtl {
+    display: none !important;
+  }
+}
+
+@include rtl {
+  .is-ltr {
+    display: none !important;
+  }
+}

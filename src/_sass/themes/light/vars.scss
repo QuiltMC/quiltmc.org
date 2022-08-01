@@ -85,7 +85,12 @@ $menu-item-active-background-color: $primary;
 $menu-item-hover-background-color: $primary-lighter;
 
 $content-blockquote-background-color: $primary-lighter;
-$content-blockquote-border-left: 5px solid $primary;
+
+@if $rtl {
+  $content-blockquote-border-right: 5px solid $primary;
+} @else {
+  $content-blockquote-border-left: 5px solid $primary;
+}
 
 $navbar-item-active-background-color: $primary-lighter;
 $navbar-item-active-color: $text;
@@ -104,3 +109,5 @@ $card-background-color: $dark;
 @import "../../../../node_modules/bulma-timeline/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-divider/src/sass/index";
 @import "../../../../node_modules/@creativebulma/bulma-tooltip/src/sass/index";
+
+@import "../../components/timeline";

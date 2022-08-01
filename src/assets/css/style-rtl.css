@@ -1,0 +1,2 @@
+@import "style-light-rtl.css";
+@import "style-dark-rtl.css" (prefers-color-scheme: dark);

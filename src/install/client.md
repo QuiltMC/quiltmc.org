@@ -5,7 +5,10 @@ permalink: /install/client
 has_downloads: true
 ---
 
-# Client <a href="https://www.minecraft.net/en-us/download" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
+<div class="heading-with-button">
+   <h1>Client</h1>
+   <a href="https://www.minecraft.net/en-us/download" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
+</div>
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. 
 

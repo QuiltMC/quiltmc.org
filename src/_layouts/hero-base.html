@@ -2,6 +2,8 @@
 layout: base-navless
 ---
 
+{% include variables.liquid %}
+
 <section class="hero is-dark has-background-patches">
     <div class="hero-head">
         {% include navbar.liquid style="no-style" %}
@@ -9,11 +11,20 @@ layout: base-navless
 
     <div class="hero-body">
         <div class="container has-text-centered">
+            {% if rtl %}
+            <picture>
+                <source srcset="/assets/img/banner-rtl.svg" media="(prefers-color-scheme: dark)">
+                <img class="is-center" style="margin:auto; height: 8rem;" alt="Quilt Banner"
+                     src="/assets/img/banner-light-rtl.svg"/>
+            </picture>
+
+            {% else %}
             <picture>
                 <source srcset="/assets/img/banner.svg" media="(prefers-color-scheme: dark)">
                 <img class="is-center" style="margin:auto; height: 8rem;" alt="Quilt Banner"
                      src="/assets/img/banner-light.svg"/>
             </picture>
+            {% endif %}
 
             <div class="button-grid">
                 <a href="/install/" class="button is-primary">

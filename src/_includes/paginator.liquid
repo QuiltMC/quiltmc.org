@@ -1,26 +1,28 @@
 {% assign paginator = include.paginator -%}
 
+{% include variables.liquid %}
+
 {% if paginator.total_posts > paginator.per_page %}
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         {% if paginator.previous_page %}
             <a class="pagination-previous" href="/blog/"
                aria-label="Goto page 1">
-                <span class="icon"><i class="fas fa-angles-left"></i></span>
+                <span class="icon"><i class="fas fa-angles-{{ left }}"></i></span>
                 <span class="is-hidden-mobile">First</span>
             </a>
 
             <a class="pagination-previous" href="{{ paginator.previous_page_path }}">
-                <span class="icon"><i class="fas fa-angle-left"></i></span>
+                <span class="icon"><i class="fas fa-angle-{{ left }}"></i></span>
                 <span>Previous</span>
             </a>
         {% else %}
             <a class="is-disabled pagination-previous" disabled>
-                <span class="icon"><i class="fas fa-angles-left"></i></span>
+                <span class="icon"><i class="fas fa-angles-{{ left }}"></i></span>
                 <span class="is-hidden-mobile">First</span>
             </a>
 
             <a class="is-disabled pagination-previous" disabled>
-                <span class="icon"><i class="fas fa-angle-left"></i></span>
+                <span class="icon"><i class="fas fa-angle-{{ left }}"></i></span>
                 <span>Previous</span>
             </a>
         {% endif %}
@@ -28,23 +30,23 @@
         {% if paginator.next_page %}
             <a class="pagination-next" href="{{ paginator.next_page_path }}">
                 <span>Next</span>
-                <span class="icon"><i class="fas fa-angle-right"></i></span>
+                <span class="icon"><i class="fas fa-angle-{{ right }}"></i></span>
             </a>
 
             <a class="pagination-next" href="/blog/p/{{ paginator.total_pages }}/"
                aria-label="Goto page {{ paginator.total_pages }}">
                 <span class="is-hidden-mobile">Last</span>
-                <span class="icon"><i class="fas fa-angles-right"></i></span>
+                <span class="icon"><i class="fas fa-angles-{{ right }}"></i></span>
             </a>
         {% else %}
             <a class="is-disabled pagination-next" disabled>
                 <span>Next</span>
-                <span class="icon"><i class="fas fa-angle-right"></i></span>
+                <span class="icon"><i class="fas fa-angle-{{ right }}"></i></span>
             </a>
 
             <a class="is-disabled pagination-next" disabled>
                 <span class="is-hidden-mobile">Last</span>
-                <span class="icon"><i class="fas fa-angles-right"></i></span>
+                <span class="icon"><i class="fas fa-angles-{{ right }}"></i></span>
             </a>
         {% endif %}
 

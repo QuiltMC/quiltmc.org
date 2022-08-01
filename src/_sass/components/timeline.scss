@@ -1,14 +1,20 @@
 .timeline .timeline-item .timeline-marker.is-icon {
-  height: 3rem;
-  width: 3rem;
+  padding: 1.5rem;
 
   background-color: darken($dark, 10%);
-
-  > svg {
-    height: 1.5rem;
-  }
 }
 
 .timeline-item .is-icon + .timeline-content .heading {
   margin-top: 1.2rem;
+}
+
+@include rtl {
+  .timeline.is-rtl {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .timeline-item {
+      justify-content: flex-start;
+    }
+  }
 }

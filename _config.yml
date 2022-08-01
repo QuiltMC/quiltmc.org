@@ -10,6 +10,9 @@ author: QuiltMC
 paginate_path: "/blog/p/:num/"
 paginate: 5
 
+languages: ["en"]
+exclude_from_localizations: ["assets", "favicon"]
+
 # Social media handles
 twitter_username: quilt_mc
 github_username: QuiltMC
@@ -34,6 +37,7 @@ social:
 
 plugins:
   - jekyll-feed
+  - jekyll-multiple-languages-plugin
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag

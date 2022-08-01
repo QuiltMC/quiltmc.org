@@ -4,7 +4,10 @@ title: "Install: GDLauncher"
 permalink: /install/gdlauncher/
 ---
 
-# GDLauncher <a href="https://gdevs.io" class="button is-link is-pulled-right"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
+<div class="heading-with-button">
+   <h1>GDLauncher</h1>
+   <a href="https://gdevs.io" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
+</div>
 
 ### Status: Pending Discussion
 

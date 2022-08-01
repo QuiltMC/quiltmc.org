@@ -181,19 +181,17 @@ users, with the leftmost column showing first.
 
 ```liquid
 {% columns %}
-
-{% column %}
-{% admonition %}
-This is column 1.
-{% endadmonition %}
-{% endcolumn %}
-
-{% column %}
-{% admonition %}
-This is column 2.
-{% endadmonition %}
-{% endcolumn %}
-
+    {% column %}
+        {% admonition %}
+            This is column 1.
+        {% endadmonition %}
+    {% endcolumn %}
+    
+    {% column %}
+        {% admonition %}
+            This is column 2.
+        {% endadmonition %}
+    {% endcolumn %}
 {% endcolumns %}
 ```
 {% endraw %}
