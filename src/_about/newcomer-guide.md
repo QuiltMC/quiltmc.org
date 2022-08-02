@@ -1,7 +1,7 @@
 ---
 title: titles.about.newcomer-guide
 layout: about-page
-description: A newcomers' guide to Quilt - information, questions and concerns
+description: descriptions.about.newcomer-guide
 ---
 
 This document is intended to be an overview of Quilt, and a way to address common questions and concerns by newcomers

@@ -1,6 +1,6 @@
 ---
 title: titles.staff.moderation.team
-description: Documents to help guide the Moderation Team.
+description: descriptions.staff.moderation.team
 ---
 
 This section includes documents intended to guide and support Quilt's Moderation Team. Please select a document from

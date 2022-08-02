@@ -1,7 +1,7 @@
 ---
 permalink: /staff/
 title: titles.staff.staff
-description: Documents to help our staff members do their jobs.
+description: descriptions.staff.staff
 ---
 
 This section of the site contains staff guidance documents, split up by the specific teams that they're intended for.

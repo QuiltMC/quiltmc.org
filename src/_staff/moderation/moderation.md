@@ -1,6 +1,6 @@
 ---
 title: titles.staff.moderation.moderation
-description: Quilt's standard moderation policy -- a guide for moderation staff.
+description: descriptions.staff.moderation.moderation
 
 redirect_from:
 - /community/moderation.html

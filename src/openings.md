@@ -1,6 +1,6 @@
 ---
 title: titles.openings
-description: Current Openings for positions on the Quilt Staff Team
+description: descriptions.openings
 ---
 
 {% include variables.liquid %}

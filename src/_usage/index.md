@@ -1,7 +1,7 @@
 ---
 permalink: /usage/
 title: titles.usage.usage
-description: Learn how to use Quilt, and how to make the most of it.
+description: descriptions.usage.usage
 ---
 
 This section contains usage documentation for Quilt. It currently contains a small collection of information to help

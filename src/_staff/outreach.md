@@ -1,6 +1,6 @@
 ---
 title: titles.staff.outreach.team
-description: Documents to help guide the Outreach Team.
+description: descriptions.staff.outreach.team
 ---
 
 This section includes documents intended to guide and support Quilt's Outreach Team. Please select a document from

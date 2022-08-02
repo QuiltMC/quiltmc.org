@@ -1,7 +1,7 @@
 ---
 title: titles.about.faq.general
 layout: about-page-faq
-description: Frequently asked questions, for the burning topics that need addressing regularly.
+description: descriptions.about.faq.general
 
 redirect_from:
 - /faq/

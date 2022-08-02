@@ -1,6 +1,6 @@
 ---
 title: titles.staff.outreach.writing-guidelines
-description: Tips and best-practices for writing content on the site.
+description: descriptions.staff.outreach.writing-guidelines
 author: gdude2002
 ---
 

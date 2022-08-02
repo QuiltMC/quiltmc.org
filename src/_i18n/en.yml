@@ -7,6 +7,41 @@ settings:
 
 # Translations go here
 
+descriptions:
+  mc-patchnotes: Quilt's Minecraft launcher patch-notes viewer.
+  openings: Current Openings for positions on the Quilt Staff Team
+
+  about:
+    about: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
+    newcomer-guide: A newcomers' guide to Quilt - information, questions and concerns
+    teams: Learn about Quilt's team structure, and find out who's involved.
+    timeline: Quilt's official timeline -- from beginning to today.
+
+    faq:
+      devs: Frequently asked questions, but for developers.
+      general: Frequently asked questions, for the burning topics that need addressing regularly.
+
+  community:
+    coc: Quilt's Code of Conduct, for all community interactions.
+    community: Learn about Quilt's community spaces, and what we expect of our users.
+    pluralkit: Learn about PluralKit, a tool we use to help plural systems to interact more comfortably on Discord.
+    rules: Quilt's core rules, which build upon the Code of Conduct to provide a set of concrete guidelines for behaviour.
+
+  staff:
+    staff: Documents to help our staff members do their jobs.
+
+    moderation:
+      moderation: Quilt's standard moderation policy -- a guide for moderation staff.
+      team: Documents to help guide the Moderation Team.
+
+    outreach:
+      team: Documents to help guide the Outreach Team.
+      writing-guidelines: Tips and best-practices for writing content on the site.
+
+  usage:
+    usage: Learn how to use Quilt, and how to make the most of it.
+    troubleshooting: How to troubleshoot Quilt when there's an issue
+
 titles:
   blog: Blog
   development: Development

@@ -1,6 +1,6 @@
 ---
 title: titles.community.coc
-description: Quilt's Code of Conduct, for all community interactions.
+description: descriptions.community.coc
 
 redirect_from:
 - /community/code-of-conduct.html

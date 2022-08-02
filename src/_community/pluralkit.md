@@ -1,6 +1,6 @@
 ---
 title: titles.community.pluralkit
-description: Learn about PluralKit, a tool we use to help plural systems to interact more comfortably on Discord.
+description: descriptions.community.pluralkit
 
 redirect_from:
   - /community/tupperbox

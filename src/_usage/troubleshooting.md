@@ -1,7 +1,7 @@
 ---
 permalink: /usage/troubleshooting
 title: titles.usage.troubleshooting
-description: How to troubleshoot Quilt when there's an issue
+description: descriptions.usage.troubleshooting
 redirect-from:
 - /troubleshooting.html
 ---
