@@ -8,7 +8,7 @@ description: Current Openings for positions on the Quilt Staff Team
 <div class="media mb-5">
     <div class="media-content">
         <h1 class="title">
-            {{ page.title }}
+            {{ title }}
         </h1>
         <p class="subtitle is-6">
             Last Updated: {% edit_date format-date %}
