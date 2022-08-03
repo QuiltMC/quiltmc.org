@@ -1,0 +1,54 @@
+---
+import HtmlHead from "@components/HtmlHead.astro";
+import NavBar from "@components/NavBar.astro";
+import config from "@data/Config"
+
+export interface Props {
+    navless?: boolean,
+    isPrivate?: boolean,
+}
+const {
+    navless = false,
+    isPrivate = false,
+} = Astro.props as Props;
+
+//@ts-ignore this comes with Vite
+const shouldHide = isPrivate && import.meta.env.PROD
+---
+
+<!DOCTYPE html>
+
+{/* include variables.liquid */}
+
+<html lang={config.lang} {/*  dir="rtl" */}>
+
+<HtmlHead title="test" />
+<!-- {% include html_head.liquid %} -->
+
+<body class="page">
+    { navless ? <NavBar /> : <></> }
+
+    { shouldHide
+        ? <section class="section">
+            <main class="content container">
+                <h1 class="title">Coming soon!</h1>
+
+                Thanks for being patient.
+            </main>
+        </section>
+        : <slot />
+    }
+
+<!-- {% include footer.liquid %} -->
+<!-- {% include language-modal.liquid %} -->
+
+<!-- <script>
+    {% if page.has_downloads %}
+    window.pageHasDownloads = true
+    {% else %}
+    window.pageHasDownloads = false
+    {% endif %}
+</script> -->
+
+</body>
+</html>
