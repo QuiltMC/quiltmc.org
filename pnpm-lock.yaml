@@ -6,10 +6,12 @@ specifiers:
   '@creativebulma/bulma-tooltip': ^1.2.0
   '@types/webpack-env': ^1.17.0
   astro: 1.0.0-rc.4
+  astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
   core-js: ^3.8.3
   github-slugger: ^1.4.0
+  i18next: ^21.8.16
   sass: ^1.54.1
   stimulus: ^2.0.0
   ts-loader: ^8.0.17
@@ -24,10 +26,12 @@ dependencies:
   '@creativebulma/bulma-tooltip': 1.2.0
   '@types/webpack-env': 1.17.0
   astro: 1.0.0-rc.4_sass@1.54.1
+  astro-i18next: 1.0.0-beta.3_astro@1.0.0-rc.4
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   core-js: 3.24.1
   github-slugger: 1.4.0
+  i18next: 21.8.16
   stimulus: 2.0.0
   ts-loader: 8.4.0_xnp4kzegbjokq62cajex2ovgkm
   typescript: 4.7.4
@@ -356,6 +360,13 @@ packages:
       '@babel/helper-plugin-utils': 7.18.9
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.18.10
       '@babel/types': 7.18.10
+    dev: false
+
+  /@babel/runtime/7.18.9:
+    resolution: {integrity: sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
     dev: false
 
   /@babel/template/7.18.10:
@@ -940,6 +951,17 @@ packages:
     hasBin: true
     dev: false
 
+  /astro-i18next/1.0.0-beta.3_astro@1.0.0-rc.4:
+    resolution: {integrity: sha512-Vw2nwcj/aM0F7BcuAQLPrEf6dKh51BNWvQf0SeI54vx/HPweF9gwEYhFlERajIVMyStpRpfGslZiwRrei6QX5g==}
+    peerDependencies:
+      astro: ^1.0.0-beta.1
+    dependencies:
+      astro: 1.0.0-rc.4_sass@1.54.1
+      country-code-to-flag-emoji: 1.1.0
+      i18next: 21.8.16
+      iso-639-1: 2.1.15
+    dev: false
+
   /astro/1.0.0-rc.4_sass@1.54.1:
     resolution: {integrity: sha512-FAgmoAzC0odZ/eGx+SfpIhDahpfMsVZ+TgE0mlJuv13R68bDlhN9hzIvv8vCk9JwQMg91Adw77TaqJmS2UcQ7g==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
@@ -1259,6 +1281,10 @@ packages:
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: false
+
+  /country-code-to-flag-emoji/1.1.0:
+    resolution: {integrity: sha512-S+UzvEKOrfDUwhN8YyMDgiQyYCVUVNBVtt4NUFwDz1nQ8mWo2cqA6Rkvb9uA90EsHS+hGIolpLGVrYnC2IQVKA==}
     dev: false
 
   /cross-spawn/7.0.3:
@@ -2022,6 +2048,12 @@ packages:
     engines: {node: '>=12.20.0'}
     dev: false
 
+  /i18next/21.8.16:
+    resolution: {integrity: sha512-acJLCk38YMfEPjBR/1vS13SFY7rBQLs9E5m1tSRnWc9UW3f+SZszgH+NP1fZRA1+O+CdG2eLGGmuUMJW52EwzQ==}
+    dependencies:
+      '@babel/runtime': 7.18.9
+    dev: false
+
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
@@ -2178,6 +2210,11 @@ packages:
 
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  /iso-639-1/2.1.15:
+    resolution: {integrity: sha512-7c7mBznZu2ktfvyT582E2msM+Udc1EjOyhVRE/0ZsjD9LBtWSm23h3PtiRh2a35XoUsTQQjJXaJzuLjXsOdFDg==}
+    engines: {node: '>=6.0'}
+    dev: false
 
   /isobject/3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}

@@ -1,23 +1,28 @@
+import { t } from "i18next";
+
 export type TextDirection = 'rtl' | 'ltr';
 export type Direction = 'left' | 'right';
 
-export class Settings {
+export class LocaleSettings {
     textDirection: TextDirection;
     rtl: boolean;
     left: Direction;
     right: Direction;
+    titleSeparator: string;
 
-    constructor(textDirection: TextDirection) {
-        this.textDirection = textDirection;
+    constructor() {
+        this.textDirection = t("settings.text-direction");
         this.rtl = this.textDirection == 'rtl';
         this.left = this.rtl ? 'right' : 'left';
         this.right = this.rtl ? 'left' : 'right';
+        this.titleSeparator = t("settings.title-separator");
     } 
 }
 
 // TODO temporary
-export const settings: Settings = new Settings('ltr');
+const localeSettings: LocaleSettings = new LocaleSettings();
 
+export default localeSettings;
 // {% capture text-direction %}{% t settings.text-direction %}{% endcapture %}
 // {% capture title-separator %}{% t settings.title-separator %}{% endcapture %}
 // {% capture format-date %}{% t settings.formats.date %}{% endcapture %}

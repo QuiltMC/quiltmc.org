@@ -1,0 +1,40 @@
+---
+import { t } from "i18next";
+
+export interface Props {
+    href: string,
+    klass?: string,
+    text: string,
+    icon?: string,
+    // all values accepted by <a>'s `target`
+    target?: '_self' | '_blank' | '_parent' | '_top',
+    subpage?: boolean,
+}
+
+const {
+    href,
+    klass,
+    text,
+    icon,
+    target = '_self',
+    subpage = false
+} = Astro.props as Props;
+
+const pageUrl = Astro.url.pathname
+const isSubpage = subpage && pageUrl.startsWith(href);
+
+const translatedText = t(text)
+
+const isActive = isSubpage || href === pageUrl ? "is-active" : ""
+---
+
+<a href={href}
+   target={target}
+   class={`navbar-item ${isActive} ${klass}`}
+>
+    {icon
+        ? <span class="icon"><i class={`fa-xl ${icon}`}></i></span>
+        : <></>
+    }
+    <span>{ translatedText.length > 0 ? translatedText : text }</span>
+</a>

@@ -1,0 +1,90 @@
+---
+import Dropdown from "./nav/Dropdown.astro";
+import NavLink from "./nav/NavLink.astro";
+
+export interface Props {
+    style?: string,
+}
+
+const {
+    style = "is-dark",
+} = Astro.props as Props;
+
+---
+
+<nav class={`navbar ${style}`} role="navigation" aria-label="main navigation" data-controller="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item navbar-logo" href="/">
+            <img src="/assets/img/logo.svg" alt="Quilt Logo" />
+
+            <span class="ml-2">QuiltMC</span>
+        </a>
+
+        <a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" style="display: none" id="language-switcher" data-tooltip="Switch Language">
+            <i class="fak fa-language fa-2xl"></i>
+        </a>
+
+        <a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" id="theme-switcher" data-tooltip="Toggle Low Contrast">
+            <span id="theme-normal-contrast">
+                <i class="fas fa-circle-half-stroke fa-xl"></i>
+            </span>
+
+            <span id="theme-low-contrast">
+                <i class="fal fa-circle-half-stroke fa-xl"></i>
+            </span>
+        </a>
+
+        <a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" data-navbar-target="menu">
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <Dropdown category="about" name="About" />
+            </div>
+
+            <NavLink text="Blog" href="/blog/" subpage={true}/>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <Dropdown category="community" name="Community" right={true}/>
+            </div>
+
+            <NavLink text="Install" href="/install/" subpage={true}/>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <Dropdown category="usage" name="Usage" right={true}>
+                    <div class="divider"> Development </div>
+
+                    <NavLink text="Developer Wiki" href="https://modder.wiki.quiltmc.org" subpage={false} />
+                    <NavLink target="_blank" text="Maven Repository" href="https://maven.quiltmc.org" />
+                    <NavLink target="_blank" text="Template Mod" href="https://github.com/QuiltMC/quilt-template-mod" />
+
+                    <div class="divider"> External Links </div>
+
+                    <NavLink text="Quilt Import Utility" href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false} />
+                </Dropdown>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <span class="is-hidden-desktop">
+                        More Pages
+                    </span>
+                    <span class="icon is-hidden-mobile is-hidden-tablet-only">
+                        <i class="fas fa-ellipsis-v fa-xl"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-dropdown is-right is-boxed">
+                    <NavLink text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" />
+                    <NavLink text="Openings" href="/openings/" icon= "fas fa-briefcase" />
+                    <NavLink text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" subpage={true} />
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

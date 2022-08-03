@@ -1,15 +1,16 @@
 ---
 import Base from "./Base.astro";
-import { settings } from "@data/Variables.js"
-import config from "@data/Config.js"
+import localeSettings from "@data/LocaleSettings"
+import config from "@data/Config"
+import NavBar from "@components/NavBar.astro";
 
-const { rtl } = settings
+const { rtl } = localeSettings
 ---
 
-<Base navless={true}>
+<Base>
     <section class="hero is-dark has-background-patches">
         <div class="hero-head">
-            {/* include navbar.liquid style="no-style" */}
+            <NavBar style="no-style" />
         </div>
 
         <div class="hero-body">

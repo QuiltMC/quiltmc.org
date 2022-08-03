@@ -1,3 +1,6 @@
 // @import "./style-light";
-// TODO: media queries are not allowed on import/use statements - find another way to do this
-@import "./style-dark";
+
+//FIXME: AAAAAAAAAAAAAAAAAAAa
+// @media (prefers-color-scheme: dark) {
+    @import "./style-dark";
+// }

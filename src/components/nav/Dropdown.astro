@@ -1,0 +1,32 @@
+---
+import { sortByKey } from "src/util/Util";
+import NavLink from "./NavLink.astro";
+
+export interface Props {
+    category: string,
+    name: string,
+    right?: boolean,
+}
+
+const pageUrl = Astro.url.pathname;
+const { category, name, right = false } = Astro.props as Props;
+
+const pages = (await Astro.glob(`/src/pages/**/*.md`))
+    .filter(post => post.url?.startsWith(`/${category}`))
+
+sortByKey(pages, page => page.frontmatter.title)
+---
+
+<a href={category} class:list={[
+    "navbar-link is-arrowless",
+    pageUrl.startsWith(`/${category}/`) ? "is-active" : ""
+]}>
+    {name}
+</a>
+
+<div class:list={["navbar-dropdown is-boxed", right ? "is-right" : ""]}>
+    {pages.map(p =>
+        <NavLink text={p.frontmatter.title} href={p.url} subpage={false} />
+    )}
+    <slot />
+</div>

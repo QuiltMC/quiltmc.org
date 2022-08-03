@@ -1,3 +1,5 @@
 @import "./style-light-rtl";
-// TODO: media queries are not allowed on import/use statements - find another way to do this
-@import "./style-dark-rtl.scss";
+
+@media (prefers-color-scheme: dark) {
+    @import "./style-dark-rtl";
+}

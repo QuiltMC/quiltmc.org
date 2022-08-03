@@ -1,7 +1,7 @@
 ---
+import Footer from "@components/Footer.astro";
 import HtmlHead from "@components/HtmlHead.astro";
 import NavBar from "@components/NavBar.astro";
-import config from "@data/Config"
 
 export interface Props {
     navless?: boolean,
@@ -18,12 +18,9 @@ const shouldHide = isPrivate && import.meta.env.PROD
 
 <!DOCTYPE html>
 
-{/* include variables.liquid */}
+<html lang="{{ site.lang }}" {/*  dir="rtl" */}>
 
-<html lang={config.lang} {/*  dir="rtl" */}>
-
-<HtmlHead title="test" />
-<!-- {% include html_head.liquid %} -->
+<HtmlHead title="ha" />
 
 <body class="page">
     { navless ? <NavBar /> : <></> }
@@ -39,7 +36,7 @@ const shouldHide = isPrivate && import.meta.env.PROD
         : <slot />
     }
 
-<!-- {% include footer.liquid %} -->
+    <Footer />
 <!-- {% include language-modal.liquid %} -->
 
 <!-- <script>
