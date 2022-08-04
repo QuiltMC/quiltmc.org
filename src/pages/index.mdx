@@ -2,7 +2,8 @@
 layout: /src/layouts/HeroContent.astro
 ---
 import Admonition from '@components/Admonition.astro';
-import config from '@data/Config'
+import LatestPosts from '@components/LatestPosts.astro';
+import config from '@data/Config';
 
 {/*
   FIXME: port to components once nested components don't
@@ -188,23 +189,7 @@ import config from '@data/Config'
     </div>
   </div>
   <div class="column is-5">
-    {/*
     # Latest Posts
-
-    <article class="blog-post with-divider">
-        <h2 class="subtitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-
-        {% include post_info.liquid post=post %}
-
-        <p>{{ post.excerpt }}</p>
-    </article>
-
-    <div class="is-flex mt-4 is-justify-content-right">
-        <a class="button is-primary" href="/blog">
-            <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-            <span>More Posts</span>
-        </a>
-    </div>
-    */}
+    <LatestPosts />
   </div>
 </div>

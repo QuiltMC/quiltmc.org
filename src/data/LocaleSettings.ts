@@ -3,12 +3,17 @@ import { t } from "i18next";
 export type TextDirection = 'rtl' | 'ltr';
 export type Direction = 'left' | 'right';
 
+export interface Format {
+    date: string;
+}
 export class LocaleSettings {
     textDirection: TextDirection;
     rtl: boolean;
     left: Direction;
     right: Direction;
+
     titleSeparator: string;
+    format: Format;
 
     constructor() {
         this.textDirection = t("settings.text-direction");
@@ -16,6 +21,9 @@ export class LocaleSettings {
         this.left = this.rtl ? 'right' : 'left';
         this.right = this.rtl ? 'left' : 'right';
         this.titleSeparator = t("settings.title-separator");
+        this.format = {
+            date: t("settings.format.date")
+        }
     } 
 }
 

@@ -1,6 +1,43 @@
 {
     "settings": {
         "text-direction": "ltr",
-        "title-separator": " | "
+        "title-separator": " | ",
+        "format": {
+            "date": "%B %-d, %Y"
+        }
+    },
+    "titles": {
+        "about": {
+            "header": "About",
+            "about": "About"
+        },
+        "blog": {
+            "header": "Blog"
+        },
+        "community": {
+            "header": "Community"
+        },
+        "install": {
+            "header": "Install"
+        },
+        "usage": {
+            "header": "Usage",
+            "development": {
+                "divider": " Development ",
+                "developer-wiki": "Developer Wiki",
+                "maven-repository": "Maven Repository",
+                "template-mod": "Template Mod"
+            },
+            "external-links": {
+                "divider": " External Links ",
+                "import-utility": "Quilt Import Utility"
+            }
+        },
+        "more-pages": {
+            "header": "More Pages",
+            "patch-notes": "Minecraft Patch Notes",
+            "openings": "Openings",
+            "staff-resources": "Staff Resources"
+        }
     }
 }

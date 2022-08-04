@@ -1,0 +1,35 @@
+---
+import localeSettings from '@data/LocaleSettings';
+import strftime from 'strftime';
+
+export interface Props {
+    post: PostFrontmatter,
+}
+export interface PostFrontmatter {
+    title: string,
+    author?: string,
+    authors?: string[],
+    date: string,
+}
+
+const { post } = Astro.props as Props;
+const { author, authors, date } = post;
+---
+
+<div class="media">
+    <div class="media-content">
+        {(() => {
+            if (author) {
+                return <p class="title is-5">{author}</p>;
+            } else if (authors) {
+                return <p class="title is-5">{authors.join(', ')}</p>;
+            } else {
+                return <></>;
+            }
+        })()}
+
+        <p class="subtitle is-6">
+            {strftime(localeSettings.format.date, new Date(date))}
+        </p>
+    </div>
+</div>

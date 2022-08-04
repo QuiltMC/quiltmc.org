@@ -1,4 +1,5 @@
 ---
+import { t } from "i18next";
 import Dropdown from "./nav/Dropdown.astro";
 import NavLink from "./nav/NavLink.astro";
 
@@ -44,35 +45,47 @@ const {
     <div class="navbar-menu" data-navbar-target="menu">
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="about" name="About" />
+                <Dropdown category="about" name={t("titles.about.header")} />
             </div>
 
-            <NavLink text="Blog" href="/blog/" subpage={true}/>
+            <NavLink href="/blog/" subpage={true}>
+                {t("titles.blog.header")}
+            </NavLink>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="community" name="Community" right={true}/>
+                <Dropdown category="community" name={t("titles.community.header")} right={true}/>
             </div>
 
-            <NavLink text="Install" href="/install/" subpage={true}/>
+            <NavLink href="/install/" subpage={true}>
+                {t("titles.install.header")}
+            </NavLink>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="usage" name="Usage" right={true}>
-                    <div class="divider"> Development </div>
+                <Dropdown category="usage" name={t("titles.usage.header")} right={true}>
+                    <div class="divider">{t("titles.usage.development.divider")}</div>
 
-                    <NavLink text="Developer Wiki" href="https://modder.wiki.quiltmc.org" subpage={false} />
-                    <NavLink target="_blank" text="Maven Repository" href="https://maven.quiltmc.org" />
-                    <NavLink target="_blank" text="Template Mod" href="https://github.com/QuiltMC/quilt-template-mod" />
+                    <NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
+                        {t("titles.usage.development.developer-wiki")}
+                    </NavLink>
+                    <NavLink target="_blank" href="https://maven.quiltmc.org">
+                        {t("titles.usage.development.maven-repository")}
+                    </NavLink>
+                    <NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
+                        {t("titles.usage.development.template-mod")}
+                    </NavLink>
 
-                    <div class="divider"> External Links </div>
+                    <div class="divider">{t("titles.usage.external-links.divider")}</div>
 
-                    <NavLink text="Quilt Import Utility" href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false} />
+                    <NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
+                        {t("titles.usage.external-links.import-utility")}
+                    </NavLink>
                 </Dropdown>
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <span class="is-hidden-desktop">
-                        More Pages
+                        {t("titles.more-pages.header")}
                     </span>
                     <span class="icon is-hidden-mobile is-hidden-tablet-only">
                         <i class="fas fa-ellipsis-v fa-xl"></i>
@@ -80,9 +93,15 @@ const {
                 </a>
 
                 <div class="navbar-dropdown is-right is-boxed">
-                    <NavLink text="Minecraft Patch Notes" href="/mc-patchnotes/" icon="fas fa-notebook" />
-                    <NavLink text="Openings" href="/openings/" icon= "fas fa-briefcase" />
-                    <NavLink text="Staff Resources" href="/staff/" icon="fas fa-clipboard-user" subpage={true} />
+                    <NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
+                        {t("titles.more-pages.patch-notes")}
+                    </NavLink>
+                    <NavLink href="/openings/" icon= "fas fa-briefcase">
+                        {t("titles.more-pages.openings")}
+                    </NavLink>
+                    <NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
+                        {t("titles.more-pages.staff-resources")}
+                    </NavLink>
                 </div>
             </div>
         </div>

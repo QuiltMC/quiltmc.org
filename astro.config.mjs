@@ -4,14 +4,14 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://leocth.github.io",
+    site: "https://quiltmc.org",
     integrations: [
         mdx(),
         astroI18next({
             baseLanguage: "en",
             i18next: {
-              debug: true, // convenient during development to check for missing keys
-              supportedLngs: ["en"],
+                debug: true, // convenient during development to check for missing keys
+                supportedLngs: ["en", "zh"],
             },
         }),
     ],

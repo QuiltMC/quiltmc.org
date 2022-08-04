@@ -12,8 +12,10 @@ specifiers:
   core-js: ^3.8.3
   github-slugger: ^1.4.0
   i18next: ^21.8.16
+  remark-excerpt: 1.0.0-beta.1
   sass: ^1.54.1
   stimulus: ^2.0.0
+  strftime: ^0.10.1
   ts-loader: ^8.0.17
   tslint: ^6.1.3
   typescript: ^4.1.5
@@ -32,7 +34,9 @@ dependencies:
   core-js: 3.24.1
   github-slugger: 1.4.0
   i18next: 21.8.16
+  remark-excerpt: 1.0.0-beta.1
   stimulus: 2.0.0
+  strftime: 0.10.1
   ts-loader: 8.4.0_xnp4kzegbjokq62cajex2ovgkm
   typescript: 4.7.4
   webpack: 5.74.0_webpack-cli@4.10.0
@@ -3326,6 +3330,13 @@ packages:
       unified: 10.1.2
     dev: false
 
+  /remark-excerpt/1.0.0-beta.1:
+    resolution: {integrity: sha512-dgTCsHoYlBoVlY6ykXkXwBq1yxsVnkXTM4VX0d1dbYkY0esmlwGzSe2Vbx2ClH2xGqYcmGD6HU8ISkK0ZP66Lg==}
+    engines: {node: '>=8.6.0', yarn: '>=1.0.0'}
+    dependencies:
+      unist-util-visit: 1.4.0
+    dev: false
+
   /remark-frontmatter/4.0.1:
     resolution: {integrity: sha512-38fJrB0KnmD3E33a5jZC/5+gGAC2WKNiPw1/fdXJvijBlhA7RCsvJklrYJakS0HedninvaCYW8lQGf9C918GfA==}
     dependencies:
@@ -3649,6 +3660,11 @@ packages:
       '@stimulus/webpack-helpers': 2.0.0
     dev: false
 
+  /strftime/0.10.1:
+    resolution: {integrity: sha512-nVvH6JG8KlXFPC0f8lojLgEsPA18lRpLZ+RrJh/NkQV2tqOgZfbas8gcU8SFgnnqR3rWzZPYu6N2A3xzs/8rQg==}
+    engines: {node: '>=0.2.0'}
+    dev: false
+
   /string-width/4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -3952,6 +3968,10 @@ packages:
     resolution: {integrity: sha512-TiWE6DVtVe7Ye2QxOVW9kqybs6cZexNwTwSMVgkfjEReqy/xwGpAXb99OxktoWwmL+Z+Epb0Dn8/GNDYP1wnUw==}
     dev: false
 
+  /unist-util-is/3.0.0:
+    resolution: {integrity: sha512-sVZZX3+kspVNmLWBPAB6r+7D9ZgAFPNWm66f7YNb420RlQSbn+n8rG8dGZSkrER7ZIXGQYNm5pqC3v3HopH24A==}
+    dev: false
+
   /unist-util-is/4.1.0:
     resolution: {integrity: sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==}
     dev: false
@@ -4001,6 +4021,12 @@ packages:
     resolution: {integrity: sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==}
     dev: false
 
+  /unist-util-visit-parents/2.1.2:
+    resolution: {integrity: sha512-DyN5vD4NE3aSeB+PXYNKxzGsfocxp6asDc2XXE3b0ekO2BaRUpBicbbUygfSvYfUz1IkmjFR1YF7dPklraMZ2g==}
+    dependencies:
+      unist-util-is: 3.0.0
+    dev: false
+
   /unist-util-visit-parents/3.1.1:
     resolution: {integrity: sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg==}
     dependencies:
@@ -4013,6 +4039,12 @@ packages:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.1.1
+    dev: false
+
+  /unist-util-visit/1.4.0:
+    resolution: {integrity: sha512-FiGu34ziNsZA3ZUteZxSFaczIjGmksfSgdKqBfOejrrfzyUy5b7YrlzT1Bcvi+djkYDituJDy2XB7tGTeBieKw==}
+    dependencies:
+      unist-util-visit-parents: 2.1.2
     dev: false
 
   /unist-util-visit/2.0.3:

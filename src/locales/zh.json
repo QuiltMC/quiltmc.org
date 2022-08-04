@@ -1,0 +1,43 @@
+{
+    "settings": {
+        "text-direction": "ltr",
+        "title-separator": " | ",
+        "format": {
+            "date": "%Y年%-m月%-d日"
+        }
+    },
+    "titles": {
+        "about": {
+            "header": "关于",
+            "about": "关于"
+        },
+        "blog": {
+            "header": "博客"
+        },
+        "community": {
+            "header": "社区"
+        },
+        "install": {
+            "header": "安装"
+        },
+        "usage": {
+            "header": "使用",
+            "development": {
+                "divider": " 开发资源 ",
+                "developer-wiki": "开发者Wiki",
+                "maven-repository": "Maven库",
+                "template-mod": "模组模板"
+            },
+            "external-links": {
+                "divider": " 外部链接 ",
+                "import-utility": "Quilt导入工具"
+            }
+        },
+        "more-pages": {
+            "header": "更多页面",
+            "patch-notes": "Minecraft更新日志",
+            "openings": "空缺职位",
+            "staff-resources": "内部资源"
+        }
+    }
+}

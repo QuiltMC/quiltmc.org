@@ -7,6 +7,8 @@ export interface Config {
     permalink: 'pretty',
     author: string,
 
+    excerptSeparator: string,
+
     // Social media handles
     twitterUsername: string,
     githubUsername: string,
@@ -24,6 +26,8 @@ const config: Config = {
     source: "src/",
     permalink: "pretty",
     author: "QuiltMC",
+
+    excerptSeparator: "<!-- MORE -->",
 
     twitterUsername: "quilt_mc",
     githubUsername: "QuiltMC",
