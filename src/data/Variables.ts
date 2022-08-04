@@ -1,63 +1,54 @@
-import { t } from "i18next";
+import i18next, { t } from "i18next";
+import config from "./Site";
 
 export type TextDirection = 'rtl' | 'ltr';
 export type Direction = 'left' | 'right';
 
-export interface Format {
-    date: string;
-}
-export class LocaleSettings {
+export default class Variables {
     textDirection: TextDirection;
     rtl: boolean;
     left: Direction;
     right: Direction;
+    
+    title: string;
+    description: string;
 
     titleSeparator: string;
-    format: Format;
+    format: {
+        date: string;
+    };
 
-    constructor() {
+    constructor(title?: string, description?: string) {
         this.textDirection = t("settings.text-direction");
         this.rtl = this.textDirection == 'rtl';
         this.left = this.rtl ? 'right' : 'left';
         this.right = this.rtl ? 'left' : 'right';
+        
+        this.title = tryToTranslateOr(title, config.description)
+        this.description = tryToTranslateOr(description, config.description)
+
         this.titleSeparator = t("settings.title-separator");
         this.format = {
             date: t("settings.format.date")
-        }
-    } 
+        };
+    }    
 }
 
-// TODO temporary
-const localeSettings: LocaleSettings = new LocaleSettings();
+function tryToTranslateOr(key: string | undefined, or: string): string {
+    if (i18next.exists(key)) {
+        return t(key);
+    } else if (key) {
+        return key;
+    } else {
+        return or;
+    }
+}
 
-export default localeSettings;
+
 // {% capture text-direction %}{% t settings.text-direction %}{% endcapture %}
 // {% capture title-separator %}{% t settings.title-separator %}{% endcapture %}
 // {% capture format-date %}{% t settings.formats.date %}{% endcapture %}
 
-
-// {% if text-direction == "rtl" %}
-//     {% assign rtl = true %}
-// {% endif %}
-
-// {% if rtl %}
-//     {% assign left = "right" %}
-//     {% assign right = "left" %}
-// {% else %}
-//     {% assign left = "left" %}
-//     {% assign right = "right" %}
-// {% endif %}
-
-// {% capture translated-title %}{% t page.title %}{% endcapture %}
-// {% assign title-count = translated-title | size %}
-
-// {% if title-count > 0 %}
-//     {% assign title = translated-title %}
-// {% elsif page.title %}
-//     {% assign title = page.title %}
-// {% else %}
-//     {% assign title = site.description %}
-// {% endif %}
 
 // {% capture translated-description %}{% t page.description %}{% endcapture %}
 // {% assign description-count = translated-description | size %}

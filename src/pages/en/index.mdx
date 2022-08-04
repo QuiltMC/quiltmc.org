@@ -3,7 +3,7 @@ layout: /src/layouts/HeroContent.astro
 ---
 import Admonition from '@components/Admonition.astro';
 import LatestPosts from '@components/LatestPosts.astro';
-import config from '@data/Config';
+import site from '@data/Site';
 
 {/*
   FIXME: port to components once nested components don't
@@ -128,7 +128,7 @@ import config from '@data/Config';
     and become familiar with them before joining or interacting with us.
 
     <div class="button-grid">
-        <a href={config.discordCommunity} target="_blank" class="button is-discord">
+        <a href={site.discordCommunity} target="_blank" class="button is-discord">
             <span class="icon"><i class="fab fa-discord"></i></span>
             <span>Community</span>
         </a>
@@ -143,17 +143,15 @@ import config from '@data/Config';
             <span>Mastodon</span>
         </a>
 
-        <a href={`https://twitter.com/${config.twitterUsername}`} target="_blank" class="button is-twitter">
+        <a href={`https://twitter.com/${site.twitter.username}`} target="_blank" class="button is-twitter">
             <span class="icon"><i class="fab fa-twitter"></i></span> 
             <span>Twitter</span>
         </a>
 
-        {/* TODO
-        <a href="{% link _community/index.md %}" class="button is-primary">
+        <a href="/community" class="button is-primary">
             <span class="icon"><i class="fas fa-ellipsis-h"></i></span> 
             <span>More</span>
         </a>
-        */}
     </div>
 
 
@@ -163,7 +161,7 @@ import config from '@data/Config';
     found on the [openings page](/openings/).
 
     If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do 
-    is join us on GitHub or the <a href={config.discordToolchain}>Toolchain Discord Server</a>. There’s plenty of things to do, 
+    is join us on GitHub or the <a href={site.discordToolchain}>Toolchain Discord Server</a>. There’s plenty of things to do, 
     so we can always use more help!
 
     <div class="button-grid">
@@ -172,7 +170,7 @@ import config from '@data/Config';
             <span>Forum</span>
         </a>
 
-        <a href={`https://github.com/${config.githubUsername}`} target="_blank" class="button is-github">
+        <a href={`https://github.com/${site.githubUsername}`} target="_blank" class="button is-github">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>GitHub</span>
         </a>
@@ -182,7 +180,7 @@ import config from '@data/Config';
             <span>Openings</span>
         </a>
 
-        <a href={config.discordToolchain} target="_blank" class="button is-discord">
+        <a href={site.discordToolchain} target="_blank" class="button is-discord">
             <span class="icon"><i class="fab fa-discord"></i></span>
             <span>Toolchain</span>
         </a>

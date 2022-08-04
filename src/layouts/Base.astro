@@ -1,16 +1,23 @@
 ---
 import Footer from "@components/Footer.astro";
-import HtmlHead from "@components/HtmlHead.astro";
+import HtmlHead, { Props as HeadProps } from "@components/HtmlHead.astro";
+import LanguageModal from "@components/LanguageModal.astro";
 import NavBar from "@components/NavBar.astro";
 
-export interface Props {
+export interface BaseProps {
+    content: Inner,
+}
+export interface Inner extends HeadProps {
     navless?: boolean,
     isPrivate?: boolean,
 }
 const {
     navless = false,
     isPrivate = false,
-} = Astro.props as Props;
+    title,
+    description,
+    date,
+} = (Astro.props as BaseProps).content;
 
 //@ts-ignore this comes with Vite
 const shouldHide = isPrivate && import.meta.env.PROD
@@ -20,7 +27,7 @@ const shouldHide = isPrivate && import.meta.env.PROD
 
 <html lang="{{ site.lang }}" {/*  dir="rtl" */}>
 
-<HtmlHead title="ha" />
+<HtmlHead title={title} description={description} date={date} />
 
 <body class="page">
     { navless ? <NavBar /> : <></> }
@@ -37,7 +44,7 @@ const shouldHide = isPrivate && import.meta.env.PROD
     }
 
     <Footer />
-<!-- {% include language-modal.liquid %} -->
+    <LanguageModal />
 
 <!-- <script>
     {% if page.has_downloads %}

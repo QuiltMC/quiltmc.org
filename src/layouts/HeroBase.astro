@@ -1,13 +1,14 @@
 ---
-import Base from "./Base.astro";
-import localeSettings from "@data/LocaleSettings"
-import config from "@data/Config"
+import Base, { BaseProps } from "./Base.astro";
+import Variables from "@data/Variables"
+import config from "@data/Site"
 import NavBar from "@components/NavBar.astro";
 
-const { rtl } = localeSettings
+const props = Astro.props as BaseProps;
+const { rtl } = new Variables(props.content.title, props.content.description)
 ---
 
-<Base>
+<Base content={props.content}>
     <section class="hero is-dark has-background-patches">
         <div class="hero-head">
             <NavBar style="no-style" />

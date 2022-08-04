@@ -1,5 +1,5 @@
 ---
-import config from "@data/Config";
+import site from "@data/Site";
 ---
 
 <footer class="footer">
@@ -8,7 +8,7 @@ import config from "@data/Config";
             <div class="column is-half is-offset-one-quarter">
                 <div class="button-grid">
                     <a title="Discord" class="button is-discord is-rounded" target="_blank"
-                       href={config.discordCommunity}>
+                       href={site.discordCommunity}>
                         <span class="icon"><i class="fab fa-discord"></i></span>
                     </a>
 
@@ -20,13 +20,13 @@ import config from "@data/Config";
 
                     <a title="GitHub" class="button is-github is-rounded"
                        target="_blank"
-                       href={`https://github.com/${config.githubUsername}`}>
+                       href={`https://github.com/${site.githubUsername}`}>
                         <span class="icon"><i class="fab fa-github"></i></span>
                     </a>
 
                     <a title="Twitter" class="button is-twitter is-rounded"
                        target="_blank"
-                       href={`https://twitter.com/${config.twitchUsername}`}>
+                       href={`https://twitter.com/${site.twitchUsername}`}>
                         <span class="icon"><i class="fab fa-twitter"></i></span>
                     </a>
 
@@ -38,7 +38,7 @@ import config from "@data/Config";
                     </a>
 
                     <a title="Twitch" class="button is-primary is-rounded" target="_blank"
-                       href={`https://twitch.tv/${config.twitchUsername}`}>
+                       href={`https://twitch.tv/${site.twitchUsername}`}>
                         <span class="icon"><i class="fab fa-twitch"></i></span>
                     </a>
 

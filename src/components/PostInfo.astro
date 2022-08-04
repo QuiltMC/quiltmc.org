@@ -1,5 +1,5 @@
 ---
-import localeSettings from '@data/LocaleSettings';
+import Variables from '@data/Variables';
 import strftime from 'strftime';
 
 export interface Props {
@@ -13,7 +13,8 @@ export interface PostFrontmatter {
 }
 
 const { post } = Astro.props as Props;
-const { author, authors, date } = post;
+const { title, author, authors, date } = post;
+const variables = new Variables(title)
 ---
 
 <div class="media">
@@ -29,7 +30,7 @@ const { author, authors, date } = post;
         })()}
 
         <p class="subtitle is-6">
-            {strftime(localeSettings.format.date, new Date(date))}
+            {strftime(variables.format.date, new Date(date))}
         </p>
     </div>
 </div>

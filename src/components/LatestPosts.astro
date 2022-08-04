@@ -1,8 +1,10 @@
 ---
+import i18next from "i18next";
 import { sortBy } from "src/util/Util";
 import PostInfo, { PostFrontmatter } from "./PostInfo.astro";
 
-const allPosts = await Astro.glob<PostFrontmatter>('/src/pages/blog/excerpt/*.md');
+const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/excerpt/*.md'))
+    .filter(p => p.url.startsWith(`/${i18next.language}/`))
 sortBy(allPosts, post => new Date(post.frontmatter.date));
 
 const latestPosts = allPosts.slice(0, 3);

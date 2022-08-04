@@ -1,16 +1,24 @@
 ---
-import localeSettings from '@data/LocaleSettings';
-const { rtl, titleSeparator } = localeSettings 
+import Variables from '@data/Variables';
+import site from '@data/Site';
+import strftime from 'strftime';
 
 // TODO: find out a way to do RTL styles.
 // import '../styles/style-rtl.scss';
 import '../styles/style.scss';
 export interface Props {
     title: string,
+    description: string,
+    date: string,
 }
 
-const { title } = Astro.props as Props;
+const props = Astro.props as Props;
 
+const {
+    title,
+    description,
+    titleSeparator
+} = new Variables(props.title, props.description);
 ---
 
 <head>
@@ -31,29 +39,30 @@ const { title } = Astro.props as Props;
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#1b112b">
 
+    <!-- TODO: RSS business -->
     <!-- {% feed_meta %} -->
 
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+    <link rel="canonical" href={Astro.url}/>
 
-    <meta name="author" content="{{ site.social.name }}"/>
-    <meta name="description" content="{{ description }}"/>
+    <meta name="author" content={site.social.name}/>
+    <meta name="description" content={description}/>
 
-    <meta name="twitter:card" content="{{ site.twitter.card }}"/>
-    <meta name="twitter:creator" content="@{{ site.twitter.username }}"/>
-    <meta name="twitter:site" content="@{{ site.twitter.username }}"/>
+    <meta name="twitter:card" content={site.twitter.card}/>
+    <meta name="twitter:creator" content={`@${site.twitter.username}`}/>
+    <meta name="twitter:site" content={`@${site.twitter.username}`}/>
 
-    <!-- <meta property="article:published_time" content="{{ page.date | date: "%FT%H:%M:%S%z" }}"/> -->
+    <meta property="article:published_time" content={strftime("%FT%H:%M:%S%z", new Date(props.date))}/>
 
-    <meta property="og:description" content="{{ description }}"/>
-    <meta property="og:image" content="{{ site.url }}{{ site.logo }}"/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content={site.logo}/>
     <meta property="og:locale" content="{{ site.lang }}"/>
-    <meta property="og:site_name" content="{{ site.title }}"/>
-    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:site_name" content={site.title}/>
+    <meta property="og:title" content={title}/>
     <meta property="og:type" content="article"/>
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:url" content={Astro.url}/>
 
-    <meta property="twitter:image" content="{{ site.url }}{{ site.logo }}"/>
-    <meta property="twitter:title" content="{{ title }}"/>
+    <meta property="twitter:image" content={site.logo}/>
+    <meta property="twitter:title" content={title}/>
 
     <!-- <script type="application/ld+json">
         {

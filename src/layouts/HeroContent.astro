@@ -1,11 +1,11 @@
 ---
+import { BaseProps } from "./Base.astro";
 import HeroBase from "./HeroBase.astro";
 
-import i18next from 'i18next';
-i18next.changeLanguage('zh');
+const props = Astro.props as BaseProps;
 ---
 
-<HeroBase>
+<HeroBase content={props.content}>
     <section class="section">
         <main class="content container">
             <slot />

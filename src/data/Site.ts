@@ -7,15 +7,22 @@ export interface Config {
     permalink: 'pretty',
     author: string,
 
-    excerptSeparator: string,
-
     // Social media handles
-    twitterUsername: string,
     githubUsername: string,
     gitlabUsername: string,
     twitchUsername: string,
     discordCommunity: string,
     discordToolchain: string,
+
+    twitter: {
+        username: string,
+        card: 'summary',
+    }
+    logo: string,
+    social: {
+        name: string,
+        links: URL[]
+    }
 }
 
 const config: Config = {
@@ -27,14 +34,25 @@ const config: Config = {
     permalink: "pretty",
     author: "QuiltMC",
 
-    excerptSeparator: "<!-- MORE -->",
-
-    twitterUsername: "quilt_mc",
     githubUsername: "QuiltMC",
     gitlabUsername: "quiltmc",
     twitchUsername: "quiltmc",
     discordCommunity: "https://discord.quiltmc.org",
-    discordToolchain: "https://discord.quiltmc.org/toolchain"
+    discordToolchain: "https://discord.quiltmc.org/toolchain",
+
+    twitter: {
+        username: 'quilt_mc',
+        card: 'summary',
+    },
+    logo: '/assets/img/logo-square.png',
+    social: {
+        name: 'QuiltMC',
+        links: [
+            new URL('https://twitter.com/quilt_mc'),
+            new URL('https://github.com/QuiltMC'),
+            new URL('https://twitch.tv/quiltmc'),
+        ]
+    }
 }
 
 export default config;
