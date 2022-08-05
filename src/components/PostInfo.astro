@@ -1,6 +1,8 @@
 ---
+import config from '@data/Site';
 import Variables from '@data/Variables';
-import strftime from 'strftime';
+import i18next from 'i18next';
+import { DateTime } from 'luxon';
 
 export interface Props {
     post: PostFrontmatter,
@@ -9,7 +11,7 @@ export interface PostFrontmatter {
     title: string,
     author?: string,
     authors?: string[],
-    date: string,
+    date?: string,
 }
 
 const { post } = Astro.props as Props;
@@ -29,8 +31,14 @@ const variables = new Variables(title)
             }
         })()}
 
-        <p class="subtitle is-6">
-            {strftime(variables.format.date, new Date(date))}
-        </p>
+        { date
+            ? <p class="subtitle is-6">
+                {DateTime.fromISO(date)
+                    .setLocale(i18next.language)
+                    .toLocaleString(DateTime.DATE_FULL)}
+            </p>
+            : <></>
+        }
+        
     </div>
 </div>

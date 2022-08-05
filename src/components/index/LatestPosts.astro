@@ -1,7 +1,7 @@
 ---
 import i18next from "i18next";
 import { sortBy } from "src/util/Util";
-import PostInfo, { PostFrontmatter } from "./PostInfo.astro";
+import PostInfo, { PostFrontmatter } from "../PostInfo.astro";
 
 const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/excerpt/*.md'))
     .filter(p => p.url.startsWith(`/${i18next.language}/`))
@@ -13,7 +13,7 @@ const latestPosts = allPosts.slice(0, 3);
 {latestPosts.map(post => <>
     <article class="blog-post with-divider">
         <h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
-
+        
         <PostInfo post={post.frontmatter} />
         <post.Content />
     </article>

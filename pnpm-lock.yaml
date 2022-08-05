@@ -4,18 +4,23 @@ specifiers:
   '@astrojs/mdx': ^0.5.0
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
+  '@types/luxon': ^3.0.0
   '@types/webpack-env': ^1.17.0
   astro: 1.0.0-rc.4
   astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
   core-js: ^3.8.3
+  fluent_conv: ^3.1.0
   github-slugger: ^1.4.0
   i18next: ^21.8.16
+  i18next-fluent: ^2.0.0
+  i18next-fluent-backend: ^0.0.3
+  luxon: ^3.0.1
   remark-excerpt: 1.0.0-beta.1
+  rollup: '>=2'
   sass: ^1.54.1
   stimulus: ^2.0.0
-  strftime: ^0.10.1
   ts-loader: ^8.0.17
   tslint: ^6.1.3
   typescript: ^4.1.5
@@ -23,20 +28,25 @@ specifiers:
   webpack-cli: ^4.5.0
 
 dependencies:
-  '@astrojs/mdx': 0.5.0
+  '@astrojs/mdx': 0.5.0_rollup@2.77.2
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
+  '@types/luxon': 3.0.0
   '@types/webpack-env': 1.17.0
   astro: 1.0.0-rc.4_sass@1.54.1
   astro-i18next: 1.0.0-beta.3_astro@1.0.0-rc.4
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   core-js: 3.24.1
+  fluent_conv: 3.1.0
   github-slugger: 1.4.0
   i18next: 21.8.16
+  i18next-fluent: 2.0.0
+  i18next-fluent-backend: 0.0.3
+  luxon: 3.0.1
   remark-excerpt: 1.0.0-beta.1
+  rollup: 2.77.2
   stimulus: 2.0.0
-  strftime: 0.10.1
   ts-loader: 8.4.0_xnp4kzegbjokq62cajex2ovgkm
   typescript: 4.7.4
   webpack: 5.74.0_webpack-cli@4.10.0
@@ -106,13 +116,13 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx/0.5.0:
+  /@astrojs/mdx/0.5.0_rollup@2.77.2:
     resolution: {integrity: sha512-59MOYgvAmOLWd6XoSxePKTuR0DWJw66ffqsspY0+scgKIfaqmN9ZzbxuSj/iQlJC8mcI74iuf0kiyb01g9xpnA==}
     engines: {node: ^14.18.0 || >=16.12.0}
     dependencies:
       '@astrojs/prism': 0.7.0
       '@mdx-js/mdx': 2.1.2
-      '@mdx-js/rollup': 2.1.2
+      '@mdx-js/rollup': 2.1.2_rollup@2.77.2
       acorn: 8.8.0
       es-module-lexer: 0.10.5
       github-slugger: 1.4.0
@@ -446,6 +456,16 @@ packages:
     dev: false
     optional: true
 
+  /@fluent/bundle/0.13.0:
+    resolution: {integrity: sha512-Q3XQSoeCvptsWXdu4H3pJZLp45FX8JnhQ7A9OV9w6dU+czKJnuKJkC5xLv19N0OG/NRnVFKqhcQBrx+IWAk09g==}
+    engines: {node: '>=8.9.0'}
+    dev: false
+
+  /@fluent/syntax/0.15.0:
+    resolution: {integrity: sha512-NIObEPekXiaDDO10NQSOeylOETaI2Ns/ymKJNvgkM6FcBARS+t3NVGyLPPIl/pqHDUB9v7bWeEmuVMJQjnpNeg==}
+    engines: {node: '>=10.0.0'}
+    dev: false
+
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
     engines: {node: '>=6.0.0'}
@@ -513,13 +533,14 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/rollup/2.1.2:
+  /@mdx-js/rollup/2.1.2_rollup@2.77.2:
     resolution: {integrity: sha512-3ahqp3DCpIlGlCRuLX4z7dFEgN5kWBljrk8BpipiWkVrvB4FQpTQu1T7lmDffm8tOunjHAsZEHtb076HiW51NQ==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.1.2
       '@rollup/pluginutils': 4.2.1
+      rollup: 2.77.2
       source-map: 0.7.4
       vfile: 5.3.4
     transitivePeerDependencies:
@@ -649,6 +670,10 @@ packages:
 
   /@types/json5/0.0.30:
     resolution: {integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==}
+    dev: false
+
+  /@types/luxon/3.0.0:
+    resolution: {integrity: sha512-Lx+EZoJxUKw4dp8uei9XiUVNlgkYmax5+ovqt6Xf3LzJOnWhlfJw/jLBmqfGVwOP/pDr4HT8bI1WtxK0IChMLw==}
     dev: false
 
   /@types/mdast/3.0.10:
@@ -1818,6 +1843,12 @@ packages:
       pkg-dir: 4.2.0
     dev: false
 
+  /fluent_conv/3.1.0:
+    resolution: {integrity: sha512-fmS8RFxkEP7P/XTlVbf8b8I0RSLOKFqlrARmwsH1bNrKxmbEGNjZQXg0R6QZz/FdFrHcp7sFAjLp75bB4CSPsA==}
+    dependencies:
+      '@fluent/syntax': 0.15.0
+    dev: false
+
   /format/0.2.2:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
@@ -2050,6 +2081,19 @@ packages:
   /human-signals/3.0.1:
     resolution: {integrity: sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==}
     engines: {node: '>=12.20.0'}
+    dev: false
+
+  /i18next-fluent-backend/0.0.3:
+    resolution: {integrity: sha512-8iduPJrE/KOlpHR4iu+G5acmcgpj9bdQ3uYRxmR6N3U80q+BZnk4WZ/kx7Rs0jmZifVpU4qDODvD4eE9IukNig==}
+    dependencies:
+      fluent_conv: 3.1.0
+    dev: false
+
+  /i18next-fluent/2.0.0:
+    resolution: {integrity: sha512-k69kvftj02YNMtls1oy5TkbsjEDUlkfXcApBIv3gCnQTTDPTNVekweIGC6V5m/yC2ce6SNqkzlPpdB24OgEEgg==}
+    dependencies:
+      '@fluent/bundle': 0.13.0
+      fluent_conv: 3.1.0
     dev: false
 
   /i18next/21.8.16:
@@ -2342,6 +2386,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /luxon/3.0.1:
+    resolution: {integrity: sha512-hF3kv0e5gwHQZKz4wtm4c+inDtyc7elkanAsBq+fundaCdUBNJB1dHEGUZIM6SfSBUlbVFduPwEtNjFK8wLtcw==}
+    engines: {node: '>=12'}
     dev: false
 
   /lz-string/1.4.4:
@@ -3658,11 +3707,6 @@ packages:
     dependencies:
       '@stimulus/core': 2.0.0
       '@stimulus/webpack-helpers': 2.0.0
-    dev: false
-
-  /strftime/0.10.1:
-    resolution: {integrity: sha512-nVvH6JG8KlXFPC0f8lojLgEsPA18lRpLZ+RrJh/NkQV2tqOgZfbas8gcU8SFgnnqR3rWzZPYu6N2A3xzs/8rQg==}
-    engines: {node: '>=0.2.0'}
     dev: false
 
   /string-width/4.2.3:

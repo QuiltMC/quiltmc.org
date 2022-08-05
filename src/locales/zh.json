@@ -1,10 +1,7 @@
 {
     "settings": {
         "text-direction": "ltr",
-        "title-separator": " | ",
-        "format": {
-            "date": "%Y年%-m月%-d日"
-        }
+        "title-separator": " | "
     },
     "titles": {
         "about": {

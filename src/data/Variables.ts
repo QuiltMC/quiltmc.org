@@ -14,12 +14,9 @@ export default class Variables {
     description: string;
 
     titleSeparator: string;
-    format: {
-        date: string;
-    };
 
     constructor(title?: string, description?: string) {
-        this.textDirection = t("settings.text-direction");
+        this.textDirection = t("setting-text-direction");
         this.rtl = this.textDirection == 'rtl';
         this.left = this.rtl ? 'right' : 'left';
         this.right = this.rtl ? 'left' : 'right';
@@ -27,10 +24,7 @@ export default class Variables {
         this.title = tryToTranslateOr(title, config.description)
         this.description = tryToTranslateOr(description, config.description)
 
-        this.titleSeparator = t("settings.title-separator");
-        this.format = {
-            date: t("settings.format.date")
-        };
+        this.titleSeparator = t("setting-title-separator");
     }    
 }
 

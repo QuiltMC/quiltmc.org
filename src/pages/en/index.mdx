@@ -2,7 +2,8 @@
 layout: /src/layouts/HeroContent.astro
 ---
 import Admonition from '@components/Admonition.astro';
-import LatestPosts from '@components/LatestPosts.astro';
+import LatestPosts from '@components/index/LatestPosts.astro';
+import Button from '@components/index/Button.astro'
 import site from '@data/Site';
 
 {/*
@@ -100,10 +101,13 @@ import site from '@data/Site';
 <div class="columns is-centered">
   <div class="column is-10">
     <div class="button-grid">
-        <a href="https://maven.quiltmc.org" target="_blank" class="button is-gradle">
-            <span class="icon"><i class="fas fa-feather-pointed"></i></span>
-            <span>Maven Repo</span>
-        </a>
+        <Button
+          href="https://maven.quiltmc.org"
+          target="_blank"
+          type="gradle"
+          icon="feather-pointed"
+          textKey="maven-repo"
+        />
 
         <a href="/mc-patchnotes/" class="button is-info">
             <span class="icon"><i class="fas fa-notebook"></i></span>

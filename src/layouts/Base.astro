@@ -1,8 +1,10 @@
 ---
 import Footer from "@components/Footer.astro";
 import HtmlHead, { Props as HeadProps } from "@components/HtmlHead.astro";
+import Variables from "@data/Variables";
 import LanguageModal from "@components/LanguageModal.astro";
 import NavBar from "@components/NavBar.astro";
+import i18next from "i18next";
 
 export interface BaseProps {
     content: Inner,
@@ -19,13 +21,15 @@ const {
     date,
 } = (Astro.props as BaseProps).content;
 
+const variables = new Variables(title, description);
+const rtl = variables.rtl ? 'rtl' : 'ltr'
 //@ts-ignore this comes with Vite
-const shouldHide = isPrivate && import.meta.env.PROD
+const shouldHide = isPrivate && import.meta.env.PROD;
 ---
 
 <!DOCTYPE html>
 
-<html lang="{{ site.lang }}" {/*  dir="rtl" */}>
+<html lang={i18next.language} dir={rtl}>
 
 <HtmlHead title={title} description={description} date={date} />
 

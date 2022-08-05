@@ -45,39 +45,39 @@ const {
     <div class="navbar-menu" data-navbar-target="menu">
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="about" name={t("titles.about.header")} />
+                <Dropdown category="about" name={t("navbar-about")} />
             </div>
 
             <NavLink href="/blog/" subpage={true}>
-                {t("titles.blog.header")}
+                {t("navbar-blog")}
             </NavLink>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="community" name={t("titles.community.header")} right={true}/>
+                <Dropdown category="community" name={t("navbar-community")} right={true}/>
             </div>
 
             <NavLink href="/install/" subpage={true}>
-                {t("titles.install.header")}
+                {t("navbar-header")}
             </NavLink>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="usage" name={t("titles.usage.header")} right={true}>
-                    <div class="divider">{t("titles.usage.development.divider")}</div>
+                <Dropdown category="usage" name={t("navbar-usage")} right={true}>
+                    <div class="divider">{` ${t("divider-development")} `}</div>
 
                     <NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
-                        {t("titles.usage.development.developer-wiki")}
+                        {t("developer-wiki")}
                     </NavLink>
                     <NavLink target="_blank" href="https://maven.quiltmc.org">
-                        {t("titles.usage.development.maven-repository")}
+                        {t("maven-repository")}
                     </NavLink>
                     <NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
-                        {t("titles.usage.development.template-mod")}
+                        {t("template-mod")}
                     </NavLink>
 
-                    <div class="divider">{t("titles.usage.external-links.divider")}</div>
+                    <div class="divider">{t("divider-external-links")}</div>
 
                     <NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
-                        {t("titles.usage.external-links.import-utility")}
+                        {t("quilt-import-utility")}
                     </NavLink>
                 </Dropdown>
             </div>
@@ -85,7 +85,7 @@ const {
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <span class="is-hidden-desktop">
-                        {t("titles.more-pages.header")}
+                        {t("navbar-more-pages")}
                     </span>
                     <span class="icon is-hidden-mobile is-hidden-tablet-only">
                         <i class="fas fa-ellipsis-v fa-xl"></i>
@@ -94,13 +94,13 @@ const {
 
                 <div class="navbar-dropdown is-right is-boxed">
                     <NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
-                        {t("titles.more-pages.patch-notes")}
+                        {t("patch-notes")}
                     </NavLink>
                     <NavLink href="/openings/" icon= "fas fa-briefcase">
-                        {t("titles.more-pages.openings")}
+                        {t("openings")}
                     </NavLink>
                     <NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
-                        {t("titles.more-pages.staff-resources")}
+                        {t("staff-resources")}
                     </NavLink>
                 </div>
             </div>

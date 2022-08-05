@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import astroI18next from "astro-i18next";
+import astroI18next from "./ersatz-astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,11 +8,15 @@ export default defineConfig({
     integrations: [
         mdx(),
         astroI18next({
-            baseLanguage: "en",
+            baseLocale: "en",
+            supportedLocales: ["en", "zh"],
             i18next: {
                 debug: true, // convenient during development to check for missing keys
-                supportedLngs: ["en", "zh"],
             },
+            i18nextPlugins: {
+                // fluent: "i18next-fluent",
+                // backend: "i18next-fluent-backend"
+            }
         }),
     ],
 });
