@@ -8,7 +8,7 @@ It has been a few months since the last update on the Quilt Project.
 
 Quilt has progressed far since that initial "This is Quilt" blog with: new teams set up; several important RFCs being published and developments in many key areas.
 
-<!-- more -->
+<!-- MORE -->
 
 ## Clean Room RFC-33
 
