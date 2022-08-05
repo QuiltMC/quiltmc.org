@@ -1,0 +1,34 @@
+---
+// Redirect; default to English page
+const { page } = Astro.params;
+
+export async function getStaticPaths() {
+	const allEnglishPages = await Astro.glob("/src/pages/en/**/*");
+
+	const pages = [];
+	allEnglishPages.forEach(p => {
+		const page = p.url?.slice("/en/".length);
+
+		if (page.length > 0) {
+			pages.push({
+				params: {
+					page: page
+				}
+			});
+		}
+	});
+	return pages;
+}
+
+---
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Redirecting to {`/en/${page}`}</title>
+	<meta http-equiv="refresh" content={`0; /en/${page}`}>
+	<link rel="canonical" href={`/en/${page}`}>
+</head>
+
+</html>
