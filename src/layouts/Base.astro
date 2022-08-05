@@ -7,18 +7,18 @@ import NavBar from "@components/NavBar.astro";
 import i18next from "i18next";
 
 export interface BaseProps {
-    content: Inner,
+	content: Inner,
 }
 export interface Inner extends HeadProps {
-    navless?: boolean,
-    isPrivate?: boolean,
+	navless?: boolean,
+	isPrivate?: boolean,
 }
 const {
-    navless = false,
-    isPrivate = false,
-    title,
-    description,
-    date,
+	navless = false,
+	isPrivate = false,
+	title,
+	description,
+	date,
 } = (Astro.props as BaseProps).content;
 
 const variables = new Variables(title, description);
@@ -34,29 +34,32 @@ const shouldHide = isPrivate && import.meta.env.PROD;
 <HtmlHead title={title} description={description} date={date} />
 
 <body class="page">
-    { navless ? <NavBar /> : <></> }
+	{ navless ?
+	<NavBar /> : <></> }
 
-    { shouldHide
-        ? <section class="section">
-            <main class="content container">
-                <h1 class="title">Coming soon!</h1>
+	{ shouldHide
+	? <section class="section">
+		<main class="content container">
+			<h1 class="title">Coming soon!</h1>
 
-                Thanks for being patient.
-            </main>
-        </section>
-        : <slot />
-    }
+			Thanks for being patient.
+		</main>
+	</section>
+	:
+	<slot />
+	}
 
-    <Footer />
-    <LanguageModal />
+	<Footer />
+	<LanguageModal />
 
-<!-- <script>
-    {% if page.has_downloads %}
-    window.pageHasDownloads = true
-    {% else %}
-    window.pageHasDownloads = false
-    {% endif %}
+	<!-- <script>
+	{% if page.has_downloads %}
+	window.pageHasDownloads = true
+	{% else %}
+	window.pageHasDownloads = false
+	{% endif %}
 </script> -->
 
 </body>
+
 </html>
