@@ -3,34 +3,31 @@ import { t } from "i18next";
 import NavLink from "./NavLink.astro";
 
 export interface Props {
-    category: string,
-    name: string,
-    right?: boolean,
+	category: string,
+	name: string,
+	right?: boolean,
 }
 export interface Frontmatter {
-    title: string,
+	title: string,
 }
 
 const pageUrl = Astro.url.pathname;
 const { category, name, right = false } = Astro.props as Props;
 
 const pages = (await Astro.glob<Frontmatter>(`/src/pages/**/*.md`))
-    .filter(post => post.url?.startsWith(`/${category}`))
-    .sort((a, b) => t(a.frontmatter.title).localeCompare(t(b.frontmatter.title)))
+	.filter(post => post.url?.startsWith(`/${category}`))
+	.sort((a, b) => t(a.frontmatter.title).localeCompare(t(b.frontmatter.title)))
 ---
 
-<a href={category} class:list={[
-    "navbar-link is-arrowless",
-    pageUrl.startsWith(`/${category}/`) ? "is-active" : ""
-]}>
-    {name}
+<a href={category} class:list={[ "navbar-link is-arrowless" , pageUrl.startsWith(`/${category}/`) ? "is-active" : "" ]}>
+	{name}
 </a>
 
-<div class:list={["navbar-dropdown is-boxed", right ? "is-right" : ""]}>
-    {pages.map(p =>
-        <NavLink href={p.url} subpage={false}>
-            {t(p.frontmatter.title)}
-        </NavLink>
-    )}
-    <slot />
+<div class:list={["navbar-dropdown is-boxed", right ? "is-right" : "" ]}>
+	{pages.map(p =>
+	<NavLink href={p.url} subpage={false}>
+		{t(p.frontmatter.title)}
+	</NavLink>
+	)}
+	<slot />
 </div>
