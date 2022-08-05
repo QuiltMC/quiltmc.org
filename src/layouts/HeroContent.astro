@@ -1,8 +1,10 @@
 ---
+import i18next from "i18next";
 import { BaseProps } from "./Base.astro";
 import HeroBase from "./HeroBase.astro";
 
 const props = Astro.props as BaseProps;
+i18next.changeLanguage('zh')
 ---
 
 <HeroBase content={props.content}>

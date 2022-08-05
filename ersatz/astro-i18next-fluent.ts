@@ -1,5 +1,7 @@
 import { AstroIntegration } from "astro";
-import i18next, { i18n, InitOptions } from "i18next";
+import { InitOptions, Resource } from "i18next";
+import * as fs from 'fs';
+import ftlToJs from 'fluent_conv/ftl2js'
 
 
 export interface AstroI18nextOptions {
@@ -24,6 +26,8 @@ export interface AstroI18nextOptions {
      */
     i18next: InitOptions;
   
+    resourcesPath?: string;
+
     /**
      * i18next plugins. See https://www.i18next.com/overview/plugins-and-utils
      *
@@ -96,6 +100,37 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
         }
         return `${str}${isArray ? "]" : "}"}`;
     };
+    
+    const loadResources = (
+      resourcesPath: string,
+      supportedLanguages: string[]
+    ): Resource => {
+      const resources = {};
+      const errors = [];
+
+      for (const language of supportedLanguages) {
+        try {
+          const rawContents = fs.readFileSync(resourcesPath + language + ".flt");
+
+          resources[language] = {
+            translation: ftlToJs(rawContents.toString()),
+          };
+        } catch (error) {
+          errors.push(`\t- ${resourcesPath + language + ".flt"}`);
+        }
+      }
+
+      if (errors.length) {
+        throw new Error(
+          `[astro-i18next]: some i18n resources are missing! Forgot to include them?\n\n${errors.join(
+            "\n"
+          )}\n`
+        );
+      }
+
+      return resources;
+    };
+
     return {
       name: "astro-i18next",
       hooks: {
@@ -132,6 +167,22 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
           options.i18next.fallbackLng = [
             ...(options.supportedLocales as string[]),
           ];
+
+          // BODGE: load FTL files with this one weird trick
+
+          if (options.resourcesPath) {
+            // normalize resourcesPath: add trailing slash to resourcesPath if not present
+            options.resourcesPath = options.resourcesPath.replace(/\/?$/, "/");
+          } else {
+            // set default resourcesPath if not defined
+            options.resourcesPath = "src/locales/";
+          }
+
+          options.i18next.resources = loadResources(
+            options.resourcesPath,
+            options.i18next.supportedLngs as string[]
+          );
+
   
           let imports = `import i18next from "i18next";`;
           let i18nextInit = `i18next`;

@@ -1,0 +1,24 @@
+setting-text-direction = ltr
+setting-title-separator = {" "}|{" "}
+
+navbar-about = 关于
+navbar-blog = 博客
+navbar-community = 社区
+navbar-install = 安装
+navbar-usage = 使用
+navbar-more-pages = 更多页面
+
+page-about-about = 关于我们
+
+developer-wiki = 开发者 Wiki
+maven-repository = Maven 库
+# short form of `maven-repository` for buttons.
+maven-repo = ${maven-repository}
+template-mod = 模组模板
+quilt-import-utility = Quilt 导入工具
+patch-notes = Minecraft更新日志
+openings = Openings
+staff-resources = Staff Resources
+
+divider-development = 开发资源
+divider-external-links = 外部链接

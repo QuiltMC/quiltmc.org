@@ -24,7 +24,6 @@
         "github-slugger": "^1.4.0",
         "i18next": "^21.8.16",
         "i18next-fluent": "^2.0.0",
-        "i18next-fluent-backend": "^0.0.3",
         "luxon": "^3.0.1",
         "remark-excerpt": "1.0.0-beta.1",
         "rollup": ">=2",
