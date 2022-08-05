@@ -18,16 +18,16 @@
 		"astro-i18next": "1.0.0-beta.3",
 		"bulma": "^0.9.4",
 		"bulma-timeline": "^3.0.5",
+		"fluent_conv": "^3.1.0",
+		"github-slugger": "^1.4.0",
 		"i18next": "^21.8.16",
 		"i18next-fluent": "^2.0.0",
 		"luxon": "^3.0.1",
 		"minhtml": "^1.1.1",
 		"remark-excerpt": "1.0.0-beta.1",
+		"rollup": "^2.77.2",
 		"sass": "^1.54.3",
 		"stimulus": "^3.1.0",
 		"typescript": "^4.7.4"
-	},
-	"optionalDependencies": {
-		"tslint": "^6.1.3"
 	}
 }
