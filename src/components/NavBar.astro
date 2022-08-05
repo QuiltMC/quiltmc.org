@@ -4,106 +4,109 @@ import Dropdown from "./nav/Dropdown.astro";
 import NavLink from "./nav/NavLink.astro";
 
 export interface Props {
-    style?: string,
+	style?: string,
 }
 
 const {
-    style = "is-dark",
+	style = "is-dark",
 } = Astro.props as Props;
 
 ---
 
 <nav class={`navbar ${style}`} role="navigation" aria-label="main navigation" data-controller="navbar">
-    <div class="navbar-brand">
-        <a class="navbar-item navbar-logo" href="/">
-            <img src="/assets/img/logo.svg" alt="Quilt Logo" />
+	<div class="navbar-brand">
+		<a class="navbar-item navbar-logo" href="/">
+			<img src="/assets/img/logo.svg" alt="Quilt Logo" />
 
-            <span class="ml-2">QuiltMC</span>
-        </a>
+			<span class="ml-2">QuiltMC</span>
+		</a>
 
-        <a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" style="display: none" id="language-switcher" data-tooltip="Switch Language">
-            <i class="fak fa-language fa-2xl"></i>
-        </a>
+		<a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" style="display: none" id="language-switcher"
+			data-tooltip="Switch Language">
+			<i class="fak fa-language fa-2xl"></i>
+		</a>
 
-        <a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" id="theme-switcher" data-tooltip="Toggle Low Contrast">
-            <span id="theme-normal-contrast">
-                <i class="fas fa-circle-half-stroke fa-xl"></i>
-            </span>
+		<a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" id="theme-switcher"
+			data-tooltip="Toggle Low Contrast">
+			<span id="theme-normal-contrast">
+				<i class="fas fa-circle-half-stroke fa-xl"></i>
+			</span>
 
-            <span id="theme-low-contrast">
-                <i class="fal fa-circle-half-stroke fa-xl"></i>
-            </span>
-        </a>
+			<span id="theme-low-contrast">
+				<i class="fal fa-circle-half-stroke fa-xl"></i>
+			</span>
+		</a>
 
-        <a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
+		<a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger"
+			aria-label="menu" aria-expanded="false">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div>
 
-    <div class="navbar-menu" data-navbar-target="menu">
-        <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="about" name={t("navbar-about")} />
-            </div>
+	<div class="navbar-menu" data-navbar-target="menu">
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="about" name={t("navbar-about")} />
+			</div>
 
-            <NavLink href="/blog/" subpage={true}>
-                {t("navbar-blog")}
-            </NavLink>
+			<NavLink href="/blog/" subpage={true}>
+				{t("navbar-blog")}
+			</NavLink>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="community" name={t("navbar-community")} right={true}/>
-            </div>
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="community" name={t("navbar-community")} right={true} />
+			</div>
 
-            <NavLink href="/install/" subpage={true}>
-                {t("navbar-install")}
-            </NavLink>
+			<NavLink href="/install/" subpage={true}>
+				{t("navbar-install")}
+			</NavLink>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <Dropdown category="usage" name={t("navbar-usage")} right={true}>
-                    <div class="divider">{` ${t("divider-development")} `}</div>
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="usage" name={t("navbar-usage")} right={true}>
+					<div class="divider">{` ${t("divider-development")} `}</div>
 
-                    <NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
-                        {t("developer-wiki")}
-                    </NavLink>
-                    <NavLink target="_blank" href="https://maven.quiltmc.org">
-                        {t("maven-repository")}
-                    </NavLink>
-                    <NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
-                        {t("template-mod")}
-                    </NavLink>
+					<NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
+						{t("developer-wiki")}
+					</NavLink>
+					<NavLink target="_blank" href="https://maven.quiltmc.org">
+						{t("maven-repository")}
+					</NavLink>
+					<NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
+						{t("template-mod")}
+					</NavLink>
 
-                    <div class="divider">{t("divider-external-links")}</div>
+					<div class="divider">{t("divider-external-links")}</div>
 
-                    <NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
-                        {t("quilt-import-utility")}
-                    </NavLink>
-                </Dropdown>
-            </div>
+					<NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
+						{t("quilt-import-utility")}
+					</NavLink>
+				</Dropdown>
+			</div>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link is-arrowless">
-                    <span class="is-hidden-desktop">
-                        {t("navbar-more-pages")}
-                    </span>
-                    <span class="icon is-hidden-mobile is-hidden-tablet-only">
-                        <i class="fas fa-ellipsis-v fa-xl"></i>
-                    </span>
-                </a>
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link is-arrowless">
+					<span class="is-hidden-desktop">
+						{t("navbar-more-pages")}
+					</span>
+					<span class="icon is-hidden-mobile is-hidden-tablet-only">
+						<i class="fas fa-ellipsis-v fa-xl"></i>
+					</span>
+				</a>
 
-                <div class="navbar-dropdown is-right is-boxed">
-                    <NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
-                        {t("patch-notes")}
-                    </NavLink>
-                    <NavLink href="/openings/" icon= "fas fa-briefcase">
-                        {t("openings")}
-                    </NavLink>
-                    <NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
-                        {t("staff-resources")}
-                    </NavLink>
-                </div>
-            </div>
-        </div>
-    </div>
+				<div class="navbar-dropdown is-right is-boxed">
+					<NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
+						{t("patch-notes")}
+					</NavLink>
+					<NavLink href="/openings/" icon="fas fa-briefcase">
+						{t("openings")}
+					</NavLink>
+					<NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
+						{t("staff-resources")}
+					</NavLink>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>

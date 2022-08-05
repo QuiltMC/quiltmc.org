@@ -5,13 +5,13 @@ import i18next from 'i18next';
 import { DateTime } from 'luxon';
 
 export interface Props {
-    post: PostFrontmatter,
+	post: PostFrontmatter,
 }
 export interface PostFrontmatter {
-    title: string,
-    author?: string,
-    authors?: string[],
-    date?: string,
+	title: string,
+	author?: string,
+	authors?: string[],
+	date?: string,
 }
 
 const { post } = Astro.props as Props;
@@ -20,25 +20,25 @@ const variables = new Variables(title)
 ---
 
 <div class="media">
-    <div class="media-content">
-        {(() => {
-            if (author) {
-                return <p class="title is-5">{author}</p>;
-            } else if (authors) {
-                return <p class="title is-5">{authors.join(', ')}</p>;
-            } else {
-                return <></>;
-            }
-        })()}
+	<div class="media-content">
+		{(() => {
+		if (author) {
+		return <p class="title is-5">{author}</p>;
+		} else if (authors) {
+		return <p class="title is-5">{authors.join(', ')}</p>;
+		} else {
+		return <></>;
+		}
+		})()}
 
-        { date
-            ? <p class="subtitle is-6">
-                {DateTime.fromISO(date)
-                    .setLocale(i18next.language)
-                    .toLocaleString(DateTime.DATE_FULL)}
-            </p>
-            : <></>
-        }
-        
-    </div>
+		{ date
+		? <p class="subtitle is-6">
+			{DateTime.fromISO(date)
+			.setLocale(i18next.language)
+			.toLocaleString(DateTime.DATE_FULL)}
+		</p>
+		: <></>
+		}
+
+	</div>
 </div>

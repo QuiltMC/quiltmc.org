@@ -7,29 +7,29 @@ import { sortBy } from "src/util/Util";
 import PostInfo, { PostFrontmatter } from "../PostInfo.astro";
 
 const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/*.md'))
-        .filter(p => p.url.startsWith(`/${i18next.language}/`))
+	.filter(p => p.url.startsWith(`/${i18next.language}/`))
 sortBy(allPosts, post => new Date(post.frontmatter.date));
 
 const latestPosts = allPosts.slice(0, 3);
 
 function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
-    const content = md.rawContent();
-    return content.slice(0, content.indexOf("<!-- MORE -->"));
+	const content = md.rawContent();
+	return content.slice(0, content.indexOf("<!-- MORE -->"));
 }
 
 ---
 
 {latestPosts.map(post => <>
-    <article class="blog-post with-divider">
-        <h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
-        
-        <PostInfo post={post.frontmatter} />
-        <Markdown>{getExcerptOfPost(post)}</Markdown>
-    </article>
+	<article class="blog-post with-divider">
+		<h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
+
+		<PostInfo post={post.frontmatter} />
+		<Markdown>{getExcerptOfPost(post)}</Markdown>
+	</article>
 </>)}
 <div class="is-flex mt-4 is-justify-content-right">
-    <a class="button is-primary" href="/blog">
-        <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-        <span>More Posts</span>
-    </a>
+	<a class="button is-primary" href="/blog">
+		<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+		<span>More Posts</span>
+	</a>
 </div>
