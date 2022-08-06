@@ -2,11 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/markdown-component': ^0.2.1
-  '@astrojs/mdx': ^0.6.0
+  '@astrojs/mdx': ^0.7.0
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
   '@types/luxon': ^3.0.0
-  astro: 1.0.0-rc.6
+  astro: 1.0.0-rc.7
   astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
@@ -24,12 +24,12 @@ specifiers:
 
 devDependencies:
   '@astrojs/markdown-component': 0.2.1
-  '@astrojs/mdx': 0.6.0_rollup@2.77.2
+  '@astrojs/mdx': 0.7.0_rollup@2.77.2
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
   '@types/luxon': 3.0.0
-  astro: 1.0.0-rc.6_sass@1.54.3
-  astro-i18next: 1.0.0-beta.3_astro@1.0.0-rc.6
+  astro: 1.0.0-rc.7_sass@1.54.3
+  astro-i18next: 1.0.0-beta.3_astro@1.0.0-rc.7
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   fluent_conv: 3.1.0
@@ -54,8 +54,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.14
     dev: true
 
-  /@astrojs/compiler/0.22.1:
-    resolution: {integrity: sha512-FiRZ7fwJhADPo2X1unTyEq9V7EfeWE3GOBhzKDcFIF8mc5iLZ0VmPXrGmvOUTRXkZH99+TkB1SXGaTDjelRa2w==}
+  /@astrojs/compiler/0.23.1:
+    resolution: {integrity: sha512-KsoDrASGwTKZoWXbjy8SlIeoDv7y1OfBJtHVLuPuzhConA8e0SZpGzFqIuVRfG4bhisSTptZLDQZ7oxwgPv2jA==}
     dev: true
 
   /@astrojs/language-server/0.20.3:
@@ -78,8 +78,8 @@ packages:
     resolution: {integrity: sha512-w5YApEGx9eclpg77dNpAlDOOgIL9x96w3BvlN1r1o6YEYFmr598WjSZObl+BOOj/OkE/Qk243qDiyn3ZS6rwbg==}
     dev: true
 
-  /@astrojs/markdown-remark/0.14.0:
-    resolution: {integrity: sha512-H0OGW2AXXlcw7rm7vqACHidViRgz0Ud4kmh9DEsA2Y60goB0cj6bA97zmweatEHXNe8miUMOygeihvqeMmYwyg==}
+  /@astrojs/markdown-remark/0.14.1:
+    resolution: {integrity: sha512-u072l5Nvb7GGMIBXmm65+IakPoF3nQ0ICIrDyFolznUB6e51AEa0ZGdpZa1jiT5fugR1gZgFPPJGcwWlSadZJA==}
     dependencies:
       '@astrojs/micromark-extension-mdx-jsx': 1.0.3
       '@astrojs/prism': 0.7.0
@@ -106,8 +106,8 @@ packages:
       - supports-color
     dev: true
 
-  /@astrojs/mdx/0.6.0_rollup@2.77.2:
-    resolution: {integrity: sha512-Sy9oB+0som0IDxFXoUsyoKPqgxM2XZywcajUxDxJsS7AVHVv3w3CBP+k7UIwzS3GvpPwHT6eFGoLGGB3MmB+Pw==}
+  /@astrojs/mdx/0.7.0_rollup@2.77.2:
+    resolution: {integrity: sha512-GLEudjsD7MJXF8ZHvsSF4KOP4DlzEenbl/PqU2tlPS/PGZZSCCFszwKw+UcrogvavY516b3xgdaYCJ70Ddm8pg==}
     engines: {node: ^14.18.0 || >=16.12.0}
     dependencies:
       '@astrojs/prism': 0.7.0
@@ -125,6 +125,7 @@ packages:
       remark-smartypants: 2.0.0
       shiki: 0.10.1
       unist-util-visit: 4.1.0
+      vfile: 5.3.4
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -794,25 +795,25 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-i18next/1.0.0-beta.3_astro@1.0.0-rc.6:
+  /astro-i18next/1.0.0-beta.3_astro@1.0.0-rc.7:
     resolution: {integrity: sha512-Vw2nwcj/aM0F7BcuAQLPrEf6dKh51BNWvQf0SeI54vx/HPweF9gwEYhFlERajIVMyStpRpfGslZiwRrei6QX5g==}
     peerDependencies:
       astro: ^1.0.0-beta.1
     dependencies:
-      astro: 1.0.0-rc.6_sass@1.54.3
+      astro: 1.0.0-rc.7_sass@1.54.3
       country-code-to-flag-emoji: 1.1.0
       i18next: 21.8.16
       iso-639-1: 2.1.15
     dev: true
 
-  /astro/1.0.0-rc.6_sass@1.54.3:
-    resolution: {integrity: sha512-mJfgUPlbuODLsEkt+R/4ReYet2WKETKvs4whJJS6CDQnAMZKNNcjM33GvYUoU5MAWUwVaobVr8fuUeKHU6RopA==}
+  /astro/1.0.0-rc.7_sass@1.54.3:
+    resolution: {integrity: sha512-FXUvSO2A40m7A7rMf3811yh5XA9X4qaJWlDg4m6TL9PkTIFfp9nyAl3EuX7r8rPmNTJ7EYevV0bDLk8ETWtN9w==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 0.22.1
+      '@astrojs/compiler': 0.23.1
       '@astrojs/language-server': 0.20.3
-      '@astrojs/markdown-remark': 0.14.0
+      '@astrojs/markdown-remark': 0.14.1
       '@astrojs/telemetry': 0.4.1
       '@astrojs/webapi': 0.12.0
       '@babel/core': 7.18.10
@@ -844,8 +845,8 @@ packages:
       ora: 6.1.2
       path-browserify: 1.0.1
       path-to-regexp: 6.2.1
-      postcss: 8.4.14
-      postcss-load-config: 3.1.4_postcss@8.4.14
+      postcss: 8.4.15
+      postcss-load-config: 3.1.4_postcss@8.4.15
       preferred-pm: 3.0.3
       prompts: 2.4.2
       recast: 0.20.5
@@ -2875,7 +2876,7 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /postcss-load-config/3.1.4_postcss@8.4.14:
+  /postcss-load-config/3.1.4_postcss@8.4.15:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
@@ -2888,12 +2889,12 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      postcss: 8.4.14
+      postcss: 8.4.15
       yaml: 1.10.2
     dev: true
 
-  /postcss/8.4.14:
-    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
+  /postcss/8.4.15:
+    resolution: {integrity: sha512-q3lixwKdXOi8OYMNTMTYDNuBEWIOf4P5OlGi5OEqcp+XGiDICNZexuHJz7xttkLmpRz7R0G1I5lGFSi9F0C17w==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.4
@@ -3679,7 +3680,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.14.53
-      postcss: 8.4.14
+      postcss: 8.4.15
       resolve: 1.22.1
       rollup: 2.77.2
       sass: 1.54.3

@@ -13,7 +13,6 @@ export interface Inner extends HeadProps {
 	isPrivate?: boolean,
 }
 const {
-	isPrivate = false,
 	title,
 	description,
 	date,
@@ -21,8 +20,6 @@ const {
 
 const variables = new Variables(title, description);
 const rtl = variables.rtl ? 'rtl' : 'ltr'
-//@ts-ignore this comes with Vite
-const shouldHide = isPrivate && import.meta.env.PROD;
 ---
 
 <!DOCTYPE html>
@@ -32,20 +29,10 @@ const shouldHide = isPrivate && import.meta.env.PROD;
 <HtmlHead title={title} description={description} date={date} />
 
 <body class="page">
-	{ Astro.props.navless ? <></> :
+	{ !Astro.props.navless &&
 	<NavBar /> }
 
-	{ shouldHide
-	? <section class="section">
-		<main class="content container">
-			<h1 class="title">Coming soon!</h1>
-
-			Thanks for being patient.
-		</main>
-	</section>
-	:
 	<slot />
-	}
 
 	<Footer />
 	<LanguageModal />
