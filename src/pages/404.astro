@@ -1,3 +1,7 @@
+---
+import Base from "@layouts/Base.astro";
+---
+
 <style type="text/css" media="screen">
   .err-container {
     margin: 10px auto;
@@ -18,8 +22,10 @@
   }
 </style>
 
+<Base root content={{title: "404" }}>
 <div class="err-container">
   <h1><img class="pineapple" title="Pineapple!" alt=":pineapple:" src="/assets/img/pineapple.png" /> 404</h1>
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
+</Base>

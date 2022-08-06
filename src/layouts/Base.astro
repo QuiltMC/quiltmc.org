@@ -30,7 +30,7 @@ const rtl = variables.rtl ? 'rtl' : 'ltr'
 
 <body class="page">
 	{ !Astro.props.navless &&
-	<NavBar /> }
+	<NavBar root={Astro.props.root} /> }
 
 	<slot />
 

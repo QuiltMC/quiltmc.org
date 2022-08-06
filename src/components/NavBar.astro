@@ -5,17 +5,17 @@ import NavLink from "./nav/NavLink.astro";
 
 export interface Props {
 	style?: string,
+	root?: boolean,
 }
 
 const {
 	style = "is-dark",
 } = Astro.props as Props;
-
 ---
 
 <nav class={`navbar ${style}`} role="navigation" aria-label="main navigation" data-controller="navbar">
 	<div class="navbar-brand">
-		<a class="navbar-item navbar-logo" href="/">
+		<a class="navbar-item navbar-logo" href={Astro.props.root ? "/" : Astro.url.pathname.slice(0, 4)}>
 			<img src="/assets/img/logo.svg" alt="Quilt Logo" />
 
 			<span class="ml-2">QuiltMC</span>

@@ -138,6 +138,16 @@ body > * {
 	overflow-x: auto;
 }
 
+// Make footer expand if page is too small
+.page {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer {
+	flex: 1 1 auto;
+}
+
 body {
 	/* Force minimum height of document body to be the viewport height */
 	min-height: 100vh;
