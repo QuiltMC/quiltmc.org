@@ -1,7 +1,7 @@
 ---
-permalink: /about/
 title: titles.about.about
 description: descriptions.about.about
+layout: /src/layouts/Page.astro
 ---
 
 Quilt is a mod-loader project -- primarily aimed at Minecraft. It was founded by users and contributors from the Fabric project, as a last-resort attempt to address the controversies and issues stemming from that project. Because Fabric had a solid technological foundation with code that still did many things right, Quilt's founders decided that the best option would be to take the standard open source approach to disagreements over management -- they forked the Fabric project into a new mod-loader project, with the following ideas in mind:

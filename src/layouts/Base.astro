@@ -34,8 +34,8 @@ const shouldHide = isPrivate && import.meta.env.PROD;
 <HtmlHead title={title} description={description} date={date} />
 
 <body class="page">
-	{ navless ?
-	<NavBar /> : <></> }
+	{ navless ? <></> :
+	<NavBar /> }
 
 	{ shouldHide
 	? <section class="section">
