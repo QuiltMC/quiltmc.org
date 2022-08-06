@@ -67,6 +67,7 @@ backbone of any Community Team, and Quilt's is no exception -- a diverse, active
 instrumental for Quilt's success.
 
 <div class="moderator team-grid">
+	{% include team/Curly.liquid %}
     {% include team/Ember.liquid %}
     {% include team/Forkk.liquid %}
     {% include team/Larry.liquid %}
