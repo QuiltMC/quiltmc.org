@@ -3,7 +3,10 @@ import Base, { BaseProps } from "./Base.astro"
 
 let { title } = Astro.props.content;
 
-let pages = await Astro.glob("/src/pages/en/about/*");
+let pages;
+if (Astro.url.pathname.startsWith("/en/about")) {
+	pages = await Astro.glob("/src/pages/en/about/*");
+}
 ---
 
 <Base content={Astro.props.content}>
