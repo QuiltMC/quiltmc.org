@@ -1,6 +1,8 @@
 setting-text-direction = ltr
 setting-title-separator = {" "}|{" "}
 
+-maven-repository = Maven 库
+
 navbar-about = 关于
 navbar-blog = 博客
 navbar-community = 社区
@@ -11,9 +13,9 @@ navbar-more-pages = 更多页面
 page-about-about = 关于我们
 
 developer-wiki = 开发者 Wiki
-maven-repository = Maven 库
+maven-repository = {-maven-repository}
 # short form of `maven-repository` for buttons.
-maven-repo = ${maven-repository}
+maven-repo = {-maven-repository}
 template-mod = 模组模板
 quilt-import-utility = Quilt 导入工具
 patch-notes = Minecraft更新日志
