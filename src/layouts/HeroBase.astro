@@ -3,6 +3,8 @@ import Base, { BaseProps } from "./Base.astro";
 import Variables from "@data/Variables"
 import config from "@data/Site"
 import NavBar from "@components/NavBar.astro";
+import Button from "@components/Button.astro";
+import { localizePath } from "astro-i18next";
 
 const props = Astro.props as BaseProps;
 const { rtl } = new Variables(props.content.title, props.content.description)
@@ -24,42 +26,19 @@ const { rtl } = new Variables(props.content.title, props.content.description)
 			</picture>
 
 			<div class="button-grid">
-				<a href="/install/" class="button is-primary">
-					<span class="icon"><i class="fas fa-download"></i></span>
-					<span>Install</span>
-				</a>
-
-				<a href="/usage/" class="button is-info">
-					<span class="icon"><i class="fas fa-book"></i></span>
-					<span>Usage Docs</span>
-				</a>
-
-				<a href="https://modder.wiki.quiltmc.org" class="button is-link">
-					<span class="icon"><i class="fas fa-code"></i></span>
-					<span>Developer Wiki</span>
-				</a>
-
-				<a href="https://github.com/QuiltMC/quilt-template-mod" class="button is-github">
-					<span class="icon"><i class="fas fa-wrench"></i></span>
-					<span>Template Mod</span>
-				</a>
+				<Button href={localizePath("/install/")} type="primary" icon="fas fa-download" textKey="button-install" />
+				<Button href={localizePath("/usage/")} type="info" icon="fas fa-book" textKey="button-usage-docs" />
+				<Button href="/https://modder.wiki.quiltmc.org/" type="link" icon="fas fa-code"
+					textKey="button-developer-wiki" />
+				<Button href="https://github.com/QuiltMC/quilt-template-mod" type="github" icon="fas fa-wrench"
+					textKey="button-template-mod" />
 			</div>
 
 			<div class="button-grid">
-				<a href={config.discordCommunity} target="_blank" class="button is-discord">
-					<span class="icon"><i class="fab fa-discord"></i></span>
-					<span>Discord</span>
-				</a>
-
-				<a href="https://forum.quiltmc.org" target="_blank" class="button is-gradle">
-					<span class="icon"><i class="fab fa-discourse"></i></span>
-					<span>Forum</span>
-				</a>
-
-				<a href={`https://github.com/${config.githubUsername}`} target="_blank" class="button is-github">
-					<span class="icon"><i class="fab fa-github"></i></span>
-					<span>GitHub</span>
-				</a>
+				<Button href={config.discordCommunity} type="discord" icon="fab fa-discord" textKey="button-discord" />
+				<Button href="https://forum.quiltmc.org" type="gradle" icon="fab fa-discourse" textKey="button-forum" />
+				<Button href={`https://github.com/${config.githubUsername}`} target="_blank" type="github" icon="fab fa-github"
+					textKey="button-github" />
 			</div>
 		</div>
 	</div>

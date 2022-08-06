@@ -1,0 +1,54 @@
+setting-text-direction = ltr
+setting-title-separator = {" "}|{" "}
+
+# Common strings
+-developer-wiki = 开发者 Wiki
+-forum = 论坛
+-import-utility = Quilt 导入工具
+-maven-repo = Maven 库
+-openings = Openings
+-patch-notes = 更新日志
+-staff-resources = Staff Resources
+-template-mod = 模组模板
+
+# Brand names/proper nouns - You shouldn't need to edit this.
+-mastodon = Mastodon
+-github = GitHub
+-discord = Discord
+-twitter = Twitter
+
+nav-about = 关于
+nav-blog = 博客
+nav-community = 社区
+nav-install = 安装
+nav-more-pages = 更多页面
+nav-usage = 使用
+
+divider-development = 开发资源
+divider-external-links = 外部链接
+
+nav-page-developer-wiki = {-developer-wiki}
+nav-page-import-utility = {-import-utility}
+nav-page-maven-repo = {-maven-repo}
+nav-page-openings = {-openings}
+nav-page-patch-notes = {-patch-notes}
+nav-page-staff-resources = {-staff-resources}
+nav-page-template-mod = {-template-mod}
+
+button-discord = {-discord}
+button-discord-community = {-discord} 社区服务器
+button-discord-toolchain = {-discord} 开发服务器
+button-developer-wiki = {-developer-wiki}
+button-forum = {-forum}
+button-github = {-github}
+button-install = 安装
+button-mastodon = {-mastodon}
+button-maven-repo = {-maven-repo}
+button-more = 更多
+button-openings = {-openings}
+button-patch-notes = Minecraft {-patch-notes}
+button-template-mod = {-template-mod}
+button-twitter = {-twitter}
+button-usage-docs = 使用文档
+
+page-title-about = 关于我们

@@ -3,89 +3,78 @@ layout: /src/layouts/HeroContent.astro
 ---
 
 import Admonition from "@components/Admonition.astro";
+import Button from "@components/Button.astro";
+import HomeAdmonition from "@components/index/HomeAdmonition.astro";
 import LatestPosts from "@components/index/LatestPosts.astro";
-import Button from "@components/index/Button.astro";
+import Link from "@components/Link.astro";
 import site from "@data/Site";
+import { localizePath } from "astro-i18next";
+import { Trans } from "astro-i18next/components";
 
 <div class="columns is-centered mb-5">
   <div class="column is-6">
-    # The Quilt Project
+    {/* <Trans i18nKey="body-info" ns="home"> */}
+      # The Quilt Project
 
-    The Quilt project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.
+      The Quilt project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.
 
-    Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, [please see our "about" pages](/about/).
+      Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, <Link to="/about/">please see our "about" pages</Link>.
+    {/* </Trans> */}
 
   </div>
+
   <div class="column is-4">
-    <Admonition style='danger'>
-      <h2 class="has-text-centered">
-        <span class="icon-text">
-          <span class="icon has-text-danger mr-3">
-            <i class="fas fa-warning"></i>
-          </span>
-
-          <span>WIP</span>
-        </span>
-      </h2>
-
+    <HomeAdmonition style="danger" iconType="danger" icon="warning" tKey="wip">
       **Quilt is currently in beta.** Here be dragons - there may be issues, but we'll fix them as quickly as we can!
 
-      If you'd like to help us test Quilt, please feel free to [install it](/install/), try it, and let us know how you get on!
-
-    </Admonition>
+      If you'd like to help us test Quilt, please feel free to <Link to="/install/">install it</Link>, try it, and let us know how you get on!
+    </HomeAdmonition>
 
   </div>
 </div>
 
 <div class="columns mb-5 mt-2">
-  <div class="column">
-    <Admonition style="primary is-fullheight">
-      <h2 class="has-text-centered">
-        <span class="icon-text">
-          <span class="icon has-text-primary mr-3">
-            <i class="fas fa-heart"></i>
-          </span>
-
-          <span>Caring</span>
-        </span>
-      </h2>
-
-      Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: **Quilt exists for your needs** -- not in spite of them.
-    </Admonition>
-
-  </div>
-  <div class="column">
-    <Admonition style="link has-text-left is-fullheight">
-      <h2 class="has-text-centered">
-        <span class="icon-text">
-          <span class="icon has-text-link mr-3">
-            <i class="fas fa-cubes"></i>
-          </span>
-
-          <span>Modular</span>
-        </span>
-      </h2>
-
-      Quilt's modularity doesn't just exist to help with organising its code -- **it extends to its users and modders too**.  If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can automatically download the Quilt libraries needed to run your mods.
-    </Admonition>
-
-  </div>
-  <div class="column">
-    <Admonition style="success has-text-left is-fullheight">
-      <h2 class="has-text-centered">
-        <span class="icon-text">
-          <span class="icon has-text-success mr-3">
-            <i class="fas fa-wrench"></i>
-          </span>
-
-          <span>Powerful</span>
-        </span>
-      </h2>
-
-      Quilt has the extra features and tools your mods need to succeed. From a rich library of modules that help you to write more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding toolchain, you can be sure that **your mod is in good hands**.
-    </Admonition>
-
-  </div>
+	<div class="column">
+		<HomeAdmonition
+			style="primary is-fullheight"
+			iconType="primary"
+			icon="heart"
+			tKey="caring"
+		>
+			Quilt is community-driven, and couldn't exist without its users and
+			contributors. We care about our community; whether you're a member of our
+			community spaces, an occasional contributor to one of our projects or
+			simply a user: **Quilt exists for your needs** -- not in spite of them.
+		</HomeAdmonition>
+	</div>
+	<div class="column">
+		<HomeAdmonition
+			style="link has-text-left is-fullheight"
+			iconType="link"
+			icon="cubes"
+			tKey="modular"
+		>
+			Quilt's modularity doesn't just exist to help with organising its code --
+			**it extends to its users and modders too**. If you're a modder, our build
+			tools will keep track of the Quilt libraries your mod uses. If you're a
+			user, Quilt can automatically download the Quilt libraries needed to run
+			your mods.
+		</HomeAdmonition>
+	</div>
+	<div class="column">
+		<HomeAdmonition
+			style="success has-text-left is-fullheight"
+			iconType="success"
+			icon="wrench"
+			tKey="powerful"
+		>
+			Quilt has the extra features and tools your mods need to succeed. From a
+			rich library of modules that help you to write more compatible mods with
+			less effort, to one of the most accurate decompilers provided by any
+			Minecraft modding toolchain, you can be sure that **your mod is in good
+			hands**.
+		</HomeAdmonition>
+	</div>
 </div>
 
 <div class="columns is-centered">
@@ -95,19 +84,21 @@ import site from "@data/Site";
           href="https://maven.quiltmc.org"
           target="_blank"
           type="gradle"
-          icon="feather-pointed"
-          textKey="maven-repo"
+          icon="fas fa-feather-pointed"
+          textKey="button-maven-repo"
         />
-
-        <a href="/mc-patchnotes/" class="button is-info">
-            <span class="icon"><i class="fas fa-notebook"></i></span>
-            <span>Minecraft Patch Notes</span>
-        </a>
-
-        <a href="/openings/" class="button is-primary">
-            <span class="icon"><i class="fas fa-briefcase"></i></span>
-            <span>Openings</span>
-        </a>
+        <Button
+          href={localizePath("/mc-patchnotes/")}
+          type="info"
+          icon="fas fa-notebook"
+          textKey="button-patch-notes"
+        />
+        <Button
+          href={localizePath("/openings/")}
+          type="primary"
+          icon="fas fa-briefcase"
+          textKey="button-openings"
+        />
     </div>
 
   </div>
@@ -117,62 +108,82 @@ import site from "@data/Site";
   <div class="column is-5">
     # Join the Community
 
-    Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that **all users of our community (and development) spaces are expected to abide by [our Code of Conduct](/community/code-of-conduct/) and [our rules](/community/rules/).** We recommend that you read and become familiar with them before joining or interacting with us.
+    Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that **all users of our community (and development) spaces are expected to abide by <Link to="/community/code-of-conduct/">our Code of Conduct</Link> and <Link to="/community/rules/">our rules</Link>.** We recommend that you read and become familiar with them before joining or interacting with us.
 
     <div class="button-grid">
-        <a href={site.discordCommunity} target="_blank" class="button is-discord">
-            <span class="icon"><i class="fab fa-discord"></i></span>
-            <span>Community</span>
-        </a>
-
-        <a href="https://forum.quiltmc.org" target="_blank" class="button is-gradle">
-            <span class="icon"><i class="fab fa-discourse"></i></span>
-            <span>Forum</span>
-        </a>
-
-        <a href="https://tech.lgbt/@quiltmc" target="_blank" class="button is-mastodon">
-            <span class="icon"><i class="fab fa-mastodon"></i></span>
-            <span>Mastodon</span>
-        </a>
-
-        <a href={`https://twitter.com/${site.twitter.username}`} target="_blank" class="button is-twitter">
-            <span class="icon"><i class="fab fa-twitter"></i></span>
-            <span>Twitter</span>
-        </a>
-
-        <a href="/community" class="button is-primary">
-            <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-            <span>More</span>
-        </a>
+        <Button
+          href={site.discordCommunity}
+          target="_blank"
+          type="discord"
+          icon="fab fa-discord"
+          textKey="button-discord-community"
+        />
+        <Button
+          href="https://forum.quiltmc.org"
+          target="_blank"
+          type="gradle"
+          icon="fab fa-discourse"
+          textKey="button-forum"
+        />
+        <Button
+          href="https://tech.lgbt/@quiltmc"
+          target="_blank"
+          type="mastodon"
+          icon="fab fa-mastodon"
+          textKey="button-mastodon"
+        />
+        <Button
+          href={`https://twitter.com/${site.twitter.username}`}
+          target="_blank"
+          type="twitter"
+          icon="fab fa-twitter"
+          textKey="button-twitter"
+        />
+        <Button
+          href={localizePath("/community/")}
+          target="_blank"
+          type="primary"
+          icon="fas fa-ellipsis-h"
+          textKey="button-more"
+        />
     </div>
 
-
+    {/* <Trans i18nKey="body-get-involved" ns="index"> */}
     # Get Involved
 
     There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the [openings page](/openings/).
 
     If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do is join us on GitHub or the <a href={site.discordToolchain}>Toolchain Discord Server</a>. There’s plenty of things to do, so we can always use more help!
+    {/* </Trans> */}
 
     <div class="button-grid">
-        <a href="https://forum.quiltmc.org" target="_blank" class="button is-gradle">
-            <span class="icon"><i class="fab fa-discourse"></i></span>
-            <span>Forum</span>
-        </a>
-
-        <a href={`https://github.com/${site.githubUsername}`} target="_blank" class="button is-github">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>GitHub</span>
-        </a>
-
-        <a href="/openings" target="_blank" class="button is-primary">
-            <span class="icon"><i class="fas fa-briefcase"></i></span>
-            <span>Openings</span>
-        </a>
-
-        <a href={site.discordToolchain} target="_blank" class="button is-discord">
-            <span class="icon"><i class="fab fa-discord"></i></span>
-            <span>Toolchain</span>
-        </a>
+        <Button
+          href="https://forum.quiltmc.org"
+          target="_blank"
+          type="gradle"
+          icon="fab fa-discourse"
+          textKey="button-forum"
+        />
+        <Button
+          href={`https://github.com/${site.githubUsername}`}
+          target="_blank"
+          type="github"
+          icon="fab fa-github"
+          textKey="button-github"
+        />
+        <Button
+          href={localizePath("/openings/")}
+          type="primary"
+          icon="fas fa-briefcase"
+          textKey="button-openings"
+        />
+        <Button
+          href={site.discordToolchain}
+          target="_blank"
+          type="discord"
+          icon="fab fa-discord"
+          textKey="button-discord-toolchain"
+        />
     </div>
 
   </div>

@@ -48,39 +48,39 @@ const {
 	<div class="navbar-menu" data-navbar-target="menu">
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
-				<Dropdown category="about" name={t("navbar-about")} />
+				<Dropdown category="about" name={t("nav-about")} />
 			</div>
 
 			<NavLink href="/blog/" subpage={true}>
-				{t("navbar-blog")}
+				{t("nav-blog")}
 			</NavLink>
 
 			<div class="navbar-item has-dropdown is-hoverable">
-				<Dropdown category="community" name={t("navbar-community")} right={true} />
+				<Dropdown category="community" name={t("nav-community")} right={true} />
 			</div>
 
 			<NavLink href="/install/" subpage={true}>
-				{t("navbar-install")}
+				{t("nav-install")}
 			</NavLink>
 
 			<div class="navbar-item has-dropdown is-hoverable">
-				<Dropdown category="usage" name={t("navbar-usage")} right={true}>
+				<Dropdown category="usage" name={t("nav-usage")} right={true}>
 					<div class="divider">{` ${t("divider-development")} `}</div>
 
 					<NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
-						{t("developer-wiki")}
+						{t("nav-page-developer-wiki")}
 					</NavLink>
 					<NavLink target="_blank" href="https://maven.quiltmc.org">
-						{t("maven-repository")}
+						{t("nav-page-maven-repo")}
 					</NavLink>
 					<NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
-						{t("template-mod")}
+						{t("nav-page-template-mod")}
 					</NavLink>
 
 					<div class="divider">{t("divider-external-links")}</div>
 
 					<NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
-						{t("quilt-import-utility")}
+						{t("nav-page-import-utility")}
 					</NavLink>
 				</Dropdown>
 			</div>
@@ -88,7 +88,7 @@ const {
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a class="navbar-link is-arrowless">
 					<span class="is-hidden-desktop">
-						{t("navbar-more-pages")}
+						{t("nav-more-pages")}
 					</span>
 					<span class="icon is-hidden-mobile is-hidden-tablet-only">
 						<i class="fas fa-ellipsis-v fa-xl"></i>
@@ -97,13 +97,13 @@ const {
 
 				<div class="navbar-dropdown is-right is-boxed">
 					<NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
-						{t("patch-notes")}
+						{t("nav-page-patch-notes")}
 					</NavLink>
 					<NavLink href="/openings/" icon="fas fa-briefcase">
-						{t("openings")}
+						{t("nav-page-openings")}
 					</NavLink>
 					<NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
-						{t("staff-resources")}
+						{t("nav-page-staff-resources")}
 					</NavLink>
 				</div>
 			</div>

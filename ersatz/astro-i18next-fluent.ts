@@ -1,6 +1,7 @@
 import { AstroIntegration } from "astro";
 import { InitOptions, Resource } from "i18next";
 import * as fs from 'fs';
+import * as path from "path";
 import ftlToJs from 'fluent_conv/ftl2js'
 
 
@@ -58,6 +59,13 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
         supportedLocales.unshift(baseLocale);
     };
 
+    const escape = (str: string): string => {
+      return (str + '')
+        .replace(/[\\"']/g, '\\$&') // escape quotes
+        .replace(/\n/g, '\\n')      // escape newlines
+        .replace(/\u0000/g, '\\0'); // escape NULs
+    }
+
     const deeplyStringifyObject = (obj: object | Array<any>): string => {
         const isArray = Array.isArray(obj);
         let str = isArray ? "[" : "{";
@@ -71,7 +79,7 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
             // see typeof result: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#description
             switch (typeof obj[key]) {
             case "string": {
-                value = `"${obj[key]}"`;
+                value = `"${escape(obj[key])}"`;
                 break;
             }
             case "number":
@@ -100,24 +108,45 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
         }
         return `${str}${isArray ? "]" : "}"}`;
     };
-    
-    const loadResources = (
+    const loadNamespaces = (
       resourcesPath: string,
-      supportedLanguages: string[]
+      baseLanguage: string
+    ): string[] => {
+      // get namespaces from baseLanguage in resourcesPath
+      const namespaceFilenames = fs.readdirSync(resourcesPath + baseLanguage);
+
+      const namespaces = [];
+      for (const namespaceFile of namespaceFilenames) {
+        namespaces.push(path.parse(namespaceFile).name);
+      }
+
+      return namespaces;
+    };
+    const loadResourcesNamespaced = (
+      resourcesPath: string,
+      supportedLanguages: string[],
+      namespaces: string[]
     ): Resource => {
       const resources = {};
       const errors = [];
 
       for (const language of supportedLanguages) {
-        try {
-          const rawContents = fs.readFileSync(resourcesPath + language + ".flt");
+        const directoryPath = resourcesPath + language + "/";
 
-          resources[language] = {
-            translation: ftlToJs(rawContents.toString()),
-          };
-        } catch (error) {
-          errors.push(`\t- ${resourcesPath + language + ".flt"}`);
+        const namespaceResources = {};
+        for (const namespace of namespaces) {
+          try {
+            const rawContents = fs.readFileSync(
+              directoryPath + namespace + ".flt"
+            );
+
+            namespaceResources[namespace] = ftlToJs(rawContents.toString(), () => {}, { respectComments: false });
+          } catch {
+            errors.push(`\t- ${directoryPath + namespace + ".flt"}`);
+          }
         }
+
+        resources[language] = namespaceResources;
       }
 
       if (errors.length) {
@@ -178,9 +207,14 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
             options.resourcesPath = "src/locales/";
           }
 
-          options.i18next.resources = loadResources(
+          options.i18next.ns = loadNamespaces(
             options.resourcesPath,
-            options.i18next.supportedLngs as string[]
+            options.baseLocale
+          );
+          options.i18next.resources = loadResourcesNamespaced(
+            options.resourcesPath,
+            options.i18next.supportedLngs as string[],
+            options.i18next.ns as string[]
           );
 
   
@@ -201,7 +235,8 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
             }
           }
           i18nextInit += `.init(${deeplyStringifyObject(options.i18next)});`;
-  
+          
+          console.log(i18nextInit);
           injectScript("page-ssr", imports + i18nextInit);
         },
       },
