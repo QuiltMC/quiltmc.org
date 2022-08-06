@@ -19,14 +19,11 @@ const {
 
 const buttonClasses = ["button"];
 if (type) buttonClasses.push(`is-${type}`)
-
-const iconClasses = ["fas"];
-if (icon) iconClasses.push(`fa-${icon}`)
 ---
 
 <a {href} {target} class:list={buttonClasses}>
 	<span class="icon">
-		<i class:list={iconClasses}></i>
+		<i class={icon}></i>
 	</span>
 	<span>{t(textKey)}</span>
 </a>

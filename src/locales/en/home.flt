@@ -1,0 +1,21 @@
+body-info = 
+	<0>The Quilt Project</0>
+
+	The Quilt project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.
+
+	Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, <1>please see our "about" pages</1>.
+
+admonition-wip = WIP
+
+admonition-wip-body =
+	<0>Quilt is currently in beta.</0> Here be dragons - there may be issues, but we'll fix them as quickly as we can! If you'd like to help us test Quilt, please feel free to <1>install it</1>, try it, and let us know how you get on!
+
+admonition-caring = Caring
+admonition-caring-body =
+	Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: <0>Quilt exists for your needs</0>—not in spite of them.
+admonition-modular = Modular
+admonition-modular-body =
+	Quilt's modularity doesn't just exist to help with organising its code—<0>it extends to its users and modders too</0>. If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can automatically download the Quilt libraries needed to run your mods.
+admonition-powerful = Powerful
+admonition-powerful-body =
+	Quilt has the extra features and tools your mods need to succeed. From a rich library of modules that help you to write more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding toolchain, you can be sure that <0>your mod is in good hands</0>.

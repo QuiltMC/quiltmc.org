@@ -1,0 +1,52 @@
+setting-text-direction = ltr
+setting-title-separator = {" "}|{" "}
+
+# Common strings
+-developer-wiki = Developer Wiki
+-forum = Forum
+-import-utility = Quilt Import Utility
+-openings = Openings
+-patch-notes = Patch Notes
+-staff-resources = Staff Resources
+-template-mod = Template Mod
+
+# Brand names/proper nouns - You shouldn't need to edit this.
+-mastodon = Mastodon
+-github = GitHub
+-discord = Discord
+-twitter = Twitter
+
+nav-about = About
+nav-blog = Blog
+nav-community = Community
+nav-install = Install
+nav-more-pages = More Pages
+nav-usage = Usage
+
+divider-development = Development
+divider-external-links = External Links
+
+nav-page-developer-wiki = {-developer-wiki}
+nav-page-import-utility = {-import-utility}
+nav-page-maven-repo = Maven Repository
+nav-page-openings = {-openings}
+nav-page-patch-notes = {-patch-notes}
+nav-page-staff-resources = {-staff-resources}
+nav-page-template-mod = {-template-mod}
+button-discord = {-discord}
+button-discord-community = Community
+button-discord-toolchain = Toolchain
+button-developer-wiki = {-developer-wiki}
+button-forum = {-forum}
+button-github = {-github}
+button-install = Install
+button-mastodon = {-mastodon}
+button-maven-repo = Maven Repo
+button-more = More
+button-openings = {-openings}
+button-patch-notes = Minecraft {-patch-notes}
+button-template-mod = {-template-mod}
+button-twitter = {-twitter}
+button-usage-docs = Usage Docs
+
+page-title-about = About
