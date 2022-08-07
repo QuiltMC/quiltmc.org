@@ -26,7 +26,7 @@ const isActive = pageUrl.startsWith(`/${i18next.language}/${category}/`) ? "is-a
 <div class:list={["navbar-dropdown is-boxed", right ? "is-right" : "" ]}>
 	{pages.map(p =>
 	<NavLink href={p.url} subpage={false}>
-		{t(p.frontmatter.title)}
+		{p.frontmatter.title}
 	</NavLink>
 	)}
 	<slot />

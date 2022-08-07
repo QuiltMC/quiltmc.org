@@ -41,12 +41,13 @@ async function getSystemMembers(members: string | ManualMember[]): Promise<Membe
 }
 
 ---
+
 <div class="card is-team-member">
 	<div class="card-content">
 		{ avatar &&
-			<div class="avatar">
-				<img class={pixelateAvatar ? "is-pixelated" : ""} src={avatar} alt="Avatar">
-			</div>
+		<div class="avatar">
+			<img class={pixelateAvatar ? "is-pixelated" : "" } src={avatar} alt="Avatar">
+		</div>
 		}
 
 		<div class="media">
@@ -73,7 +74,7 @@ async function getSystemMembers(members: string | ManualMember[]): Promise<Membe
 					<a href={link.url}>
 						<i class:list={["fa-lg", link.icon]}></i>
 					</a>)
-					
+
 					: <>&nbsp;</>
 					}
 				</p>
@@ -89,20 +90,18 @@ async function getSystemMembers(members: string | ManualMember[]): Promise<Membe
 				</div>
 			</div>
 
-			<div class={description ? "system-members mb-4" : "system-members"}>
+			<div class={description ? "system-members mb-4" : "system-members" }>
 				{ systemMembers === "---"
-				? 
+				?
 				<div class="has-tooltip-arrow" data-tooltip="Member list redacted by request ❤️">
 					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
 				</div>
-				
-				: getSystemMembers(systemMembers).then(m => m.map(m => {
 
-				return <div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
-					<img src={m.avatarUrl}/>
+				: getSystemMembers(systemMembers).then(m => m.map(m => (
+				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
+					<img src={m.avatarUrl} />
 				</div>
-
-				}))
+				)))
 				}
 			</div>
 			}
