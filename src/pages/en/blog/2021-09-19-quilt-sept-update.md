@@ -2,6 +2,7 @@
 title:  "Quilt September Update"
 date:   2021-09-19 15:00:00 -00:00
 author: ToffeeMax
+layout: /src/layouts/Default.astro
 ---
 
 It has been a few months since the last update on the Quilt Project.

@@ -32,12 +32,11 @@ const variables = new Variables(title)
 		})()}
 
 		{ date
-		? <p class="subtitle is-6">
+		&& <p class="subtitle is-6">
 			{DateTime.fromISO(date)
 			.setLocale(i18next.language)
 			.toLocaleString(DateTime.DATE_FULL)}
 		</p>
-		: <></>
 		}
 
 	</div>

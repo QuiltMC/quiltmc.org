@@ -1,6 +1,6 @@
 ---
-title: titles.about.about
-description: descriptions.about.about
+title: page-title-about
+description: page-description-about
 layout: /src/layouts/Page.astro
 ---
 

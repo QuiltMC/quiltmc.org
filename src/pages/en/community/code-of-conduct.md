@@ -1,6 +1,7 @@
 ---
-title: titles.community.coc
-description: descriptions.community.coc
+title: page-title-coc
+description: page-description-coc
+layout: /src/layouts/Page.astro
 
 redirect_from:
 - /community/code-of-conduct.html

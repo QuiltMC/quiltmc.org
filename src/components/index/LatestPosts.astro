@@ -24,6 +24,7 @@ function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
 		<h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
 
 		<PostInfo post={post.frontmatter} />
+		<p></p>
 		<Markdown>{getExcerptOfPost(post)}</Markdown>
 	</article>
 </>)}

@@ -1,14 +1,15 @@
 ---
 layout: /src/layouts/HeroContent.astro
 ---
-import Admonition from "@components/Admonition.astro";
+
+import Message from "@components/Message.astro";
 import Button from "@components/Button.astro";
-import HomeAdmonition from "@components/index/HomeAdmonition.astro"
+import HomeMessage from "@components/index/HomeMessage.astro";
 import LatestPosts from "@components/index/LatestPosts.astro";
 import Link from "@components/Link.astro";
 import site from "@data/Site";
-import { localizePath } from "astro-i18next"
-import { Trans } from "astro-i18next/components"
+import { localizePath } from "astro-i18next";
+import { Trans } from "astro-i18next/components";
 
 <div class="columns is-centered mb-5">
   <div class="column is-6">
@@ -19,33 +20,61 @@ import { Trans } from "astro-i18next/components"
 
       Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, <Link to="/about/">please see our "about" pages</Link>.
     {/* </Trans> */}
+
   </div>
 
   <div class="column is-4">
-    <HomeAdmonition style="danger" iconType="danger" icon="warning" tKey="wip">
+    <HomeMessage style="danger" iconType="danger" icon="warning" tKey="wip">
       **Quilt is currently in beta.** Here be dragons - there may be issues, but we'll fix them as quickly as we can!
 
       If you'd like to help us test Quilt, please feel free to <Link to="/install/">install it</Link>, try it, and let us know how you get on!
-    </HomeAdmonition>
+    </HomeMessage>
+
   </div>
 </div>
 
 <div class="columns mb-5 mt-2">
-  <div class="column">
-    <HomeAdmonition style="primary is-fullheight" iconType="primary" icon="heart" tKey="caring">
-      Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: **Quilt exists for your needs** -- not in spite of them.
-    </HomeAdmonition>
-  </div>
-  <div class="column">
-    <HomeAdmonition style="link has-text-left is-fullheight" iconType="link" icon="cubes" tKey="modular">
-      Quilt's modularity doesn't just exist to help with organising its code -- **it extends to its users and modders too**.  If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can automatically download the Quilt libraries needed to run your mods.
-    </HomeAdmonition>
-  </div>
-  <div class="column">
-    <HomeAdmonition style="success has-text-left is-fullheight" iconType="success" icon="wrench" tKey="powerful">
-      Quilt has the extra features and tools your mods need to succeed. From a rich library of modules that help you to write more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding toolchain, you can be sure that **your mod is in good hands**.
-    </HomeAdmonition>
-  </div>
+	<div class="column">
+		<HomeMessage
+			style="primary is-fullheight"
+			iconType="primary"
+			icon="heart"
+			tKey="caring"
+		>
+			Quilt is community-driven, and couldn't exist without its users and
+			contributors. We care about our community; whether you're a member of our
+			community spaces, an occasional contributor to one of our projects or
+			simply a user: **Quilt exists for your needs** -- not in spite of them.
+		</HomeMessage>
+	</div>
+	<div class="column">
+		<HomeMessage
+			style="link has-text-left is-fullheight"
+			iconType="link"
+			icon="cubes"
+			tKey="modular"
+		>
+			Quilt's modularity doesn't just exist to help with organising its code --
+			**it extends to its users and modders too**. If you're a modder, our build
+			tools will keep track of the Quilt libraries your mod uses. If you're a
+			user, Quilt can automatically download the Quilt libraries needed to run
+			your mods.
+		</HomeMessage>
+	</div>
+	<div class="column">
+		<HomeMessage
+			style="success has-text-left is-fullheight"
+			iconType="success"
+			icon="wrench"
+			tKey="powerful"
+		>
+			Quilt has the extra features and tools your mods need to succeed. From a
+			rich library of modules that help you to write more compatible mods with
+			less effort, to one of the most accurate decompilers provided by any
+			Minecraft modding toolchain, you can be sure that **your mod is in good
+			hands**.
+		</HomeMessage>
+	</div>
 </div>
 
 <div class="columns is-centered">

@@ -49,4 +49,6 @@ button-template-mod = {-template-mod}
 button-twitter = {-twitter}
 button-usage-docs = Usage Docs
 
-page-title-about = About
+page-title-about = About Us
+page-title-faq = FAQ
+page-title-dev-faq = FAQ (Developers)
