@@ -29,8 +29,6 @@ const header = t(`admonition-${tKey}`, { ns: "home" });
 	</h2>
 
 	<Trans i18nKey={`message-${tKey}-body`} ns="home">
-		{(
-		<Link to="help_me">HelpMe</Link>).then(s=>s.expressions[0]).then(s => console.log(s))}
 		<slot />
 	</Trans>
 </Message>
