@@ -1,7 +1,7 @@
 ---
 title: titles.about.newcomer-guide
-layout: about-page
 description: descriptions.about.newcomer-guide
+layout: /src/layouts/Page.astro
 ---
 
 This document is intended to be an overview of Quilt, and a way to address common questions and concerns by newcomers

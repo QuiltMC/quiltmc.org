@@ -1,7 +1,7 @@
 ---
 title: titles.about.teams
-layout: about-page-teams
 description: descriptions.about.teams
+layout: /src/layouts/Page.astro
 ---
 
 Quilt's governance is split up into many independent teams, some of which have their own subteams and/or leadership

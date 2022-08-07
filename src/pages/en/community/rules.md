@@ -1,6 +1,7 @@
 ---
 title: titles.community.rules
 description: descriptions.community.rules
+layout: /src/layouts/Page.astro
 
 redirect_from:
 - /community/rules.html

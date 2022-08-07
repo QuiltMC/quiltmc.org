@@ -1,7 +1,7 @@
 ---
 title: titles.about.timeline
-layout: about-page-timeline
 description: descriptions.about.timeline
+layout: /src/layouts/Page.astro
 ---
 
 {% include variables.liquid %}

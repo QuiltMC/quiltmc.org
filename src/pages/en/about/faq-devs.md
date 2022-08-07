@@ -1,8 +1,8 @@
 ---
 title: titles.about.faq.devs
-layout: about-page
 permalink: /about/faq/developers/
 description: descriptions.about.faq.devs
+layout: /src/layouts/Page.astro
 ---
 
 {% admonition %}

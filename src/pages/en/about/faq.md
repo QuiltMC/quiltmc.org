@@ -1,7 +1,7 @@
 ---
 title: titles.about.faq.general
-layout: about-page-faq
 description: descriptions.about.faq.general
+layout: /src/layouts/Page.astro
 
 redirect_from:
 - /faq/

@@ -1,6 +1,7 @@
 ---
 title: titles.community.pluralkit
 description: descriptions.community.pluralkit
+layout: /src/layouts/Page.astro
 
 redirect_from:
   - /community/tupperbox

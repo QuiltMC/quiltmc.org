@@ -15,7 +15,7 @@ const pageUrl = Astro.url.pathname;
 const { category, name, right = false } = Astro.props as Props;
 
 const pages = (await Astro.glob<Frontmatter>(`/src/pages/**/*.md`))
-	.filter(post => post.url?.startsWith(`/${category}`))
+	.filter(page => page.url?.startsWith(`/en/${category}`))
 	.sort((a, b) => t(a.frontmatter.title).localeCompare(t(b.frontmatter.title)))
 ---
 

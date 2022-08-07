@@ -2,6 +2,7 @@
 permalink: /community/
 title: titles.community.community
 description: descriptions.community.community
+layout: /src/layouts/Page.astro
 ---
 
 You can find the Quilt in the following places.
