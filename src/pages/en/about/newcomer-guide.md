@@ -1,6 +1,6 @@
 ---
-title: titles.about.newcomer-guide
-description: descriptions.about.newcomer-guide
+title: page-title-newcomer-guide
+description: page-description-newcomer-guide
 layout: /src/layouts/Page.astro
 ---
 
@@ -44,7 +44,7 @@ Below, you'll find a list of common questions and concerns. Because some answers
 collapsed -- please click or tap on them to read our response. Additionally, it's entirely possible that we've 
 forgotten to cover something here -- we'd love to hear from you if you think of anything that needs adding!
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}What does Quilt provide over other mod-loaders?{% endsummary %}
 
@@ -93,9 +93,9 @@ to write great mods while also taking the bigger picture into account, and avoid
 mods or more well-known mod developers.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}What about the Fabric mods I already play?{% endsummary %}
 
@@ -109,9 +109,9 @@ it as part of Quilt itself. That said, if it does happen, we'll be gifting that 
 and providing its new maintainers with as much help as we can.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}Won't this just further split the community?{% endsummary %}
 
@@ -159,9 +159,9 @@ that. Speaking of which, if you're a mod developer that would like to look into 
 free to join us on Discord -- there are plenty of developers there that can point you in the right direction.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}What's different about Quilt's governance?{% endsummary %}
 
@@ -286,9 +286,9 @@ It's worth noting that anyone can contribute to any of Quilt's projects without 
 but contributors will still be interacting directly with whatever team is running the project they're working with.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}Pineapple? Isn't that a pumpkin?{% endsummary %}
 
@@ -310,9 +310,9 @@ and informally. If you find yourself in Quilt community spaces, you'll definitel
 original drawing -- please feel free to create your own art too, if you'd like!
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}What's up with Quilt's community moderation?{% endsummary %}
 
@@ -338,9 +338,9 @@ responsibility to create safe, inclusive spaces, and to set a trend doing so -- 
 same, and making the Internet a better place for everyone.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}Does Quilt send my mods to the servers I play on?{% endsummary %}
 
@@ -357,9 +357,9 @@ We prefer a solution that doesn't impact the privacy of our users -- we're still
 we do believe that the above RFC may be the correct solution.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>
 
-{% admonition %}
+<Message>
 {% details %}
 {% summary %}Why don't you explain the Fabric drama here?{% endsummary %}
 
@@ -378,4 +378,4 @@ to continue working on Quilt, pushing for better, more inclusive, safer communit
 just for our own users, but to try to improve the modding community at large.
 
 {% enddetails %}
-{% endadmonition %}
+</Message>

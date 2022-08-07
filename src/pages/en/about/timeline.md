@@ -1,6 +1,6 @@
 ---
-title: titles.about.timeline
-description: descriptions.about.timeline
+title: page-title-timeline
+description: page-description-timeline
 layout: /src/layouts/Page.astro
 ---
 

@@ -1,7 +1,7 @@
 ---
 permalink: /community/
-title: titles.community.community
-description: descriptions.community.community
+title: page-title-community
+description: page-description-community
 layout: /src/layouts/Page.astro
 ---
 

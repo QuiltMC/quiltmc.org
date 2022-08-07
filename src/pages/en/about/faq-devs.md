@@ -1,19 +1,19 @@
 ---
-title: titles.about.faq.devs
+title: page-title-dev-faq
+description: page-description-dev-faq
 permalink: /about/faq/developers/
-description: descriptions.about.faq.devs
 layout: /src/layouts/Page.astro
 ---
 
-{% admonition %}
+<Message>
 
 ## Where's the developer documentation?
 
 Quilt's developer documentation is **incredibly work-in-progress**, and nowhere near a usable state. However, it is
 being worked on, and you may preview what's done so far on [modder.wiki.quiltmc.org](https://modder.wiki.quiltmc.org).
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## Why should I choose Quilt for my mods instead of Fabric?
 
@@ -34,8 +34,8 @@ For developers, Quilt provides the following advantages over Fabric:
   widener implementations, allowing those and other bytecode manipulation tools to function without any special handling
   required in Quilt's build tools or loader, and helping mods to remain compatible with each other
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## What does it mean to say that Quilt Mappings doesn't have a clean-room, and why does it matter?
 
@@ -58,8 +58,8 @@ It's worth noting, however, that **a name being present in some other mappings p
 All names contributed must stand up on their own, regardless of what Mojang -- or any other organisation -- provides as
 a name.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## How hard will it be to port my Fabric mods?
 
@@ -70,8 +70,8 @@ supported by Quilt's backwards-compatibility efforts, but this will not be the c
 added to the toolchain. Quilt will provide an alternative approach with proper toolchain support later on -- and we'll 
 help you figure out how to move to it if you need support.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## How long will backwards compatibility for loading Fabric mods last?
 
@@ -81,8 +81,8 @@ provide its developers with the support they need to keep working on it.
 
 In short, backwards compatibility will live on until it's no longer possible to maintain it.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## How do I get started with writing a Quilt mod?
 
@@ -90,8 +90,8 @@ While we're currently still working on developer documentation, we do have a
 [template mod](https://github.com/QuiltMC/quilt-template-mod) that you can use as a template, or just to get started.
 We'll be working on docs throughout the beta period and beyond, so please keep an eye out for them!
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## What the heck is Chasm, exactly? {#Chasm}
 
@@ -104,4 +104,4 @@ frontends couldn't be written -- by Quilt, or by the community.
 
 Chasm has not yet been implemented, but we're working on it!
 
-{% endadmonition %}
+</Message>

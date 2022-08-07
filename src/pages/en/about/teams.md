@@ -1,6 +1,6 @@
 ---
-title: titles.about.teams
-description: descriptions.about.teams
+title: page-title-teams
+description: page-description-teams
 layout: /src/layouts/Page.astro
 ---
 

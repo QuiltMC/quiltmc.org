@@ -6,7 +6,7 @@ redirect-from:
 - /troubleshooting.html
 ---
 
-{% admonition %}
+<Message>
 
 ## Why am I getting an "Incompatible mod set!" error?
 
@@ -42,8 +42,8 @@ If the error you're getting looks something like this, then this is a problem wi
 report it to that mod's developers. The mod you're looking for in this example has been circled in red above for 
 clarity -- in this case, the mod would be QuickCarpet.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## My game is crashing. Why is this happening?
 
@@ -62,4 +62,4 @@ If this doesn't help, or you have trouble reading the logs on your own, please f
 `#quilt-support` channel on [The Quilt Community Discord server](https://discord.quiltmc.org), and we'll try to
 help you out. **Please remember to provide your `latest.log` and any other relevant issue when requesting support!**
 
-{% endadmonition %}
+</Message>

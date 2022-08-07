@@ -148,11 +148,11 @@ specifically, any of `primary`, `secondary`, `white`, `black`, `light`, `dark`, 
 ```liquid
 {% admonition /success %}
 This admonition has no title, but it has the "success" styling.
-{% endadmonition %}
+</Message>
 
 {% admonition Title goes here/danger %}
 This admonition has a title, and the "danger" styling.
-{% endadmonition %}
+</Message>
 ```
 {% endraw %}
 
@@ -162,11 +162,11 @@ This admonition has a title, and the "danger" styling.
 
 {% admonition /success %}
 This admonition has no title, but it has the "success" styling.
-{% endadmonition %}
+</Message>
 
 {% admonition Title goes here/danger %}
 This admonition has a title, and the "danger" styling.
-{% endadmonition %}
+</Message>
 
 {% endcolumn %}
 {% endcolumns %}
@@ -184,15 +184,15 @@ users, with the leftmost column showing first.
 ```liquid
 {% columns %}
     {% column %}
-        {% admonition %}
+        <Message>
             This is column 1.
-        {% endadmonition %}
+        </Message>
     {% endcolumn %}
     
     {% column %}
-        {% admonition %}
+        <Message>
             This is column 2.
-        {% endadmonition %}
+        </Message>
     {% endcolumn %}
 {% endcolumns %}
 ```
@@ -202,15 +202,15 @@ users, with the leftmost column showing first.
 
 {% columns %}
 {% column %}
-{% admonition %}
+<Message>
 This is column 1.
-{% endadmonition %}
+</Message>
 {% endcolumn %}
 
 {% column %}
-{% admonition %}
+<Message>
 This is column 2.
-{% endadmonition %}
+</Message>
 {% endcolumn %}
 {% endcolumns %}
 

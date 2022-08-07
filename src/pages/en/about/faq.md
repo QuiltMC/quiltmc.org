@@ -1,111 +1,111 @@
 ---
-title: titles.about.faq.general
-description: descriptions.about.faq.general
+title: page-title-faq
+description: page-description-faq
 layout: /src/layouts/Page.astro
 
 redirect_from:
-- /faq/
-- /faq.html
+  - /faq/
+  - /faq.html
 ---
 
-# General Questions {#general-questions}
+# General Questions
 
-{% admonition %}
+<Message>
 
 ## What is Quilt?
 
-Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project, primarily 
-due to concerns around governance, project management and moderation. You can read more about the Quilt project and 
+Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project, primarily
+due to concerns around governance, project management and moderation. You can read more about the Quilt project and
 where it came from on [the About Us page](/about).
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## Which parts of Fabric is Quilt forking?
 
 All of them. Quilt is a hard fork of Fabric, and we aim to fork and maintain all projects necessary to exist
 independently of it.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## Why should I use Quilt?
 
 For users, Quilt provides the following advantages:
 
-* Mods that should be more compatible with each other, despite their use of powerful modding tools
-* Compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favourites
-* An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff 
+- Mods that should be more compatible with each other, despite their use of powerful modding tools
+- Compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favorites
+- An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff
   team, and works with its users to improve over time
-* **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly --
+- **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly --
   and only -- what you need for your mods to work
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## How can I support Quilt?
 
 If you'd like to help us out, here's just a few ways we've come up with:
 
-* Join [our community spaces](/community), hang out and give your input
-* Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and
+- Join [our community spaces](/community), hang out and give your input
+- Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and
   opinions
-* Support other projects that make use of Quilt, or Quilt's tools and libraries
-* Talk about Quilt on social media (in a responsible manner)
+- Support other projects that make use of Quilt, or Quilt's tools and libraries
+- Talk about Quilt on social media (in a responsible manner)
 
-[//]: # (* Help with ongoing costs by [supporting us financially on OpenCollective]&#40;https://opencollective.com/quiltmc&#41;)
+[//]: # "* Help with ongoing costs by [supporting us financially on OpenCollective](https://opencollective.com/quiltmc)"
 
 Ultimately, even simply making use of Quilt or hanging out in our community spaces helps us. All activity, input and
 contributions are appreciated!
 
-{% endadmonition %}
+</Message>
 
 # Usage Questions {#usage-questions}
 
-{% admonition %}
+<Message>
 
 ## Can Quilt load Forge mods?
 
 No, Quilt can't load Forge mods and support for this is not planned. There are third-party projects (such as Patchwork)
 that plan to add this functionality, but they're not maintained by Quilt -- and they're not part of The Quilt Project.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## Can Quilt load Fabric mods?
 
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric 
+In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric
 compatibility doesn't negatively impact the project, we'll keep doing it -- but if it does get to the point where
 maintaining it is no longer feasible, we'll help move it to a community-run project and provide its developers with
 the support they need to keep working on it.
 
-It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this 
-will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be 
+It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this
+will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be
 happy to work with mod developers that need an alternative approach for Quilt.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## If I'm using Fabric mods, do I need Fabric API installed?
 
 **No, you don't** - in fact, we recommend against this for compatibility reasons.
 
-Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To 
+Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To
 deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard
 QSL distribution, which you can [download them from Modrinth](https://modrinth.com/mod/qsl).
 
 As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work
 correctly with QSL.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## Can Fabric load Quilt mods?
 
 No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## When will Quilt be released?
 
@@ -114,28 +114,28 @@ Quilt's first beta released on the 20th of April 2022, and we've been full steam
 If you'd like to try Quilt out, please take a look at [the install page](/install/).
 [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
 
-{% endadmonition %}
+</Message>
 
 # Management Questions {#management-questions}
 
-{% admonition %}
+<Message>
 
 ## How is Quilt structured?
 
 Quilt's staff is split into three distinct groups:
 
-* The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
-* The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
-* The development teams, which independently oversee specific project that are assigned to them
+- The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
+- The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
+- The development teams, which independently oversee specific project that are assigned to them
 
 Between these three groups, the structure is more or less flat -- no one group of people has the final say over the
-whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community 
+whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community
 spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
 
 You can find more about this in the governance section on [the About Us page](/about/#governance).
 
-{% endadmonition %}
-{% admonition %}
+</Message>
+<Message>
 
 ## What's an RFC? How do they work?
 
@@ -148,7 +148,7 @@ RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://
 number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we
 recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
 
-Quilt's RFC process is documented in 
+Quilt's RFC process is documented in
 [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
 
-{% endadmonition %}
+</Message>

@@ -44,11 +44,11 @@ quality of life for the sake of the Quilt community.
 
 ## Our Hierarchy
 
-{% admonition %}
+<Message>
 **Note:** All community team members can act as moderators, regardless of their named role. That said, Community
 Moderators are the people you should contact first if there's a problem -- Community Managers should be contacted
 only when Community Moderators are unavailable, or when your concerns relate to a Community Moderator.
-{% endadmonition %}
+</Message>
 
 While all community team members have equal influence, there are two primary roles:
 

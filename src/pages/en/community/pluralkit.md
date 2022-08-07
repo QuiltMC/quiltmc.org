@@ -1,6 +1,6 @@
 ---
-title: titles.community.pluralkit
-description: descriptions.community.pluralkit
+title: page-title-pluralkit
+description: page-description-pluralkit
 layout: /src/layouts/Page.astro
 
 redirect_from:
@@ -9,10 +9,10 @@ redirect_from:
   - /community/pluralkit.html
 ---
 
-{% admonition %}
+<Message>
 **Note:** This document is specific to Discord. If you're not making use of our community spaces on Discord, PluralKit
 won't be available.
-{% endadmonition %}
+</Message>
 
 [PluralKit](https://pluralkit.me) is a Discord bot that exists to allow users to proxy their messages via Discord 
 webhooks. This has many practical applications, especially given that Discord doesn't have any features that support 
@@ -64,12 +64,12 @@ aware of this.
 
 ## Plurality?
 
-{% admonition %}
+<Message>
 **Note:** Pluralities are not the only valid reason to make use of a tool like PluralKit, but it's by far the most 
 common use for it in our community spaces -- so we created this section to help explain the concept. Any gatekeeping 
 of these types of tools will not be tolerated in Quilt community spaces, but you're always welcome to contact a member 
 of the community team directly if you have any concerns.
-{% endadmonition %}
+</Message>
 
 Plurality is the concept of multiple people sharing a single body, inhabiting the same brain. Many people's first
 (or only) experience with this is from people with Dissociative Identity Disorder (DID), but there are many other
@@ -96,12 +96,12 @@ For more information on plurality, feel free to browse the following resources..
 
 ### Ex Uno Plures
 
-{% admonition %}
+<Message>
 **Note:** This site belongs to a specific plural system, and much of what's written there is related to their personal
 experiences of plurality. Additionally, some articles there were written quite some time ago, and may contain vulgar
 language and outdated terminology -- including terms that exist outside the plural community. Nonetheless, it remains a 
 popular and useful resource for people approaching plurality and plural systems from the outside.
-{% endadmonition %}
+</Message>
 
 * [Fictive Identities](https://www.exunoplures.org/main/fictive-identities/) by Noël Dawkins
 * [Plurality for Skeptics](https://www.exunoplures.org/main/articles/skeptics/) by Em Flynn

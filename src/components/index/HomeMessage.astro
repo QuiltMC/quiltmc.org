@@ -1,6 +1,5 @@
 ---
-import Admonition from "@components/Admonition.astro";
-import Markdown from "@astrojs/markdown-component";
+import Message from "@components/Message.astro";
 import { t } from "i18next";
 // @ts-ignore
 import { Trans } from "astro-i18next/components";
@@ -18,7 +17,7 @@ const header = t(`admonition-${tKey}`, { ns: "home" });
 
 ---
 
-<Admonition style={style}>
+<Message style={style}>
 	<h2 class="has-text-centered">
 		<span class="icon-text">
 			<span class={`icon has-text-${iconType} mr-3`}>
@@ -29,8 +28,9 @@ const header = t(`admonition-${tKey}`, { ns: "home" });
 		</span>
 	</h2>
 
-	<Trans i18nKey={`admonition-${tKey}-body`} ns="home">
-		{(<Link to="help_me">HelpMe</Link>).then(s=>s.expressions[0]).then(s => console.log(s))}
+	<Trans i18nKey={`message-${tKey}-body`} ns="home">
+		{(
+		<Link to="help_me">HelpMe</Link>).then(s=>s.expressions[0]).then(s => console.log(s))}
 		<slot />
 	</Trans>
-</Admonition>
+</Message>
