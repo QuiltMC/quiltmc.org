@@ -1,23 +1,4 @@
-heading-info = The Quilt Project
-body-info = 
-	<0>The Quilt Project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.</0><1>Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, <2>please see our "about" pages</2>.</1>
-heading-join-the-community = Join the Community
-body-join-the-community =
-	<0>Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that <1>all users of our community (and development) spaces are expected to abide by <2>our Code of Conduct</2> and <3>our rules</3>.</1> We recommend that you read and become familiar with them before joining or interacting with us.</0>
-heading-get-involved = Get Involved
-body-get-involved =
-	<0>There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the <1>openings page</1>.</0><2>If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do is join us on GitHub or the <3>Toolchain Discord Server</3>. There’s plenty of things to do, so we can always use more help!</2>
-heading-latest-posts = Latest Posts
-
 message-wip = WIP
-message-wip-body =
-	<0><1>Quilt is currently in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0> <2>If you'd like to help us test Quilt, please feel free to <3>install it</3>, try it, and let us know how you get on!</2>
 message-caring = Caring
-message-caring-body =
-	<0>Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: <1>Quilt exists for your needs</1>—not in spite of them.</0>
 message-modular = Modular
-message-modular-body =
-	<0>Quilt's modularity doesn't just exist to help with organising its code—<1>it extends to its users and modders too</1>. If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can automatically download the Quilt libraries needed to run your mods.
 message-powerful = Powerful
-message-powerful-body =
-	<0>Quilt has the extra features and tools your mods need to succeed. From a rich library of modules that help you to write more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding toolchain, you can be sure that <1>your mod is in good hands</1>.</0>

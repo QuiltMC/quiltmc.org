@@ -27,7 +27,5 @@ const header = t(`message-${tKey}`, { ns: "home" });
 		</span>
 	</h2>
 
-	<Trans i18nKey={`message-${tKey}-body`} ns="home">
-		<slot />
-	</Trans>
+	<slot />
 </Message>
