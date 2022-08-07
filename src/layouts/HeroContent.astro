@@ -1,12 +1,8 @@
 ---
-import i18next from "i18next";
-import { BaseProps } from "./Base.astro";
 import HeroBase from "./HeroBase.astro";
-
-const props = Astro.props as BaseProps;
 ---
 
-<HeroBase content={props.content}>
+<HeroBase content={Astro.props.content}>
 	<section class="section">
 		<main class="content container">
 			<slot />

@@ -1,10 +1,10 @@
 ---
 import Markdown from "@astrojs/markdown-component";
-import { MarkdownInstance } from "astro";
+import PostInfo, { PostFrontmatter } from "@atoms/PostInfo.astro";
 
+import { MarkdownInstance } from "astro";
 import i18next from "i18next";
 import { sortByDescending } from "src/util/Util";
-import PostInfo, { PostFrontmatter } from "../PostInfo.astro";
 
 const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/*.md'))
 	.filter(p => p.url.startsWith(`/${i18next.language}/`))

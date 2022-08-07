@@ -28,8 +28,10 @@ export interface Config {
     mastodon: SocialMediaHandle,
     rss: URL,
     twitch: SocialMediaHandle,
-    twitter: SocialMediaHandle,
-
+    twitter: {
+        handle: SocialMediaHandle,
+        card: string,
+    },
     logo: string,
     social: {
         name: string,
@@ -54,8 +56,10 @@ const config: Config = {
     mastodon: new SocialMediaHandle("https://tech.lgbt/", "@quiltmc"),
     rss: new URL("https://quiltmc.org/feed.xml"),
     twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
-    twitter: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
-
+    twitter: {
+        handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
+        card: "summary",
+    },
     logo: '/assets/img/logo-square.png',
     social: {
         name: 'QuiltMC',

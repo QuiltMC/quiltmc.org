@@ -1,10 +1,11 @@
 ---
-import Footer from "@components/Footer.astro";
-import HtmlHead, { Props as HeadProps } from "@components/HtmlHead.astro";
-import Variables from "@data/Variables";
-import LanguageModal from "@components/LanguageModal.astro";
-import NavBar from "@components/NavBar.astro";
+import LanguageModal from "@atoms/LanguageModal.astro";
+import Footer from "@parts/Footer.astro";
+import HtmlHead, { HeadProps } from "@parts/HtmlHead.astro";
+import NavBar from "@parts/nav/NavBar.astro";
+
 import i18next from "i18next";
+import Variables from "@data/Variables";
 
 export interface BaseProps {
 	content: Inner,

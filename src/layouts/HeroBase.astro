@@ -1,9 +1,11 @@
 ---
 import Base, { BaseProps } from "./Base.astro";
+//@ts-ignore
+import Button from "@atoms/Button.astro";
+import NavBar from "@parts/nav/NavBar.astro";
 import Variables from "@data/Variables"
-import config from "@data/Site"
-import NavBar from "@components/NavBar.astro";
-import Button from "@components/Button.astro";
+import site from "@data/Site"
+
 import { localizePath } from "astro-i18next";
 
 const props = Astro.props as BaseProps;
@@ -26,7 +28,8 @@ const { rtl } = new Variables(props.content.title, props.content.description)
 			</picture>
 
 			<div class="button-grid">
-				<Button href={localizePath("/install/")} type="primary" icon="fas fa-download" textKey="button-install" />
+				<Button href={localizePath("/install/")} type="primary" icon="fas fa-download"
+					textKey="button-install" />
 				<Button href={localizePath("/usage/")} type="info" icon="fas fa-book" textKey="button-usage-docs" />
 				<Button href="/https://modder.wiki.quiltmc.org/" type="link" icon="fas fa-code"
 					textKey="button-developer-wiki" />
@@ -35,9 +38,9 @@ const { rtl } = new Variables(props.content.title, props.content.description)
 			</div>
 
 			<div class="button-grid">
-				<Button href={config.discordCommunity} type="discord" icon="fab fa-discord" textKey="button-discord" />
-				<Button href="https://forum.quiltmc.org" type="gradle" icon="fab fa-discourse" textKey="button-forum" />
-				<Button href={`https://github.com/${config.githubUsername}`} target="_blank" type="github" icon="fab fa-github"
+				<Button href={site.discordCommunity} type="discord" icon="fab fa-discord" textKey="button-discord" />
+				<Button href={site.forum} type="gradle" icon="fab fa-discourse" textKey="button-forum" />
+				<Button href={site.github.link} target="_blank" type="github" icon="fab fa-github"
 					textKey="button-github" />
 			</div>
 		</div>
