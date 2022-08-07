@@ -21,7 +21,8 @@ const {
 const variables = new Variables(title, description);
 const rtl = variables.rtl ? 'rtl' : 'ltr'
 
-const match = Astro.url.pathname.match(/^\/(\w+)\//);
+// extract locale from URL
+const match = (Astro.url.pathname + '/').match(/^\/(\w+)\//);
 if (match) {
 	i18next.changeLanguage(match[1]);
 }
