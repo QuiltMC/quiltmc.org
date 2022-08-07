@@ -1,3 +1,15 @@
+export class SocialMediaHandle {
+    base: string;
+    username: string;
+    link: URL;
+    
+    constructor(base: string, username: string) {
+        this.base = base;
+        this.username = username;
+        this.link = new URL(this.username, this.base);
+    }
+}
+
 export interface Config {
     title: string,
     shortTitle: string,
@@ -8,16 +20,16 @@ export interface Config {
     author: string,
 
     // Social media handles
-    githubUsername: string,
-    gitlabUsername: string,
-    twitchUsername: string,
-    discordCommunity: string,
-    discordToolchain: string,
+    discordCommunity: URL,
+    discordToolchain: URL,
+    forum: URL,
+    github: SocialMediaHandle,
+    gitlab: SocialMediaHandle,
+    mastodon: SocialMediaHandle,
+    rss: URL,
+    twitch: SocialMediaHandle,
+    twitter: SocialMediaHandle,
 
-    twitter: {
-        username: string,
-        card: 'summary',
-    }
     logo: string,
     social: {
         name: string,
@@ -34,16 +46,16 @@ const config: Config = {
     permalink: "pretty",
     author: "QuiltMC",
 
-    githubUsername: "QuiltMC",
-    gitlabUsername: "quiltmc",
-    twitchUsername: "quiltmc",
-    discordCommunity: "https://discord.quiltmc.org",
-    discordToolchain: "https://discord.quiltmc.org/toolchain",
+    discordCommunity: new URL("https://discord.quiltmc.org/"),
+    discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
+    forum: new URL("https://forum.quiltmc.org/"),
+    github: new SocialMediaHandle("https://github.com/", "QuiltMC"),
+    gitlab: new SocialMediaHandle("https://gitlab.com/", "quiltmc"),
+    mastodon: new SocialMediaHandle("https://tech.lgbt/", "@quiltmc"),
+    rss: new URL("https://quiltmc.org/feed.xml"),
+    twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
+    twitter: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
 
-    twitter: {
-        username: 'quilt_mc',
-        card: 'summary',
-    },
     logo: '/assets/img/logo-square.png',
     social: {
         name: 'QuiltMC',

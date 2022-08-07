@@ -1,5 +1,6 @@
 ---
 import site from "@data/Site";
+import Button from "@components/Button.astro";
 ---
 
 <footer class="footer">
@@ -7,37 +8,55 @@ import site from "@data/Site";
 		<div class="columns">
 			<div class="column is-half is-offset-one-quarter">
 				<div class="button-grid">
-					<a title="Discord" class="button is-discord is-rounded" target="_blank" href={site.discordCommunity}>
-						<span class="icon"><i class="fab fa-discord"></i></span>
-					</a>
-
-					<a title="Forum" class="button is-gradle is-rounded" target="_blank" href="https://forum.quiltmc.org">
-						<span class="icon"><i class="fab fa-discourse"></i></span>
-					</a>
-
-					<a title="GitHub" class="button is-github is-rounded" target="_blank"
-						href={`https://github.com/${site.githubUsername}`}>
-						<span class="icon"><i class="fab fa-github"></i></span>
-					</a>
-
-					<a title="Twitter" class="button is-twitter is-rounded" target="_blank"
-						href={`https://twitter.com/${site.twitchUsername}`}>
-						<span class="icon"><i class="fab fa-twitter"></i></span>
-					</a>
-
-					<a title="Mastodon" class="button is-mastodon is-rounded" target="_blank" rel="me"
-						href="https://tech.lgbt/@quiltmc">
-						<span class="icon"><i class="fab fa-mastodon"></i></span>
-					</a>
-
-					<a title="Twitch" class="button is-primary is-rounded" target="_blank"
-						href={`https://twitch.tv/${site.twitchUsername}`}>
-						<span class="icon"><i class="fab fa-twitch"></i></span>
-					</a>
-
-					<a title="RSS" class="button is-rss is-rounded" target="_blank" href="https://quiltmc.org/feed.xml">
-						<span class="icon"><i class="fa-solid fa-rss"></i></span>
-					</a>
+					<Button
+						href={site.discordCommunity}
+						target="_blank"
+						type={["discord", "rounded"]}
+						icon="fab fa-discord"
+						titleKey="button-discord"	
+					/>
+					<Button
+						href={site.forum}
+						target="_blank"
+						type={["gradle", "rounded"]}
+						icon="fab fa-discourse"
+						titleKey="button-forum"	
+					/>
+					<Button
+						href={site.github.link}
+						target="_blank"
+						type={["github", "rounded"]}
+						icon="fab fa-github"
+						titleKey="button-github"	
+					/>
+					<Button
+						href={site.twitter.link}
+						target="_blank"
+						type={["twitter", "rounded"]}
+						icon="fab fa-twitter"
+						titleKey="button-twitter"
+					/>
+					<Button
+						href={site.mastodon.link}
+						target="_blank"
+						type={["mastodon", "rounded"]}
+						icon="fab fa-mastodon"
+						titleKey="button-mastodon"
+					/>
+					<Button
+						href={site.twitch.link}
+						target="_blank"
+						type={["primary", "rounded"]}
+						icon="fab fa-twitch"
+						titleKey="button-twitch"
+					/>
+					<Button
+						href={site.rss}
+						target="_blank"
+						type={["rss", "rounded"]}
+						icon="fa-solid fa-rss"
+						titleKey="button-rss"
+					/>
 				</div>
 
 				<br />

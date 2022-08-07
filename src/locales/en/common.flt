@@ -15,6 +15,7 @@ setting-title-separator = {" "}|{" "}
 -github = GitHub
 -discord = Discord
 -twitter = Twitter
+-twitch = Twitch
 
 nav-about = About
 nav-blog = Blog
@@ -33,6 +34,7 @@ nav-page-openings = {-openings}
 nav-page-patch-notes = {-patch-notes}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
+
 button-discord = {-discord}
 button-discord-community = Community
 button-discord-toolchain = Toolchain
@@ -45,8 +47,10 @@ button-maven-repo = Maven Repo
 button-more = More
 button-openings = {-openings}
 button-patch-notes = Minecraft {-patch-notes}
+button-rss = RSS
 button-template-mod = {-template-mod}
 button-twitter = {-twitter}
+button-twitch = {-twitch}
 button-usage-docs = Usage Docs
 
 page-title-about = About Us
