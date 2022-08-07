@@ -1,6 +1,10 @@
 ---
 import site from "@data/Site";
+// @ts-ignore
 import Button from "@components/Button.astro";
+// @ts-ignore
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
 ---
 
 <footer class="footer">
@@ -63,29 +67,35 @@ import Button from "@components/Button.astro";
 
 				<div class="has-text-centered">
 					<p>
-						<strong>Copyright &copy; { new Date().getFullYear() } Quilt Project</strong>
+						<strong>
+							{t("footer:copyright", { year: new Date().getFullYear().toString() })}
+						</strong>
 					</p>
 
 					<p>
-						Quilt is not an official Minecraft product, and is not
-						approved by or associated with Mojang Studios.
-						"Minecraft" is a trademark of Mojang AB and any usage
-						of the Minecraft brand on this site is used in
-						accordance with Mojang Studios'
-						<a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset
-							Guidelines</a>.
+						<Trans i18nKey="disclaimer-unofficial" ns="footer">
+							Quilt is not an official Minecraft product, and is not
+							approved by or associated with Mojang Studios.
+							"Minecraft" is a trademark of Mojang AB and any usage
+							of the Minecraft brand on this site is used in
+							accordance with Mojang Studios'
+							<a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset
+								Guidelines</a>.
+						</Trans>
 					</p>
-
 					<p>
-						All logos used on this site are the property of their respective owners. The
-						CurseForge logo recreation we use in a few places on this site
-						<a href="https://gist.github.com/thecodewarrior/110057b210551c4ecf2c9be6d58ff824" target="_blank">was
-							created by thecodewarrior</a>.
+						<Trans i18nKey="disclaimer-icons" ns="footer">
+							All logos used on this site are the property of their respective owners. The
+							CurseForge logo recreation we use in a few places on this site
+							<a href="https://gist.github.com/thecodewarrior/110057b210551c4ecf2c9be6d58ff824" target="_blank">was
+								created by thecodewarrior</a>.
+						</Trans>
 					</p>
-
 					<p>
-						Made with <i class="fak fa-2xl fa-pumpkin"></i>, <a href="https://bulma.io">Bulma</a> and
-						<a href="https://github.com/CreativeBulma">the CreativeBulma extensions</a>.
+						<Trans i18nKey="made-with" ns="footer">
+							Made with <i class="fak fa-2xl fa-pumpkin"></i>, <a href="https://bulma.io">Bulma</a> and
+							<a href="https://github.com/CreativeBulma">the CreativeBulma extensions</a>.
+						</Trans>
 					</p>
 				</div>
 			</div>
