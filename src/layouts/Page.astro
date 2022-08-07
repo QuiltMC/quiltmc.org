@@ -7,10 +7,10 @@ let { title } = Astro.props.content;
 let locale = i18next.language;
 let pages;
 // TODO: just why, why would you do this
-if (Astro.url.pathname.startsWith(`/${locale}/about`)) {
-	pages = await Astro.glob(`/src/pages/${locale}/about/*`);
-} else if (Astro.url.pathname.startsWith(`/${locale}/community`)) {
-	pages = await Astro.glob(`/src/pages/${locale}/community/*`);
+if (Astro.url.pathname.startsWith('/en/about')) {
+	pages = await Astro.glob('/src/pages/en/about/*');
+} else if (Astro.url.pathname.startsWith('/en/community')) {
+	pages = await Astro.glob('/src/pages/en/community/*');
 }
 ---
 

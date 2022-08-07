@@ -1,5 +1,5 @@
 ---
-title: page-title-dev-faq
+title: titles:page-faq-devs
 description: page-description-dev-faq
 permalink: /about/faq/developers/
 layout: /src/layouts/Page.astro
