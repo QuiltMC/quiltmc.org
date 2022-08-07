@@ -3,12 +3,12 @@ import Markdown from "@astrojs/markdown-component";
 import { MarkdownInstance } from "astro";
 
 import i18next from "i18next";
-import { sortBy } from "src/util/Util";
+import { sortByDescending } from "src/util/Util";
 import PostInfo, { PostFrontmatter } from "../PostInfo.astro";
 
 const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/*.md'))
 	.filter(p => p.url.startsWith(`/${i18next.language}/`))
-sortBy(allPosts, post => new Date(post.frontmatter.date));
+sortByDescending(allPosts, post => new Date(post.frontmatter.date));
 
 const latestPosts = allPosts.slice(0, 3);
 
