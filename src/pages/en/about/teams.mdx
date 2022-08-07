@@ -3,6 +3,8 @@ title: page-title-teams
 description: page-description-teams
 layout: /src/layouts/Page.astro
 ---
+import TeamMembers from "@setpieces/TeamMembers.astro"
+import ProjectButton from "@parts/team/ProjectButton.astro"
 
 Quilt's governance is split up into many independent teams, some of which have their own subteams and/or leadership
 structure. Teams are largely responsible for their own management, taking an internally democratic approach towards
@@ -18,9 +20,7 @@ that concern multiple teams and steering the project's general direction. The Ad
 number of members, to help ensure that ties can be broken cleanly.
 
 <div class="admin team-grid">
-    {% include team/HavenKing.liquid %}
-    {% include team/MrMangoHands.liquid %}
-    {% include team/OroArmor.liquid %}
+	<TeamMembers list={["HavenKing", "MrMangoHands", "OroArmor"]} />
 </div>
 
 # Community Team
@@ -41,7 +41,7 @@ involvement or investment in the Quilt project, is important to try to avoid sit
 space may be possible.
 
 <div class="keyholder team-grid">
-    {% include team/kashike.liquid %}
+	<TeamMembers list={["kashike"]} />
 </div>
 
 ## Community Managers
@@ -53,10 +53,7 @@ spaces, writing and receiving feedback on Quilt's community policies -- while al
 the responsibilities from that position.
 
 <div class="moderator team-grid">
-    {% include team/AppleTheGolden.liquid %}
-    {% include team/gdude2002.liquid %}
-    {% include team/MrMangoHands.liquid %}
-    {% include team/Starchild.liquid %}
+	<TeamMembers list={["AppleTheGolden", "gdude2002", "MrMangoHands", "Starchild"]} />
 </div>
 
 ## Moderators
@@ -67,15 +64,17 @@ backbone of any Community Team, and Quilt's is no exception -- a diverse, active
 instrumental for Quilt's success.
 
 <div class="moderator team-grid">
-    {% include team/Ember.liquid %}
-    {% include team/Forkk.liquid %}
-    {% include team/Larry.liquid %}
-    {% include team/Dichotomy.liquid %}
-    {% include team/NoComment.liquid %}
-    {% include team/Orchid.liquid %}
-    {% include team/SilverAndro.liquid %}
-    {% include team/Southpaw.liquid %}
-    {% include team/Redblueflame.liquid %}
+	<TeamMembers list={[
+		"Ember",
+		"Forkk",
+		"Larry",
+		"Dichotomy",
+		"NoComment",
+		"Orchid",
+		"SilverAndro",
+		"Southpaw",
+		"Redblueflame",
+	]}/>
 </div>
 
 ## Events Team
@@ -85,9 +84,7 @@ anything from AMAs to fully-blown online modding conventions. While they aren't 
 by the rest of the Community Team, and also have the ability to directly moderate events.
 
 <div class="community team-grid">
-    {% include team/Fusion.liquid %}
-    {% include team/Lemma.liquid %}
-    {% include team/Octal.liquid %}
+	<TeamMembers list={["Fusion", "Lemma", "Octal"]}/>
 </div>
 
 ## Outreach Team
@@ -95,12 +92,8 @@ by the rest of the Community Team, and also have the ability to directly moderat
 The outreach team is responsible for communications outside of and within Quilt. They write blog posts, manage social media and website content, and run developer meetings, among other things.
 
 <div class="community team-grid">
-    {% include team/gdude2002.liquid %}
-    {% include team/Orchid.liquid %}
-    {% include team/Southpaw.liquid %}
-    {% include team/Starchild.liquid %}
+	<TeamMembers list={["gdude2002", "Orchid", "Southpaw", "Starchild"]} />
 </div>
-
 
 # Development Teams
 
@@ -113,18 +106,17 @@ The build tools team is responsible for several projects that are instrumental f
 compilation tooling and build system plugins. This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="dev-launch-injector" %}
-    {% include project_button.liquid name="gradle-convention-plugins" %}
-    {% include project_button.liquid name="quilt-template-mod" %}
-    {% include project_button.liquid name="quilt-loom" %}
-    {% include project_button.liquid name="sponge-mixin-compile-extensions" %}
+    <ProjectButton name="dev-launch-injector" />
+    <ProjectButton name="gradle-convention-plugins" />
+    <ProjectButton name="quilt-template-mod" />
+    <ProjectButton name="quilt-loom" />
+    <ProjectButton name="sponge-mixin-compile-extensions" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/CheaterCodes.liquid %}
-    {% include team/glitch.liquid %}
-    {% include team/TibiNonEst.liquid %}
+	<TeamMembers list={["CheaterCodes", "glitch", "TibiNonEst"]} />
 </div>
+
 
 ## Chasm
 
@@ -138,17 +130,20 @@ codename for Chasm, so those projects are associated with the CHASM team.
 This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="asmr-processor-prototype" %}
-    {% include project_button.liquid name="chasm" %}
+    <ProjectButton name="asmr-processor-prototype" />
+    <ProjectButton name="chasm" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/CheaterCodes.liquid %}
-    {% include team/Earthcomputer.liquid %}
-    {% include team/Kroppeb.liquid %}
-    {% include team/Pyrofab.liquid %}
-    {% include team/RTTV.liquid %}
+    <TeamMembers list={[
+		"CheaterCodes",
+		"Earthcomputer",
+		"Kroppeb",
+		"Pyrofab",
+		"RTTV",
+	]}/>
 </div>
+
 
 ## Community Tooling
 
@@ -156,17 +151,20 @@ The Community Tooling team is responsible for projects that power Quilt's commun
 This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="cozy-discord" %}
+    <ProjectButton name="cozy-discord" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/AppleTheGolden.liquid %}
-    {% include team/gdude2002.liquid %}
-    {% include team/glitch.liquid %}
-    {% include team/Redblueflame.liquid %}
-    {% include team/sschr15.liquid %}
-    {% include team/Starchild.liquid %}
+    <TeamMembers list={[
+    	"AppleTheGolden",
+    	"gdude2002",
+    	"glitch",
+    	"Redblueflame",
+    	"sschr15",
+    	"Starchild",
+	]}/>
 </div>
+
 
 ## Decompilers
 
@@ -175,17 +173,19 @@ because they allow modders to view a version of Minecraft's source code, which i
 they need to do to extend the game. This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="cfr" %}
-    {% include project_button.liquid name="procyon" %}
-    {% include project_button.liquid name="quiltflower" %}
+    <ProjectButton name="cfr" />
+    <ProjectButton name="procyon" />
+    <ProjectButton name="quiltflower" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/Geolykt.liquid %}
-    {% include team/SuperCoder79.liquid %}
-    {% include team/Kroppeb.liquid %}
-    {% include team/MartrixX.liquid %}
-    {% include team/skyrising.liquid %}
+    <TeamMembers list={[
+    	"Geolykt",
+    	"SuperCoder79",
+    	"Kroppeb",
+    	"MartrixX",
+    	"skyrising",
+	]}/>
 </div>
 
 ## Infrastructure
@@ -194,12 +194,14 @@ The Infrastructure team is responsible for Quilt's service infrastructure, inclu
 tooling, file repositories and API services for modders. This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="quilt-meta" %}
+    <ProjectButton name="quilt-meta" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/HavenKing.liquid %}
-    {% include team/Starchild.liquid %}
+    <TeamMembers list={[
+    	"HavenKing",
+    	"Starchild",
+	]}/>
 </div>
 
 ## Kotlin
@@ -207,10 +209,12 @@ tooling, file repositories and API services for modders. This team is responsibl
 The Kotlin Team is responsible for maintaining the Quilt Kotlin Libraries (QKL), a set of libraries based off QSL and designed for use with the Kotlin programming language. These libraries provide an official way to use Kotlin on Quilt, as well as wrappers for QSL and the Minecraft codebase for easier use in Kotlin.
 
 <div class="developer team-grid">
-    {% include team/NoComment.liquid %}
-    {% include team/Octal.liquid %}
-    {% include team/Potatoboy.liquid %}
-    {% include team/SilverAndro.liquid %}
+    <TeamMembers list={[
+    	"NoComment",
+    	"Octal",
+    	"Potatoboy",
+    	"SilverAndro",
+	]}/>
 </div>
 
 ## Loader
@@ -220,19 +224,21 @@ into the game. This also includes projects like the installer and libraries used
 metadata. This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="access-widener" %}
-    {% include project_button.liquid name="Mixin" %}
-    {% include project_button.liquid name="quilt-installer" %}
-    {% include project_button.liquid name="quilt-json5" %}
-    {% include project_button.liquid name="quilt-loader" %}
-    {% include project_button.liquid name="quilt-loader-sat4j" %}
+    <ProjectButton name="access-widener" />
+    <ProjectButton name="Mixin" />
+    <ProjectButton name="quilt-installer" />
+    <ProjectButton name="quilt-json5" />
+    <ProjectButton name="quilt-loader" />
+    <ProjectButton name="quilt-loader-sat4j" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/AlexIIL.liquid %}
-    {% include team/Earthcomputer.liquid %}
-    {% include team/glitch.liquid %}
-    {% include team/HavenKing.liquid %}
+    <TeamMembers list={[
+    	"AlexIIL",
+    	"Earthcomputer",
+    	"glitch",
+    	"HavenKing",
+	]}/>
 </div>
 
 ## Mappings
@@ -242,25 +248,27 @@ includes tools for matching names, mappings storage formats, javadoc generation 
 is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="enigma" %}
-    {% include project_button.liquid name="javadoc-draftsman" %}
-    {% include project_button.liquid name="lorenz-tiny" %}
-    {% include project_button.liquid name="mapping-poet" %}
-    {% include project_button.liquid name="mappings-hasher" %}
-    {% include project_button.liquid name="quilt-mappings" %}
-    {% include project_button.liquid name="stitch" %}
-    {% include project_button.liquid name="tiny-mappings-parser" %}
-    {% include project_button.liquid name="tiny-remapper" %}
-    {% include project_button.liquid name="unpick" %}
+    <ProjectButton name="enigma" />
+    <ProjectButton name="javadoc-draftsman" />
+    <ProjectButton name="lorenz-tiny" />
+    <ProjectButton name="mapping-poet" />
+    <ProjectButton name="mappings-hasher" />
+    <ProjectButton name="quilt-mappings" />
+    <ProjectButton name="stitch" />
+    <ProjectButton name="tiny-mappings-parser" />
+    <ProjectButton name="tiny-remapper" />
+    <ProjectButton name="unpick" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/2xsaiko.liquid %}
-    {% include team/CheaterCodes.liquid %}
-    {% include team/LambdaFoxes.liquid %}
-    {% include team/MartrixX.liquid %}
-    {% include team/NoComment.liquid %}
-    {% include team/OroArmor.liquid %}
+    <TeamMembers list={[
+    	"2xsaiko",
+    	"CheaterCodes",
+    	"LambdaFoxes",
+    	"MartrixX",
+    	"NoComment",
+    	"OroArmor",
+	]}/>
 </div>
 
 # Quilt Standard Libraries (QSL)
@@ -275,8 +283,8 @@ specific, distinct sets of library functionality -- while they may depend on eac
 This team is responsible for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="quilt-standard-libraries" %}
-    {% include project_button.liquid name="quilted-fabric-api" %}
+    <ProjectButton name="quilt-standard-libraries" />
+    <ProjectButton name="quilted-fabric-api" />
 </div>
 
 ## Core (Team Leaders)
@@ -286,9 +294,11 @@ the QSL project, as well as setting project standards and handling governance ta
 team members from the QSL sub-teams.
 
 <div class="developer team-grid">
-    {% include team/EnnuiL.liquid %}
-    {% include team/LambdaFoxes.liquid %}
-    {% include team/OroArmor.liquid %}
+    <TeamMembers list={[
+    	"EnnuiL",
+    	"LambdaFoxes",
+    	"OroArmor",
+	]}/>
 </div>
 
 ## Sub-Team: Block
@@ -298,62 +308,80 @@ This sub-team doesn't have any members, so its modules are maintained by the Cor
 ## Sub-Team: Data
 
 <div class="developer team-grid">
-    {% include team/ADudeCalledLeo.liquid %}
-    {% include team/LambdaFoxes.liquid %}
+    <TeamMembers list={[
+    	"ADudeCalledLeo",
+    	"LambdaFoxes",
+	]}/>
 </div>
 
 ## Sub-Team: Entity
 
 <div class="developer team-grid">
-    {% include team/Bubblie.liquid %}
-    {% include team/WillBL.liquid %}
+    <TeamMembers list={[
+    	"Bubblie",
+    	"WillBL",
+	]}/>
 </div>
 
 ## Sub-Team: GUI
 
 <div class="developer team-grid">
-    {% include team/AlphaMode.liquid %}
-    {% include team/EnnuiL.liquid %}
-    {% include team/maximum.liquid %}
+    <TeamMembers list={[
+    	"AlphaMode",
+    	"EnnuiL",
+    	"maximum",
+	]}/>
 </div>
 
 ## Sub-Team: Item
 
 <div class="developer team-grid">
-    {% include team/OroArmor.liquid %}
+    <TeamMembers list={[
+    	"OroArmor",
+	]}/>
 </div>
 
 ## Sub-Team: Management
 
 <div class="developer team-grid">
-    {% include team/WillBL.liquid %}
+    <TeamMembers list={[
+    	"WillBL",
+	]}/>
 </div>
 
 ## Sub-Team: Rendering
 
 <div class="developer team-grid">
-    {% include team/Pepper.liquid %}
+    <TeamMembers list={[
+    	"Pepper",
+	]}/>
 </div>
 
 ## Sub-Team: Transfer
 
 <div class="developer team-grid">
-    {% include team/AlphaMode.liquid %}
+    <TeamMembers list={[
+    	"AlphaMode",
+	]}/>
 </div>
 
 ## Sub-Team: Worldgen
 
 <div class="developer team-grid">
-    {% include team/Noah.liquid %}
-    {% include team/OliviaTheVampire.liquid %}
-    {% include team/snoozestudios.liquid %}
-    {% include team/zOnlyKroks.liquid %}
+    <TeamMembers list={[
+    	"Noah",
+    	"OliviaTheVampire",
+    	"snoozestudios",
+    	"zOnlyKroks",
+	]}/>
 </div>
 
 ## Sub-Team: Quilted Fabric API
 
 <div class="developer team-grid">
-    {% include team/EnnuiL.liquid %}
+    <TeamMembers list={[
+    	"EnnuiL",
+	]}/>
 </div>
 
 # Triage Teams
@@ -362,20 +390,22 @@ Triage teams aren't directly involved with development, but they're still very i
 reviewing pull requests to active Quilt repositories, ensuring that they're up to spec and ready be merged. This
 allows for the development teams overseeing these repositories to focus on development, rather than reviewing PRs.
 
-## Mappings {#triage-mappings}
+## Mappings
 
 This team is responsible for handling triage tasks for the following projects:
 
 <div class="button-grid">
-    {% include project_button.liquid name="enigma" %}
-    {% include project_button.liquid name="quilt-mappings" %}
+    <ProjectButton name="enigma" />
+    <ProjectButton name="quilt-mappings" />
 </div>
 
 <div class="developer team-grid">
-    {% include team/Bubblie.liquid %}
-    {% include team/Jamalam.liquid %}
-    {% include team/Noah.liquid %}
-    {% include team/Orchid.liquid %}
-    {% include team/supersaiyansubtlety.liquid %}
-    {% include team/Sylv.liquid %}
+    <TeamMembers list={[
+    	"Bubblie",
+    	"Jamalam",
+    	"Noah",
+    	"Orchid",
+    	"supersaiyansubtlety",
+    	"Sylv",
+	]}/>
 </div>

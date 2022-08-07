@@ -1,0 +1,100 @@
+---
+import { getSystemMembers } from "@util/PluralKit";
+
+export interface Link {
+	icon: string,
+	url: string,
+}
+export interface Props {
+	name?: string,
+	discord?: string,
+	github: string,
+	description: string,
+	avatar?: string,
+	pixelateAvatar?: boolean,
+	systemMembers?: string,
+	links?: Link[],
+}
+const {
+	name,
+	discord,
+	github,
+	description,
+	avatar,
+	pixelateAvatar = false,
+	systemMembers,
+	links = [],
+} = Astro.props as Props;
+
+---
+<div class="card is-team-member">
+	<div class="card-content">
+		{ avatar &&
+			<div class="avatar">
+				<img class={pixelateAvatar ? "is-pixelated" : ""} src={avatar} alt="Avatar">
+			</div>
+		}
+
+		<div class="media">
+			<div class="media-content">
+				<p class="title is-5 mb-5">
+					{ name ? name : <>&nbsp;</> }
+				</p>
+
+				<p class="subtitle is-6">
+					<i class="fab fa-fw fa-discord"></i>
+					{ discord ? discord : "N/A" }
+				</p>
+
+				<p class="subtitle is-6">
+					<i class="fab fa-fw fa-github"></i>
+
+					{ github ? <a href={`https://github.com/${github}`}>{github}</a> : "N/A" }
+				</p>
+
+				<p class="subtitle is-6 is-links">
+					{links.length > 0
+
+					? links.map(link =>
+					<a href={link.url}>
+						<i class:list={["fa-lg", link.icon]}></i>
+					</a>)
+					
+					: <>&nbsp;</>
+					}
+				</p>
+			</div>
+		</div>
+
+		{ (description || systemMembers) &&
+		<div class="content">
+			{ systemMembers &&
+			<div class="media system-member-title">
+				<div class="media-content">
+					<p class="subtitle is-6 has-text-centered">Plural System</p>
+				</div>
+			</div>
+
+			<div class={description ? "system-members mb-4" : "system-members"}>
+				{ systemMembers === "---"
+				? 
+				<div class="has-tooltip-arrow" data-tooltip="Member list redacted by request ❤️">
+					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
+				</div>
+				
+				: getSystemMembers(systemMembers).then(m => m.map(member =>
+				
+				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={member.name}>
+					<img src={member.avatar_url}/>
+				</div>
+				
+				))
+				}
+			</div>
+			}
+
+			{ description }
+		</div>
+		}
+	</div>
+</div>

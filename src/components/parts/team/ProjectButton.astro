@@ -1,0 +1,16 @@
+---
+import Button from "@atoms/Button.astro";
+
+export interface Props {
+	name: string
+}
+const { name } = Astro.props as Props;
+---
+
+<Button
+	href={`https://github.com/QuiltMC/${name}`}
+	target="_blank"
+	type="github"
+	icon="fab fa-github"
+	text={name}
+/>

@@ -8,6 +8,7 @@ export interface Props {
 	icon?: string,
 	titleKey?: string,
 	textKey?: string,
+	text?: string,
 }
 
 const {
@@ -15,8 +16,9 @@ const {
 	target = '_self',
 	type,
 	icon,
-	titleKey = "",
+	titleKey,
 	textKey,
+	text,
 } = Astro.props as Props;
 
 var buttonClasses = ["button"];
@@ -25,11 +27,24 @@ if (typeof type === "string") {
 } else {
 	buttonClasses = buttonClasses.concat(type.map(s => `is-${s}`))
 }
+
+function finalText(): string | null {
+	if (textKey) {
+		// prioritize text key
+		const translated = t(textKey);
+		if (translated !== textKey) {
+			// if it's successfully translated, return
+			return translated;
+		}
+	}
+	// fallback to text if any
+	return text ? text : null;
+}
 ---
 
 <a {titleKey && t(titleKey)} {href} {target} class:list={buttonClasses}>
 	<span class="icon">
 		<i class={icon}></i>
 	</span>
-	{textKey && <span>{t(textKey)}</span>}
+	<span>{ finalText() }</span>
 </a>
