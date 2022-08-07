@@ -32,7 +32,7 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 
 								{pages.map(page => (
 								<li>
-									<a href={page.url} class={page.url==Astro.url.pathname ? "is-active" : ""
+									<a href={ page.url + "/" } class={page.url + "/"==Astro.url.pathname ? "is-active" : ""
 										}>{page.frontmatter.title}</a>
 								</li>
 								))}
