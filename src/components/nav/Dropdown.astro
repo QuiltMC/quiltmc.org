@@ -1,6 +1,6 @@
 ---
 import { localizePath } from "astro-i18next";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import NavLink from "./NavLink.astro";
 
 export interface Props {
@@ -16,12 +16,13 @@ const pageUrl = Astro.url.pathname;
 const { category, name, right = false } = Astro.props as Props;
 
 const pages = (await Astro.glob<Frontmatter>(`/src/pages/**/*.md`))
-	.filter(page => page.url?.startsWith(`/en/${category}`))
+	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => t(a.frontmatter.title).localeCompare(t(b.frontmatter.title)))
+
+const isActive = pageUrl.startsWith(`/${category}/`) ? "is-active" : ""
 ---
 
-<a href={"/en/" + category} class:list={[ "navbar-link is-arrowless" , pageUrl.startsWith(`/${category}/`) ? "is-active"
-	: "" ]}>
+<a href={localizePath(category)} class:list={[ "navbar-link is-arrowless", isActive ]}>
 	{name}
 </a>
 

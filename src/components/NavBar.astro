@@ -52,7 +52,7 @@ const {
 				<Dropdown category="about" name={t("nav-about")} />
 			</div>
 
-			<NavLink href="/blog/" subpage={true}>
+			<NavLink href={localizePath("/blog/")} subpage={true}>
 				{t("nav-blog")}
 			</NavLink>
 
@@ -60,7 +60,7 @@ const {
 				<Dropdown category="community" name={t("nav-community")} right={true} />
 			</div>
 
-			<NavLink href="/install/" subpage={true}>
+			<NavLink href={localizePath("/install/")} subpage={true}>
 				{t("nav-install")}
 			</NavLink>
 
@@ -97,13 +97,13 @@ const {
 				</a>
 
 				<div class="navbar-dropdown is-right is-boxed">
-					<NavLink href="/mc-patchnotes/" icon="fas fa-notebook">
+					<NavLink href={localizePath("/mc-patchnotes/")} icon="fas fa-notebook">
 						{t("nav-page-patch-notes")}
 					</NavLink>
-					<NavLink href="/openings/" icon="fas fa-briefcase">
+					<NavLink href={localizePath("/openings/")} icon="fas fa-briefcase">
 						{t("nav-page-openings")}
 					</NavLink>
-					<NavLink href="/staff/" icon="fas fa-clipboard-user" subpage={true}>
+					<NavLink href={localizePath("/staff/")} icon="fas fa-clipboard-user" subpage={true}>
 						{t("nav-page-staff-resources")}
 					</NavLink>
 				</div>
