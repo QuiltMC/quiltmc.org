@@ -1,7 +1,8 @@
 ---
 title: Introducing BlanketCon!
 date: 2022-03-29 7:00:00 -00:00
-authors: LemmaEOF
+authors:
+    - LemmaEOF
 layout: /src/layouts/Default.astro
 ---
 

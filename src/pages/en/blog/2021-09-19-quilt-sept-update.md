@@ -1,7 +1,8 @@
 ---
 title:  "Quilt September Update"
 date:   2021-09-19 15:00:00 -00:00
-author: ToffeeMax
+authors:
+    - ToffeeMax
 layout: /src/layouts/Default.astro
 ---
 
