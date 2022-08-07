@@ -1,0 +1,25 @@
+# Disclaimer: **EVERYTHING** here is a placeholder.
+
+heading-info = The Quilt Project
+body-info = 
+	<0>Quilt 是一个由社区驱动的、主要针对 Minecraft 的开源模组工具链。yada yada you know how it's like I'm not gonna translate further</0><1>第二段懒得翻，<2>about page is here haha funny</2></1>
+heading-join-the-community = Join the Community
+body-join-the-community =
+	<0>Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that <1>all users of our community (and development) spaces are expected to abide by <2>our Code of Conduct</2> and <3>our rules</3>.</1> We recommend that you read and become familiar with them before joining or interacting with us.</0>
+heading-get-involved = Get Involved
+body-get-involved =
+	<0>There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the <1>openings page</1>.</0><2>If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do is join us on GitHub or the <3>Toolchain Discord Server</3>. There’s plenty of things to do, so we can always use more help!</2>
+heading-latest-posts = Latest Posts
+
+message-wip = WIP
+message-wip-body =
+	<0><1>Quilt 现在仍处于 Beta 阶段。</1> yada yada </0> <2>haha funny <3>link works</3> just some more tests</2>
+message-caring = Caring
+message-caring-body =
+	<0>Quilt is community-driven, and couldn't exist without its users and contributors. We care about our community; whether you're a member of our community spaces, an occasional contributor to one of our projects or simply a user: <1>Quilt exists for your needs</1>—not in spite of them.</0>
+message-modular = Modular
+message-modular-body =
+	<0>Quilt's modularity doesn't just exist to help with organising its code—<1>it extends to its users and modders too</1>. If you're a modder, our build tools will keep track of the Quilt libraries your mod uses. If you're a user, Quilt can automatically download the Quilt libraries needed to run your mods.
+message-powerful = Powerful
+message-powerful-body =
+	<0>Quilt has the extra features and tools your mods need to succeed. From a rich library of modules that help you to write more compatible mods with less effort, to one of the most accurate decompilers provided by any Minecraft modding toolchain, you can be sure that <1>your mod is in good hands</1>.</0>

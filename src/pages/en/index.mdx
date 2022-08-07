@@ -8,26 +8,37 @@ import HomeMessage from "@components/index/HomeMessage.astro";
 import LatestPosts from "@components/index/LatestPosts.astro";
 import Link from "@components/Link.astro";
 import site from "@data/Site";
+import { t } from "i18next";
 import { localizePath } from "astro-i18next";
 import { Trans } from "astro-i18next/components";
 
 <div class="columns is-centered mb-5">
   <div class="column is-6">
-    {/* <Trans i18nKey="body-info" ns="home"> */}
-      # The Quilt Project
+    # {t("heading-info", { ns: "home" })}
+    <Trans i18nKey="body-info" ns="home">
+      The Quilt project is an open-source, community-driven modding toolchain
+      designed primarily for Minecraft. By focusing on speed, ease of use and
+      modularity, Quilt aims to provide a sleek and modern modding toolchain
+      with an open ecosystem.
 
-      The Quilt project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.
-
-      Quilt is a project that was born out of a need for change in the Minecraft modding ecosystem. Our teams contain many experienced members of the modding community, providing a level of familiarity that helps us to avoid the mistakes of the past -- whether those mistakes relate to community management, diversity and inclusivity, project governance or transparency. For more information on how we hope to do this, <Link to="/about/">please see our "about" pages</Link>.
-    {/* </Trans> */}
-
+      Quilt is a project that was born out of a need for change in the
+      Minecraft modding ecosystem. Our teams contain many experienced members
+      of the modding community, providing a level of familiarity that helps us
+      to avoid the mistakes of the past -- whether those mistakes relate to
+      community management, diversity and inclusivity, project governance or
+      transparency. For more information on how we hope to do this,
+      <Link to="/about/">please see our "about" pages</Link>.
+    </Trans>
   </div>
 
   <div class="column is-4">
     <HomeMessage style="danger" iconType="danger" icon="warning" tKey="wip">
-      **Quilt is currently in beta.** Here be dragons - there may be issues, but we'll fix them as quickly as we can!
+      **Quilt is currently in beta.** Here be dragons - there may be issues,
+      but we'll fix them as quickly as we can!
 
-      If you'd like to help us test Quilt, please feel free to <Link to="/install/">install it</Link>, try it, and let us know how you get on!
+      If you'd like to help us test Quilt, please feel free to
+      <Link to="/install/">install it</Link>, try it, and let us know how
+      you get on!
     </HomeMessage>
 
   </div>
@@ -106,9 +117,16 @@ import { Trans } from "astro-i18next/components";
 
 <div class="columns is-centered">
   <div class="column is-5">
-    # Join the Community
-
-    Please feel free to join us on one of our official community spaces by clicking the buttons below. Please note that **all users of our community (and development) spaces are expected to abide by <Link to="/community/code-of-conduct/">our Code of Conduct</Link> and <Link to="/community/rules/">our rules</Link>.** We recommend that you read and become familiar with them before joining or interacting with us.
+    # {t("heading-join-the-community", { ns: "home" })}
+    <Trans i18nKey="body-join-the-community" ns="home">
+      Please feel free to join us on one of our official community spaces by
+      clicking the buttons below. Please note that **all users of our community
+      (and development) spaces are expected to abide by
+      <Link to="/community/code-of-conduct/">our Code of Conduct</Link> and
+      <Link to="/community/rules/">our rules</Link>.**
+      We recommend that you read and become familiar with them before joining or
+      interacting with us.
+    </Trans>
 
     <div class="button-grid">
         <Button
@@ -148,13 +166,17 @@ import { Trans } from "astro-i18next/components";
         />
     </div>
 
-    {/* <Trans i18nKey="body-get-involved" ns="index"> */}
-    # Get Involved
+    # {t("heading-get-involved", { ns: "home" })}
+    <Trans i18nKey="body-get-involved" ns="index">
+      There are lots of ways you can help us out, even if you aren't a developer.
+      A list of currently open positions can be found on the
+      <Link to="/openings/">openings page</Link>.
 
-    There are lots of ways you can help us out, even if you aren't a developer. A list of currently open positions can be found on the [openings page](/openings/).
-
-    If none of the available openings speak to you, or you want to contribute without joining a team, the best thing to do is join us on GitHub or the <a href={site.discordToolchain}>Toolchain Discord Server</a>. There’s plenty of things to do, so we can always use more help!
-    {/* </Trans> */}
+      If none of the available openings speak to you, or you want to contribute
+      without joining a team, the best thing to do is join us on GitHub or the
+      <a href={site.discordToolchain}>Toolchain Discord Server</a>.
+      There’s plenty of things to do, so we can always use more help!
+    </Trans>
 
     <div class="button-grid">
         <Button
@@ -188,7 +210,7 @@ import { Trans } from "astro-i18next/components";
 
   </div>
   <div class="column is-5">
-    # Latest Posts
+    # {t("heading-latest-posts", { ns: "home" })}
     <LatestPosts />
   </div>
 </div>
