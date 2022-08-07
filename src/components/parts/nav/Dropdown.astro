@@ -8,21 +8,18 @@ export interface Props {
 	name: string,
 	right?: boolean,
 }
-export interface Frontmatter {
-	title: string,
-}
 
 const pageUrl = Astro.url.pathname;
 const { category, name, right = false } = Astro.props as Props;
 
-const pages = (await Astro.glob<Frontmatter>(`/src/pages/**/*.md`))
+const pages = (await Astro.glob("/src/pages/**/*"))
 	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
-	.sort((a, b) => t(a.frontmatter.title).localeCompare(t(b.frontmatter.title)))
+	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 
-const isActive = pageUrl.startsWith(`/${category}/`) ? "is-active" : ""
+const isActive = pageUrl.startsWith(`/${i18next.language}/${category}/`) ? "is-active" : "";
 ---
 
-<a href={localizePath(category)} class:list={[ "navbar-link is-arrowless", isActive ]}>
+<a href={localizePath(`/${category}/`)} class:list={[ "navbar-link is-arrowless" , isActive ]}>
 	{name}
 </a>
 

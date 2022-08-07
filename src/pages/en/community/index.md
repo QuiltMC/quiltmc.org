@@ -1,5 +1,4 @@
 ---
-permalink: /community/
 title: page-title-community
 description: page-description-community
 layout: /src/layouts/Page.astro
@@ -9,7 +8,7 @@ You can find the Quilt in the following places.
 
 - Our [community Discord]({{ site.discord_community }})
 - Our [toolchain Discord]({{ site.discord_toolchain }})
-- Our [forum](https://forum.quiltmc.org)
+- Our [forum](https://forum.quiltmc.org/)
 - Our [GitHub organization](https://github.com/{{ site.github_username }})
 
 In all of these places you are expected to follow our [rules]({% link _community/rules.md %})
@@ -23,7 +22,7 @@ several specific intentions in mind while creating it:
 
 * To build inclusivity and diversity into policy from the beginning, creating a safe community for minority groups as
   best we can
-* To create a plural-friendly space by including tools like [PluralKit](/community/pluralkit) from a very early stage
+* To create a plural-friendly space by including tools like [PluralKit](/community/pluralkit/) from a very early stage
 * To get the community involved in community and policy decisions, allowing their voices to be heard and using their
   input to shape our spaces
 * To act with transparency where possible and reasonable without trying to hide our actions, and explaining moderation

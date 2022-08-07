@@ -1,17 +1,12 @@
 ---
-import i18next, { t } from "i18next";
+import i18next from "i18next";
 import Base from "./Base.astro"
 
 let { title } = Astro.props.content;
 
-let locale = i18next.language;
-let pages;
-// TODO: just why, why would you do this
-if (Astro.url.pathname.startsWith('/en/about')) {
-	pages = await Astro.glob('/src/pages/en/about/*');
-} else if (Astro.url.pathname.startsWith('/en/community')) {
-	pages = await Astro.glob('/src/pages/en/community/*');
-}
+const pages = (await Astro.glob("/src/pages/**/*"))
+	.filter(page => page.url?.startsWith(`/${i18next.language}/${Astro.url.pathname.split("/")[2]}`))
+	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
 <Base content={Astro.props.content}>
@@ -38,7 +33,7 @@ if (Astro.url.pathname.startsWith('/en/about')) {
 								{pages.map(page => (
 								<li>
 									<a href={page.url} class={page.url==Astro.url.pathname ? "is-active" : ""
-										}>{t(page.frontmatter.title)}</a>
+										}>{page.frontmatter.title}</a>
 								</li>
 								))}
 							</ul>
@@ -50,7 +45,7 @@ if (Astro.url.pathname.startsWith('/en/about')) {
 					<div class="media mb-5">
 						<div class="media-content">
 							<h1 class="title">
-								{t(title)}
+								{title}
 							</h1>
 
 							<p class="subtitle is-6">

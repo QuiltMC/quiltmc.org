@@ -1,6 +1,6 @@
 ---
-title: page-title-about
-description: page-description-about
+title: About Us
+description: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
 layout: /src/layouts/Page.astro
 ---
 
@@ -8,11 +8,8 @@ Quilt is a mod-loader project -- primarily aimed at Minecraft. It was founded by
 
 * Allowing contributors to move fast and break things when appropriate, and allowing for experimental work
 * Building transparency into official community spaces and policies
-* Creating a community team that understands the importance of Quilt's values, and that fosters inclusivity, diversity 
-  and safety through an understanding hands-on moderation approach, which is backed by a strong 
-  [Code of Conduct](/community/code-of-conduct)
-* Providing a governance structure that doesn't give anyone too much power, and avoids creating opportunities for 
-  staff members to operate without oversight
+* Creating a community team that understands the importance of Quilt's values, and that fosters inclusivity, diversity and safety through an understanding hands-on moderation approach, which is backed by a strong [Code of Conduct](/en/community/code-of-conduct/)
+* Providing a governance structure that doesn't give anyone too much power, and avoids creating opportunities for staff members to operate without oversight
 * Providing ways to keep the community involved with important project decisions
 
 Quilt has grown quickly since its inception, with relatively broad support from the wider community. While some corners of the community have attempted to push back against its modern progressive values, Quilt continues to grow, attracting developers and users from all walks of life.

@@ -1,7 +1,6 @@
 ---
-title: titles:page-faq-devs
-description: page-description-dev-faq
-permalink: /about/faq/developers/
+title: FAQ (Developers)
+description: Frequently asked questions, but for developers.
 layout: /src/layouts/Page.astro
 ---
 
@@ -10,7 +9,7 @@ layout: /src/layouts/Page.astro
 ## Where's the developer documentation?
 
 Quilt's developer documentation is **incredibly work-in-progress**, and nowhere near a usable state. However, it is
-being worked on, and you may preview what's done so far on [modder.wiki.quiltmc.org](https://modder.wiki.quiltmc.org).
+being worked on, and you may preview what's done so far on [modder.wiki.quiltmc.org](https://modder.wiki.quiltmc.org/).
 
 </Message>
 <Message>
@@ -19,18 +18,18 @@ being worked on, and you may preview what's done so far on [modder.wiki.quiltmc.
 
 For developers, Quilt provides the following advantages over Fabric:
 
-* A more fully-featured API for developing more compatible mods, faster and with less effort
-* A modular approach to the API that extends to your mods, without requiring you to jar-in-jar API modules or ask your
+- A more fully-featured API for developing more compatible mods, faster and with less effort
+- A modular approach to the API that extends to your mods, without requiring you to jar-in-jar API modules or ask your
   users to download them separately
-* A vastly improved decompiler (compared to 
-  [Fabric's fork of Fernflower](https://github.com/FabricMC/intellij-fernflower)) that provides much more readable,
+- A vastly improved decompiler (compared to
+  [Fabric's fork of Fernflower](https://github.com/FabricMC/intellij-fernflower/)) that provides much more readable,
   accurate and understandable output for when you need to dig into Minecraft's code
-* An alternative approach to mappings, which is based on Yarn but removes the clean-room, which allows for more 
+- An alternative approach to mappings, which is based on Yarn but removes the clean-room, which allows for more
   accurate names without compromising on quality -- and makes it simpler to ask for support in official spaces when
   you're using a different set of mappings
-* A more community-oriented approach that ensures that everyone's voice is heard when raising issues and opinions,
+- A more community-oriented approach that ensures that everyone's voice is heard when raising issues and opinions,
   regardless of how prolific a developer is, or how well-known they are
-* **Future goal:** A new Collision Handling ASM backend (Chasm) which acts as the backbone for our mixin and access 
+- **Future goal:** A new Collision Handling ASM backend (Chasm) which acts as the backbone for our mixin and access
   widener implementations, allowing those and other bytecode manipulation tools to function without any special handling
   required in Quilt's build tools or loader, and helping mods to remain compatible with each other
 
@@ -40,17 +39,17 @@ For developers, Quilt provides the following advantages over Fabric:
 ## What does it mean to say that Quilt Mappings doesn't have a clean-room, and why does it matter?
 
 When talking about _**the clean-room**_, we're referring to a specific approach to contributions taken by
-[Fabric's Yarn mappings project](https://github.com/FabricMC/yarn). Yarn takes an approach that attempts to guarantee
+[Fabric's Yarn mappings project](https://github.com/FabricMC/yarn/). Yarn takes an approach that attempts to guarantee
 the safety of the project by refusing names that have obviously been inspired by names from other mappings projects,
 such as MCP and Mojang's official mappings. It also discourages contributors from looking at names from other mappings
 projects, and requires discussions in Fabric's official community spaces to be free of non-Yarn names.
 
-Quilt Mappings (shortened to QM below), on the other hand, takes a different approach. As the project uses the 
+Quilt Mappings (shortened to QM below), on the other hand, takes a different approach. As the project uses the
 [Creative Commons Zero License](https://creativecommons.org/share-your-work/public-domain/cc0/) (similarly to Yarn),
 QM explicitly doesn't claim ownership of the names and instead any names contributed that may be derivatives of other
-mappings projects still have that ownership assigned to them. This, along with including license notices that 
-explicitly show that ownership of some names may lie with other mappings projects (and that provide proper credit) -- 
-among other things -- allows QM contributors to refer to other mappings projects to figure out what the best name for 
+mappings projects still have that ownership assigned to them. This, along with including license notices that
+explicitly show that ownership of some names may lie with other mappings projects (and that provide proper credit) --
+among other things -- allows QM contributors to refer to other mappings projects to figure out what the best name for
 something should be. It also means that we don't have to disallow discussions involving names from other projects in
 our official community spaces.
 
@@ -65,9 +64,9 @@ a name.
 
 We plan on trying to make this transition as painless as possible -- by matching Fabric's API surface, allowing you to
 stick with Yarn mappings if you'd like, and providing support for developers that are porting their mods. It's worth
-noting that -- as of this writing -- Fabric mods that contain mixin plugins (for example, for conditional mixins)  are 
-supported by Quilt's backwards-compatibility efforts, but this will not be the case once [Chasm](#Chasm) has been 
-added to the toolchain. Quilt will provide an alternative approach with proper toolchain support later on -- and we'll 
+noting that -- as of this writing -- Fabric mods that contain mixin plugins (for example, for conditional mixins) are
+supported by Quilt's backwards-compatibility efforts, but this will not be the case once [Chasm](#Chasm) has been
+added to the toolchain. Quilt will provide an alternative approach with proper toolchain support later on -- and we'll
 help you figure out how to move to it if you need support.
 
 </Message>
@@ -75,8 +74,8 @@ help you figure out how to move to it if you need support.
 
 ## How long will backwards compatibility for loading Fabric mods last?
 
-As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it 
-does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and 
+As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it
+does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and
 provide its developers with the support they need to keep working on it.
 
 In short, backwards compatibility will live on until it's no longer possible to maintain it.
@@ -87,7 +86,7 @@ In short, backwards compatibility will live on until it's no longer possible to 
 ## How do I get started with writing a Quilt mod?
 
 While we're currently still working on developer documentation, we do have a
-[template mod](https://github.com/QuiltMC/quilt-template-mod) that you can use as a template, or just to get started.
+[template mod](https://github.com/QuiltMC/quilt-template-mod/) that you can use as a template, or just to get started.
 We'll be working on docs throughout the beta period and beyond, so please keep an eye out for them!
 
 </Message>

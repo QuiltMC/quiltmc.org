@@ -1,6 +1,6 @@
 ---
-title: page-title-faq
-description: page-description-faq
+title: FAQ
+description: Frequently asked questions, for the burning topics that need addressing regularly.
 layout: /src/layouts/Page.astro
 
 redirect_from:
@@ -16,7 +16,7 @@ redirect_from:
 
 Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project, primarily
 due to concerns around governance, project management and moderation. You can read more about the Quilt project and
-where it came from on [the About Us page](/about).
+where it came from on [the About Us page](/en/about/).
 
 </Message>
 <Message>
@@ -47,8 +47,8 @@ For users, Quilt provides the following advantages:
 
 If you'd like to help us out, here's just a few ways we've come up with:
 
-- Join [our community spaces](/community), hang out and give your input
-- Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and
+- Join [our community spaces](/en/community/), hang out and give your input
+- Contribute to [our projects on GitHub](https://github.com/quiltmc/), either directly or by providing reviews and
   opinions
 - Support other projects that make use of Quilt, or Quilt's tools and libraries
 - Talk about Quilt on social media (in a responsible manner)
@@ -92,7 +92,7 @@ happy to work with mod developers that need an alternative approach for Quilt.
 
 Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To
 deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard
-QSL distribution, which you can [download them from Modrinth](https://modrinth.com/mod/qsl).
+QSL distribution, which you can [download them from Modrinth](https://modrinth.com/mod/qsl/).
 
 As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work
 correctly with QSL.
@@ -111,7 +111,7 @@ No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
 
 Quilt's first beta released on the 20th of April 2022, and we've been full steam ahead since then!
 
-If you'd like to try Quilt out, please take a look at [the install page](/install/).
+If you'd like to try Quilt out, please take a look at [the install page](/en/install/).
 [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
 
 </Message>
@@ -132,7 +132,7 @@ Between these three groups, the structure is more or less flat -- no one group o
 whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community
 spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
 
-You can find more about this in the governance section on [the About Us page](/about/#governance).
+You can find more about this in the governance section on [the About Us page](/en/about/#governance).
 
 </Message>
 <Message>
@@ -144,7 +144,7 @@ policy changes, technical standards and definitions are created, discussed and a
 put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the
 rationale is for the proposal.
 
-RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs), with the RFC
+RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs/), with the RFC
 number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we
 recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
 
