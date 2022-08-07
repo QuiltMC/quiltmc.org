@@ -11,8 +11,9 @@
 		"baseUrl": ".",
 		"paths": {
 			"@assets/*": ["src/assets/*"],
-			"@parts/*": ["src/components/parts/*"],
 			"@atoms/*": ["src/components/atoms/*"],
+			"@parts/*": ["src/components/parts/*"],
+			"@setpieces/*": ["src/components/setpieces/*"],
 			"@data/*": ["src/data/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@util/*": ["src/util/*"]
