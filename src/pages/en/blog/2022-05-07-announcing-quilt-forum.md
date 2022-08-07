@@ -1,6 +1,6 @@
 ---
 title: Announcing the Quilt Forum
-date: 2022-05-07 4:30 -00:00
+date: 2022-05-07 4:30:00 -00:00
 authors: Southpaw1496
 layout: /src/layouts/Default.astro
 ---

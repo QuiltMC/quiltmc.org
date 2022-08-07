@@ -1,6 +1,6 @@
 ---
 title: Quilt enters Beta
-date: 2022-03-22 5:30 -00:00
+date: 2022-03-22 5:30:00 -00:00
 author: Southpaw1496
 layout: /src/layouts/Default.astro
 ---

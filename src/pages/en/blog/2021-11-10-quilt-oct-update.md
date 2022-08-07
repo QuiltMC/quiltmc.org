@@ -1,6 +1,6 @@
 ---
 title:  "Quilt's (VERY LATE) October Update"
-date:   2021-11-10 14:00 -00:00
+date:   2021-11-10 14:00:00 -00:00
 author: ToffeeMax
 layout: /src/layouts/Default.astro
 ---
