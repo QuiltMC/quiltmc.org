@@ -18,7 +18,9 @@ that concern multiple teams and steering the project's general direction. The Ad
 number of members, to help ensure that ties can be broken cleanly.
 
 <div class="admin team-grid">
+    {% include team/CheaterCodes.liquid %}
     {% include team/HavenKing.liquid %}
+    {% include team/LambdaFoxes.liquid %}
     {% include team/MrMangoHands.liquid %}
     {% include team/OroArmor.liquid %}
 </div>
