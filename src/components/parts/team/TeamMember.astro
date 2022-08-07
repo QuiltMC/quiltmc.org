@@ -1,9 +1,13 @@
 ---
-import { getSystemMembers } from "@util/PluralKit";
+import { getPKSystemMembers, Member } from "@util/PluralKit";
 
 export interface Link {
 	icon: string,
 	url: string,
+}
+export interface ManualMember {
+	icon: string,
+	name: string,
 }
 export interface Props {
 	name?: string,
@@ -12,7 +16,7 @@ export interface Props {
 	description: string,
 	avatar?: string,
 	pixelateAvatar?: boolean,
-	systemMembers?: string,
+	systemMembers?: string | ManualMember[],
 	links?: Link[],
 }
 const {
@@ -25,6 +29,16 @@ const {
 	systemMembers,
 	links = [],
 } = Astro.props as Props;
+
+async function getSystemMembers(members: string | ManualMember[]): Promise<Member[]> {
+	if (typeof members === 'string') {
+		return await getPKSystemMembers(members);
+	} else {
+		return members.map(member => {
+			return { avatarUrl: member.icon, name: member.name };
+		});
+	}
+}
 
 ---
 <div class="card is-team-member">
@@ -82,13 +96,13 @@ const {
 					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
 				</div>
 				
-				: getSystemMembers(systemMembers).then(m => m.map(member =>
-				
-				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={member.name}>
-					<img src={member.avatar_url}/>
+				: getSystemMembers(systemMembers).then(m => m.map(m => {
+
+				return <div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
+					<img src={m.avatarUrl}/>
 				</div>
-				
-				))
+
+				}))
 				}
 			</div>
 			}
