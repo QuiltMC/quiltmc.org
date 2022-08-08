@@ -51,4 +51,6 @@ button-template-mod = {-template-mod}
 button-twitter = {-twitter}
 button-usage-docs = 使用文档
 
-page-title-about = 关于我们
+header-pages = 页面
+header-documents = 文档
+header-pages-and-documents = 页面与文档
