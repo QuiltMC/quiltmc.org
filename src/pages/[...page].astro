@@ -6,7 +6,7 @@ import Redirect from "@layouts/Redirect.astro";;
 const { page } = Astro.params;
 
 export async function getStaticPaths() {
-	const allEnglishPages = await Astro.glob("/src/pages/en/**/*");
+	const allEnglishPages = await Astro.glob("/src/pages/en/**/*.md*");
 
 	const pages = [];
 	allEnglishPages.forEach(p => {

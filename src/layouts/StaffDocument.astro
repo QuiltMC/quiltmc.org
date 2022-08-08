@@ -8,7 +8,10 @@ import { localizePath } from "@util/Util";
 const { content } = Astro.props;
 const { title } = content;
 
-const pageUrl = Astro.url.pathname;
+let pageUrl = Astro.url.pathname;
+if (pageUrl.endsWith("/")) {
+	pageUrl = pageUrl.slice(0, -1);
+}
 const staffUrl = `/${i18next.language}/staff`;
 
 function getLayer(url: string): number {
@@ -60,7 +63,7 @@ if (pageUrl != staffUrl) {
 							<p class="menu-label">{t("sidebar-resources")}</p>
 
 							<ul class="menu-list">
-								<a href={localizePath("/staff")} class={localizePath("/staff")==Astro.url.pathname ? "is-active" : "" }>
+								<a href={localizePath("/staff")} class={localizePath("/staff")==pageUrl ? "is-active" : "" }>
 									Staff Resources
 								</a>
 							</ul>

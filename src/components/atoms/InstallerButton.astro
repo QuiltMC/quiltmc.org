@@ -12,9 +12,9 @@ const { href, logo, titleKey, altKey } = Astro.props as Props;
 ---
 
 <a class="notification is-dark is-installer-button" href={localizePath(href)}>
-    <div>
-        <p class="subtitle has-text-centered">{t(titleKey)}</p>
+	<div>
+		<p class="subtitle has-text-centered">{t(titleKey)}</p>
 
-        <img src={`/assets/img/launchers/${logo}`} alt={t(altKey)}/>
-    </div>
+		<img src={`/assets/img/launchers/${logo}`} alt={t(altKey)} />
+	</div>
 </a>
