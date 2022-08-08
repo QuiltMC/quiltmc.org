@@ -1,11 +1,11 @@
 ---
-import Variables from '@data/Variables';
-import site from '@data/Site';
+import Variables from "@data/Variables";
+import site from "@data/Site";
 import i18next from "i18next";
 import { localizeUrl } from "astro-i18next";
 
 // TODO: find out a way to do RTL styles.
-import '/src/styles/style.scss';
+import "/src/styles/style.scss";
 import { DateTime } from 'luxon';
 
 export interface HeadProps {
@@ -116,6 +116,7 @@ const date = props.date ? DateTime.fromISO(props.date) : null;
         }
     </script> -->
 
+	<script src="/src/script.ts"></script>
 	<script src="https://kit.fontawesome.com/b1b70f724e.js" crossorigin="anonymous"></script>
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
