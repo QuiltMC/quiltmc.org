@@ -6,7 +6,7 @@ redirect_from:
 - /community/moderation.html
 - /community/moderation
 - 
-layout: /src/layouts/page/StaffDocument.astro
+layout: /src/layouts/StaffDocument.astro
 ---
 
 This document outlines a basic idea of what's expected of our community team members, and provides some advice for 

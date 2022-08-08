@@ -1,7 +1,7 @@
 ---
 title: Outreach Team
 description: Documents to help guide the Outreach Team.
-layout: /src/layouts/page/StaffDocument.astro
+layout: /src/layouts/StaffDocument.astro
 ---
 
 This section includes documents intended to guide and support Quilt's Outreach Team. Please select a document from

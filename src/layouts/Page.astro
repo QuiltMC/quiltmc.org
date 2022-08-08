@@ -1,15 +1,16 @@
 ---
 import i18next, { t } from "i18next";
-import Base from "../Base.astro"
+import Base from "./Base.astro";
 
-let { headerKey, content } = Astro.props;
+let { content } = Astro.props;
 let { title } = content;
 
+const category = Astro.url.pathname.split("/")[2];
 const pages = (await Astro.glob("/src/pages/**/*"))
-	.filter(page => page.url?.startsWith(`/${i18next.language}/${Astro.url.pathname.split("/")[2]}`))
+	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 
-const header = t(headerKey);
+const header = t("sidebar-pages");
 ---
 
 <Base content={Astro.props.content}>

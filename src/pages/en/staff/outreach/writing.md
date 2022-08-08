@@ -2,7 +2,7 @@
 title: Writing Guidelines
 description: Tips and best-practices for writing content on the site.
 author: gdude2002
-layout: /src/layouts/page/StaffDocument.astro
+layout: /src/layouts/StaffDocument.astro
 ---
 
 # Note

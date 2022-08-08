@@ -3,10 +3,11 @@ permalink: /usage/troubleshooting
 title: Troubleshooting
 description: How to troubleshoot Quilt when there's an issue
 redirect-from:
-- /troubleshooting.html
-layout: /src/layouts/page/Document.astro
+  - /troubleshooting.html
+layout: /src/layouts/Page.astro
 ---
-import Message from '@atoms/Message.astro'
+
+import Message from "@atoms/Message.astro";
 
 <Message>
 
@@ -24,15 +25,15 @@ everyone can understand.
 The following errors mean you're missing the [Quilt Standard Libraries](https://modrinth.com/mod/qsl) -- please download
 them and add them to your `mods` folder or launcher mod list.
 
-* Dependency for mod 'mod-id' on fabric versions ...
-* Dependency for mod 'mod-id' on quilt_ ...
+- Dependency for mod 'mod-id' on fabric versions ...
+- Dependency for mod 'mod-id' on quilt\_ ...
 
-Any other dependencies listed similarly are other mods, and you'll need to download them separately and add them to 
+Any other dependencies listed similarly are other mods, and you'll need to download them separately and add them to
 your `mods` folder or launcher mod list.
 
 ### Incompatible mod versions
 
-If the error specifies that a mod exists but isn't valid for resolution, you have incompatible mod versions. You'll 
+If the error specifies that a mod exists but isn't valid for resolution, you have incompatible mod versions. You'll
 need to double-check that all your mods are up-to-date and, if they are, contact the developers behind the mods that
 are causing problems.
 
@@ -40,8 +41,8 @@ are causing problems.
 
 ![JiJ resolution error](/assets/img/misc/jij-resolution-error.png)
 
-If the error you're getting looks something like this, then this is a problem with a mod you're using -- you should 
-report it to that mod's developers. The mod you're looking for in this example has been circled in red above for 
+If the error you're getting looks something like this, then this is a problem with a mod you're using -- you should
+report it to that mod's developers. The mod you're looking for in this example has been circled in red above for
 clarity -- in this case, the mod would be QuickCarpet.
 
 </Message>

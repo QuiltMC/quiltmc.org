@@ -2,7 +2,7 @@
 permalink: /staff/
 title: Staff Resources
 description: Documents to help our staff members do their jobs.
-layout: /src/layouts/page/StaffDocument.astro
+layout: /src/layouts/StaffDocument.astro
 ---
 
 This section of the site contains staff guidance documents, split up by the specific teams that they're intended for.
