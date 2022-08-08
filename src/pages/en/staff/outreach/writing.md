@@ -1,10 +1,14 @@
 ---
-title: titles.staff.outreach.writing-guidelines
-description: descriptions.staff.outreach.writing-guidelines
+title: Writing Guidelines
+description: Tips and best-practices for writing content on the site.
 author: gdude2002
+layout: /src/layouts/page/StaffDocument.astro
 ---
 
-{% include variables.liquid %}
+# Note
+**This document needs updating.** As we have migrated from Jekyll to [Astro](https://astro.build),
+writing documents is now a vastly different process. Please contact us (the Dichotomy System) if you need
+any help writing new articles, while we get the new guidelines ready. Thanks for your patience!
 
 Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers to hand for advice.
 This document is intended to be a set of guidelines, tips and tricks to use when writing documents, articles, blog posts

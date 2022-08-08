@@ -1,10 +1,12 @@
 ---
-title: titles.staff.moderation.moderation
-description: descriptions.staff.moderation.moderation
+title: Moderation
+description: Quilt's standard moderation policy -- a guide for moderation staff.
 
 redirect_from:
 - /community/moderation.html
 - /community/moderation
+- 
+layout: /src/layouts/page/StaffDocument.astro
 ---
 
 This document outlines a basic idea of what's expected of our community team members, and provides some advice for 

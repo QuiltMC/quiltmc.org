@@ -53,6 +53,7 @@ button-twitter = {-twitter}
 button-twitch = {-twitch}
 button-usage-docs = Usage Docs
 
-header-pages = Pages
-header-documents = Documents
-header-pages-and-documents = Pages & Documents
+sidebar-pages = Pages
+sidebar-documents = Documents
+sidebar-pages-and-documents = Pages & Documents
+sidebar-teams = Teams
