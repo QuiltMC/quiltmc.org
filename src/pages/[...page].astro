@@ -1,5 +1,5 @@
 ---
-import "/src/styles/style.scss";
+import Redirect from "@layouts/Redirect.astro";;
 
 // Redirect; default to English page
 // FIXME: should try to redirect to the appropriate locale for the user
@@ -25,13 +25,4 @@ export async function getStaticPaths() {
 
 ---
 
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<title>Redirecting to {`/en/${page}`}</title>
-	<meta http-equiv="refresh" content={`0; /en/${page}`}>
-	<link rel="canonical" href={`/en/${page}`}>
-</head>
-
-</html>
+<Redirect href={`/en/${page}`} />

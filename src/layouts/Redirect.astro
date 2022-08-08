@@ -1,0 +1,12 @@
+---
+import "/src/styles/style.scss";
+
+const { href } = Astro.props;
+---
+
+<head>
+	<meta charset="utf-8" />
+	<title>Redirecting to {href}</title>
+	<meta http-equiv="refresh" content={"0; " + href} />
+	<link rel=" canonical" {href} />
+</head>
