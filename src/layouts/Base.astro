@@ -6,6 +6,7 @@ import NavBar from "@setpieces/NavBar.astro";
 
 import i18next from "i18next";
 import Variables from "@data/Variables";
+import { localizePath } from "@util/Util";;
 
 export interface BaseProps {
 	content: Inner,
@@ -26,6 +27,7 @@ const rtl = variables.rtl ? 'rtl' : 'ltr'
 const match = (Astro.url.pathname + '/').match(/^\/(\w+)\//);
 if (match) {
 	i18next.changeLanguage(match[1]);
+	localizePath("/");
 }
 ---
 

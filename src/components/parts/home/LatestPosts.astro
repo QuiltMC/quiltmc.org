@@ -16,7 +16,6 @@ function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
 	const content = md.rawContent();
 	return content.slice(0, content.indexOf("<!-- MORE -->"));
 }
-
 ---
 
 {latestPosts.map(post => <>

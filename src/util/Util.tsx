@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 // thanks JS, way to go
 export function sortBy<T, K>(arr: T[], by: (elem: T) => K): T[] {
 	arr.sort((a, b) => {
@@ -20,3 +22,7 @@ export function sortByDescending<T, K>(arr: T[], by: (elem: T) => K): T[] {
 	});
 	return arr;
 }
+
+export function localizePath (path?: string, locale?: string | null): string {
+	return "/" + (locale || i18next.language) + path;
+};
