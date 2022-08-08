@@ -28,7 +28,7 @@ if (pageUrl != staffUrl + '/') {
 	// if we're in a team page or a document page, the document pages are the pages that:
 	// - are under the current page
 	// - not the same page, unless the current page is a document page or lower.
-	
+
 	// TL;DR: 
 	// main staff page - no documents
 	// team page - all pages under it, excluding itself
@@ -42,86 +42,88 @@ if (pageUrl != staffUrl + '/') {
 ---
 
 <Base content={Astro.props.content}>
-	<div class="columns is-centered">
-		<div class="column is-10">
-			<section class="section">
-				<div class="columns">
-					<div class="column is-narrow" data-controller="sidebar">
-						<div class="is-hidden-tablet">
-							<button data-action="click->sidebar#toggle" class="button is-primary">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-								<span>{t("sidebar-pages-and-documents")}</span>
-							</button>
-							<br />
-							<br />
-						</div>
+<div class="columns is-centered">
+	<div class="column is-10">
+		<section class="section">
+			<div class="columns">
+				<div class="column is-narrow" data-controller="sidebar">
+					<div class="is-hidden-tablet">
+						<button data-action="click->sidebar#toggle" class="button is-primary">
+							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+							<span>{t("sidebar-pages-and-documents")}</span>
+						</button>
+						<br />
+						<br />
+					</div>
 
-						<div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
-							<aside class="menu">
-								<p class="menu-label">{t("sidebar-pages")}</p>
+					<div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
+						<aside class="menu">
+							<p class="menu-label">{t("sidebar-pages")}</p>
 
-								<ul class="menu-list">
-									<a href={localizePath(`/staff/`)} class={localizePath(`/staff/`) == Astro.url.pathname ? "is-active" : ""}>
-										Staff Resources
-									</a>
-								</ul>
-								<p class="menu-label">{t("sidebar-teams")}</p>
-			
-								<ul class="menu-list">
-									{pages.map(p => {
-										const layer = p.url.slice(staffUrl.length).split('/').length - 1;
-										const isSubpage = pageUrl.startsWith(p.url);
-										const isCurrent = pageUrl == p.url;
+							<ul class="menu-list">
+								<a href={localizePath(`/staff/`)} class={localizePath(`/staff/`)==Astro.url.pathname ? "is-active" : ""
+									}>
+									Staff Resources
+								</a>
+							</ul>
+							<p class="menu-label">{t("sidebar-teams")}</p>
 
-										// Do not render if this page is not at the first layer (team level).
-										if (layer !== 1) return;
+							<ul class="menu-list">
+								{pages.map(p => {
+								const layer = p.url.slice(staffUrl.length).split('/').length - 1;
+								const isSubpage = pageUrl.startsWith(p.url);
+								const isCurrent = pageUrl == p.url;
 
-										// If the current page is the first layer (team level), then highlight if we are at the corresponding team page.
-										// If it is deeper than that, highlight every page that is our "superpage".
-										// For example, if we're in Moderation Team > Moderation, we should highlight Moderation Team too.
-										const isActive = pageLayer === 1 ? isCurrent : isSubpage;
-										
-										return <li>
-											<a href={p.url} class={isActive ? "is-active" : ""}>{p.frontmatter.title}</a>
-										</li>;
-									})}
+								// Do not render if this page is not at the first layer (team level).
+								if (layer !== 1) return;
 
-									{ documentPages.length > 0 && <>
+								// If the current page is the first layer (team level), then highlight if we are at the corresponding
+								team page.
+								// If it is deeper than that, highlight every page that is our "superpage".
+								// For example, if we're in Moderation Team > Moderation, we should highlight Moderation Team too.
+								const isActive = pageLayer === 1 ? isCurrent : isSubpage;
+
+								return <li>
+									<a href={p.url} class={isActive ? "is-active" : "" }>{p.frontmatter.title}</a>
+								</li>;
+								})}
+
+								{ documentPages.length > 0 && <>
 
 									<p class="menu-label">{t("sidebar-documents")}</p>
-			
+
 									<ul class="menu-list">
 										{documentPages.map(p => <li>
-											<a href={p.url} class={pageUrl === p.url ? "is-active" : ""}>{p.frontmatter.title}</a>
+											<a href={p.url} class={pageUrl===p.url ? "is-active" : "" }>{p.frontmatter.title}</a>
 										</li>)}
 									</ul>
-									
-									</>}
-								</ul>
-							</aside>
-						</div>
-					</div>
 
-					<div class="content column">
-						<div class="media mb-5">
-							<div class="media-content">
-								<h1 class="title">
-									{title}
-								</h1>
-
-								<p class="subtitle is-6">
-									<!-- Edited: {% edit_date format-date %} -->
-								</p>
-
-							</div>
-						</div>
-
-						<slot />
-						<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
-							class='fas fa-sm fa-link-simple'></i>" %} -->
+								</>}
+							</ul>
+						</aside>
 					</div>
 				</div>
-			</section>
-		</div>
+
+				<div class="content column">
+					<div class="media mb-5">
+						<div class="media-content">
+							<h1 class="title">
+								{title}
+							</h1>
+
+							<p class="subtitle is-6">
+								<!-- Edited: {% edit_date format-date %} -->
+							</p>
+
+						</div>
+					</div>
+
+					<slot />
+					<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
+							class='fas fa-sm fa-link-simple'></i>" %} -->
+				</div>
+			</div>
+		</section>
 	</div>
+</div>
 </Base>

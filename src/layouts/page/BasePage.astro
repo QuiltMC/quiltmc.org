@@ -13,57 +13,57 @@ const header = t(headerKey);
 ---
 
 <Base content={Astro.props.content}>
-	<div class="columns is-centered">
-		<div class="column is-10">
-			<section class="section">
-				<div class="columns">
-					<div class="column is-narrow" data-controller="sidebar">
-						<div class="is-hidden-tablet">
-							<button data-action="click->sidebar#toggle" class="button is-primary">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-								<span>{header}</span>
-							</button>
-							<br />
-							<br />
-						</div>
-
-						<div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
-							<aside class="menu">
-								<p class="menu-label">{header}</p>
-
-								<ul class="menu-list">
-
-									{pages.map(page => (
-									<li>
-										<a href={ page.url + "/" } class={page.url + "/" == Astro.url.pathname ? "is-active" : ""
-											}>{page.frontmatter.title}</a>
-									</li>
-									))}
-								</ul>
-							</aside>
-						</div>
+<div class="columns is-centered">
+	<div class="column is-10">
+		<section class="section">
+			<div class="columns">
+				<div class="column is-narrow" data-controller="sidebar">
+					<div class="is-hidden-tablet">
+						<button data-action="click->sidebar#toggle" class="button is-primary">
+							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+							<span>{header}</span>
+						</button>
+						<br />
+						<br />
 					</div>
 
-					<div class="content column">
-						<div class="media mb-5">
-							<div class="media-content">
-								<h1 class="title">
-									{title}
-								</h1>
+					<div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar" data-scroll-to-top="true">
+						<aside class="menu">
+							<p class="menu-label">{header}</p>
 
-								<p class="subtitle is-6">
-									<!-- Edited: {% edit_date format-date %} -->
-								</p>
+							<ul class="menu-list">
 
-							</div>
-						</div>
-
-						<slot />
-						<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
-							class='fas fa-sm fa-link-simple'></i>" %} -->
+								{pages.map(page => (
+								<li>
+									<a href={ page.url + "/" } class={page.url + "/"==Astro.url.pathname ? "is-active" : ""
+										}>{page.frontmatter.title}</a>
+								</li>
+								))}
+							</ul>
+						</aside>
 					</div>
 				</div>
-			</section>
-		</div>
+
+				<div class="content column">
+					<div class="media mb-5">
+						<div class="media-content">
+							<h1 class="title">
+								{title}
+							</h1>
+
+							<p class="subtitle is-6">
+								<!-- Edited: {% edit_date format-date %} -->
+							</p>
+
+						</div>
+					</div>
+
+					<slot />
+					<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
+							class='fas fa-sm fa-link-simple'></i>" %} -->
+				</div>
+			</div>
+		</section>
 	</div>
+</div>
 </Base>
