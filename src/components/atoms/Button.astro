@@ -25,21 +25,21 @@ var buttonClasses = ["button"];
 if (typeof type === "string") {
 	buttonClasses.push(`is-${type}`)
 } else {
-	buttonClasses = buttonClasses.concat(type.map(s => `is-${s}`))
+	buttonClasses = buttonClasses.concat(type)
 }
 
-let final_text;
+let finalText;
 
 if (textKey) {
 	// prioritize text key
 	const translated = t(textKey);
 	if (translated !== textKey) {
 		// if it's successfully translated, return
-		final_text = translated;
+		finalText = translated;
 	}
 } else {
 	// fallback to text if any
-	final_text = text ? text : null;
+	finalText = text ? text : null;
 }
 ---
 
@@ -47,5 +47,5 @@ if (textKey) {
 	<span class="icon">
 		<i class={icon}></i>
 	</span>
-	{final_text && <span> {final_text} </span>}
+	{finalText && <span> {finalText} </span>}
 </a>

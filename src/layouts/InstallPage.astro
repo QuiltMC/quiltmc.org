@@ -1,0 +1,87 @@
+---
+//@ts-ignore
+import Button from "@atoms/Button.astro";
+import Variables from "@data/Variables";
+import Awaiting from "@parts/install/Awaiting.astro";
+import Launchers from "@parts/install/Launchers.astro";
+import Main from "@parts/install/Main.astro";
+import WipWarning from "@parts/install/WipWarning.astro";
+import { localizePath } from "@util/Util";
+import { t } from "i18next";
+import { BaseProps } from "./Base.astro";
+import Default from "./Default.astro";
+
+export interface Props extends BaseProps {
+	platformKey: string,
+	website?: string,
+}
+
+const content = Astro.props.content as Props;
+const { left } = new Variables(content?.title, content?.description);
+---
+<Default content={Astro.props.content}>
+	<div class="columns">
+		<div class="column is-5" data-controller="sidebar">
+			<div class="is-hidden-tablet">
+				<Button
+					type="link"
+					href={localizePath("/install/")}
+					icon={`fas fa-arrow-${left}`}
+					textKey="install:button-back"
+				/>
+				<button data-action="click->sidebar#toggle" class="button is-primary">
+					<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+					<span>{t("button-menu")}</span>
+				</button>
+
+				<br/>
+				<br/>
+			</div>
+
+			<div class="is-hidden-mobile" data-sidebar-target="sidebar" data-scroll-to-top="true">
+				<Button
+					type="link is-hidden-mobile mb-2"
+					href={localizePath("/install/")}
+					icon={`fas fa-arrow-${left}`}
+					textKey="install:button-back-to-list"
+				/>
+				<div class="grid-picker mb-0">
+					<Main />
+				</div>
+
+				<hr class="my-0"/>
+
+				<div class="grid-picker mb-0">
+					<Launchers />
+				</div>
+
+				<hr class="my-0"/>
+
+				<div class="grid-picker">
+					<Awaiting />
+				</div>
+
+				<hr class="is-hidden-desktop is-hidden-tablet my-0"/>
+			</div>
+		</div>
+
+		<div class="column">
+			<WipWarning />
+
+			<div class="heading-with-button">
+				<h1>{t(content?.platformKey, { ns: "install" })}</h1>
+
+				{ content?.website &&
+				<Button
+					href={content?.website}
+					type="link"
+					icon="fas fa-globe"
+					textKey="install:button-website"
+				/>
+				}
+			 </div>
+
+			<slot />
+		</div>
+	</div>
+</Default>

@@ -1,13 +1,11 @@
 ---
-layout: install
-title: titles.install.curseforge
+title: 'Install: CurseForge'
 permalink: /install/curseforge/
----
 
-<div class="heading-with-button">
-   <h1>CurseForge</h1>
-   <a href="https://download.curseforge.com" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-curseforge
+website: https://download.curseforge.com
+---
 
 ### Status: Partially Implemented
 

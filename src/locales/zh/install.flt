@@ -1,0 +1,27 @@
+# Proper nouns; you shouldn't need to edit them.
+-atlauncher = ATLauncher
+-multimc = MultiMC
+-polymc = PolyMC
+-technic = Technic
+-curseforge = CurseForge
+-gdlauncher = GDLauncher
+
+platform-client = 客户端
+platform-server = 服务端
+platform-atlauncher = {-atlauncher}
+platform-multimc = {-multimc}
+platform-polymc = {-polymc}
+platform-technic = {-technic}
+platform-curseforge = {-curseforge}
+platform-gdlauncher = {-gdlauncher}
+
+-logo = { $thing } 的标志
+
+logo-minecraft = { -logo(thing: "Minecraft") }
+logo-java = { -logo(thing: "Java") }
+logo-atlauncher = { -logo(thing: -atlauncher) }
+logo-multimc = { -logo(thing: -multimc) }
+logo-polymc = { -logo(thing: -polymc) }
+logo-technic = { -logo(thing: "Technic Launcher") }
+logo-curseforge = { -logo(thing: -curseforge) }
+logo-gdlauncher = { -logo(thing: -gdlauncher) }

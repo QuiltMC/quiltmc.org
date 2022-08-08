@@ -8,19 +8,12 @@ import i18next from "i18next";
 import Variables from "@data/Variables";
 import { localizePath } from "@util/Util";
 
-export interface BaseProps {
-	content: Inner,
-}
-export interface Inner extends HeadProps {
+export interface BaseProps extends HeadProps {
 	isPrivate?: boolean,
 }
-const {
-	title,
-	description,
-	date,
-} = (Astro.props as BaseProps).content;
+const content = Astro.props.content as BaseProps;
 
-const variables = new Variables(title, description);
+const variables = new Variables(content?.title, content?.description);
 const rtl = variables.rtl ? 'rtl' : 'ltr'
 
 // extract locale from URL
@@ -35,7 +28,7 @@ if (match) {
 
 <html lang={i18next.language} dir={rtl}>
 
-<HtmlHead title={title} description={description} date={date} />
+<HtmlHead title={content?.title} description={content?.description} date={content?.date} />
 
 <body class="page">
 	{ !Astro.props.navless &&

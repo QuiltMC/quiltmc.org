@@ -1,13 +1,11 @@
 ---
-layout: install
-title: titles.install.gdlauncher
+title: 'Install: GDLauncher'
 permalink: /install/gdlauncher/
----
 
-<div class="heading-with-button">
-   <h1>GDLauncher</h1>
-   <a href="https://gdevs.io" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-gdlauncher
+website: https://gdevs.io
+---
 
 ### Status: Pending Discussion
 

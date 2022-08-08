@@ -1,13 +1,12 @@
 ---
-layout: install
-title: titles.install.server
+title: 'Install: Server'
 permalink: /install/server/
-has_downloads: true
----
 
-<div class="heading-with-button">
-   <h1>Server</h1>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-server
+
+hasDownloads: true
+---
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make
 sure you've [installed Java](https://java.com/en/download/).

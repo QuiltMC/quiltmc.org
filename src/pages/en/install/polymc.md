@@ -1,13 +1,11 @@
 ---
-layout: install
-title: titles.install.polymc
+title: 'Install: PolyMC'
 permalink: /install/polymc/
----
 
-<div class="heading-with-button">
-   <h1>PolyMC</h1>
-   <a href="https://polymc.org" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-polymc
+website: https://polymc.org
+---
 
 PolyMC is a power-user launcher, designed to provide all the features an advanced user would need to manage their
 instances. To set up a Quilt instance, simply follow these steps:

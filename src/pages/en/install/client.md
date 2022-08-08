@@ -1,14 +1,13 @@
 ---
-layout: install 
-title: titles.install.client
+title: 'Install: Client'
 permalink: /install/client
-has_downloads: true
----
 
-<div class="heading-with-button">
-   <h1>Client</h1>
-   <a href="https://www.minecraft.net/en-us/download" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-client
+website: "https://www.minecraft.net/en-us/download"
+
+hasDownloads: true
+---
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. 
 
@@ -62,5 +61,5 @@ Installing mods is a fairly simple process:
    [on Modrinth](https://modrinth.com/mod/qsl)
 
 Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look
-at the [troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for 
+at the [troubleshooting page](/en/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for 
 support!

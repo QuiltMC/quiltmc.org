@@ -1,0 +1,35 @@
+# Proper nouns; you shouldn't need to edit them.
+-atlauncher = ATLauncher
+-multimc = MultiMC
+-polymc = PolyMC
+-technic = Technic
+-curseforge = CurseForge
+-gdlauncher = GDLauncher
+
+platform-client = Client
+platform-server = Server
+platform-atlauncher = {-atlauncher}
+platform-multimc = {-multimc}
+platform-polymc = {-polymc}
+platform-technic = {-technic}
+platform-curseforge = {-curseforge}
+platform-gdlauncher = {-gdlauncher}
+
+-logo = { $thing } logo
+
+logo-minecraft = { -logo(thing: "Minecraft") }
+logo-java = { -logo(thing: "Java") }
+logo-atlauncher = { -logo(thing: -atlauncher) }
+logo-multimc = { -logo(thing: -multimc) }
+logo-polymc = { -logo(thing: -polymc) }
+logo-technic = { -logo(thing: "Technic Launcher") }
+logo-curseforge = { -logo(thing: -curseforge) }
+logo-gdlauncher = { -logo(thing: -gdlauncher) }
+
+button-back = Back
+button-menu = Menu
+button-back-to-list = Back to List
+button-website = Website
+
+wip-warning =
+	<0><1>Quilt is in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0><2>If you'd like to help us test Quilt, please feel free to install it, try it, and let us know how you get on!</2>

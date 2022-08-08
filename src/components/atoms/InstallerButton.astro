@@ -1,0 +1,20 @@
+---
+import { localizePath } from "@util/Util";
+import { t } from "i18next";
+
+export interface Props {
+	href: string,
+	logo: string,
+	titleKey: string,
+	altKey: string,
+}
+const { href, logo, titleKey, altKey } = Astro.props as Props;
+---
+
+<a class="notification is-dark is-installer-button" href={localizePath(href)}>
+    <div>
+        <p class="subtitle has-text-centered">{t(titleKey)}</p>
+
+        <img src={`/assets/img/launchers/${logo}`} alt={t(altKey)}/>
+    </div>
+</a>

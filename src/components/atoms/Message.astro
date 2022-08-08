@@ -2,22 +2,21 @@
 export interface Props {
 	title?: string,
 	style?: string,
+	bodyStyle?: string,
 }
 
 const props = Astro.props as Props;
 
 const title = props.title?.trim() ?? "";
 const style = props.style?.trim() ?? "";
+const bodyStyle = props.bodyStyle?.trim() ?? "";
 
 const isTitlePresent = title.length != 0;
 ---
 
 <article class={`message is-${style}`}>
-	{ isTitlePresent
-	? <div class='message-header'>{title}</div>
-	: <></>
-	}
-	<div class="message-body">
+	{ isTitlePresent && <div class='message-header'>{title}</div> }
+	<div class:list={["message-body", bodyStyle]}>
 		<slot />
 	</div>
 </article>

@@ -1,13 +1,11 @@
 ---
-layout: install
-title: titles.install.atlauncher
+title: 'Install: ATLauncher'
 permalink: /install/atlauncher/
----
 
-<div class="heading-with-button">
-   <h1>ATLauncher</h1>
-   <a href="https://atlauncher.com" class="button is-link"><span class="icon"><i class="fas fa-globe"></i></span><span>Website</span></a>
-</div>
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-atlauncher
+website: https://atlauncher.com
+---
 
 ATLauncher is a simple, easy-to-use launcher, built around the concept of building game instances from "packs". To set 
 up your own Quilt instance, simply follow these steps:
