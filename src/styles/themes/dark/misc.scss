@@ -20,17 +20,19 @@ span.inline-divider {
 	display: block;
 }
 
-#low-contrast:checked {
-	~ * {
+#low-contrast:checked ~ {
+	* {
 		filter: opacity(70%) contrast(90%) saturate(90%);
 	}
 
-	#theme-low-contrast {
-		display: block;
-	}
+	section {
+		#theme-low-contrast {
+			display: block;
+		}
 
-	#theme-normal-contrast {
-		display: none;
+		#theme-normal-contrast {
+			display: none;
+		}
 	}
 }
 
