@@ -14,7 +14,7 @@ Before getting started, you'll need to make sure you download a copy of the Quil
 The **Universal** download will work on any computer with Java properly installed -- but if you're on Windows, and 
 you'd rather just use the Java installation that comes with Minecraft, then you can use the **Windows** download.
 
-If you're not sure which to pick, just [install Java](https://java.com/en/download/) and use the **Universal** download.
+If you're not sure which to pick, just [install Java](https://java.com/en/download) and use the **Universal** download.
 
 <div class="field is-horizontal">
     <div class="field-label is-normal mt-1">

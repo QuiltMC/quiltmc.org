@@ -9,7 +9,7 @@ In February's final bi-weekly developer meeting (which you can listen to [as a p
 
 <!-- MORE -->
 
-It's a huge milestone in our development process, and we could never have done it without our [incredible teams](https://quiltmc.org/about/teams/) and supporting community.
+It's a huge milestone in our development process, and we could never have done it without our [incredible teams](https://quiltmc.org/about/teams) and supporting community.
 
 It is important to remember that this is a **beta**, not a full release. Beta software is intended for testing, ironing out issues and having space to develop features ahead of a full release. This means that a beta release will have some features missing, and may be unstable.
 
@@ -45,7 +45,7 @@ We also hold a Public Developer Meeting on the [Toolchain Discord Server](https:
 
 ## Get Involved
 
-If you want to get involved, we could always use some extra help. A list of current openings for positions on our various teams can be found on the [Openings page]("https://quiltmc.org/openings/"), but if none of them speak to you, or if you want to contribute without joining a team, the best thing to do is to join the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) and offer your expertise.
+If you want to get involved, we could always use some extra help. A list of current openings for positions on our various teams can be found on the [Openings page](https://quiltmc.org/openings), but if none of them speak to you, or if you want to contribute without joining a team, the best thing to do is to join the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain) and offer your expertise.
 
 
 

@@ -19,13 +19,13 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 const isActive = pageUrl.startsWith(`/${i18next.language}/${category}/`) ? "is-active" : "";
 ---
 
-<a href={localizePath(`/${category}/`)} class:list={[ "navbar-link is-arrowless" , isActive ]}>
+<a href={localizePath(`/${category}`)} class:list={[ "navbar-link is-arrowless" , isActive ]}>
 	{name}
 </a>
 
 <div class:list={["navbar-dropdown is-boxed", right ? "is-right" : "" ]}>
 	{pages.map(p =>
-	<NavLink href={p.url + "/" } subpage={false}>
+	<NavLink href={p.url } subpage={false}>
 		{p.frontmatter.title}
 	</NavLink>
 	)}

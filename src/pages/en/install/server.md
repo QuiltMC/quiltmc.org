@@ -9,7 +9,7 @@ hasDownloads: true
 ---
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make
-sure you've [installed Java](https://java.com/en/download/).
+sure you've [installed Java](https://java.com/en/download).
 
 <div class="field is-horizontal">
     <div class="field-label is-normal mt-1">

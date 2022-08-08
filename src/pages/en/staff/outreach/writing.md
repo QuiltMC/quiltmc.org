@@ -47,7 +47,7 @@ Pages that don't contain a Front Matter block will not be processed by Jekyll, m
 * `permalink` -- If needed, this is the relative path to the URL the page should eventually use as a link. You can use this if you need to change the location of the page after it's generated, for cases where Jekyll doesn't put it where it's needed. Bear in mind, however, that Jekyll will use the location of your source file by default -- if it's in the wrong place, then fix that before setting a new permalink!
 * `published` -- If you're working on something that needs to be committed but not visible to the public on the site, you can set this to `false`.
 
-More information on Front Matter and how it works can be found in [the Jekyll documentation](https://jekyllrb.com/docs/front-matter/).
+More information on Front Matter and how it works can be found in [the Jekyll documentation](https://jekyllrb.com/docs/front-matter).
 
 ### Author Information
 
@@ -95,7 +95,7 @@ As we're using several extra Jekyll plugins and a very custom theme, you'll want
 
 When dealing with Markdown or HTML documents, pages and blog posts, please try to stick to a wrapping margin of 120 chars. Both formats support wrapping nicely at whatever margin is needed, so there's really no reason to go over a width of 120 chars. Limiting the width this way is easy to configure in most editors, and makes the files more accessible for editors using different editors and screen sizes.
 
-Additionally, it's worth noting that all documents are also [Liquid templates](https://shopify.github.io/liquid/). While this templating language is actually quite limiting, it does provide quite a few useful features. Going into detail on the tags and filters that [Jekyll](https://jekyllrb.com/docs/liquid/) (and Liquid itself) provides is out of scope of this page, but we've created a few custom ones that you might find useful in your templates.
+Additionally, it's worth noting that all documents are also [Liquid templates](https://shopify.github.io/liquid). While this templating language is actually quite limiting, it does provide quite a few useful features. Going into detail on the tags and filters that [Jekyll](https://jekyllrb.com/docs/liquid) (and Liquid itself) provides is out of scope of this page, but we've created a few custom ones that you might find useful in your templates.
 
 ### Tags
 

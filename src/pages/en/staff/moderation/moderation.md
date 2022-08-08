@@ -66,9 +66,9 @@ For more information on how the community team is structured and what processes 
 
 ## Discord Moderation Tools
 
-We currently have a fairly lightweight set of tools for moderation, provided by [Zeppelin](https://zeppelin.gg/). This 
+We currently have a fairly lightweight set of tools for moderation, provided by [Zeppelin](https://zeppelin.gg). This 
 bot provides a set of standard moderation commands, as well as some lightweight automations. Additionally, we make use 
-of [CrossLink](https://panleyent.com/crosslink/) to automatically vet and remove links and attachments that are known
+of [CrossLink](https://panleyent.com/crosslink) to automatically vet and remove links and attachments that are known
 to be problematic or contain viruses, and a [ModMail bot](https://github.com/kyb3r/modmail) to allow users to contact
 the community team if they need anything.
 

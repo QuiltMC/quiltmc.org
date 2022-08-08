@@ -18,15 +18,15 @@ function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
 }
 ---
 
-{latestPosts.map(post => <>
-	<article class="blog-post with-divider">
-		<h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
+{latestPosts.map(post => (
+<article class="blog-post with-divider">
+	<h2 class="subtitle"><a href={post.url}>{post.frontmatter.title}</a></h2>
 
-		<PostInfo post={post.frontmatter} />
-		<p></p>
-		<Markdown>{getExcerptOfPost(post)}</Markdown>
-	</article>
-</>)}
+	<PostInfo post={post.frontmatter} />
+	<p></p>
+	<Markdown>{getExcerptOfPost(post)}</Markdown>
+</article>
+))}
 <div class="is-flex mt-4 is-justify-content-right">
 	<a class="button is-primary" href="/blog">
 		<span class="icon"><i class="fas fa-ellipsis-h"></i></span>

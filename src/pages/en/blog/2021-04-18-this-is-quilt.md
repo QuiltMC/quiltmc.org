@@ -7,7 +7,7 @@ authors:
 layout: /src/layouts/Default.astro
 ---
 
-This is the Quilt Project: An open, community-driven modding toolchain designed primarily for Minecraft. Quilt builds on many of the technologies developed by [the Fabric Project](https://fabricmc.net/) and is designed to take what worked well and expand on it further.
+This is the Quilt Project: An open, community-driven modding toolchain designed primarily for Minecraft. Quilt builds on many of the technologies developed by [the Fabric Project](https://fabricmc.net) and is designed to take what worked well and expand on it further.
 
 <!-- MORE -->
 

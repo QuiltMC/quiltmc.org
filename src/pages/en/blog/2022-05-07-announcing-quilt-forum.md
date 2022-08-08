@@ -11,7 +11,7 @@ Hey everyone! I and the rest of the Community Team are excited to announce the f
 
 You may have some questions about why we've launched a forum, and what will happen to our existing Discord spaces, but before we answer those, let's get one universal question out the way:
 ## Where do I sign up?
-The forum is live now at [https://forum.quiltmc.org](https://forum.quiltmc.org/), and you can sign up with a standard email and password, or using GitHub or Discord OAuth. Please make sure to read our [Privacy Policy](https://forum.quiltmc.org/privacy) if you have questions or concerns about how your data is handled and managed.
+The forum is live now at [https://forum.quiltmc.org](https://forum.quiltmc.org), and you can sign up with a standard email and password, or using GitHub or Discord OAuth. Please make sure to read our [Privacy Policy](https://forum.quiltmc.org/privacy) if you have questions or concerns about how your data is handled and managed.
 
 With that out of the way, let's address some other common questions.
 
