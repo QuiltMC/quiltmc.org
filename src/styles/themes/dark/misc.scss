@@ -1,56 +1,59 @@
 hr {
-  background-color: $grey-dark;
-  border-color: $grey-dark;
+	background-color: $grey-dark;
+	border-color: $grey-dark;
 }
 
 .notification {
-  background-color: lighten($dark, 10%);
+	background-color: lighten($dark, 10%);
 }
 
 a.notification {
-  color: white;
+	color: white;
 }
 
 span.inline-divider {
-  background-color: $grey-dark;
-  border-color: $grey-dark;
+	background-color: $grey-dark;
+	border-color: $grey-dark;
 }
 
 #theme-normal-contrast {
-  display: block;
+	display: block;
 }
 
-body[data-contrast=low] > * {
-  filter: opacity(70%) contrast(90%) saturate(90%);
-}
+#low-contrast:checked {
+	~ * {
+		filter: opacity(70%) contrast(90%) saturate(90%);
+	}
 
-body[data-contrast=low] {
-  #theme-low-contrast {
-    display: block;
-  }
+	#theme-low-contrast {
+		display: block;
+	}
 
-  #theme-normal-contrast {
-    display: none;
-  }
+	#theme-normal-contrast {
+		display: none;
+	}
 }
 
 /* For the low-contrast peeps out there, we'll do some filtering. Best we can do for now. */
-@media (prefers-contrast: less) { // This is not an error, your editor is just wrong.
-  body > * {
-    filter: opacity(70%) contrast(90%) saturate(90%);
-  }
+@media (prefers-contrast: less) {
+	// This is not an error, your editor is just wrong.
+	body > * {
+		filter: opacity(70%) contrast(90%) saturate(90%);
+	}
 
-  #theme-normal-contrast, #theme-low-contrast {
-    display: none !important;
-  }
+	#theme-normal-contrast,
+	#theme-low-contrast {
+		display: none !important;
+	}
 }
 
 #theme-switcher {
-  display: flex;
+	display: flex;
 }
 
 .modal-close {
-  &::before, &::after {
-    background-color: white;
-  }
+	&::before,
+	&::after {
+		background-color: white;
+	}
 }

@@ -31,6 +31,8 @@ if (match && i18next.languages.includes(match[1])) {
 <HtmlHead title={content?.title} description={content?.description} date={content?.date} />
 
 <body class="page">
+	<input id="low-contrast" type="checkbox" class="is-hidden" />
+
 	{ !Astro.props.navless &&
 	<NavBar root={Astro.props.root} /> }
 
