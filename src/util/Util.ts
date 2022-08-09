@@ -23,6 +23,6 @@ export function sortByDescending<T, K>(arr: T[], by: (elem: T) => K): T[] {
 	return arr;
 }
 
-export function localizePath (path?: string, locale?: string | null): string {
+export function localizePath(path?: string, locale?: string | null): string {
 	return "/" + (locale || i18next.language) + path;
-};
+}
