@@ -20,15 +20,15 @@ const header = t("sidebar-pages");
 			<div class="columns">
 				<div class="column is-narrow" data-controller="sidebar">
 					<div class="is-hidden-tablet">
-						<button data-action="click->sidebar#toggle" class="button is-primary">
+						<label class="button is-primary" for="toggle-sidebar">
 							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
 							<span>{header}</span>
-						</button>
+						</label>
 						<br />
 						<br />
 					</div>
 
-					<div class="box is-hidden-mobile is-sticky sidebar" data-sidebar-target="sidebar" data-scroll-to-top="true">
+					<div class="box is-hidden-mobile is-sticky sidebar">
 						<aside class="menu">
 							<p class="menu-label">{header}</p>
 

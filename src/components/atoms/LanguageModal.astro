@@ -4,17 +4,15 @@ import Message from "./Message.astro";
 
 const langs = [...i18next.languages].sort()
 ---
+
 <div class="modal" id="language-modal">
-	<label for="language-switcher" class="modal-background" id="language-modal-background" data-action="click->languages#hide"></label>
+	<label for="language-switcher" class="modal-background" id="language-modal-background"></label>
 
 	<div class="modal-content">
 		<div class="m-5">
 			<section class="box p-3">
 				<noscript>
-					<textarea
-						readonly
-						class="input is-danger has-text-danger"
-					>{t("prompt-error-noscript")}</textarea>
+					<textarea readonly class="input is-danger has-text-danger">{t("prompt-error-noscript")}</textarea>
 				</noscript>
 				<div class="control has-icons-left my-2">
 					<input id="lang-input" class="input" type="text" placeholder={t("prompt-search-language")} />
@@ -24,29 +22,19 @@ const langs = [...i18next.languages].sort()
 				</div>
 				<div id="jump-links" class="columns is-multiline m-2">
 					{langs.map(language => {
-						const nativeName = i18next.getResource(language, "common", "lang-name");
-						return <div class="column is-one-third">
-							<a
-								class="lang-jump-link"
-								href={Astro.url.pathname.replace(i18next.language, language)}
-								data-lang-code={language}
-								data-native-name={nativeName}
-							>
-								{nativeName}
-							</a>
-						</div>
+					const nativeName = i18next.getResource(language, "common", "lang-name");
+					return <div class="column is-one-third">
+						<a class="lang-jump-link" href={Astro.url.pathname.replace(i18next.language, language)}
+							data-lang-code={language} data-native-name={nativeName}>
+							{nativeName}
+						</a>
+					</div>
 					})}
 				</div>
 			</section>
 
 			<div class="is-flex is-flex-direction-row mt-3">
-				<label
-					class="button is-primary"
-					id="language-modal-close-button"
-					aria-label="close"
-					for="language-switcher"
-					data-action="click->languages#hide"
-				>
+				<label class="button is-primary" id="language-modal-close-button" aria-label="close" for="language-switcher">
 					<span class="icon"><i class="fas fa-x"></i></span>
 					<span>{t("button-close")}</span>
 				</label>

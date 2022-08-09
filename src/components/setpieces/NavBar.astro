@@ -38,15 +38,14 @@ const {
 			</span>
 		</label>
 
-		<a role="button" data-navbar-target="menu" data-action="click->navbar#toggle" class="navbar-burger"
-			aria-label="menu" aria-expanded="false">
+		<label class="navbar-burger" for="toggle-navbar" aria-label="menu">
 			<span aria-hidden="true"></span>
 			<span aria-hidden="true"></span>
 			<span aria-hidden="true"></span>
-		</a>
+		</label>
 	</div>
 
-	<div class="navbar-menu" data-navbar-target="menu">
+	<div class="navbar-menu">
 		<div class="navbar-end">
 			<div class="navbar-item has-dropdown is-hoverable">
 				<Dropdown category="about" name={t("nav-about")} />

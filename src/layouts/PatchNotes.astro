@@ -6,18 +6,18 @@ import Base from "./Base.astro";
 <Base content={Astro.props.content}>
 
 <div class="columns is-centered">
-	<div class="column is-10">
+    <div class="column is-10">
         <section class="section">
             <div class="columns">
                 <div class="column is-narrow" data-controller="sidebar">
                     <div class="is-hidden-tablet">
-                        <button data-action="click->sidebar#toggle" class="button is-primary">
+                        <button class="button is-primary">
                             <span class="icon"><i class="fas fa-ellipsis-h"></i></span>
                             <span>{t("sidebar-versions")}</span>
                         </button>
 
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                     </div>
 
                     <div class="box is-hidden-mobile is-sticky" data-sidebar-target="sidebar">
@@ -35,32 +35,39 @@ import Base from "./Base.astro";
                     <div class="columns is-centered">
                         <div class="column max-width-50">
                             <noscript class="message is-danger mb-4">
-								<slot name="noScript" />
+                                <slot name="noScript" />
                             </noscript>
 
                             <div class="message is-info" id="missing-versions-warning">
                                 <div class="message-body content">
                                     <div class="is-flex is-flex-direction-row is-fullwidth">
-                                        <h2 class="is-justify-content-start is-flex-grow-1"><slot name="missingVersions"/></h2>
+                                        <h2 class="is-justify-content-start is-flex-grow-1">
+                                            <slot name="missingVersions" />
+                                        </h2>
 
                                         <div class="is-justify-content-end">
-                                            <a class="has-tooltip-arrow has-tooltip-bottom" data-tooltip="Dismiss" id="missing-versions-close">
+                                            <a class="has-tooltip-arrow has-tooltip-bottom" data-tooltip="Dismiss"
+                                                id="missing-versions-close">
                                                 <span class="icon"><i class="fas fa-2x fa-circle-xmark"></i></span>
                                             </a>
                                         </div>
                                     </div>
 
-									<slot name="missingVersionsExplanation" />
+                                    <slot name="missingVersionsExplanation" />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <h1 id="title" class="title"><slot name="patchnotes"/></h1>
+                    <h1 id="title" class="title">
+                        <slot name="patchnotes" />
+                    </h1>
 
-                    <img id="image" class="patchnotes-image" style="border-radius: 10px; margin: 10px;"/>
+                    <img id="image" class="patchnotes-image" style="border-radius: 10px; margin: 10px;" />
 
-                    <div id="body" class="content"><slot name="patchnotesPrompt"/></div>
+                    <div id="body" class="content">
+                        <slot name="patchnotesPrompt" />
+                    </div>
                 </div>
             </div>
         </section>

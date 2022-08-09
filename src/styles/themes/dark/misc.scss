@@ -42,6 +42,22 @@ span.inline-divider {
 	}
 }
 
+#toggle-navbar:checked ~ {
+	section .navbar-menu {
+		display: block;
+	}
+
+	nav .navbar-menu {
+		display: block;
+	}
+}
+
+#toggle-sidebar:checked ~ {
+	div .sidebar {
+		display: block !important;
+	}
+}
+
 /* For the low-contrast peeps out there, we'll do some filtering. Best we can do for now. */
 @media (prefers-contrast: less) {
 	// This is not an error, your editor is just wrong.
