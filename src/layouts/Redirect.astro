@@ -7,6 +7,10 @@ const { href } = Astro.props;
 <head>
 	<meta charset="utf-8" />
 	<title>Redirecting to {href}</title>
-	<meta http-equiv="refresh" content={"0; " + href} />
+	<meta http-equiv="refresh" content={"1; " + href} />
 	<link rel=" canonical" {href} />
+
+	<script is:inline>
+		window.location.pathname = "/en" + window.location.pathname;
+	</script>
 </head>
