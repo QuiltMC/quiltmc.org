@@ -23,7 +23,7 @@ const { left } = rtlSettings();
 
 <Default content={Astro.props.content}>
 	<div class="columns">
-		<div class="column is-5" data-controller="sidebar">
+		<div class="column is-5">
 			<div class="is-hidden-tablet">
 				<Button type="link" href={localizePath("/install")} icon={`fas fa-arrow-${left}`}
 					textKey="install:button-back" />
@@ -36,7 +36,7 @@ const { left } = rtlSettings();
 				<br />
 			</div>
 
-			<div class="is-hidden-mobile" data-sidebar-target="sidebar" data-scroll-to-top="true">
+			<div class="is-hidden-mobile">
 				<Button type="link is-hidden-mobile mb-2" href={localizePath("/install")} icon={`fas fa-arrow-${left}`}
 					textKey="install:button-back-to-list" />
 				<div class="grid-picker mb-0">
