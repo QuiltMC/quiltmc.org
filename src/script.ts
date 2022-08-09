@@ -6,6 +6,8 @@ if (lowContrastState) {
 	lowContrast.checked = lowContrastState == "true";
 }
 
-lowContrast.onchange = () => {
-	localStorage.setItem("low-contrast", lowContrast.checked.toString());
-};
+if (lowContrast) {
+	lowContrast.onchange = () => {
+		localStorage.setItem("low-contrast", lowContrast.checked.toString());
+	};
+}
