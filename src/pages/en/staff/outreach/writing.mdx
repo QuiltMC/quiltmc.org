@@ -1,12 +1,22 @@
 ---
 title: Writing Guidelines
 description: Tips and best-practices for writing content on the site.
-author: gdude2002
+authors:
+  - gdude2002
+  - Leah from Dichosys
+  - '[object Object]'
 layout: /src/layouts/StaffDocument.astro
 ---
+import Message from "@atoms/Message.astro"
 
-# Note
-**This document needs updating.** As we have migrated from Jekyll to [Astro](https://astro.build), writing documents is now a vastly different process. Please contact the Dichotomy System or [object Object] if you need any help writing new articles, while we get the new guidelines ready. Thanks for your patience!
+<></> {/* prevent annoying MDX bug */}
+
+<Message title="Warning: Outdated Information" style="danger">
+
+**This document needs updating.** As we have migrated from Jekyll to [Astro](https://astro.build), writing documents is now a vastly different process. Please contact [the Dichotomy System](https://github.com/leocth) or [[object Object]](https://github.com/obj-obj) if you need any help writing new articles, while we get the new guidelines ready. Thanks for your patience!
+
+</Message>
+
 
 Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers to hand for advice.  This document is intended to be a set of guidelines, tips and tricks to use when writing documents, articles, blog posts and other written content for the site.
 
@@ -23,8 +33,9 @@ For more information on these concepts -- and for some other ideas and tips -- p
 
 This goes without saying, but proper spelling and grammar is fairly important. That said, nobody is perfect and there are tools out there that make everyone's lives easier. The use of one is highly recommended, even if you usually have excellent spelling and grammar -- everyone makes mistakes!
 
-* [LanguageTool](https://languagetool.org) remains one of the best tools available for this, even the free version.  * If you prefer, composing in VSCode with 
-  [the LanguageTool extension](https://marketplace.visualstudio.com/items?itemName=adamvoss.vscode-languagetool) -- or IntelliJ IDEA -- will have the same effect as using LanguageTool directly.
+* [LanguageTool](https://languagetool.org) remains one of the best tools available for this, even the free version.
+* If you prefer, composing in VSCode with [the LanguageTool extension](https://marketplace.visualstudio.com/items?itemName=adamvoss.vscode-languagetool) --
+  or IntelliJ IDEA -- will have the same effect as using LanguageTool directly.
 * [Grammarly](https://www.grammarly.com) exists as an alternative, but LanguageTool's open-source approach tends to result in a more trustable tool.
 
 A somewhat formal tone in your writing is also recommended, but there's absolutely no need to completely avoid an informal approach. The site even supports emojis (`WIN` + `.` on Windows), if that's something you're into. 🥔
@@ -103,45 +114,38 @@ Additionally, it's worth noting that all documents are also [Liquid templates](h
 
 `admonition` -- this allows you to create an admonition, as shown below. Admonitions are essentially boxes that draw attention to a specific block of text, and our tag also supports an argument of the form `[title]/[style]`, where `[title]` can be replaced with an optional message title and `[style]` can be replaced with semantic CSS types -- specifically, any of `primary`, `secondary`, `white`, `black`, `light`, `dark`, `success`, `warning`, `danger`, `info` or `link`.
 
-{% columns %}
-{% column %}
-##### Example
+<div class="columns">
+  <div class="column">
+    ##### Example
 
-{% raw %}
+    ```liquid
+    {% admonition /success %}
+    This admonition has no title, but it has the "success" styling.
+    {% endadmonition %}
 
-```liquid
-{% admonition /success %}
-This admonition has no title, but it has the "success" styling.
-</Message>
+    {% admonition Title goes here/danger %}
+    This admonition has a title, and the "danger" styling.
+    {% endadmonition %}
+    ```
+  </div>
+  <div class="column">
+    ##### Result
 
-{% admonition Title goes here/danger %}
-This admonition has a title, and the "danger" styling.
-</Message>
-```
-{% endraw %}
+    <Message style="success">
+    This admonition has no title, but it has the "success" styling.
+    </Message>
 
-{% endcolumn %}
-{% column %}
-##### Result
-
-{% admonition /success %}
-This admonition has no title, but it has the "success" styling.
-</Message>
-
-{% admonition Title goes here/danger %}
-This admonition has a title, and the "danger" styling.
-</Message>
-
-{% endcolumn %}
-{% endcolumns %}
+    <Message title="Title goes here" style="danger">
+    This admonition has a title, and the "danger" styling.
+    </Message>
+  </div>
+</div>
 
 #### Columns
 
 Columns aren't particularly complex, but this gives you a simple way to define them in any type of document, with the option to provide extra classes as arguments if you need them. Columns on this site will collapse nicely for mobile users, with the leftmost column showing first.
 
 ##### Example
-
-{% raw %}
 
 ```liquid
 {% columns %}
@@ -158,48 +162,40 @@ Columns aren't particularly complex, but this gives you a simple way to define t
     {% endcolumn %}
 {% endcolumns %}
 ```
-{% endraw %}
 
 ##### Result
 
-{% columns %}
-{% column %}
-<Message>
-This is column 1.
-</Message>
-{% endcolumn %}
-
-{% column %}
-<Message>
-This is column 2.
-</Message>
-{% endcolumn %}
-{% endcolumns %}
+<div class="columns">
+  <div class="column">
+    <Message>
+      This is column 1.
+    </Message>
+  </div>
+  <div class="column">
+    <Message>
+      This is column 2.
+    </Message>
+  </div>
+</div>
 
 #### Git: Edit Date
 
 This tag simply inserts the date of the last commit this file was edited within. You should also provide a date format - in this case, from the `format-date` variable, which represents the date format for the current translation.
 
-{% columns %}
-{% column %}
+<div class="columns">
+  <div class="column">
+    ##### Example
 
-##### Example
+    ```liquid
+    Edited at: {% edit_date format-date %}
+    ```
+  </div>
+  <div class="column">
+    ##### Result
 
-{% raw %}
-```liquid
-Edited at: {% edit_date format-date %}
-```
-{% endraw %}
-
-{% endcolumn %}
-{% column %}
-
-##### Result
-
- Edited at: {% edit_date format-date %}
-
-{% endcolumn %}
-{% endcolumns %}
+    Edited at: {/* edit_date format-date */}
+  </div>
+</div>
 
 ### Filters
 
