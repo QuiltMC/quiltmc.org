@@ -8,8 +8,7 @@ platformKey: platform-server
 hasDownloads: true
 ---
 
-Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make
-sure you've [installed Java](https://java.com/en/download).
+Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make sure you've [installed Java](https://java.com/en/download).
 
 <div class="field is-horizontal">
     <div class="field-label is-normal mt-1">
@@ -36,21 +35,17 @@ Once you have a copy of the Quilt installer downloaded, follow these steps:
 6. Check the **Download server jar** box
 7. Click the **Install** button
 
-This will download a copy of the Minecraft server to the location you specified, and install Quilt to it, providing a 
-launcher JAR to start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file,
-with the following contents:
+This will download a copy of the Minecraft server to the location you specified, and install Quilt to it, providing a launcher JAR to start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file, with the following contents:
 
 ```sh
 java -jar quilt-server-launch.jar nogui
 ```
 
-That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then 
-stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
+That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
 ## CLI Installation
 
-Once you have a copy of the Quilt installer downloaded, you'll need to run it from your terminal, replacing 
-`INSTALLER_VERSION` and `MINECRAFT_VERSION` as needed:
+Once you have a copy of the Quilt installer downloaded, you'll need to run it from your terminal, replacing `INSTALLER_VERSION` and `MINECRAFT_VERSION` as needed:
 
 ```bash
 java -jar quilt-installer-INSTALLER_VERSION.jar \
@@ -58,16 +53,13 @@ java -jar quilt-installer-INSTALLER_VERSION.jar \
   --download-server
 ```
 
-This will download a copy of the Minecraft server to `server/` and install Quilt to it, providing a launcher JAR to
-start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file, with the 
-following contents:
+This will download a copy of the Minecraft server to `server/` and install Quilt to it, providing a launcher JAR to start the server with. Once that's done, create a `.bat` (for Windows) or `.sh` (for Mac/Linux) file, with the following contents:
 
 ```sh
 java -jar quilt-server-launch.jar nogui
 ```
 
-That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then
-stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
+That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
 # Installing Mods
 
@@ -76,9 +68,6 @@ Installing mods is a fairly simple process:
 1. Download the mods you'd like to install
 2. Create a folder named `mods` alongside your server files, if one doesn't already exist
 3. Copy your mod files into the `mods/` folder
-4. Ensure you have also added the **Quilt Standard Libraries**, which you can find
-   [on Modrinth](https://modrinth.com/mod/qsl)
+4. Ensure you have also added the **Quilt Standard Libraries**, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
 
-Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look
-at the [troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for
-support!
+Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look at the [troubleshooting page](/en/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!

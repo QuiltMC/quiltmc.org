@@ -7,8 +7,7 @@ platformKey: platform-atlauncher
 website: https://atlauncher.com
 ---
 
-ATLauncher is a simple, easy-to-use launcher, built around the concept of building game instances from "packs". To set 
-up your own Quilt instance, simply follow these steps:
+ATLauncher is a simple, easy-to-use launcher, built around the concept of building game instances from "packs". To set up your own Quilt instance, simply follow these steps:
 
 1. Download and install ATLauncher from [their website](https://atlauncher.com)
 2. Open ATLauncher and click on the **Vanilla Packs** tab on the right side
@@ -27,11 +26,8 @@ To install mods to your ATLauncher instance, simply follow these steps:
 1. Click on the **Instances** tab on the right side
 2. Find the instance you'd like to add mods to, and click on **Add Mods**
 3. Find a Fabric or Quilt mod from CurseForge or Modrinth, and click the **Add** button
-4. Ensure you have the **Quilt Standard Libraries** installed, which you can find 
-   [on Modrinth](https://modrinth.com/mod/qsl)
+4. Ensure you have the **Quilt Standard Libraries** installed, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
 
-If you can't find the mod you'd like to install using the built-in search, you can click on **Open Folder** and copy
-any mod files you'd like to use into the `mods/` folder.
+If you can't find the mod you'd like to install using the built-in search, you can click on **Open Folder** and copy any mod files you'd like to use into the `mods/` folder.
 
-Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the
-[troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!
+Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the [troubleshooting page](/en/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!
