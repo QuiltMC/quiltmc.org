@@ -28,7 +28,7 @@ span.inline-divider {
 
 #low-contrast:checked ~ {
 	* {
-		filter: opacity(70%) contrast(90%) saturate(90%);
+		filter: brightness(70%) contrast(90%) saturate(90%);
 	}
 
 	section {
@@ -46,7 +46,7 @@ span.inline-divider {
 @media (prefers-contrast: less) {
 	// This is not an error, your editor is just wrong.
 	body > * {
-		filter: opacity(70%) contrast(90%) saturate(90%);
+		filter: brightness(70%) contrast(90%) saturate(90%);
 	}
 
 	#theme-normal-contrast,
