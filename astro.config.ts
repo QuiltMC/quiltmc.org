@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import astroI18next from "./ersatz/astro-i18next-fluent";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,5 +18,6 @@ export default defineConfig({
 				fluent: "i18next-fluent",
 			},
 		}),
+		sitemap(),
 	],
 });

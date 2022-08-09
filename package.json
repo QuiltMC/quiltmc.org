@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@astrojs/markdown-component": "^1.0.0",
 		"@astrojs/mdx": "^0.8.1",
+		"@astrojs/sitemap": "^1.0.0",
 		"@creativebulma/bulma-divider": "^1.1.0",
 		"@creativebulma/bulma-tooltip": "^1.2.0",
 		"@types/luxon": "^3.0.0",
