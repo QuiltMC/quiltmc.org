@@ -40,6 +40,7 @@ nav-page-patch-notes = {-patch-notes}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 
+button-close = Close
 button-discord = {-discord}
 button-discord-community = Community
 button-discord-toolchain = Toolchain
@@ -68,3 +69,9 @@ paginator-button-first = First
 paginator-button-previous = Previous
 paginator-button-next = Next
 paginator-button-last = Last
+
+tooltip-switch-language = Switch Language
+tooltip-toggle-low-contrast = Toggle Low Contrast
+
+prompt-error-noscript = You have JavaScript disabled. Enable JavaScript to use search.
+prompt-search-language = Search for your language here...

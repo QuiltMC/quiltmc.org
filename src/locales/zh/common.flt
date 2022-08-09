@@ -40,6 +40,7 @@ nav-page-patch-notes = {-patch-notes}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 
+button-close = 关闭
 button-discord = {-discord}
 button-discord-community = 社区服务器
 button-discord-toolchain = 开发服务器
@@ -67,3 +68,9 @@ paginator-button-first = 第一页
 paginator-button-previous = 上页
 paginator-button-next = 下页
 paginator-button-last = 最后一页
+
+tooltip-switch-language = 切换语言
+tooltip-toggle-low-contrast = 切换低对比模式
+
+prompt-error-noscript = 你已禁用 JavaScript。请启用 JavaScript 以使用查找功能。
+prompt-search-language = 在这里查找你的语言……
