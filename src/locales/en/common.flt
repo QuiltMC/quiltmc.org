@@ -2,7 +2,7 @@ title = The Quilt Project
 short-title = QuiltMC
 description = The mod-loader that cares.
 
-title-formatted = {short-title} | {$title}
+title-formatted = {$shortTitle} | {$title}
 text-direction = ltr
 
 # Common strings
