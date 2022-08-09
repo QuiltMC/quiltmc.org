@@ -1,5 +1,5 @@
 ---
-import Redirect from "@layouts/Redirect.astro";;
+import Redirect from "@layouts/Redirect.astro";
 
 // Redirect; default to English page
 // FIXME: should try to redirect to the appropriate locale for the user
@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 			});
 		}
 	});
+
 	return pages;
 }
 
