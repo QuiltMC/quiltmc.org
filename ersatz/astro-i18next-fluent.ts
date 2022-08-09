@@ -236,7 +236,6 @@ export default (options: AstroI18nextOptions): AstroIntegration => {
           }
           i18nextInit += `.init(${deeplyStringifyObject(options.i18next)});`;
           
-          console.log(i18nextInit);
           injectScript("page-ssr", imports + i18nextInit);
         },
       },
