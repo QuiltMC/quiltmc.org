@@ -7,7 +7,8 @@ Website for the Quilt Project.
 This is a static site built with [Astro](https://github.com/withastro/astro). First install `pnpm` and then follow the steps below.
 
 1. Install dependencies by running `pnpm i`.
-2. Build the site with `pnpm build`.
+2. Install `minhtml` as an executable with `pnpm install minhtml -g`.
+3. Build the site with `pnpm build`.
 
 ## Contributing
 
