@@ -1,4 +1,4 @@
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 
 export type TextDirection = 'rtl' | 'ltr';
 export type Direction = 'left' | 'right';
@@ -11,7 +11,7 @@ export interface RtlSettings {
 }
 
 export default (): RtlSettings => {
-    const textDirection = t("text-direction") as TextDirection;
+    const textDirection = i18next.dir();
     const rtl = textDirection == 'rtl';
     return {
         textDirection,
