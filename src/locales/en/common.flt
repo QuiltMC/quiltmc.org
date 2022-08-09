@@ -1,9 +1,10 @@
+lang-name = English
+
 title = The Quilt Project
 short-title = QuiltMC
 description = The mod-loader that cares.
 
 title-formatted = {$shortTitle} | {$title}
-text-direction = ltr
 
 # Common strings
 -developer-wiki = Developer Wiki

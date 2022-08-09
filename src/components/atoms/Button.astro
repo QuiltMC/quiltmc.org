@@ -44,8 +44,11 @@ if (textKey) {
 ---
 
 <a title={titleKey && t(titleKey)} {href} {target} class:list={buttonClasses}>
+	{icon &&
 	<span class="icon">
 		<i class={icon}></i>
 	</span>
+	}
+
 	{finalText && <span> {finalText} </span>}
 </a>

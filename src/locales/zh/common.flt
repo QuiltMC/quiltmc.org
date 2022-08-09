@@ -1,9 +1,10 @@
+lang-name = 简体中文
+
 title = The Quilt Project
 short-title = QuiltMC
 description = 真正关心你的模组加载器。
 
 title-formatted = {$shortTitle} | {$title}
-text-direction = ltr
 
 # Common strings
 -developer-wiki = 开发者 Wiki

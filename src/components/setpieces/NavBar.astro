@@ -14,18 +14,18 @@ const {
 } = Astro.props as Props;
 ---
 
-<nav class={`navbar ${style}`} role="navigation" aria-label="main navigation" data-controller="navbar">
+<nav class:list={["navbar", style]} role="navigation" aria-label="main navigation" data-controller="navbar">
 	<div class="navbar-brand">
 		<a class="navbar-item navbar-logo" href={localizePath("")}>
 			<img src="/assets/img/logo.svg" alt="Quilt Logo" />
 
-			<span class="ml-2">QuiltMC</span>
+			<span class="ml-2">{t("short-title")}</span>
 		</a>
 
-		<a class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" style="display: none" id="language-switcher"
+		<label class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" for="language-switcher"
 			data-tooltip="Switch Language">
 			<i class="fak fa-language fa-2xl"></i>
-		</a>
+		</label>
 
 		<label class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" for="low-contrast"
 			data-tooltip="Toggle Low Contrast">

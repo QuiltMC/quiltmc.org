@@ -20,6 +20,12 @@ span.inline-divider {
 	display: block;
 }
 
+#language-switcher:checked ~ {
+	#language-modal {
+		display: flex;
+	}
+}
+
 #low-contrast:checked ~ {
 	* {
 		filter: opacity(70%) contrast(90%) saturate(90%);

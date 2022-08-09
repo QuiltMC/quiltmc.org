@@ -1,17 +1,35 @@
+---
+import i18next from "i18next";
+import Button from "./Button.astro";
+
+const langs = [...i18next.languages].sort()
+---
+
 <div class="modal" id="language-modal">
-	<div class="modal-background" id="language-modal-background" data-action="click->languages#hide"></div>
+	<label for="language-switcher" class="modal-background" id="language-modal-background" data-action="click->languages#hide"></label>
 
 	<div class="modal-content">
 		<section class="box">
-			We're not quite ready for this to be used just yet, but stay tuned!
+			{langs.map(language => {
+				return <><Button
+					href={Astro.url.pathname.replace(i18next.language, language)}
+					type="primary"
+					text={i18next.getResource(language, "common", "lang-name")}
+				/>&nbsp;</>
+			})}
 		</section>
 
 		<div class="is-flex is-flex-direction-row mt-3">
-			<a class="button is-primary" id="language-modal-close-button" aria-label="close"
-				data-action="click->languages#hide">
+			<label
+				class="button is-primary"
+				id="language-modal-close-button"
+				aria-label="close"
+				for="language-switcher"
+				data-action="click->languages#hide"
+			>
 				<span class="icon"><i class="fas fa-x"></i></span>
 				<span>Close</span>
-			</a>
+			</label>
 		</div>
 	</div>
 </div>
