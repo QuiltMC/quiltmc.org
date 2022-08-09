@@ -56,3 +56,8 @@ button-usage-docs = Usage Docs
 sidebar-pages = Pages
 sidebar-resources = Resources
 sidebar-teams = Teams
+
+paginator-button-first = First
+paginator-button-previous = Previous
+paginator-button-next = Next
+paginator-button-last = Last
