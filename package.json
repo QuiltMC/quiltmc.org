@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro start",
-		"build": "astro build && minhtml --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --minify-js --file-ext html --input-dir dist --output-dir dist",
+		"build": "astro build && minhtml --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --file-ext html --input-dir dist --output-dir dist",
 		"preview": "astro preview"
 	},
 	"devDependencies": {
