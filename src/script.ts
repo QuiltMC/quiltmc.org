@@ -1,11 +1,11 @@
 export {};
 
-const low_contrast = document.getElementById("low_contrast");
-const low_contrast_state = localStorage.getItem("low_contrast");
-if (low_contrast_state) {
-	low_contrast.checked = low_contrast_state;
+const lowContrast = document.getElementById("low_contrast") as HTMLInputElement;
+const lowContrastState = localStorage.getItem("low_contrast");
+if (lowContrastState) {
+	lowContrast.checked = lowContrastState == "true";
 }
 
-low_contrast.onchange = () => {
-	localStorage.setItem("low-contrast", low_contrast.checked);
+lowContrast.onchange = () => {
+	localStorage.setItem("low-contrast", lowContrast.checked.toString());
 };
