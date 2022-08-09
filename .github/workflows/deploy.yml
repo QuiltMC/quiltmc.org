@@ -1,9 +1,7 @@
 name: Build and Deploy
 on:
   push:
-    branches:
-      stable
-  workflow_dispatch:
+    branches: stable
 
 jobs:
   build-and-deploy:
@@ -11,37 +9,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            vendor/bundle
-            node_modules
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-js-${{ hashFiles('**/yarn.lock') }}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.1
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          ruby-version: 2.7
-          bundler-cache: false  # We're doing this ourselves
-
-      - name: Set up Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
+          cache: pnpm
 
       - name: Build
         run: |
-          bundle install
-          yarn
-          yarn run webpack
-          JEKYLL_ENV=production bundle exec jekyll build
-          cp CNAME _site/CNAME
-
+          pnpm install
+          pnpm build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
-          folder: _site
+          folder: dist
