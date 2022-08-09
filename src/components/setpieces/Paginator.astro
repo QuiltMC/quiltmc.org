@@ -1,6 +1,6 @@
 ---
 import PostInfo from "@atoms/PostInfo.astro";
-import Variables from "@data/Variables";
+import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
 
@@ -10,7 +10,7 @@ const nextPage = page.currentPage + 1;
 const onFirstPage = previousPage <= 0;
 const onLastPage = nextPage > page.lastPage;
 
-const { left, right } = new Variables();
+const { left, right } = rtlSettings();
 ---
 
 <div class="columns is-centered">
@@ -23,11 +23,13 @@ const { left, right } = new Variables();
 			</main>
 
 			<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+				{/*@ts-ignore*/}
 				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage && localizePath("/blog/1") }>
 					<span class="icon"><i class={`fas fa-angles-${left}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-first")}</span>
 				</a>
 
+				{/*@ts-ignore*/}
 				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage && localizePath(`/blog/${previousPage}`)}>
 					<span class="icon"><i class={`fas fa-angle-${left}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-previous")}</span>
@@ -52,11 +54,13 @@ const { left, right } = new Variables();
 					)}
 				</ul>
 
+				{/*@ts-ignore*/}
 				<a class="pagination-next" disabled={onLastPage} href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}>
 					<span class="icon"><i class={`fas fa-angle-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-next")}</span>
 				</a>
 
+				{/*@ts-ignore*/}
 				<a class="pagination-next" disabled={onLastPage} href={!onLastPage && localizePath(`/blog/${nextPage}`)}>
 					<span class="icon"><i class={`fas fa-angles-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-last")}</span>

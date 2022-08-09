@@ -1,5 +1,9 @@
-setting-text-direction = ltr
-setting-title-separator = {" "}|{" "}
+title = The Quilt Project
+short-title = QuiltMC
+description = The mod-loader that cares.
+
+title-formatted = {short-title} | {$title}
+text-direction = ltr
 
 # Common strings
 -developer-wiki = Developer Wiki
@@ -45,6 +49,7 @@ button-install = Install
 button-mastodon = {-mastodon}
 button-maven-repo = Maven Repo
 button-more = More
+button-more-posts = More Posts
 button-openings = {-openings}
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS

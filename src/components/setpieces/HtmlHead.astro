@@ -1,7 +1,6 @@
 ---
-import Variables from "@data/Variables";
 import site from "@data/Site";
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 import { localizeUrl } from "astro-i18next";
 
 // TODO: find out a way to do RTL styles.
@@ -16,17 +15,17 @@ export interface HeadProps {
 
 const props = Astro.props as HeadProps;
 
-const {
-	title,
-	description,
-	titleSeparator
-} = new Variables(props.title, props.description);
-
 const supportedLanguages = i18next.languages;
 const currentUrl = Astro.url.href;
 const currentLang = i18next.language;
 
 const date = props.date ? DateTime.fromISO(props.date) : null;
+
+const description = props.description ?? t("description");
+const titleFormatted = t("title-formatted", {
+	shortTitle: t("short-title"),
+	title: props.title ?? t("description")
+})
 ---
 
 <head>
@@ -34,7 +33,7 @@ const date = props.date ? DateTime.fromISO(props.date) : null;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>QuiltMC {titleSeparator} {title}</title>
+	<title>{titleFormatted}</title>
 
 	<link href="https://fonts.bunny.net/css?family=Roboto" rel="stylesheet" />
 
@@ -74,13 +73,13 @@ const date = props.date ? DateTime.fromISO(props.date) : null;
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={site.logo} />
 	<meta property="og:locale" content={currentLang} />
-	<meta property="og:site_name" content={site.title} />
-	<meta property="og:title" content={title} />
+	<meta property="og:site_name" content={t("title")} />
+	<meta property="og:title" content={props.title} />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content={Astro.url} />
 
 	<meta property="twitter:image" content={site.logo} />
-	<meta property="twitter:title" content={title} />
+	<meta property="twitter:title" content={props.title} />
 
 	<!-- <script type="application/ld+json">
         {

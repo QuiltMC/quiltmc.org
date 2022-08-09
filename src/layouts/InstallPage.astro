@@ -1,15 +1,16 @@
 ---
+import Default from "./Default.astro";
+import { BaseProps } from "./Base.astro";
 //@ts-ignore
 import Button from "@atoms/Button.astro";
-import Variables from "@data/Variables";
 import Awaiting from "@parts/install/Awaiting.astro";
 import Launchers from "@parts/install/Launchers.astro";
 import Main from "@parts/install/Main.astro";
 import WipWarning from "@parts/install/WipWarning.astro";
+
+import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
-import { BaseProps } from "./Base.astro";
-import Default from "./Default.astro";
 
 export interface Props extends BaseProps {
 	platformKey: string,
@@ -17,7 +18,7 @@ export interface Props extends BaseProps {
 }
 
 const content = Astro.props.content as Props;
-const { left } = new Variables(content?.title, content?.description);
+const { left } = rtlSettings();
 ---
 
 <Default content={Astro.props.content}>

@@ -1,26 +1,25 @@
 ---
-import Markdown from "@astrojs/markdown-component";
-import PostInfo, { PostFrontmatter } from "@atoms/PostInfo.astro";
+import Button from "@atoms/Button.astro";
+import PostInfo from "@atoms/PostInfo.astro";
 
-import { MarkdownInstance } from "astro";
 import i18next from "i18next";
 import { localizePath, sortByDescending } from "src/util/Util";
 
-const allPosts = (await Astro.glob<PostFrontmatter>('/src/pages/**/blog/*.md'))
+const allPosts = (await Astro.glob('/src/pages/**/blog/*.md'))
 	.filter(p => p.url.startsWith(`/${i18next.language}/`))
 sortByDescending(allPosts, post => new Date(post.frontmatter.date));
 
 const latestPosts = allPosts.slice(0, 3);
-
-
 ---
 
 {latestPosts.map(post => (
 <PostInfo {post} />
 ))}
 <div class="is-flex mt-4 is-justify-content-right">
-	<a class="button is-primary" href={localizePath("/blog/1")}>
-		<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-		<span>More Posts</span>
-	</a>
+	<Button
+		href={localizePath("/blog/1")}
+		type="primary"
+		icon="fas fa-ellipsis-h"
+		textKey="button-more-posts"
+	/>
 </div>

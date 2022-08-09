@@ -1,14 +1,17 @@
-setting-text-direction = ltr
-setting-title-separator = {" "}|{" "}
+title = The Quilt Project
+short-title = QuiltMC
+description = 真正关心你的模组加载器。
+
+title-formatted = {$shortTitle} | {$title}
+text-direction = ltr
 
 # Common strings
 -developer-wiki = 开发者 Wiki
 -forum = 论坛
 -import-utility = Quilt 导入工具
--maven-repo = Maven 库
--openings = Openings
+-openings = 空缺职位
 -patch-notes = 更新日志
--staff-resources = Staff Resources
+-staff-resources = 内部资源
 -template-mod = 模组模板
 
 # Brand names/proper nouns - You shouldn't need to edit this.
@@ -16,6 +19,7 @@ setting-title-separator = {" "}|{" "}
 -github = GitHub
 -discord = Discord
 -twitter = Twitter
+-twitch = Twitch
 
 nav-about = 关于
 nav-blog = 博客
@@ -29,28 +33,36 @@ divider-external-links = 外部链接
 
 nav-page-developer-wiki = {-developer-wiki}
 nav-page-import-utility = {-import-utility}
-nav-page-maven-repo = {-maven-repo}
+nav-page-maven-repo = Maven 库
 nav-page-openings = {-openings}
 nav-page-patch-notes = {-patch-notes}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 
 button-discord = {-discord}
-button-discord-community = {-discord} 社区服务器
-button-discord-toolchain = {-discord} 开发服务器
+button-discord-community = 社区服务器
+button-discord-toolchain = 开发服务器
 button-developer-wiki = {-developer-wiki}
 button-forum = {-forum}
 button-github = {-github}
 button-install = 安装
 button-mastodon = {-mastodon}
-button-maven-repo = {-maven-repo}
+button-maven-repo = Maven 库
 button-more = 更多
+button-more-posts = 更多文章
 button-openings = {-openings}
 button-patch-notes = Minecraft {-patch-notes}
+button-rss = RSS
 button-template-mod = {-template-mod}
 button-twitter = {-twitter}
+button-twitch = {-twitch}
 button-usage-docs = 使用文档
 
-header-pages = 页面
-header-documents = 文档
-header-pages-and-documents = 页面与文档
+sidebar-pages = 页面
+sidebar-resources = 资源
+sidebar-teams = 团队
+
+paginator-button-first = 第一页
+paginator-button-previous = 上页
+paginator-button-next = 下页
+paginator-button-last = 最后一页

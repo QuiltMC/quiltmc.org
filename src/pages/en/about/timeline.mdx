@@ -6,12 +6,9 @@ layout: /src/layouts/Page.astro
 
 import Header from "@parts/timeline/Header.astro";
 import Item from "@parts/timeline/Item.astro";
-import Variables from "@data/Variables";
+import rtlSettings from "@data/RtlSettings";
 
-<div class={(()=>{
-  const vars = new Variables();
-  return vars.rtl ? "timeline is-rtl" : "timeline";
-})()}>
+<div class:list={["timeline", rtlSettings().rtl ? "is-rtl" : ""]}>
   <Header>2021</Header>
   
   <Item id="2021-02-02" title="February 2nd, 2021" icon="fas fa-wrench">

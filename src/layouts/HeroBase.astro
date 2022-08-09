@@ -1,15 +1,15 @@
 ---
-import Base, { BaseProps } from "./Base.astro";
+import Base from "./Base.astro";
 //@ts-ignore
 import Button from "@atoms/Button.astro";
 import NavBar from "@setpieces/NavBar.astro";
-import Variables from "@data/Variables"
-import site from "@data/Site"
+import rtlSettings from "@data/RtlSettings";
+import site from "@data/Site";
 
-import { localizePath } from "@util/Util"
+import { localizePath } from "@util/Util";
 
-const props = Astro.props as BaseProps;
-const { rtl } = new Variables(props.content.title, props.content.description)
+const props = Astro.props;
+const { rtl } = rtlSettings();
 ---
 
 <Base navless content={props.content}>

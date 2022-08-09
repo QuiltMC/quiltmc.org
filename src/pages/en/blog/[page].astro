@@ -1,5 +1,6 @@
 ---
 import Base from "@layouts/Base.astro";
+//@ts-ignore
 import Paginator from "@setpieces/Paginator.astro";
 import { sortByDescending } from "@util/Util";
 
@@ -10,7 +11,6 @@ export async function getStaticPaths({ paginate }) {
 	return paginate(allPosts, { pageSize: 5 })
 }
 ---
-
 <Base content={Astro.props.content}>
 	<Paginator page={Astro.props.page} />
 </Base>
