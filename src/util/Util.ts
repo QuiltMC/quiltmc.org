@@ -1,4 +1,4 @@
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 
 // thanks JS, way to go
 export function sortBy<T, K>(arr: T[], by: (elem: T) => K): T[] {
@@ -25,4 +25,8 @@ export function sortByDescending<T, K>(arr: T[], by: (elem: T) => K): T[] {
 
 export function localizePath(path?: string, locale?: string | null): string {
 	return "/" + (locale || i18next.language) + path;
+}
+
+export function localizeList(list: string[]): string {
+	return list.reduce((prev, next) => t("serial-comma", { prev, next }))
 }

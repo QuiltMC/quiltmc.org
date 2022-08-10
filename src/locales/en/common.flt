@@ -5,6 +5,7 @@ short-title = QuiltMC
 description = The mod-loader that cares.
 
 title-formatted = {$shortTitle} | {$title}
+serial-comma = {$prev}, {$next}
 
 # Common strings
 -developer-wiki = Developer Wiki
@@ -21,6 +22,12 @@ title-formatted = {$shortTitle} | {$title}
 -discord = Discord
 -twitter = Twitter
 -twitch = Twitch
+
+page-authors =
+	{ $count ->
+        [one] Author
+        *[other] Authors
+	}: {$names}
 
 nav-about = About
 nav-blog = Blog

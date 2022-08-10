@@ -1,12 +1,15 @@
 ---
-// TODO: Somehow merge this with BasePage? - Leah@Dichosys
-
 import i18next, { t } from "i18next";
 import Base from "./Base.astro"
-import { localizePath } from "@util/Util";
+import { localizeList, localizePath } from "@util/Util";
+
+export interface Props {
+	title: string,
+	authors?: string[],
+}
 
 const { content } = Astro.props;
-const { title } = content;
+const { title, authors = [] } = content as Props;
 
 let pageUrl = Astro.url.pathname;
 if (pageUrl.endsWith("/")) {
@@ -43,7 +46,7 @@ if (pageUrl != staffUrl) {
 }
 ---
 
-<Base content={Astro.props.content}>
+<Base {content}>
 <div class="columns is-centered">
 	<div class="column is-10">
 		<section class="section">
@@ -110,7 +113,14 @@ if (pageUrl != staffUrl) {
 							<h1 class="title">
 								{title}
 							</h1>
-
+							{ authors.length > 0 &&
+							<p class="subtitle is-6">
+								{t("page-authors", {
+									count: authors.length,
+									names: localizeList(authors)
+								})}
+							</p>
+							}
 							<p class="subtitle is-6">
 								<!-- Edited: {% edit_date format-date %} -->
 							</p>

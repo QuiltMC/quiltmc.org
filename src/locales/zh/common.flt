@@ -5,6 +5,7 @@ short-title = QuiltMC
 description = 真正关心你的模组加载器。
 
 title-formatted = {$shortTitle} | {$title}
+serial-comma = {$prev}、{$next}
 
 # Common strings
 -developer-wiki = 开发者 Wiki
@@ -21,6 +22,8 @@ title-formatted = {$shortTitle} | {$title}
 -discord = Discord
 -twitter = Twitter
 -twitch = Twitch
+
+page-authors = 作者：{$names}
 
 nav-about = 关于
 nav-blog = 博客
