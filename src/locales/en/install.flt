@@ -15,16 +15,14 @@ platform-technic = {-technic}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
 
--logo = { $thing } logo
-
-logo-minecraft = { -logo(thing: "Minecraft") }
-logo-java = { -logo(thing: "Java") }
-logo-atlauncher = { -logo(thing: -atlauncher) }
-logo-multimc = { -logo(thing: -multimc) }
-logo-polymc = { -logo(thing: -polymc) }
-logo-technic = { -logo(thing: "Technic Launcher") }
-logo-curseforge = { -logo(thing: -curseforge) }
-logo-gdlauncher = { -logo(thing: -gdlauncher) }
+logo-minecraft = Minecraft logo
+logo-java = Java logo
+logo-atlauncher = {-atlauncher} logo
+logo-multimc = {-multimc} logo
+logo-polymc = {-polymc} logo
+logo-technic = Technic Launcher logo
+logo-curseforge = {-curseforge} logo
+logo-gdlauncher = {-gdlauncher} logo
 
 button-back = Back
 	.full = Back to List
