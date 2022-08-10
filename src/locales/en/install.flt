@@ -27,8 +27,8 @@ logo-curseforge = { -logo(thing: -curseforge) }
 logo-gdlauncher = { -logo(thing: -gdlauncher) }
 
 button-back = Back
+	.full = Back to List
 button-menu = Menu
-button-back-to-list = Back to List
 button-website = Website
 
 wip-warning =

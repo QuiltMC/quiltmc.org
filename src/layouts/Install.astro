@@ -1,7 +1,5 @@
 ---
 import Default from "./Default.astro";
-import Message from "@atoms/Message.astro"
-import HomeMessage from "@parts/home/HomeMessage.astro"
 import Main from "@parts/install/Main.astro";
 import Launchers from "@parts/install/Launchers.astro";
 import Awaiting from "@parts/install/Awaiting.astro";
@@ -18,7 +16,7 @@ import WipWarning from "@parts/install/WipWarning.astro";
 	<div class="columns">
 		<div class="column is-7">
 			<div class="has-text-centered content mb-0 pb-0">
-				<h1 class="mb-0">Direct Installation</h1>
+				<h1 class="mb-0"><slot name="direct" /></h1>
 			</div>
 
 			<div class="grid-picker">
@@ -26,7 +24,7 @@ import WipWarning from "@parts/install/WipWarning.astro";
 			</div>
 
 			<div class="has-text-centered content mb-0 pb-0">
-				<slot name="notEndorsement" />
+				<slot name="launchers" />
 			</div>
 
 			<div class="grid-picker">
