@@ -1,4 +1,5 @@
 ---
+import Message from "@atoms/Message.astro";
 import { t } from "i18next";
 import Base from "./Base.astro";
 ---
@@ -6,6 +7,7 @@ import Base from "./Base.astro";
 <Base content={Astro.props.content}>
 
 <div class="columns is-centered">
+
 	<div class="column is-10">
 		<section class="section">
 			<div class="columns">
@@ -34,22 +36,27 @@ import Base from "./Base.astro";
 				<div class="column">
 					<div class="columns is-centered">
 						<div class="column max-width-50">
-							<noscript class="message is-danger mb-4">
-								<slot name="noScript" />
+							<noscript>
+								<Message style="danger mb-4">
+									<slot name="noScript" />
+								</Message>
 							</noscript>
 
+							<input id="close-missing-versions" type="checkbox" class="is-hidden"/>
 							<div class="message is-info" id="missing-versions-warning">
 								<div class="message-body content">
 									<div class="is-flex is-flex-direction-row is-fullwidth">
 										<h2 class="is-justify-content-start is-flex-grow-1">
 											<slot name="missingVersions" />
 										</h2>
-
 										<div class="is-justify-content-end">
-											<a class="has-tooltip-arrow has-tooltip-bottom" data-tooltip="Dismiss"
-												id="missing-versions-close">
+											<label
+												for="close-missing-versions"
+												class="has-tooltip-arrow has-tooltip-bottom has-text-link"
+												data-tooltip="Dismiss"
+											>
 												<span class="icon"><i class="fas fa-2x fa-circle-xmark"></i></span>
-											</a>
+											</label>
 										</div>
 									</div>
 
@@ -74,12 +81,15 @@ import Base from "./Base.astro";
 	</div>
 </div>
 
-<script is:inline>
-	document.getElementById("missing-versions-close").onclick = (event) => {
-		event.preventDefault()
-
-		document.getElementById("missing-versions-warning").remove()
+<style lang="scss">
+	#close-missing-versions:checked ~ {
+		#missing-versions-warning {
+			display: none !important;
+		}
 	}
+</style>
+
+<script is:inline>
 	// Fetch launcher metadata
 	fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
 		.then(response => response.json())
