@@ -144,7 +144,7 @@ community spaces that have one, which is known as "hoisting".
 #### Avatars
 
 All avatars must adhere to the rules above. Additionally, avatars depicting objectionable, Not Safe For Work (NSFW) content 
-or weapons (ex: knives, firearms) are disallowed, as well as fully-transparent avatars or avatars that appear to be 
+or weapons (e.g.: knives, firearms) are disallowed, as well as fully-transparent avatars or avatars that appear to be 
 fully-transparent by matching the platform's background color. This also applies to PluralKit member avatars. 
 
 #### Custom/Rich Statuses
