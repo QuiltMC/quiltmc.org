@@ -6,6 +6,8 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
+		"strict": true,
+		"importsNotUsedAsValues": "error",
 		"types": ["astro/client"],
 		"outDir": "./dist",
 		"baseUrl": ".",
