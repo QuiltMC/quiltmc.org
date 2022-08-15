@@ -11,6 +11,7 @@ export async function getStaticPaths({ paginate }) {
 	return paginate(allPosts, { pageSize: 5 })
 }
 ---
+
 <Base content={Astro.props.content}>
-	<Paginator page={Astro.props.page} />
+<Paginator page={Astro.props.page} />
 </Base>

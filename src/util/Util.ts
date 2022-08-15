@@ -28,5 +28,5 @@ export function localizePath(path?: string, locale?: string | null): string {
 }
 
 export function localizeList(list: string[]): string {
-	return list.reduce((prev, next) => t("serial-comma", { prev, next }))
+	return list.reduce((prev, next) => t("serial-comma", { prev, next }));
 }

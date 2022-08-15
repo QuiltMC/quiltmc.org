@@ -42,7 +42,7 @@ import Base from "./Base.astro";
 								</Message>
 							</noscript>
 
-							<input id="close-missing-versions" type="checkbox" class="is-hidden"/>
+							<input id="close-missing-versions" type="checkbox" class="is-hidden" />
 							<div class="message is-info" id="missing-versions-warning">
 								<div class="message-body content">
 									<div class="is-flex is-flex-direction-row is-fullwidth">
@@ -50,11 +50,8 @@ import Base from "./Base.astro";
 											<slot name="missingVersions" />
 										</h2>
 										<div class="is-justify-content-end">
-											<label
-												for="close-missing-versions"
-												class="has-tooltip-arrow has-tooltip-bottom has-text-link"
-												data-tooltip="Dismiss"
-											>
+											<label for="close-missing-versions" class="has-tooltip-arrow has-tooltip-bottom has-text-link"
+												data-tooltip="Dismiss">
 												<span class="icon"><i class="fas fa-2x fa-circle-xmark"></i></span>
 											</label>
 										</div>
@@ -82,7 +79,7 @@ import Base from "./Base.astro";
 </div>
 
 <style lang="scss">
-	#close-missing-versions:checked ~ {
+	#close-missing-versions:checked~ {
 		#missing-versions-warning {
 			display: none !important;
 		}

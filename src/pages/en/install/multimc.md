@@ -1,5 +1,5 @@
 ---
-title: 'Install: MultiMC'
+title: "Install: MultiMC"
 permalink: /install/multimc/
 
 layout: /src/layouts/InstallPage.astro
@@ -7,7 +7,7 @@ platformKey: platform-multimc
 website: https://multimc.org
 ---
 
-MultiMC is a launcher with advanced features to allow power users to manage separate instances of Minecraft.  To set up a Quilt instance with MultiMC, follow these steps:
+MultiMC is a launcher with advanced features to allow power users to manage separate instances of Minecraft. To set up a Quilt instance with MultiMC, follow these steps:
 
 1. Download and install MultiMC from [their website](https://multimc.org)
 2. Open MultiMC, follow the setup steps and click on the **Add Instance** button at the top of the window

@@ -1,5 +1,5 @@
 ---
-title: 'Install: Client'
+title: "Install: Client"
 permalink: /install/client
 
 layout: /src/layouts/InstallPage.astro
@@ -9,7 +9,7 @@ website: "https://www.minecraft.net/en-us/download"
 hasDownloads: true
 ---
 
-Before getting started, you'll need to make sure you download a copy of the Quilt installer. 
+Before getting started, you'll need to make sure you download a copy of the Quilt installer.
 
 The **Universal** download will work on any computer with Java properly installed -- but if you're on Windows, and you'd rather just use the Java installation that comes with Minecraft, then you can use the **Windows** download.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Install: PolyMC'
+title: "Install: PolyMC"
 permalink: /install/polymc/
 
 layout: /src/layouts/InstallPage.astro

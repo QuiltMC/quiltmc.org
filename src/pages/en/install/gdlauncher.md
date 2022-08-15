@@ -1,5 +1,5 @@
 ---
-title: 'Install: GDLauncher'
+title: "Install: GDLauncher"
 permalink: /install/gdlauncher/
 
 layout: /src/layouts/InstallPage.astro

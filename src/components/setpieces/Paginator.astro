@@ -30,7 +30,8 @@ const { left, right } = rtlSettings();
 				</a>
 
 				{/*@ts-ignore*/}
-				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage && localizePath(`/blog/${previousPage}`)}>
+				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage &&
+					localizePath(`/blog/${previousPage}`)}>
 					<span class="icon"><i class={`fas fa-angle-${left}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-previous")}</span>
 				</a>
@@ -49,7 +50,8 @@ const { left, right } = rtlSettings();
 
 					{!onLastPage && (
 					<li>
-						<a class="pagination-link" href={localizePath(`/blog/${nextPage}`)} aria-label={`Goto page ${nextPage}`}>{nextPage}</a>
+						<a class="pagination-link" href={localizePath(`/blog/${nextPage}`)} aria-label={`Goto page
+							${nextPage}`}>{nextPage}</a>
 					</li>
 					)}
 				</ul>

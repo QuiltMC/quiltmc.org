@@ -1,5 +1,5 @@
 ---
-title: 'Install: Server'
+title: "Install: Server"
 permalink: /install/server/
 
 layout: /src/layouts/InstallPage.astro

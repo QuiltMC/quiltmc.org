@@ -1,5 +1,5 @@
 ---
-title: 'Install: CurseForge'
+title: "Install: CurseForge"
 permalink: /install/curseforge/
 
 layout: /src/layouts/InstallPage.astro

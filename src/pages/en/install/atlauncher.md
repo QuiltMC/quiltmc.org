@@ -1,5 +1,5 @@
 ---
-title: 'Install: ATLauncher'
+title: "Install: ATLauncher"
 permalink: /install/atlauncher/
 
 layout: /src/layouts/InstallPage.astro
