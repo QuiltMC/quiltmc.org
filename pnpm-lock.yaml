@@ -11,6 +11,7 @@ specifiers:
   astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
+  execa: ^6.1.0
   fluent_conv: ^3.1.0
   github-slugger: ^1.4.0
   i18next: ^21.9.0
@@ -18,13 +19,13 @@ specifiers:
   luxon: ^3.0.1
   minhtml: ^1.1.1
   remark-excerpt: 1.0.0-beta.1
-  rollup: ^2.77.3
+  rollup: ^2.78.0
   sass: ^1.54.4
   typescript: ^4.7.4
 
 devDependencies:
   '@astrojs/markdown-component': 1.0.1
-  '@astrojs/mdx': 0.9.0_rollup@2.77.3
+  '@astrojs/mdx': 0.9.0_rollup@2.78.0
   '@astrojs/sitemap': 1.0.0
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
@@ -33,6 +34,7 @@ devDependencies:
   astro-i18next: 1.0.0-beta.3_astro@1.0.5
   bulma: 0.9.4
   bulma-timeline: 3.0.5
+  execa: 6.1.0
   fluent_conv: 3.1.0
   github-slugger: 1.4.0
   i18next: 21.9.0
@@ -40,7 +42,7 @@ devDependencies:
   luxon: 3.0.1
   minhtml: 1.1.1
   remark-excerpt: 1.0.0-beta.1
-  rollup: 2.77.3
+  rollup: 2.78.0
   sass: 1.54.4
   typescript: 4.7.4
 
@@ -106,13 +108,13 @@ packages:
       - supports-color
     dev: true
 
-  /@astrojs/mdx/0.9.0_rollup@2.77.3:
+  /@astrojs/mdx/0.9.0_rollup@2.78.0:
     resolution: {integrity: sha512-Z6W7YvCc36BenJZGkcG0oFi01OswR6KhUDWXL06prhgu51YSlKrpcvpykruGXaDQb1YkqGi3yxmWAmQwzgx6pQ==}
     engines: {node: ^14.18.0 || >=16.12.0}
     dependencies:
       '@astrojs/prism': 1.0.1
       '@mdx-js/mdx': 2.1.2
-      '@mdx-js/rollup': 2.1.2_rollup@2.77.3
+      '@mdx-js/rollup': 2.1.2_rollup@2.78.0
       acorn: 8.8.0
       es-module-lexer: 0.10.5
       github-slugger: 1.4.0
@@ -532,14 +534,14 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/rollup/2.1.2_rollup@2.77.3:
+  /@mdx-js/rollup/2.1.2_rollup@2.78.0:
     resolution: {integrity: sha512-3ahqp3DCpIlGlCRuLX4z7dFEgN5kWBljrk8BpipiWkVrvB4FQpTQu1T7lmDffm8tOunjHAsZEHtb076HiW51NQ==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.1.2
       '@rollup/pluginutils': 4.2.1
-      rollup: 2.77.3
+      rollup: 2.78.0
       source-map: 0.7.4
       vfile: 5.3.4
     transitivePeerDependencies:
@@ -860,7 +862,7 @@ packages:
       recast: 0.20.5
       rehype: 12.0.1
       resolve: 1.22.1
-      rollup: 2.77.3
+      rollup: 2.78.0
       semver: 7.3.7
       shiki: 0.10.1
       sirv: 2.0.2
@@ -930,8 +932,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001375
-      electron-to-chromium: 1.4.218
+      caniuse-lite: 1.0.30001376
+      electron-to-chromium: 1.4.219
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.3
     dev: true
@@ -967,8 +969,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001375:
-    resolution: {integrity: sha512-kWIMkNzLYxSvnjy0hL8w1NOaWNr2rn39RTAVyIwcw8juu60bZDWiF1/loOYANzjtJmy6qPgNmn38ro5Pygagdw==}
+  /caniuse-lite/1.0.30001376:
+    resolution: {integrity: sha512-I27WhtOQ3X3v3it9gNs/oTpoE5KpwmqKR5oKPA8M0G7uMXh9Ty81Q904HpKUrM30ei7zfcL5jE7AXefgbOfMig==}
     dev: true
 
   /ccount/2.0.1:
@@ -1182,8 +1184,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.218:
-    resolution: {integrity: sha512-INDylKH//YIf2w67D+IjkfVnGVrZ/D94DAU/FPPm6T4jEPbEDQvo9r2wTj0ncFdtJH8+V8BggZTaN8Rzk5wkgw==}
+  /electron-to-chromium/1.4.219:
+    resolution: {integrity: sha512-zoQJsXOUw0ZA0YxbjkmzBumAJRtr6je5JySuL/bAoFs0DuLiLJ+5FzRF7/ZayihxR2QcewlRZVm5QZdUhwjOgA==}
     dev: true
 
   /emmet/2.3.6:
@@ -3135,8 +3137,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.77.3:
-    resolution: {integrity: sha512-/qxNTG7FbmefJWoeeYJFbHehJ2HNWnjkAFRKzWN/45eNBBF/r8lo992CwcJXEzyVxs5FmfId+vTSTQDb+bxA+g==}
+  /rollup/2.78.0:
+    resolution: {integrity: sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3670,7 +3672,7 @@ packages:
       esbuild: 0.14.54
       postcss: 8.4.16
       resolve: 1.22.1
-      rollup: 2.77.3
+      rollup: 2.78.0
       sass: 1.54.4
     optionalDependencies:
       fsevents: 2.3.2

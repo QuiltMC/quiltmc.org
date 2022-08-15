@@ -1,5 +1,7 @@
 ---
+import { execa } from "execa";
 import i18next, { t } from "i18next";
+import { DateTime } from "luxon";
 import Base from "./Base.astro";
 
 let { content } = Astro.props;
@@ -9,62 +11,64 @@ const category = Astro.url.pathname.split("/")[2];
 const pages = (await Astro.glob("/src/**/pages/**/*"))
 	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
-
 const header = t("sidebar-pages");
+
+const output = await execa("git", ["log", "-1", '--pretty="%ct"', Astro.props.frontmatter.file]);
+const modifyDate = new Date(output.stdout.replaceAll('"', "") * 1000).toLocaleDateString(i18next.language);
 ---
 
 <Base content={Astro.props.content}>
-	<div class="columns is-centered">
-		<div class="column is-10">
-			<section class="section">
-				<div class="columns">
-					<div class="column is-narrow">
-						<div class="is-hidden-tablet">
-							<label class="button is-primary" for="toggle-sidebar">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-								<span>{header}</span>
-							</label>
-							<br />
-							<br />
-						</div>
+<div class="columns is-centered">
+	<div class="column is-10">
+		<section class="section">
+			<div class="columns">
+				<div class="column is-narrow">
+					<div class="is-hidden-tablet">
+						<label class="button is-primary" for="toggle-sidebar">
+							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+							<span>{header}</span>
+						</label>
+						<br />
+						<br />
+					</div>
 
-						<div class="box is-hidden-mobile is-sticky sidebar">
-							<aside class="menu">
-								<p class="menu-label">{header}</p>
+					<div class="box is-hidden-mobile is-sticky sidebar">
+						<aside class="menu">
+							<p class="menu-label">{header}</p>
 
-								<ul class="menu-list">
+							<ul class="menu-list">
 
-									{pages.map(page => (
-									<li>
-										<a href={ page.url } class={page.url==Astro.url.pathname ? "is-active" : ""
-											}>{page.frontmatter.title}</a>
-									</li>
-									))}
-								</ul>
-							</aside>
+								{pages.map(page => (
+								<li>
+									<a href={ page.url } class={page.url==Astro.url.pathname ? "is-active" : ""
+										}>{page.frontmatter.title}</a>
+								</li>
+								))}
+							</ul>
+						</aside>
+					</div>
+				</div>
+
+				<main class="content column">
+					<div class="media mb-5">
+						<div class="media-content">
+							<h1 class="title">
+								{title}
+							</h1>
+
+							<p class="subtitle is-6">
+								Edited: {modifyDate}
+							</p>
+
 						</div>
 					</div>
 
-					<main class="content column">
-						<div class="media mb-5">
-							<div class="media-content">
-								<h1 class="title">
-									{title}
-								</h1>
-
-								<p class="subtitle is-6">
-									<!-- Edited: {% edit_date format-date %} -->
-								</p>
-
-							</div>
-						</div>
-
-						<slot />
-						<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
+					<slot />
+					<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
 								class='fas fa-sm fa-link-simple'></i>" %} -->
-					</main>
-				</div>
-			</section>
-		</div>
+				</main>
+			</div>
+		</section>
 	</div>
+</div>
 </Base>
