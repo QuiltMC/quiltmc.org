@@ -1,0 +1,15 @@
+---
+import PostInfo from "@atoms/PostInfo.astro";
+import Default from "./Default.astro";
+
+const props = Astro.props;
+---
+
+<Default content={props.content}>
+	<div class="blog-post">
+		<h1>{props.frontmatter.title}</h1>
+		<PostInfo post={props} />
+
+		<slot />
+	</div>
+</Default>

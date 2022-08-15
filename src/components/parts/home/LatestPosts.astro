@@ -1,6 +1,6 @@
 ---
 import Button from "@atoms/Button.astro";
-import PostInfo from "@atoms/PostInfo.astro";
+import PostEmbed from "@atoms/PostEmbed.astro";
 
 import i18next from "i18next";
 import { localizePath, sortByDescending } from "src/util/Util";
@@ -13,7 +13,7 @@ const latestPosts = allPosts.slice(0, 3);
 ---
 
 {latestPosts.map(post => (
-<PostInfo {post} />
+<PostEmbed {post} />
 ))}
 <div class="is-flex mt-4 is-justify-content-right">
 	<Button href={localizePath("/blog/1")} type="primary" icon="fas fa-ellipsis-h" textKey="button-more-posts" />

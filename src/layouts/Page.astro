@@ -14,7 +14,7 @@ const pages = (await Astro.glob("/src/**/pages/**/*"))
 const header = t("sidebar-pages");
 
 const output = await execa("git", ["log", "-1", '--pretty="%ct"', Astro.props.frontmatter.file]);
-const modifyDate = new Date(output.stdout.replaceAll('"', "") * 1000).toLocaleDateString(i18next.language);
+const modifyDate = DateTime.fromSeconds(+output.stdout.replaceAll('"', "")).setLocale(i18next.language).toLocaleString(DateTime.DATE_FULL);
 ---
 
 <Base content={Astro.props.content}>

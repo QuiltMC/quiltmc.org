@@ -3,7 +3,7 @@ title: Introducing BlanketCon!
 date: 2022-03-29 7:00:00 -00:00
 authors:
   - LemmaEOF
-layout: /src/layouts/Default.astro
+layout: /src/layouts/Post.astro
 ---
 
 Heya! Lemma here to announce a big project we've been working on for a while now! From May 6th to May 7th this year, ModFest and Quilt are proud to be hosting **BlanketCon**, an in-game Minecraft modding convention powered by Quilt Loader! We'll be making a custom world where you can check out old favorites and newcomers alike! Come talk to devs and attend panels, keynotes, and more!

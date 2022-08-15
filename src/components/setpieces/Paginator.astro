@@ -1,5 +1,5 @@
 ---
-import PostInfo from "@atoms/PostInfo.astro";
+import PostEmbed from "@atoms/PostEmbed.astro";
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
@@ -18,7 +18,7 @@ const { left, right } = rtlSettings();
 		<section class="section">
 			<main class="content container">
 				{page.data.map(post => (
-				<PostInfo {post} />
+				<PostEmbed {post} />
 				))}
 			</main>
 

@@ -1,0 +1,23 @@
+---
+import PostInfo from "./PostInfo.astro";
+import Markdown from "@astrojs/markdown-component";
+import type { MarkdownInstance } from "astro";
+
+const { post } = Astro.props;
+const { title } = post.frontmatter;
+
+function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
+	const content = md.rawContent();
+	return content.slice(0, content.indexOf("<!-- MORE -->"));
+}
+---
+
+<article class="blog-post with-divider">
+	<h2 class="subtitle"><a href={post.url}>{title}</a></h2>
+
+	<PostInfo {post} />
+
+	<Markdown>{getExcerptOfPost(post)}</Markdown>
+
+	<p></p>
+</article>
