@@ -5,13 +5,13 @@ const props = Astro.props as BaseProps;
 ---
 
 <Base content={props.content}>
-<div class="columns is-centered">
-	<div class="column is-10">
-		<section class="section">
-			<main class="content container">
-				<slot />
-			</main>
-		</section>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<main class="content container">
+					<slot />
+				</main>
+			</section>
+		</div>
 	</div>
-</div>
 </Base>
