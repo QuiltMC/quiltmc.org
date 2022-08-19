@@ -8,6 +8,7 @@ website: "https://www.minecraft.net/en-us/download"
 
 hasDownloads: true
 ---
+import InstallerVersion from '@parts/install/InstallerVersion.astro';
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer.
 
@@ -16,9 +17,7 @@ The **Universal** download will work on any computer with Java properly installe
 If you're not sure which to pick, just [install Java](https://java.com/en/download) and use the **Universal** download.
 
 <div class="field is-horizontal">
-    <div class="field-label is-normal mt-1">
-        <span class="title is-6" id="launcher-version">Download</span>
-    </div>
+    <InstallerVersion />
     <div class="field-body">
         <div class="field">
             <div class="control">

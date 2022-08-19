@@ -31,3 +31,6 @@ button-website = Website
 
 wip-warning =
 	<0><1>Quilt is in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0><2>If you'd like to help us test Quilt, please feel free to install it, try it, and let us know how you get on!</2>
+
+# Used as the default text for the installer version if it's not replaced by JS.
+installer-version-placeholder = Download

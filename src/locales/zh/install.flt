@@ -15,13 +15,19 @@ platform-technic = {-technic}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
 
--logo = { $thing } 的标志
+logo-minecraft = Minecraft 的标志
+logo-java = Java 的标志
+logo-atlauncher = {-atlauncher} 的标志
+logo-multimc = {-multimc} 的标志
+logo-polymc = {-polymc} 的标志
+logo-technic = Technic 启动器的标志
+logo-curseforge = {-curseforge} 的标志
+logo-gdlauncher = {-gdlauncher} 的标志
 
-logo-minecraft = { -logo(thing: "Minecraft") }
-logo-java = { -logo(thing: "Java") }
-logo-atlauncher = { -logo(thing: -atlauncher) }
-logo-multimc = { -logo(thing: -multimc) }
-logo-polymc = { -logo(thing: -polymc) }
-logo-technic = { -logo(thing: "Technic Launcher") }
-logo-curseforge = { -logo(thing: -curseforge) }
-logo-gdlauncher = { -logo(thing: -gdlauncher) }
+button-back = 返回
+	.full = 返回到列表
+button-menu = 菜单
+button-website = 网站
+
+# Used as the default text for the installer version if it's not replaced by JS.
+installer-version-placeholder = 下载

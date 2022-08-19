@@ -1,0 +1,22 @@
+---
+import { t } from "i18next";
+---
+
+<div class="field-label is-normal mt-1">
+    <span class="title is-6" id="installer-version">{t("install:installer-version-placeholder")}</span>
+
+    <script is:inline>
+        const INSTALLER_URL_BASE = "https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/"
+        const MAVEN_METADATA_URL = INSTALLER_URL_BASE + "maven-metadata.xml"
+
+        const versionElement = document.getElementById("installer-version");
+
+        if (versionElement) {
+            fetch(MAVEN_METADATA_URL)
+                .then(response => response.text())
+                .then(str => new DOMParser().parseFromString(str, "application/xml"))
+                .then(data => data.querySelector("metadata > versioning > latest"))
+                .then(version => { versionElement.textContent = version.textContent; });
+        }
+    </script>
+</div>
