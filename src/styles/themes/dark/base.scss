@@ -1,4 +1,4 @@
-@import "vars";
+@import "./vars.scss";
 
 @import "/node_modules/bulma/bulma.sass";
 
@@ -7,5 +7,5 @@
 @import "../../common/derived.scss";
 @import "../../components/_all.scss";
 
-@import "buttons.scss";
-@import "misc.scss";
+@import "./buttons.scss";
+@import "./misc.scss";

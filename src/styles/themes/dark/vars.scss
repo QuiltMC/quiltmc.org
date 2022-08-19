@@ -6,23 +6,23 @@ $role-modifier-amount-secondary: 40%;
 @import "/node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "../../common/colours.scss";
 
-$body-font: 'Roboto', sans-serif;
-$header-font: 'Poppins', sans-serif;
-$mono-font: 'IBM Plex Mono', monospace;
+$body-font: "Roboto", sans-serif;
+$header-font: "Poppins", sans-serif;
+$mono-font: "IBM Plex Mono", monospace;
 
 $custom-colors: (
-        "blurple": (#5865F2),
-        "pink": (#DC29DD),
+	"blurple": #5865f2,
+	"pink": #dc29dd,
 );
 
-$pink: #DC29DD;
+$pink: #dc29dd;
 
-$primary: #9722FF;
-$link: #27A2FD;
-$info: #3041F2;
-$success: #41D02A;
-$warning: #FCFF22;
-$danger: #FF2222;
+$primary: #9722ff;
+$link: #27a2fd;
+$info: #3041f2;
+$success: #41d02a;
+$warning: #fcff22;
+$danger: #ff2222;
 $dark: #1c1526 !default;
 
 $lighten-amount: 15%;
@@ -37,23 +37,23 @@ $danger-light: lighten($danger, $lighten-amount);
 $dark-lightish: lighten($dark, 20%) !default;
 $dark-light: lighten($dark, 50%) !default;
 
-$blurple: #5865F2;
+$blurple: #5865f2;
 $blurple-dark: darken($blurple, 3%);
 $blurple-light: lighten($blurple, 3%);
 
-$rss: #FF8C00;
+$rss: #ff8c00;
 $rss-dark: darken($rss, 3%);
 $rss-light: lighten($rss, 3%);
 
-$twitter-blue: #1DA1F2;
+$twitter-blue: #1da1f2;
 $twitter-blue-dark: darken($twitter-blue, 3%);
 $twitter-blue-light: lighten($twitter-blue, 3%);
 
-$mastodon-blue: #3088D4;
+$mastodon-blue: #3088d4;
 $mastodon-blue-dark: darken($mastodon-blue, 3%);
 $mastodon-blue-light: lighten($mastodon-blue, 3%);
 
-$gradle-blue: #28B3C7;
+$gradle-blue: #28b3c7;
 $gradle-blue-dark: darken($gradle-blue, 3%);
 $gradle-blue-light: lighten($gradle-blue, 3%);
 
@@ -70,7 +70,7 @@ $developer-background: $developer-dark;
 $keyholder-background: $keyholder-dark;
 $moderator-background: $moderator-dark;
 $trainee-background: $trainee-dark;
-$neutral-background: #271F33;
+$neutral-background: #271f33;
 
 $body-background-color: $neutral-background;
 $footer-background-color: #1c1526;
@@ -92,22 +92,60 @@ $message-header-background-color: lighten($dark, 15%);
 $message-header-color: $text;
 
 $message-colors: (
-        "light": ($dark-light, $light-invert, darken($light, 20%)),
-        "dark": (lighten($dark, 15%), $dark-invert, $dark),
-        "primary": ($primary, $primary-invert, darken($primary-dark, 30%), $primary-dark),
-        "link": ($link, $link-invert, darken($link-dark, 20%), $link-dark),
-        "info": ($info, $info-invert, darken($info-dark, 30%), $info-dark),
-        "success": ($success, $success-invert, darken($success-dark, 20%), $success-dark),
-        "warning": ($warning, $warning-invert, darken($warning-dark, 20%), $warning-dark),
-        "danger": ($danger, $danger-invert, darken($danger-dark, 30%), $danger-dark)
+	"light": (
+		$dark-light,
+		$light-invert,
+		darken($light, 20%),
+	),
+	"dark": (
+		lighten($dark, 15%),
+		$dark-invert,
+		$dark,
+	),
+	"primary": (
+		$primary,
+		$primary-invert,
+		darken($primary-dark, 30%),
+		$primary-dark,
+	),
+	"link": (
+		$link,
+		$link-invert,
+		darken($link-dark, 20%),
+		$link-dark,
+	),
+	"info": (
+		$info,
+		$info-invert,
+		darken($info-dark, 30%),
+		$info-dark,
+	),
+	"success": (
+		$success,
+		$success-invert,
+		darken($success-dark, 20%),
+		$success-dark,
+	),
+	"warning": (
+		$warning,
+		$warning-invert,
+		darken($warning-dark, 20%),
+		$warning-dark,
+	),
+	"danger": (
+		$danger,
+		$danger-invert,
+		darken($danger-dark, 30%),
+		$danger-dark,
+	),
 );
 
 $content-blockquote-background-color: $dark;
 
 @if $rtl {
-  $content-blockquote-border-right: 5px solid lighten($dark, 15%);
+	$content-blockquote-border-right: 5px solid lighten($dark, 15%);
 } @else {
-  $content-blockquote-border-left: 5px solid lighten($dark, 15%);
+	$content-blockquote-border-left: 5px solid lighten($dark, 15%);
 }
 
 $link-hover: $link-dark;
@@ -162,5 +200,5 @@ $modal-background-background-color: rgba(0, 0, 0, 0.86);
 @import "/node_modules/bulma/sass/utilities/mixins.sass";
 @import "/node_modules/bulma-timeline/src/sass/index.sass";
 @import "/node_modules/@creativebulma/bulma-divider/src/sass/index.sass";
-@import "/node_modules/@creativebulma/bulma-tooltip/src/sass/index.sass";
+//@import "/node_modules/@creativebulma/bulma-tooltip/src/sass/index.sass";
 @import "../../components/timeline.scss";

@@ -1,4 +1,4 @@
-@import "modifiers.scss";
+@import "./modifiers.scss";
 
 $admin: #e5aa01 !default;
 $admin-dark: darken($admin, $role-modifier-amount) !default;
@@ -8,7 +8,7 @@ $community: #2ac48e !default;
 $community-dark: darken($community, $role-modifier-amount) !default;
 $community-light: lighten($community, $role-modifier-amount) !default;
 
-$developer: #41D02A !default;
+$developer: #41d02a !default;
 $developer-dark: darken($developer, $role-modifier-amount-tertiary) !default;
 $developer-light: lighten($developer, $role-modifier-amount-tertiary) !default;
 

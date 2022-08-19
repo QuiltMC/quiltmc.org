@@ -1,6 +1,5 @@
-// @import "./style-light";
+@import "./style-light.scss";
 
-//FIXME: AAAAAAAAAAAAAAAAAAAa
-// @media (prefers-color-scheme: dark) {
-@import "./style-dark";
-// }
+@media (prefers-color-scheme: dark) {
+	@import "./style-dark.scss";
+}

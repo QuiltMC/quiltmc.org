@@ -21,6 +21,11 @@ export default defineConfig({
 		sitemap(),
 	],
 	markdown: {
-		syntaxHighlight: 'prism',
-	}
+		syntaxHighlight: "prism",
+	},
+	vite: {
+		build: {
+			assetsInlineLimit: 0,
+		},
+	},
 });

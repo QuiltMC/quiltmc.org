@@ -4,13 +4,15 @@ import i18next, { t } from "i18next";
 import { localizeUrl } from "astro-i18next";
 
 // TODO: find out a way to do RTL styles.
-import "/src/styles/style.scss";
-import { DateTime } from 'luxon';
+import lightTheme from "/src/styles/style-light.scss?url";
+import darkTheme from "/src/styles/style-dark.scss?url";
+
+import { DateTime } from "luxon";
 
 export interface HeadProps {
-	title: string,
-	description?: string,
-	date?: string,
+	title: string;
+	description?: string;
+	date?: string;
 }
 
 const props = Astro.props as HeadProps;
@@ -24,27 +26,40 @@ const date = props.date ? DateTime.fromISO(props.date) : null;
 const description = props.description ?? t("description");
 const titleFormatted = t("title-formatted", {
 	shortTitle: t("short-title"),
-	title: props.title ?? t("description")
-})
+	title: props.title ?? t("description"),
+});
 ---
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href={lightTheme} />
+	<link rel="stylesheet" href={darkTheme} />
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>{titleFormatted}</title>
 
 	<link href="https://fonts.bunny.net/css?family=Roboto" rel="stylesheet" />
 
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="/favicon/favicon-32x32.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="/favicon/favicon-16x16.png"
+	/>
 	<link rel="manifest" href="/favicon/site.webmanifest" />
 	<link rel="shortcut icon" href="/favicon/favicon.ico" />
 
-	<meta name="msapplication-TileColor" content="#1b112b">
-	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#1b112b">
+	<meta name="msapplication-TileColor" content="#1b112b" />
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+	<meta name="theme-color" content="#1b112b" />
 
 	<!-- TODO: RSS business -->
 	<!-- {% feed_meta %} -->
@@ -52,12 +67,16 @@ const titleFormatted = t("title-formatted", {
 	<link rel="canonical" href={Astro.url} />
 
 	{
-	// This is the same as `astro-i18next`'s `HeadHrefLangs` component,
-	// but I chose to homebrew this since that one uses a deprecated feature.
-	// They work exactly the same.
-	supportedLanguages.map(supportedLanguage => (
-	<link rel="alternate" hreflang={supportedLanguage} href={localizeUrl(currentUrl, supportedLanguage)} />
-	))
+		// This is the same as `astro-i18next`'s `HeadHrefLangs` component,
+		// but I chose to homebrew this since that one uses a deprecated feature.
+		// They work exactly the same.
+		supportedLanguages.map((supportedLanguage) => (
+			<link
+				rel="alternate"
+				hreflang={supportedLanguage}
+				href={localizeUrl(currentUrl, supportedLanguage)}
+			/>
+		))
 	}
 
 	<meta name="author" content={site.social.name} />
@@ -67,8 +86,11 @@ const titleFormatted = t("title-formatted", {
 	<meta name="twitter:creator" content={`@${site.twitter.handle.username}`} />
 	<meta name="twitter:site" content={`@${site.twitter.handle.username}`} />
 
-	{ date?.isValid &&
-	<meta property="article:published_time" content={date.toISO()} /> }
+	{
+		date?.isValid && (
+			<meta property="article:published_time" content={date.toISO()} />
+		)
+	}
 
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={site.logo} />
@@ -116,10 +138,16 @@ const titleFormatted = t("title-formatted", {
     </script> -->
 
 	<script src="/src/script.ts"></script>
-	<script src="https://kit.fontawesome.com/b1b70f724e.js" crossorigin="anonymous"></script>
+	<script
+		src="https://kit.fontawesome.com/b1b70f724e.js"
+		crossorigin="anonymous"
+	></script>
 	<noscript>
-		<link href="/assets/fontawesome/css/all.min.css" rel="stylesheet">
+		<link href="/assets/fontawesome/css/all.min.css" rel="stylesheet" />
 	</noscript>
-	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-	<link href="/assets/prism-material-dark.css" rel="stylesheet">
+	<script
+		src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+		crossorigin="anonymous"
+	></script>
+	<link href="/assets/prism-material-dark.css" rel="stylesheet" />
 </head>

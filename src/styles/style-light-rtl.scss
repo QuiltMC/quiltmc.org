@@ -1,7 +1,7 @@
-@import "common/rtl";
-@import "themes/light/base";
-@import "murphy";
+@import "./common/rtl.sass";
+@import "./themes/light/base.scss";
+@import "./murphy.scss";
 
-@import url('https://fonts.bunny.net/css?family=IBM+Plex+Mono:400&display=swap');
-@import url('https://fonts.bunny.net/css?family=Poppins:500,700&display=swap');
-@import url('https://fonts.bunny.net/css?family=IBM+Plex+Mono:400&display=swap');
+@import url("https://fonts.bunny.net/css?family=IBM+Plex+Mono:400&display=swap");
+@import url("https://fonts.bunny.net/css?family=Poppins:500,700&display=swap");
+@import url("https://fonts.bunny.net/css?family=IBM+Plex+Mono:400&display=swap");

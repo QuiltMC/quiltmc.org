@@ -1,5 +1,5 @@
-@import "./style-light-rtl";
+@import "./style-light-rtl.scss";
 
 @media (prefers-color-scheme: dark) {
-    @import "./style-dark-rtl";
+	@import "./style-dark-rtl.scss";
 }
