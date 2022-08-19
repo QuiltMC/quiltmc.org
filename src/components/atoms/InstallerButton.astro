@@ -7,11 +7,12 @@ export interface Props {
 	logo: string,
 	titleKey: string,
 	altKey: string,
+	isAwaiting?: boolean,
 }
-const { href, logo, titleKey, altKey } = Astro.props as Props;
+const { href, logo, titleKey, altKey, isAwaiting = false } = Astro.props as Props;
 ---
 
-<a class="notification is-dark is-installer-button" href={localizePath(href)}>
+<a class:list={["notification", "is-installer-button", isAwaiting ? "" : "is-dark"]} href={localizePath(href)}>
 	<div>
 		<p class="subtitle has-text-centered">{t(titleKey)}</p>
 
