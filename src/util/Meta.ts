@@ -5,7 +5,7 @@ const META_GAME_VSNS = META_URL_BASE + "versions/game";
 const META_LOADER = META_URL_BASE + "versions/loader/";
 const META_YARN = META_URL_BASE + "versions/yarn/";
 
-export async function load_game_versions(): Promise<GameVersion[]> {
+export async function loadGameVersions(): Promise<GameVersion[]> {
 	const response = await fetch(META_GAME_VSNS);
 	const data = await response.json();
 
@@ -22,52 +22,38 @@ export async function load_game_versions(): Promise<GameVersion[]> {
 export class GameVersion {
 	readonly name: string;
 	readonly stable: boolean;
-	versionData: VersionData = null;
-	loaderVsns: LoaderVersion[];
-	vsnList: GameVersion[];
+	versionData?: VersionData;
+	loaderVersions?: LoaderVersion[];
+	versionList: GameVersion[];
 
-	constructor(name: string, stable: boolean, vlist: GameVersion[]) {
+	constructor(name: string, stable: boolean, versionList: GameVersion[]) {
 		this.name = name;
 		this.stable = stable;
-		this.vsnList = vlist;
+		this.versionList = versionList;
 	}
 
 	// This does lazy loading of the data for this game version. Will load once
 	// from the meta server and then cache for subsequent calls.
-	async get_data(needYarn = false): Promise<VersionData> {
-		if (this.versionData != null) {
-			return this.versionData;
-		} else {
-			await this.load_data(needYarn);
-
-			return this.versionData;
+	async getData(needYarn = false): Promise<VersionData> {
+		if (!this.versionData) {
+			this.versionData = await this.loadData(needYarn);
 		}
+		return this.versionData;
 	}
 
 	// Lazy loading of loader versions compatible with this game version.
-	async get_loader_versions(): Promise<LoaderVersion[]> {
-		if (this.loaderVsns != null) {
-			return this.loaderVsns;
+	async getLoaderVersions(): Promise<LoaderVersion[]> {
+		if (!this.loaderVersions) {
+			const result = await fetch(META_LOADER + this.name);
+			const loaders: { loader: LoaderVersion }[] = await result.json();
+	
+			this.loaderVersions = loaders.map(loader => loader.loader);
 		}
-
-		const result = await fetch(META_LOADER + this.name);
-		const loaders = await result.json();
-
-		const list = [];
-
-		for (let data of loaders) {
-			data = data.loader;
-
-			list.push(new LoaderVersion(data.version, data.build, data.maven));
-		}
-
-		this.loaderVsns = list;
-
-		return this.loaderVsns;
+		return this.loaderVersions;
 	}
 
 	// Does the actual loading of data from the server.
-	async load_data(needYarn = false): Promise<void> {
+	async loadData(needYarn = false): Promise<VersionData> {
 		let yarn;
 
 		if (needYarn) {
@@ -88,12 +74,12 @@ export class GameVersion {
 			yarn = { version: "No yarn for this version." };
 		}
 
-		const loaderResult = await this.get_loader_versions();
+		const loaderResult = await this.getLoaderVersions();
 		const loader = loaderResult[0];
 
 		let mavenStr = "net.fabricmc:fabric:";
 
-		for (const vi of this.vsnList) {
+		for (const vi of this.versionList) {
 			if (vi.name === "1.14") {
 				mavenStr = "net.fabricmc.fabric-api:fabric-api:";
 				break;
@@ -102,37 +88,33 @@ export class GameVersion {
 			}
 		}
 
-		this.versionData = {
-			minecraft_version: `${this.name}`,
-			yarn_version: yarn.version,
-			yarn_version_urlenc: encodeURIComponent(yarn.version),
-			loader_version: loader.version,
-			loader_version_urlenc: encodeURIComponent(loader.version),
+		return {
+			minecraftVersion: this.name,
+			yarnVersion: yarn.version,
+			yarnVersionUrlenc: encodeURIComponent(yarn.version),
+			loaderVersion: loader.version,
+			loaderVersionUrlenc: encodeURIComponent(loader.version),
 
 			// TODO: Load API version
-			api_version: `&ltapi version todo&gt;`,
+			apiVersion: `&ltapi version todo&gt;`,
 			maven: mavenStr,
-		} as VersionData;
+		};
 	}
 }
 
-export class LoaderVersion {
+export interface LoaderVersion {
 	readonly version: string;
 	readonly build: string;
 	readonly maven: string;
-
-	constructor(version: string, build: string, maven: string) {
-		this.version = version;
-		this.build = build;
-		this.maven = maven;
-	}
 }
 
 // JSON object that can be passed directly to the snippet controller to replace parts of the page.
 export type VersionData = {
-	minecraft_version: string;
-	yarn_version: string;
-	loader_version: string;
-	api_version: string;
+	minecraftVersion: string;
+	yarnVersion: string;
+	yarnVersionUrlenc: string;
+	loaderVersion: string;
+	loaderVersionUrlenc: string,
+	apiVersion: string;
 	maven: string;
 };

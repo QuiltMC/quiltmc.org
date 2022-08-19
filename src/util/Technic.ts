@@ -1,4 +1,4 @@
-import { load_game_versions, GameVersion } from "./meta";
+import { loadGameVersions, GameVersion } from "./Meta";
 
 const loaderTarget = document.getElementById(
 	"loader-select"
@@ -13,7 +13,7 @@ const buttonTarget = document.getElementById(
 let gameVersions: GameVersion[] = [];
 
 async function populateMinecraftVersions() {
-	const vsns = await load_game_versions();
+	const vsns = await loadGameVersions();
 	gameVersions = vsns;
 	const select = minecraftTarget;
 	select.innerHTML = "";
@@ -46,7 +46,7 @@ async function populateLoaderVersions() {
 	const mcSel = minecraftTarget;
 	const mcVer = gameVersions[mcSel.selectedIndex];
 
-	const vsns = await mcVer.get_loader_versions();
+	const vsns = await mcVer.getLoaderVersions();
 
 	const select = loaderTarget;
 	select.innerHTML = "";
