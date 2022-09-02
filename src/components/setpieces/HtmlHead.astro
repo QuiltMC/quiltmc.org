@@ -4,8 +4,7 @@ import i18next, { t } from "i18next";
 import { localizeUrl } from "astro-i18next";
 
 // TODO: find out a way to do RTL styles.
-import lightTheme from "/src/styles/style-light.scss?url";
-import darkTheme from "/src/styles/style-dark.scss?url";
+import "/src/styles/style.scss";
 
 import { DateTime } from "luxon";
 
@@ -31,9 +30,6 @@ const titleFormatted = t("title-formatted", {
 ---
 
 <head>
-	<link rel="stylesheet" href={lightTheme} />
-	<link rel="stylesheet" href={darkTheme} />
-
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
