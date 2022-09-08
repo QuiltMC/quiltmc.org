@@ -1,6 +1,7 @@
 ---
 import site from "@data/Site";
 import i18next, { t } from "i18next";
+import rtlSettings from "@data/RtlSettings";
 import { localizeUrl } from "astro-i18next";
 
 import { DateTime } from "luxon";
@@ -130,7 +131,13 @@ const titleFormatted = t("title-formatted", {
         }
     </script> -->
 
-	<link rel="stylesheet" href="/assets/css/style.min.css" />
+	{
+		rtlSettings().textDirection == "ltr" ? (
+			<link rel="stylesheet" href="/assets/css/style.min.css" />
+		) : (
+			<link rel="stylesheet" href="/assets/css/style-rtl.min.css" />
+		)
+	}
 
 	<script src="/src/script.ts"></script>
 	<script
