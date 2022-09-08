@@ -40,7 +40,7 @@ you've downloaded into the mod list, and PolyMC will ensure it's installed prope
 Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the
 [troubleshooting page](/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!
 
-# Updating Mods **version 1.4.0** or later
+# Updating Mods (version 1.4.0 or later)
 
 1. Right-click on the instance you'd like to install mods to and select **Edit Instance**, or click on it once and select **Edit Instance** from the menu on the right of the window
 2. Select **Mods** from the list on the left, select the mods you would like to update (leave blank for all) then click on the **Check for updates** button in the menu on the right side of the window.
