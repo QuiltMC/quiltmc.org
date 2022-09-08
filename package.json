@@ -1,6 +1,6 @@
 {
 	"name": "quiltmc-website",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Website for the Quilt modloader",
 	"packageManager": "pnpm@7.9.0",
 	"scripts": {
@@ -15,7 +15,7 @@
 		"@astrojs/sitemap": "^1.0.0",
 		"@creativebulma/bulma-divider": "^1.1.0",
 		"@creativebulma/bulma-tooltip": "^1.2.0",
-		"@quiltmc/quilt-bulma": "^0.0.2",
+		"@quiltmc/quilt-bulma": "^0.0.3",
 		"@types/luxon": "^3.0.1",
 		"astro": "1.1.7",
 		"astro-html-minifier": "^0.2.0",

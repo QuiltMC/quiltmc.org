@@ -6,7 +6,7 @@ specifiers:
   '@astrojs/sitemap': ^1.0.0
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
-  '@quiltmc/quilt-bulma': ^0.0.2
+  '@quiltmc/quilt-bulma': ^0.0.3
   '@types/luxon': ^3.0.1
   astro: 1.1.7
   astro-html-minifier: ^0.2.0
@@ -31,7 +31,7 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
-  '@quiltmc/quilt-bulma': 0.0.2
+  '@quiltmc/quilt-bulma': 0.0.3
   '@types/luxon': 3.0.1
   astro: 1.1.7_sass@1.54.9
   astro-html-minifier: 0.2.0
@@ -616,8 +616,8 @@ packages:
       tsm: 2.2.2
     dev: true
 
-  /@quiltmc/quilt-bulma/0.0.2:
-    resolution: {integrity: sha512-dGiylWd2powLrUuzIxxIaJrArlRJsU+R/x61ELMEeox+ap50zqwL4lEk2cvXA4eiA6DK2IBEFltFQH3Nd5Urxw==, tarball: download/@quiltmc/quilt-bulma/0.0.2/576b9d6643b8de353b8318fe85574d47caef557a}
+  /@quiltmc/quilt-bulma/0.0.3:
+    resolution: {integrity: sha512-tkSZVPq5Za0oiQQOh9CINaqwuGIbITUK2nOQkVHtoNj49TW1SPtK8aW/IxvbJGntC2oz/WvSVFwHf1TD8+3K6g==, tarball: download/@quiltmc/quilt-bulma/0.0.3/666595f441fc1a0d046d1c8145515d09366ecf3e}
     dev: true
 
   /@rollup/pluginutils/4.2.1:
