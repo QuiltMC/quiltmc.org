@@ -11,14 +11,14 @@
 	},
 	"devDependencies": {
 		"@astrojs/markdown-component": "^1.0.1",
-		"@astrojs/mdx": "^0.11.0",
+		"@astrojs/mdx": "^0.11.1",
 		"@astrojs/sitemap": "^1.0.0",
 		"@creativebulma/bulma-divider": "^1.1.0",
 		"@creativebulma/bulma-tooltip": "^1.2.0",
 		"@types/luxon": "^3.0.1",
-		"astro": "1.1.3",
+		"astro": "1.1.7",
 		"astro-html-minifier": "^0.2.0",
-		"astro-i18next": "1.0.0-beta.3",
+		"astro-i18next": "1.0.0-beta.9",
 		"bulma": "^0.9.4",
 		"bulma-timeline": "^3.0.5",
 		"execa": "^6.1.0",
@@ -30,7 +30,7 @@
 		"minhtml": "^1.1.1",
 		"remark-excerpt": "1.0.0-beta.1",
 		"rollup": "^2.79.0",
-		"sass": "^1.54.8",
+		"sass": "^1.54.9",
 		"typescript": "^4.8.2"
 	}
 }
