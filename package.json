@@ -27,7 +27,6 @@
 		"i18next": "^21.9.1",
 		"i18next-fluent": "^2.0.0",
 		"luxon": "^3.0.3",
-		"minhtml": "^1.1.1",
 		"quilt-bulma": "^0.0.4",
 		"remark-excerpt": "1.0.0-beta.1",
 		"rollup": "^2.79.0",
