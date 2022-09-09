@@ -6,7 +6,6 @@ specifiers:
   '@astrojs/sitemap': ^1.0.0
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
-  '@quiltmc/quilt-bulma': ^0.0.3
   '@types/luxon': ^3.0.1
   astro: 1.1.7
   astro-html-minifier: ^0.2.0
@@ -20,10 +19,11 @@ specifiers:
   i18next-fluent: ^2.0.0
   luxon: ^3.0.3
   minhtml: ^1.1.1
+  quilt-bulma: ^0.0.4
   remark-excerpt: 1.0.0-beta.1
   rollup: ^2.79.0
   sass: ^1.54.9
-  typescript: ^4.8.2
+  typescript: ^4.8.3
 
 devDependencies:
   '@astrojs/markdown-component': 1.0.1
@@ -31,7 +31,6 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
-  '@quiltmc/quilt-bulma': 0.0.3
   '@types/luxon': 3.0.1
   astro: 1.1.7_sass@1.54.9
   astro-html-minifier: 0.2.0
@@ -45,10 +44,11 @@ devDependencies:
   i18next-fluent: 2.0.0
   luxon: 3.0.3
   minhtml: 1.1.1
+  quilt-bulma: 0.0.4
   remark-excerpt: 1.0.0-beta.1
   rollup: 2.79.0
   sass: 1.54.9
-  typescript: 4.8.2
+  typescript: 4.8.3
 
 packages:
 
@@ -109,7 +109,7 @@ packages:
       unified: 10.1.2
       unist-util-map: 3.1.1
       unist-util-visit: 4.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -132,7 +132,7 @@ packages:
       remark-smartypants: 2.0.0
       shiki: 0.11.1
       unist-util-visit: 4.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -535,7 +535,7 @@ packages:
       unist-util-position-from-estree: 1.1.1
       unist-util-stringify-position: 3.0.2
       unist-util-visit: 4.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -549,7 +549,7 @@ packages:
       '@rollup/pluginutils': 4.2.1
       rollup: 2.79.0
       source-map: 0.7.4
-      vfile: 5.3.4
+      vfile: 5.3.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -614,10 +614,6 @@ packages:
     dependencies:
       '@proload/core': 0.3.3
       tsm: 2.2.2
-    dev: true
-
-  /@quiltmc/quilt-bulma/0.0.3:
-    resolution: {integrity: sha512-tkSZVPq5Za0oiQQOh9CINaqwuGIbITUK2nOQkVHtoNj49TW1SPtK8aW/IxvbJGntC2oz/WvSVFwHf1TD8+3K6g==, tarball: download/@quiltmc/quilt-bulma/0.0.3/666595f441fc1a0d046d1c8145515d09366ecf3e}
     dev: true
 
   /@rollup/pluginutils/4.2.1:
@@ -855,7 +851,7 @@ packages:
       es-module-lexer: 0.10.5
       esbuild: 0.14.54
       execa: 6.1.0
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       github-slugger: 1.4.0
       gray-matter: 4.0.3
       html-entities: 2.3.3
@@ -883,7 +879,7 @@ packages:
       supports-esm: 1.0.0
       tsconfig-resolver: 3.0.1
       unist-util-visit: 4.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
       vite: 3.0.9_sass@1.54.9
       yargs-parser: 21.1.1
       zod: 3.19.0
@@ -944,7 +940,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001393
-      electron-to-chromium: 1.4.244
+      electron-to-chromium: 1.4.246
       node-releases: 2.0.6
       update-browserslist-db: 1.0.7_browserslist@4.21.3
     dev: true
@@ -1212,8 +1208,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.244:
-    resolution: {integrity: sha512-E21saXLt2eTDaTxgUtiJtBUqanF9A32wZasAwDZ8gvrqXoxrBrbwtDCx7c/PQTLp81wj4X0OLDeoGQg7eMo3+w==}
+  /electron-to-chromium/1.4.246:
+    resolution: {integrity: sha512-/wFCHUE+Hocqr/LlVGsuKLIw4P2lBWwFIDcNMDpJGzyIysQV4aycpoOitAs32FT94EHKnNqDR/CVZJFbXEufJA==}
     dev: true
 
   /emmet/2.3.6:
@@ -1536,8 +1532,8 @@ packages:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
     dev: true
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
+  /fast-glob/3.2.12:
+    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1662,7 +1658,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -1729,7 +1725,7 @@ packages:
       '@types/unist': 2.0.6
       hastscript: 7.0.2
       property-information: 6.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
       vfile-location: 4.0.1
       web-namespaces: 2.0.1
     dev: true
@@ -1758,7 +1754,7 @@ packages:
       parse5: 6.0.1
       unist-util-position: 4.0.3
       unist-util-visit: 4.1.1
-      vfile: 5.3.4
+      vfile: 5.3.5
       web-namespaces: 2.0.1
       zwitch: 2.0.2
     dev: true
@@ -3011,6 +3007,10 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /quilt-bulma/0.0.4:
+    resolution: {integrity: sha512-AltxA0vFe+AF2VRUvHaPw9sJv2p5CNtjtG7bPI+pBrb2NHYu8bDCM1pv3+LNNcMPyqQFbwNOoseiKGysShRU2g==}
+    dev: true
+
   /readable-stream/3.6.0:
     resolution: {integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==}
     engines: {node: '>= 6'}
@@ -3562,8 +3562,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript/4.8.2:
-    resolution: {integrity: sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==}
+  /typescript/4.8.3:
+    resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
@@ -3581,7 +3581,7 @@ packages:
       is-buffer: 2.0.5
       is-plain-obj: 4.1.0
       trough: 2.1.0
-      vfile: 5.3.4
+      vfile: 5.3.5
     dev: true
 
   /unist-builder/3.0.0:
@@ -3700,7 +3700,7 @@ packages:
     resolution: {integrity: sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==}
     dependencies:
       '@types/unist': 2.0.6
-      vfile: 5.3.4
+      vfile: 5.3.5
     dev: true
 
   /vfile-message/3.1.2:
@@ -3710,8 +3710,8 @@ packages:
       unist-util-stringify-position: 3.0.2
     dev: true
 
-  /vfile/5.3.4:
-    resolution: {integrity: sha512-KI+7cnst03KbEyN1+JE504zF5bJBZa+J+CrevLeyIMq0aPU681I2rQ5p4PlnQ6exFtWiUrg26QUdFMnAKR6PIw==}
+  /vfile/5.3.5:
+    resolution: {integrity: sha512-U1ho2ga33eZ8y8pkbQLH54uKqGhFJ6GYIHnnG5AhRpAh3OWjkrRHKa/KogbmQn8We+c0KVV3rTOgR9V/WowbXQ==}
     dependencies:
       '@types/unist': 2.0.6
       is-buffer: 2.0.5
