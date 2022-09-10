@@ -20,18 +20,3 @@ export default (): RtlSettings => {
 		right: rtl ? "left" : "right",
 	};
 };
-
-// {% capture text-direction %}{% t settings.text-direction %}{% endcapture %}
-// {% capture title-separator %}{% t settings.title-separator %}{% endcapture %}
-// {% capture format-date %}{% t settings.formats.date %}{% endcapture %}
-
-// {% capture translated-description %}{% t page.description %}{% endcapture %}
-// {% assign description-count = translated-description | size %}
-
-// {% if description-count > 0 %}
-//     {% assign description = translated-description %}
-// {% elsif page.description %}
-//     {% assign description = page.description %}
-// {% else %}
-//     {% assign description = site.description %}
-// {% endif %}
