@@ -22,7 +22,7 @@ const isSubpage = subpage && pageUrl.startsWith(href);
 const isActive = isSubpage || href === pageUrl ? "is-active" : ""
 ---
 
-<a href={href} target={target} class={`navbar-item ${isActive} ${klass}`}>
+<a href={href} target={target} class:list={["navbar-item", isActive, klass]}>
 	{icon && <span class="icon"><i class={`fa-xl ${icon}`}></i></span>}
 	<span>
 		<slot />

@@ -3,6 +3,7 @@ import i18next, { t } from "i18next";
 import Base from "./Base.astro"
 import { localizePath } from "@util/Util";
 import PageTitle from "@atoms/PageTitle.astro";
+import Menu from "@atoms/Menu.astro";
 
 export interface Props {
 	title: string,
@@ -29,7 +30,7 @@ const pages = (await Astro.glob("/src/pages/**/staff/**"))
 
 const pageLayer = getLayer(pageUrl);
 
-var documentPages = [];
+let documentPages: string[] = [];
 // there should be no documents under the main page.
 if (pageUrl != staffUrl) {
 	// if we're in a team page or a document page, the document pages are the pages that:
@@ -40,9 +41,9 @@ if (pageUrl != staffUrl) {
 	// main staff page - no documents
 	// team page - all pages under it, excluding itself
 	// document pages & below - all pages, including itself.
-	documentPages = pages.filter(p =>
-		(p.url).includes(pageUrl) &&
-		(pageLayer >= 2 || p.url !== pageUrl)
+	documentPages = pages.map(p => p.url).filter(url =>
+		url.includes(pageUrl) &&
+		(pageLayer >= 2 || url !== pageUrl)
 	);
 }
 ---
@@ -62,50 +63,32 @@ if (pageUrl != staffUrl) {
 						<br />
 					</div>
 
-					<div class="box is-hidden-mobile is-sticky">
-						<aside class="menu">
-							<p class="menu-label">{t("sidebar-resources")}</p>
-
-							<ul class="menu-list">
-								<a href={localizePath("/staff")} class={localizePath("/staff")==pageUrl ? "is-active" : "" }>
-									Staff Resources
-								</a>
-							</ul>
-							<p class="menu-label">{t("sidebar-teams")}</p>
-
-							<ul class="menu-list">
-								{pages.map(p => {
-								const layer = p.url.slice(staffUrl.length).split("/").length - 1;
-								const isSubpage = pageUrl.startsWith(p.url);
-								const isCurrent = pageUrl == p.url;
-
+					<Menu value={{
+						"sidebar-resources": {
+							pages: [
+								`/${i18next.language}/staff`
+							]
+						},
+						"sidebar-teams": {
+							pages: pages.map(p => p.url).filter(url => {
 								// Do not render if this page is not at the first layer (team level).
-								if (layer !== 1) return;
+								const layer = url.slice(staffUrl.length).split("/").length - 1;
+								return layer === 1;
+							}),
+							activeCriteria(url: string) {
+								const isSubpage = pageUrl.startsWith(url);
+								const isCurrent = pageUrl == url;
 
 								// If the current page is the first layer (team level), then highlight if we are at the corresponding
 								// If it is deeper than that, highlight every page that is our "superpage".
 								// For example, if we're in Moderation Team > Moderation, we should highlight Moderation Team too.
-								const isActive = pageLayer === 1 ? isCurrent : isSubpage;
-
-								return <li>
-									<a href={ p.url } class={isActive ? "is-active" : "" }>{p.frontmatter.title}</a>
-								</li>;
-								})}
-
-								{ documentPages.length > 0 && (
-
-								<p class="menu-label">{t("sidebar-pages")}</p>
-
-								<ul class="menu-list">
-									{documentPages.map(p => <li>
-										<a href={ p.url } class={pageUrl===(p.url ) ? "is-active" : "" }>{p.frontmatter.title}</a>
-									</li>)}
-								</ul>
-
-								)}
-							</ul>
-						</aside>
-					</div>
+								return pageLayer === 1 ? isCurrent : isSubpage;
+							},
+							subPages: { 
+								"sidebar-pages": { pages: documentPages }
+							},
+						}
+					}}/>
 				</div>
 
 				<div class="content column">
