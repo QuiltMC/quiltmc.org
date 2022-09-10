@@ -9,7 +9,7 @@ specifiers:
   '@types/luxon': ^3.0.1
   astro: 1.2.1
   astro-html-minifier: ^0.2.0
-  astro-i18next: 1.0.0-beta.9
+  astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
   execa: ^6.1.0
@@ -33,7 +33,7 @@ devDependencies:
   '@types/luxon': 3.0.1
   astro: 1.2.1_sass@1.54.9
   astro-html-minifier: 0.2.0
-  astro-i18next: 1.0.0-beta.9_astro@1.2.1
+  astro-i18next: 1.0.0-beta.3_astro@1.2.1
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   execa: 6.1.0
@@ -845,18 +845,15 @@ packages:
       globby: 13.1.2
     dev: true
 
-  /astro-i18next/1.0.0-beta.9_astro@1.2.1:
-    resolution: {integrity: sha512-8OfIzMLlvLv8n2HnAT9FoRicdAaZONzrNVn1rFZLjOxOoOabGn/agPYzcpKy17smrkcOdP1PohWCcg1x4XkUjQ==}
-    hasBin: true
+  /astro-i18next/1.0.0-beta.3_astro@1.2.1:
+    resolution: {integrity: sha512-Vw2nwcj/aM0F7BcuAQLPrEf6dKh51BNWvQf0SeI54vx/HPweF9gwEYhFlERajIVMyStpRpfGslZiwRrei6QX5g==}
     peerDependencies:
-      astro: ^1.0.0
+      astro: ^1.0.0-beta.1
     dependencies:
-      '@proload/core': 0.3.3
-      '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
       astro: 1.2.1_sass@1.54.9
+      country-code-to-flag-emoji: 1.1.0
       i18next: 21.9.1
       iso-639-1: 2.1.15
-      locale-emoji: 0.3.0
     dev: true
 
   /astro/1.2.1_sass@1.54.9:
@@ -1128,6 +1125,10 @@ packages:
     resolution: {integrity: sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==}
     dependencies:
       safe-buffer: 5.1.2
+    dev: true
+
+  /country-code-to-flag-emoji/1.1.0:
+    resolution: {integrity: sha512-S+UzvEKOrfDUwhN8YyMDgiQyYCVUVNBVtt4NUFwDz1nQ8mWo2cqA6Rkvb9uA90EsHS+hGIolpLGVrYnC2IQVKA==}
     dev: true
 
   /cross-spawn/7.0.3:
@@ -2050,10 +2051,6 @@ packages:
       js-yaml: 3.14.1
       pify: 4.0.1
       strip-bom: 3.0.0
-    dev: true
-
-  /locale-emoji/0.3.0:
-    resolution: {integrity: sha512-JGm8+naU49CBDnH1jksS3LecPdfWQLxFgkLN6ZhYONKa850pJ0Xt8DPGJnYK0ZuJI8jTuiDDPCDtSL3nyacXwg==}
     dev: true
 
   /locate-path/5.0.0:
