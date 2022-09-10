@@ -1,4 +1,6 @@
 import i18next, { t } from "i18next";
+import { DateTime } from "luxon";
+import { execa } from "execa";
 
 // thanks JS, way to go
 export function sortBy<T, K>(arr: T[], by: (elem: T) => K): T[] {
@@ -29,4 +31,11 @@ export function localizePath(path?: string, locale?: string | null): string {
 
 export function localizeList(list: string[]): string {
 	return list.reduce((prev, next) => t("serial-comma", { prev, next }));
+}
+
+export async function getModifyDateString(file: string): Promise<string> {
+	const output = await execa("git", ["log", "-1", '--pretty="%ct"', file]);
+	return DateTime.fromSeconds(parseInt(output.stdout.replaceAll('"', "")))
+		.setLocale(i18next.language)
+		.toLocaleString(DateTime.DATE_FULL);
 }

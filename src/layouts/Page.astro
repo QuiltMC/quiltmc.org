@@ -1,4 +1,5 @@
 ---
+import { getModifyDateString } from "@util/Util";
 import { execa } from "execa";
 import i18next, { t } from "i18next";
 import { DateTime } from "luxon";
@@ -12,9 +13,6 @@ const pages = (await Astro.glob("/src/**/pages/**/*"))
 	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 const header = t("sidebar-pages");
-
-const output = await execa("git", ["log", "-1", '--pretty="%ct"', Astro.props.frontmatter.file]);
-const modifyDate = DateTime.fromSeconds(+output.stdout.replaceAll('"', "")).setLocale(i18next.language).toLocaleString(DateTime.DATE_FULL);
 ---
 
 <Base content={Astro.props.content}>
@@ -57,15 +55,13 @@ const modifyDate = DateTime.fromSeconds(+output.stdout.replaceAll('"', "")).setL
 							</h1>
 
 							<p class="subtitle is-6">
-								Edited: {modifyDate}
+								Edited: {getModifyDateString(Astro.props.frontmatter.file)}
 							</p>
 
 						</div>
 					</div>
 
 					<slot />
-					<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
-								class='fas fa-sm fa-link-simple'></i>" %} -->
 				</main>
 			</div>
 		</section>

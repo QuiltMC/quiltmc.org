@@ -1,7 +1,7 @@
 ---
 import i18next, { t } from "i18next";
 import Base from "./Base.astro"
-import { localizeList, localizePath } from "@util/Util";
+import { getModifyDateString, localizeList, localizePath } from "@util/Util";
 
 export interface Props {
 	title: string,
@@ -122,15 +122,13 @@ if (pageUrl != staffUrl) {
 							</p>
 							}
 							<p class="subtitle is-6">
-								<!-- Edited: {% edit_date format-date %} -->
+								Edited: {getModifyDateString(Astro.props.frontmatter.file)}
 							</p>
 
 						</div>
 					</div>
 
 					<slot />
-					<!-- {% include third-party/anchor_headings.html html=content anchorClass="is-anchor ml-2" anchorBody="<i
-							class='fas fa-sm fa-link-simple'></i>" %} -->
 				</div>
 			</div>
 		</section>
