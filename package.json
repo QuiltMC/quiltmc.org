@@ -4,10 +4,10 @@
 	"description": "Website for the Quilt modloader",
 	"packageManager": "pnpm@7.9.0",
 	"scripts": {
-		"dev": "astro dev",
-		"start": "astro start",
-		"build": "astro build",
-		"preview": "astro preview"
+		"dev": "node csscopy.mjs && astro dev",
+		"start": "node csscopy.mjs && astro start",
+		"build": "node csscopy.mjs && astro build",
+		"preview": "node csscopy.mjs && astro preview"
 	},
 	"devDependencies": {
 		"@astrojs/markdown-component": "^1.0.1",
