@@ -1,4 +1,5 @@
 ---
+import PageTitle from "@atoms/PageTitle.astro";
 import { getModifyDateString } from "@util/Util";
 import { execa } from "execa";
 import i18next, { t } from "i18next";
@@ -48,19 +49,7 @@ const header = t("sidebar-pages");
 				</div>
 
 				<main class="content column">
-					<div class="media mb-5">
-						<div class="media-content">
-							<h1 class="title">
-								{title}
-							</h1>
-
-							<p class="subtitle is-6">
-								Edited: {getModifyDateString(Astro.props.frontmatter.file)}
-							</p>
-
-						</div>
-					</div>
-
+					<PageTitle title={title} file={Astro.props.frontmatter.file} />
 					<slot />
 				</main>
 			</div>
