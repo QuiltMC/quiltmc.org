@@ -1,29 +1,35 @@
 ---
 export interface Props {
-	href: string,
-	klass?: string,
-	icon?: string,
+	href: string;
+	klass?: string;
+	icon?: string;
 	// all values accepted by <a>'s `target`
-	target?: '_self' | '_blank' | '_parent' | '_top',
-	subpage?: boolean,
+	target?: "_self" | "_blank" | "_parent" | "_top";
+	subpage?: boolean;
 }
 
 const {
 	href,
 	klass = "",
 	icon,
-	target = '_self',
-	subpage = false
+	target = "_self",
+	subpage = false,
 } = Astro.props as Props;
 
-const pageUrl = Astro.url.pathname
+const pageUrl = Astro.url.pathname;
 const isSubpage = subpage && pageUrl.startsWith(href);
 
-const isActive = isSubpage || href === pageUrl ? "is-active" : ""
+const isActive = isSubpage || href === pageUrl ? "is-active" : "";
 ---
 
 <a href={href} target={target} class:list={["navbar-item", isActive, klass]}>
-	{icon && <span class="icon"><i class={`fa-xl ${icon}`}></i></span>}
+	{
+		icon && (
+			<span class="icon">
+				<i class={`fa-xl ${icon}`} />
+			</span>
+		)
+	}
 	<span>
 		<slot />
 	</span>

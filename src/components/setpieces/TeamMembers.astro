@@ -2,22 +2,20 @@
 import { AstroInstance } from "astro";
 
 export interface Props {
-    list: string[];
+	list: string[];
 }
 
 const { list } = Astro.props as Props;
 
-const arr = (await Astro.glob('/src/data/team/*.astro'))
-    .map(member => {
-        const memberId = member.file.match(/\/(\w+)\.astro$/)[1];
-        return [memberId, member];
-    });
+const arr = (await Astro.glob("/src/data/team/*.astro")).map((member) => {
+	const memberId = member.file.match(/\/(\w+)\.astro$/)[1];
+	return [memberId, member];
+});
 //@ts-ignore
 const allPages: Map<string, AstroInstance> = new Map(arr);
 
 // ensure that pages are displayed in the order specified.
-const pages = list.map(member => allPages.get(member));
+const pages = list.map((member) => allPages.get(member));
 ---
 
-{pages.map(page =>
-<page.default />)}
+{pages.map((page) => <page.default />)}

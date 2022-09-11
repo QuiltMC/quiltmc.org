@@ -5,7 +5,7 @@ import Button from "@atoms/Button.astro";
 import HomeMessage from "@parts/home/HomeMessage.astro";
 import LatestPosts from "@parts/home/LatestPosts.astro";
 
-import { localizePath } from "@util/Util"
+import { localizePath } from "@util/Util";
 import site from "@data/Site";
 ---
 
@@ -23,17 +23,32 @@ import site from "@data/Site";
 	</div>
 	<div class="columns mb-5 mt-2">
 		<div class="column">
-			<HomeMessage style="primary is-fullheight" iconType="primary" icon="heart" tKey="caring">
+			<HomeMessage
+				style="primary is-fullheight"
+				iconType="primary"
+				icon="heart"
+				tKey="caring"
+			>
 				<slot name="caring" />
 			</HomeMessage>
 		</div>
 		<div class="column">
-			<HomeMessage style="link has-text-left is-fullheight" iconType="link" icon="cubes" tKey="modular">
+			<HomeMessage
+				style="link has-text-left is-fullheight"
+				iconType="link"
+				icon="cubes"
+				tKey="modular"
+			>
 				<slot name="modular" />
 			</HomeMessage>
 		</div>
 		<div class="column">
-			<HomeMessage style="success has-text-left is-fullheight" iconType="success" icon="wrench" tKey="powerful">
+			<HomeMessage
+				style="success has-text-left is-fullheight"
+				iconType="success"
+				icon="wrench"
+				tKey="powerful"
+			>
 				<slot name="powerful" />
 			</HomeMessage>
 		</div>
@@ -42,12 +57,26 @@ import site from "@data/Site";
 	<div class="columns is-centered">
 		<div class="column is-10">
 			<div class="button-grid">
-				<Button href="https://maven.quiltmc.org" target="_blank" type="gradle" icon="fas fa-feather-pointed"
-					textKey="button-maven-repo" />
-				<Button href={localizePath("/mc-patchnotes")} type="info" icon="fas fa-notebook" textKey="button-patch-notes" />
-				<Button href={localizePath("/openings")} type="primary" icon="fas fa-briefcase" textKey="button-openings" />
+				<Button
+					href="https://maven.quiltmc.org"
+					target="_blank"
+					type="gradle"
+					icon="fas fa-feather-pointed"
+					textKey="button-maven-repo"
+				/>
+				<Button
+					href={localizePath("/mc-patchnotes")}
+					type="info"
+					icon="fas fa-notebook"
+					textKey="button-patch-notes"
+				/>
+				<Button
+					href={localizePath("/openings")}
+					type="primary"
+					icon="fas fa-briefcase"
+					textKey="button-openings"
+				/>
 			</div>
-
 		</div>
 	</div>
 
@@ -56,26 +85,73 @@ import site from "@data/Site";
 			<slot name="joinTheCommunity" />
 
 			<div class="button-grid">
-				<Button href={site.discordCommunity} target="_blank" type="discord" icon="fab fa-discord"
-					textKey="button-discord-community" />
-				<Button href={site.forum} target="_blank" type="gradle" icon="fab fa-discourse" textKey="button-forum" />
-				<Button href={site.mastodon.link} target="_blank" type="mastodon" icon="fab fa-mastodon"
-					textKey="button-mastodon" />
-				<Button href={site.twitter.handle.link} target="_blank" type="twitter" icon="fab fa-twitter"
-					textKey="button-twitter" />
-				<Button href={localizePath("/community")} type="primary" icon="fas fa-ellipsis-h" textKey="button-more" />
+				<Button
+					href={site.discordCommunity}
+					target="_blank"
+					type="discord"
+					icon="fab fa-discord"
+					textKey="button-discord-community"
+				/>
+				<Button
+					href={site.forum}
+					target="_blank"
+					type="gradle"
+					icon="fab fa-discourse"
+					textKey="button-forum"
+				/>
+				<Button
+					href={site.mastodon.link}
+					target="_blank"
+					type="mastodon"
+					icon="fab fa-mastodon"
+					textKey="button-mastodon"
+				/>
+				<Button
+					href={site.twitter.handle.link}
+					target="_blank"
+					type="twitter"
+					icon="fab fa-twitter"
+					textKey="button-twitter"
+				/>
+				<Button
+					href={localizePath("/community")}
+					type="primary"
+					icon="fas fa-ellipsis-h"
+					textKey="button-more"
+				/>
 			</div>
 
 			<slot name="getInvolved" />
 
 			<div class="button-grid">
-				<Button href={site.forum} target="_blank" type="gradle" icon="fab fa-discourse" textKey="button-forum" />
-				<Button href={site.github.link} target="_blank" type="github" icon="fab fa-github" textKey="button-github" />
-				<Button href={localizePath("/openings")} type="primary" icon="fas fa-briefcase" textKey="button-openings" />
-				<Button href={site.discordToolchain} target="_blank" type="discord" icon="fab fa-discord"
-					textKey="button-discord-toolchain" />
+				<Button
+					href={site.forum}
+					target="_blank"
+					type="gradle"
+					icon="fab fa-discourse"
+					textKey="button-forum"
+				/>
+				<Button
+					href={site.github.link}
+					target="_blank"
+					type="github"
+					icon="fab fa-github"
+					textKey="button-github"
+				/>
+				<Button
+					href={localizePath("/openings")}
+					type="primary"
+					icon="fas fa-briefcase"
+					textKey="button-openings"
+				/>
+				<Button
+					href={site.discordToolchain}
+					target="_blank"
+					type="discord"
+					icon="fab fa-discord"
+					textKey="button-discord-toolchain"
+				/>
 			</div>
-
 		</div>
 		<div class="column is-5">
 			<slot name="latestPosts" />

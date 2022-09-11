@@ -5,18 +5,18 @@ const { href } = Astro.props;
 
 interface RedirectPath {
 	params: {
-		redirect: URL | string
-	},
+		redirect: URL | string;
+	};
 	props: {
-		href: URL | string
-	}
+		href: URL | string;
+	};
 }
 
 export async function getStaticPaths() {
 	const pages = await Astro.glob("/src/pages/**/*.md*");
 
 	const redirects: RedirectPath[] = [];
-	pages.forEach(p => {
+	pages.forEach((p) => {
 		if (p.frontmatter.redirect_from) {
 			p.frontmatter.redirect_from.forEach((url: string) => {
 				if (url.startsWith("/")) {
@@ -24,11 +24,11 @@ export async function getStaticPaths() {
 				}
 				redirects.push({
 					params: {
-						redirect: url
+						redirect: url,
 					},
 					props: {
-						href: p.url
-					}
+						href: p.url,
+					},
 				});
 			});
 		}

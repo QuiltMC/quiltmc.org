@@ -8,12 +8,12 @@ import i18next from "i18next";
 import rtlSettings from "@data/RtlSettings";
 
 export interface BaseProps extends HeadProps {
-	isPrivate?: boolean,
+	isPrivate?: boolean;
 }
 const content = Astro.props.content as BaseProps;
 
 // extract locale from URL
-const match = (Astro.url.pathname + '/').match(/^\/([\w-]+)\//);
+const match = (Astro.url.pathname + "/").match(/^\/([\w-]+)\//);
 if (match && i18next.languages.includes(match[1])) {
 	i18next.changeLanguage(match[1]);
 } else {
@@ -22,25 +22,24 @@ if (match && i18next.languages.includes(match[1])) {
 ---
 
 <!DOCTYPE html>
-
 <html lang={i18next.language} dir={rtlSettings().textDirection}>
+	<HtmlHead
+		title={content?.title}
+		description={content?.description}
+		date={content?.date}
+	/>
 
-<HtmlHead title={content?.title} description={content?.description} date={content?.date} />
+	<body class="page">
+		<input id="low-contrast" type="checkbox" class="is-hidden" />
+		<input id="language-switcher" type="checkbox" class="is-hidden" />
+		<input id="toggle-navbar" type="checkbox" class="is-hidden" />
+		<input id="toggle-sidebar" type="checkbox" class="is-hidden" />
 
-<body class="page">
-	<input id="low-contrast" type="checkbox" class="is-hidden" />
-	<input id="language-switcher" type="checkbox" class="is-hidden" />
-	<input id="toggle-navbar" type="checkbox" class="is-hidden" />
-	<input id="toggle-sidebar" type="checkbox" class="is-hidden" />
+		{!Astro.props.navless && <NavBar root={Astro.props.root} />}
 
-	{ !Astro.props.navless &&
-	<NavBar root={Astro.props.root} /> }
+		<slot />
 
-	<slot />
-
-	<Footer />
-	<LanguageModal />
-
-</body>
-
+		<Footer />
+		<LanguageModal />
+	</body>
 </html>

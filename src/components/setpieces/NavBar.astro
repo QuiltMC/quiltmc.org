@@ -5,16 +5,18 @@ import NavLink from "@parts/nav/NavLink.astro";
 import { localizePath } from "@util/Util";
 
 export interface Props {
-	style?: string,
-	root?: boolean,
+	style?: string;
+	root?: boolean;
 }
 
-const {
-	style = "is-dark",
-} = Astro.props as Props;
+const { style = "is-dark" } = Astro.props as Props;
 ---
 
-<nav class:list={["navbar", style]} role="navigation" aria-label="main navigation">
+<nav
+	class:list={["navbar", style]}
+	role="navigation"
+	aria-label="main navigation"
+>
 	<div class="navbar-brand">
 		<a class="navbar-item navbar-logo" href={localizePath("")}>
 			<img src="/assets/img/logo.svg" alt="Quilt Logo" />
@@ -22,13 +24,19 @@ const {
 			<span class="ml-2">{t("short-title")}</span>
 		</a>
 
-		<label class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" for="language-switcher"
-			data-tooltip={t('tooltip-switch-language')}>
+		<label
+			class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom"
+			for="language-switcher"
+			data-tooltip={t("tooltip-switch-language")}
+		>
 			<i class="fas fa-language fa-2xl"></i>
 		</label>
 
-		<label class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom" for="low-contrast"
-			data-tooltip={t('tooltip-toggle-low-contrast')}>
+		<label
+			class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom"
+			for="low-contrast"
+			data-tooltip={t("tooltip-toggle-low-contrast")}
+		>
 			<span id="theme-normal-contrast">
 				<i class="fas fa-circle-half-stroke fa-xl"></i>
 			</span>
@@ -73,13 +81,19 @@ const {
 					<NavLink target="_blank" href="https://maven.quiltmc.org">
 						{t("nav-page-maven-repo")}
 					</NavLink>
-					<NavLink target="_blank" href="https://github.com/QuiltMC/quilt-template-mod">
+					<NavLink
+						target="_blank"
+						href="https://github.com/QuiltMC/quilt-template-mod"
+					>
 						{t("nav-page-template-mod")}
 					</NavLink>
 
 					<div class="divider">{t("divider-external-links")}</div>
 
-					<NavLink href="https://lambdaurora.dev/tools/import_quilt.html" subpage={false}>
+					<NavLink
+						href="https://lambdaurora.dev/tools/import_quilt.html"
+						subpage={false}
+					>
 						{t("nav-page-import-utility")}
 					</NavLink>
 				</Dropdown>
@@ -102,7 +116,11 @@ const {
 					<NavLink href={localizePath("/openings")} icon="fas fa-briefcase">
 						{t("nav-page-openings")}
 					</NavLink>
-					<NavLink href={localizePath("/staff")} icon="fas fa-clipboard-user" subpage={true}>
+					<NavLink
+						href={localizePath("/staff")}
+						icon="fas fa-clipboard-user"
+						subpage={true}
+					>
 						{t("nav-page-staff-resources")}
 					</NavLink>
 				</div>

@@ -5,138 +5,156 @@ import Base from "./Base.astro";
 ---
 
 <Base content={Astro.props.content}>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<div class="columns">
+					<div class="column is-narrow">
+						<div class="is-hidden-tablet">
+							<button class="button is-primary">
+								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<span>{t("sidebar-versions")}</span>
+							</button>
 
-<div class="columns is-centered">
+							<br />
+							<br />
+						</div>
 
-	<div class="column is-10">
-		<section class="section">
-			<div class="columns">
-				<div class="column is-narrow">
-					<div class="is-hidden-tablet">
-						<button class="button is-primary">
-							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-							<span>{t("sidebar-versions")}</span>
-						</button>
+						<div class="box is-hidden-mobile is-sticky">
+							<aside class="menu">
+								<p class="menu-label">{t("sidebar-versions")}</p>
 
-						<br />
-						<br />
-					</div>
-
-					<div class="box is-hidden-mobile is-sticky">
-						<aside class="menu">
-							<p class="menu-label">{t("sidebar-versions")}</p>
-
-							<ul class="menu-list" id="sidebar">
-
-							</ul>
-						</aside>
-					</div>
-				</div>
-
-				<div class="column">
-					<div class="columns is-centered">
-						<div class="column max-width-50">
-							<noscript>
-								<Message style="danger mb-4">
-									<slot name="noScript" />
-								</Message>
-							</noscript>
-
-							<input id="close-missing-versions" type="checkbox" class="is-hidden" />
-							<div class="message is-info" id="missing-versions-warning">
-								<div class="message-body content">
-									<div class="is-flex is-flex-direction-row is-fullwidth">
-										<h2 class="is-justify-content-start is-flex-grow-1">
-											<slot name="missingVersions" />
-										</h2>
-										<div class="is-justify-content-end">
-											<label for="close-missing-versions" class="has-tooltip-arrow has-tooltip-bottom has-text-link"
-												data-tooltip="Dismiss">
-												<span class="icon"><i class="fas fa-2x fa-circle-xmark"></i></span>
-											</label>
-										</div>
-									</div>
-
-									<slot name="missingVersionsExplanation" />
-								</div>
-							</div>
+								<ul class="menu-list" id="sidebar"></ul>
+							</aside>
 						</div>
 					</div>
 
-					<h1 id="title" class="title">
-						<slot name="patchnotes" />
-					</h1>
+					<div class="column">
+						<div class="columns is-centered">
+							<div class="column max-width-50">
+								<noscript>
+									<Message style="danger mb-4">
+										<slot name="noScript" />
+									</Message>
+								</noscript>
 
-					<img id="image" class="patchnotes-image" style="border-radius: 10px; margin: 10px;" />
+								<input
+									id="close-missing-versions"
+									type="checkbox"
+									class="is-hidden"
+								/>
+								<div class="message is-info" id="missing-versions-warning">
+									<div class="message-body content">
+										<div class="is-flex is-flex-direction-row is-fullwidth">
+											<h2 class="is-justify-content-start is-flex-grow-1">
+												<slot name="missingVersions" />
+											</h2>
+											<div class="is-justify-content-end">
+												<label
+													for="close-missing-versions"
+													class="has-tooltip-arrow has-tooltip-bottom has-text-link"
+													data-tooltip="Dismiss"
+												>
+													<span class="icon"
+														><i class="fas fa-2x fa-circle-xmark"></i>
+													</span>
+												</label>
+											</div>
+										</div>
 
-					<div id="body" class="content">
-						<slot name="patchnotesPrompt" />
+										<slot name="missingVersionsExplanation" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h1 id="title" class="title">
+							<slot name="patchnotes" />
+						</h1>
+
+						<img
+							id="image"
+							class="patchnotes-image"
+							style="border-radius: 10px; margin: 10px;"
+						/>
+
+						<div id="body" class="content">
+							<slot name="patchnotesPrompt" />
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	</div>
-</div>
 
-<style lang="scss">
-	#close-missing-versions:checked~ {
-		#missing-versions-warning {
-			display: none !important;
+	<style lang="scss">
+		#close-missing-versions:checked ~ {
+			#missing-versions-warning {
+				display: none !important;
+			}
 		}
-	}
-</style>
+	</style>
 
-<script is:inline>
-	// Fetch launcher metadata
-	fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
-		.then(response => response.json())
-		.then(data => {
-			// Render patch notes
-			const render = () => {
-				// Read the version from the anchor and look it up in the json
-				var version = window.location.hash.substring(1);
-				var entry = data.entries.find(e => e.version === version);
+	<script is:inline>
+		// Fetch launcher metadata
+		fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
+			.then((response) => response.json())
+			.then((data) => {
+				// Render patch notes
+				const render = () => {
+					// Read the version from the anchor and look it up in the json
+					var version = window.location.hash.substring(1);
+					var entry = data.entries.find((e) => e.version === version);
 
-				if (entry) {
-					document.getElementById("title").scrollIntoView()
+					if (entry) {
+						document.getElementById("title").scrollIntoView();
 
-					const body = entry.body
-						.replaceAll("​", "")
-						.replaceAll("<p></p>", "")
+						const body = entry.body
+							.replaceAll("​", "")
+							.replaceAll("<p></p>", "");
 
-					// Replace title, body and image url with the selected version
-					document.getElementById("title").innerText = entry.title;
-					document.getElementById("body").innerHTML = body;
-					document.getElementById("image").setAttribute("src", "https://launchercontent.mojang.com" + entry.image.url);
+						// Replace title, body and image url with the selected version
+						document.getElementById("title").innerText = entry.title;
+						document.getElementById("body").innerHTML = body;
+						document
+							.getElementById("image")
+							.setAttribute(
+								"src",
+								"https://launchercontent.mojang.com" + entry.image.url
+							);
 
-					for (let elem of document.getElementsByClassName("version-item is-active")) {
-						elem.classList.remove("is-active")
+						for (let elem of document.getElementsByClassName(
+							"version-item is-active"
+						)) {
+							elem.classList.remove("is-active");
+						}
+
+						document.getElementById(entry.version).classList.add("is-active");
+						// document.getElementsByClassName("menu")[0].scrollIntoView()
 					}
+				};
 
-					document.getElementById(entry.version).classList.add("is-active")
-					// document.getElementsByClassName("menu")[0].scrollIntoView()
-				}
-			};
+				// Create nav-links
+				data.entries.forEach((entry) => {
+					const listItem = document.createElement("li");
+					const newRef = document.createElement("a");
 
-			// Create nav-links
-			data.entries.forEach(entry => {
-				const listItem = document.createElement("li")
-				const newRef = document.createElement("a");
+					newRef.classList.add("version-item");
+					newRef.dataset["action"] = "click->sidebar#toggle";
+					newRef.id = entry.version;
+					newRef.innerText = entry.version;
+					newRef.setAttribute(
+						"href",
+						window.location.pathname + "#" + entry.version
+					);
 
-				newRef.classList.add("version-item")
-				newRef.dataset["action"] = "click->sidebar#toggle"
-				newRef.id = entry.version
-				newRef.innerText = entry.version;
-				newRef.setAttribute("href", window.location.pathname + "#" + entry.version);
+					listItem.appendChild(newRef);
+					document.getElementById("sidebar").appendChild(listItem);
+				});
 
-				listItem.appendChild(newRef)
-				document.getElementById("sidebar").appendChild(listItem);
+				// Rerender the patch note when the url changes
+				window.onhashchange = render;
+				render();
 			});
-
-			// Rerender the patch note when the url changes
-			window.onhashchange = render;
-			render();
-		});
-</script>
-
+	</script>
 </Base>

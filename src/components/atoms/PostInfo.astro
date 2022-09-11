@@ -8,15 +8,16 @@ const { authors = [], date } = post.frontmatter;
 
 <div class="media">
 	<div class="media-content">
-		{ (authors.length > 0) && <p class="title is-5">{authors.join(", ")}</p> }
+		{authors.length > 0 && <p class="title is-5">{authors.join(", ")}</p>}
 
-		{ date
-		&& <p class="subtitle is-6">
-			{DateTime.fromISO(date)
-			.setLocale(i18next.language)
-			.toLocaleString(DateTime.DATE_FULL)}
-		</p>
+		{
+			date && (
+				<p class="subtitle is-6">
+					{DateTime.fromISO(date)
+						.setLocale(i18next.language)
+						.toLocaleString(DateTime.DATE_FULL)}
+				</p>
+			)
 		}
-
 	</div>
 </div>

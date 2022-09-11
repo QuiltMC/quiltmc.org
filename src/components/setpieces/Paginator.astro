@@ -17,53 +17,90 @@ const { left, right } = rtlSettings();
 	<div class="column is-10">
 		<section class="section">
 			<main class="content container">
-				{page.data.map(post => (
-				<PostEmbed {post} />
-				))}
+				{page.data.map((post) => <PostEmbed {post} />)}
 			</main>
 
-			<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+			<nav
+				class="pagination is-centered"
+				role="navigation"
+				aria-label="pagination"
+			>
 				{/*@ts-ignore*/}
-				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage && localizePath("/blog/1") }>
+				<a
+					class="pagination-previous"
+					disabled={onFirstPage}
+					href={!onFirstPage && localizePath("/blog/1")}
+				>
 					<span class="icon"><i class={`fas fa-angles-${left}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-first")}</span>
 				</a>
 
 				{/*@ts-ignore*/}
-				<a class="pagination-previous" disabled={onFirstPage} href={!onFirstPage &&
-					localizePath(`/blog/${previousPage}`)}>
+				<a
+					class="pagination-previous"
+					disabled={onFirstPage}
+					href={!onFirstPage && localizePath(`/blog/${previousPage}`)}
+				>
 					<span class="icon"><i class={`fas fa-angle-${left}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-previous")}</span>
 				</a>
 
 				<ul class="pagination-list">
-					{!onFirstPage && (
-					<li>
-						<a class="pagination-link" href={localizePath(`/blog/${previousPage}`)} aria-label={`Goto page
-							${previousPage}`}>{previousPage}</a>
-					</li>
-					)}
+					{
+						!onFirstPage && (
+							<li>
+								<a
+									class="pagination-link"
+									href={localizePath(`/blog/${previousPage}`)}
+									aria-label={`Goto page
+							${previousPage}`}
+								>
+									{previousPage}
+								</a>
+							</li>
+						)
+					}
 
 					<li>
-						<a class="pagination-link is-current" aria-label={`Page ${page.currentPage}`}>{page.currentPage}</a>
+						<a
+							class="pagination-link is-current"
+							aria-label={`Page ${page.currentPage}`}
+							>{page.currentPage}
+						</a>
 					</li>
 
-					{!onLastPage && (
-					<li>
-						<a class="pagination-link" href={localizePath(`/blog/${nextPage}`)} aria-label={`Goto page
-							${nextPage}`}>{nextPage}</a>
-					</li>
-					)}
+					{
+						!onLastPage && (
+							<li>
+								<a
+									class="pagination-link"
+									href={localizePath(`/blog/${nextPage}`)}
+									aria-label={`Goto page
+							${nextPage}`}
+								>
+									{nextPage}
+								</a>
+							</li>
+						)
+					}
 				</ul>
 
 				{/*@ts-ignore*/}
-				<a class="pagination-next" disabled={onLastPage} href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}>
+				<a
+					class="pagination-next"
+					disabled={onLastPage}
+					href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}
+				>
 					<span class="icon"><i class={`fas fa-angle-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-next")}</span>
 				</a>
 
 				{/*@ts-ignore*/}
-				<a class="pagination-next" disabled={onLastPage} href={!onLastPage && localizePath(`/blog/${nextPage}`)}>
+				<a
+					class="pagination-next"
+					disabled={onLastPage}
+					href={!onLastPage && localizePath(`/blog/${nextPage}`)}
+				>
 					<span class="icon"><i class={`fas fa-angles-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-last")}</span>
 				</a>

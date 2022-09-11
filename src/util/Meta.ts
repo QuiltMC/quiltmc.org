@@ -46,8 +46,8 @@ export class GameVersion {
 		if (!this.loaderVersions) {
 			const result = await fetch(META_LOADER + this.name);
 			const loaders: { loader: LoaderVersion }[] = await result.json();
-	
-			this.loaderVersions = loaders.map(loader => loader.loader);
+
+			this.loaderVersions = loaders.map((loader) => loader.loader);
 		}
 		return this.loaderVersions;
 	}
@@ -114,7 +114,7 @@ export type VersionData = {
 	yarnVersion: string;
 	yarnVersionUrlenc: string;
 	loaderVersion: string;
-	loaderVersionUrlenc: string,
+	loaderVersionUrlenc: string;
 	apiVersion: string;
 	maven: string;
 };
