@@ -1,5 +1,6 @@
 ---
 import PageTitle from "@atoms/PageTitle.astro";
+import Sidebar from "@setpieces/Sidebar.astro";
 import i18next, { t } from "i18next";
 import Base from "./Base.astro";
 
@@ -10,7 +11,6 @@ const category = Astro.url.pathname.split("/")[2];
 const pages = (await Astro.glob("/src/**/pages/**/*"))
 	.filter(page => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
-const header = t("sidebar-pages");
 ---
 
 <Base content={Astro.props.content}>
@@ -22,12 +22,17 @@ const header = t("sidebar-pages");
 					<div class="is-hidden-tablet">
 						<label class="button is-primary" for="toggle-sidebar">
 							<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
-							<span>{header}</span>
+							<span>{t("sidebar-pages")}</span>
 						</label>
 						<br />
 						<br />
 					</div>
 
+					<Sidebar value={{
+						"sidebar-pages": {
+							pages: pages.map(page => page.url)
+						}
+					}}/>
 				</div>
 
 				<main class="content column">

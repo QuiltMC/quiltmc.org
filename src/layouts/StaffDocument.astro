@@ -1,9 +1,9 @@
 ---
 import i18next, { t } from "i18next";
 import Base from "./Base.astro"
-import { localizePath } from "@util/Util";
 import PageTitle from "@atoms/PageTitle.astro";
-import Menu from "@atoms/Menu.astro";
+import Sidebar from "@setpieces/Sidebar.astro";
+import { localizePath } from "@util/Util";
 
 export interface Props {
 	title: string,
@@ -63,10 +63,10 @@ if (pageUrl != staffUrl) {
 						<br />
 					</div>
 
-					<Menu value={{
+					<Sidebar value={{
 						"sidebar-resources": {
 							pages: [
-								`/${i18next.language}/staff`
+								localizePath("/staff")
 							]
 						},
 						"sidebar-teams": {
