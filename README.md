@@ -17,7 +17,7 @@ In theory, you can use any editor to your liking that supports the [Language Ser
 Unfortunately as of the date of writing (Sept 11, 2022) no pre-built integrations of the Astro Language Server actually exist, which is why we still recommend using VS Code as your IDE.
 
 For VSCode, you should see a popup in the bottom right when you open the project with recommended extensions. You can also type `@recommended` in the extensions page to see the recommended extensions:
-<img src="./readme/recommended-extensions.jpg" width="300">
+<img src="./public/assets/img/writing/recommended-extensions.jpg" width="300">
 
 
 ### Running the Dev Server

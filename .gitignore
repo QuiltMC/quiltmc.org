@@ -18,3 +18,6 @@ src/test-data/
 
 # Astro build artifacts
 dist
+
+# CSS from quilt-bulma
+public/assets/css
