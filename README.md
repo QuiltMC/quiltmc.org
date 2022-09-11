@@ -16,9 +16,13 @@ and [the `vscode-fluent` plugin](https://marketplace.visualstudio.com/items?item
 In theory, you can use any editor to your liking that supports the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), hooked up to the [Astro Language Server](https://github.com/withastro/language-tools/tree/main/packages/language-server) and optionally other LSPs for MDX and Fluent.
 Unfortunately as of the date of writing (Sept 11, 2022) no pre-built integrations of the Astro Language Server actually exist, which is why we still recommend using VS Code as your IDE.
 
+For VSCode, you should see a popup in the bottom right when you open the project with recommended extensions. You can also type `@recommended` in the extensions page to see the recommended extensions:
+![](./readme/recommended-extensions.jpg)
+
+
 ### Running the Dev Server
 
-To run the development server, you first need to have `npm`/`pnpm`/Yarn installed in your system.
+To run the development server, you first need to have `npm`/`pnpm`/`yarn` installed in your system.
 Only `pnpm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager. [Instructions on how to install `pnpm` can be found on its official installation page.](https://pnpm.io/installation)
 
 Once `pnpm` is installed, clone this repository, navigate into the project folder and run `pnpm i` to install dependencies:
@@ -28,16 +32,16 @@ $ cd quiltmc.org
 $ pnpm i
 ```
 
-Once installation is complete, then run `pnpm run dev` to start the dev server.
+Once installation is complete, then run `pnpm dev` to start the dev server.
 The server application should have an output like this:
 ```sh
-$ pnpm run dev
+$ pnpm dev
 
-> quiltmc-website@1.0.0 dev /home/pluie/coding/quiltmc.org
+> quiltmc-website@1.0.0 dev
 > node csscopy.mjs && astro dev
 
   🚀  astro  v1.2.1 started in 56ms
-  
+
   ┃ Local    http://localhost:3000/
   ┃ Network  use --host to expose
 ```
@@ -54,16 +58,21 @@ You're all set! Although, I would recommend reading about [the architecture of t
 To build the site as seen in production, simply run `pnpm run build`.
 Astro will then build the site and emit the output in `dist/`.
 
-You may need to run an actual web server to view the site—the simplest way to do that would be to enter the `dist/` folder, and run `python3 -m http.server`:
 ```sh
 $ pnpm run build
-
-<lots of build logs>
-
-$ cd dist/
-$ python3 -m http.server
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
-
 ```
 
-You can then visit the built site in `0.0.0.0:8000`.
+To view the built site, you can run `astro preview`:
+```sh
+$ pnpm preview
+
+> quiltmc-website@1.0.0 preview
+> node csscopy.mjs && astro preview
+
+  🚀  astro  v1.2.1 started in 2ms
+
+  ┃ Local    http://localhost:3000/
+  ┃ Network  use --host to expose
+```
+
+You can then visit the built site in `0.0.0.0:3000`.
