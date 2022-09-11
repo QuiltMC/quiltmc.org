@@ -1,5 +1,6 @@
 ---
 import Base from "@layouts/Base.astro";
+import { t } from "i18next";
 ---
 
 <style type="text/css" media="screen">
@@ -30,9 +31,9 @@ import Base from "@layouts/Base.astro";
 				title="Pineapple!"
 				alt=":pineapple:"
 				src="/assets/img/pineapple.png"
-			/> 404
+			/> {t("page-404")}
 		</h1>
-		<p><strong>Page not found :(</strong></p>
-		<p>The requested page could not be found.</p>
+		<p><strong>{t("page-404-title")}</strong></p>
+		<p>{t("page-404-subtitle")}</p>
 	</div>
 </Base>

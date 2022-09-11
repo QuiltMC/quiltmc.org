@@ -77,3 +77,7 @@ tooltip-toggle-low-contrast = 切换低对比模式
 
 prompt-error-noscript = 你已禁用 JavaScript。请启用 JavaScript 以使用查找功能。
 prompt-search-language = 在这里查找你的语言……
+
+page-404 = 404
+page-404-title = 页面失踪了 :(
+page-404-subtitle = 找不到你要访问的页面 orz
