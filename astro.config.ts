@@ -11,7 +11,7 @@ export default defineConfig({
 		mdx(),
 		astroI18next({
 			baseLocale: "en",
-			supportedLocales: ["en", "zh"],
+			supportedLocales: ["en"],
 			i18next: {
 				debug: true, // convenient during development to check for missing keys
 			},
