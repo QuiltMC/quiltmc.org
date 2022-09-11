@@ -16,11 +16,11 @@ import Message from "@atoms/Message.astro";
 
 </Message>
 
-Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers on hand for advice. This document is intended to be a set of guidelines, tips and tricks to use when writing documents, articles, blog posts and other written content for the site.
+Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers on hand for advice. This document is intended to be a set of guidelines, tips, and tricks to use when writing documents, articles, blog posts, and other written content for the site.
 
 ## Editors & Setup
 
-Using [Visual Studio Code](https://code.visualstudio.com) or [VSCodium](https://vscodium.com) is recommended. When opening the site with VSCode, you should see a popup in the bottom right asking if you want to install recommended extensions. If you don't see it, you can also type `@recommended` into the extensions serachbar:
+Using [Visual Studio Code](https://code.visualstudio.com) or [VSCodium](https://vscodium.com) is recommended. When opening the site with VSCode, you should see a popup in the bottom right asking if you want to install some recommended extensions. If you don't see it, you can also type `@recommended` into the extensions searchbar:
 
 <img src="/assets/img/writing/recommended-extensions.jpg" width="300" />
 
@@ -39,7 +39,7 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
 
-After installing, run `pnpm i` and then `pnpm dev`. Now go to `localhost:3000` in your browser, and you can see the site. It will update automatically if you make any changes.
+After installing, run `pnpm i` and then `pnpm dev`. You should now be able to view the site in your browser at `localhost:3000`. The site will also automatically update if you make any changes to it.
 
 ## Spelling, Punctuation & Grammar
 
@@ -81,17 +81,6 @@ authors:
   - person-two
 ---
 ```
-
-##### Result
-
-<div class="columns">
-	<div class="column">
-		<Message>This is column 1.</Message>
-	</div>
-	<div class="column">
-		<Message>This is column 2.</Message>
-	</div>
-</div>
 
 ### Components
 
@@ -168,9 +157,9 @@ Columns aren't particularly complex. Columns on this site will collapse nicely f
 
 When working on non-blog content, it's worth keeping the following points in mind.
 
-## Front Matter (Pages)
+## Frontmatter (Pages)
 
-For non-blog content, the following Front Matter variables may be useful:
+For non-blog content, the following frontmatter variables may be useful:
 
 - `description` -- This is the page's meta description that will be shown in search engines and on social media. If you skip this, then the site's default description will be used instead.
 
@@ -178,15 +167,15 @@ For non-blog content, the following Front Matter variables may be useful:
 
 As writing blog posts is somewhat different from writing an article or document, you'll need to do the following things **in addition to the requirements for any other type of page**:
 
-- Include a date in the post's Front Matter
-- Include author information in the post's Front Matter, [as detailed above](#author-information).
+- Include a date in the post's frontmatter.
+- Include author information in the post's frontmatter, [as detailed above](#author-information).
 - Define an excerpt in your post
 
 For more information on these concepts, please see the following sections.
 
-## Front Matter (Blog)
+## Frontmatter (Blog)
 
-For blog posts, you need to include a `date` field in the forntmatter, which should be in a standard ISO format (For example, `2022-05-07 4:30:00 -00:00`). This is required for all blog posts, as the site relies on it for post ordering and to display metadata.
+For blog posts, you need to include a `date` field in the frontmatter, which should be in a standard ISO format (For example, `2022-05-07 4:30:00 -00:00`). This is required for all blog posts, as the site relies on it for post ordering and to display metadata.
 
 ## Excerpts
 
