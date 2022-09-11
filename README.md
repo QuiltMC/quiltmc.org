@@ -46,7 +46,7 @@ $ pnpm dev
   ┃ Network  use --host to expose
 ```
 
-At this point, open your browser and you should be able to see the generated site at `localhost:3000`.
+At this point, open your browser, and you should be able to see the generated site at `localhost:3000`.
 
 As Astro utilizes hot module reloading (HMR), any changes you make would be reflected in the browser quickly.
 However, sometimes components and layouts don't get rebuilt with HMR and you might have to restart the Astro server to see your changes, which is easily done by pressing <kbd>Ctrl+C</kbd> and rerunning `pnpm run dev`.
@@ -75,4 +75,4 @@ $ pnpm preview
   ┃ Network  use --host to expose
 ```
 
-You can then visit the built site in `0.0.0.0:3000`.
+You can then visit the built site at `localhost:3000`.
