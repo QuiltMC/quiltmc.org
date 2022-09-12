@@ -52,9 +52,9 @@ A somewhat formal tone in your writing is also recommended, but there's absolute
 
 It's also worth thinking a little about punctuation -- you can use `-` for a hyphen, with `--` and `---` existing for progressively longer dashes. If you're looking to join to words together (like-this), use a single hyphen. To break apart a sentence -- like this -- use two dashes.
 
-## Frontmatter
+## Front Matter
 
-A frontmatter block must be placed at the top of every document or page that's written for the site. It takes the form of a block of YAML surrounded by triple dashes (`---`), and should contain _at least_ a `title` and `layout` variable.
+A front matter block must be placed at the top of every document or page that's written for the site. It takes the form of a block of YAML surrounded by triple dashes (`---`), and should contain _at least_ a `title` and `layout` property.
 
 ```yaml
 ---
@@ -63,16 +63,17 @@ layout: /src/layouts/Page.astro
 ---
 ```
 
-Pages that don't contain a `layout` variable in the frontmatter will be outputted as plain HTML (no sidebar, no styling, nothing). Below are some frontmatter variables:
+Pages that don't contain a `layout` property in the front matter will be output as plain HTML (no sidebar, no styling, nothing). Below are some front matter properties:
 
 - `layout` -- Layouts are in the `/src/pages` directory. Most of the pages either use `/src/layouts/Page.astro` (for pages, such as About, Community, etc.) and `/src/layouts/Post.astro` (for blog posts). The Install section of the site uses a different set of layouts (`/src/layouts/Install.astro` for the main page and `/src/layouts/InstallPage.astro` for the launcher pages).
+
 - `draft` -- If you're working on something that needs to be committed but not visible to the public on the site, you can set this to `true`.
 
 More information on this can be found in [the Astro documentation](https://docs.astro.build/en/guides/markdown-content).
 
 ### Author Information
 
-Author information can be specified using the `authors` property in the frontmatter:
+Author information can be specified using the `authors` property in the front matter:
 
 ```yaml
 ---
@@ -84,41 +85,42 @@ authors:
 
 ### Components
 
-To use any components that require importing, you'll need to be in a `.mdx` file instead of a `.md` file. There's no difference between the markdown in these two files types, so you can just rename an existing file.
+To use any components that require importing, you'll need to be in a `.mdx` file instead of a `.md` file. There's no difference between the Markdown in these two filetypes, so you can just rename any existing Markdown file.
 
 #### Messages
 
-`Message` -- this allows you to create an Message, as shown below. Messages are essentially boxes that draw attention to a specific block of text.
+`Message` -- this allows you to create a Message, as shown below. Messages are essentially boxes that draw attention to a specific block of text.
 
 <div class="columns">
-  <div class="column">
-    ##### Example
+	<div class="column">
+		##### Example
 
-    ```md
-    import Message from "@atoms/Message.astro";
+		```astro
+		import Message from "@atoms/Message.astro";
 
-    <Message style="success">
-    This message has no title, but it has the "success" styling.
-    </Message>
+		<Message style="success">
+			This message has no title, but it has the "success" styling.
+		</Message>
 
-    <Message title="Title goes here" style="danger">
-    This message has a title, and the "danger" styling.
-    </Message>
-    ```
+		<Message title="Title goes here" style="danger">
+			This message has a title, and the "danger" styling.
+		</Message>
+		```
 
-  </div>
-  <div class="column">
-    ##### Result
+	</div>
 
-    <Message style="success">
-    This admonition has no title, but it has the "success" styling.
-    </Message>
+	<div class="column">
+		##### Result
 
-    <Message title="Title goes here" style="danger">
-    This admonition has a title, and the "danger" styling.
-    </Message>
+		<Message style="success">
+				This admonition has no title, but it has the "success" styling.
+		</Message>
 
-  </div>
+		<Message title="Title goes here" style="danger">
+				This admonition has a title, and the "danger" styling.
+		</Message>
+
+	</div>
 </div>
 
 #### Columns
@@ -127,18 +129,18 @@ Columns aren't particularly complex. Columns on this site will collapse nicely f
 
 ##### Example
 
-```md
+```astro
 <div class="columns">
-    <div class="column">
-        <Message>
-            This is column 1.
-        </Message>
-    </div>
-    <div class="column">
-        <Message>
-            This is column 2.
-        </Message>
-    </div>
+	<div class="column">
+		<Message>
+			This is column 1.
+		</Message>
+	</div>
+	<div class="column">
+		<Message>
+			This is column 2.
+		</Message>
+	</div>
 </div>
 ```
 
@@ -157,9 +159,9 @@ Columns aren't particularly complex. Columns on this site will collapse nicely f
 
 When working on non-blog content, it's worth keeping the following points in mind.
 
-## Frontmatter (Pages)
+## Front Matter (Pages)
 
-For non-blog content, the following frontmatter variables may be useful:
+For non-blog content, the following front matter properties may be useful:
 
 - `description` -- This is the page's meta description that will be shown in search engines and on social media. If you skip this, then the site's default description will be used instead.
 
@@ -167,15 +169,15 @@ For non-blog content, the following frontmatter variables may be useful:
 
 As writing blog posts is somewhat different from writing an article or document, you'll need to do the following things **in addition to the requirements for any other type of page**:
 
-- Include a date in the post's frontmatter.
-- Include author information in the post's frontmatter, [as detailed above](#author-information).
+- Include a date in the post's front matter.
+- Include author information in the post's front matter, [as detailed above](#author-information).
 - Define an excerpt in your post
 
 For more information on these concepts, please see the following sections.
 
-## Frontmatter (Blog)
+## Front Matter (Blog)
 
-For blog posts, you need to include a `date` field in the frontmatter, which should be in a standard ISO format (For example, `2022-05-07 4:30:00 -00:00`). This is required for all blog posts, as the site relies on it for post ordering and to display metadata.
+For blog posts, you need to include a `date` field in the front matter, which should be in a standard ISO format (For example, `2022-05-07 4:30:00 -00:00`). This is required for all blog posts, as the site relies on it for post ordering and to display metadata.
 
 ## Excerpts
 

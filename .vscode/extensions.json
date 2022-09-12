@@ -4,6 +4,7 @@
 		"unifiedjs.vscode-mdx",
 		"astro-build.astro-vscode",
 		"valentjn.vscode-ltex",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"EditorConfig.EditorConfig"
 	]
 }
