@@ -1,4 +1,4 @@
-name: Github Pages Astro CI
+name: Build
 
 on:
   # Trigger the workflow every time you push to the `main` branch
