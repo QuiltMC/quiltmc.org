@@ -18,7 +18,7 @@ specifiers:
   i18next: ^21.9.1
   i18next-fluent: ^2.0.0
   luxon: ^3.0.3
-  quilt-bulma: 0.0.7
+  quilt-bulma: 0.0.8
   remark-excerpt: 1.0.0-beta.1
   rollup: ^2.79.0
   sass: ^1.54.9
@@ -42,7 +42,7 @@ devDependencies:
   i18next: 21.9.1
   i18next-fluent: 2.0.0
   luxon: 3.0.3
-  quilt-bulma: 0.0.7
+  quilt-bulma: 0.0.8
   remark-excerpt: 1.0.0-beta.1
   rollup: 2.79.0
   sass: 1.54.9
@@ -2962,8 +2962,8 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /quilt-bulma/0.0.7:
-    resolution: {integrity: sha512-npHPzSvDIKUMwszPm3Wj77IsT+j5r3uQAIVztWUDoG9wbAGylwRv3kopnN90kziW8XH5snaQKDVPmCRmcmMzFw==}
+  /quilt-bulma/0.0.8:
+    resolution: {integrity: sha512-X3ocVzzwlrpnoAy5FbCJ+UqvKCJCPMw0koZOhoO5/wupSw8OwjzrB7A+PJicrSrzFhS4zRImgh2ma4ItPfuEwQ==}
     dev: true
 
   /readable-stream/3.6.0:
