@@ -26,6 +26,7 @@ That's all there is to it! Once you've followed these steps, your instance shoul
 To install mods to your MultiMC instance, simply follow these steps:
 
 1. Right-click on the instance you'd like to install mods to and select **Edit Instance**, or click on it once and select **Edit Instance** from the menu on the right of the window
-2. Select **Mods** from the list on the left, and drag-and-drop the mod files you've downloaded into the mod list 3. Ensure you have the **Quilt Standard Libraries** installed, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
+2. Select **Mods** from the list on the left, and drag-and-drop the mod files you've downloaded into the mod list
+3. Ensure you have the **Quilted Fabric API/Quilt Standard Libraries** bundle installed, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
 
 Start up your game, and the mods should be available immediately. If you run into any issues, please take a look at the [troubleshooting page](/en/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!

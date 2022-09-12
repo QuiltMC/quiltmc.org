@@ -1,0 +1,37 @@
+---
+title: "Install: CurseForge"
+permalink: /install/curseforge/
+
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-curseforge
+website: https://download.curseforge.com
+---
+
+import Message from "@atoms/Message.astro";
+
+### Status: Partially Implemented
+
+CurseForge does not currently support Quilt in their launcher, but they've stated they're planning on it. They do, however, support Quilt on the CurseForge website.
+
+Thanks to Claycorp, RedBlue and Yamza for their help, as well as to everyone that supported our [CurseForge Ideas suggestion](https://curseforge-ideas.overwolf.com/ideas/CF-I-2662). We couldn't have gotten this far without you!
+
+# Manual Installation
+
+It is not currently possible to manually install Quilt into a CurseForge instance. Please show your support on the suggestion linked above if you'd like to see CurseForge adding Quilt to their services!
+
+## Workarounds
+
+<Message style={"danger"}>
+	Please note that the following solutions are maintained by third party developers. We cannot guarantee their efficacy over time -- and, while we believe them to be entirely safe, we can't take responsibility for any issues caused by them.
+
+	**Please remember to back up your worlds if you attempt to use the following solutions on an existing launcher profile!**
+</Message>
+
+If you can't wait for the CurseForge launcher to support Quilt, then [kb1000](https://www.curseforge.com/members/kb1000) maintains one possible solution:
+
+1. Create a Forge profile
+2. Add [JumpQuilt](https://www.curseforge.com/minecraft/mc-mods/jumpquilt), which will hijack the Forge loading process to load Quilt instead
+3. Add your mods as usual
+4. Ensure you have also added the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
+
+We're aware that this isn't an ideal solution for a number of reasons, especially given how mod browsing works in the CurseForge launcher. Please show your support on the suggestion linked above if you'd like to see a better solution!

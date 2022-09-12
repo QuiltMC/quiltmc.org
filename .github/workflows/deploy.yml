@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build & Deploy
 
 on:
   push:
@@ -10,7 +10,8 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:

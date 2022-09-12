@@ -1,22 +1,16 @@
 name: Build
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches-ignore:  [stable]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  pull_request:
 
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3

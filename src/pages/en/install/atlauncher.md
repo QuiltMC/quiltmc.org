@@ -26,7 +26,7 @@ To install mods to your ATLauncher instance, simply follow these steps:
 1. Click on the **Instances** tab on the right side
 2. Find the instance you'd like to add mods to, and click on **Add Mods**
 3. Find a Fabric or Quilt mod from CurseForge or Modrinth, and click the **Add** button
-4. Ensure you have the **Quilt Standard Libraries** installed, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
+4. Ensure you have also added the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on Modrinth](https://modrinth.com/mod/qsl)
 
 If you can't find the mod you'd like to install using the built-in search, you can click on **Open Folder** and copy any mod files you'd like to use into the `mods/` folder.
 
