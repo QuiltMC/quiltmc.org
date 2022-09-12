@@ -1,0 +1,56 @@
+---
+import { t } from "i18next";
+
+export interface Props {
+	href: URL | string;
+	target?: "_self" | "_blank" | "_parent" | "_top";
+	type?: string | string[];
+	icon?: string;
+	titleKey?: string;
+	textKey?: string;
+	text?: string;
+}
+
+const {
+	href,
+	target = "_self",
+	type,
+	icon,
+	titleKey,
+	textKey,
+	text,
+} = Astro.props as Props;
+
+var buttonClasses = ["button"];
+if (typeof type === "string") {
+	buttonClasses.push(`is-${type}`);
+} else {
+	buttonClasses = buttonClasses.concat(type);
+}
+
+let finalText;
+
+if (textKey) {
+	// prioritize text key
+	const translated = t(textKey);
+	if (translated !== textKey) {
+		// if it's successfully translated, return
+		finalText = translated;
+	}
+} else {
+	// fallback to text if any
+	finalText = text ? text : null;
+}
+---
+
+<a title={titleKey && t(titleKey)} {href} {target} class:list={buttonClasses}>
+	{
+		icon && (
+			<span class="icon">
+				<i class={icon} />
+			</span>
+		)
+	}
+
+	{finalText && <span> {finalText} </span>}
+</a>

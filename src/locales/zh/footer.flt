@@ -1,0 +1,10 @@
+copyright = Copyright © {$year} Quilt Project
+disclaimer-unofficial =
+    Quilt 并非 Minecraft 旗下的官方产品，与 Mojang Studios 毫无关联。
+    「Minecraft」是 Mojang AB 的注册商标——此网站中对 Minecraft 品牌的任何使用均符合
+    Mojang Studios 的<0>品牌与素材使用条例</0>。
+disclaimer-icons =
+    我们不拥有此网站中使用的任何图标。感谢 <0>thecodewarrior</0> 设计我们使用的 CurseForge 图标。
+# NOTE: <0></0> is the pineapple emote.
+made-with =
+    制作中使用了 <0></0> 、<1>Bulma</1>、以及 <2>CreativeBulma 插件</2>

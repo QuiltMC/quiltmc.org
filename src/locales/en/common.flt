@@ -1,0 +1,88 @@
+lang-name = English
+
+title = The Quilt Project
+short-title = QuiltMC
+description = The mod-loader that cares.
+
+title-formatted = {$shortTitle} | {$title}
+serial-comma = {$prev}, {$next}
+
+# Common strings
+-developer-wiki = Developer Wiki
+-forum = Forum
+-import-utility = Quilt Import Utility
+-openings = Openings
+-patch-notes = Patch Notes
+-staff-resources = Staff Resources
+-template-mod = Template Mod
+
+# Brand names/proper nouns - You shouldn't need to edit this.
+-mastodon = Mastodon
+-github = GitHub
+-discord = Discord
+-twitter = Twitter
+-twitch = Twitch
+
+page-authors =
+	{ $count ->
+        [one] Author
+        *[other] Authors
+	}: {$names}
+
+nav-about = About
+nav-blog = Blog
+nav-community = Community
+nav-install = Install
+nav-more-pages = More Pages
+nav-usage = Usage
+
+divider-development = Development
+divider-external-links = External Links
+
+nav-page-developer-wiki = {-developer-wiki}
+nav-page-import-utility = {-import-utility}
+nav-page-maven-repo = Maven Repository
+nav-page-openings = {-openings}
+nav-page-patch-notes = {-patch-notes}
+nav-page-staff-resources = {-staff-resources}
+nav-page-template-mod = {-template-mod}
+
+button-close = Close
+button-discord = {-discord}
+button-discord-community = Community
+button-discord-toolchain = Toolchain
+button-developer-wiki = {-developer-wiki}
+button-forum = {-forum}
+button-github = {-github}
+button-install = Install
+button-mastodon = {-mastodon}
+button-maven-repo = Maven Repo
+button-more = More
+button-more-posts = More Posts
+button-openings = {-openings}
+button-patch-notes = Minecraft {-patch-notes}
+button-rss = RSS
+button-template-mod = {-template-mod}
+button-twitter = {-twitter}
+button-twitch = {-twitch}
+button-usage-docs = Usage Docs
+
+sidebar-pages = Pages
+sidebar-resources = Resources
+sidebar-teams = Teams
+sidebar-versions = Versions
+
+paginator-button-first = First
+paginator-button-previous = Previous
+paginator-button-next = Next
+paginator-button-last = Last
+
+tooltip-switch-language = Switch Language
+tooltip-toggle-low-contrast = Toggle Low Contrast
+
+prompt-error-noscript = You have JavaScript disabled. Enable JavaScript to use search.
+prompt-search-language = Search for your language here...
+
+page-404 = 404
+page-404-title = Page not found :(
+page-404-subtitle = The requested page could not be found.

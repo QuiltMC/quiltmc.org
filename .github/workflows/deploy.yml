@@ -1,47 +1,35 @@
-name: Build and Deploy
+name: Github Pages Astro CI
+
 on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches:
-      stable
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
 
-      - name: Cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            vendor/bundle
-            node_modules
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-js-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-          bundler-cache: false  # We're doing this ourselves
-
-      - name: Set up Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Build
-        run: |
-          bundle install
-          yarn
-          yarn run webpack
-          JEKYLL_ENV=production bundle exec jekyll build
-          cp CNAME _site/CNAME
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: gh-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

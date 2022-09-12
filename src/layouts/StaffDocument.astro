@@ -1,0 +1,110 @@
+---
+import i18next, { t } from "i18next";
+import Base from "./Base.astro";
+import PageTitle from "@atoms/PageTitle.astro";
+import Sidebar from "@setpieces/Sidebar.astro";
+import { localizePath } from "@util/Util";
+
+export interface Props {
+	title: string;
+	authors?: string[];
+}
+
+const { content } = Astro.props;
+const { title, authors = [] } = content as Props;
+
+let pageUrl = Astro.url.pathname;
+if (pageUrl.endsWith("/")) {
+	pageUrl = pageUrl.slice(0, -1);
+}
+const staffUrl = `/${i18next.language}/staff`;
+
+function getLayer(url: string): number {
+	return url.slice(staffUrl.length).split("/").length - 1;
+}
+
+// read: get every subpage under /staff/, excluding the main staff page, sorted by filename
+const pages = (await Astro.glob("/src/pages/**/staff/**"))
+	.filter((page) => page.url != staffUrl && page.url?.startsWith(staffUrl))
+	.sort((a, b) => a.file.localeCompare(b.file));
+
+const pageLayer = getLayer(pageUrl);
+
+let documentPages: string[] = [];
+// there should be no documents under the main page.
+if (pageUrl != staffUrl) {
+	// if we're in a team page or a document page, the document pages are the pages that:
+	// - are under the current page
+	// - not the same page, unless the current page is a document page or lower.
+
+	// TL;DR:
+	// main staff page - no documents
+	// team page - all pages under it, excluding itself
+	// document pages & below - all pages, including itself.
+	documentPages = pages
+		.map((p) => p.url)
+		.filter(
+			(url) => url.includes(pageUrl) && (pageLayer >= 2 || url !== pageUrl)
+		);
+}
+---
+
+<Base {content}>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<div class="columns">
+					<div class="column is-narrow">
+						<div class="is-hidden-tablet">
+							<button class="button is-primary">
+								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<span>{t("sidebar-pages")}</span>
+							</button>
+							<br />
+							<br />
+						</div>
+
+						<Sidebar
+							value={{
+								"sidebar-resources": {
+									pages: [localizePath("/staff")],
+								},
+								"sidebar-teams": {
+									pages: pages
+										.map((p) => p.url)
+										.filter((url) => {
+											// Do not render if this page is not at the first layer (team level).
+											const layer =
+												url.slice(staffUrl.length).split("/").length - 1;
+											return layer === 1;
+										}),
+									activeCriteria(url: string) {
+										const isSubpage = pageUrl.startsWith(url);
+										const isCurrent = pageUrl == url;
+
+										// If the current page is the first layer (team level), then highlight if we are at the corresponding
+										// If it is deeper than that, highlight every page that is our "superpage".
+										// For example, if we're in Moderation Team > Moderation, we should highlight Moderation Team too.
+										return pageLayer === 1 ? isCurrent : isSubpage;
+									},
+									subPages: {
+										"sidebar-pages": { pages: documentPages },
+									},
+								},
+							}}
+						/>
+					</div>
+
+					<div class="content column">
+						<PageTitle
+							title={title}
+							authors={authors}
+							file={Astro.props.frontmatter.file}
+						/>
+						<slot />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</Base>

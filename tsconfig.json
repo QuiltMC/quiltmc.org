@@ -1,15 +1,24 @@
+// Example: starter tsconfig.json for Astro projects
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": true
-  },
-
-  "exclude": [
-    "vendor/"
-  ]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"strict": true,
+		"importsNotUsedAsValues": "error",
+		"types": ["astro/client"],
+		"outDir": "./dist",
+		"baseUrl": ".",
+		"paths": {
+			"@assets/*": ["src/assets/*"],
+			"@atoms/*": ["src/components/atoms/*"],
+			"@parts/*": ["src/components/parts/*"],
+			"@setpieces/*": ["src/components/setpieces/*"],
+			"@data/*": ["src/data/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@util/*": ["src/util/*"]
+		}
+	}
 }
-

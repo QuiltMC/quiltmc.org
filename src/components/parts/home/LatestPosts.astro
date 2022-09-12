@@ -1,0 +1,24 @@
+---
+import Button from "@atoms/Button.astro";
+import PostEmbed from "@atoms/PostEmbed.astro";
+
+import i18next from "i18next";
+import { localizePath, sortByDescending } from "src/util/Util";
+
+const allPosts = (await Astro.glob("/src/pages/**/blog/*.md")).filter((p) =>
+	p.url.startsWith(`/${i18next.language}/`)
+);
+sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
+
+const latestPosts = allPosts.slice(0, 3);
+---
+
+{latestPosts.map((post) => <PostEmbed {post} />)}
+<div class="is-flex mt-4 is-justify-content-right">
+	<Button
+		href={localizePath("/blog/1")}
+		type="primary"
+		icon="fas fa-ellipsis-h"
+		textKey="button-more-posts"
+	/>
+</div>

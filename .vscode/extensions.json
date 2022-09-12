@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"macabeus.vscode-fluent",
+		"unifiedjs.vscode-mdx",
+		"astro-build.astro-vscode",
+		"valentjn.vscode-ltex",
+		"esbenp.prettier-vscode"
+	]
+}

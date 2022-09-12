@@ -1,0 +1,116 @@
+---
+import site from "@data/Site";
+// @ts-ignore
+import Button from "@atoms/Button.astro";
+// @ts-ignore
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
+---
+
+<footer class="footer">
+	<div class="content">
+		<div class="columns">
+			<div class="column is-half is-offset-one-quarter">
+				<div class="button-grid">
+					<Button
+						href={site.discordCommunity}
+						target="_blank"
+						type="discord is-rounded"
+						icon="fab fa-discord"
+						titleKey="button-discord"
+					/>
+					<Button
+						href={site.forum}
+						target="_blank"
+						type="gradle is-rounded"
+						icon="fab fa-discourse"
+						titleKey="button-forum"
+					/>
+					<Button
+						href={site.github.link}
+						target="_blank"
+						type="github is-rounded"
+						icon="fab fa-github"
+						titleKey="button-github"
+					/>
+					<Button
+						href={site.twitter.handle.link}
+						target="_blank"
+						type="twitter is-rounded"
+						icon="fab fa-twitter"
+						titleKey="button-twitter"
+					/>
+					<Button
+						href={site.mastodon.link}
+						target="_blank"
+						type="mastodon is-rounded"
+						icon="fab fa-mastodon"
+						titleKey="button-mastodon"
+					/>
+					<Button
+						href={site.twitch.link}
+						target="_blank"
+						type="primary is-rounded"
+						icon="fab fa-twitch"
+						titleKey="button-twitch"
+					/>
+					<Button
+						href={site.rss}
+						target="_blank"
+						type="rss is-rounded"
+						icon="fa-solid fa-rss"
+						titleKey="button-rss"
+					/>
+				</div>
+
+				<br />
+
+				<div class="has-text-centered">
+					<p>
+						<strong>
+							{
+								t("footer:copyright", {
+									year: new Date().getFullYear().toString(),
+								})
+							}
+						</strong>
+					</p>
+
+					<p>
+						<Trans i18nKey="disclaimer-unofficial" ns="footer">
+							Quilt is not an official Minecraft product, and is not approved by
+							or associated with Mojang Studios. "Minecraft" is a trademark of
+							Mojang AB and any usage of the Minecraft brand on this site is
+							used in accordance with Mojang Studios'
+							<a
+								href="https://account.mojang.com/terms?ref=ft#brand"
+								target="_blank">Brand and Asset Guidelines</a
+							>.
+						</Trans>
+					</p>
+					<p>
+						<Trans i18nKey="disclaimer-icons" ns="footer">
+							All logos used on this site are the property of their respective
+							owners. The CurseForge logo recreation we use in a few places on
+							this site
+							<a
+								href="https://gist.github.com/thecodewarrior/110057b210551c4ecf2c9be6d58ff824"
+								target="_blank">was created by thecodewarrior</a
+							>.
+						</Trans>
+					</p>
+					<p>
+						<Trans i18nKey="made-with" ns="footer">
+							Made with <i class="fak fa-2xl fa-pumpkin"></i>, <a
+								href="https://bulma.io">Bulma</a
+							> and
+							<a href="https://github.com/CreativeBulma"
+								>the CreativeBulma extensions</a
+							>.
+						</Trans>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

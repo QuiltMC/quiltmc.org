@@ -1,0 +1,84 @@
+---
+import i18next, { t } from "i18next";
+
+export interface Pages {
+	pages: string[];
+	activeCriteria?: (url: string) => boolean;
+	subPages?: Record<string, Pages>;
+}
+export interface Props {
+	value: Record<string, Pages>;
+}
+const { value } = Astro.props as Props;
+
+function defaultActiveCriteria(url: string): boolean {
+	return url == Astro.url.pathname || url + "/" == Astro.url.pathname;
+}
+function getAllUrls(headerToPages: Record<string, Pages>): string[] {
+	const allUrls: string[] = [];
+	for (const k in headerToPages) {
+		const pages = headerToPages[k];
+		allUrls.push(...pages.pages);
+
+		if (pages.subPages) {
+			allUrls.push(...getAllUrls(pages.subPages));
+		}
+	}
+	return allUrls;
+}
+const allUrls = getAllUrls(value);
+
+const allPages = (await Astro.glob("/src/pages/**"))
+	.filter((page) => page.url?.startsWith(`/${i18next.language}`))
+	.filter((page) => allUrls.includes(page.url));
+
+const mappedPages: Record<string, Record<string, any>> = {};
+for (const page of allPages) {
+	mappedPages[page.url] = page;
+}
+---
+
+<div class="box is-hidden-mobile is-sticky sidebar">
+	<aside class="menu">
+		{
+			() => {
+				// FIXME: the parameter is actually Record<string, Pages>,
+				// but JSX treated it as a tag... big sigh
+				function genLevel(headerToPages: any): any {
+					const pairs = [];
+					for (const header in headerToPages) {
+						const pages = headerToPages[header];
+						const urls = pages.pages;
+
+						if (urls.length > 0) {
+							pairs.push(
+								<>
+									<p class="menu-label">{t(header)}</p>
+									<ul class="menu-list">
+										{urls.map((url) => (
+											<li>
+												<a
+													href={url}
+													class={
+														(pages.activeCriteria || defaultActiveCriteria)(url)
+															? "is-active"
+															: ""
+													}
+												>
+													{mappedPages[url].frontmatter.title}
+												</a>
+											</li>
+										))}
+										{pages.subPages && genLevel(pages.subPages)}
+									</ul>
+								</>
+							);
+						}
+					}
+					return pairs;
+				}
+				return genLevel(value);
+			}
+		}
+	</aside>
+</div>

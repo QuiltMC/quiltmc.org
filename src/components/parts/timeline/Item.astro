@@ -1,0 +1,20 @@
+---
+export interface Props {
+	id: string;
+	title: string;
+	icon: string;
+}
+
+const { id, title, icon } = Astro.props as Props;
+---
+
+<div class="timeline-item">
+	<div class="timeline-marker is-icon is-dark">
+		<i class={icon}></i>
+	</div>
+
+	<div class="timeline-content">
+		<h6 class="heading" {id}>{title}</h6>
+		<slot />
+	</div>
+</div>
