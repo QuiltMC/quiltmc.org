@@ -7,12 +7,7 @@ import htmlMinifier from "astro-html-minifier";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://quiltmc.org",
-	integrations: [
-		mdx(),
-		astroI18next(),
-		sitemap(),
-		htmlMinifier(),
-	],
+	integrations: [mdx(), astroI18next(), sitemap(), htmlMinifier()],
 	markdown: {
 		syntaxHighlight: "prism",
 	},
@@ -24,11 +19,11 @@ export default defineConfig({
 			// FIXME(leah@pluie): this is used to mitigate some weird issues with CJS deps.
 			// For some reason, we need to 'externalize' them first...
 			external: [
-				'@proload/core',
-				'@proload/plugin-tsm',
-				'deepmerge',
-				'locale-emoji'
-			]
-		}
+				"@proload/core",
+				"@proload/plugin-tsm",
+				"deepmerge",
+				"locale-emoji",
+			],
+		},
 	},
 });

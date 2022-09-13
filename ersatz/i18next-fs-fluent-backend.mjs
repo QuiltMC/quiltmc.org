@@ -1,5 +1,5 @@
 import FsBackend from "i18next-fs-backend";
-import ftlToJs from 'fluent_conv/esm/ftl2js';
+import ftlToJs from "fluent_conv/esm/ftl2js";
 
 // NOTE(leah@pluie): okay so, this is basically `i18next-fluent-backend`,
 // but up-to-date, way less cursed and much shorter.
@@ -15,7 +15,7 @@ function getDefaults() {
 		addPath: "src/locales/{{lng}}/{{ns}}.missing.flt",
 		parse: ftlToJs,
 	};
-};
+}
 
 class Backend {
 	constructor(services, options = {}, allOptions = {}) {
@@ -42,16 +42,16 @@ export default Backend;
 
 /// utilities
 
-const arr = []
-const each = arr.forEach
-const slice = arr.slice
+const arr = [];
+const each = arr.forEach;
+const slice = arr.slice;
 function defaults(obj) {
-  each.call(slice.call(arguments, 1), (source) => {
-    if (source) {
-      for (const prop in source) {
-        if (obj[prop] === undefined) obj[prop] = source[prop]
-      }
-    }
-  })
-  return obj
+	each.call(slice.call(arguments, 1), (source) => {
+		if (source) {
+			for (const prop in source) {
+				if (obj[prop] === undefined) obj[prop] = source[prop];
+			}
+		}
+	});
+	return obj;
 }
