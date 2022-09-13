@@ -9,7 +9,7 @@ export default {
 		ns: ["common", "footer", "home", "install"],
 	},
 	i18nextPlugins: {
-		backend: "./ersatz/i18next-fs-fluent-backend.mjs",
+		backend: "src/ersatz/i18next-fs-fluent-backend.mjs",
 		fluent: "i18next-fluent",
 	},
 } as AstroI18nextConfig;
