@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-import astroI18next from "./ersatz/astro-i18next-fluent";
+import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
 import htmlMinifier from "astro-html-minifier";
 
@@ -9,16 +9,7 @@ export default defineConfig({
 	site: "https://quiltmc.org",
 	integrations: [
 		mdx(),
-		astroI18next({
-			baseLocale: "en",
-			supportedLocales: ["en"],
-			i18next: {
-				debug: true, // convenient during development to check for missing keys
-			},
-			i18nextPlugins: {
-				fluent: "i18next-fluent",
-			},
-		}),
+		astroI18next(),
 		sitemap(),
 		htmlMinifier(),
 	],
@@ -29,5 +20,15 @@ export default defineConfig({
 		build: {
 			assetsInlineLimit: 0,
 		},
+		ssr: {
+			// FIXME(leah@pluie): this is used to mitigate some weird issues with CJS deps.
+			// For some reason, we need to 'externalize' them first...
+			external: [
+				'@proload/core',
+				'@proload/plugin-tsm',
+				'deepmerge',
+				'locale-emoji'
+			]
+		}
 	},
 });
