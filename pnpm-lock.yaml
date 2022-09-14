@@ -6,10 +6,12 @@ specifiers:
   '@astrojs/sitemap': ^1.0.0
   '@creativebulma/bulma-divider': ^1.1.0
   '@creativebulma/bulma-tooltip': ^1.2.0
+  '@proload/core': ^0.3.3
+  '@proload/plugin-tsm': ^0.2.1
   '@types/luxon': ^3.0.1
   astro: 1.2.1
   astro-html-minifier: ^0.2.0
-  astro-i18next: 1.0.0-beta.3
+  astro-i18next: 1.0.0-beta.10
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
   execa: ^6.1.0
@@ -17,6 +19,8 @@ specifiers:
   github-slugger: ^1.4.0
   i18next: ^21.9.1
   i18next-fluent: ^2.0.0
+  i18next-fs-backend: ^1.1.5
+  locale-emoji: ^0.3.0
   luxon: ^3.0.3
   quilt-bulma: 0.0.10
   remark-excerpt: 1.0.0-beta.1
@@ -30,10 +34,12 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
+  '@proload/core': 0.3.3
+  '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
   '@types/luxon': 3.0.1
   astro: 1.2.1_sass@1.54.9
   astro-html-minifier: 0.2.0
-  astro-i18next: 1.0.0-beta.3_astro@1.2.1
+  astro-i18next: 1.0.0-beta.10_astro@1.2.1
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   execa: 6.1.0
@@ -41,6 +47,8 @@ devDependencies:
   github-slugger: 1.4.0
   i18next: 21.9.1
   i18next-fluent: 2.0.0
+  i18next-fs-backend: 1.1.5
+  locale-emoji: 0.3.0
   luxon: 3.0.3
   quilt-bulma: 0.0.10
   remark-excerpt: 1.0.0-beta.1
@@ -845,15 +853,18 @@ packages:
       globby: 13.1.2
     dev: true
 
-  /astro-i18next/1.0.0-beta.3_astro@1.2.1:
-    resolution: {integrity: sha512-Vw2nwcj/aM0F7BcuAQLPrEf6dKh51BNWvQf0SeI54vx/HPweF9gwEYhFlERajIVMyStpRpfGslZiwRrei6QX5g==}
+  /astro-i18next/1.0.0-beta.10_astro@1.2.1:
+    resolution: {integrity: sha512-xIJjJOFt2B/ipYszrxxpLWCh2WAgb4sftZApP1AKLBKgTrCLOL4feMZ0jzPCj2yRQ4rBLW0V81cH5Yrfz8hAcg==}
+    hasBin: true
     peerDependencies:
-      astro: ^1.0.0-beta.1
+      astro: ^1.0.0
     dependencies:
+      '@proload/core': 0.3.3
+      '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
       astro: 1.2.1_sass@1.54.9
-      country-code-to-flag-emoji: 1.1.0
       i18next: 21.9.1
       iso-639-1: 2.1.15
+      locale-emoji: 0.3.0
     dev: true
 
   /astro/1.2.1_sass@1.54.9:
@@ -1125,10 +1136,6 @@ packages:
     resolution: {integrity: sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==}
     dependencies:
       safe-buffer: 5.1.2
-    dev: true
-
-  /country-code-to-flag-emoji/1.1.0:
-    resolution: {integrity: sha512-S+UzvEKOrfDUwhN8YyMDgiQyYCVUVNBVtt4NUFwDz1nQ8mWo2cqA6Rkvb9uA90EsHS+hGIolpLGVrYnC2IQVKA==}
     dev: true
 
   /cross-spawn/7.0.3:
@@ -1846,6 +1853,10 @@ packages:
       fluent_conv: 3.1.0
     dev: true
 
+  /i18next-fs-backend/1.1.5:
+    resolution: {integrity: sha512-raTel3EfshiUXxR0gvmIoqp75jhkj8+7R1LjB006VZKPTFBbXyx6TlUVhb8Z9+7ahgpFbcQg1QWVOdf/iNzI5A==}
+    dev: true
+
   /i18next/21.9.1:
     resolution: {integrity: sha512-ITbDrAjbRR73spZAiu6+ex5WNlHRr1mY+acDi2ioTHuUiviJqSz269Le1xHAf0QaQ6GgIHResUhQNcxGwa/PhA==}
     dependencies:
@@ -2051,6 +2062,10 @@ packages:
       js-yaml: 3.14.1
       pify: 4.0.1
       strip-bom: 3.0.0
+    dev: true
+
+  /locale-emoji/0.3.0:
+    resolution: {integrity: sha512-JGm8+naU49CBDnH1jksS3LecPdfWQLxFgkLN6ZhYONKa850pJ0Xt8DPGJnYK0ZuJI8jTuiDDPCDtSL3nyacXwg==}
     dev: true
 
   /locate-path/5.0.0:
