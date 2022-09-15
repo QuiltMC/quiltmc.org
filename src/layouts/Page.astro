@@ -1,0 +1,48 @@
+---
+import PageTitle from "@atoms/PageTitle.astro";
+import Sidebar from "@setpieces/Sidebar.astro";
+import i18next, { t } from "i18next";
+import Base from "./Base.astro";
+
+let { content } = Astro.props;
+let { title } = content;
+
+const category = Astro.url.pathname.split("/")[2];
+const pages = (await Astro.glob("/src/pages/**/*"))
+	.filter((page) => page.url?.startsWith(`/${i18next.language}/${category}`))
+	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
+---
+
+<Base content={Astro.props.content}>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<div class="columns">
+					<div class="column is-narrow">
+						<div class="is-hidden-tablet">
+							<label class="button is-primary" for="toggle-sidebar">
+								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<span>{t("sidebar-pages")}</span>
+							</label>
+							<br />
+							<br />
+						</div>
+
+						<Sidebar
+							value={{
+								"sidebar-pages": {
+									pages: pages.map((page) => page.url),
+								},
+							}}
+						/>
+					</div>
+
+					<main class="content column">
+						<PageTitle title={title} file={Astro.props.frontmatter.file} />
+						<slot />
+					</main>
+				</div>
+			</section>
+		</div>
+	</div>
+</Base>

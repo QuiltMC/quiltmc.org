@@ -1,0 +1,29 @@
+---
+import Message from "@atoms/Message.astro";
+// @ts-ignore
+import { t } from "i18next";
+
+export interface Props {
+	style: string;
+	iconType: string;
+	icon: string;
+	tKey: string;
+}
+
+const { style, iconType, icon, tKey } = Astro.props as Props;
+const header = t(`message-${tKey}`, { ns: "home" });
+---
+
+<Message style={style}>
+	<h2 class="has-text-centered">
+		<span class="icon-text">
+			<span class={`icon has-text-${iconType} mr-3`}>
+				<i class={`fas fa-${icon}`}></i>
+			</span>
+
+			<span>{header}</span>
+		</span>
+	</h2>
+
+	<slot />
+</Message>

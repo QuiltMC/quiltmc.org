@@ -1,0 +1,41 @@
+---
+import Redirect from "@layouts/Redirect.astro";
+
+const { href } = Astro.props;
+
+interface RedirectPath {
+	params: {
+		redirect: URL | string;
+	};
+	props: {
+		href: URL | string;
+	};
+}
+
+export async function getStaticPaths() {
+	const pages = await Astro.glob("/src/pages/**/*.md*");
+
+	const redirects: RedirectPath[] = [];
+	pages.forEach((p) => {
+		if (p.frontmatter.redirect_from) {
+			p.frontmatter.redirect_from.forEach((url: string) => {
+				if (url.startsWith("/")) {
+					url = url.substring(1);
+				}
+				redirects.push({
+					params: {
+						redirect: url,
+					},
+					props: {
+						href: p.url,
+					},
+				});
+			});
+		}
+	});
+
+	return redirects;
+}
+---
+
+<Redirect {href} />

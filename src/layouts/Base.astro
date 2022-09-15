@@ -1,0 +1,45 @@
+---
+import LanguageModal from "@atoms/LanguageModal.astro";
+import Footer from "@setpieces/Footer.astro";
+import HtmlHead, { HeadProps } from "@setpieces/HtmlHead.astro";
+import NavBar from "@setpieces/NavBar.astro";
+
+import i18next from "i18next";
+import rtlSettings from "@data/RtlSettings";
+
+export interface BaseProps extends HeadProps {
+	isPrivate?: boolean;
+}
+const content = Astro.props.content as BaseProps;
+
+// extract locale from URL
+const match = (Astro.url.pathname + "/").match(/^\/([\w-]+)\//);
+if (match && i18next.languages.includes(match[1])) {
+	await i18next.changeLanguage(match[1]);
+} else {
+	await i18next.changeLanguage("en");
+}
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language} dir={rtlSettings().textDirection}>
+	<HtmlHead
+		title={content?.title}
+		description={content?.description}
+		date={content?.date}
+	/>
+
+	<body class="page">
+		<input id="low-contrast" type="checkbox" class="is-hidden" />
+		<input id="language-switcher" type="checkbox" class="is-hidden" />
+		<input id="toggle-navbar" type="checkbox" class="is-hidden" />
+		<input id="toggle-sidebar" type="checkbox" class="is-hidden" />
+
+		{!Astro.props.navless && <NavBar root={Astro.props.root} />}
+
+		<slot />
+
+		<Footer />
+		<LanguageModal />
+	</body>
+</html>

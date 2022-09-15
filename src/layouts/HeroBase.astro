@@ -1,0 +1,93 @@
+---
+import Base from "./Base.astro";
+//@ts-ignore
+import Button from "@atoms/Button.astro";
+import NavBar from "@setpieces/NavBar.astro";
+import rtlSettings from "@data/RtlSettings";
+import site from "@data/Site";
+
+import { localizePath } from "@util/Util";
+
+const props = Astro.props;
+const { rtl } = rtlSettings();
+---
+
+<Base navless content={props.content}>
+	<section class="hero is-dark has-background-patches">
+		<div class="hero-head">
+			<NavBar style="no-style" />
+		</div>
+
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<picture>
+					<source
+						srcset={rtl
+							? "/assets/img/banner-rtl.svg"
+							: "/assets/img/banner.svg"}
+						media="(prefers-color-scheme: dark)"
+					/>
+					<img
+						class="is-center"
+						style="margin:auto; height: 8rem;"
+						alt="Quilt Banner"
+						src={rtl
+							? "/assets/img/banner-light-rtl.svg"
+							: "/assets/img/banner-light.svg"}
+					/>
+				</picture>
+
+				<div class="button-grid">
+					<Button
+						href={localizePath("/install")}
+						type="primary"
+						icon="fas fa-download"
+						textKey="button-install"
+					/>
+					<Button
+						href={localizePath("/usage")}
+						type="info"
+						icon="fas fa-book"
+						textKey="button-usage-docs"
+					/>
+					<Button
+						href="https://modder.wiki.quiltmc.org"
+						type="link"
+						icon="fas fa-code"
+						textKey="button-developer-wiki"
+					/>
+					<Button
+						href="https://github.com/QuiltMC/quilt-template-mod"
+						type="github"
+						icon="fas fa-wrench"
+						textKey="button-template-mod"
+					/>
+				</div>
+
+				<div class="button-grid">
+					<Button
+						href={site.discordCommunity}
+						type="discord"
+						icon="fab fa-discord"
+						textKey="button-discord"
+					/>
+					<Button
+						href={site.forum}
+						type="gradle"
+						icon="fab fa-discourse"
+						textKey="button-forum"
+					/>
+					<Button
+						href={site.github.link}
+						target="_blank"
+						type="github"
+						icon="fab fa-github"
+						textKey="button-github"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<slot />
+</Base>

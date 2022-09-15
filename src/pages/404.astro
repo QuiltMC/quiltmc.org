@@ -1,0 +1,44 @@
+---
+import Base from "@layouts/Base.astro";
+import i18next, { t } from "i18next";
+
+// FIXME(leah@pluie): there is only one 404 page, so no i18n on the 404 page for us
+// unless we figure something out
+await i18next.changeLanguage("en");
+---
+
+<style type="text/css" media="screen">
+	.err-container {
+		margin: 10px auto;
+		max-width: 600px;
+		text-align: center;
+	}
+
+	.err-container h1 {
+		margin: 30px 0;
+		font-size: 4em;
+		line-height: 1;
+		letter-spacing: -1px;
+	}
+
+	.err-container .pineapple {
+		width: 1em;
+		vertical-align: top;
+	}
+</style>
+
+<Base root content={{ title: "404" }}>
+	<div class="err-container">
+		<h1>
+			<img
+				class="pineapple"
+				title="Pineapple!"
+				alt=":pineapple:"
+				src="/assets/img/pineapple.png"
+			/>
+			{t("page-404")}
+		</h1>
+		<p><strong>{t("page-404-title")}</strong></p>
+		<p>{t("page-404-subtitle")}</p>
+	</div>
+</Base>

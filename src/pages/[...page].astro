@@ -1,0 +1,34 @@
+---
+import Redirect from "@layouts/Redirect.astro";
+
+interface PagePath {
+	params: {
+		page: URL | string;
+	};
+}
+
+// Redirect; default to English page
+// FIXME: should try to redirect to the appropriate locale for the user
+const { page } = Astro.params;
+
+export async function getStaticPaths() {
+	const allEnglishPages = await Astro.glob("/src/pages/en/**/*.md*");
+
+	const pages: PagePath[] = [];
+	allEnglishPages.forEach((p) => {
+		const page = p.url?.slice("/en/".length);
+
+		if (page.length > 0) {
+			pages.push({
+				params: {
+					page: page,
+				},
+			});
+		}
+	});
+
+	return pages;
+}
+---
+
+<Redirect href={`/en/${page}`} />

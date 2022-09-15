@@ -1,0 +1,17 @@
+---
+import Base, { BaseProps } from "./Base.astro";
+
+const props = Astro.props as BaseProps;
+---
+
+<Base content={props.content}>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<main class="content container">
+					<slot />
+				</main>
+			</section>
+		</div>
+	</div>
+</Base>

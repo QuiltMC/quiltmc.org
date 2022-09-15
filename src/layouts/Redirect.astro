@@ -1,0 +1,19 @@
+---
+export interface Props {
+	href: URL | string;
+}
+
+const { href } = Astro.props as Props;
+---
+
+<head>
+	<meta charset="utf-8" />
+	<title>Redirecting to {href}</title>
+	<meta http-equiv="refresh" content={`1; ${href}`} />
+	<link id="canonical" rel="canonical" {href} />
+
+	<script is:inline>
+		window.location =
+			document.getElementById("canonical").href + window.location.hash;
+	</script>
+</head>

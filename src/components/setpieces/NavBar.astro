@@ -1,0 +1,130 @@
+---
+import { t } from "i18next";
+import Dropdown from "@parts/nav/Dropdown.astro";
+import NavLink from "@parts/nav/NavLink.astro";
+import { localizePath } from "@util/Util";
+
+export interface Props {
+	style?: string;
+	root?: boolean;
+}
+
+const { style = "is-dark" } = Astro.props as Props;
+---
+
+<nav
+	class:list={["navbar", style]}
+	role="navigation"
+	aria-label="main navigation"
+>
+	<div class="navbar-brand">
+		<a class="navbar-item navbar-logo" href={localizePath("")}>
+			<img src="/assets/img/logo.svg" alt="Quilt Logo" />
+
+			<span class="ml-2">{t("short-title")}</span>
+		</a>
+
+		<label
+			class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom"
+			for="language-switcher"
+			data-tooltip={t("tooltip-switch-language")}
+		>
+			<i class="fas fa-language fa-2xl"></i>
+		</label>
+
+		<label
+			class="navbar-item px-2 has-tooltip-arrow has-tooltip-bottom"
+			for="low-contrast"
+			data-tooltip={t("tooltip-toggle-low-contrast")}
+		>
+			<span id="theme-normal-contrast">
+				<i class="fas fa-circle-half-stroke fa-xl"></i>
+			</span>
+
+			<span id="theme-low-contrast">
+				<i class="fal fa-circle-half-stroke fa-xl"></i>
+			</span>
+		</label>
+
+		<label class="navbar-burger" for="toggle-navbar" aria-label="menu">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</label>
+	</div>
+
+	<div class="navbar-menu">
+		<div class="navbar-end">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="about" name={t("nav-about")} />
+			</div>
+
+			<NavLink href={localizePath("/blog/1")} subpage={true}>
+				{t("nav-blog")}
+			</NavLink>
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="community" name={t("nav-community")} right={true} />
+			</div>
+
+			<NavLink href={localizePath("/install")} subpage={true}>
+				{t("nav-install")}
+			</NavLink>
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<Dropdown category="usage" name={t("nav-usage")} right={true}>
+					<div class="divider">{` ${t("divider-development")} `}</div>
+
+					<NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
+						{t("nav-page-developer-wiki")}
+					</NavLink>
+					<NavLink target="_blank" href="https://maven.quiltmc.org">
+						{t("nav-page-maven-repo")}
+					</NavLink>
+					<NavLink
+						target="_blank"
+						href="https://github.com/QuiltMC/quilt-template-mod"
+					>
+						{t("nav-page-template-mod")}
+					</NavLink>
+
+					<div class="divider">{t("divider-external-links")}</div>
+
+					<NavLink
+						href="https://lambdaurora.dev/tools/import_quilt.html"
+						subpage={false}
+					>
+						{t("nav-page-import-utility")}
+					</NavLink>
+				</Dropdown>
+			</div>
+
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link is-arrowless">
+					<span class="is-hidden-desktop">
+						{t("nav-more-pages")}
+					</span>
+					<span class="icon is-hidden-mobile is-hidden-tablet-only">
+						<i class="fas fa-ellipsis-v fa-xl"></i>
+					</span>
+				</a>
+
+				<div class="navbar-dropdown is-right is-boxed">
+					<NavLink href={localizePath("/mc-patchnotes")} icon="fas fa-notebook">
+						{t("nav-page-patch-notes")}
+					</NavLink>
+					<NavLink href={localizePath("/openings")} icon="fas fa-briefcase">
+						{t("nav-page-openings")}
+					</NavLink>
+					<NavLink
+						href={localizePath("/staff")}
+						icon="fas fa-clipboard-user"
+						subpage={true}
+					>
+						{t("nav-page-staff-resources")}
+					</NavLink>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,32 @@
+---
+import { getModifyDateString, localizeList } from "@util/Util";
+import { t } from "i18next";
+
+export interface Props {
+	title: string;
+	authors?: string[];
+	file?: string;
+}
+const { title, authors, file } = Astro.props;
+---
+
+<div class="media mb-5">
+	<div class="media-content">
+		<h1 class="title">
+			{title}
+		</h1>
+
+		{
+			authors && authors.length > 0 && (
+				<p class="subtitle is-6">
+					{t("page-authors", {
+						count: authors.length,
+						names: localizeList(authors),
+					})}
+				</p>
+			)
+		}
+
+		{file && <p class="subtitle is-6">Edited: {getModifyDateString(file)}</p>}
+	</div>
+</div>

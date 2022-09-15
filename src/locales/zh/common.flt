@@ -1,0 +1,83 @@
+lang-name = 简体中文
+
+title = The Quilt Project
+short-title = QuiltMC
+description = 真正关心你的模组加载器。
+
+title-formatted = {$shortTitle} | {$title}
+serial-comma = {$prev}、{$next}
+
+# Common strings
+-developer-wiki = 开发者 Wiki
+-forum = 论坛
+-import-utility = Quilt 导入工具
+-openings = 空缺职位
+-patch-notes = 更新日志
+-staff-resources = 内部资源
+-template-mod = 模组模板
+
+# Brand names/proper nouns - You shouldn't need to edit this.
+-mastodon = Mastodon
+-github = GitHub
+-discord = Discord
+-twitter = Twitter
+-twitch = Twitch
+
+page-authors = 作者：{$names}
+
+nav-about = 关于
+nav-blog = 博客
+nav-community = 社区
+nav-install = 安装
+nav-more-pages = 更多页面
+nav-usage = 使用
+
+divider-development = 开发资源
+divider-external-links = 外部链接
+
+nav-page-developer-wiki = {-developer-wiki}
+nav-page-import-utility = {-import-utility}
+nav-page-maven-repo = Maven 库
+nav-page-openings = {-openings}
+nav-page-patch-notes = {-patch-notes}
+nav-page-staff-resources = {-staff-resources}
+nav-page-template-mod = {-template-mod}
+
+button-close = 关闭
+button-discord = {-discord}
+button-discord-community = 社区服务器
+button-discord-toolchain = 开发服务器
+button-developer-wiki = {-developer-wiki}
+button-forum = {-forum}
+button-github = {-github}
+button-install = 安装
+button-mastodon = {-mastodon}
+button-maven-repo = Maven 库
+button-more = 更多
+button-more-posts = 更多文章
+button-openings = {-openings}
+button-patch-notes = Minecraft {-patch-notes}
+button-rss = RSS
+button-template-mod = {-template-mod}
+button-twitter = {-twitter}
+button-twitch = {-twitch}
+button-usage-docs = 使用文档
+
+sidebar-pages = 页面
+sidebar-resources = 资源
+sidebar-teams = 团队
+
+paginator-button-first = 第一页
+paginator-button-previous = 上页
+paginator-button-next = 下页
+paginator-button-last = 最后一页
+
+tooltip-switch-language = 切换语言
+tooltip-toggle-low-contrast = 切换低对比模式
+
+prompt-error-noscript = 你已禁用 JavaScript。请启用 JavaScript 以使用查找功能。
+prompt-search-language = 在这里查找你的语言……
+
+page-404 = 404
+page-404-title = 页面失踪了 :(
+page-404-subtitle = 找不到你要访问的页面 orz
