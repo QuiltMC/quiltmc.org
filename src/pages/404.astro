@@ -1,6 +1,10 @@
 ---
 import Base from "@layouts/Base.astro";
-import { t } from "i18next";
+import i18next, { t } from "i18next";
+
+// FIXME(leah@pluie): there is only one 404 page, so no i18n on the 404 page for us
+// unless we figure something out
+await i18next.changeLanguage("en");
 ---
 
 <style type="text/css" media="screen">
