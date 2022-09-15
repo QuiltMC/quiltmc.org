@@ -129,10 +129,10 @@ const titleFormatted = t("title-formatted", {
     </script> -->
 
 	{
-		rtlSettings().textDirection == "ltr" ? (
-			<link rel="stylesheet" href="/assets/css/style.min.css" />
-		) : (
+		rtlSettings().rtl ? (
 			<link rel="stylesheet" href="/assets/css/style-rtl.min.css" />
+		) : (
+			<link rel="stylesheet" href="/assets/css/style.min.css" />
 		)
 	}
 
