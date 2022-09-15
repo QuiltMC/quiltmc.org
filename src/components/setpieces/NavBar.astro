@@ -59,23 +59,23 @@ const { style = "is-dark" } = Astro.props as Props;
 				<Dropdown category="about" name={t("nav-about")} />
 			</div>
 
-			<NavLink href={localizePath("/blog/1")} subpage={true}>
+			<NavLink href={localizePath("/blog/1")} subpage>
 				{t("nav-blog")}
 			</NavLink>
 
 			<div class="navbar-item has-dropdown is-hoverable">
-				<Dropdown category="community" name={t("nav-community")} right={true} />
+				<Dropdown category="community" name={t("nav-community")} right/>
 			</div>
 
-			<NavLink href={localizePath("/install")} subpage={true}>
+			<NavLink href={localizePath("/install")} subpage>
 				{t("nav-install")}
 			</NavLink>
 
 			<div class="navbar-item has-dropdown is-hoverable">
-				<Dropdown category="usage" name={t("nav-usage")} right={true}>
+				<Dropdown category="usage" name={t("nav-usage")} right>
 					<div class="divider">{` ${t("divider-development")} `}</div>
 
-					<NavLink href="https://modder.wiki.quiltmc.org" subpage={false}>
+					<NavLink href="https://modder.wiki.quiltmc.org" subpage>
 						{t("nav-page-developer-wiki")}
 					</NavLink>
 					<NavLink target="_blank" href="https://maven.quiltmc.org">
@@ -90,10 +90,7 @@ const { style = "is-dark" } = Astro.props as Props;
 
 					<div class="divider">{t("divider-external-links")}</div>
 
-					<NavLink
-						href="https://lambdaurora.dev/tools/import_quilt.html"
-						subpage={false}
-					>
+					<NavLink href="https://lambdaurora.dev/tools/import_quilt.html">
 						{t("nav-page-import-utility")}
 					</NavLink>
 				</Dropdown>
