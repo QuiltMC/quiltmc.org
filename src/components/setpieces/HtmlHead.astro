@@ -2,9 +2,9 @@
 import site from "@data/Site";
 import i18next, { t } from "i18next";
 import rtlSettings from "@data/RtlSettings";
-import { localizeUrl } from "astro-i18next";
 
 import { DateTime } from "luxon";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface HeadProps {
 	title: string;
@@ -13,9 +13,6 @@ export interface HeadProps {
 }
 
 const props = Astro.props as HeadProps;
-
-const supportedLanguages = i18next.languages;
-const currentUrl = Astro.url.href;
 const currentLang = i18next.language;
 
 const date = props.date ? DateTime.fromISO(props.date) : null;
@@ -57,18 +54,7 @@ const titleFormatted = t("title-formatted", {
 
 	<link rel="canonical" href={Astro.url} />
 
-	{
-		// This is the same as `astro-i18next`'s `HeadHrefLangs` component,
-		// but I chose to homebrew this since that one uses a deprecated feature.
-		// They work exactly the same.
-		supportedLanguages.map((supportedLanguage) => (
-			<link
-				rel="alternate"
-				hreflang={supportedLanguage}
-				href={localizeUrl(currentUrl, supportedLanguage)}
-			/>
-		))
-	}
+	<HeadHrefLangs />
 
 	<meta name="author" content={site.social.name} />
 	<meta name="description" content={description} />
@@ -93,40 +79,6 @@ const titleFormatted = t("title-formatted", {
 
 	<meta property="twitter:image" content={site.logo} />
 	<meta property="twitter:title" content={props.title} />
-
-	<!-- <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-
-            "dateModified": "{{ page.date | date: "%FT%H:%M:%S%z" }}",
-            "datePublished": "{{ page.date | date: "%FT%H:%M:%S%z" }}",
-            "description": "{{ description }}",
-            "headline": "{{ title }}",
-            "image": "{{ site.url }}{{ site.logo }}",
-            "url": "{{ site.url }}{{ page.url }}",
-
-            "author": {
-                "@type": "Organization",
-                "name": "{{ site.social.name }}"
-            },
-
-            "mainEntityOfPage": {
-                "@id": "{{ site.url }}{{ page.url }}",
-                "@type": "WebPage"
-            },
-
-            "publisher": {
-                "@type": "Organization",
-                "name": "{{ site.social.name }}",
-
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "{{ site.url }}{{ site.logo }}"
-                }
-            }
-        }
-    </script> -->
 
 	{
 		rtlSettings().rtl ? (
