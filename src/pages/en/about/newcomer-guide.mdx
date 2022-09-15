@@ -1,11 +1,10 @@
 ---
 title: Newcomers' Guide
-description: A newcomers'
+description: A newcomers' guide to Quilt—information, questions and concerns
 layout: /src/layouts/Page.astro
 ---
 
-import Message from "@atoms/Message.astro";
-import Summary from "@atoms/Summary.astro";
+import Foldable from "@atoms/Foldable.astro";
 
 This document is intended to be an overview of Quilt, and a way to address common questions and concerns by newcomers
 to The Quilt Project, its ecosystem or its community spaces. If you've been linked here, please read this page in full,
@@ -32,9 +31,8 @@ We currently work directly with Forge on moderation-related issues, and we're lo
 
 Below, you'll find a list of common questions and concerns. Because some answers are quite long, they've been collapsed -- please click or tap on them to read our response. Additionally, it's entirely possible that we've forgotten to cover something here -- we'd love to hear from you if you think of anything that needs adding!
 
-<Message>
-<details>
-<Summary>What does Quilt provide over other mod-loaders?</Summary>
+<Foldable id="what-does-quilt-provide">
+<span slot="title">What does Quilt provide over other mod-loaders?</span>
 
 At the time of writing, Quilt is in beta -- that means that it's still in a testing phase, so not everything we'd like to do has been done quite yet. It also means that many of the things we've done to the project itself are developer-oriented (although this can still result in better mods for everyone) -- because we believe it's important to build a solid technical foundation before working on quality-of-life features.
 
@@ -55,26 +53,18 @@ The following improvements are also planned for a full release:
 - The Chasm project, which will provide safer tooling for working with Java bytecode; acting as the backend for our Mixin implementation, but also allowing developers to easily add their own bytecode-manipulation tools -- This is a project with implications far wider than just the modding community, and we're very excited about it!
 
 It's worth noting that while many of these improvements are developer-oriented, they should allow for higher-quality mods that are more compatible with each other and require less development effort to maintain. Additionally, Quilt's community-based approach attempts to focus on what's best for its developers, focusing on the things that they need to write great mods while also taking the bigger picture into account, and avoiding playing favorites with larger mods or more well-known mod developers.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>What about the Fabric mods I already play?</Summary>
+<Foldable id="what-about-fabric-mods">
+<span slot="title">What about the Fabric mods I already play?</span>
 
 If you already use Fabric, we have good news -- Quilt is also compatible with most Fabric mods! As long as the mods don't make use of internal Fabric APIs, you should be able to add them to your `mods` folder as you always have and, assuming you have our Quilted Fabric API installed ([which is part of QSL](https://modrinth.com/mod/qsl)), things should just work.
 
 We plan on maintaining Fabric support for as long as we can -- we'll only stop it if it becomes infeasible to maintain it as part of Quilt itself. That said, if it does happen, we'll be gifting that part of the project to the community, and providing its new maintainers with as much help as we can.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>Won't this just further split the community?</Summary>
+<Foldable id="wont-this-split-the-community">
+<span slot="title">Won't this just further split the community?</span>
 
 This is a question we get a lot, and one that's clearly on a lot of people's minds. Instead of trying to predict the future, though, let's break this one down a bit.
 
@@ -93,14 +83,10 @@ Ultimately, though, we believe that the benefits of user choice outweigh the dra
 That said, there's only so much we can do -- developers have the right to develop mods for the mod-loaders that they choose, and we'd never wish to take that away from them. For most people, modding is a hobby -- there will never be a good reason to deny developers more choice, and it's important that nobody tries to undermine their right to develop mods using the tools that they prefer.
 
 We all have the power to approach this issue in a mature way, and we owe it to the hard-working mod developers to do that. Speaking of which, if you're a mod developer that would like to look into writing cross-loader mods, please feel free to join us on Discord -- there are plenty of developers there that can point you in the right direction.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>What's different about Quilt's governance?</Summary>
+<Foldable id="difference-about-governance">
+<span slot="title">What's different about Quilt's governance?</span>
 
 Most projects that you'll find on the Internet are governed in a top-down manner, as a form of strict hierarchy. This often results in a tree-like or pyramid-like structure, in which the people at the top can, in one way or another, decide the fate of the entire project, and exert influence on the people below them.
 
@@ -173,14 +159,10 @@ The development teams are responsible for working on the technology behind Quilt
 Development teams may also be split into sub-teams. This is generally done for larger projects or when a team has multiple projects to look after, as it allows team members to specialize and prevents any one team from having to take on too many concurrent responsibilities.
 
 It's worth noting that anyone can contribute to any of Quilt's projects without joining one of the development teams, but contributors will still be interacting directly with whatever team is running the project they're working with.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>Pineapple? Isn't that a pumpkin?</Summary>
+<Foldable id="pineapple">
+<span slot="title">Pineapple? Isn't that a pumpkin?</span>
 
 Pineapple is Quilt's first community mascot -- its pronouns are it/its, and it was born on the day The Quilt Community Discord opened to the public: the 20th of April 2021. On that day, our users and staff members decided to hang out in voice chat, eventually setting up a game on [skribbl.io](https://skribbl.io).
 
@@ -196,14 +178,10 @@ As part of their turn, one of the players was tasked with drawing a pumpkin. Thi
 </figure>
 
 Pineapple is a core part of our community's culture, and we often use it to represent our community -- both officially and informally. If you find yourself in Quilt community spaces, you'll definitely see many variants of Pineapple's original drawing -- please feel free to create your own art too, if you'd like!
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>What's up with Quilt's community moderation?</Summary>
+<Foldable id="our-community-moderation">
+<span slot="title">What's up with Quilt's community moderation?</span>
 
 Among other things, Quilt exists to address issues with poor moderation in some other parts of the Minecraft community. We employ an approach that we call "Defensive Moderation" -- an emerging concept that focuses primarily on harm reduction and investigative moderation, keeping an eye on behaviors and trends in the wider community and acting upon them to prevent issues before they happen.
 
@@ -212,35 +190,24 @@ The reason our approach feels so different to other communities' is because we i
 Similarly, Quilt itself doesn't operate in a vacuum -- we operate a program known as Quilt Community Collab, where we work with other related communities on moderation-related issues and events. Working alongside organizations such as Forge means that we can contribute to improving the _entire_ community sphere, for everyone -- and in return, those organizations help us with our investigations and moderation-related issues.
 
 We believe that all communities can contribute positively to the well-being of their users, and that they have a responsibility to create safe, inclusive spaces, and to set a trend doing so -- encouraging more communities to do the same, and making the Internet a better place for everyone.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>Does Quilt send my mods to the servers I play on?</Summary>
+<Foldable id="does-quilt-send-my-mods-to-servers">
+<span slot="title">Does Quilt send my mods to the servers I play on?</span>
 
 This is a misconception based on poor communication: at one point, to help ease the moderation burden in Quilt's community spaces, we were thinking about potentially sending the client's list of mods to the servers they connect to (like what Forge does). However, this was never formalized -- no RFC was made, and nothing like this was implemented for the beta.
 
 Since then, better ideas have appeared. One example is in the in-progress [RFC #17](https://github.com/QuiltMC/rfcs/pull/17), which proposes a standard feature toggle system -- allowing servers to tell clients what they expect of them, and for mods to configure themselves based on those expectations.
 
 We prefer a solution that doesn't impact the privacy of our users -- we're still open to alternative suggestions, but we do believe that the above RFC may be the correct solution.
+</Foldable>
 
-</details>
-
-</Message>
-
-<Message>
-<details>
-<Summary>Why don't you explain the Fabric drama here?</Summary>
+<Foldable id="why-no-fabric-drama">
+<span slot="title">Why don't you explain the Fabric drama here?</span>
 
 This is a question we've been getting a lot since Quilt entered beta -- it's something that sounds reasonable on paper, but we strongly feel that it's not an appropriate subject for our website, nor is it a discussion that can be productive in our community spaces.
 
 It's worth noting that the philosophy behind Quilt (from its community management style to its governance approach) is independent of and largely predates the Fabric drama. Quilt -- its developers, contributors, moderators, and users -- are not defined by those events. We aim to be the best mod-loader and modding community that we can be, not to simply be a Fabric clone with different leadership.
 
 We want to move on from what happened, so we won't spend lots of time dwelling on these events. We believe that our work stands on its own, and doesn't require propping up against the backdrop of the past. For that reason, we're going to continue working on Quilt, pushing for better, more inclusive, safer community spaces, and doing our best -- not just for our own users, but to try to improve the modding community at large.
-
-</details>
-
-</Message>
+</Foldable>
