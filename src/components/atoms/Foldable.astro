@@ -1,0 +1,23 @@
+---
+import Message from "./Message.astro";
+
+export interface Props {
+	id: string;
+}
+const { id } = Astro.props as Props;
+---
+
+<Message>
+	<details id={id}>
+		<summary>
+			<i class="summary-icon is-ltr fa-solid fa-lg fa-circle-chevron-right" />
+			<i class="summary-icon is-rtl fa-solid fa-lg fa-circle-chevron-left" />
+
+			<span><slot name="title" /></span>
+			<a href={`#${id}`}>
+				<i class="fas fa-link" />
+			</a>
+		</summary>
+		<slot />
+	</details>
+</Message>
