@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches-ignore:  [stable]
+    branches-ignore: [stable]
 
   pull_request:
 
@@ -14,6 +14,7 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-
       - name: Install, build, and upload your site
         uses: withastro/action@v0
+        with:
+          node-version: 18
