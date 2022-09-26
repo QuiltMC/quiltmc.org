@@ -1,21 +1,14 @@
 ---
-import type { AstroInstance } from "astro";
+import TeamMember from '@parts/team/TeamMember.astro';
+import teamData from '@data/Team';
 
 export interface Props {
 	list: string[];
 }
 
 const { list } = Astro.props as Props;
-
-const arr = (await Astro.glob("/src/data/team/*.astro")).map((member) => {
-	const memberId = member.file.match(/\/(\w+)\.astro$/)[1];
-	return [memberId, member];
-});
-//@ts-ignore
-const allPages: Map<string, AstroInstance> = new Map(arr);
-
-// ensure that pages are displayed in the order specified.
-const pages = list.map((member) => allPages.get(member));
 ---
 
-{pages.map((page) => <page.default />)}
+{list.map((name) =>
+	<TeamMember member={teamData[name]} />
+)}

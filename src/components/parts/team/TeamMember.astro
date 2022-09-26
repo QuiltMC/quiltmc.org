@@ -1,76 +1,55 @@
 ---
 import { getPKSystemMembers, Member } from "@util/PluralKit";
+import type { TeamMember, SystemMember } from "@data/Team";
+import { t } from "i18next";
 
-export interface Link {
-	icon: string,
-	url: string,
-}
-export interface ManualMember {
-	icon: string,
-	name: string,
-}
 export interface Props {
-	name?: string,
-	discord?: string,
-	github: string,
-	description?: string,
-	avatar?: string,
-	pixelateAvatar?: boolean,
-	systemMembers?: string | ManualMember[],
-	links?: Link[],
+	member: TeamMember
 }
-const {
-	name,
-	discord,
-	github,
-	description,
-	avatar,
-	pixelateAvatar = false,
-	systemMembers,
-	links = [],
-} = Astro.props as Props;
+const { member } = Astro.props as Props;
 
-async function getSystemMembers(members: string | ManualMember[]): Promise<Member[]> {
+async function getSystemMembers(members: string | SystemMember[]): Promise<Member[]> {
 	if (typeof members === 'string') {
 		return await getPKSystemMembers(members);
 	} else {
-		return members.map(member => {
+		return members.map((member) => {
 			return { avatarUrl: member.icon, name: member.name };
 		});
 	}
 }
-
+// this is the "N/A" text, for anyone wondering
+const na = t("team:n-a");
 ---
 
 <div class="card is-team-member">
 	<div class="card-content">
-		{ avatar &&
+		{ member.avatar &&
 		<div class="avatar">
-			<img class={pixelateAvatar ? "is-pixelated" : "" } src={avatar} alt="Avatar">
+			<img class={ member.pixelateAvatar ? "is-pixelated" : "" } src={member.avatar} alt={t("team:avatar-alt")}>
 		</div>
 		}
 
 		<div class="media">
 			<div class="media-content">
 				<p class="title is-5 mb-5">
-					{ name ? name : <>&nbsp;</> }
+					{ member.name ?? <>&nbsp;</> }
 				</p>
 
 				<p class="subtitle is-6">
 					<i class="fab fa-fw fa-discord"></i>
-					{ discord ? discord : "N/A" }
+					{ member.discord ?? na }
 				</p>
 
 				<p class="subtitle is-6">
 					<i class="fab fa-fw fa-github"></i>
 
-					{ github ? <a href={`https://github.com/${github}`}>{github}</a> : "N/A" }
+					{ member.github ? <a href={`https://github.com/${member.github}`}>{member.github}</a> : na }
 				</p>
 
 				<p class="subtitle is-6 is-links">
-					{links.length > 0
+					{ member.links && member.links.length > 0
 
-					? links.map(link =>
+					? member.links.map((link) =>
 					<a href={link.url}>
 						<i class:list={["fa-lg", link.icon]}></i>
 					</a>)
@@ -81,23 +60,24 @@ async function getSystemMembers(members: string | ManualMember[]): Promise<Membe
 			</div>
 		</div>
 
-		{ (description || systemMembers) &&
+		{ (member.description || member.systemMembers) &&
 		<div class="content">
-			{ systemMembers &&
+			{ member.systemMembers &&
 			<div class="media system-member-title">
 				<div class="media-content">
-					<p class="subtitle is-6 has-text-centered">Plural System</p>
+					<p class="subtitle is-6 has-text-centered">
+						{t("team:plural-system")}
+					</p>
 				</div>
 			</div>
 
-			<div class={description ? "system-members mb-4" : "system-members" }>
-				{ systemMembers === "---"
-				?
-				<div class="has-tooltip-arrow" data-tooltip="Member list redacted by request ❤️">
+			<div class:list={["system-members", member.description ? "mb-4" : ""]}>
+				{ member.systemMembers === "---"
+				? <div class="has-tooltip-arrow" data-tooltip={t("team:member-list-redacted")}>
 					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
 				</div>
 
-				: getSystemMembers(systemMembers).then(m => m.map(m => (
+				: getSystemMembers(member.systemMembers).then((m) => m.map((m) => (
 				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
 					<img src={m.avatarUrl} />
 				</div>
@@ -106,7 +86,7 @@ async function getSystemMembers(members: string | ManualMember[]): Promise<Membe
 			</div>
 			}
 
-			{ description }
+			{ member.description }
 		</div>
 		}
 	</div>
