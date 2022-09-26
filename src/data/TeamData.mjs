@@ -20,6 +20,10 @@ export default {
 				icon: "fab fa-twitter",
 				url: "https://twitter.com/ADudeCalledLeo",
 			},
+			{
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/ADudeCalledLeo",
+			},
 		],
 	},
 	AlexIIL: {

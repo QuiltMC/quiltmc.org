@@ -1,6 +1,5 @@
 import * as fs from "fs";
 import { DateTime, Interval } from "luxon";
-import { exit } from "process";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
 import { sortBy, tryToRunPromiseWithTimeout } from "./util.mjs";
