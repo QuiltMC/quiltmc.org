@@ -42,13 +42,12 @@ These gigantic components are intended to be used alone in pages, and not in oth
 ### Data (`src/data/`, `@data`)
 
 The data folder contains some TypeScript files for storing some common variables used throughout the site, such as links, account names, localization settings, etc.
-It also contains the components for each team member under `src/data/team`, which are basically just data about each member, but fitted into a `TeamMember` component.
 
 ### Layouts (`src/layouts/`, `@layouts`)
 
 This folder contains every layout of the site, used by all pages of the site. Nothing much to say about that.
 
-### Locales (`src/locales/`) 
+### Locales (`src/locales/`)
 
 This folder contains the translated strings used in the site. Under this folder, each locale gets its own folder—`en/` for English, `zh/` for Chinese, etc.
 Under that, you will see a bunch of `.flt` files—they are [Fluent](https://projectfluent.org) files, parsed and substituted into the site.
