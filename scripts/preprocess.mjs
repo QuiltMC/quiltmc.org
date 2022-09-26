@@ -1,8 +1,9 @@
 import * as fs from "fs";
 import { DateTime, Interval } from "luxon";
+import { exit } from "process";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
-import { sortBy } from "./util.mjs";
+import { sortBy, tryToRunPromiseWithTimeout } from "./util.mjs";
 
 async function main() {
 	prepareCacheDirectory();
@@ -68,12 +69,25 @@ async function queryPluralKit() {
 	}
 	console.log(`queryPluralKit: loading system data for systems ${systems}`);
 
-	const responses = await Promise.all(
-		systems.map((id) =>
-			fetch(`https://api.pluralkit.me/v2/systems/${id}/members`).then((r) =>
-				r.json().then((json) => [id, json])
-			)
-		)
+	const responses = await tryToRunPromiseWithTimeout(
+		(signal) =>
+			Promise.all(
+				systems.map((id) =>
+					fetch(`https://api.pluralkit.me/v2/systems/${id}/members`, {
+						signal,
+					}).then((r) => r.json().then((json) => [id, json]))
+				)
+			),
+		15 * 1000,
+		(retriesLeft) =>
+			console.error(
+				`queryPluralKit: failed to download PK data; ${retriesLeft} retries left`
+			),
+		(retries) => {
+			throw new Error(
+				`queryPluralKit: failed to download PK data after ${retries} retries`
+			);
+		}
 	);
 
 	const data = {};
