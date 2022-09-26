@@ -6,7 +6,7 @@ export default {
 	i18next: {
 		debug: true, // convenient during development to check for missing keys
 		defaultNS: "common",
-		ns: ["common", "footer", "home", "install"],
+		ns: ["common", "footer", "home", "install", "team"],
 	},
 	i18nextPlugins: {
 		backend: "src/ersatz/i18next-fs-fluent-backend.mjs",
