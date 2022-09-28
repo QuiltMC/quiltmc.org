@@ -1,3 +1,6 @@
 {
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///home/leocth/coding/quiltmc.org/.github/workflows/deploy.yml"
+	}
 }
