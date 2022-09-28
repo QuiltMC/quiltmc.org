@@ -17,18 +17,22 @@ function prepareCacheDirectory() {
 		console.log(
 			"prepareCacheDirectory: cache directory does not exist; creating"
 		);
+
 		fs.mkdirSync(paths.CACHE_DIR);
 	}
 }
 
 function copyCSS() {
 	const files = fs.readdirSync(paths.CSS_LOCATION);
+
 	if (!fs.existsSync(paths.CSS_FINAL_LOCATION)) {
 		fs.mkdirSync(paths.CSS_FINAL_LOCATION);
 	}
+
 	files.forEach((file) => {
 		if (file.endsWith(".min.css")) {
 			console.log(`copyCSS: copying ${file}`);
+
 			fs.copyFileSync(
 				`${paths.CSS_LOCATION}/${file}`,
 				`${paths.CSS_FINAL_LOCATION}/${file}`
@@ -41,17 +45,20 @@ async function queryPluralKit() {
 	const stat = fs.statSync(paths.PK_CACHE_FILE, {
 		throwIfNoEntry: false,
 	});
+
 	if (stat) {
 		const interval = Interval.fromDateTimes(
 			DateTime.fromJSDate(stat.mtime),
 			DateTime.now()
 		);
+
 		const length = interval.length("minutes");
 		if (length < 10) {
 			const roundedLength = Math.round(length * 100.0) / 100.0;
 			console.log(
 				`queryPluralKit: using cached PluralKit data; last refresh was ${roundedLength} minutes ago`
 			);
+
 			// it's been less than 10 minutes - don't refresh
 			return;
 		}
@@ -62,10 +69,13 @@ async function queryPluralKit() {
 	const systems = [];
 	for (const id in teamData) {
 		const { systemMembers } = teamData[id];
+
 		if (!systemMembers || !systemMembers.startsWith("pk:")) continue;
+
 		const pkId = systemMembers.slice("pk:".length);
 		systems.push(pkId);
 	}
+
 	console.log(`queryPluralKit: loading system data for systems ${systems}`);
 
 	const responses = await tryToRunPromiseWithTimeout(
@@ -78,10 +88,11 @@ async function queryPluralKit() {
 				)
 			),
 		15 * 1000,
-		(retriesLeft) =>
+		(retriesLeft) => {
 			console.error(
 				`queryPluralKit: failed to download PK data; ${retriesLeft} retries left`
-			),
+			);
+		},
 		(retries) => {
 			throw new Error(
 				`queryPluralKit: failed to download PK data after ${retries} retries`

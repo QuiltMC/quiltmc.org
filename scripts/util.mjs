@@ -18,10 +18,13 @@ export async function tryToRunPromiseWithTimeout(
 ) {
 	const controller = new AbortController();
 	retries = retries || 3;
+
 	onTimeout =
 		onTimeout ||
-		((retriesLeft) =>
-			console.error(`promise has timed out: ${retriesLeft} retries left.`));
+		((retriesLeft) => {
+			console.error(`promise has timed out: ${retriesLeft} retries left.`);
+		});
+
 	onFail =
 		onFail ||
 		((retries) => {
@@ -33,11 +36,14 @@ export async function tryToRunPromiseWithTimeout(
 	while (true) {
 		const timeoutHandle = setTimeout(() => {
 			controller.abort();
+
 			if (retriesLeft <= 0) {
+				// no retries left!
 				onFail(retries);
+			} else {
+				retriesLeft--;
+				onTimeout(retriesLeft);
 			}
-			retriesLeft--;
-			onTimeout(retriesLeft);
 		}, timeout);
 
 		const responses = await signalToPromise(controller.signal);
