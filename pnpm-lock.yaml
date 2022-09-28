@@ -11,7 +11,7 @@ specifiers:
   '@types/luxon': ^3.0.1
   astro: 1.2.1
   astro-html-minifier: ^0.2.0
-  astro-i18next: 1.0.0-beta.10
+  astro-i18next: 1.0.0-beta.3
   bulma: ^0.9.4
   bulma-timeline: ^3.0.5
   execa: ^6.1.0
@@ -22,7 +22,7 @@ specifiers:
   i18next-fs-backend: ^1.1.5
   locale-emoji: ^0.3.0
   luxon: ^3.0.3
-  quilt-bulma: 0.0.10
+  quilt-bulma: 0.0.11
   remark-excerpt: 1.0.0-beta.1
   rollup: ^2.79.0
   sass: ^1.54.9
@@ -39,7 +39,7 @@ devDependencies:
   '@types/luxon': 3.0.1
   astro: 1.2.1_sass@1.54.9
   astro-html-minifier: 0.2.0
-  astro-i18next: 1.0.0-beta.10_astro@1.2.1
+  astro-i18next: 1.0.0-beta.3_astro@1.2.1
   bulma: 0.9.4
   bulma-timeline: 3.0.5
   execa: 6.1.0
@@ -50,7 +50,7 @@ devDependencies:
   i18next-fs-backend: 1.1.5
   locale-emoji: 0.3.0
   luxon: 3.0.3
-  quilt-bulma: 0.0.10
+  quilt-bulma: 0.0.11
   remark-excerpt: 1.0.0-beta.1
   rollup: 2.79.0
   sass: 1.54.9
@@ -853,18 +853,15 @@ packages:
       globby: 13.1.2
     dev: true
 
-  /astro-i18next/1.0.0-beta.10_astro@1.2.1:
-    resolution: {integrity: sha512-xIJjJOFt2B/ipYszrxxpLWCh2WAgb4sftZApP1AKLBKgTrCLOL4feMZ0jzPCj2yRQ4rBLW0V81cH5Yrfz8hAcg==}
-    hasBin: true
+  /astro-i18next/1.0.0-beta.3_astro@1.2.1:
+    resolution: {integrity: sha512-Vw2nwcj/aM0F7BcuAQLPrEf6dKh51BNWvQf0SeI54vx/HPweF9gwEYhFlERajIVMyStpRpfGslZiwRrei6QX5g==}
     peerDependencies:
-      astro: ^1.0.0
+      astro: ^1.0.0-beta.1
     dependencies:
-      '@proload/core': 0.3.3
-      '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3
       astro: 1.2.1_sass@1.54.9
+      country-code-to-flag-emoji: 1.1.0
       i18next: 21.9.1
       iso-639-1: 2.1.15
-      locale-emoji: 0.3.0
     dev: true
 
   /astro/1.2.1_sass@1.54.9:
@@ -1136,6 +1133,10 @@ packages:
     resolution: {integrity: sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==}
     dependencies:
       safe-buffer: 5.1.2
+    dev: true
+
+  /country-code-to-flag-emoji/1.1.0:
+    resolution: {integrity: sha512-S+UzvEKOrfDUwhN8YyMDgiQyYCVUVNBVtt4NUFwDz1nQ8mWo2cqA6Rkvb9uA90EsHS+hGIolpLGVrYnC2IQVKA==}
     dev: true
 
   /cross-spawn/7.0.3:
@@ -2977,8 +2978,8 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /quilt-bulma/0.0.10:
-    resolution: {integrity: sha512-hYkuI7Et/4VeFD11TnnPYUR8OwCSt2HuU338jDUx6aAjAdkFMmupQVR4LMmkQc4rCfKu3k6nU3C0ldhWzPkKag==}
+  /quilt-bulma/0.0.11:
+    resolution: {integrity: sha512-q91ja2V2JsPb5jThC0kGm521SmWw2+LjcVk2+H1E1wCcveU/5kNYOrBcVESTT8dMuwtogehNZRwnwRWq+qvxNA==}
     dev: true
 
   /readable-stream/3.6.0:
