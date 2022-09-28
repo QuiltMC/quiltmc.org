@@ -20,7 +20,7 @@
 		"@types/luxon": "^3.0.1",
 		"astro": "1.2.1",
 		"astro-html-minifier": "^0.2.0",
-		"astro-i18next": "1.0.0-beta.3",
+		"astro-i18next": "1.0.0-beta.10",
 		"bulma": "^0.9.4",
 		"bulma-timeline": "^3.0.5",
 		"execa": "^6.1.0",
