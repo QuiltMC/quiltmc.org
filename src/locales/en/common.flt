@@ -13,6 +13,7 @@ serial-comma = {$prev}, {$next}
 -import-utility = Quilt Import Utility
 -openings = Openings
 -patch-notes = Patch Notes
+-sponsors = Sponsors
 -staff-resources = Staff Resources
 -template-mod = Template Mod
 
@@ -44,6 +45,7 @@ nav-page-import-utility = {-import-utility}
 nav-page-maven-repo = Maven Repository
 nav-page-openings = {-openings}
 nav-page-patch-notes = {-patch-notes}
+nav-page-sponsors = {-sponsors}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 
