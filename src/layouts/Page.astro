@@ -4,8 +4,8 @@ import Sidebar from "@setpieces/Sidebar.astro";
 import i18next, { t } from "i18next";
 import Base from "./Base.astro";
 
-let { content } = Astro.props;
-let { title } = content;
+const { content } = Astro.props;
+const { title, sidebar = true } = content;
 
 const category = Astro.url.pathname.split("/")[2];
 const pages = (await Astro.glob("/src/pages/**/*"))
@@ -28,13 +28,17 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 							<br />
 						</div>
 
-						<Sidebar
-							value={{
-								"sidebar-pages": {
-									pages: pages.map((page) => page.url),
-								},
-							}}
-						/>
+						{
+							sidebar && (
+								<Sidebar
+									value={{
+										"sidebar-pages": {
+											pages: pages.map((page) => page.url),
+										},
+									}}
+								/>
+							)
+						}
 					</div>
 
 					<main class="content column">

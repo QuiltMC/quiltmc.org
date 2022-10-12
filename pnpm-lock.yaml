@@ -29,12 +29,10 @@ specifiers:
   sass: ^1.55.0
   typescript: ^4.8.4
 
-dependencies:
-  '@astrojs/rss': 1.0.2
-
 devDependencies:
   '@astrojs/markdown-component': 1.0.1
   '@astrojs/mdx': 0.11.2_rollup@2.79.1
+  '@astrojs/rss': 1.0.2
   '@astrojs/sitemap': 1.0.0
   '@creativebulma/bulma-divider': 1.1.0
   '@creativebulma/bulma-tooltip': 1.2.0
@@ -179,7 +177,7 @@ packages:
     resolution: {integrity: sha512-WPMW5a3D+nAbuu/i7LANfp1GnVrdnzcsUNrR7o8IvPJXJMjVGtDqdUqNDj20Rj3rwcWbOL2KVvGPMjCqx0tRWQ==}
     dependencies:
       fast-xml-parser: 4.0.11
-    dev: false
+    dev: true
 
   /@astrojs/sitemap/1.0.0:
     resolution: {integrity: sha512-42GxuF5FP7RaKXZrwGLBLOX3hPv+Wl7ExJC43O0J5e34ojJkLeKf7QfwN1UwrJlqH0Ywi0Fm4/xGe482G09+wg==}
@@ -1824,7 +1822,7 @@ packages:
     hasBin: true
     dependencies:
       strnum: 1.0.5
-    dev: false
+    dev: true
 
   /fastq/1.13.0:
     resolution: {integrity: sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==}
@@ -3746,7 +3744,7 @@ packages:
 
   /strnum/1.0.5:
     resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
-    dev: false
+    dev: true
 
   /style-to-object/0.3.0:
     resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
