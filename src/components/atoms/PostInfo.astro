@@ -1,5 +1,6 @@
 ---
-import i18next from "i18next";
+import { localizeList } from "@util/Util";
+import i18next, { t } from "i18next";
 import { DateTime } from "luxon";
 
 const { post } = Astro.props;
@@ -8,7 +9,7 @@ const { authors = [], date } = post.frontmatter;
 
 <div class="media">
 	<div class="media-content">
-		{authors.length > 0 && <p class="title is-5">{authors.join(", ")}</p>}
+		{authors.length > 0 && <p class="title is-5">{localizeList(authors)}</p>}
 
 		{
 			date && (
