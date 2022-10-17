@@ -1,7 +1,6 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -multimc = MultiMC
--polymc = PolyMC
 -technic = Technic
 -curseforge = CurseForge
 -gdlauncher = GDLauncher
@@ -10,7 +9,6 @@ platform-client = Client
 platform-server = Server
 platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
-platform-polymc = {-polymc}
 platform-technic = {-technic}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
@@ -19,7 +17,6 @@ logo-minecraft = Minecraft logo
 logo-java = Java logo
 logo-atlauncher = {-atlauncher} logo
 logo-multimc = {-multimc} logo
-logo-polymc = {-polymc} logo
 logo-technic = Technic Launcher logo
 logo-curseforge = {-curseforge} logo
 logo-gdlauncher = {-gdlauncher} logo

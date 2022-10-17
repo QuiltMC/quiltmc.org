@@ -1,7 +1,6 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -multimc = MultiMC
--polymc = PolyMC
 -technic = Technic
 -curseforge = CurseForge
 -gdlauncher = GDLauncher
@@ -10,7 +9,6 @@ platform-client = 客户端
 platform-server = 服务端
 platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
-platform-polymc = {-polymc}
 platform-technic = {-technic}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
@@ -19,7 +17,6 @@ logo-minecraft = Minecraft 的标志
 logo-java = Java 的标志
 logo-atlauncher = {-atlauncher} 的标志
 logo-multimc = {-multimc} 的标志
-logo-polymc = {-polymc} 的标志
 logo-technic = Technic 启动器的标志
 logo-curseforge = {-curseforge} 的标志
 logo-gdlauncher = {-gdlauncher} 的标志
