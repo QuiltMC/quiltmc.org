@@ -102,6 +102,18 @@ async function queryPluralKit() {
 
 	const data = {};
 	for (const [id, response] of responses) {
+		if (!Array.isArray(response)) {
+			// This ensures that private lists are fine but actual errors aren't
+			if (response.code !== 0) {
+				data[id] = [];
+				continue;
+			} else {
+				throw new Error(
+					`queryPluralKit: an attempt to fetch a member list has returned a server error! ${response}`
+				);
+			}
+		}
+
 		// TODO add custom ordering
 		const result = sortBy(response, (mem) => {
 			const date = DateTime.fromISO(mem.created);

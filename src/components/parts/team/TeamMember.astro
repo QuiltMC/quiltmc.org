@@ -78,7 +78,7 @@ const na = t("team:n-a");
 			</div>
 
 			<div class:list={["system-members", member.description ? "mb-4" : ""]}>
-				{ member.systemMembers === "---"
+				{ member.systemMembers === "---" || getSystemMembers(member.systemMembers).length === 0
 				? <div class="has-tooltip-arrow" data-tooltip={t("team:member-list-redacted")}>
 					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
 				</div>
