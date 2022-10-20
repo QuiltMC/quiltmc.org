@@ -2,7 +2,7 @@
 	"name": "quiltmc-website",
 	"version": "1.0.0",
 	"description": "Website for the Quilt modloader",
-	"packageManager": "pnpm@7.9.0",
+	"packageManager": "pnpm@7.13.5",
 	"scripts": {
 		"dev": "node scripts/preprocess.mjs && astro dev",
 		"start": "node scripts/preprocess.mjs && astro start",
