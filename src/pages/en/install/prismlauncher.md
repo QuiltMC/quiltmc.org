@@ -7,7 +7,7 @@ platformKey: platform-prismlauncher
 website: https://prismlauncher.org
 ---
 
-Prism Launcher is a launcher designed to allow users to easily manage multiple installations of Minecraft at once as well as provide all the power tools that an advanced user would need in order to manage their instances.
+Prism Launcher is designed to allow users to manage multiple installations of Minecraft at once easily, and provide the power tools an advanced user would need.
 
 To set up a Quilt instance, simply follow these steps:
 
