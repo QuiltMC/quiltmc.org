@@ -18,7 +18,7 @@ specifiers:
   execa: ^6.1.0
   fluent_conv: ^3.1.0
   github-slugger: ^1.4.0
-  i18next: ^22.0.1
+  i18next: ^21.9.2
   i18next-fluent: ^2.0.0
   i18next-fs-backend: ^1.1.5
   locale-emoji: ^0.3.0
@@ -47,7 +47,7 @@ devDependencies:
   execa: 6.1.0
   fluent_conv: 3.1.0
   github-slugger: 1.4.0
-  i18next: 22.0.1
+  i18next: 21.10.0
   i18next-fluent: 2.0.0
   i18next-fs-backend: 1.1.5
   locale-emoji: 0.3.0
@@ -2183,12 +2183,6 @@ packages:
 
   /i18next/21.10.0:
     resolution: {integrity: sha512-YeuIBmFsGjUfO3qBmMOc0rQaun4mIpGKET5WDwvu8lU7gvwpcariZLNtL0Fzj+zazcHUrlXHiptcFhBMFaxzfg==}
-    dependencies:
-      '@babel/runtime': 7.19.4
-    dev: true
-
-  /i18next/22.0.1:
-    resolution: {integrity: sha512-CRbtl6urEcIDbIzP4sGoPf9YuDNto1JgCRsfdvcVUOPb8nPAQ0azhPZiSdD5AFg/Erb58+/nDRmhm8bzVyjABQ==}
     dependencies:
       '@babel/runtime': 7.19.4
     dev: true
