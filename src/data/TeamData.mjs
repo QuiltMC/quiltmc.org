@@ -235,14 +235,6 @@ export default {
 		github: "l-Luna",
 		avatar: "/assets/img/team/Luna.png",
 	},
-	Marie: {
-		name: "Marie",
-		discord: "marie",
-		github: "marie-the-ruby",
-		avatar: "https://avatars.githubusercontent.com/u/43187285",
-		description: "Amateur coder and orderly chaos creator",
-		systemMembers: "pk:vnbst",
-	},
 	MartrixX: {
 		name: "MartrixX",
 		discord: "MartrixX",
