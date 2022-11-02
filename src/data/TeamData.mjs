@@ -407,14 +407,6 @@ export default {
 			},
 		],
 	},
-	RTTV: {
-		name: "RTTV",
-		discord: "RTTV",
-		github: "RealRTTV",
-		avatar: "/assets/img/team/RTTV.png",
-		description:
-			"Hey I'm RTTV, my preferred pronouns are she/her but I'm also ok with they/them, I do Java Coding, I dabble in Rust, I listen mostly to Tally Hall & Metal Gear Rising.",
-	},
 	Redblueflame: {
 		name: "Valentin Ricard",
 		discord: "Redblueflame",
