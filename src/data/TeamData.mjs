@@ -92,10 +92,10 @@ export default {
 	Ember: {
 		name: "Ember",
 		discord: "Ember",
-		github: "Ember-Ember",
+		github: "Ember-ruby",
 		avatar: "https://avatars.githubusercontent.com/u/48266942",
 		description:
-			"Trans & Autistic person with an interest in most things tech. She/They/It",
+			"Trans & Autistic person with an interest in most things tech. it/its",
 		links: [{ icon: "fa fa-link", url: "https://emberdev.me" }],
 	},
 	EnnuiL: {
