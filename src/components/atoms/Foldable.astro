@@ -9,14 +9,17 @@ const { id } = Astro.props as Props;
 
 <Message>
 	<details id={id}>
-		<summary>
+		<summary class="is-flex is-flex-direction-row is-justify-content-start is-align-content-center is-align-items-center">
 			<i class="summary-icon is-ltr fa-solid fa-lg fa-circle-chevron-right" />
 			<i class="summary-icon is-rtl fa-solid fa-lg fa-circle-chevron-left" />
 
-			<span><slot name="title" /></span>
-			<a href={`#${id}`}>
-				<i class="fas fa-link" />
-			</a>
+			<span class="mr-2"><slot name="title" /></span>
+
+			<div class="is-flex-grow-1 mt-1">
+				<a href={`#${id}`} class="is-pulled-right">
+					<i class="fas fa-link" />
+				</a>
+			</div>
 		</summary>
 		<slot />
 	</details>
