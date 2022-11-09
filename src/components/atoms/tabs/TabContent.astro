@@ -1,0 +1,13 @@
+---
+export interface Props {
+	tab: string;
+}
+
+const props = Astro.props as Props;
+
+const tab = props.tab;
+---
+
+<div class="tab-group-content" data-tab={tab}>
+	<slot/>
+</div>

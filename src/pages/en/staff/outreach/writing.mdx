@@ -10,11 +10,33 @@ layout: /src/layouts/StaffDocument.astro
 
 import Message from "@atoms/Message.astro";
 
+import TabBar from "@atoms/tabs/TabBar.astro";
+import TabBarLink from "@atoms/tabs/TabBarLink.astro";
+import TabContent from "@atoms/tabs/TabContent.astro";
+import TabGroup from "@atoms/tabs/TabGroup.astro";
+
 <Message title="Warning: Migration" style="danger">
 
 **This document has completely changed.** As we have migrated from Jekyll to [Astro](https://astro.build), writing documents is now a vastly different process. Please contact [the Pluies](https://github.com/pluiedev) (`pluie#9105`) or [[object Object]](https://github.com/obj-obj) (`[object Object]#7105`) if you need any help writing new articles and these new guidelines aren't enough. Thanks for your patience!
 
 </Message>
+
+{/*
+<TabGroup id="test-group">
+	<TabBar>
+		<TabBarLink name="First Tab" tab="one"></TabBarLink>
+		<TabBarLink name="Second Tab" tab="two"></TabBarLink>
+	</TabBar>
+
+	<TabContent tab="one">
+		First tab content
+	</TabContent>
+
+	<TabContent tab="two">
+		Second tab content
+	</TabContent>
+</TabGroup>
+*/}
 
 Writing work can be tricky at times, and Quilt doesn't have a large group of professional writers on hand for advice. This document is intended to be a set of guidelines, tips, and tricks to use when writing documents, articles, blog posts, and other written content for the site.
 
