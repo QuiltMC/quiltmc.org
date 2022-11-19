@@ -221,6 +221,28 @@ export default {
 			},
 		],
 	},
+	Leah: {
+		name: "Leah",
+		discord: "pluie",
+		github: "pluiedev",
+		avatar: "/assets/img/team/Leah.png",
+		description:
+			"Chinese girl writing code, drawing paintings, loving Rust, loathing JavaScript, what have you.",
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://pluie.me/",
+			},
+			{
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/PTgBL2mx",
+			},
+			{
+				icon: "fab fa-twitter",
+				url: "https://twitter.com/pluiedev",
+			},
+		],
+	},
 	Lemma: {
 		name: "LemmaEOF",
 		discord: "LemmaEOF",
@@ -336,29 +358,6 @@ export default {
 		github: "PepperCode1",
 		description: "Developer of various Minecraft mods and APIs.",
 		avatar: "https://avatars.githubusercontent.com/u/44146161?v=4",
-	},
-	Pluies: {
-		name: "The Pluies",
-		discord: "pluie",
-		github: "pluiedev",
-		avatar: "/assets/img/team/Pluies.png",
-		description:
-			"Chinese girls writing code, drawing paintings, loving Rust, loathing JavaScript, what have you.",
-		systemMembers: "pk:pvrut",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://pluie.me/",
-			},
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/PTgBL2mx",
-			},
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/pluiedev",
-			},
-		],
 	},
 	Potatoboy: {
 		name: "Potatoboy9999",
@@ -597,6 +596,15 @@ export default {
 				url: "https://gitlab.com/supersaiyansubtlety",
 			},
 		],
+	},
+	"tempest": {
+		name: "tempest",
+		discord: "tempest",
+		github: "tempest15",
+		avatar: "https://avatars.githubusercontent.com/u/66021850?v=4",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" },
+		]
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
