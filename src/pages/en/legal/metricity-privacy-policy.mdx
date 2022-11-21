@@ -1,7 +1,7 @@
 ---
-permalink: /legal/cozy-privacy-policy/
-title: Cozy Privacy Policy
-description: The privacy policy for the Cozy Discord bots.
+permalink: /legal/metricity-privacy-policy/
+title: Metricity Privacy Policy
+description: The privacy policy for the Metricity Discord bot.
 layout: /src/layouts/Page.astro
 ---
 
@@ -17,41 +17,39 @@ QuiltMC ("Us", "We", "Our") is the data controller for the data collected throug
 
 # Data Collected
 
-## Filter Events
+## Messages
 
-When you trigger an automatic filter, we record your User ID and the location of the message that triggered it.
-The message content isn't saved.
+We collect the following information about messages sent on the server:
+* Message ID
+* Author ID
+* Channel ID and Thread ID
+* Creation date
+* Whether the message is deleted or not
 
-We use this data to conduct analytics.
+The message content is **not** collected. Message data is kept after deletion from Discord, for erasure please see [Contact](#contact).
 
-## Threads
+## Users
 
-If you are designated as the owner of a thread by creating it, or having the current owner transfer it to you,
-your User ID is saved alongside the thread ID.
+We collect the following information about users who are on one of our Guilds:
+* User ID
+* Username
+* Avatar image hash
+* Guild avatar image hash
+* Creation date
+* Join date
+* Public Discord flags
+* Whenever the user is in the Guild
+* Whenever the user is considered as "pending" by Discord
 
-We use this data to allow you to manage the threads you own.
+User data is kept after leaving the Guild, for erasure please see [Contact](#contact).
 
-## Suggestions
+# Data usage
 
-### Voting
+The data is collected to provide statistics and identify bad actors.
+We do not make use of any automated decision making based on this data.
 
-When you vote positively or negatively, we save your User ID alongside the suggestion and your vote.
-
-We use this data to make sure you can't vote more than once.
-
-### Creating a suggestion
-
-When you create a suggestion, we save your User ID, Username, Avatar Url, Message and whenever it was proxied or not.
-
-We use the User ID and Message to keep track of suggestions, the rest is used to display the suggestion.
-
-## User Flags
-
-We save three flags about you:
-- Has Used PluralKit: whether you have used PluralKit previously or not. We use that to log new usages of PluralKit for
-review by the moderators.
-- Auto Publish: whether your messsages sent in a news channel should be automatically published.
-- Sync Nicknames: whether your nickname should be synced between Quilt guilds.
+No statistics containing private information will be provided publicly.
+We may use statistics containing private information internally.
 
 # Data Retention
 
