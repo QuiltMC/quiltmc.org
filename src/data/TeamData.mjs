@@ -238,8 +238,12 @@ export default {
 				url: "https://modrinth.com/user/PTgBL2mx",
 			},
 			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/pluiedev",
+				icon: "fab fa-mastodon",
+				url: "https://blobfox.coffee/@pluie",
+			},
+			{
+				icon: "fab fa-youtube",
+				url: "https://youtube.com/@pluiedev",
 			},
 		],
 	},
