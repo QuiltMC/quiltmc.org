@@ -52,7 +52,7 @@ async function queryPluralKit() {
 			DateTime.now()
 		).toDuration();
 
-		if (duration.hours < 6) {
+		if (duration.as("hours") < 6) {
 			console.log(
 				`queryPluralKit: using cached PluralKit data; last refresh was ${duration.toFormat(
 					"h 'hours and' m 'minutes'"
