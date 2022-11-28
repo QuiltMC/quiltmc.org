@@ -47,19 +47,19 @@ async function queryPluralKit() {
 	});
 
 	if (stat) {
-		const interval = Interval.fromDateTimes(
+		const duration = Interval.fromDateTimes(
 			DateTime.fromJSDate(stat.mtime),
 			DateTime.now()
-		);
+		).toDuration();
 
-		const length = interval.length("minutes");
-		if (length < 10) {
-			const roundedLength = Math.round(length * 100.0) / 100.0;
+		if (duration.hours < 6) {
 			console.log(
-				`queryPluralKit: using cached PluralKit data; last refresh was ${roundedLength} minutes ago`
+				`queryPluralKit: using cached PluralKit data; last refresh was ${duration.toFormat(
+					"h 'hours and' m 'minutes'"
+				)} ago`
 			);
 
-			// it's been less than 10 minutes - don't refresh
+			// it's been less than 6 hours - don't refresh
 			return;
 		}
 	}
