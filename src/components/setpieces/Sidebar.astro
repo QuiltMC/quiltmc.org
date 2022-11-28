@@ -65,7 +65,8 @@ for (const page of allPages) {
 															: ""
 													}
 												>
-													{mappedPages[url].frontmatter.title}
+													{mappedPages[url]?.frontmatter?.title ||
+														mappedPages[url]?.title}
 												</a>
 											</li>
 										))}
