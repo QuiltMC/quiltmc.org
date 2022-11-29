@@ -11,15 +11,17 @@ specifiers:
   astro-i18next: 1.0.0-beta.12
   astro-purgecss: ^1.3.0
   execa: ^6.1.0
-  fluent_conv: ^3.1.0
   i18next: ^21.10.0
   i18next-fluent: ^2.0.0
-  i18next-fs-backend: ^2.0.1
+  i18next-fs-fluent-backend: github:pluiedev/i18next-fs-fluent-backend
   luxon: ^3.1.0
   quilt-bulma: 0.0.15
   rollup: ^3.5.0
   sass: ^1.56.1
   typescript: ^4.9.3
+
+dependencies:
+  i18next-fs-fluent-backend: github.com/pluiedev/i18next-fs-fluent-backend/1d3f22618f6d4941ae68d78dcd6c16961794a30d
 
 devDependencies:
   '@astrojs/markdown-component': 1.0.2
@@ -32,10 +34,8 @@ devDependencies:
   astro-i18next: 1.0.0-beta.12_astro@1.6.4
   astro-purgecss: 1.3.0_astro@1.6.4
   execa: 6.1.0
-  fluent_conv: 3.1.0
   i18next: 21.10.0
   i18next-fluent: 2.0.0
-  i18next-fs-backend: 2.0.1
   luxon: 3.1.0
   quilt-bulma: 0.0.15
   rollup: 3.5.0
@@ -482,7 +482,6 @@ packages:
   /@fluent/syntax/0.15.0:
     resolution: {integrity: sha512-NIObEPekXiaDDO10NQSOeylOETaI2Ns/ymKJNvgkM6FcBARS+t3NVGyLPPIl/pqHDUB9v7bWeEmuVMJQjnpNeg==}
     engines: {node: '>=10.0.0'}
-    dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
@@ -1897,7 +1896,6 @@ packages:
     resolution: {integrity: sha512-fmS8RFxkEP7P/XTlVbf8b8I0RSLOKFqlrARmwsH1bNrKxmbEGNjZQXg0R6QZz/FdFrHcp7sFAjLp75bB4CSPsA==}
     dependencies:
       '@fluent/syntax': 0.15.0
-    dev: true
 
   /format/0.2.2:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
@@ -2200,7 +2198,7 @@ packages:
 
   /i18next-fs-backend/2.0.1:
     resolution: {integrity: sha512-fzeiFOXqsMiFAFUnNyC4buERI11vTAuf7JIDWqaiPgBK3R+XJQMSY1LyoXaWspBEFaAkXH/0uMbOv7nttBFztg==}
-    dev: true
+    dev: false
 
   /i18next/21.10.0:
     resolution: {integrity: sha512-YeuIBmFsGjUfO3qBmMOc0rQaun4mIpGKET5WDwvu8lU7gvwpcariZLNtL0Fzj+zazcHUrlXHiptcFhBMFaxzfg==}
@@ -4253,3 +4251,12 @@ packages:
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
+
+  github.com/pluiedev/i18next-fs-fluent-backend/1d3f22618f6d4941ae68d78dcd6c16961794a30d:
+    resolution: {tarball: https://codeload.github.com/pluiedev/i18next-fs-fluent-backend/tar.gz/1d3f22618f6d4941ae68d78dcd6c16961794a30d}
+    name: i18next-fs-fluent-backend
+    version: 0.1.0
+    dependencies:
+      fluent_conv: 3.1.0
+      i18next-fs-backend: 2.0.1
+    dev: false
