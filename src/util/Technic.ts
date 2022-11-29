@@ -40,7 +40,6 @@ async function populateLoaderVersions() {
 	loaderTarget.setAttribute("disabled", "");
 	buttonTarget.setAttribute("disabled", "");
 	buttonTarget.removeAttribute("download");
-	buttonTarget.classList.add("is-disabled");
 	buttonTarget.classList.remove("is-primary");
 
 	const mcSel = minecraftTarget;
@@ -73,7 +72,6 @@ async function populateButton() {
 	buttonTarget.setAttribute("download", "version.json");
 
 	buttonTarget.removeAttribute("disabled");
-	buttonTarget.classList.remove("is-disabled");
 	buttonTarget.classList.add("is-primary");
 }
 
