@@ -12,6 +12,24 @@ const props = Astro.props;
 const { rtl } = rtlSettings();
 ---
 
+<head>
+	<link
+		rel="preload"
+		{/*@ts-ignore*/}
+		fetchpriority="high"
+		as="image"
+		href="/assets/img/hero-bg.svg"
+		type="image/svg+xml"
+	/>
+	<link
+		rel="preload"
+		{/*@ts-ignore*/}
+		fetchpriority="high"
+		as="image"
+		href="/assets/img/hero-bg-light.svg"
+		type="image/svg+xml"
+	/>
+</head>
 <Base navless content={props.content}>
 	<section class="hero is-dark has-background-patches">
 		<div class="hero-head">
