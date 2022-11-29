@@ -8,33 +8,13 @@ import purgecss from "astro-purgecss";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://quiltmc.org",
-	integrations: [
-		mdx(),
-		astroI18next(),
-		sitemap(),
-		htmlMinifier(),
-		purgecss({
-			safelist: {
-				greedy: [/\.highlight/],
-			},
-		}),
-	],
+	integrations: [mdx(), astroI18next(), sitemap(), htmlMinifier(), purgecss()],
 	markdown: {
 		syntaxHighlight: "prism",
 	},
 	vite: {
 		build: {
 			assetsInlineLimit: 0,
-		},
-		ssr: {
-			// FIXME(leah@pluie): this is used to mitigate some weird issues with CJS deps.
-			// For some reason, we need to 'externalize' them first...
-			external: [
-				"@proload/core",
-				"@proload/plugin-tsm",
-				"deepmerge",
-				"locale-emoji",
-			],
 		},
 	},
 });
