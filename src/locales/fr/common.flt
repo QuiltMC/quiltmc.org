@@ -55,7 +55,7 @@ nav-page-legal = Legal
 
 button-close = Fermer
 button-discord = {-discord}
-button-discord-community = Community
+button-discord-community = Communauté
 button-discord-toolchain = Toolchain
 button-developer-wiki = {-developer-wiki}
 button-forum = {-forum}
@@ -63,7 +63,7 @@ button-github = {-github}
 button-install = Install
 button-mastodon = {-mastodon}
 button-maven-repo = Maven Repo
-button-more = More
+button-more = Plus
 button-more-posts = Plus d'articles
 button-openings = {-openings}
 button-patch-notes = Minecraft {-patch-notes}
