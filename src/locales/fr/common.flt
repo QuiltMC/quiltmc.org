@@ -8,14 +8,14 @@ title-formatted = {$shortTitle} | {$title}
 serial-comma = {$prev}, {$next}
 
 # Common strings
--developer-wiki = Developer Wiki
+-developer-wiki = Wiki pour les développeurs
 -forum = Forum
 -import-utility = Quilt Import Utility
 -openings = Openings
 -patch-notes = Patch Notes
 -sponsors = Sponsors
 -staff-resources = Staff Resources
--template-mod = Template Mod
+-template-mod = Modèle de mod
 
 # Brand names/proper nouns - You shouldn't need to edit this.
 -mastodon = Mastodon
@@ -60,7 +60,7 @@ button-discord-toolchain = Toolchain
 button-developer-wiki = {-developer-wiki}
 button-forum = {-forum}
 button-github = {-github}
-button-install = Install
+button-install = Installer
 button-mastodon = {-mastodon}
 button-maven-repo = Maven Repo
 button-more = Plus
@@ -71,7 +71,7 @@ button-rss = RSS
 button-template-mod = {-template-mod}
 button-twitter = {-twitter}
 button-twitch = {-twitch}
-button-usage-docs = Usage Docs
+button-usage-docs = Documentations d'usage
 
 sidebar-pages = Pages
 sidebar-resources = Ressources
