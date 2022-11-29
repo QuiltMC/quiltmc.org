@@ -1,0 +1,94 @@
+lang-name = French
+
+title = The Quilt Project
+short-title = QuiltMC
+description = The mod-loader that cares.
+
+title-formatted = {$shortTitle} | {$title}
+serial-comma = {$prev}, {$next}
+
+# Common strings
+-developer-wiki = Developer Wiki
+-forum = Forum
+-import-utility = Quilt Import Utility
+-openings = Openings
+-patch-notes = Patch Notes
+-sponsors = Sponsors
+-staff-resources = Staff Resources
+-template-mod = Template Mod
+
+# Brand names/proper nouns - You shouldn't need to edit this.
+-mastodon = Mastodon
+-github = GitHub
+-discord = Discord
+-twitter = Twitter
+-twitch = Twitch
+
+page-authors =
+	{ $count ->
+        [one] Author
+        *[other] Authors
+	}: {$names}
+page-edited = Edited: {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+
+
+nav-about = À propos
+nav-blog = Blog
+nav-community = Communauté
+nav-install = Installer
+nav-more-pages = Plus de pages
+nav-usage = Utilisation
+
+divider-development = Development
+divider-external-links = Liens externes
+
+nav-page-developer-wiki = {-developer-wiki}
+nav-page-import-utility = {-import-utility}
+nav-page-maven-repo = Maven Repository
+nav-page-openings = {-openings}
+nav-page-patch-notes = {-patch-notes}
+nav-page-sponsors = {-sponsors}
+nav-page-staff-resources = {-staff-resources}
+nav-page-template-mod = {-template-mod}
+nav-page-legal = Legal
+
+button-close = Fermer
+button-discord = {-discord}
+button-discord-community = Community
+button-discord-toolchain = Toolchain
+button-developer-wiki = {-developer-wiki}
+button-forum = {-forum}
+button-github = {-github}
+button-install = Install
+button-mastodon = {-mastodon}
+button-maven-repo = Maven Repo
+button-more = More
+button-more-posts = More Posts
+button-openings = {-openings}
+button-patch-notes = Minecraft {-patch-notes}
+button-rss = RSS
+button-template-mod = {-template-mod}
+button-twitter = {-twitter}
+button-twitch = {-twitch}
+button-usage-docs = Usage Docs
+
+sidebar-pages = Pages
+sidebar-resources = Ressources
+sidebar-teams = Équipes
+sidebar-versions = Versions
+
+paginator-button-first = First
+paginator-button-previous = Previous
+paginator-button-next = Next
+paginator-button-last = Last
+
+tooltip-switch-language = Changer de langue
+tooltip-toggle-low-contrast = Toggle Low Contrast
+
+prompt-error-noscript = JavaScript est désactivé. Activez JavaScript pour utiliser la recherche.
+prompt-search-language = Rechercher votre langue ici...
+
+page-404 = 404
+page-404-title = Page introuvable :(
+page-404-subtitle = La page demandée n'a pas pu être trouvée.

@@ -1,0 +1,53 @@
+---
+title: "Install: Technic Launcher"
+permalink: /install/technic/
+
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-technic
+website: https://www.technicpack.net
+---
+
+import Message from "@atoms/Message.astro";
+import VersionJson from "@parts/install/VersionJson.astro";
+
+Technic Launcher is a simple launcher, designed to allow users to download, install and play modpacks that have been uploaded to [The Technic site](https://www.technicpack.net/modpacks), either directly or via [Technic Solder](https://solder.io).
+
+As this launcher is not designed to allow you to create custom instances, most users will pick it purely to play an existing modpack. If you want to create your own custom instance, you'll need to create a modpack by hand, following the instructions further down this page.
+
+## Installing a modpack
+
+For most players, this is all you'll need to do:
+
+- Download and install the Technic Launcher from [their website](https://www.technicpack.net)
+- Open Technic Launcher and log into your Microsoft or Minecraft account
+- Select **Modpacks** at the top of the window and install the Quilt-based pack you want to use
+- Select the pack on the left side of the window and click the **Install** button in the lower-right of the window
+- Once the pack has been installed, click the **Play** button in the lower-right of the window
+
+This will allow you to start playing a Quilt-based modpack that someone else has made.
+
+## Creating your own modpack
+
+If you're working on your own Technic modpack, you'll need to provide a `version.json` file. While you'll probably want to try to follow [their official guide](https://www.technicpack.net/article/building-your-own-modpack.7), at a very basic level you'll need to do the following:
+
+- Create a new folder for your modpack
+- Create two folders within -- `bin` and `mods`
+- In the `mods` folder, place the mods you'd like to add to your modpack
+- In the `bin` folder, place a `version.json` that you've downloaded below
+
+Once you've done this, you should be able to upload your modpack via [the Technic Dashboard](https://www.technicpack.net/dashboard). Once you've finished creating and uploading your modpack, you should be able to install it by following the instructions listed at the top of this page.
+
+### Download version.json
+
+<noscript>
+  <Message>
+    # Please enable JavaScript
+
+    Due to the nature of this page and how the `version.json` file is retrieved, you'll unfortunately need to have JavaScript enabled to download it. Please enable JavaScript and reload the page.
+
+  </Message>
+</noscript>
+
+**Note:** You may need to right-click the download button and select **Save Link As** or similar, depending on your browser.
+
+<VersionJson />
