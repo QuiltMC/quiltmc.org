@@ -16,6 +16,7 @@ const props = Astro.props as HeadProps;
 const currentLang = i18next.language;
 
 const date = props.date ? DateTime.fromISO(props.date) : null;
+const { rtl } = rtlSettings();
 
 const description = props.description ?? t("description");
 const titleFormatted = t("title-formatted", {
@@ -44,6 +45,23 @@ const titleFormatted = t("title-formatted", {
 	/>
 	<link rel="manifest" href="/favicon/site.webmanifest" />
 	<link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+	<link
+		rel="preload"
+		{/*@ts-ignore*/}
+		fetchpriority="high"
+		as="image"
+		href="/assets/img/hero-bg.svg"
+		type="image/svg+xml"
+	/>
+	<link
+		rel="preload"
+		{/*@ts-ignore*/}
+		fetchpriority="high"
+		as="image"
+		href="/assets/img/hero-bg-light.svg"
+		type="image/svg+xml"
+	/>
 
 	<meta name="msapplication-TileColor" content="#1b112b" />
 	<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
@@ -77,13 +95,10 @@ const titleFormatted = t("title-formatted", {
 	<meta property="twitter:image" content={site.logo} />
 	<meta property="twitter:title" content={props.title} />
 
-	{
-		rtlSettings().rtl ? (
-			<link rel="stylesheet" href="/assets/css/style-rtl.min.css" />
-		) : (
-			<link rel="stylesheet" href="/assets/css/style.min.css" />
-		)
-	}
+	<link
+		rel="stylesheet"
+		href={rtl ? "/assets/css/style-rtl.min.css" : "/assets/css/style.min.css"}
+	/>
 
 	<script async src="/src/script.ts"></script>
 	<script
