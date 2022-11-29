@@ -1,8 +1,7 @@
 import * as fs from "fs";
-import { DateTime, Interval } from "luxon";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
-import { sortBy, tryToRunPromiseWithTimeout } from "./util.mjs";
+import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE } from "./util.mjs";
 
 async function main() {
 	prepareCacheDirectory();
@@ -42,26 +41,9 @@ function copyCSS() {
 }
 
 async function queryPluralKit() {
-	const stat = fs.statSync(paths.PK_CACHE_FILE, {
-		throwIfNoEntry: false,
-	});
-
-	if (stat) {
-		const duration = Interval.fromDateTimes(
-			DateTime.fromJSDate(stat.mtime),
-			DateTime.now()
-		).toDuration();
-
-		if (duration.as("hours") < 6) {
-			console.log(
-				`queryPluralKit: using cached PluralKit data; last refresh was ${duration.toFormat(
-					"h 'hours and' m 'minutes'"
-				)} ago`
-			);
-
-			// it's been less than 6 hours - don't refresh
-			return;
-		}
+	if (fs.existsSync(paths.PK_CACHE_FILE)) {
+		console.log("queryPluralKit: using existing PluralKit data");
+		return;
 	}
 
 	console.log("queryPluralKit: refreshing PluralKit data");
@@ -116,8 +98,8 @@ async function queryPluralKit() {
 
 		// TODO add custom ordering
 		const result = sortBy(response, (mem) => {
-			const date = DateTime.fromISO(mem.created);
-			return date.isValid ? date : DateTime.fromISO("0000-01-01T00:00:00+0000");
+			const date = Date.parse(mem.created);
+			return date != NaN ? new Date(date) : NIL_DATE;
 		}).map((raw) => {
 			return {
 				name: raw.name,

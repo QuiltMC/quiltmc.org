@@ -29,6 +29,9 @@ page-authors =
         [one] Author
         *[other] Authors
 	}: {$names}
+page-edited = Edited: {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+
 
 nav-about = About
 nav-blog = Blog

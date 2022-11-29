@@ -1,7 +1,9 @@
 export {};
 
 document.body.onload = () => {
-	const lowContrast = document.getElementById("low-contrast") as HTMLInputElement;
+	const lowContrast = document.getElementById(
+		"low-contrast"
+	) as HTMLInputElement;
 	const lowContrastState = localStorage.getItem("lowContrast");
 
 	if (lowContrastState) {

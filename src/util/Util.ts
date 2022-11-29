@@ -1,5 +1,4 @@
 import i18next, { t } from "i18next";
-import { DateTime } from "luxon";
 import { execa } from "execa";
 
 // thanks JS, way to go
@@ -33,9 +32,10 @@ export function localizeList(list: string[]): string {
 	return list.reduce((prev, next) => t("serial-comma", { prev, next }));
 }
 
-export async function getModifyDateString(file: string): Promise<string> {
+export async function getModifyDate(file: string): Promise<Date> {
 	const output = await execa("git", ["log", "-1", '--pretty="%ct"', file]);
-	return DateTime.fromSeconds(parseInt(output.stdout.replaceAll('"', "")))
-		.setLocale(i18next.language)
-		.toLocaleString(DateTime.DATE_FULL);
+	const timestamp = parseInt(output.stdout.replaceAll('"', ""));
+
+	// JS expects the time to be in milliseconds and not seconds
+	return new Date(timestamp * 1000);
 }

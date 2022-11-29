@@ -1,3 +1,5 @@
+export const NIL_DATE = new Date("0000-01-01T00:00:00Z");
+
 export function sortBy(arr, by) {
 	arr.sort((a, b) => {
 		const aKey = by(a);

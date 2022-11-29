@@ -6,7 +6,7 @@ import type { MarkdownInstance } from "astro";
 const { post } = Astro.props;
 const { title } = post.frontmatter;
 
-function getExcerptOfPost<T>(md: MarkdownInstance<T>): string {
+function getExcerptOfPost<T extends Record<string, any>>(md: MarkdownInstance<T>): string {
 	const content = md.rawContent();
 	return content.slice(0, content.indexOf("<!-- MORE -->"));
 }

@@ -1,7 +1,6 @@
 ---
 import { localizeList } from "@util/Util";
-import i18next, { t } from "i18next";
-import { DateTime } from "luxon";
+import { t } from "i18next";
 
 const { post } = Astro.props;
 const { authors = [], date } = post.frontmatter;
@@ -13,11 +12,7 @@ const { authors = [], date } = post.frontmatter;
 
 		{
 			date && (
-				<p class="subtitle is-6">
-					{DateTime.fromISO(date)
-						.setLocale(i18next.language)
-						.toLocaleString(DateTime.DATE_FULL)}
-				</p>
+				<p class="subtitle is-6">{t("post-date", { date: new Date(date) })}</p>
 			)
 		}
 	</div>

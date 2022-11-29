@@ -14,7 +14,6 @@ specifiers:
   i18next: ^21.10.0
   i18next-fluent: ^2.0.0
   i18next-fs-fluent-backend: github:pluiedev/i18next-fs-fluent-backend
-  luxon: ^3.1.0
   quilt-bulma: 0.0.15
   rollup: ^3.5.0
   sass: ^1.56.1
@@ -34,7 +33,6 @@ devDependencies:
   i18next: 21.10.0
   i18next-fluent: 2.0.0
   i18next-fs-fluent-backend: github.com/pluiedev/i18next-fs-fluent-backend/1d3f22618f6d4941ae68d78dcd6c16961794a30d
-  luxon: 3.1.0
   quilt-bulma: 0.0.15
   rollup: 3.5.0
   sass: 1.56.1
@@ -2457,11 +2455,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: true
-
-  /luxon/3.1.0:
-    resolution: {integrity: sha512-7w6hmKC0/aoWnEsmPCu5Br54BmbmUp5GfcqBxQngRcXJ+q5fdfjEzn7dxmJh2YdDhgW8PccYtlWKSv4tQkrTQg==}
-    engines: {node: '>=12'}
     dev: true
 
   /magic-string/0.25.9:
