@@ -99,7 +99,7 @@ async function queryPluralKit() {
 		// TODO add custom ordering
 		const result = sortBy(response, (mem) => {
 			const date = Date.parse(mem.created);
-			return date != NaN ? new Date(date) : NIL_DATE;
+			return Number.isNaN(date) ? NIL_DATE : new Date(date);
 		}).map((raw) => {
 			return {
 				name: raw.name,

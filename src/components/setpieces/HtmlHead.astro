@@ -60,7 +60,7 @@ const titleFormatted = t("title-formatted", {
 	<meta name="twitter:site" content={`@${site.twitter.handle.username}`} />
 
 	{
-		Date.parse(props.date || "") != NaN && (
+		!Number.isNaN(Date.parse(props.date || "")) && (
 			<meta property="article:published_time" content={props.date} />
 		)
 	}
