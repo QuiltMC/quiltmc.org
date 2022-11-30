@@ -23,7 +23,7 @@
 		"i18next": "^21.10.0",
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:pluiedev/i18next-fs-fluent-backend",
-		"quilt-bulma": "0.0.16",
+		"quilt-bulma": "0.0.17",
 		"rollup": "^3.5.0",
 		"sass": "^1.56.1",
 		"typescript": "^4.9.3"
