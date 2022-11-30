@@ -14,7 +14,7 @@ specifiers:
   i18next: ^21.10.0
   i18next-fluent: ^2.0.0
   i18next-fs-fluent-backend: github:pluiedev/i18next-fs-fluent-backend
-  quilt-bulma: 0.0.17
+  quilt-bulma: ^0.0.18
   rollup: ^3.5.0
   sass: ^1.56.1
   typescript: ^4.9.3
@@ -33,7 +33,7 @@ devDependencies:
   i18next: 21.10.0
   i18next-fluent: 2.0.0
   i18next-fs-fluent-backend: github.com/pluiedev/i18next-fs-fluent-backend/1d3f22618f6d4941ae68d78dcd6c16961794a30d
-  quilt-bulma: 0.0.17
+  quilt-bulma: 0.0.18
   rollup: 3.5.0
   sass: 1.56.1
   typescript: 4.9.3
@@ -3362,8 +3362,8 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /quilt-bulma/0.0.17:
-    resolution: {integrity: sha512-Ia8ByrcJY6K7BxtrSezaY9t14XUeFFoUyUNnXe+CFy6VZxHHjoACzGLddH/7GeyeCjh//qb96LyvnJH0Kor0vw==}
+  /quilt-bulma/0.0.18:
+    resolution: {integrity: sha512-ebCSEr0Y+l12zjCcMnpeziTdNFn+J3OOYTnfSzkNvnPsc56SOBpqjSJvy/GOxvwkpRtJWRegOdUqOd1FuIxIpA==}
     dev: true
 
   /readable-stream/3.6.0:
