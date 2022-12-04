@@ -2,6 +2,7 @@ import * as fs from "fs";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
 import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE } from "./util.mjs";
+import fetch from "node-fetch";
 
 async function main() {
 	prepareCacheDirectory();
