@@ -1,7 +1,7 @@
 ---
 layout: /src/layouts/Default.astro
-title: Openings
-description: Current Openings for positions on the Quilt Staff Team
+title: Help Wanted
+description: Ways you can help Quilt improve.
 ---
 
 import Message from "@atoms/Message.astro";
@@ -10,33 +10,16 @@ import PageTitle from "@atoms/PageTitle.astro";
 <PageTitle title={frontmatter.title} file={file} />
 
 The Quilt Project is extremely community-oriented, and that means that it needs your help to succeed. This page is a
-list of team openings - voluntary positions within teams that need more members.
+list of opportunities to contribute - from contributing code to joining the Community team.
 
-<Message>
+## Development
 
-**Please note:** The listed positions typically do not have a quota. As long
-as a position remains listed on this page, we'll continue to be interested in
-reviewing and accepting more members for them.
+Development teams serve as the primary maintainers of the tools that make up Quilt, from build tools to mappings, libraries, and loaders.
+Development teams are responsible for triage, merging PRs, and helping the community maintain their respective projects. 
 
-</Message>
+While teams provide a democratic leadership of each project, you **do not have to be on a team to contribute.** Team members come from experienced contributors who are interested in taking additional responsibility. 
 
-## Development Roles
-
-Development teams build the tools that make up Quilt, from build tools, to mappings, to libraries, to loaders. Joining a
-development team is a great way to contribute if you have a knowledge of Java, and how Minecraft works behind the
-scenes.
-
-### Build Tools
-
-The Build Tools team is responsible for building the tools that make Quilt modding possible. This is one of our most
-important teams, and it maintains projects that are instrumental for getting Quilt to a full release.
-
-This team is currently focused on improving Sponge's VanillaGradle and bringing it into a state where it can be used for
-Quilt. Until this is completed, Quilt projects are reliant on Fabric's Loom and a set of additional Gradle plugins, so
-we're hoping to prioritise development in this team.
-
-If you're interested in helping out with Quilt's build tools or would like to join this team, please send a message
-in `#build-tools-general` on the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
+If you want to help out with development, some projects that could use help are listed below.
 
 ### Chasm
 
@@ -51,38 +34,25 @@ with the Chasm project, please sent a message in `#chasm-general` on the
 ### Mappings Triage
 
 The Mappings team is responsible for Quilt Mappings and its backbone projects, such as Hashed Mojmap. This team is
-currently looking for triage members, who are mostly responsible for reviewing Pull Requests to Quilt Mappings,
-ensuring that they're up to spec and meet the project's requirements.
+always looking for more reviewers, who inspect Pull Requests to Quilt Mappings and ensure that they're high quality and meet the project's requirements.
 
-This isn't a high-stress position, but it's still important - especially as we'd like to be able to allow Quilt Mappings
-PRs to move quickly and be merged without unnecessary delay.
+Experienced reviewers can join the Mappings Triage team, which give the final approval on Quilt Mappings PRs.
 
-If you'd like to join this team, please send a message in `#mappings-general` on
+If you'd like to learn more, please send a message in `#mappings-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain).
 
 ### QSL
 
-There are QSL teams that don't yet have any members, and this means that the parts of QSL that they are
-responsible for is overseen by the core QSL team instead -- which isn't ideal as they already have a lot of work to
-do. The following teams are empty, and need members:
+QSL is always looking for PR authors and reviewers, who help QSL expand in scope to be a high quality and fully featured modding API. Reviewers inspect API structure, javadoc, implementation, etc for clarity and quality, ensuring QSL is both easy to use and easy to maintain. Experienced reviewers can join one of the QSL Triage teams, which are responsible for giving the final approval on QSL PRs.
 
-- Block
-
-Additionally, the following QSL teams are looking for more members:
-
-- Entities
-- GUI
-- Rendering
-- Transfer
-
-If you'd like to join one of these QSL teams and/or work on these modules, please send a message in `#qsl-general` on
+If you'd like to write a QSL module or start reviewing PRs, please send a message in `#qsl-general` on
 the [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
 
 ### Quilted Fabric API
 
-Quilted Fabric API is a re-implementation of Fabric API using QSL. As a maintainer, you will be responsible for
-merging changes for upstream Fabric API, ensuring that it doesn't conflict with QSL, and re-implement Fabric API
-features in QSL once they become available.
+Quilted Fabric API is a re-implementation of Fabric API using QSL. We are looking for help maintaining this project!
+As a maintainer, you would share the responsibility for merging changes from upstream Fabric API, ensuring that it doesn't conflict with QSL,
+and re-implementing Fabric API features in QSL once they become available.
 
 If you're interested in taking up this role, please send a message in `#qsl-general` on the
 [Toolchain Discord Server](https://discord.quiltmc.org/toolchain)
