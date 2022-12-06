@@ -69,4 +69,13 @@ async function populateButton(
 	buttonTarget.classList.add("is-primary");
 }
 
-populateMinecraftVersions();
+// TODO(pluiedev): this is a temporary hack that prevents console errors from
+// being logged on pages where these three targets simply don't exist
+// (i.e. pages that are not the Technic Launcher install page)
+//
+// ideally this script should only be included for the TL install page but due
+// to a known bug (https://github.com/withastro/astro/issues/4295),
+// this is currently not happening, necessitating this patch.
+
+if (minecraftTarget && loaderTarget && buttonTarget)
+	populateMinecraftVersions();
