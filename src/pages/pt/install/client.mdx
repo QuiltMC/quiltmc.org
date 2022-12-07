@@ -1,0 +1,78 @@
+---
+title: "Install: Client"
+permalink: /install/client
+
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-client
+website: "https://www.minecraft.net/en-us/download"
+
+hasDownloads: true
+---
+
+import InstallerVersion from "@parts/install/InstallerVersion.astro";
+
+Antes de começar, você
+Before getting started, you'll need to make sure you download a copy of the Quilt installer.
+
+O download **Universal** irá funcionar em qualquer computador com o Java instalado corretamente -- mas se usa o Windows, e prefere só usar a instalação do Java que vem com o Minecraft, então você pode usar o download para o **Windows**.
+{/* download Universal, download pro Windows; download Windows seria estranho */}
+
+Se não tem certeza sobre qual escolher, apenas [instale o Java]() e use o download **Universal**.
+
+<div class="field is-horizontal">
+	<InstallerVersion />
+
+	<div class="field-body">
+		<div class="field">
+			<div class="control buttons">
+				<a
+					id="universal-download"
+					href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/latest/quilt-installer-latest.jar"
+					class="button is-primary mt-1"
+				>
+					Universal (.jar)
+				</a>
+
+				<a
+					id="windows-download"
+					href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer-native-bootstrap/windows-x86_64/latest/windows-x86_64-latest.exe"
+					class="button mt-1"
+				>
+					Windows (.exe)
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+Após tiver uma cópia do instalador da Quilt baixada, siga esses passos:
+
+{/* Hmm, "launcher do Minecraft" ou "Minecraft Launcher"? A tradução horrível da Microsoft afetou o site, mas a launcher em si tem o nome de "Minecraft Launcher", hmmmmm*/}
+1. Se ainda não fez isso, baixe uma cópia da launcher do Minecraft [no site do Minecraft](https://www.minecraft.net/pt-br/download), e instale-o.
+2. Se tiver a launcher do Minecraft aberta, feche antes de continuar
+3. Ache o instalador da Quilt que você baixou e rode-a
+4. Certifique que você tem a aba **Client** (Cliente) selecionada
+5. Selecione a versão do Minecraft a qual você deseja instalar Quilt
+6. Selecione a versão da Quilt Loader {/* Manter a "Quilt Loader" em inglês parece ser melhor */} que você deseja usar
+7. Clique no botão **Install** (Instalar).
+
+Presumindo que você deixou a caixa **Generate profile** (Gerar perfil) selecionado, você irá notar que uma nova instalação da Quilt terá sido criada para você. Caso contrário, você pode clicar na aba **Instalações** no top e criar uma nova, escolhendo o novo item da lista da Quilt na dropdown {/* Menu suspenso??? Eu não leio suspenses */}**Versão**.
+
+Isso é tudo que tem pra isso {/* essa frase soa esquisita para mim */} -- instale alguns mods, inicie sua nova instalação, e divirta-se jogando!
+
+# Instalando mods
+
+Instalar mods é um processo até que simples:
+{/* "até que simples" provavelmente está mais próximo de "quite simple" do que "fairly simple", o que pode ser ruim */}
+
+1. Baixe os mods que você gostaria de instalar
+2. Abra a launcher do Minecraft e clique na aba de **Instalações**
+3. Coloque o seu cursor sobre a instalação da Quilt a qual deseja adicionar mods
+4. Clique no botão que parece um ícone de uma pasta
+5. Na pasta que abrirá, crie uma pasta chamada `mods` se uma não existe ainda
+6. Copie os arquivos de mods {/* dos mods? */} para a pasta `mods/`
+7. Tenha certeza de que você também adicionou o pacote {/* ai não, com "pacote", "bundle" = "pack", e eu não quero dizer "modpack"! */} **Quilted Fabric API/Quilt Standard Libraries**, que você pode encontrar [na Modrinth](https://modrinth.com/mod/qsl) ou [na CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl)
+{/* O viés está à favor da Modrinth pois ela tem planos para traduções; uma pena que a solução para a neutralidade que ela usou foi "o(a)" */}
+
+Inicie sua instalação, e os mods devem estar disponíveis imediatamente. Se você encontrar quaisquer problemas {/* qualquer problema? */}, dê uma olhada na [página de solução de problemas](/pt/usage/troubleshooting), ou [junte-se a nós no Discord](https://discord.quiltmc.org) para pedir ajuda!
+{/* hm, "pedir ajuda", mas aí seria "ask for help"; o que seria um bom equivalente para "ask for support"?*/}

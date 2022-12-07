@@ -1,0 +1,36 @@
+# Proper nouns; you shouldn't need to edit them.
+-atlauncher = ATLauncher
+-multimc = MultiMC
+-prismlauncher = Prism Launcher
+-technic = Technic
+-curseforge = CurseForge
+-gdlauncher = GDLauncher
+
+platform-client = Client
+platform-server = Server
+platform-atlauncher = {-atlauncher}
+platform-multimc = {-multimc}
+platform-prismlauncher = {-prismlauncher}
+platform-technic = {-technic}
+platform-curseforge = {-curseforge}
+platform-gdlauncher = {-gdlauncher}
+
+logo-minecraft = Logo do Minecraft
+logo-java = Logo do Java
+logo-atlauncher = Logo da {-atlauncher}
+logo-multimc = Logo da {-multimc}
+logo-prismlauncher = Logo da {-prismlauncher}
+logo-technic = Logo da Technic Launcher
+logo-curseforge = Logo da {-curseforge}
+logo-gdlauncher = Logo da {-gdlauncher}
+
+button-back = Voltar
+	.full = Voltar pra lista
+button-menu = Menu
+button-website = Site
+
+wip-warning =
+	<0><1>Quilt is in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0><2>If you'd like to help us test Quilt, please feel free to install it, try it, and let us know how you get on!</2>
+
+# Used as the default text for the installer version if it's not replaced by JS.
+installer-version-placeholder = Baixar

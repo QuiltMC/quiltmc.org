@@ -1,0 +1,31 @@
+---
+title: "Install: GDLauncher"
+permalink: /install/gdlauncher/
+
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-gdlauncher
+website: https://gdevs.io
+---
+
+import Message from "@atoms/Message.astro";
+
+### Status: Work In Progress
+
+GDLauncher does not currently support Quilt, but a member of the community has [submitted a Pull Request](https://github.com/gorilla-devs/GDLauncher/pull/1400) that adds Quilt support. If you're interested in seeing Quilt support in GDLauncher, feel free to take a look at that PR.
+
+# Workarounds
+
+<Message style={"danger"}>
+	Please note that the following solutions are maintained by third party developers. We cannot guarantee their efficacy over time -- and, while we believe them to be entirely safe, we can't take responsibility for any issues caused by them.
+
+	**Please remember to back up your worlds if you attempt to use the following solutions on an existing launcher profile!**
+</Message>
+
+If you can't wait for GDLauncher to support Quilt, then [kb1000](https://www.curseforge.com/members/kb1000) maintains one possible solution:
+
+1. Create a Forge profile
+2. Add [JumpQuilt](https://www.curseforge.com/minecraft/mc-mods/jumpquilt), which will hijack the Forge loading process to load Quilt instead
+3. Add your mods as usual
+4. Ensure you have also added the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl)
+
+We're aware that this isn't an ideal solution for a number of reasons. Please show your support on the Pull Request linked above if you'd like to see a better solution!

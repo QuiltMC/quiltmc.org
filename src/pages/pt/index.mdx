@@ -1,0 +1,59 @@
+import Home from "/src/layouts/Home.astro";
+import site from "@data/Site";
+
+<Home content={{}}>
+  <div slot="info">
+    # The Quilt Project
+
+		O project Quilt é uma <abbr title="cadeia de ferramentas">toolchain</abbr> de criação de mods movida pela comunidade e de código aberto desenvolvida principalmente para o Minecraft. Ao focar na velocidade, na facilidade de uso e na modularidade, a Quilt foca em fornecer uma toolchain de criação de mods suave e moderna com um ecosistema aberto.
+		{/* "suave" troca o "sleek" do texto original, mas é, talvez não há muito um mesmo significado*/}
+
+		A Quilt é um projeto que nasceu de uma necessidade de mudança no ecosistema de mods do Minecraft. Nossas equipes possuem vários membros da comunidade de mods, fornecendo um nível de familiaridade que nos ajudam a prevenir os erros do passado -- seja que os erros relatam ao gerenciamento da comunidade, à diversidade e inclusividade, à governança de projeto ou à transparência. Para mais informações sobre como esperamos fazer isso, [por favor veja nossas páginas "sobre"](/pt/about).
+		{/* "nossas páginas 'sobre'"? aaaaaaaaaaa */}
+		{/* ah, e o "seja", essa estrutura realmente é uma grande fraqueza minha e eu gostaria de um segundo par do olhos aqui */}
+
+  </div>
+  <div slot="wip">
+		**A Quilt está atualmente em beta.** (insira uma frase equivalente à "Here be dragons" aqui; talvez  o "Siga com cautela" do Firefox seria uma boa base?) -- problemas podem acontecer, mas nós os arrumaremos o mais rápido possível!
+		{/*
+		Nota da Ennui: por que dragões ;-;
+		não consigo facilmente traduzir essa expressão ;-;
+		*/}
+
+		Se você gostaria de nos ajudar a testar a Quilt, por favor sinta-se livre para [instalá-la](/pt/install), prová-la, e {/* and let us know how you get on */}!
+
+  </div>
+  <div slot="caring">
+		{/*
+		to care -> importar; isso pode se tornar um grande problema,
+		pois a slogan "The mod-loader that cares" agora tem o duplo-sentido de "The mod-loader that matters";
+		talvez o sentido da palavra "care" não é tão forte na palavra "importar"?
+		*/}
+		A Quilt é movida pela comunidade, e ela não poderia existir sem sues usuários e contribuidores. Nós nos importamos com a nossa comunidade, seja você for um membro de nossos espaços de comunidade, ume contribuidore de um dos nossos projetos ou simplesmente ume usuárie: **A Quilt existe para suas necessidades** -- não para ignorá-las.
+		{/* Nota geral: pensando bem? a palavra "membro" é super esquisito; não queria usar ele, é masculino demais */}
+  </div>
+  <div slot="modular">
+		A modularidade da Quilt não existe só para ajudar à organizar o seu código -- **ela se estende para sues usuáries e criadores de mods também**. Se você é ume criadore de mods {/*talvez "Se você cria mods"?*/}, nossas ferramentas de build irão monitorar {/* monitorar? */} as bibliotecas da Quilt. Se você é ume usuárie, a Quilt pode automaticamente baixar as bibliotecas da Quilt necessárias para rodar os seus mods.
+  </div>
+  <div slot="powerful">
+		A Quilt possui funções e ferramentas extras que seus mods precisam para terem sucesso. De uma biblioteca rica de módulos que ajudam você a escrever mods mais compatíveis com menos esforço, para um dos decompiladores mais precisos fornecidos por qualquer toolchain de criação de mods do Minecraft, você pode ter certeza de que **seu mod estará {/* está? */} em boas mãos**.
+  </div>
+  <div slot="joinTheCommunity">
+		# Junte-se à comunidade
+
+		Sinta-se livre para se juntar a nós em um dos nossos espaços de comunidade oficiais clicando nos botões abaixo. Esteja ciente de que **todes ês usuáries dos espaços da comunidade (e de desenvolvimento) estão esperades a estar em concordância ao [nosso código de conduta](/pt/community/code-of-conduct) e às [nossas regras](/pt/community/rules).** Recomendamos que você leia e se familiarize com estes antes de se juntar ou interagir conosco.
+
+  </div>
+  <div slot="getInvolved">
+		{/* Logo logo, tudo isso se tornará irrelevante com a PR da Glitch! */}
+		# Envolva-se
+
+		Há várias maneiras em que você pode nos ajudar, mesmo se não for ume desenvolvidore.  Uma lista de vagas atualmente abertas pode ser encontrada na [página da vagas](/pt/openings).
+
+		Se nenhuma das vagas atraem você, ou você queira contribuir sem entrar em uma equipe, a melhor coisa a se fazer é se juntar à nós no GitHub ou o <a href={site.discordToolchain}>servidor da toolchain no Discord</a>, onde o desenvolvimento da Quilt é realizada.  Há várias coisas a se fazer, então nós sempre podemos usar mais ajuda!
+
+  </div>
+  <div slot="latestPosts">
+    # Posts recentes
+  </div>
+</Home>
