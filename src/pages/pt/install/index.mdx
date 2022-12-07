@@ -1,0 +1,31 @@
+import Install from "/src/layouts/Install.astro";
+import Message from "@atoms/Message.astro";
+
+<Install content={{ title: "Install", permalink: "/install/" }}>
+    <div slot="direct">
+        Instalação direta
+    </div>
+
+    <div slot="launchers">
+        <h1 class="mb-0">Launchers</h1>
+
+		**Atenção:** a presença de um launcher de um terceiro nesta página não significa um apoio da The Quilt Project a ele. Nós só acreditamos que as escolhas de usuárie são importantes!
+		{/*
+		Atenção? Talvez simplesmente "Nota" funcionaria melhor
+		A frase "The Quilt Project" está estranha aqui, talvez isso deva ser traduzida?
+		User choice? hmmm; "escolha de usuárie" é ambígua pois é elu que escolhe ou é a escolha sobre usuáries? :P
+		talvez "as escolhas de usuárie seria melhor aqui"
+		*/}
+	</div>
+
+    <div slot="awaitingSupport">
+        # Aguardando suporte
+
+        <Message style="primary" bodyStyle="has-text-left">
+			Os launchers nesta lista atualmente não possuem suporte para a Quilt -- mas alguém pediu a eles o suporte, ou eles já estão trabalhando nisso. Você pode clicar neles para saber mais sobre como eles estão -- ou para aprender sobre (as workarounds) para instalar a Quilt neles, onde for possível.
+			{/*
+			aaaaaaaa "os launchers"? "eles"? a minha intuição diz que "as launchers" seria uma opção melhor, mas talvez eu tenha um pouco de viés :P
+			*/}
+		</Message>
+    </div>
+</Install>
