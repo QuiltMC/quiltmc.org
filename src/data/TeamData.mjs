@@ -523,6 +523,13 @@ export default {
 		github: "TheGlitch76",
 		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
 	},
+	ix0rai: {
+		name: "ix0rai",
+		discord: "ix0rai",
+		github: "ix0rai",
+		avatar: "/assets/img/team/ix0rai.png",
+		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
+	},
 	kashike: {
 		name: "kashike",
 		discord: "kashike",
