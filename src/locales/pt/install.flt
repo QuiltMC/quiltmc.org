@@ -6,8 +6,8 @@
 -curseforge = CurseForge
 -gdlauncher = GDLauncher
 
-platform-client = Client
-platform-server = Server
+platform-client = Cliente
+platform-server = Servidor
 platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
