@@ -8,10 +8,10 @@ title-formatted = {$shortTitle} | {$title}
 serial-comma = {$prev}, {$next}
 
 # Common strings
--developer-wiki = Wiki de desenvolvidores
+-developer-wiki = Wiki de desenvolvedores
 # Hmm, "de" ou "des"?
 -forum = Fórum
--import-utility = Utilidade de importação da Quilt
+-import-utility = Utilidade de importação para Quilt
 -openings = Vagas
 -patch-notes = Patch Notes
 # aaaaaaaaaaaa como eu posso traduzir você ;-;
