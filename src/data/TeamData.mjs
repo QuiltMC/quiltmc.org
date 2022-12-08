@@ -456,6 +456,7 @@ export default {
 		name: "Jasmine",
 		discord: "SuperCoder79",
 		github: "SuperCoder7979",
+		avatar: "https://avatars.githubusercontent.com/u/25208576",
 		description: "Minecraft modder and Java reverse engineer.",
 		links: [
 			{ icon: "fab fa-twitter", url: "https://twitter.com/SuperCoder79" },
@@ -608,14 +609,12 @@ export default {
 			},
 		],
 	},
-	"tempest": {
+	tempest: {
 		name: "tempest",
 		discord: "tempest",
 		github: "tempest15",
 		avatar: "https://avatars.githubusercontent.com/u/66021850?v=4",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" },
-		]
+		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" }],
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
