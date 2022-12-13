@@ -336,7 +336,7 @@ export default {
 		github: "OroArmor",
 		avatar: "/assets/img/team/OroArmor.jpg",
 		description:
-			"Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making itemsextendable and improving everything about mappings in the Quilt Toolchain.",
+			"Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making items extendable and improving everything about mappings in the Quilt Toolchain.",
 		links: [
 			{
 				icon: "fas fa-link",
