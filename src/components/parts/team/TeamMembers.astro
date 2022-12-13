@@ -1,0 +1,15 @@
+---
+import TeamMember from "@parts/team/TeamMember.astro";
+import teamData from "@data/Team";
+
+export interface Props {
+	type: string;
+	list: string[];
+}
+
+const { type, list } = Astro.props as Props;
+---
+
+<div class:list={["team-grid", type]}>
+	{list.map((name) => <TeamMember member={teamData[name]} />)}
+</div>

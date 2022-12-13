@@ -1,0 +1,23 @@
+---
+import Button from "@atoms/Button.astro";
+import site from "@data/Site";
+
+export interface Props {
+	names: string[];
+}
+const { names } = Astro.props as Props;
+---
+
+<div class="button-grid">
+	{
+		names.map((name) => (
+			<Button
+				href={`${site.github.link}/${name}`}
+				target="_blank"
+				type="github"
+				icon="fab fa-github"
+				text={name}
+			/>
+		))
+	}
+</div>

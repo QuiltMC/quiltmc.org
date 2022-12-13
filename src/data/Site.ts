@@ -29,6 +29,7 @@ export interface Config {
 		handle: SocialMediaHandle;
 		card: string;
 	};
+	wiki: URL;
 	logo: string;
 	social: {
 		name: string;
@@ -54,6 +55,7 @@ const config: Config = {
 		handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
 		card: "summary",
 	},
+	wiki: new URL("https://modder.wiki.quiltmc.org/"),
 	logo: "/assets/img/logo-square.png",
 	social: {
 		name: "QuiltMC",
