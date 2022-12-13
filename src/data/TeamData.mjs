@@ -570,8 +570,7 @@ export default {
 		discord: "snoozestudios",
 		github: "peaceheis",
 		avatar: "/assets/img/team/snoozestudios.png",
-		description:
-			"Python and Java coder, loves Minecraft and modding it, has too many projects.",
+		description: "Student, Coder & Much More!",
 		links: [
 			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
 		],
