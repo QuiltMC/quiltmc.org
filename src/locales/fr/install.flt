@@ -7,7 +7,7 @@
 -gdlauncher = GDLauncher
 
 platform-client = Client
-platform-server = Server
+platform-server = Serveur
 platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
