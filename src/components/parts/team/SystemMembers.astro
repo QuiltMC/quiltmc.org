@@ -31,29 +31,33 @@ if (members !== "---") {
 }
 ---
 
-<div class="media system-member-title">
-	<div class="media-content">
-		<p class="subtitle is-6 has-text-centered">
-			{t("team:plural-system")}
-		</p>
-	</div>
-</div>
-
-<div class="system-members">
-	{
-		icons && icons.length > 0 ? (
-			icons.map((m) => (
-				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
-					<img src={m.avatarUrl} />
+<details class="system-members" open={icons?.length <= 12}>
+	<!-- <summary> (a lot of members)</summary> -->
+	<summary class="media system-member-title">
+		<div class="media-content">
+			<p class="subtitle is-6 has-text-centered">
+				{t("team:plural-system", { count: icons.length })}
+			</p>
+		</div>
+	</summary>
+	<div>
+		{
+			icons && icons.length > 0 ? (
+				icons.map((m) => (
+					<img
+						class="has-tooltip-arrow has-tooltip-bottom"
+						data-tooltip={m.name}
+						src={m.avatarUrl}
+					/>
+				))
+			) : (
+				<div
+					class="has-tooltip-arrow"
+					data-tooltip={t("team:member-list-redacted")}
+				>
+					<i class="fa-2xl pl-1 fas fa-box-heart" />
 				</div>
-			))
-		) : (
-			<div
-				class="has-tooltip-arrow"
-				data-tooltip={t("team:member-list-redacted")}
-			>
-				<i class="fa-2xl pl-1 fas fa-box-heart" />
-			</div>
-		)
-	}
-</div>
+			)
+		}
+	</div>
+</details>
