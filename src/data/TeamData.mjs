@@ -102,9 +102,13 @@ export default {
 		name: "Ennui Langeweile",
 		discord: "Ennui",
 		github: "EnnuiL",
-		avatar: "https://avatars.githubusercontent.com/u/85590273",
-		description: "A bored Minecraft modder who also rarely makes some emojis.",
+		avatar: "/assets/img/team/Ennui.png",
+		description: "A Minecraft modder who wants to Revolutionize The World™! I also do some art and other things.",
 		links: [
+			{
+				icon: "fab fa-mastodon",
+				url: "https://tech.lgbt/@ennui",
+			},
 			{
 				icon: "fak fa-modrinth-small",
 				url: "https://modrinth.com/user/Ennui",
