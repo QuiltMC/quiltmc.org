@@ -52,17 +52,19 @@ const na = t("team:n-a");
 					}
 				</p>
 
-				{
-					member.links && member.links.length > 0 && (
-						<p class="subtitle is-6 is-links">
-							{member.links.map((link) => (
+				<p class="subtitle is-6 is-links">
+					{
+						member.links && member.links.length > 0 ? (
+							member.links.map((link) => (
 								<a href={link.url}>
 									<i class:list={["fa-lg", link.icon]} />
 								</a>
-							))}
-						</p>
-					)
-				}
+							))
+						) : (
+							<>&nbsp;</>
+						)
+					}
+				</p>
 			</div>
 		</div>
 
