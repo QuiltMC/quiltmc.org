@@ -24,13 +24,13 @@ logo-technic = Technic Launcher logo
 logo-curseforge = {-curseforge} logo
 logo-gdlauncher = {-gdlauncher} logo
 
-button-back = Back
-	.full = Back to List
+button-back = Retour
+	.full = Retour à la liste
 button-menu = Menu
-button-website = Website
+button-website = Site web
 
 wip-warning =
-	<0><1>Quilt is in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0><2>If you'd like to help us test Quilt, please feel free to install it, try it, and let us know how you get on!</2>
+	<0><1>Quilt est actuellement en version bêta.</1> Là est le danger - il peut y avoir des problèmes, mais nous les corrigerons aussi vite que possible !</0><2>Si vous souhaitez nous aider à tester Quilt, n'hésitez pas à l'installer, à l'essayer et à nous faire part de vos retours !</2>
 
 # Used as the default text for the installer version if it's not replaced by JS.
 installer-version-placeholder = Download
