@@ -7,6 +7,12 @@ import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
 ---
 
+<style>
+	.footer .pineapple {
+		margin-bottom: -5px;
+	}
+</style>
+
 <footer class="footer">
 	<div class="content">
 		<div class="columns">
@@ -101,9 +107,16 @@ import { t } from "i18next";
 					</p>
 					<p>
 						<Trans i18nKey="made-with" ns="footer">
-							Made with <i class="fak fa-2xl fa-pumpkin"></i>, <a
-								href="https://bulma.io">Bulma</a
-							> and
+							Made with
+							<img
+								alt=":pineapple:"
+								title="Pineapple"
+								class="pineapple"
+								src="/assets/img/pineapple.png"
+								height="24"
+								width="24"
+							/>,
+							<a href="https://bulma.io">Bulma</a> and
 							<a href="https://github.com/CreativeBulma"
 								>the CreativeBulma extensions</a
 							>.
