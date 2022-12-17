@@ -17,8 +17,8 @@ export default {
 			"The local project abandoning expert. Also may or may not exist.",
 		links: [
 			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/ADudeCalledLeo",
+				icon: "fab fa-mastodon",
+				url: "https://tech.lgbt/@ADudeCalledLeo",
 			},
 			{
 				icon: "fak fa-modrinth-small",
