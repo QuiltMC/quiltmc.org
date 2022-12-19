@@ -426,8 +426,11 @@ export default {
 		discord: "Silver <3",
 		github: "SilverAndro",
 		avatar: "https://avatars.githubusercontent.com/u/52360088",
-		description: "Trans programmer working with Kotlin.",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" }],
+		description: "Trans programmer working with Kotlin. Plays too much warframe.",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" },
+			{ icon: "fab fa-tumblr", url: "https://silverandro.tumblr.com"}
+		],
 	},
 	Southpaw: {
 		name: "Southpaw1496",
