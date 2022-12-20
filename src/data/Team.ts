@@ -10,13 +10,14 @@ export interface TeamMember {
 	description?: string;
 	avatar?: string;
 	pixelateAvatar?: boolean;
-	systemMembers?: "---" | PkId | SystemMember[];
+	systemMembers?: SystemMembers;
 	links?: Link[];
 }
 export interface Link {
 	icon: string;
 	url: string;
 }
+export type SystemMembers = "---" | PkId | SystemMember[];
 export interface SystemMember {
 	icon: string;
 	name: string;

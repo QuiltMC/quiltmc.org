@@ -17,8 +17,8 @@ export default {
 			"The local project abandoning expert. Also may or may not exist.",
 		links: [
 			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/ADudeCalledLeo",
+				icon: "fab fa-mastodon",
+				url: "https://tech.lgbt/@ADudeCalledLeo",
 			},
 			{
 				icon: "fak fa-modrinth-small",
@@ -102,9 +102,13 @@ export default {
 		name: "Ennui Langeweile",
 		discord: "Ennui",
 		github: "EnnuiL",
-		avatar: "https://avatars.githubusercontent.com/u/85590273",
-		description: "A bored Minecraft modder who also rarely makes some emojis.",
+		avatar: "/assets/img/team/Ennui.png",
+		description: "A Minecraft modder who wants to Revolutionize The World™! I also do some art and other things.",
 		links: [
+			{
+				icon: "fab fa-mastodon",
+				url: "https://tech.lgbt/@ennui",
+			},
 			{
 				icon: "fak fa-modrinth-small",
 				url: "https://modrinth.com/user/Ennui",
@@ -336,7 +340,7 @@ export default {
 		github: "OroArmor",
 		avatar: "/assets/img/team/OroArmor.jpg",
 		description:
-			"Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making itemsextendable and improving everything about mappings in the Quilt Toolchain.",
+			"Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making items extendable and improving everything about mappings in the Quilt Toolchain.",
 		links: [
 			{
 				icon: "fas fa-link",
@@ -422,8 +426,11 @@ export default {
 		discord: "Silver <3",
 		github: "SilverAndro",
 		avatar: "https://avatars.githubusercontent.com/u/52360088",
-		description: "Trans programmer working with Kotlin.",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" }],
+		description: "Trans programmer working with Kotlin. Plays too much warframe.",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" },
+			{ icon: "fab fa-tumblr", url: "https://silverandro.tumblr.com"}
+		],
 	},
 	Southpaw: {
 		name: "Southpaw1496",
@@ -434,12 +441,8 @@ export default {
 			"Inside of Quilt I help moderate community spaces and lead the Outreach team. Outside of Quilt I tinker with things to varying degrees of failure, and write things now and then. I also like cats.",
 		links: [
 			{
-				icon: "fal fa-globe",
-				url: "https://southpaw1496.me",
-			},
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/Southpaw1496",
+				icon: "fab fa-mastodon",
+				url: "https://mastodon.southpaw1496.me",
 			},
 		],
 	},
@@ -456,6 +459,7 @@ export default {
 		name: "Jasmine",
 		discord: "SuperCoder79",
 		github: "SuperCoder7979",
+		avatar: "https://avatars.githubusercontent.com/u/25208576",
 		description: "Minecraft modder and Java reverse engineer.",
 		links: [
 			{ icon: "fab fa-twitter", url: "https://twitter.com/SuperCoder79" },
@@ -523,6 +527,13 @@ export default {
 		github: "TheGlitch76",
 		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
 	},
+	ix0rai: {
+		name: "ix0rai",
+		discord: "ix0rai",
+		github: "ix0rai",
+		avatar: "/assets/img/team/ix0rai.png",
+		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
+	},
 	kashike: {
 		name: "kashike",
 		discord: "kashike",
@@ -562,8 +573,7 @@ export default {
 		discord: "snoozestudios",
 		github: "peaceheis",
 		avatar: "/assets/img/team/snoozestudios.png",
-		description:
-			"Python and Java coder, loves Minecraft and modding it, has too many projects.",
+		description: "Student, Coder & Much More!",
 		links: [
 			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
 		],
@@ -601,14 +611,12 @@ export default {
 			},
 		],
 	},
-	"tempest": {
+	tempest: {
 		name: "tempest",
 		discord: "tempest",
 		github: "tempest15",
 		avatar: "https://avatars.githubusercontent.com/u/66021850?v=4",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" },
-		]
+		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" }],
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",

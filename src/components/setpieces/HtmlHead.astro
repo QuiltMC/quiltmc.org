@@ -78,10 +78,22 @@ const titleFormatted = t("title-formatted", {
 
 	<link
 		rel="stylesheet"
-		href={rtl ? "/assets/css/style-rtl.min.css" : "/assets/css/style.min.css"}
+		href={rtl
+			? "/assets/css/style-dark-rtl.min.css"
+			: "/assets/css/style-dark.min.css"}
+		media="(prefers-color-scheme: dark)"
+	/>
+	<link
+		rel="stylesheet"
+		href={rtl
+			? "/assets/css/style-light-rtl.min.css"
+			: "/assets/css/style-light.min.css"}
+		media="(prefers-color-scheme: light)"
 	/>
 
-	<script async src="/src/script.ts"></script>
+	<script>
+		import "src/script";
+	</script>
 	<script
 		async
 		src="https://kit.fontawesome.com/b1b70f724e.js"
