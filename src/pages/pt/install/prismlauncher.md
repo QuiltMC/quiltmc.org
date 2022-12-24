@@ -15,7 +15,7 @@ To set up a Quilt instance, simply follow these steps:
 2. Open Prism Launcher, follow the setup steps and click on the **Add Instance** button at the top of the window
 3. Fill out the **Name** box as required (you may also fill the **Group** box optionally)
 4. Select **Vanilla** from the list on the left, and pick the version of Minecraft you'd like to use for your instance
-5. Under the **Mod Loader**, select **Quilt** and then pick the Quilt Loader version you'd like to use.
+5. Under the **Mod Loader**, select **Quilt** and then pick the Quilt Loader version you'd like to use
 6. Click **OK** to create a new Quilt instance
 7. Set up the rest of your instance as normal
 
@@ -27,8 +27,8 @@ To install mods to your Prism Launcher instance, simply follow these steps:
 
 1. Right-click on the instance you'd like to install mods to and select **Edit...**, or click on it once and select **Edit** from the menu on the right of the window
 2. Select **Mods** from the list on the left, and click on the **Download mods** button in the menu on the right side of the window
-3. Click on **Download Mods** on the right side of the window, and use the popup to search for and install the mods you'd like to use.
-4. Ensure you have the **Quilted Fabric API/Quilt Standard Libraries** bundle installed, which you can find [on CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl) or [on Modrinth](https://modrinth.com/mod/qsl)
+3. Use the new window to search for and install the mods you'd like to use
+4. Make sure to install the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl) or [on Modrinth](https://modrinth.com/mod/qsl)
 
 If you can't find the mod you'd like to install using the built-in search, you can simply drag-and-drop any mod files you've downloaded into the mod list, and Prism Launcher will ensure it's installed properly.
 
