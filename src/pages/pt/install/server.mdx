@@ -10,7 +10,7 @@ hasDownloads: true
 
 import InstallerVersion from "@parts/install/InstallerVersion.astro";
 
-Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make sure you've [installed Java](https://java.com/en/download).
+Antes de começar, você deve ter certeza de que você baixou uma cópia do instalador da Quilt. Você também terá que ter certeza de que você [tem o Java instalado](https://java.com/en/download).
 
 <div class="field is-horizontal">
 	<InstallerVersion />
@@ -29,7 +29,7 @@ Before getting started, you'll need to make sure you download a copy of the Quil
 	</div>
 </div>
 
-## GUI Installation
+## Instalação via GUI
 
 Once you have a copy of the Quilt installer downloaded, follow these steps:
 
@@ -49,7 +49,7 @@ java -jar quilt-server-launch.jar nogui
 
 That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
-## CLI Installation
+## Instalação via CLI
 
 Once you have a copy of the Quilt installer downloaded, you'll need to run it from your terminal, replacing `INSTALLER_VERSION` and `MINECRAFT_VERSION` as needed:
 
@@ -67,13 +67,18 @@ java -jar quilt-server-launch.jar nogui
 
 That's all there is to it - use the corresponding `.bat` or `.sh` file to start the server for the first time, then stop it (with `/stop` or `ctrl+c`) and set it up as you normally would.
 
-# Installing Mods
+{/* Essa seção é mais-ou-menos espelhada da mesma seção para clientes; As anotações foram compartilhadas no momento */}
+# Instalando mods
 
-Installing mods is a fairly simple process:
+Instalar mods é um processo até que simples:
+{/* "até que simples" provavelmente está mais próximo de "quite simple" do que "fairly simple", o que pode ser ruim */}
 
-1. Download the mods you'd like to install
-2. Create a folder named `mods` alongside your server files, if one doesn't already exist
-3. Copy your mod files into the `mods/` folder
-4. Ensure you have also added the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl) or [on Modrinth](https://modrinth.com/mod/qsl)
+1. Baixe os mods que você gostaria de instalar
+2. Crie uma pasta chamada `mods` ao lado de seus arquivos de servidor, se uma não existe ainda
+3. Copie os arquivos de mods {/* dos mods? */} para a pasta `mods/`
+4. Tenha certeza de que você também adicionou o pacote {/* ai não, com "pacote", "bundle" = "pack", e eu não quero dizer "modpack"! */} **Quilted Fabric API/Quilt Standard Libraries**, que você pode encontrar [na Modrinth](https://modrinth.com/mod/qsl) ou [na CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl)
+{/* O viés está à favor da Modrinth pois ela tem planos para traduções; uma pena que a solução para a neutralidade que ela usou foi "o(a)" */}
 
-Launch your installation, and the mods should be available immediately. If you run into any issues, please take a look at the [troubleshooting page](/en/usage/troubleshooting), or [join us on Discord](https://discord.quiltmc.org) to ask for support!
+Inicie sua instalação, e os mods devem estar disponíveis imediatamente. Se você encontrar quaisquer problemas {/* qualquer problema? */}, dê uma olhada na [página de solução de problemas](/pt/usage/troubleshooting), ou [junte-se a nós no Discord](https://discord.quiltmc.org) para pedir ajuda!
+{/* hm, "pedir ajuda", mas aí seria "ask for help"; o que seria um bom equivalente para "ask for support"?*/}
+

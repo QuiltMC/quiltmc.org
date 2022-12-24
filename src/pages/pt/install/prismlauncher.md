@@ -1,5 +1,5 @@
 ---
-title: "Install: Prism Launcher"
+title: "Instalar: Prism Launcher"
 permalink: /install/prismlauncher/
 
 layout: /src/layouts/InstallPage.astro
@@ -7,21 +7,29 @@ platformKey: platform-prismlauncher
 website: https://prismlauncher.org
 ---
 
+A Prism Launcher foi desenvolvida para permitir que usuáries {manage} várias instalações do Minecraft de uma vez com facilidade, e fornecer as {power tools} que ume usuárie avançade precisaria.
 Prism Launcher is designed to allow users to manage multiple installations of Minecraft at once easily, and provide the power tools an advanced user would need.
 
-To set up a Quilt instance, simply follow these steps:
+Para {set up; estabelecer} uma instância {da?} Quilt, simplesmente siga essas etapas:
 
-1. Download and install Prism Launcher from [their website](https://prismlauncher.org)
-2. Open Prism Launcher, follow the setup steps and click on the **Add Instance** button at the top of the window
-3. Fill out the **Name** box as required (you may also fill the **Group** box optionally)
-4. Select **Vanilla** from the list on the left, and pick the version of Minecraft you'd like to use for your instance
-5. Under the **Mod Loader**, select **Quilt** and then pick the Quilt Loader version you'd like to use.
-6. Click **OK** to create a new Quilt instance
-7. Set up the rest of your instance as normal
+1. Baixe e instale a Prism Launcher no [site dela](https://prismlauncher.org) {"site delus" funcionaria tecnicamente, mas é mais confuso comparado a "site deles"; Para clarificar as coisas mas ainda rejeitando o masculino-como-padrão, optei por ir como se o site fosse da launcher em si ao invés da equipe dela; talvez um dia poderemos usar "site delus" de uma forma que ê leitore entenderia com clareza}
+2. Abra a Prism Launcher, siga as instruções de preparação e clique no botão **Adicionar instância** no topo da janela
+3. Preencha a caixa de **Nome** {as required} (você também pode preencher a caixa **Grupo** opcionalmente) {caixa...? palavra estranha}
+4. Selecione **Padrão** na lista da esquerda, e escolha a versão do Minecraft que você gostaria de usar para sua instância
+5. Em baixo de **Carregador de mods**, selecione **Quilt** e depois escolha a versão da Quilt Loader que você gostaria de usar
+6. Clique em **OK** para criar uma nova instância Quilt
+7. Configure o resto de sua instância {normalmente?}
 
-That's all there is to it! Once you've followed these steps, your instance should be ready to go -- just add your mods and get playing.
+É tudo que tem para isso! Após ter seguido essas etapas, sua instância deve estar pronta para rodar -- só adicione seus mods e começe a jogar.
 
-# Installing Mods
+# Instalando mods
+
+Para instalar mods na sua instância da Prism Launcher, simplesmente siga essas etapas:
+
+1. Clique com o botão direito na instãncia a qual você deseja instalar mods e selecione **Editar...**, ou clique nela uma vez e selecione **Editar** no menu à direita da janela
+2. Selecione **Mods** na lista à esquerda, e clique no botão **Baixar mods** no menu à direita da janela
+3. {Redundância redundante??? ah não, brb}
+4. Não se esqueça de instalar o pacote **Quilted Fabric API/Quilt Standard Libraries**, que você pode encontrar [na Modrinth](https://modrinth.com/mod/qsl) ou [na CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl)
 
 To install mods to your Prism Launcher instance, simply follow these steps:
 

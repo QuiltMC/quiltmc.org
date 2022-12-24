@@ -1,5 +1,5 @@
 ---
-title: "Install: MultiMC"
+title: "Instalar: MultiMC"
 permalink: /install/multimc/
 
 layout: /src/layouts/InstallPage.astro
