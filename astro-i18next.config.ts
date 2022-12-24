@@ -2,7 +2,7 @@ import type { AstroI18nextConfig } from "astro-i18next";
 
 export default {
 	defaultLanguage: "en",
-	supportedLanguages: ["en", "pt", "pt_BR"],
+	supportedLanguages: ["en"],
 	i18next: {
 		//debug: true, // convenient during development to check for missing keys
 		defaultNS: "common",
