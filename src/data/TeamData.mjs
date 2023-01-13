@@ -593,7 +593,7 @@ export default {
 			},
 			{
 				icon: "fa-brands fa-mastodon",
-				url: "https://mastodon.technology/@sschr15",
+				url: "vmst.io/@sschr15",
 			},
 		],
 	},
