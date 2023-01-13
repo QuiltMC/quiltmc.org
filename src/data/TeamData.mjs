@@ -194,7 +194,7 @@ export default {
 		github: "LambdAurora",
 		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
 		description:
-			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through ourmod designs and our work on Quilt.",
+			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through our mod designs and our work on Quilt.",
 		systemMembers: "pk:muuha",
 		links: [
 			{
