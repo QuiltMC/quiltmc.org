@@ -29,7 +29,7 @@ page-authors =
         [one] Author
         *[other] Authors
 	}: {$names}
-page-edited = Edited: {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+page-edited = Modifié: {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
 post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
 
 
@@ -78,10 +78,10 @@ sidebar-resources = Ressources
 sidebar-teams = Équipes
 sidebar-versions = Versions
 
-paginator-button-first = First
-paginator-button-previous = Previous
-paginator-button-next = Next
-paginator-button-last = Last
+paginator-button-first = Première
+paginator-button-previous = Précédente
+paginator-button-next = Suivante
+paginator-button-last = Dernière
 
 tooltip-switch-language = Changer de langue
 tooltip-toggle-low-contrast = Toggle Low Contrast
