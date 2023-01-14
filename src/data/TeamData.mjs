@@ -127,6 +127,18 @@ export default {
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
 	},
+	Foxes: {
+		name: "&foxes",
+		discord: "foxes",
+		github: "0xf24",
+		avatar: "/assets/img/team/foxes/foxes.png",
+		description: "foxbox compliance officers",
+		systemMembers: [
+			{name: "lily", icon: "/assets/img/team/foxes/lily.png"},
+			{name: "scarlet", icon: "/assets/img/team/foxes/scarlet.png"},
+			{name: "violet", icon: "/assets/img/team/foxes/violet.png"},
+		]
+	},
 	Fusion: {
 		name: "Fusion Flux",
 		discord: "Fusion Flux",
@@ -194,7 +206,7 @@ export default {
 		github: "LambdAurora",
 		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
 		description:
-			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through ourmod designs and our work on Quilt.",
+			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through our mod designs and our work on Quilt.",
 		systemMembers: "pk:muuha",
 		links: [
 			{
@@ -426,8 +438,11 @@ export default {
 		discord: "Silver <3",
 		github: "SilverAndro",
 		avatar: "https://avatars.githubusercontent.com/u/52360088",
-		description: "Trans programmer working with Kotlin.",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" }],
+		description: "Trans programmer working with Kotlin. Plays too much warframe.",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" },
+			{ icon: "fab fa-tumblr", url: "https://silverandro.tumblr.com"}
+		],
 	},
 	Southpaw: {
 		name: "Southpaw1496",
@@ -590,7 +605,7 @@ export default {
 			},
 			{
 				icon: "fa-brands fa-mastodon",
-				url: "https://mastodon.technology/@sschr15",
+				url: "vmst.io/@sschr15",
 			},
 		],
 	},
