@@ -2,6 +2,7 @@ import * as fs from "fs";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
 import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE } from "./util.mjs";
+import fetch from "node-fetch";
 
 async function main() {
 	prepareCacheDirectory();
@@ -52,7 +53,7 @@ async function queryPluralKit() {
 	for (const id in teamData) {
 		const { systemMembers } = teamData[id];
 
-		if (!systemMembers || !systemMembers.startsWith("pk:")) continue;
+		if (typeof systemMembers !== "string" || !systemMembers.startsWith("pk:")) continue;
 
 		const pkId = systemMembers.slice("pk:".length);
 		systems.push(pkId);
