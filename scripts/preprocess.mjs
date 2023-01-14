@@ -53,7 +53,7 @@ async function queryPluralKit() {
 	for (const id in teamData) {
 		const { systemMembers } = teamData[id];
 
-		if (!systemMembers || !systemMembers.startsWith("pk:")) continue;
+		if (typeof systemMembers !== "string" || !systemMembers.startsWith("pk:")) continue;
 
 		const pkId = systemMembers.slice("pk:".length);
 		systems.push(pkId);

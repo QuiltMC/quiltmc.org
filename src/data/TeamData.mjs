@@ -127,6 +127,18 @@ export default {
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
 	},
+	Foxes: {
+		name: "&foxes",
+		discord: "foxes",
+		github: "0xf24",
+		avatar: "/assets/img/team/foxes/foxes.png",
+		description: "foxbox compliance officers",
+		systemMembers: [
+			{name: "lily", icon: "/assets/img/team/foxes/lily.png"},
+			{name: "scarlet", icon: "/assets/img/team/foxes/scarlet.png"},
+			{name: "violet", icon: "/assets/img/team/foxes/violet.png"},
+		]
+	},
 	Fusion: {
 		name: "Fusion Flux",
 		discord: "Fusion Flux",
