@@ -296,9 +296,9 @@ export default {
 		discord: "NoComment",
 		github: "NoComment1105",
 		description:
-			"Chaotic person that likes writing Kotlin, doing Moderation and Mapping. Also administrating the Iris project, and making mods and Discord bots.",
+			"Chaotic puppet on fire that likes to program in Kotlin and write Discord bots, while matching quilt-mappings",
 		avatar: "https://avatars.githubusercontent.com/u/67918617?v=4",
-		links: [{ icon: "fas fa-link", url: "https://nocomment1106.github.io" }],
+		systemMembers: "pk:loobg"
 	},
 	Noah: {
 		name: "Noah van der Aa",
