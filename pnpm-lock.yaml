@@ -15,10 +15,14 @@ specifiers:
   i18next-fluent: ^2.0.0
   i18next-fs-fluent-backend: github:pluiedev/i18next-fs-fluent-backend
   node-fetch: ^3.3.0
+  node-glob: ^1.2.0
   quilt-bulma: ^0.0.18
   rollup: ^3.7.5
   sass: ^1.57.1
   typescript: ^4.9.4
+
+dependencies:
+  node-glob: 1.2.0
 
 devDependencies:
   '@astrojs/markdown-component': 1.0.2
@@ -989,6 +993,10 @@ packages:
       - ts-node
     dev: true
 
+  /async/1.5.2:
+    resolution: {integrity: sha512-nSVgobk4rv61R9PUSDtYt7mPVB2olxNR5RWJcAsH676/ef11bUZwvu7+RGYrYauVdDPcO519v68wRhXQtxsV9w==}
+    dev: false
+
   /bail/2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
     dev: true
@@ -1943,6 +1951,10 @@ packages:
     dependencies:
       is-glob: 4.0.3
     dev: true
+
+  /glob-to-regexp/0.1.0:
+    resolution: {integrity: sha512-zNKwUvfFs4IbHMLzBDl4v5YbFNs64e4yGkptl4DncCYwmhMQORQflvs7XsEv50+M5bJqbgjBqnV+zZ8vF490yQ==}
+    dev: false
 
   /glob/8.0.3:
     resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
@@ -3134,6 +3146,13 @@ packages:
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
     dev: true
+
+  /node-glob/1.2.0:
+    resolution: {integrity: sha512-c0R4Wab2SAlwdBr5ehPANnbLzxv5dBMUdEYy8ilqBDkqvEIf74JGhaLhCh/EuhgzPTXuEOUoqDnAKdODpHXMNg==}
+    dependencies:
+      async: 1.5.2
+      glob-to-regexp: 0.1.0
+    dev: false
 
   /node-releases/2.0.8:
     resolution: {integrity: sha512-dFSmB8fFHEH/s81Xi+Y/15DQY6VHW81nXRj86EMSL3lmuTmK1e+aT4wrFCkTbm+gSwkw4KpX+rT/pMM2c1mF+A==}
