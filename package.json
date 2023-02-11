@@ -24,6 +24,7 @@
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:pluiedev/i18next-fs-fluent-backend",
 		"node-fetch": "^3.3.0",
+		"node-glob": "^1.2.0",
 		"quilt-bulma": "^0.0.20",
 		"rollup": "^3.14.0",
 		"sass": "^1.58.0",
