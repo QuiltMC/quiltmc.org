@@ -24,7 +24,7 @@ cache
 public/assets/css
 
 # Downloaded external images
-public/external
+public/assets/img/external
 
 # Generated function files
 functions

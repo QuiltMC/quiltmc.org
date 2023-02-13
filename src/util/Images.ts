@@ -3,7 +3,7 @@ const path = await import("path")
 const fs = await import("fs")
 const https = await import("https")
 
-const EXTERNAL_PATH = "./public/external/"
+const EXTERNAL_PATH = "./dist/assets/img/external/"
 
 // Download the image and return a local path if the image
 // is external
@@ -33,5 +33,5 @@ export function image(src: string) {
 		})
 	}
 
-	return "/external/" + key
+	return "/assets/img/external/" + key
 }
