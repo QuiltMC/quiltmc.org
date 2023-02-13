@@ -23,8 +23,5 @@ cache
 # CSS from quilt-bulma
 public/assets/css
 
-# Downloaded external images
-public/assets/img/external
-
 # Generated function files
 functions
