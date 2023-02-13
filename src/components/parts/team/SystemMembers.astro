@@ -2,6 +2,7 @@
 import pkCache from "cache/pk.json";
 import type { SystemMember, PkId, SystemMembers } from "@data/Team";
 import { t } from "i18next";
+import { image } from "../../../util/Images"
 
 export interface Props {
 	members: SystemMembers;
@@ -44,7 +45,7 @@ if (members !== "---") {
 		icons && icons.length > 0 ? (
 			icons.map((m) => (
 				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
-					<img src={m.avatarUrl} />
+					<img src={image(m.avatarUrl)} />
 				</div>
 			))
 		) : (

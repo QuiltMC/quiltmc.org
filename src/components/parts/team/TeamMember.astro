@@ -3,6 +3,7 @@ import pkCache from "cache/pk.json";
 import type { TeamMember, SystemMember, PkId } from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
+import { image } from "../../../util/Images"
 
 export interface Props {
 	member: TeamMember;
@@ -20,7 +21,7 @@ const na = t("team:n-a");
 				<div class="avatar">
 					<img
 						class={member.pixelateAvatar ? "is-pixelated" : ""}
-						src={member.avatar}
+						src={image(member.avatar)}
 						alt={t("team:avatar-alt")}
 					/>
 				</div>
