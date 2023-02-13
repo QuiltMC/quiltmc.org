@@ -1,37 +1,38 @@
-const crypto = await import("crypto")
-const path = await import("path")
-const fs = await import("fs")
-const https = await import("https")
+import * as crypto from "crypto";
+import * as path from "path";
+import * as fs from "fs";
+import * as https from "https";
 
-const EXTERNAL_PATH = "./dist/assets/img/external/"
+const EXTERNAL_PATH = "./dist/assets/img/external/";
 
 // Download the image and return a local path if the image
 // is external
 export function image(src: string) {
 	if (!fs.existsSync(EXTERNAL_PATH)) {
-		fs.mkdirSync(EXTERNAL_PATH)
+		fs.mkdirSync(EXTERNAL_PATH);
 	}
 
-	const url = new URL(src, "http://placeholder")
+	const url = new URL(src, "http://placeholder");
 
 	// It is already a relative path
 	if (url.origin === "http://placeholder") {
-		return src
+		return src;
 	}
 
-	const ext = path.extname(url.pathname)
-	const key = crypto.createHash('sha256').update(src).digest('hex').slice(0, 12) + ext
-	const filePath = EXTERNAL_PATH + key
+	const ext = path.extname(url.pathname);
+	const key =
+		crypto.createHash("sha256").update(src).digest("hex").slice(0, 12) + ext;
+	const filePath = EXTERNAL_PATH + key;
 
 	if (!fs.existsSync(filePath)) {
-		const file = fs.createWriteStream(filePath)
+		const file = fs.createWriteStream(filePath);
 
-		https.get(src, function(response) {
-			response.pipe(file)
+		https.get(src, function (response) {
+			response.pipe(file);
 
-			file.on('finish', () => file.close())
-		})
+			file.on("finish", () => file.close());
+		});
 	}
 
-	return "/assets/img/external/" + key
+	return "/assets/img/external/" + key;
 }
