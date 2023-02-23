@@ -33,7 +33,7 @@ button-menu = 菜单
 button-website = 网站
 
 wip-warning =
-	<0><1>Quilt 仍处于 Beta 测试阶段。</1> 在使用时，你可能会遇到一些问题，但是我们会尽快修复它们的！</0><2>如果你想帮助我们测试 Quilt，可以随意安装并尝试一下，然后让我们知道你的进展如何！</2>
+	<0><1>Quilt 现仍处于 Beta 测试阶段。</1> 在使用使用时如果遇到任何问题请及时告知我们，我们会尽快解决。</0><2>如果你愿意帮我们测试 Quilt，就请安装、测试一下，我们期待你的反馈！</2>
 
 # Used as the default text for the installer version if it's not replaced by JS.
 installer-version-placeholder = 下载
