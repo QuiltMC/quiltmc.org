@@ -467,6 +467,33 @@ export default {
 			"Second year students in engineering who love bringing chaos and laughs everywhere they go.",
 		systemMembers: "pk:starc",
 	},
+	Stardew: {
+		name: "Stardew",
+		discord: "Hanna",
+		github: "heyhanna",
+		avatar: "/assets/img/team/stardew/stardew.png",
+		systemMembers: [
+			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
+			{name: "Rose", icon: "/assets/img/team/stardew/rose.png"},
+			{name: "Mira", icon: "/assets/img/team/stardew/mira.png"},
+			{name: "Jay", icon: "/assets/img/team/stardew/jay.png"},
+			{name: "Chloe", icon: "/assets/img/team/stardew/chloe.png"}
+		],
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://hanna.lol"
+			},
+			{
+				icon: "fas fa-message",
+				url: "https://fedi.hanna.lol"
+			},
+			{
+				icon: "far fa-circle",
+				url: "https://sr.ht/~hanna"
+			}
+		]
+	},
 	SuperCoder79: {
 		name: "Jasmine",
 		discord: "SuperCoder79",
