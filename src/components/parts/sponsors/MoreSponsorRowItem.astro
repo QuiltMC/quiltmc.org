@@ -5,12 +5,14 @@ import { t } from "i18next";
 
 const { rtl } = rtlSettings();
 const text = t("button-sponsors", { ns: "home" })
+
+const margins = "margin-left: auto; margin-right: auto;"
 ---
 
 <a
-	href={localizePath("/sponsors")}
+	href={ localizePath("/sponsors") }
 	class="button is-link p-2 px-4"
-	style="margin-left: auto; margin-top: auto; margin-bottom: auto; border-radius: 0.5rem;"
+	style="margin-left: auto; margin-right: auto; border-radius: 0.5rem;"
 >
 	<span>{ text }</span>
 

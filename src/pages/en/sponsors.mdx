@@ -31,7 +31,7 @@ The following sponsors are endorsed by Quilt, and are credited by us in various 
 			</picture>
 		</a>
 
-		<Button href="https://chs.gg/" icon="fas fa-link" title-key="button-official-site" text="Website" />
+		<Button type="link" href="https://chs.gg/" icon="fas fa-link" title-key="button-official-site" text="Website" />
 	</div>
 
 	<div class="column">
@@ -55,7 +55,7 @@ The following sponsors do not require an endorsement by Quilt.
 			<img src="/assets/img/sponsors/1password.png" style="width: 8rem;" alt="1password Logo" />
 		</a>
 
-		<Button href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" />
+		<Button type="link" href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" />
 	</div>
 
 	<div class="column">
@@ -70,17 +70,10 @@ The following sponsors do not require an endorsement by Quilt.
 <div class="columns is-mobile">
 	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
 		<a class="mb-4" href="https://aws.amazon.com/">
-			<picture>
-				<source
-					srcset="/assets/img/sponsors/aws-dark.png"
-					media="(prefers-color-scheme: dark)"
-				/>
-
-				<img src="/assets/img/sponsors/aws-light.png" style="width: 8rem; border-radius: 1rem;" alt="AWS Logo" />
-			</picture>
+			<img src="/assets/img/sponsors/aws-dark.png" style="width: 8rem; border-radius: 1rem;" alt="AWS Logo" />
 		</a>
 
-		<Button href="https://aws.amazon.com/" icon="fas fa-link" title-key="button-official-site" text="Website" />
+		<Button type="link" href="https://aws.amazon.com/" icon="fas fa-link" title-key="button-official-site" text="Website" />
 	</div>
 
 	<div class="column">
@@ -100,11 +93,18 @@ The following past sponsors were endorsed by Quilt while we were working with th
 
 <div class="columns is-mobile">
 	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
-		<a class="mb-2" href="https://1password.com">
-			<img src="/assets/img/sponsors/starchild-systems.svg" style="width: 8rem;" alt="Starchild Systems Logo" />
-		</a>
+		{/* <a class="mb-2" href=""> */}
+			<picture>
+				<source
+					srcset="/assets/img/sponsors/starchild-systems-white.svg"
+					media="(prefers-color-scheme: dark)"
+				/>
 
-		{/* <Button href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" /> */}
+				<img src="/assets/img/sponsors/starchild-systems.svg" style="width: 8rem;" alt="Starchild Systems Logo" />
+			</picture>
+		{/* </a> */}
+
+		{/* <Button href="" icon="fas fa-link" title-key="button-official-site" text="Website" /> */}
 	</div>
 
 	<div class="column">
