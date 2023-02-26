@@ -1,0 +1,20 @@
+---
+import rtlSettings from "@data/RtlSettings";
+import { localizePath } from "@util/Util";
+import { t } from "i18next";
+
+const { rtl } = rtlSettings();
+const text = t("button-sponsors", { ns: "home" })
+---
+
+<a
+	href={localizePath("/sponsors")}
+	class="button p-2 px-4"
+	style="margin-left: auto; margin-top: auto; margin-bottom: auto; border-radius: 5%;"
+>
+	<span>{ text }</span>
+
+	<span class="icon">
+		<i class={`fas fa-arrow-${rtl ? "left" : "right"}`}></i>
+	</span>
+</a>

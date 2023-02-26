@@ -2,42 +2,143 @@
 title: Sponsors
 description: A list of Quilt sponsors, as well as information about our sponsorship process in general
 layout: /src/layouts/Page.astro
+sidebar: false
 ---
+
 import site from "@data/Site";
+import Button from "@atoms/Button.astro"
 
-This page contains a list of all past and present sponsorships that Quilt holds, what they provide us, and instructions for applying to become a Quilt sponsor.
+This page contains a list of all of Quilt's past and present sponsorships, what they provide/provided us through those sponsorships, and instructions for applying to become a Quilt sponsor.
 
-Though Quilt is not and will hopefully never be a financially-driven project, sponsors can help us offset our costs, or provide tools or services that would otherwise be inaccessible to us. To help minimize the risk of issues that can occur when introducing sponsorships into an open-source project like Quilt, we have a detailed processes for dealing with sponsorships, detailed in [the Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md).
+While Quilt is not (and hopefully never will be) a financially-driven project, sponsors help us to offset our costs, or provide tools or services that would otherwise be inaccessible to us. Additionally, in order to maintain transparency and to try to avoid problems (such as accepting a sponsorship and endorsing a problematic company), we have a [detailed process](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md) that we follow when evaluating and accepting sponsorships.
 
-There are two main types of sponsors, endorsed and non-endorsed. Endorsed sponsors are those that require an endorsement from us, such as their logo on our site homepage. Non-endorsed sponsors do not require an endorsement.
+There are two main types of sponsors: endorsed, and non-endorsed. Endorsed sponsors are those that require an endorsement from us, such as their logo on our site homepage. Non-endorsed sponsors do not require an endorsement.
 
-## Current Sponsors
+# Current Sponsors (Endorsed)
 
-### 1Password (Non-Endorsed)
-1Password is a company that makes password managers and other tools for securely storing credentials. They provide us with a free 1Password Teams account to share infrastructure keys, social media logins, and other sensitive data, as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program.
+The following sponsors are endorsed by Quilt, and are credited by us in various places - including the homepage of this website. We are proud to work with these sponsors, and we're happy to recommend their services to our users.
 
-### AWS (Non-Endorsed)
-AWS is a cloud provider. Much of our infrastructure, including our Meta, Maven, and email system is hosted through AWS, and they provide us with credits to offset that cost through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program.
+<div class="columns is-mobile">
+	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
+		<a class="mb-2" href="https://chs.gg/">
+			<picture>
+				<source
+					srcset="/assets/img/sponsors/chs/cloud-white.svg"
+					media="(prefers-color-scheme: dark)"
+				/>
 
-### Starchild Systems (Endorsed)
-Starchild Systems is an Infrastructure-as-a-Service company. They host the <a href={site.forum}>Quilt Forum</a> on their infrastructure at no cost to us.
+				<img src="/assets/img/sponsors/chs/cloud-dark.svg" style="width: 8rem; border-radius: 1rem;" alt="Capitol Hosting Solutions Logo" />
+			</picture>
+		</a>
 
-## Past Sponsors
-None
+		<Button href="https://chs.gg/" icon="fas fa-link" title-key="button-official-site" text="Website" />
+	</div>
 
-## Sponsoring Quilt
-If you want to sponsor Quilt, here's a summary of how to do it. For detailed information on our processes for accepting and handling sponsors, please see the [Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md).
+	<div class="column">
+		<h3>Capitol Hosting Solutions</h3>
 
-If you're just an individual person wanting to support us and help cover our costs, the best way to do that is by donating on our [OpenCollective Page](https://opencollective.com/quiltmc).
+		Capitol Hosting Solutions is a small game server and website hosting company headquartered in Seattle, which aims to make use of as much open-source technology as possible to provide their services, at a cost that won't break the bank.
 
-In addition to Endorsed and Non-Endorsed sponsors, there are two types of sponsorship: Financial and Non-Financial. Financial Sponsorships are those that provide direct financial contributions to Quilt through our [OpenCollective page](https://opencollective.com/quiltmc), and non-financial sponsorships are those that provide tools or services to us at a discounted price. When offering us a sponsorship, please include whether it is a financial or non-financial sponsorship, as well as if you would like to be endorsed or not.
+		Capitol Hosting Solutions provides hosting for most of Quilt's infrastructure at no cost to us - including our <a href={ site.forum }>forum</a> and <a href={ site.wikis.collab }>Community Collab wiki</a>. They also partner with Quilt and Modfest to provide hosting for official events such as [BlanketCon](https://blanketcon.modfest.net).
+	</div>
+</div>
+
+---
+
+# Current Sponsors (Non-Endorsed)
+
+The following sponsors do not require an endorsement by Quilt.
+
+<div class="columns is-mobile">
+	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
+		<a class="mb-2" href="https://1password.com">
+			<img src="/assets/img/sponsors/1password.png" style="width: 8rem;" alt="1password Logo" />
+		</a>
+
+		<Button href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" />
+	</div>
+
+	<div class="column">
+		<h3>1Password</h3>
+
+		1Password is a privacy-focused password manager, designed to safely store your credentials, and provide access to them in a convenient way whenever you need them.
+
+		1Password provides us with a free 1Password Team account as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program, which we use to share credentials and other sensitive data among the specific teams that need to use them. This allows us to securely store those credentials and ensure that they're only provided to the people that need them.
+	</div>
+</div>
+
+<div class="columns is-mobile">
+	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
+		<a class="mb-4" href="https://aws.amazon.com/">
+			<picture>
+				<source
+					srcset="/assets/img/sponsors/aws-dark.png"
+					media="(prefers-color-scheme: dark)"
+				/>
+
+				<img src="/assets/img/sponsors/aws-light.png" style="width: 8rem; border-radius: 1rem;" alt="AWS Logo" />
+			</picture>
+		</a>
+
+		<Button href="https://aws.amazon.com/" icon="fas fa-link" title-key="button-official-site" text="Website" />
+	</div>
+
+	<div class="column">
+		<h3>Amazon Web Services</h3>
+
+		Amazon Web Services (AWS) is an Amazon-owned company providing cloud computing services. They're one of the largest infrastructure providers in the world, responsible for keeping much of the Internet online.
+
+		AWS provides credits that we use to offset our operational costs, through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program. We use AWS to host our Maven repository, and as an email provider for official Quilt email addresses.
+	</div>
+</div>
+
+---
+
+# Past Sponsors (Endorsed)
+
+The following past sponsors were endorsed by Quilt while we were working with them. We were proud to work with these sponsors, and we're happy to recommend their services to our users.
+
+<div class="columns is-mobile">
+	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
+		<a class="mb-2" href="https://1password.com">
+			<img src="/assets/img/sponsors/starchild-systems.svg" style="width: 8rem;" alt="Starchild Systems Logo" />
+		</a>
+
+		{/* <Button href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" /> */}
+	</div>
+
+	<div class="column">
+		<h3>Starchild Systems</h3>
+
+		Starchild Systems is an Infrastructure-as-a-Service and Software-as-a-Service company. They hosted the <a href={site.forum}>Quilt Forum</a>, <a href={site.wikis.collab}>Collab Wiki</a> and several of our Discord bots on their infrastructure at no cost to us.
+
+		While Starchild Systems is no longer sponsoring us, the company owners (the Starchild System) are part of Quilt's Infrastructure Team, and they help us to deploy, manage and run all of our services, including our <a href={site.meta}>Meta server</a> and <a href={site.maven}>Maven repo</a>. We also make use of their paid ModMail+ offering, which is a Discord bot that provides a simple way for our community members to communicate with the Community Team.
+	</div>
+</div>
+
+---
+
+{/* # Past Sponsors (Non-Endorsed)
+
+The following past sponsors did not require an endorsement by Quilt while we were working with them.
+
+---*/}
+
+# Sponsoring Quilt
+
+For detailed information on our processes for accepting and handling sponsors, please see the [Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md).
+
+If you're an individual that just wishes to support us and help cover our costs, the best way to do so is by donating directly on our [OpenCollective page](https://opencollective.com/quiltmc).
+
+In addition to Endorsed and Non-Endorsed sponsors, there are two types of sponsorship: Financial and Non-Financial. Financial Sponsorships are those that provide direct financial contributions to Quilt through our [OpenCollective page](https://opencollective.com/quiltmc), and non-financial sponsorships are those that provide tools or services to us at a discount, or for free. When offering us a sponsorship, please include whether it is a financial or non-financial sponsorship, as well as if you would like to be endorsed or not.
 
 When deciding whether to accept a sponsorship, we look for sponsors that provide high-quality products at fair and competitive prices, market their products transparently and honestly, and do not discriminate against minorities, have a history of anti-consumer practices, or conduct business in a way that is unsustainable or especially harmful to the environment. For the full list of Sponsorship Guidelines, see the [Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md).
 
 A good sponsorship offer should include the following:
-- Information about you, the sponsor.
-- What the sponsorship is (tools, services or money).
-- Any additional terms of the sponsorship (if applicable).
-- Links to your website, social media etc. We're more likely to accept your sponsorship if you have a website with lots of details about your offerings.
-  
-To offer us a sponsorship, please email the Outreach Team at `outreach at quiltmc.org`. We look forward to hearing from you!
+
+* Information about you, the sponsor
+* What the sponsorship is (tools, services or money)
+* Any additional terms of the sponsorship (if applicable)
+* Links to your website, social media etc -- we're more likely to accept your sponsorship if you have a website with lots of details about your offerings
+
+To offer us a sponsorship, please email the Outreach Team at <a href="maito:outreach@quiltmc.org">outreach@quiltmc.org</a>. We look forward to hearing from you!
