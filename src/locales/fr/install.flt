@@ -15,14 +15,14 @@ platform-technic = {-technic}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
 
-logo-minecraft = Minecraft logo
-logo-java = Java logo
-logo-atlauncher = {-atlauncher} logo
-logo-multimc = {-multimc} logo
-logo-prismlauncher = {-prismlauncher} logo
-logo-technic = Technic Launcher logo
-logo-curseforge = {-curseforge} logo
-logo-gdlauncher = {-gdlauncher} logo
+logo-minecraft = Logo de Minecraft
+logo-java = Logo de Java
+logo-atlauncher = Logo de {-atlauncher}
+logo-multimc = Logo de {-multimc}
+logo-prismlauncher = Logo de {-prismlauncher}
+logo-technic = Logo de Technic Launcher
+logo-curseforge = Logo de {-curseforge}
+logo-gdlauncher = Logo de {-gdlauncher}
 
 button-back = Retour
 	.full = Retour à la liste
@@ -33,4 +33,4 @@ wip-warning =
 	<0><1>Quilt est actuellement en version bêta.</1> Là est le danger - il peut y avoir des problèmes, mais nous les corrigerons aussi vite que possible !</0><2>Si vous souhaitez nous aider à tester Quilt, n'hésitez pas à l'installer, à l'essayer et à nous faire part de vos retours !</2>
 
 # Used as the default text for the installer version if it's not replaced by JS.
-installer-version-placeholder = Download
+installer-version-placeholder = Télécharger
