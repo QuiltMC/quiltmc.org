@@ -14,7 +14,7 @@ serial-comma = {$prev}, {$next}
 -openings = Openings
 -patch-notes = Patch Notes
 -sponsors = Sponsors
--staff-resources = Staff Resources
+-staff-resources = Ressources du staff
 -template-mod = Modèle de mod
 
 # Brand names/proper nouns - You shouldn't need to edit this.
@@ -45,7 +45,7 @@ divider-external-links = Liens externes
 
 nav-page-developer-wiki = {-developer-wiki}
 nav-page-import-utility = {-import-utility}
-nav-page-maven-repo = Maven Repository
+nav-page-maven-repo = Dépôt Maven
 nav-page-openings = {-openings}
 nav-page-patch-notes = {-patch-notes}
 nav-page-sponsors = {-sponsors}
