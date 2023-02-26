@@ -7,6 +7,7 @@ sidebar: false
 
 import site from "@data/Site";
 import Button from "@atoms/Button.astro"
+import SponsorBlock from "@parts/sponsors/SponsorBlock.astro"
 
 This page contains a list of all of Quilt's past and present sponsorships, what they provide/provided us through those sponsorships, and instructions for applying to become a Quilt sponsor.
 
@@ -18,30 +19,16 @@ Sponsorships may be endorsed, or non-endorsed. If a sponsorship is endorsed, the
 
 The following sponsors are endorsed by Quilt, and are credited by us in various places - including the homepage of this website. We are proud to work with these sponsors, and we're happy to recommend their services to our users.
 
-<div class="columns is-mobile">
-	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
-		<a class="mb-2" href="https://chs.gg/">
-			<picture>
-				<source
-					srcset="/assets/img/sponsors/chs/cloud-white.svg"
-					media="(prefers-color-scheme: dark)"
-				/>
+<SponsorBlock
+	href="https://chs.gg"
+	name="Capitol Hosting Solutions"
+	iconDark="/assets/img/sponsors/chs/cloud-white.svg"
+	iconLight="/assets/img/sponsors/chs/cloud-dark.svg"
+>
+	Capitol Hosting Solutions is a small game server and website hosting company headquartered in Seattle, which aims to make use of as much open-source technology as possible to provide their services, at a cost that won't break the bank.
 
-				<img src="/assets/img/sponsors/chs/cloud-dark.svg" style="width: 8rem; border-radius: 1rem;" alt="Capitol Hosting Solutions Logo" />
-			</picture>
-		</a>
-
-		<Button type="link" href="https://chs.gg/" icon="fas fa-link" title-key="button-official-site" text="Website" />
-	</div>
-
-	<div class="column">
-		<h3>Capitol Hosting Solutions</h3>
-
-		Capitol Hosting Solutions is a small game server and website hosting company headquartered in Seattle, which aims to make use of as much open-source technology as possible to provide their services, at a cost that won't break the bank.
-
-		Capitol Hosting Solutions provides hosting for most of Quilt's infrastructure at no cost to us - including our <a href={ site.forum }>forum</a> and <a href={ site.wikis.collab }>Community Collab wiki</a>. They also partner with Quilt and Modfest to provide hosting for official events such as [BlanketCon](https://blanketcon.modfest.net).
-	</div>
-</div>
+	Capitol Hosting Solutions provides hosting for most of Quilt's infrastructure at no cost to us - including our <a href={ site.forum }>forum</a> and <a href={ site.wikis.collab }>Community Collab wiki</a>. They also partner with Quilt and Modfest to provide hosting for official events such as [BlanketCon](https://blanketcon.modfest.net).
+</SponsorBlock>
 
 ---
 
@@ -49,41 +36,28 @@ The following sponsors are endorsed by Quilt, and are credited by us in various 
 
 The following sponsors do not require an endorsement by Quilt.
 
-<div class="columns is-mobile">
-	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
-		<a class="mb-2" href="https://1password.com">
-			<img src="/assets/img/sponsors/1password.png" style="width: 8rem;" alt="1password Logo" />
-		</a>
+<SponsorBlock
+	href="https://1password.com"
+	name="1Password"
+	iconDark="/assets/img/sponsors/1password.png"
+	iconLight="/assets/img/sponsors/1password.png"
+>
+	1Password is a privacy-focused password manager, designed to safely store your credentials, and provide access to them in a convenient way whenever you need them.
 
-		<Button type="link" href="https://1password.com" icon="fas fa-link" title-key="button-official-site" text="Website" />
-	</div>
+	1Password provides us with a free 1Password Team account as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program, which we use to share credentials and other sensitive data among the specific teams that need to use them. This allows us to securely store those credentials and ensure that they're only provided to the people that need them.
+</SponsorBlock>
 
-	<div class="column">
-		<h3>1Password</h3>
+<SponsorBlock
+	href="https://aws.amazon.com"
+	name="Amazon Web Services"
+	iconDark="/assets/img/sponsors/aws-dark.png"
+	iconLight="/assets/img/sponsors/aws-dark.png"
+	radius={ 1 }
+>
+	Amazon Web Services (AWS) is an Amazon-owned company providing cloud computing services. They're one of the largest infrastructure providers in the world, responsible for keeping much of the Internet online.
 
-		1Password is a privacy-focused password manager, designed to safely store your credentials, and provide access to them in a convenient way whenever you need them.
-
-		1Password provides us with a free 1Password Team account as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program, which we use to share credentials and other sensitive data among the specific teams that need to use them. This allows us to securely store those credentials and ensure that they're only provided to the people that need them.
-	</div>
-</div>
-
-<div class="columns is-mobile">
-	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
-		<a class="mb-4" href="https://aws.amazon.com/">
-			<img src="/assets/img/sponsors/aws-dark.png" style="width: 8rem; border-radius: 1rem;" alt="AWS Logo" />
-		</a>
-
-		<Button type="link" href="https://aws.amazon.com/" icon="fas fa-link" title-key="button-official-site" text="Website" />
-	</div>
-
-	<div class="column">
-		<h3>Amazon Web Services</h3>
-
-		Amazon Web Services (AWS) is an Amazon-owned company providing cloud computing services. They're one of the largest infrastructure providers in the world, responsible for keeping much of the Internet online.
-
-		AWS provides credits that we use to offset our operational costs, through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program. We use AWS to host our Maven repository, and as an email provider for official Quilt email addresses.
-	</div>
-</div>
+	AWS provides credits that we use to offset our operational costs, through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program. We use AWS to host our Maven repository, and as an email provider for official Quilt email addresses.
+</SponsorBlock>
 
 ---
 
@@ -91,30 +65,15 @@ The following sponsors do not require an endorsement by Quilt.
 
 The following past sponsors were endorsed by Quilt while we were working with them. We were proud to work with these sponsors, and we're happy to recommend their services to our users.
 
-<div class="columns is-mobile">
-	<div class="column is-narrow p-4 is-flex is-flex-direction-column">
-		{/* <a class="mb-2" href=""> */}
-			<picture>
-				<source
-					srcset="/assets/img/sponsors/starchild-systems-white.svg"
-					media="(prefers-color-scheme: dark)"
-				/>
+<SponsorBlock
+	name="Starchild Systems"
+	iconDark="/assets/img/sponsors/starchild-systems-white.svg"
+	iconLight="/assets/img/sponsors/starchild-systems.svg"
+>
+	Starchild Systems is an Infrastructure-as-a-Service and Software-as-a-Service company. They hosted the <a href={site.forum}>Quilt Forum</a>, <a href={site.wikis.collab}>Collab Wiki</a> and several of our Discord bots on their infrastructure at no cost to us.
 
-				<img src="/assets/img/sponsors/starchild-systems.svg" style="width: 8rem;" alt="Starchild Systems Logo" />
-			</picture>
-		{/* </a> */}
-
-		{/* <Button href="" icon="fas fa-link" title-key="button-official-site" text="Website" /> */}
-	</div>
-
-	<div class="column">
-		<h3>Starchild Systems</h3>
-
-		Starchild Systems is an Infrastructure-as-a-Service and Software-as-a-Service company. They hosted the <a href={site.forum}>Quilt Forum</a>, <a href={site.wikis.collab}>Collab Wiki</a> and several of our Discord bots on their infrastructure at no cost to us.
-
-		While Starchild Systems is no longer sponsoring us, the company owners (the Starchild System) are part of Quilt's Infrastructure Team, and they help us to deploy, manage and run all of our services, including our <a href={site.meta}>Meta server</a> and <a href={site.maven}>Maven repo</a>. We also make use of their paid ModMail+ offering, which is a Discord bot that provides a simple way for our community members to communicate with the Community Team.
-	</div>
-</div>
+	While Starchild Systems is no longer sponsoring us, the company owners (the Starchild System) are part of Quilt's Infrastructure Team, and they help us to deploy, manage and run all of our services, including our <a href={site.meta}>Meta server</a> and <a href={site.maven}>Maven repo</a>. We also make use of their paid ModMail+ offering, which is a Discord bot that provides a simple way for our community members to communicate with the Community Team.
+</SponsorBlock>
 
 ---
 
