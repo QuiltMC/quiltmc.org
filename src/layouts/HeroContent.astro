@@ -3,9 +3,17 @@ import HeroBase from "./HeroBase.astro";
 ---
 
 <HeroBase content={Astro.props.content}>
-	<section class="section">
+	<section class="section pt-0 mt-6 pb-4">
 		<main class="content container">
-			<slot />
+			<slot name="main" />
+		</main>
+	</section>
+
+	<slot name="sponsors" />
+
+	<section class="section pt-0 mt-5">
+		<main class="content container">
+			<slot name="bottom" />
 		</main>
 	</section>
 </HeroBase>
