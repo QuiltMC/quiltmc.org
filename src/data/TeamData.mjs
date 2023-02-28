@@ -464,7 +464,7 @@ export default {
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year student in engineering who love bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
 	},
 	Stardew: {
 		name: "Stardew",
