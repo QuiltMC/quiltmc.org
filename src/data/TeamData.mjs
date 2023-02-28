@@ -460,12 +460,11 @@ export default {
 	},
 	Starchild: {
 		name: "Starchild",
-		discord: "Starchild (⭐)",
+		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year students in engineering who love bringing chaos and laughs everywhere they go.",
-		systemMembers: "pk:starc",
+			"Second year student in engineering who love bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
 	},
 	Stardew: {
 		name: "Stardew",
