@@ -201,13 +201,12 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/7889478?v=4",
 	},
 	LambdaFoxes: {
-		name: "Lambda Foxes System",
+		name: "LambdAurora",
 		discord: "LambdAurora",
 		github: "LambdAurora",
 		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
 		description:
-			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through our mod designs and our work on Quilt.",
-		systemMembers: "pk:muuha",
+			"Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my mod designs and my work on Quilt.",
 		links: [
 			{
 				icon: "fas fa-link",
@@ -460,12 +459,11 @@ export default {
 	},
 	Starchild: {
 		name: "Starchild",
-		discord: "Starchild (⭐)",
+		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year students in engineering who love bringing chaos and laughs everywhere they go.",
-		systemMembers: "pk:starc",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
 	},
 	Stardew: {
 		name: "Stardew",
