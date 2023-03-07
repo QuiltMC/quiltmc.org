@@ -62,7 +62,7 @@ button-forum = {-forum}
 button-github = {-github}
 button-install = Installer
 button-mastodon = {-mastodon}
-button-maven-repo = Maven Repo
+button-maven-repo = Dépôt Maven
 button-more = Plus
 button-more-posts = Plus d'articles
 button-official-site = Site officiel
@@ -85,7 +85,7 @@ paginator-button-next = Suivante
 paginator-button-last = Dernière
 
 tooltip-switch-language = Changer de langue
-tooltip-toggle-low-contrast = Toggle Low Contrast
+tooltip-toggle-low-contrast = Basculer vers un faible contraste
 
 prompt-error-noscript = JavaScript est désactivé. Activez JavaScript pour utiliser la recherche.
 prompt-search-language = Rechercher votre langue ici...
