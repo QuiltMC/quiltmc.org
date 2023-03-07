@@ -11,7 +11,6 @@ serial-comma = {$prev}、{$next}
 -developer-wiki = 开发者 Wiki
 -forum = 论坛
 -import-utility = Quilt 导入工具
--help-wanted = Help Wanted (FIXME BEFORE MERGE!!!)
 -patch-notes = 更新日志
 -staff-resources = 内部资源
 -template-mod = 模组模板
