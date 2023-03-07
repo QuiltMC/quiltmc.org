@@ -7,155 +7,176 @@ import LatestPosts from "@parts/home/LatestPosts.astro";
 
 import { localizePath } from "@util/Util";
 import site from "@data/Site";
+import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 ---
 
 <HeroContent content={Astro.props.content}>
-	<div class="columns is-centered mb-5">
-		<div class="column is-6">
-			<slot name="info" />
+
+	<div slot="main">
+		<div class="columns is-centered mb-5">
+			<div class="column is-6">
+				<slot name="info" />
+			</div>
+
+			<div class="column is-4">
+				<HomeMessage style="danger" iconType="danger" icon="warning" tKey="wip">
+					<slot name="wip" />
+				</HomeMessage>
+			</div>
 		</div>
 
-		<div class="column is-4">
-			<HomeMessage style="danger" iconType="danger" icon="warning" tKey="wip">
-				<slot name="wip" />
-			</HomeMessage>
+		<div class="columns mb-5 mt-2">
+			<div class="column">
+				<HomeMessage
+					style="primary is-fullheight"
+					iconType="primary"
+					icon="heart"
+					tKey="caring"
+				>
+					<slot name="caring" />
+				</HomeMessage>
+			</div>
+			<div class="column">
+				<HomeMessage
+					style="link has-text-left is-fullheight"
+					iconType="link"
+					icon="cubes"
+					tKey="modular"
+				>
+					<slot name="modular" />
+				</HomeMessage>
+			</div>
+			<div class="column">
+				<HomeMessage
+					style="success has-text-left is-fullheight"
+					iconType="success"
+					icon="wrench"
+					tKey="powerful"
+				>
+					<slot name="powerful" />
+				</HomeMessage>
+			</div>
 		</div>
-	</div>
-	<div class="columns mb-5 mt-2">
-		<div class="column">
-			<HomeMessage
-				style="primary is-fullheight"
-				iconType="primary"
-				icon="heart"
-				tKey="caring"
-			>
-				<slot name="caring" />
-			</HomeMessage>
-		</div>
-		<div class="column">
-			<HomeMessage
-				style="link has-text-left is-fullheight"
-				iconType="link"
-				icon="cubes"
-				tKey="modular"
-			>
-				<slot name="modular" />
-			</HomeMessage>
-		</div>
-		<div class="column">
-			<HomeMessage
-				style="success has-text-left is-fullheight"
-				iconType="success"
-				icon="wrench"
-				tKey="powerful"
-			>
-				<slot name="powerful" />
-			</HomeMessage>
-		</div>
-	</div>
 
-	<div class="columns is-centered">
-		<div class="column is-10">
-			<div class="button-grid">
-				<Button
-					href="https://maven.quiltmc.org"
-					target="_blank"
-					type="gradle"
-					icon="fas fa-feather-pointed"
-					textKey="button-maven-repo"
-				/>
-				<Button
-					href={localizePath("/mc-patchnotes")}
-					type="info"
-					icon="fas fa-notebook"
-					textKey="button-patch-notes"
-				/>
-				<Button
-					href={localizePath("/help-wanted")}
-					type="primary"
-					icon="fas fa-briefcase"
-					textKey="button-help-wanted"
-				/>
+		<div class="columns is-centered">
+			<div class="column is-10">
+				<div class="button-grid">
+					<Button
+						href="https://maven.quiltmc.org"
+						target="_blank"
+						type="gradle"
+						icon="fas fa-feather-pointed"
+						textKey="button-maven-repo"
+					/>
+					<Button
+						href={localizePath("/mc-patchnotes")}
+						type="info"
+						icon="fas fa-notebook"
+						textKey="button-patch-notes"
+					/>
+					<Button
+						href={localizePath("/help-wanted")}
+						type="primary"
+						icon="fas fa-briefcase"
+						textKey="button-help-wanted"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="columns is-centered">
-		<div class="column is-5">
-			<slot name="joinTheCommunity" />
+	<div slot="sponsors">
+		<SponsorRow />
+	</div>
 
-			<div class="button-grid">
-				<Button
-					href={site.discordCommunity}
-					target="_blank"
-					type="discord"
-					icon="fab fa-discord"
-					textKey="button-discord-community"
-				/>
-				<Button
-					href={site.forum}
-					target="_blank"
-					type="gradle"
-					icon="fab fa-discourse"
-					textKey="button-forum"
-				/>
-				<Button
-					href={site.mastodon.link}
-					target="_blank"
-					type="mastodon"
-					icon="fab fa-mastodon"
-					textKey="button-mastodon"
-				/>
-				<Button
-					href={site.twitter.handle.link}
-					target="_blank"
-					type="twitter"
-					icon="fab fa-twitter"
-					textKey="button-twitter"
-				/>
-				<Button
-					href={localizePath("/community")}
-					type="primary"
-					icon="fas fa-ellipsis-h"
-					textKey="button-more"
-				/>
+	<div slot="bottom">
+		<div class="columns is-centered">
+			<div class="column is-5">
+				<slot name="joinTheCommunity" />
+
+				<div class="button-grid">
+					<Button
+						href={site.discordCommunity}
+						target="_blank"
+						type="discord"
+						icon="fab fa-discord"
+						textKey="button-discord-community"
+					/>
+
+					<Button
+						href={site.forum}
+						target="_blank"
+						type="gradle"
+						icon="fab fa-discourse"
+						textKey="button-forum"
+					/>
+
+					<Button
+						href={site.mastodon.link}
+						target="_blank"
+						type="mastodon"
+						icon="fab fa-mastodon"
+						textKey="button-mastodon"
+					/>
+
+					<Button
+						href={site.twitter.handle.link}
+						target="_blank"
+						type="twitter"
+						icon="fab fa-twitter"
+						textKey="button-twitter"
+					/>
+
+					<Button
+						href={localizePath("/community")}
+						type="primary"
+						icon="fas fa-ellipsis-h"
+						textKey="button-more"
+					/>
+				</div>
+
+				<slot name="getInvolved" />
+
+				<div class="button-grid">
+					<Button
+						href={site.forum}
+						target="_blank"
+						type="gradle"
+						icon="fab fa-discourse"
+						textKey="button-forum"
+					/>
+
+					<Button
+						href={site.github.link}
+						target="_blank"
+						type="github"
+						icon="fab fa-github"
+						textKey="button-github"
+					/>
+
+					<Button
+						href={localizePath("/help-wanted")}
+						type="primary"
+						icon="fas fa-briefcase"
+						textKey="button-help-wanted"
+					/>
+
+					<Button
+						href={site.discordToolchain}
+						target="_blank"
+						type="discord"
+						icon="fab fa-discord"
+						textKey="button-discord-toolchain"
+					/>
+				</div>
 			</div>
 
-			<slot name="getInvolved" />
+			<div class="column is-5">
+				<slot name="latestPosts" />
 
-			<div class="button-grid">
-				<Button
-					href={site.forum}
-					target="_blank"
-					type="gradle"
-					icon="fab fa-discourse"
-					textKey="button-forum"
-				/>
-				<Button
-					href={site.github.link}
-					target="_blank"
-					type="github"
-					icon="fab fa-github"
-					textKey="button-github"
-				/>
-				<Button
-					href={localizePath("/help-wanted")}
-					type="primary"
-					icon="fas fa-briefcase"
-					textKey="button-help-wanted"
-				/>
-				<Button
-					href={site.discordToolchain}
-					target="_blank"
-					type="discord"
-					icon="fab fa-discord"
-					textKey="button-discord-toolchain"
-				/>
+				<LatestPosts />
 			</div>
-		</div>
-		<div class="column is-5">
-			<slot name="latestPosts" />
-			<LatestPosts />
 		</div>
 	</div>
+
 </HeroContent>

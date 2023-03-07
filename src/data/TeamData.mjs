@@ -201,13 +201,12 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/7889478?v=4",
 	},
 	LambdaFoxes: {
-		name: "Lambda Foxes System",
+		name: "LambdAurora",
 		discord: "LambdAurora",
 		github: "LambdAurora",
 		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
 		description:
-			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through our mod designs and our work on Quilt.",
-		systemMembers: "pk:muuha",
+			"Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my mod designs and my work on Quilt.",
 		links: [
 			{
 				icon: "fas fa-link",
@@ -460,12 +459,38 @@ export default {
 	},
 	Starchild: {
 		name: "Starchild",
-		discord: "Starchild (⭐)",
+		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year students in engineering who love bringing chaos and laughs everywhere they go.",
-		systemMembers: "pk:starc",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
+	},
+	Stardew: {
+		name: "Stardew",
+		discord: "Hanna",
+		github: "heyhanna",
+		avatar: "/assets/img/team/stardew/stardew.png",
+		systemMembers: [
+			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
+			{name: "Rose", icon: "/assets/img/team/stardew/rose.png"},
+			{name: "Mira", icon: "/assets/img/team/stardew/mira.png"},
+			{name: "Jay", icon: "/assets/img/team/stardew/jay.png"},
+			{name: "Chloe", icon: "/assets/img/team/stardew/chloe.png"}
+		],
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://hanna.lol"
+			},
+			{
+				icon: "fas fa-message",
+				url: "https://fedi.hanna.lol"
+			},
+			{
+				icon: "far fa-circle",
+				url: "https://sr.ht/~hanna"
+			}
+		]
 	},
 	SuperCoder79: {
 		name: "Jasmine",

@@ -65,7 +65,12 @@ button-mastodon = {-mastodon}
 button-maven-repo = Maven Repo
 button-more = More
 button-more-posts = More Posts
+<<<<<<< HEAD
 button-help-wanted = {-help-wanted}
+=======
+button-official-site = Official Site
+button-openings = {-openings}
+>>>>>>> upstream/stable
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS
 button-template-mod = {-template-mod}
@@ -92,3 +97,4 @@ prompt-search-language = Search for your language here...
 page-404 = 404
 page-404-title = Page not found :(
 page-404-subtitle = The requested page could not be found.
+page-404-image-title = Sad Pineapple :(
