@@ -1,0 +1,42 @@
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    name: Generate commit preview
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+			- name: Install dependencies
+				run: pnpm install
+
+			- name: Build the project
+				run: pnpm build
+
+      - name: Publish to Pages
+        uses: cloudflare/pages-action@1
+				id: publish
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: staging-quiltmc-org
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+					branch: push-snapshot
+
+			- name: Add a comment on the commit
+				uses: peter-evans/commit-comment@v1
+				with:
+					token: ${{ secrets.GITHUB_TOKEN }}
+					repository: ${{ github.repository }}
+					commit: ${{ github.sha }}
+					body: |
+						See preview on Cloudflare Pages: ${{ steps.publish.outputs.url }}
