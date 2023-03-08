@@ -1,11 +1,17 @@
 copyright = Copyright © {$year} Quilt Project
+
 disclaimer-unofficial =
     Quilt is not an official Minecraft product, and is not approved by or associated with Mojang Studios.
     "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in
     accordance with Mojang Studios' <0>Brand and Asset Guidelines</0>.
+
 disclaimer-icons =
     All logos used on this site are the property of their respective owners.
     The CurseForge logo recreation we use in a few places on this site <0>was created by thecodewarrior</0>.
+
 # NOTE: <0></0> is the pineapple emote.
 made-with =
     Made with <0></0>, <1>Bulma</1> and <2>the CreativeBulma extensions</2>.
+
+sponsored-by =
+	Quilt is sponsored by <0>Capitol Hosting Solutions</0>.
