@@ -9,6 +9,7 @@ export interface Props {
 	titleKey?: string;
 	textKey?: string;
 	text?: string;
+	style?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
 	titleKey,
 	textKey,
 	text,
+	style,
 } = Astro.props as Props;
 
 var buttonClasses = ["button"];
@@ -43,7 +45,7 @@ if (textKey) {
 }
 ---
 
-<a title={titleKey && t(titleKey)} {href} {target} class:list={buttonClasses}>
+<a title={titleKey && t(titleKey)} {href} {target} class:list={buttonClasses} style={style}>
 	{
 		icon && (
 			<span class="icon">
