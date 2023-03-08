@@ -31,6 +31,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: staging-quiltmc-org
+          projectName: quiltmc-org
           directory: dist
           branch: preview-${{ github.event.number }}
