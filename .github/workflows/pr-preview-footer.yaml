@@ -4,7 +4,7 @@ on:
 name: Add footer to PR
 
 jobs:
-  deploy:
+  comment:
     runs-on: ubuntu-latest
     permissions:
       contents: read
