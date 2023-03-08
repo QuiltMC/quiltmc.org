@@ -1,9 +1,9 @@
 on:
-	pull_request_target:
-		types: [opened]
+  pull_request_target:
+    types: [opened]
 
 jobs:
-	add-footer:
+  add-footer:
     runs-on: ubuntu-latest
     steps:
     - uses: devindford/Append_PR_Comment@v1.1.2
@@ -11,5 +11,5 @@ jobs:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         body-template: |
           ---
-					See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.staging-quiltmc-org.pages.dev
+          See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.staging-quiltmc-org.pages.dev
         body-update-action: 'suffix'
