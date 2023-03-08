@@ -10,3 +10,9 @@ jobs:
     steps:
       - uses: crazy-max/ghaction-dump-context@v2
       - run: echo ${{ github.event.workflow_run.pull_requests[0].number }}
+      - uses: potiuk/get-workflow-origin@v1_1
+        id: source-run-info
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sourceRunId: ${{ github.event.workflow_run.id }}
+      - run: echo ${{ steps.source-run-info.outputs.pullRequestNumber }}
