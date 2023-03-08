@@ -37,6 +37,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
-          commit: ${{ github.sha }}
-          body: |
-            See preview on Cloudflare Pages: ${{ steps.publish.outputs.url }}
+          sha: ${{ github.sha }}
+          body: "See preview on Cloudflare Pages: ${{ steps.publish.outputs.url }}"
