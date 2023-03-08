@@ -1,4 +1,5 @@
 on: [push]
+name: Commit preview
 
 jobs:
   deploy:
