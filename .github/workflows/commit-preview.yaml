@@ -2,7 +2,7 @@ on: [push]
 name: Commit preview
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
