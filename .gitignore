@@ -22,3 +22,6 @@ cache
 
 # CSS from quilt-bulma
 public/assets/css
+
+# Generated function files
+functions

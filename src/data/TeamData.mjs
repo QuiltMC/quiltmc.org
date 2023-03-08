@@ -127,6 +127,18 @@ export default {
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
 	},
+	Foxes: {
+		name: "&foxes",
+		discord: "foxes",
+		github: "0xf24",
+		avatar: "/assets/img/team/foxes/foxes.png",
+		description: "foxbox compliance officers",
+		systemMembers: [
+			{name: "lily", icon: "/assets/img/team/foxes/lily.png"},
+			{name: "scarlet", icon: "/assets/img/team/foxes/scarlet.png"},
+			{name: "violet", icon: "/assets/img/team/foxes/violet.png"},
+		]
+	},
 	Fusion: {
 		name: "Fusion Flux",
 		discord: "Fusion Flux",
@@ -189,13 +201,12 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/7889478?v=4",
 	},
 	LambdaFoxes: {
-		name: "Lambda Foxes System",
+		name: "LambdAurora",
 		discord: "LambdAurora",
 		github: "LambdAurora",
 		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
 		description:
-			"Active Minecraft modders, Java enthusiasts. We try to improve mod interoperability, which is reflected through ourmod designs and our work on Quilt.",
-		systemMembers: "pk:muuha",
+			"Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my mod designs and my work on Quilt.",
 		links: [
 			{
 				icon: "fas fa-link",
@@ -284,9 +295,9 @@ export default {
 		discord: "NoComment",
 		github: "NoComment1105",
 		description:
-			"Chaotic person that likes writing Kotlin, doing Moderation and Mapping. Also administrating the Iris project, and making mods and Discord bots.",
+			"Chaotic puppet on fire that likes to program in Kotlin and write Discord bots, while matching quilt-mappings",
 		avatar: "https://avatars.githubusercontent.com/u/67918617?v=4",
-		links: [{ icon: "fas fa-link", url: "https://nocomment1106.github.io" }],
+		systemMembers: "pk:loobg"
 	},
 	Noah: {
 		name: "Noah van der Aa",
@@ -448,12 +459,38 @@ export default {
 	},
 	Starchild: {
 		name: "Starchild",
-		discord: "Starchild (⭐)",
+		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year students in engineering who love bringing chaos and laughs everywhere they go.",
-		systemMembers: "pk:starc",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
+	},
+	Stardew: {
+		name: "Stardew",
+		discord: "Hanna",
+		github: "heyhanna",
+		avatar: "/assets/img/team/stardew/stardew.png",
+		systemMembers: [
+			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
+			{name: "Rose", icon: "/assets/img/team/stardew/rose.png"},
+			{name: "Mira", icon: "/assets/img/team/stardew/mira.png"},
+			{name: "Jay", icon: "/assets/img/team/stardew/jay.png"},
+			{name: "Chloe", icon: "/assets/img/team/stardew/chloe.png"}
+		],
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://hanna.lol"
+			},
+			{
+				icon: "fas fa-message",
+				url: "https://fedi.hanna.lol"
+			},
+			{
+				icon: "far fa-circle",
+				url: "https://sr.ht/~hanna"
+			}
+		]
 	},
 	SuperCoder79: {
 		name: "Jasmine",
@@ -593,7 +630,7 @@ export default {
 			},
 			{
 				icon: "fa-brands fa-mastodon",
-				url: "https://mastodon.technology/@sschr15",
+				url: "vmst.io/@sschr15",
 			},
 		],
 	},

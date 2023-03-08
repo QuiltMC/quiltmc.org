@@ -1,0 +1,84 @@
+---
+import Button from '@atoms/Button.astro';
+
+export interface Props {
+	href?: URL | string;
+	name: string;
+
+	iconDark: string;
+	iconLight: string;
+
+	radius: number;
+}
+
+const {
+	href,
+	name,
+	iconDark, iconLight,
+	radius = 0,
+} = Astro.props as Props;
+
+let borderRadius
+
+if (radius > 0) {
+	borderRadius = `border-radius: ${radius}rem`
+} else {
+	borderRadius = ""
+}
+---
+
+<div class="columns">
+	<div class="column is-narrow p-4">
+		<div class="is-hidden-mobile is-flex is-flex-direction-column">
+			<a class="mb-2" href={ href }>
+				<picture>
+					<source
+						srcset={ iconDark }
+						media="(prefers-color-scheme: dark)"
+					/>
+
+					<img src={ iconLight } style={`width: 8rem; margin: auto; ${borderRadius}`} alt={ `${name} Logo` } />
+				</picture>
+			</a>
+
+			{
+				href ?
+					(<Button type="link" href={ href!! } icon="fas fa-link" title-key="button-official-site" text="Website" />)
+					: ("")
+			}
+		</div>
+
+		<div class="is-hidden-tablet">
+			<div class="is-hidden-tablet is-flex is-justify-content-center is-flex-direction-row">
+				<h3>{ name }</h3>
+			</div>
+
+			<div class="is-flex is-justify-content-center is-flex-direction-row">
+				<a class="mb-2" href={ href }>
+					<picture>
+						<source
+							srcset={ iconDark }
+							media="(prefers-color-scheme: dark)"
+						/>
+
+						<img src={ iconLight } style={`width: 12rem; margin: auto; ${borderRadius}`} alt={ `${name} Logo` } />
+					</picture>
+				</a>
+			</div>
+
+			<div class="is-flex is-justify-content-center is-flex-direction-row">
+				{
+					href ?
+						(<Button type="link" href={ href } icon="fas fa-link" title-key="button-official-site" text="Website" style="margin-left: auto; margin-right: auto;" />)
+						: ("")
+				}
+			</div>
+		</div>
+	</div>
+
+	<div class="column">
+		<h3 class="is-hidden-mobile">{ name }</h3>
+
+		<slot />
+	</div>
+</div>
