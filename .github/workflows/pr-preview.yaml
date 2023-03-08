@@ -1,4 +1,5 @@
 on: [pull_request]
+name: Generate PR preview
 
 jobs:
   deploy:
@@ -20,12 +21,8 @@ jobs:
       - name: Build the project
         run: pnpm build
 
-      - name: Publish to Pages
-        uses: cloudflare/pages-action@1
-        id: publish
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v2
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: staging-quiltmc-org
-          directory: dist
-          branch: preview-${{ github.event.number }}
+          name: website-html
+          path: dist

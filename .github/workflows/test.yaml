@@ -1,15 +1,11 @@
 on:
-  pull_request_target:
-    types: [opened]
+  workflow_run:
+    workflows: ["Generate PR preview"]
+    types: [completed]
 
 jobs:
-  add-footer:
+  test:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-    - uses: devindford/Append_PR_Comment@v1.1.2
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        body-template: |
-          ---
-          See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.staging-quiltmc-org.pages.dev
-        body-update-action: 'suffix'
+      - uses: crazy-max/ghaction-dump-context@v2
