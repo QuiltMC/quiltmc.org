@@ -1,0 +1,15 @@
+on:
+	pull_request_target:
+		types: [opened]
+
+jobs:
+	add-footer:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: devindford/Append_PR_Comment@v1.1.2
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        body-template: |
+          ---
+					See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.staging-quiltmc-org.pages.dev
+        body-update-action: 'suffix'
