@@ -35,7 +35,7 @@ jobs:
       - name: Add a comment on the commit
         uses: peter-evans/commit-comment@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.COZY_PAT }}
           repository: ${{ github.repository }}
           sha: ${{ github.sha }}
           body: "See preview on Cloudflare Pages: ${{ steps.publish.outputs.url }}"
