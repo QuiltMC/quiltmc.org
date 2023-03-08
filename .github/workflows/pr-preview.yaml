@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write
 
     name: Generate PR preview
     steps:
