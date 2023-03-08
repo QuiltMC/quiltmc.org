@@ -127,7 +127,11 @@ which will depend on the execution location.
 
 # CVE entries
 
-At the time of publishing this article, CVE assignment is still pending.
+* MultiMC: [CVE-2023-25306](https://www.cve.org/CVERecord?id=CVE-2023-25306)
+* PolyMC: [CVE-2023-25305](https://www.cve.org/CVERecord?id=CVE-2023-25305)
+* Prism Launcher: [CVE-2023-25304](https://www.cve.org/CVERecord?id=CVE-2023-25304)
+* ATLauncher: [CVE-2023-25303](https://www.cve.org/CVERecord?id=CVE-2023-25303)
+* mrpack-install: [CVE-2023-25307](https://www.cve.org/CVERecord?id=CVE-2023-25307)
 
 # Credits
 
