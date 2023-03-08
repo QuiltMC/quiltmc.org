@@ -15,6 +15,10 @@ export interface Config {
 	source: string;
 	permalink: "pretty";
 	author: string;
+	logo: string;
+
+	maven: URL;
+	meta: URL;
 
 	// Social media handles
 	discordCommunity: URL;
@@ -25,6 +29,7 @@ export interface Config {
 	mastodon: SocialMediaHandle;
 	rss: URL;
 	twitch: SocialMediaHandle;
+
 	twitter: {
 		handle: SocialMediaHandle;
 		card: string;
@@ -35,6 +40,11 @@ export interface Config {
 		name: string;
 		links: URL[];
 	};
+
+	wikis: {
+		modder: URL;
+		collab: URL;
+	}
 }
 
 const config: Config = {
@@ -42,6 +52,10 @@ const config: Config = {
 	source: "src/",
 	permalink: "pretty",
 	author: "QuiltMC",
+	logo: "/assets/img/logo-square.png",
+
+	maven: new URL("https://maven.quiltmc.org"),
+	meta: new URL("https://meta.quiltmc.org"),
 
 	discordCommunity: new URL("https://discord.quiltmc.org/"),
 	discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
@@ -51,20 +65,28 @@ const config: Config = {
 	mastodon: new SocialMediaHandle("https://tech.lgbt/", "@quiltmc"),
 	rss: new URL("https://quiltmc.org/feed.xml"),
 	twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
+
 	twitter: {
 		handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
 		card: "summary",
 	},
 	wiki: new URL("https://modder.wiki.quiltmc.org/"),
 	logo: "/assets/img/logo-square.png",
+  
 	social: {
 		name: "QuiltMC",
+
 		links: [
 			new URL("https://twitter.com/quilt_mc"),
 			new URL("https://github.com/QuiltMC"),
 			new URL("https://twitch.tv/quiltmc"),
 		],
 	},
+
+	wikis: {
+		collab: new URL("https://collab.wiki.quiltmc.org"),
+		modder: new URL("https://modder.wiki.quiltmc.org"),
+	}
 };
 
 export default config;

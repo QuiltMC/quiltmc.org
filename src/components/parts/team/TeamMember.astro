@@ -2,98 +2,80 @@
 import pkCache from "cache/pk.json";
 import type { TeamMember, SystemMember, PkId } from "@data/Team";
 import { t } from "i18next";
+import SystemMembers from "./SystemMembers.astro";
 
 export interface Props {
-	member: TeamMember
+	member: TeamMember;
 }
 const { member } = Astro.props as Props;
 
-interface Member {
-	avatarUrl: string,
-	name: string,
-}
-function getSystemMembers(idOrMembers: PkId | SystemMember[]): Member[] {
-	if (typeof idOrMembers === 'string') {
-		const id = idOrMembers.slice("pk:".length);
-		//@ts-ignore
-		return pkCache[id];
-	} else {
-		return idOrMembers.map(({ icon, name }) => {
-			return { avatarUrl: icon, name };
-		});
-	}
-}
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
 ---
 
 <div class="card is-team-member">
 	<div class="card-content">
-		{ member.avatar &&
-		<div class="avatar">
-			<img class={ member.pixelateAvatar ? "is-pixelated" : "" } src={member.avatar} alt={t("team:avatar-alt")}>
-		</div>
+		{
+			member.avatar && (
+				<div class="avatar">
+					<img
+						class={member.pixelateAvatar ? "is-pixelated" : ""}
+						src={member.avatar}
+						alt={t("team:avatar-alt")}
+					/>
+				</div>
+			)
 		}
 
 		<div class="media">
 			<div class="media-content">
 				<p class="title is-5 mb-5">
-					{ member.name ?? <>&nbsp;</> }
+					{member.name ?? <>&nbsp;</>}
 				</p>
 
 				<p class="subtitle is-6">
 					<i class="fab fa-fw fa-discord"></i>
-					{ member.discord ?? na }
+					{member.discord ?? na}
 				</p>
 
 				<p class="subtitle is-6">
 					<i class="fab fa-fw fa-github"></i>
 
-					{ member.github ? <a href={`https://github.com/${member.github}`}>{member.github}</a> : na }
-				</p>
-
-				<p class="subtitle is-6 is-links">
-					{ member.links && member.links.length > 0
-
-					? member.links.map((link) =>
-					<a href={link.url}>
-						<i class:list={["fa-lg", link.icon]}></i>
-					</a>)
-
-					: <>&nbsp;</>
+					{
+						member.github ? (
+							<a href={`https://github.com/${member.github}`}>
+								{member.github}
+							</a>
+						) : (
+							na
+						)
 					}
 				</p>
-			</div>
-		</div>
 
-		{ (member.description || member.systemMembers) &&
-		<div class="content">
-			{ member.systemMembers &&
-			<div class="media system-member-title">
-				<div class="media-content">
-					<p class="subtitle is-6 has-text-centered">
-						{t("team:plural-system")}
-					</p>
-				</div>
-			</div>
-
-			<div class:list={["system-members", member.description ? "mb-4" : ""]}>
-				{ member.systemMembers === "---" || getSystemMembers(member.systemMembers).length === 0
-				? <div class="has-tooltip-arrow" data-tooltip={t("team:member-list-redacted")}>
-					<i class="fa-2xl pl-1 fas fa-box-heart"></i>
-				</div>
-
-				: getSystemMembers(member.systemMembers).map((m) => (
-				<div class="has-tooltip-arrow has-tooltip-bottom" data-tooltip={m.name}>
-					<img src={m.avatarUrl} />
-				</div>
-				))
+				{
+					member.links && member.links.length > 0 && (
+						<p class="subtitle is-6 is-links">
+							{member.links.map((link) => (
+								<a href={link.url}>
+									<i class:list={["fa-lg", link.icon]} />
+								</a>
+							))}
+						</p>
+					)
 				}
 			</div>
-			}
-
-			{ member.description }
 		</div>
+
+		{
+			(member.description || member.systemMembers) && (
+				<div class="content">
+					{member.systemMembers && (
+						<SystemMembers members={member.systemMembers} />
+					)}
+
+					<div class="description">{member.description}</div>
+				</div>
+			)
 		}
 	</div>
 </div>

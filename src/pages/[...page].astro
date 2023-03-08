@@ -7,8 +7,7 @@ interface PagePath {
 	};
 }
 
-// Redirect; default to English page
-// FIXME: should try to redirect to the appropriate locale for the user
+// Fallback in case the function cannot execute (ie. ran out of credits)
 const { page } = Astro.params;
 
 export async function getStaticPaths() {
