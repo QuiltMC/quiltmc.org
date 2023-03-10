@@ -8,7 +8,7 @@ title-formatted = {$shortTitle} | {$title}
 serial-comma = {$prev}, {$next}
 
 # Common strings
--developer-wiki = Wiki pour les développeurs
+-developer-wiki = Wiki pour les développeurs.ses
 -forum = Forum
 -import-utility = Quilt Import Utility
 -help-wanted = Aide pour les projets
