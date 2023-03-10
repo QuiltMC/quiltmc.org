@@ -29,7 +29,23 @@ if (match && i18next.languages.includes(match[1])) {
 		date={content?.date}
 	/>
 
-	
+	<!-- TODO: move this to quilt-bulma -->
+	<style is:global>
+		h1       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h1:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		h2       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h2:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		h3       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h3:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		h4       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h4:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		h5       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h5:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		h6       a .header-anchor-container .header-anchor { visibility: hidden; }
+		h6:hover a .header-anchor-container .header-anchor { visibility: visible; }
+		.header-anchor-container { margin-left: -26px; }
+	</style>
+
 	<script src="https://betteruptime.com/widgets/announcement.js" data-id="153552" async="async" type="text/javascript"></script>
 	<body class="page">
 		<input id="low-contrast" type="checkbox" class="is-hidden" />
