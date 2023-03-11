@@ -1,5 +1,6 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
+-bakaxl = BakaXL
 -multimc = MultiMC
 -prismlauncher = Prism Launcher
 -technic = Technic
@@ -9,6 +10,7 @@
 platform-client = Cliente
 platform-server = Servidor
 platform-atlauncher = {-atlauncher}
+platform-bakaxl = {-bakaxl}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
@@ -18,6 +20,7 @@ platform-gdlauncher = {-gdlauncher}
 logo-minecraft = Logo do Minecraft
 logo-java = Logo do Java
 logo-atlauncher = Logo da {-atlauncher}
+logo-bakaxl = Logo da {-bakaxl}
 logo-multimc = Logo da {-multimc}
 logo-prismlauncher = Logo da {-prismlauncher}
 logo-technic = Logo da Technic Launcher
@@ -30,7 +33,7 @@ button-menu = Menu
 button-website = Site
 
 wip-warning =
-	<0><1>Quilt is in beta.</1> Here be dragons - there may be issues, but we'll fix them as quickly as we can!</0><2>If you'd like to help us test Quilt, please feel free to install it, try it, and let us know how you get on!</2>
+	<0><1>A Quilt está atualmente em beta.</1> Prossiga com cautela! -- problemas podem acontecer, mas nós os arrumaremos o mais rápido possível!</0><2>Se você gostaria de nos ajudar a testar a Quilt, por favor sinta-se livre para instalá-la, prová-la, e compartilhar sua experiência conosco!</2>
 
 # Used as the default text for the installer version if it's not replaced by JS.
 installer-version-placeholder = Baixar
