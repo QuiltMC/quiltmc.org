@@ -1,12 +1,18 @@
 ---
 import TeamMember from '@parts/team/TeamMember.astro';
 import teamData from '@data/Team';
+import teamInfo from "cache/teamInfo.json";
 
 export interface Props {
-	list: string[];
+	list: string[] | undefined;
+	fromTeam: string | undefined;
 }
 
-const { list } = Astro.props as Props;
+let { list, fromTeam } = Astro.props as Props;
+if (list === undefined) {
+	list = teamInfo[fromTeam]
+		.map(github => Object.keys(teamData).find(member => teamData[member].github === github))
+}
 ---
 
 {list.map((name) =>
