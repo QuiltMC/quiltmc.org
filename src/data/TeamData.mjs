@@ -156,14 +156,6 @@ export default {
 			},
 		],
 	},
-	Geolykt: {
-		name: "Geolykt",
-		discord: "Geolykt",
-		github: "Geolykt",
-		description:
-			"JVM Bytecode enthusiast. Primarily a bukkit plugin developer, but always up to something different.",
-		avatar: "https://avatars.githubusercontent.com/u/50148430?v=4",
-	},
 	HavenKing: {
 		name: "Haven King",
 		discord: "Haven King",
