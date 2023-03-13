@@ -6,14 +6,13 @@ name: Add footer to PR
 jobs:
   comment:
     runs-on: ubuntu-latest
-    permissions: {}
 
     name: Add preview footer to PR
     steps:
     - name: Add preview footer to PR
       uses: devindford/Append_PR_Comment@v1.1.2
       with:
-        repo-token: "${{ secrets.COZY_PAT }}"
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         body-template: |
           ---
           See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.quiltmc-org.pages.dev
