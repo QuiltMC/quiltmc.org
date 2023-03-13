@@ -1,10 +1,10 @@
 ---
 permalink: /staff/
-title: Staff Resources
-description: Documents to help our staff members do their jobs.
+title: Ressources du staff
+description: Des documents pour aider les membres de notre staff à faire leur travail.
 layout: /src/layouts/StaffDocument.astro
 ---
 
-This section of the site contains staff guidance documents, split up by the specific teams that they're intended for. They act as a set of extra guidelines that staff members can use to guide their work, which helps to keep things efficient and consistent.
+Cette section du site contient des documents d'orientation à l'intention du staff, répartis par équipes spécifiques auxquelles ils sont destinés. Ils constituent un ensemble de lignes directrices supplémentaires que les membres du staff peuvent utiliser pour guider leur travail, ce qui contribue à l'efficacité et à la cohérence.
 
-These documents are made public here for the sake of transparency. Of course, we're always happy to take suggestions and feedback too -- feel free to send us a message on Discord and we'll have a chat.
+Ces documents sont rendus publics ici dans un souci de transparence. Bien sûr, nous sommes toujours heureux de recevoir des suggestions et des commentaires. N'hésitez pas à nous envoyer un message sur Discord et nous discuterons.

@@ -1,7 +1,7 @@
 ---
-title: Outreach Team
-description: Documents to help guide the Outreach Team.
+title: Équipe de communication
+description: Documents destinés à aider l'équipe de communication.
 layout: /src/layouts/StaffDocument.astro
 ---
 
-This section includes documents intended to guide and support Quilt's Outreach Team. Please select a document from the menu to the left (or hidden behind the button at the top if you're on a mobile device).
+Cette section comprend des documents destinés à guider et à soutenir l'équipe de communication de Quilt. Veuillez sélectionner un document dans le menu de gauche (ou caché derrière le bouton en haut si vous êtes sur un appareil mobile).

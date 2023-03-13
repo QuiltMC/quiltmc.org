@@ -1,7 +1,7 @@
 ---
-title: Moderation Team
-description: Documents to help guide the Moderation Team.
+title: Équipe de modération
+description: Documents destinés à aider l'équipe de modération.
 layout: /src/layouts/StaffDocument.astro
 ---
 
-This section includes documents intended to guide and support Quilt's Moderation Team. Please select a document from the menu to the left (or hidden behind the button at the top if you're on a mobile device).
+Cette section comprend des documents destinés à guider et à soutenir l'équipe de modération de Quilt. Veuillez sélectionner un document dans le menu de gauche (ou caché derrière le bouton en haut si vous êtes sur un appareil mobile).
