@@ -127,6 +127,12 @@ export default {
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
 	},
+	FoundationGames: {
+		name: "FoundationGames",
+		discord: "FoundationGames",
+		github: "FoundationGames",
+		avatar: "https://avatars.githubusercontent.com/u/43485105?v=4"
+	},
 	Foxes: {
 		name: "&foxes",
 		discord: "foxes",
