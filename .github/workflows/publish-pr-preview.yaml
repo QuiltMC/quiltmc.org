@@ -7,6 +7,7 @@ name: Publish PR preview
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     name: Publish PR preview
     steps:
