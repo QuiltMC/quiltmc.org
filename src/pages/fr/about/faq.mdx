@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Frequently asked questions, for the burning topics that need addressing regularly.
+description: Foire aux questions, pour les sujets brûlants qui doivent être abordés régulièrement.
 layout: /src/layouts/Page.astro
 
 redirect_from:
@@ -42,97 +42,97 @@ Pour les utilisateurs, Quilt offre les avantages suivants :
 
 <Message>
 
-## How can I support Quilt?
+## Comment puis-je soutenir Quilt ?
 
-If you'd like to help us out, here's just a few ways we've come up with:
+Si vous souhaitez nous aider, voici quelques exemples de ce que vous pouvez faire :
 
-- Join [our community spaces](/en/community), hang out and give your input
-- Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and opinions
-- Support other projects that make use of Quilt, or Quilt's tools and libraries
-- Talk about Quilt on social media (in a responsible manner)
+- Rejoignez [nos espaces communautaires](/fr/communauté), restez-y et donnez votre avis.
+- Contribuer à [nos projets sur GitHub](https://github.com/quiltmc), soit directement, soit en fournissant des commentaires et des opinions.
+- Soutenir d'autres projets qui utilisent Quilt, ou les outils et les bibliothèques de Quilt
+- Parler de Quilt sur les médias sociaux (de manière responsable)
 
 [//]: # "* Help with ongoing costs by [supporting us financially on OpenCollective](https://opencollective.com/quiltmc)"
 
-Ultimately, even simply making use of Quilt or hanging out in our community spaces helps us. All activity, input and contributions are appreciated!
+En fin de compte, le simple fait d'utiliser Quilt ou de passer du temps dans nos espaces communautaires nous aide. Toutes les activités et contributions sont appréciées !
 
 </Message>
 
-# Usage Questions
+# Questions d'usage
 
 <Message>
 
-## Can Quilt load Forge mods?
+## Quilt peut-il charger des mods Forge ?
 
-No, Quilt can't load Forge mods and support for this is not planned. There are third-party projects (such as Patchwork) that plan to add this functionality, but they're not maintained by Quilt -- and they're not part of The Quilt Project.
-
-</Message>
-
-<Message>
-
-## Can Quilt load Fabric mods?
-
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and provide its developers with the support they need to keep working on it.
-
-It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be happy to work with mod developers that need an alternative approach for Quilt.
+Non, Quilt ne peut pas charger les mods Forge et la prise en charge de cette fonctionnalité n'est pas prévue. Il existe des projets tiers (comme Patchwork) qui prévoient d'ajouter cette fonctionnalité, mais ils ne sont pas maintenus par Quilt -- et ils ne font pas partie du projet Quilt.
 
 </Message>
 
 <Message>
 
-## If I'm using Fabric mods, do I need Fabric API installed?
+## Quilt peut-il charger des mods Fabric ?
 
-**No, you don't** - in fact, we recommend against this for compatibility reasons.
+Dans la plupart des cas, oui. Comme Quilt est un fork, la plupart des mods Fabric devraient être compatibles avec Quilt. Tant que le maintien de la compatibilité avec Fabric n'a pas d'impact négatif sur le projet, nous continuerons à le faire -- mais s'il devient impossible de le maintenir, nous aiderons à le déplacer vers un projet géré par la communauté et nous fournirons à ses développeurs le soutien dont ils ont besoin pour continuer à travailler dessus.
 
-Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard QSL distribution, which you can [download them from Modrinth](https://modrinth.com/mod/qsl).
-
-As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work correctly with QSL.
+Il convient également de noter qu'à l'heure où nous écrivons ces lignes, les mods Fabric qui contiennent des plugins Mixin sont pris en charge, mais cela changera à l'avenir. Ce n'est pas un problème majeur car la grande majorité des mods n'utilisent pas de plugins Mixin, mais nous serons heureux de travailler avec les développeurs de mods qui ont besoin d'une autre approche pour Quilt.
 
 </Message>
 
 <Message>
 
-## Can Fabric load Quilt mods?
+## Si j'utilise des mods Fabric, dois-je installer Fabric API ?
 
-No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
+**Non, vous ne devez pas le faire** - en fait, nous vous le déconseillons pour des raisons de compatibilité.
 
-</Message>
+De nombreux mods Quilt utilisent les  librairies standards de Quilt (QSL), qui sont directement incompatibles avec l'API Fabric. Pour résoudre ce problème, QSL inclut une version spéciale de l'API Fabric qui n'entre pas en conflit - elle fait partie de la distribution standard de QSL, que vous pouvez [télécharger sur Modrinth](https://modrinth.com/mod/qsl).
 
-<Message>
-
-## When will Quilt be released?
-
-Quilt's first beta released on the 20th of April 2022, and we've been full steam ahead since then!
-
-If you'd like to try Quilt out, please take a look at [the install page](/en/install). [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
-
-</Message>
-
-# Management Questions
-
-<Message>
-
-## How is Quilt structured?
-
-Quilt's staff is split into three distinct groups:
-
-- The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
-- The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
-- The development teams, which independently oversee specific project that are assigned to them
-
-Between these three groups, the structure is more or less flat -- no one group of people has the final say over the whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
-
-You can find more about this in the governance section on [the About Us page](/en/about/#governance).
+Tant que les mods Fabric sont correctement écrits pour n'utiliser que les API publiques prévues de l'API Fabric, ils devraient fonctionner correctement avec QSL.
 
 </Message>
 
 <Message>
 
-## What's an RFC? How do they work?
+## Fabric peut-il charger des mods Quilt ?
 
-**RFC** is short for **R**equest **F**or **C**omments. The RFC process refers to a system whereby important process and policy changes, technical standards and definitions are created, discussed and approved by the community before being put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the rationale is for the proposal.
+Non. Les mods Quilt sont distincts des mods Fabric et ne sont pas définis de la même manière.
 
-RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs), with the RFC number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
+</Message>
 
-Quilt's RFC process is documented in [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
+<Message>
+
+## Quand Quilt sera-t-il publié ?
+
+La première version bêta de Quilt a été publiée le 20 avril 2022, et nous sommes allés de l'avant depuis!
+
+Si vous souhaitez essayer Quilt, consultez [la page d'installation](/fr/install). [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
+
+</Message>
+
+# Questions sur la gestion
+
+<Message>
+
+## Comment Quilt est-il structuré ?
+
+Le staff de Quilt est divisé en trois groupes distincts :
+
+- Le conseil d'administration, qui a pour mission de superviser l'orientation du projet, de gérer les autorisations sur GitHub et de départager les votes.
+- L'équipe communautaire, qui s'occupe de la gestion de la communauté et des tâches de modération, ainsi que des comptes de médias sociaux et des relations publiques.
+- Les équipes de développement, qui supervisent de manière indépendante les projets spécifiques qui leur sont confiés.
+
+Entre ces trois groupes, la structure est plus ou moins plate - aucun groupe de personnes n'a le dernier mot sur l'ensemble du projet. En outre, l'équipe communautaire n'est pas directement propriétaire de l'un des espaces officiels de la communauté et agit sous la supervision d'une personne élu, qui est par ailleurs, non impliqué.
+
+Vous trouverez plus d'informations à ce sujet dans la section consacrée à la gouvernance sur [la page À propos de nous](/fr/about/#governance).
+
+</Message>
+
+<Message>
+
+## Qu'est-ce qu'un RFC ? Comment fonctionnent-ils ?
+
+**RFC** est l'abréviation de _**R**equest **F**or **C**omments_. Le processus RFC fait référence à un système dans lequel les changements importants de processus et de politique, les normes techniques et les définitions sont créés, discutés et approuvés par la communauté avant d'être mis en place. Pour ce faire, on crée des documents détaillés qui expliquent exactement ce qui est proposé et la raison d'être de la proposition.
+
+Les RFC sont proposés par le biais d'une pull request sur [le dépôt des RFC sur GitHub](https://github.com/QuiltMC/rfcs), le numéro du RFC correspondant au numéro de la pull request (à moins qu'il ne s'agisse d'un amendement). Tout le monde peut soumettre une proposition, mais nous recommandons à ceux qui envisagent de le faire de nous en parler sur Discord, ou de créer une _issue_ sur GitHub.
+
+Le processus RFC de Quilt est documenté dans [_RFC 0001 : The RFC Process_](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
 
 </Message>
