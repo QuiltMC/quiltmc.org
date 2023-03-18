@@ -2,7 +2,7 @@ lang-name = French
 
 title = Le projet Quilt
 short-title = QuiltMC
-description = The mod-loader that cares.
+description = Le chargeur de mods qui se préoccupe des autres.
 
 title-formatted = {$shortTitle} | {$title}
 serial-comma = {$prev}, {$next}
