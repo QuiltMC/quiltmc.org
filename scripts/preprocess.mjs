@@ -9,8 +9,7 @@ async function main() {
 	prepareCacheDirectory();
 	copyCSS();
 	generateRedirectFunctions();
-	await queryPluralKit();
-	await queryTeamInfo()
+	await Promise.all([queryPluralKit(), queryTeamInfo()]);
 
 	console.log("preprocess: done\n");
 }
