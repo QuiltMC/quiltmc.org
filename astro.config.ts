@@ -14,7 +14,7 @@ export default defineConfig({
 	integrations: [mdx(), astroI18next(), sitemap(), compress(), purgecss()],
 	markdown: {
 		syntaxHighlight: "prism",
-		rehypePlugins: [[rehypeAutolinkHeadings, { content: fromHtml('<span class="header-anchor-container icon pr-3"><i class="header-anchor fas fa-lg fa-link has-text-grey-dark is-size-5"></i></span>'), behavior: "prepend" }]],
+		rehypePlugins: [[rehypeAutolinkHeadings, { content: fromHtml('<span class="header-anchor-container icon pl-3"><i class="header-anchor fas fa-lg fa-link has-text-grey-dark is-size-5"></i></span>'), behavior: "append" }]],
 	},
 	vite: {
 		build: {
