@@ -3,6 +3,8 @@ import PageTitle from "@atoms/PageTitle.astro";
 import Sidebar from "@setpieces/Sidebar.astro";
 import i18next, { t } from "i18next";
 import Base from "./Base.astro";
+import SiteConfig from "@data/Site"
+import { cwd } from "process"
 
 const { content } = Astro.props;
 const { title, sidebar = true } = content;
@@ -11,6 +13,8 @@ const category = Astro.url.pathname.split("/")[2];
 const pages = (await Astro.glob("/src/pages/**/*"))
 	.filter((page) => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
+
+const githubUrl = SiteConfig.fileEditBaseUrl + Astro.props.frontmatter.file.replace(cwd(), "")
 ---
 
 <Base content={Astro.props.content}>
@@ -44,6 +48,17 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 					<main class="content column">
 						<PageTitle title={title} file={Astro.props.frontmatter.file} />
 						<slot />
+
+						<p class="subtitle is-italic is-6 has-text-weight-medium is-family-primary mt-5">
+							<span class="icon-text">
+								<span class="icon">
+								   <i class="fas fa-pencil"></i>
+								</span>
+								<span>
+									<a href={githubUrl} style="color: inherit">{t("edit-on-github")}</a>
+								</span>
+							</span>
+						</p>
 					</main>
 				</div>
 			</section>
