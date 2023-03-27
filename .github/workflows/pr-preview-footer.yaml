@@ -6,8 +6,6 @@ name: Add footer to PR
 jobs:
   comment:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
 
     name: Add preview footer to PR
     steps:

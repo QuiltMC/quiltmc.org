@@ -156,14 +156,6 @@ export default {
 			},
 		],
 	},
-	Geolykt: {
-		name: "Geolykt",
-		discord: "Geolykt",
-		github: "Geolykt",
-		description:
-			"JVM Bytecode enthusiast. Primarily a bukkit plugin developer, but always up to something different.",
-		avatar: "https://avatars.githubusercontent.com/u/50148430?v=4",
-	},
 	HavenKing: {
 		name: "Haven King",
 		discord: "Haven King",
@@ -261,14 +253,6 @@ export default {
 				url: "https://youtube.com/@pluiedev",
 			},
 		],
-	},
-	Lemma: {
-		name: "LemmaEOF",
-		discord: "LemmaEOF",
-		github: "LemmaEOF",
-		avatar: "/assets/img/team/LemmaEOF.png",
-		description:
-			"A former Fabric modder who tinkers with all sorts of projects and helps run events.",
 	},
 	Luna: {
 		name: "Luna",
@@ -406,24 +390,6 @@ export default {
 		github: "Pyrofab",
 		avatar: "https://avatars.githubusercontent.com/u/25536265",
 		description: "Busy blowing up new things.",
-	},
-	Pyrrha: {
-		name: "Pyrrha",
-		discord: "Pyrrha",
-		github: "JustPyrrha",
-		avatar: "/assets/img/team/Pyrrha.png",
-		description:
-			"Modder and indie game dev, last seen struggling with the Unity editor. She/Her",
-		links: [
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/JustPyrrha",
-			},
-			{
-				icon: "fab fa-twitch",
-				url: "https://twitch.tv/JustPyrrha",
-			},
-		],
 	},
 	Redblueflame: {
 		name: "Valentin Ricard",
@@ -647,13 +613,6 @@ export default {
 				url: "https://gitlab.com/supersaiyansubtlety",
 			},
 		],
-	},
-	tempest: {
-		name: "tempest",
-		discord: "tempest",
-		github: "tempest15",
-		avatar: "https://avatars.githubusercontent.com/u/66021850?v=4",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" }],
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
