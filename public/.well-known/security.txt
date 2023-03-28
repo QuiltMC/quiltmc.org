@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:admins@quiltmc.org
+Expires: 2024-03-20T12:00:00.000Z
+Encryption: https://quiltmc.org/.gpg/administrative-board.gpg
+Preferred-Languages: en
+Canonical: https://quiltmc.org/.well-known/security.txt
+Policy: https://quiltmc.org/en/about/security-notice/
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEBJI0eVK+EHGvIHCG9iP3xdzXQwgFAmQXWt4ACgkQ9iP3xdzX
+QwhZfg/+MUmKCi9h1YeCxJCV5dtJbFRBWTZQfdh+Dg0t0QDESyOUpc6qtRVeEIck
+i/n/Qs8p1g5qnqK3tls6BxSErFtVTFgvjMi5m10fTz6X0yF2/oYZcWc5XwZysRnT
+VOHJS2JimIeSyKdzO+AoDF32FO6+9/hdUd45Xxtm8HGSPd62pn2T5yYpRdgndNNo
+QY2VjuOVJ7Ib2SUl7VDLVUVQDNgN9DvnKBlRvuHoZCUD8+qlXa3qr/HRkg+CeitY
+TeWsSyjEYfkPkGCX9iIbU1PtkdrxOgXs4fg4TAqxIDta1vn0J6A9UHwva3KzCYIR
+7oDCP2Zb4AIT1gs7VIW4kIkmh8lGY4a+E6PQ6aNsHmaCGNhhFIb7FrFe9UrOkk1O
+Vi05IVVt/hTtQqImNVw4uZdvmY4iCkwipw2IaRJFPIt3JcFBRqsYvtKxqHU1vASd
+vNwj90tkqeShORBvvZCiBbNNmqTOke5hOjIdeemp+ZF/aMBjCIW3b6QZ0kM0My/w
+ss6XGxWBD4iMIxviJZjYYByd7gNjnWlkaScncNIHYtlczCCJrFsZluMWCl0ucPVo
+taQR/2L7ouXyTKTCMILW4XJEH5u8WSyqYzD+CX7qbVMBQGMms98NrhAFGWlaCNpA
+wBf1vadWA9UGl3RqWPVsrsT0hazxaNCPSwRMQxmn7js55yJD/QU=
+=Y5fK
+-----END PGP SIGNATURE-----
