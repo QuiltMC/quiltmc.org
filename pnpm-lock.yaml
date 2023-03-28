@@ -17,7 +17,7 @@ specifiers:
   i18next-fluent: ^2.0.0
   i18next-fs-fluent-backend: github:pluiedev/i18next-fs-fluent-backend
   node-fetch: ^3.3.0
-  quilt-bulma: ^0.0.20
+  quilt-bulma: ^0.0.21
   rehype-autolink-headings: ^6.1.1
   rollup: ^3.14.0
   sass: ^1.58.0
@@ -40,7 +40,7 @@ devDependencies:
   i18next-fluent: 2.0.0
   i18next-fs-fluent-backend: github.com/pluiedev/i18next-fs-fluent-backend/1d3f22618f6d4941ae68d78dcd6c16961794a30d
   node-fetch: 3.3.0
-  quilt-bulma: 0.0.20
+  quilt-bulma: 0.0.21
   rehype-autolink-headings: 6.1.1
   rollup: 3.15.0
   sass: 1.58.0
@@ -3494,8 +3494,8 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /quilt-bulma/0.0.20:
-    resolution: {integrity: sha512-ciXCtnzBMG/cLjZ5+z6dI2fHgewIGcJLNoyMgAL96JEZtGjliVbQym8Tn7PmCszLd1HEpFrkuix+lQYhU9f/PA==}
+  /quilt-bulma/0.0.21:
+    resolution: {integrity: sha512-ooMmxo8bXbC7TA5FJ84F6YhRh5UojBpYLaFP43zCKFFKxNpkS1znE0MhnJ4krq5/timEvy+6jBkw59M7zd3+gQ==}
     dev: true
 
   /rc/1.2.8:
