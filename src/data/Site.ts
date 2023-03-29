@@ -20,6 +20,8 @@ export interface Config {
 	maven: URL;
 	meta: URL;
 
+	fileEditBaseUrl: URL;
+
 	// Social media handles
 	discordCommunity: URL;
 	discordToolchain: URL;
@@ -55,6 +57,8 @@ const config: Config = {
 
 	maven: new URL("https://maven.quiltmc.org"),
 	meta: new URL("https://meta.quiltmc.org"),
+
+	fileEditBaseUrl: new URL("https://github.com/QuiltMC/quiltmc.org/edit/main"),
 
 	discordCommunity: new URL("https://discord.quiltmc.org/"),
 	discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
