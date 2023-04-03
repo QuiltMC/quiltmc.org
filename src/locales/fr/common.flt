@@ -31,7 +31,7 @@ page-authors =
 	}: {$names}
 page-edited = Modifié: {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
 post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
-edit-on-github = Edit this page on GitHub
+edit-on-github = Modifier cette page sur GitHub
 
 
 nav-about = À propos
