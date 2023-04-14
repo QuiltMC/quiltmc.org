@@ -614,13 +614,6 @@ export default {
 			},
 		],
 	},
-	tempest: {
-		name: "tempest",
-		discord: "tempest",
-		github: "tempest15",
-		avatar: "https://avatars.githubusercontent.com/u/66021850?v=4",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/t_empest_" }],
-	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
 		discord: "zOnlyKroks | Finn",
