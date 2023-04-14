@@ -543,6 +543,13 @@ export default {
 		github: "kashike",
 		avatar: "https://avatars.githubusercontent.com/u/5474071?v=4",
 	},
+	levy: {
+		name: "Levy",
+		discord: "remote_getaway",
+		github: "remotegetaway",
+		avatar: "https://avatars.githubusercontent.com/u/111402697?v=4",
+		description: "whiten't"
+	},
 	maximum: {
 		name: "Boxed",
 		discord: "maximum",
