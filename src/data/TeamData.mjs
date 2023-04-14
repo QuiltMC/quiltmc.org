@@ -156,14 +156,6 @@ export default {
 			},
 		],
 	},
-	Geolykt: {
-		name: "Geolykt",
-		discord: "Geolykt",
-		github: "Geolykt",
-		description:
-			"JVM Bytecode enthusiast. Primarily a bukkit plugin developer, but always up to something different.",
-		avatar: "https://avatars.githubusercontent.com/u/50148430?v=4",
-	},
 	HavenKing: {
 		name: "Haven King",
 		discord: "Haven King",
@@ -190,6 +182,16 @@ export default {
 				icon: "fak fa-curseforge",
 				url: "https://www.curseforge.com/members/Jamalam360/projects",
 			},
+		],
+	},
+	Jasmine: {
+		name: "Jasmine",
+		discord: "Jasmine",
+		github: "jaskarth",
+		avatar: "https://avatars.githubusercontent.com/u/25208576",
+		description: "Compiler developer, reverse engineer, Minecraft modder.",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/jaskarth4" },
 		],
 	},
 	Kroppeb: {
@@ -261,14 +263,6 @@ export default {
 				url: "https://youtube.com/@pluiedev",
 			},
 		],
-	},
-	Lemma: {
-		name: "LemmaEOF",
-		discord: "LemmaEOF",
-		github: "LemmaEOF",
-		avatar: "/assets/img/team/LemmaEOF.png",
-		description:
-			"A former Fabric modder who tinkers with all sorts of projects and helps run events.",
 	},
 	Luna: {
 		name: "Luna",
@@ -407,24 +401,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/25536265",
 		description: "Busy blowing up new things.",
 	},
-	Pyrrha: {
-		name: "Pyrrha",
-		discord: "Pyrrha",
-		github: "JustPyrrha",
-		avatar: "/assets/img/team/Pyrrha.png",
-		description:
-			"Modder and indie game dev, last seen struggling with the Unity editor. She/Her",
-		links: [
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/JustPyrrha",
-			},
-			{
-				icon: "fab fa-twitch",
-				url: "https://twitch.tv/JustPyrrha",
-			},
-		],
-	},
 	Redblueflame: {
 		name: "Valentin Ricard",
 		discord: "Redblueflame",
@@ -458,17 +434,17 @@ export default {
 		],
 	},
 	Starchild: {
-		name: "Starchild",
+		name: "Ambre Bertucci",
 		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes.",
 	},
 	Stardew: {
 		name: "Stardew",
 		discord: "Hanna",
-		github: "heyhanna",
+		github: "hqnna",
 		avatar: "/assets/img/team/stardew/stardew.png",
 		systemMembers: [
 			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
@@ -491,16 +467,6 @@ export default {
 				url: "https://sr.ht/~hanna"
 			}
 		]
-	},
-	SuperCoder79: {
-		name: "Jasmine",
-		discord: "SuperCoder79",
-		github: "SuperCoder7979",
-		avatar: "https://avatars.githubusercontent.com/u/25208576",
-		description: "Minecraft modder and Java reverse engineer.",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/SuperCoder79" },
-		],
 	},
 	Sylv: {
 		name: "Sylv",
@@ -663,4 +629,10 @@ export default {
 		description:
 			"Minecraft Modder who enjoys the comfortable feeling of crocs on their feet",
 	},
+	_NotFound_: {
+		name: "Member not found",
+		github: "ghost",
+		description: "This member has not been found in the team database. Please open an issue.",
+		avatar: "/assets/img/team/_NotFound_.png",
+	}
 };

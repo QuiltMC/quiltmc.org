@@ -8,13 +8,36 @@ export interface Props {
 	fromTeam: string | undefined;
 }
 
-let { list, fromTeam } = Astro.props as Props;
-if (list === undefined) {
+let { list, leaderList, fromTeam } = Astro.props as Props;
+
+if (leaderList === undefined) {
+	leaderList = [];
+}
+
+if (fromTeam !== undefined) {
+	if (!teamInfo.hasOwnProperty(fromTeam)) {
+		throw new Error(`Team ${fromTeam} does not exist`);
+	}
+
 	list = teamInfo[fromTeam]
-		.map(github => Object.keys(teamData).find(member => teamData[member].github === github))
+		.map(function (github) {
+			const member = Object.keys(teamData).find(member => teamData[member].github === github);
+
+			if (member === undefined) {
+				console.warn(`Member with github ${github} does not exist`);
+				return "_NotFound_";
+			}
+
+			return member;
+		});
+
+	const leaderTeam = fromTeam + "-leaders";
+	if (teamInfo.hasOwnProperty(leaderTeam)) {
+		leaderList = teamInfo[leaderTeam]
+	}
 }
 ---
 
 {list.map((name) =>
-	<TeamMember member={teamData[name]} />
+	<TeamMember member={teamData[name]} isLeader={leaderList.includes(teamData[name].github)} />
 )}

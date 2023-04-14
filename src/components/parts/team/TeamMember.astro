@@ -7,13 +7,18 @@ import SystemMembers from "./SystemMembers.astro";
 export interface Props {
 	member: TeamMember;
 }
-const { member } = Astro.props as Props;
+const { member, isLeader } = Astro.props as Props;
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
 ---
 
 <div class="card is-team-member">
+	{ isLeader &&
+		<span class="icon is-large is-relative is-pulled-right pr-2 pt-2">
+			<i class="fas fa-2x fa-star"></i>
+		</span>
+	}
 	<div class="card-content">
 		{
 			member.avatar && (
@@ -29,6 +34,7 @@ const na = t("team:n-a");
 
 		<div class="media">
 			<div class="media-content">
+
 				<p class="title is-5 mb-5">
 					{member.name ?? <>&nbsp;</>}
 				</p>
