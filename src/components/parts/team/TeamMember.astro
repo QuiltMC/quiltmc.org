@@ -1,23 +1,26 @@
 ---
-import pkCache from "cache/pk.json";
-import type { TeamMember, SystemMember, PkId } from "@data/Team";
+import type { TeamMember,} from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
 
 export interface Props {
 	member: TeamMember;
+	isLeader: boolean,
 }
 const { member, isLeader } = Astro.props as Props;
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
 ---
+<style>
+	.z-60 { z-index: 60; }
+</style>
 
 <div class="card is-team-member">
 	{ isLeader &&
-		<span class="icon is-large is-relative is-pulled-right pr-2 pt-2">
+		<div class="icon is-large is-pulled-right z-60 has-tooltip-arrow" data-tooltip={t("team:team-lead")}>
 			<i class="fas fa-2x fa-star"></i>
-		</span>
+		</div>
 	}
 	<div class="card-content">
 		{
