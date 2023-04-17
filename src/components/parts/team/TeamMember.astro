@@ -1,19 +1,27 @@
 ---
-import pkCache from "cache/pk.json";
-import type { TeamMember, SystemMember, PkId } from "@data/Team";
+import type { TeamMember,} from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
 
 export interface Props {
 	member: TeamMember;
+	isLeader: boolean,
 }
-const { member } = Astro.props as Props;
+const { member, isLeader } = Astro.props as Props;
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
 ---
+<style>
+	.z-60 { z-index: 60; }
+</style>
 
 <div class="card is-team-member">
+	{ isLeader &&
+		<div class="icon is-large is-pulled-right z-60 has-tooltip-arrow" data-tooltip={t("team:team-lead")}>
+			<i class="fas fa-2x fa-star"></i>
+		</div>
+	}
 	<div class="card-content">
 		{
 			member.avatar && (
@@ -29,6 +37,7 @@ const na = t("team:n-a");
 
 		<div class="media">
 			<div class="media-content">
+
 				<p class="title is-5 mb-5">
 					{member.name ?? <>&nbsp;</>}
 				</p>

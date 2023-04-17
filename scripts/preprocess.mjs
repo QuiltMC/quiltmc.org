@@ -9,7 +9,7 @@ async function main() {
 	prepareCacheDirectory();
 	copyCSS();
 	generateRedirectFunctions();
-	await queryPluralKit();
+	await Promise.all([queryPluralKit(), queryTeamInfo()]);
 
 	console.log("preprocess: done\n");
 }
@@ -154,6 +154,32 @@ async function queryPluralKit() {
 
 	console.log("queryPluralKit: writing to PluralKit cache");
 	fs.writeFileSync(paths.PK_CACHE_FILE, JSON.stringify(data));
+}
+
+async function queryTeamInfo() {
+	if (fs.existsSync(paths.TEAM_INFO_CACHE_FILE)) {
+		console.log("queryTeamInfo: using existing team data");
+		return;
+	}
+
+	const response = await tryToRunPromiseWithTimeout(
+		(signal) =>
+			fetch("https://team-info.quiltmc.org/"),
+		15 * 1000,
+		(retriesLeft) => {
+			console.error(
+				`queryTeamInfo: failed to download team data; ${retriesLeft} retries left`
+			);
+		},
+		(retries) => {
+			throw new Error(
+				`queryTeamInfo: failed to download team data after ${retries} retries`
+			);
+		}
+	);
+
+	console.log("queryTeamInfo: writing to team info cache");
+	fs.writeFileSync(paths.TEAM_INFO_CACHE_FILE, await response.text());
 }
 
 main();
