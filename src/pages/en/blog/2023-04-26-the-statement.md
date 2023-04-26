@@ -122,7 +122,7 @@ The statements themselves didn't contain any disclosure of that information at t
 
 Considering the misleading aspect of hiding the fact Lex's statement had been edited, a few members raised concerns about the idea of not knowing what the original statement contained.[\[27\]](#ref-27) It was found later that the statement was initially written in the third person and that some sentences were randomly added, reinforcing the idea that Lex never wrote the statement himself or even any first draft.[\[28\]](#ref-28) Concerns were also brought up with the "sorry we got caught" aspect of the statement[\[29\]](#ref-29).
 
-Levi was the first to raise those concerns, and as a member of the racial minorities targeted by Lex's likes, he expressed his desire to see the unmodified statement.[\[30\]](#ref-30) Curle responded that this attitude lacked "professionalism" (For more explanation about the racism behind this statement, please see the ["](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-1cb4af39-9e86-453c-a906-d7699b5bea3b)[Professionalism and Racism](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-1cb4af39-9e86-453c-a906-d7699b5bea3b)["](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-1cb4af39-9e86-453c-a906-d7699b5bea3b) section) and was "getting inflammatory".[\[31\]](#ref-31)
+Levi was the first to raise those concerns, and as a member of the racial minorities targeted by Lex's likes, he expressed his desire to see the unmodified statement.[\[30\]](#ref-30) Curle responded that this attitude lacked "professionalism" (For more explanation about the racism behind this statement, please see the "[Professionalism and Racism](#professionalism-and-racism) section) and was "getting inflammatory".[\[31\]](#ref-31)
 
 Levi and another Quilt staff member left the conversation. After this, Bubblie, another person of colour in Quilt's Community Team, spoke about the recurrent issue of white people leaving conversations when people of colour mention racial issues, as well as constant issues with getting tone policed. Levi agreed, which caused Curle to send the following message: [\[32\]](#ref-32)
 
@@ -232,7 +232,7 @@ Due to Larry's concerning behaviour with the PluralKit leaks, the Starchildren d
 >
 > This has recently been characterised by a few events, most notably the non-profit discussions where he made non-sensical, totally out of touch comments, and the \[name redacted\] thread where he immediately attacked levy in bad faith, accompanied with some pretty racist takes.
 
-No disagreement was voiced during the 6 days this vote went on for. It didn't have a chance to go through however, as he left the server on the 20th, after sending a paragraph you may read below in "[Larry (part 2)](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-be78c8c9-5d52-47c9-b245-704bead219d8)".
+No disagreement was voiced during the 6 days this vote went on for. It didn't have a chance to go through however, as he left the server on the 20th, after sending a paragraph you may read below in "[Larry (part 2)](#larry-part-2)".
 
 # zml
 
@@ -372,7 +372,7 @@ After the Starchildren had pointed out the legal issues, the lack of authority K
 
 Mango then gave the Community Manager role back to the other active Managers and proceeded to go to bed. They continued recovering the servers by reassigning the staff roles, adding back the bots and repairing all the other damages done by Kashike.
 
-To this day, Mango still acts as a temporary Keyholder while we find another solution (see "[Alternatives for the Keyholder System](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-97d051fa-2f0c-448e-aa6f-f4dbc0bdf917)" section). In light of the leaks, conspiring[\[69\]](#ref-69) and hostile takeovers, Kashike, Larry and zml have been indefinitely banned from all Quilt spaces.
+To this day, Mango still acts as a temporary Keyholder while we find another solution (see "[Alternatives for the Keyholder System](#alternatives-for-the-keyholder-system)" section). In light of the leaks, conspiring[\[69\]](#ref-69) and hostile takeovers, Kashike, Larry and zml have been indefinitely banned from all Quilt spaces.
 
 ## Our take on Kashike
 
@@ -400,7 +400,7 @@ As these events have shown, having an impartial Keyholder seems impossible, and 
 
 What does this effectively change for Quilt? Not much, really. All we learned through those events is that the Keyholder system is inherently broken and needs replacing. While zml, Larry and Kashike might have probably provided some interesting feedback, they are drowned in a sea of internalized and externalized racism making most, if not all, of their points null and void.
 
-Additionally, through this incident, the importance of diversity in community management has been made clearer than ever: it revealed to us the direct harm of the lack of racial diversity that Quilt, together with some parts of the wider community, face — we had been unknowingly harbouring racists for years, and instead of learning from minority voices, they were willing to take drastic measures such as planning and attempting a coup, all to defend their malignant beliefs that have only recently been challenged. (See the "[Importance of Diversity in Community Management](https://app.clickup.com/9005059269/v/dc/8cbwk65-802/8cbwk65-602?block=block-307d971a-7ef7-4cc4-9a2e-01d3779c764e)" section for more information on the topic)
+Additionally, through this incident, the importance of diversity in community management has been made clearer than ever: it revealed to us the direct harm of the lack of racial diversity that Quilt, together with some parts of the wider community, face — we had been unknowingly harbouring racists for years, and instead of learning from minority voices, they were willing to take drastic measures such as planning and attempting a coup, all to defend their malignant beliefs that have only recently been challenged. (See the "[Importance of Diversity in Community Management](#importance-of-diversity-in-community-management)" section for more information on the topic)
 
 If you have some feedback for us that isn't about tone policing minorities, you are more than welcome to reach out to a Community Manager or a member of the Administrative Board. We would like to remind you that no action will be taken against someone providing feedback in good faith. You can even send us an email at [feedback@quiltmc.org](mailto:feedback@quiltmc.org) with a throwaway account if you'd like to provide anonymous feedback.
 
