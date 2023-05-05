@@ -53,12 +53,14 @@ nav-page-sponsors = {-sponsors}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 nav-page-legal = Legal
+nav-page-donate = Donate
 
 button-close = Close
 button-discord = {-discord}
 button-discord-community = Community
 button-discord-toolchain = Toolchain
 button-developer-wiki = {-developer-wiki}
+button-donate = Donate
 button-forum = {-forum}
 button-github = {-github}
 button-install = Install

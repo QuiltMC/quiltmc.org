@@ -127,6 +127,12 @@ export default {
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
 	},
+	FoundationGames: {
+		name: "FoundationGames",
+		discord: "FoundationGames",
+		github: "FoundationGames",
+		avatar: "https://avatars.githubusercontent.com/u/43485105?v=4"
+	},
 	Foxes: {
 		name: "&foxes",
 		discord: "foxes",
@@ -182,6 +188,16 @@ export default {
 				icon: "fak fa-curseforge",
 				url: "https://www.curseforge.com/members/Jamalam360/projects",
 			},
+		],
+	},
+	Jasmine: {
+		name: "Jasmine",
+		discord: "Jasmine",
+		github: "jaskarth",
+		avatar: "https://avatars.githubusercontent.com/u/25208576",
+		description: "Compiler developer, reverse engineer, Minecraft modder.",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/jaskarth4" },
 		],
 	},
 	Kroppeb: {
@@ -424,17 +440,17 @@ export default {
 		],
 	},
 	Starchild: {
-		name: "Starchild",
+		name: "Ambre Bertucci",
 		discord: "Akarys",
 		github: "Akarys42",
 		avatar: "/assets/img/team/Starchild.png",
 		description:
-			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes. Infrastructure team lead.",
+			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes.",
 	},
 	Stardew: {
 		name: "Stardew",
 		discord: "Hanna",
-		github: "heyhanna",
+		github: "hqnna",
 		avatar: "/assets/img/team/stardew/stardew.png",
 		systemMembers: [
 			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
@@ -457,16 +473,6 @@ export default {
 				url: "https://sr.ht/~hanna"
 			}
 		]
-	},
-	SuperCoder79: {
-		name: "Jasmine",
-		discord: "SuperCoder79",
-		github: "SuperCoder7979",
-		avatar: "https://avatars.githubusercontent.com/u/25208576",
-		description: "Minecraft modder and Java reverse engineer.",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/SuperCoder79" },
-		],
 	},
 	Sylv: {
 		name: "Sylv",
@@ -542,6 +548,13 @@ export default {
 		discord: "kashike",
 		github: "kashike",
 		avatar: "https://avatars.githubusercontent.com/u/5474071?v=4",
+	},
+	levy: {
+		name: "Levy",
+		discord: "remote_getaway",
+		github: "remotegetaway",
+		avatar: "https://avatars.githubusercontent.com/u/111402697?v=4",
+		description: "whiten't"
 	},
 	maximum: {
 		name: "Boxed",
@@ -622,4 +635,10 @@ export default {
 		description:
 			"Minecraft Modder who enjoys the comfortable feeling of crocs on their feet",
 	},
+	_NotFound_: {
+		name: "Member not found",
+		github: "ghost",
+		description: "This member has not been found in the team database. Please open an issue.",
+		avatar: "/assets/img/team/_NotFound_.png",
+	}
 };

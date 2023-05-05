@@ -126,6 +126,12 @@ const { style = "is-dark" } = Astro.props as Props;
 					<NavLink href={localizePath("/legal")} icon="fas fa-scale-balanced">
 						{t("nav-page-legal")}
 					</NavLink>
+
+					<div class="divider">{t("divider-external-links")}</div>
+
+					<NavLink href="https://opencollective.com/quiltmc" icon="fas fa-circle-dollar-to-slot">
+						{t("nav-page-donate")}
+					</NavLink>
 				</div>
 			</div>
 		</div>
