@@ -1,0 +1,68 @@
+---
+permalink: /community/join-us
+title: Join the non-profit
+description: Fill out this form to join The Quilt Project, a registered non-profit.
+layout: /src/layouts/Page.astro
+---
+
+import Countries from "@data/Countries.mjs";
+import HomeMessage from "@parts/home/HomeMessage.astro";
+
+Through this form you can join The Quilt Project, a registered non-profit in France. Once the form is filled,
+we will contact you to confirm your membership through email.
+
+Thank you for your interest!
+
+<noscript>
+	<HomeMessage style="danger" iconType="danger" icon="warning" header="JavaScript is disabled">
+		<p class="has-text-centered">This page is protected by <a href="https://www.cloudflare.com/en-gb/products/turnstile/">Turnstile</a> to avoid spam, JavaScript is therefore required to submit the form.</p>
+	</HomeMessage>
+</noscript>
+
+<form>
+	<div class="field">
+		<label class="label">Full Name</label>
+		<div class="control has-icons-left">
+			<input class="input" type="text" name="name" placeholder="Little Pineapple" />
+			<span class="icon is-small is-left">
+			<i class="fas fa-user"></i>
+		</span>
+		</div>
+		<p class="help">This will only be seen by our Legal Team</p>
+	</div>
+
+	<div class="field">
+		<label class="label">Email</label>
+		<div class="control has-icons-left has-icons-right">
+			<input class="input" type="email" name="email" placeholder="pineapple@quiltmc.org" />
+			<span class="icon is-small is-left">
+				<i class="fas fa-envelope"></i>
+			</span>
+		</div>
+	</div>
+
+	<div class="field">
+		<label class="label">Country</label>
+		<div class="control">
+			<div class="select">
+				<select name="country">
+					<option>Please select</option>
+					{ Countries.map((country) => <option>{ country }</option>) }
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
+		<div class="control">
+			<label class="checkbox is-flex is-flex-direction-row">
+				<input class="mr-2 mt-4" type="checkbox" />
+				<p class="mt-4">I agree to the <a href="/en/legal/bylaws/en/">bylaws</a></p>
+			</label>
+		</div>
+	</div>
+
+	<div class="cf-turnstile" data-sitekey="1x00000000000000000000BB"></div>
+
+	<button class="button is-link mt-4" disabled>Submit</button>
+</form>
