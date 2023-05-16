@@ -44,7 +44,6 @@ nav-page-template-mod = {-template-mod}
 
 button-close = 关闭
 button-discord = {-discord}
-button-discord-community = 社区服务器
 button-discord-toolchain = 开发服务器
 button-developer-wiki = {-developer-wiki}
 button-forum = {-forum}
