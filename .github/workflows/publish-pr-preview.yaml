@@ -25,6 +25,12 @@ jobs:
           path: functions
           run_id: ${{ github.event.workflow_run.id }}
 
+      - name: Download package artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: website-package
+          run_id: ${{ github.event.workflow_run.id }}
+
       - name: Enable Corepack shims
         run: corepack enable
 
