@@ -13,7 +13,8 @@ import Countries from "@data/Countries.mjs";
 
 	function submit() {
 		getElement("btn-submit").classList.add("is-loading");
-		getElement("error-token").classList.remove("is-danger");
+		getElement("error-token").classList.add("is-hidden");
+		getElement("error-submit").classList.add("is-hidden");
 		let ready = true;
 
 		if (getElement("name").value.length === 0) {
@@ -43,23 +44,32 @@ import Countries from "@data/Countries.mjs";
 
 		if (!token) {
 			ready = false;
-			getElement("error-token").classList.add("is-danger");
+			getElement("error-token").classList.remove("is-hidden");
 		}
 
-		getElement("btn-submit").classList.remove("is-loading");
-
-		fetch("/api/v1/join-us/submit", {
-			body: JSON.stringify({
-				name: getElement("name").value,
-				email: getElement("email").value,
-				country: getElement("country").value,
-				token: token
-			}),
-			headers: {
-				"Content-Type": "application/json"
-			},
-			method: "POST"
-		})
+		if (ready) {
+			fetch("/api/v1/join-us/submit", {
+				body: JSON.stringify({
+					name: getElement("name").value,
+					email: getElement("email").value,
+					country: getElement("country").value,
+					token: token
+				}),
+				headers: {
+					"Content-Type": "application/json"
+				},
+				method: "POST"
+				}).then((response) => {
+					if (response.status !== 202) {
+							getElement("btn-submit").classList.remove("is-loading");
+							getElement("error-submit").classList.remove("is-hidden");
+							getElement("error-submit").innerText = `An error occurred (${response.status}). Please try again later. If the problem persists, please contact us.`;
+						} else {
+							getElement("btn-submit").classList.add("is-hidden");
+							getElement("success").classList.remove("is-hidden");
+						}
+				})
+		}
 	}
 
 	// We disable the button by default and turn it on if we have access to JavaScript
@@ -125,4 +135,11 @@ import Countries from "@data/Countries.mjs";
 <div class="cf-turnstile" data-sitekey="0x4AAAAAAAEzawY8om6u07cA" data-action="sign-up" data-callback="setToken"></div>
 
 <button id="btn-submit" class="button is-link mt-4" onclick="submit()" disabled>Submit</button>
+
 <p id="error-token" class="help is-danger is-hidden">Turnstile token not yet ready. Please try again in a few seconds. If the problem persist, please contact us.</p>
+<p id="error-submit" class="help is-danger is-hidden"></p>
+
+<div id="success" class="is-hidden mt-4">
+	<p class="title is-3">You're almost there!</p>
+	<p class="subtitle is-5">Please check your email for a confirmation link.</p>
+</div>

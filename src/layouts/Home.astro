@@ -8,6 +8,7 @@ import LatestPosts from "@parts/home/LatestPosts.astro";
 import { localizePath } from "@util/Util";
 import site from "@data/Site";
 import SponsorRow from "@parts/sponsors/SponsorRow.astro";
+import { toast } from 'bulma-toast'
 ---
 
 <HeroContent content={Astro.props.content}>
@@ -176,3 +177,23 @@ import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 	</div>
 
 </HeroContent>
+
+<script>
+	import { toast } from 'bulma-toast';
+
+	const toastType = new URLSearchParams(window.location.search).get('toast');
+
+	if (toastType) {
+		const message = {
+			'registered': 'Your registration was successful! Please check your email for further information.',
+		}[toastType] || 'Uhhh.. pineapple?';
+
+		toast({
+			message,
+			type: 'is-primary',
+			dismissible: true,
+			pauseOnHover: true,
+			duration: 30000,
+		})
+	}
+</script>

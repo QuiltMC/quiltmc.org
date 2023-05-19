@@ -18,7 +18,9 @@ export async function onRequest(context) {
 
 	const jwtToken = await jwt.sign({ name, email, country, exp: Math.floor(Date.now() / 1000) + 3600 }, context.env.JWT_SECRET);
 
-	const content = `Hello ${name},\n\nThank you for your interest in joining The Quilt Project! Please click the following link to verify your email address:\n\nhttps://quiltmc.org/api/v1/join-us/verify?token=${jwtToken}\n\nIf you did not request this email, please ignore it.\n\nThanks,\nThe Quilt Project Team`;
+	const content = `Hello,\n\nThank you for your interest in joining The Quilt Project! Please click the following link to verify your email address:
+	\n\nhttps://quiltmc.org/api/v1/join-us/verify?token=${jwtToken}\n\nIf you did not request this email, please ignore it. This link is valid for one hour.\n\n
+	Thanks,\nThe Quilt Project Team`;
 	const status = await sendEmail(email, name, content, context.env.DKIM_PRIVATE_KEY);
 
 	return new Response('OK', { status });
