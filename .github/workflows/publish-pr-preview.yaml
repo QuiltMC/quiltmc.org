@@ -25,6 +25,12 @@ jobs:
           path: functions
           run_id: ${{ github.event.workflow_run.id }}
 
+      - name: Enable Corepack shims
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Gather PR details
         uses: potiuk/get-workflow-origin@v1_1
         id: pr-details
