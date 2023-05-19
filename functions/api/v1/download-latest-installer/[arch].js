@@ -1,3 +1,5 @@
+import semverSort from "semver-sort"
+
 const MAVEN = "https://maven.quiltmc.org/repository/release"
 
 const UNIVERSAL_ARCH = "java-universal"
@@ -6,7 +8,7 @@ const UNIVERSAL_PATH = MAVEN + "/org/quiltmc/quilt-installer/"
 const NATIVE_PATH = MAVEN + "/org/quiltmc/quilt-installer-native-bootstrap/"
 
 const METADATA = "maven-metadata.xml"
-const LATEST_REGEX = /<latest>([0-9.]+)<\/latest>/
+const VERSION_REGEX = /<version>(.+?)<\/version>/g
 
 export async function onRequest(context) {
 	let base
@@ -23,11 +25,12 @@ export async function onRequest(context) {
 	switch (metadataRequest.status) {
 		case 200: break
 		case 404: return new Response("Not found", { status: 404 })
-		default: return new Response("Internal server error", { status: 500 })
+		default: return new Response(`Internal server error: service returned ${metadataRequest.status}`, { status: 500 })
 	}
 
 	const metadata = await metadataRequest.text()
-	const latest = metadata.match(LATEST_REGEX)[1]
+	const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
+	const latest = semverSort.desc(allVersion)[0]
 
 	let artifactUrl
 	if (context.params.arch === UNIVERSAL_ARCH) {
