@@ -11,11 +11,18 @@ jobs:
 
     name: Publish PR preview
     steps:
-      - name: Download artifact
+      - name: Download HTML artifact
         uses: dawidd6/action-download-artifact@v2
         with:
           name: website-html
           path: dist
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Download Functions artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: website-functions
+          path: functions
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Gather PR details
