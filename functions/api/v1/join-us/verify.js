@@ -1,5 +1,19 @@
 import jwt from '@tsndr/cloudflare-worker-jwt';
 
+const WELCOME_MESSAGE = `Hello,
+
+Thank you for joining The Quilt Project! We will contact you as soon as we've confirmed your registration
+
+In the meantime, here are a few useful links:
+- Our Discord: https://discord.quiltmc.org/
+- Our Forums: https://forum.quiltmc.org/
+- Our GitHub: https://github.com/QuiltMC/
+
+Quilt is an Open-Source project that lives thanks to people like you. If you want to help us further, please consider donating at https://opencollective.com/quiltmc/.
+
+From the bottom of our hearts, thank you for joining us!
+The Quilt Project Team`
+
 export async function onRequest(context) {
 	if (context.request.method !== 'GET') {
 		return new Response('Method not allowed', { status: 405 })
@@ -26,11 +40,7 @@ export async function onRequest(context) {
 		return new Response('Failed to send email', { status: 500 });
 	}
 
-	const memberContent = `Hello,\n\nThank you for joining The Quilt Project! We will contact you as soon as we've confirmed your registration\n\n
-In the meantime, here are a few useful links:\n- Our Discord: https://discord.quiltmc.org/\n- Our Forums: https://forum.quiltmc.org/\n- Our GitHub: https://github.com/QuiltMC/\n\n
-Quilt is an Open-Source project that lives thanks to people like you. If you want to help us further, please consider donating at https://opencollective.com/quiltmc/.\n\n
-From the bottom of our hearts, thank you for joining us!\nThe Quilt Project Team`;
-	const memberStatus = await sendEmail(email, name, 'Welcome to The Quilt Project!', memberContent, context.env.DKIM_PRIVATE_KEY);
+	const memberStatus = await sendEmail(email, name, 'Welcome to The Quilt Project!', WELCOME_MESSAGE, context.env.DKIM_PRIVATE_KEY);
 
 	if (memberStatus !== 202) {
 		return new Response('Failed to send email', { status: 500 });
