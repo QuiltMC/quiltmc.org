@@ -65,10 +65,13 @@ import Countries from "@data/Countries.json";
 							getElement("error-submit").classList.remove("is-hidden");
 							getElement("error-submit").innerText = `An error occurred (${response.status}). Please try again later. If the problem persists, please contact us.`;
 						} else {
+							getElement("btn-submit").classList.remove("is-loading");
 							getElement("btn-submit").classList.add("is-hidden");
 							getElement("success").classList.remove("is-hidden");
 						}
 				})
+		} else {
+			getElement("btn-submit").classList.remove("is-loading");
 		}
 	}
 
