@@ -1,0 +1,22 @@
+---
+permalink: /community/join-us
+title: Join The Non-Profit
+description: Fill out this form to join The Quilt Project, a registered non-profit.
+layout: /src/layouts/Page.astro
+---
+
+import HomeMessage from "@parts/home/HomeMessage.astro";
+import JoinForm from "@layouts/JoinForm.astro";
+
+Through this form you can join The Quilt Project, a registered non-profit in France. Once the form is filled,
+we will contact you to confirm your membership through email.
+
+Thank you for your interest!
+
+<noscript>
+	<HomeMessage style="danger" iconType="danger" icon="warning" header="JavaScript is disabled">
+		<p class="has-text-centered">This page is protected by <a href="https://www.cloudflare.com/en-gb/products/turnstile/">Turnstile</a> to avoid spam, JavaScript is therefore required to submit the form.</p>
+	</HomeMessage>
+</noscript>
+
+<JoinForm />
