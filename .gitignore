@@ -24,4 +24,8 @@ cache
 public/assets/css
 
 # Generated function files
-functions
+functions/*
+!functions/api
+
+# Secrets
+.dev.vars

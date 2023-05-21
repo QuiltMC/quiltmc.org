@@ -1,0 +1,148 @@
+---
+import Countries from "@data/Countries.json";
+---
+
+<script blocking="render" async is:inline>
+	const getElement = document.getElementById.bind(document);
+	const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	let token;
+	function setToken(newToken) {
+		token = newToken;
+	}
+
+	function submit() {
+		getElement("btn-submit").classList.add("is-loading");
+		getElement("error-token").classList.add("is-hidden");
+		getElement("error-submit").classList.add("is-hidden");
+		let ready = true;
+
+		if (getElement("name").value.length === 0) {
+			ready = false;
+			getElement("error-name").classList.remove("is-hidden");
+		}
+
+		if (!EMAIL_REGEX.test(getElement("email").value)) {
+			ready = false;
+			getElement("error-email").classList.remove("is-hidden");
+		}
+
+		if (getElement("country").value === "Please select") {
+			ready = false;
+			getElement("error-country").classList.remove("is-hidden");
+		}
+
+		if (!getElement("bylaws").checked) {
+			ready = false;
+			getElement("error-bylaws").classList.remove("is-hidden");
+		}
+
+		if (!getElement("privacy").checked) {
+			ready = false;
+			getElement("error-privacy").classList.remove("is-hidden");
+		}
+
+		if (!token) {
+			ready = false;
+			getElement("error-token").classList.remove("is-hidden");
+		}
+
+		if (ready) {
+			fetch("/api/v1/join-us/submit", {
+				body: JSON.stringify({
+					name: getElement("name").value,
+					email: getElement("email").value,
+					country: getElement("country").value,
+					token: token
+				}),
+				headers: {
+					"Content-Type": "application/json"
+				},
+				method: "POST"
+				}).then((response) => {
+					if (response.status !== 202) {
+							getElement("btn-submit").classList.remove("is-loading");
+							getElement("error-submit").classList.remove("is-hidden");
+							getElement("error-submit").innerText = `An error occurred (${response.status}). Please try again later. If the problem persists, please contact us.`;
+						} else {
+							getElement("btn-submit").classList.remove("is-loading");
+							getElement("btn-submit").classList.add("is-hidden");
+							getElement("success").classList.remove("is-hidden");
+						}
+				})
+		} else {
+			getElement("btn-submit").classList.remove("is-loading");
+		}
+	}
+
+	// We disable the button by default and turn it on if we have access to JavaScript
+	addEventListener("load", () => getElement("btn-submit").disabled = false);
+</script>
+
+<div class="field">
+	<label class="label">Full Name</label>
+	<div class="control has-icons-left">
+		<input class="input" type="text" id="name" placeholder="Little Pineapple" oninput="getElement('error-name').classList.add('is-hidden');" />
+		<span class="icon is-small is-left">
+		<i class="fas fa-user"></i>
+	</span>
+	</div>
+	<p class="help mb-0">This will only be seen by our Legal Team</p>
+	<p id="error-name" class="help is-danger is-hidden">Please enter your name</p>
+</div>
+
+<div class="field">
+	<label class="label">Email</label>
+	<div class="control has-icons-left has-icons-right">
+		<input class="input" type="email" id="email" placeholder="pineapple@quiltmc.org" oninput="getElement('error-email').classList.add('is-hidden');" />
+		<span class="icon is-small is-left">
+			<i class="fas fa-envelope"></i>
+		</span>
+	</div>
+	<p id="error-email" class="help is-danger is-hidden">Please enter a valid email</p>
+</div>
+
+<div class="field">
+	<label class="label">Country</label>
+	<div class="control">
+		<div class="select">
+			<select id="country" onchange="getElement('error-country').classList.add('is-hidden');">
+				<option>Please select</option>
+				{ Countries.map((country) => <option>{ country }</option>) }
+			</select>
+		</div>
+	</div>
+	<p id="error-country" class="help is-danger is-hidden">Please select your country</p>
+</div>
+
+<div class="field">
+	<div class="control">
+		<label class="checkbox is-flex is-flex-direction-row">
+			<input id="bylaws" class="mr-2 mt-4" type="checkbox" onchange="getElement('error-bylaws').classList.add('is-hidden');" />
+			<p class="mt-4">I agree to the <a href="/en/legal/bylaws/en/">bylaws</a>.</p>
+		</label>
+	</div>
+	<p id="error-bylaws" class="help is-danger is-hidden">Please accept the bylaws</p>
+</div>
+
+<div class="field">
+	<div class="control">
+		<label class="checkbox is-flex is-flex-direction-row">
+			<input id="privacy" class="mr-2" type="checkbox" onchange="getElement('error-privacy').classList.add('is-hidden');" />
+			<p>I agree to the <a href="/en/legal/membership-privacy-policy/">membership privacy policy</a>.</p>
+		</label>
+	</div>
+	<p id="error-privacy" class="help is-danger is-hidden">Please accept the privacy policy</p>
+</div>
+
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAAEzawY8om6u07cA" data-action="sign-up" data-callback="setToken"></div>
+
+<button id="btn-submit" class="button is-link mt-4" onclick="submit()" disabled>Submit</button>
+
+<p id="error-token" class="help is-danger is-hidden">Turnstile token not yet ready. Please try again in a few seconds. If the problem persist, please contact us.</p>
+<p id="error-submit" class="help is-danger is-hidden"></p>
+
+<div id="success" class="is-hidden mt-4">
+	<p class="title is-3">You're almost there!</p>
+	<p class="subtitle is-5">Please check your email for a confirmation link.</p>
+</div>
