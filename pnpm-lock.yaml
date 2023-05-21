@@ -4,9 +4,6 @@ dependencies:
   '@tsndr/cloudflare-worker-jwt':
     specifier: ^2.2.1
     version: 2.2.1
-  bulma-toast:
-    specifier: ^2.4.2
-    version: 2.4.2
 
 devDependencies:
   '@astrojs/markdown-component':
@@ -36,6 +33,9 @@ devDependencies:
   astro-purgecss:
     specifier: ^1.3.2
     version: 1.3.2(astro@1.6.14)
+  bulma-toast:
+    specifier: ^2.4.2
+    version: 2.4.2
   execa:
     specifier: ^6.1.0
     version: 6.1.0
@@ -1125,7 +1125,7 @@ packages:
 
   /bulma-toast@2.4.2:
     resolution: {integrity: sha512-c3ehyeXhhvxevKICP1VKsFtZlQH+H6/S+yYY4TFyLRfkbw3mh71eGazlNc/YEIvXQSbxHpD2f+WDc02xECuV9g==}
-    dev: false
+    dev: true
 
   /camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
