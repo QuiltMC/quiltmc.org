@@ -1,7 +1,6 @@
 ---
 title: "Quilt Mappings needs you!"
 date: 2023-05-19 12:00:00 -00:00
-index: false
 authors:
   - ix0rai
 layout: /src/layouts/Post.astro
