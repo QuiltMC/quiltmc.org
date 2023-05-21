@@ -12,6 +12,8 @@ layout: /src/layouts/Post.astro
 Hello quilters!\
 An important announcement from the Quilt Mappings team today (you can tell, because I’ve pulled out proper punctuation for the first time in my Quilt career). I’ll cut straight to the point and say it: Quilt Mappings is in need of contributions. The team and I have been working hard to keep up with Minecraft lately, but with a backlog of missing mappings since before I joined and Mojang always working to improve the game, we can’t hold up our completion by ourselves.
 
+<!-- MORE -->
+
 #### What's holding the team back?
 
 The Quilt Mappings team is one of the largest in Quilt, but we’re still struggling to keep up. Why? There are a few reasons. Most of the team is simply busy and doesn’t have the time to submit new mappings, and those of us that do have time have other exciting projects to work on! We’re building an entirely new mappings toolchain, always matching to the latest snapshots, and delivering huge improvements to Enigma, the program that we use to create mappings. That’s not to say we’re not working on mappings all the time, though, and we’re always here to deliver quick reviews on pull requests!
