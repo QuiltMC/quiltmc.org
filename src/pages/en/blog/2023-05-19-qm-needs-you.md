@@ -6,8 +6,6 @@ authors:
 layout: /src/layouts/Post.astro
 ---
 
-## Quilt Mappings wants you!
-
 Hello quilters!\
 An important announcement from the Quilt Mappings team today (you can tell, because I’ve pulled out proper punctuation for the first time in my Quilt career). I’ll cut straight to the point and say it: Quilt Mappings is in need of contributions. The team and I have been working hard to keep up with Minecraft lately, but with a backlog of missing mappings since before I joined and Mojang always working to improve the game, we can’t hold up our completion by ourselves.
 
