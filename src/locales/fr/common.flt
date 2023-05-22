@@ -53,6 +53,7 @@ nav-page-sponsors = {-sponsors}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 nav-page-legal = Mentions légales
+nav-page-donate = Faire un don
 
 button-close = Fermer
 button-discord = {-discord}
@@ -62,6 +63,7 @@ button-developer-wiki = {-developer-wiki}
 button-forum = {-forum}
 button-github = {-github}
 button-install = Installer
+button-join-npo = Rejoindre l'association
 button-mastodon = {-mastodon}
 button-maven-repo = Dépôt Maven
 button-more = Plus
