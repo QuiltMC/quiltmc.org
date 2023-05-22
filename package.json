@@ -34,7 +34,7 @@
 		"bulma-toast": "^2.4.2"
 	},
 	"dependencies": {
-		"@tsndr/cloudflare-worker-jwt": "^2.2.1"
+		"@tsndr/cloudflare-worker-jwt": "^2.2.1",
 		"semver-sort": "^1.0.0"
 	}
 }
