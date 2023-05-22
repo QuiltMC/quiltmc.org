@@ -26,3 +26,6 @@ public/assets/css
 # Generated function files
 functions/*
 !functions/api
+
+# Secrets
+.dev.vars
