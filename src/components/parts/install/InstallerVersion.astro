@@ -21,6 +21,8 @@ import { t } from "i18next";
 		const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
 		const latest = semverSort.desc(allVersion)[0]
 
-		document.getElementById("installer-version").textContent = latest;
+		if (document.getElementById("installer-version")) {
+			document.getElementById("installer-version").textContent = latest;
+		}
 	</script>
 </div>
