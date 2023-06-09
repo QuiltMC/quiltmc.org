@@ -53,6 +53,17 @@ However, sometimes components and layouts don't get rebuilt with HMR and you mig
 
 You're all set! Although, I would recommend reading about [the architecture of this site](ARCHITECTURE.md) before making any changes, to familiarize yourself with the project structure. Have fun contributing!
 
+#### Cloudflare Pages Dev server
+
+Some functionalities of the website, such as redirects or functions, use some Cloudflare Pages specific features.
+To test these features, you can run the following command:
+
+```sh
+$ npx wrangler pages dev -- pnpm dev --host
+```
+
+Make sure to use the url provided by wrangler, as it will be different from the one provided by Astro. It should appear underneath `Worker reloaded!`.
+
 ### Building
 
 To build the site as seen in production, simply run `pnpm run build`.
