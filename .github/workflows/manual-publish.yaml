@@ -16,8 +16,8 @@ jobs:
           filter: 'blob:none'
           fetch-depth: 0
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Enable Corepack shims
+        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install
