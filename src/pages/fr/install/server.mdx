@@ -9,6 +9,7 @@ hasDownloads: true
 ---
 
 import InstallerVersion from "@parts/install/InstallerVersion.astro";
+import MavenInstallerButton from "@atoms/MavenInstallerButton.astro";
 
 Avant de commencer, vous devez vous assurer que vous avez téléchargé une copie du programme d'installation de Quilt. Vous devez également vous assurer que vous avez [installé Java](https://java.com/fr/download).
 
@@ -16,14 +17,8 @@ Avant de commencer, vous devez vous assurer que vous avez téléchargé une copi
 	<InstallerVersion />
 	<div class="field-body">
 		<div class="field">
-			<div class="control">
-				<a
-					id="universal-download"
-					href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/latest/quilt-installer-latest.jar"
-					class="button is-primary mt-1"
-				>
-					Universel (.jar)
-				</a>
+			<div class="control is-flex">
+				<MavenInstallerButton arch="java-universal" title="Universal (.jar)" icon="java" class_="button is-primary" />
 			</div>
 		</div>
 	</div>

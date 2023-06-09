@@ -57,9 +57,9 @@ nav-page-donate = Faire un don
 
 button-close = Fermer
 button-discord = {-discord}
-button-discord-community = Communauté
 button-discord-toolchain = Toolchain
 button-developer-wiki = {-developer-wiki}
+button-donate = Faire un don
 button-forum = {-forum}
 button-github = {-github}
 button-install = Installer

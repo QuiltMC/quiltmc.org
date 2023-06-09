@@ -11,20 +11,14 @@ Quilt's governance is split up into many independent teams, some of which have t
 
 Additionally, each team also has its own responsibilities. Below, you'll find a full list of each team and a list of team members, including a description of the team and any relevant subteams and team roles.
 
+Teams also include one or more team leads. They are responsible for the team's overall direction and management, and are the primary point of contact for the team's responsibilities. They usually hold merge rights on the team's repositories, and are responsible for ensuring that the team's responsibilities are met. On this page, they will be indicated by a star.
+
 # Admin Board
 
 The Admin Board is responsible for breaking voting ties, managing permissions on GitHub, managing operational platforms that concern multiple teams and steering the project's general direction. The Admin Board must always have an odd number of members, to help ensure that ties can be broken cleanly.
 
 <div class="admin team-grid">
-	<TeamMembers
-		list={[
-			"CheaterCodes",
-			"HavenKing",
-			"LambdaFoxes",
-			"MrMangoHands",
-			"OroArmor",
-		]}
-	/>
+	<TeamMembers fromTeam="administrative-board"/>
 </div>
 
 # Community Team
@@ -33,22 +27,14 @@ The Community Team is a wide-ranging team that is in charge of managing all Quil
 
 ## Keyholders
 
-A Keyholder is only technically a member of the Community Team. Keyholders exist to act as the de-facto owner of a space that doesn't support the concept of managed group ownership, like Discord. They oversee the rest of the Community Team, promoting and demoting Community Managers as required by the internal voting process. Aside from this, they have no direct involvement with The Quilt Project.
-
-Keyholders are well-known, reputable members of the wider Minecraft modding community. This, along with their lack of involvement or investment in the Quilt project, is important to try to avoid situations where a hostile takeover of a space may be possible.
-
-<div class="keyholder team-grid">
-	<TeamMembers list={["kashike"]} />
-</div>
+Due to recent events, we're currently restructuring the Keyholder role. More information to come soon.
 
 ## Community Managers
 
-Community Managers are administrative Community Team members that deal with the day-to-day tasks of maintaining Quilt's community spaces, as well as supporting and managing the rest of the community team. They're responsible for properly running elections, interviewing and training new Community Team members, managing the structure of Quilt's community spaces, writing and receiving feedback on Quilt's community policies -- while also acting as a moderator and inheriting the responsibilities from that position.
+Community Managers are administrative Community Team members that deal with the day-to-day tasks of maintaining Quilt's community spaces, as well as supporting and managing the rest of the community team. They're responsible for properly running elections, interviewing and training new Community Team members, managing the structure of Quilt's community spaces, writing and receiving feedback on Quilt's community policies.
 
 <div class="moderator team-grid">
-	<TeamMembers
-		list={["AppleTheGolden", "gdude2002", "MrMangoHands", "Leah"]}
-	/>
+	<TeamMembers fromTeam="community-managers" />
 </div>
 
 ## Moderators
@@ -56,20 +42,7 @@ Community Managers are administrative Community Team members that deal with the 
 Quilt's Moderator team is responsible for daily moderation tasks in Quilt community spaces. This includes conflict resolution, defensive and reactive moderation tasks and general rule and policy enforcement. Moderators are the backbone of any Community Team, and Quilt's is no exception -- a diverse, active Moderator team has always been instrumental for Quilt's success.
 
 <div class="moderator team-grid">
-	<TeamMembers
-		list={[
-			"Ember",
-			"Forkk",
-			"Foxes",
-			"Larry",
-			"Octal",
-			"SilverAndro",
-			"snoozestudios",
-			"Southpaw",
-			"Stardew",
-			"Redblueflame",
-		]}
-	/>
+	<TeamMembers fromTeam="moderators"/>
 </div>
 
 ## Events Team
@@ -77,7 +50,7 @@ Quilt's Moderator team is responsible for daily moderation tasks in Quilt commun
 The Events Team is responsible for organising and managing events within our community spaces, which can include anything from AMAs to fully-blown online modding conventions. While they aren't Moderators, they are always backed up by the rest of the Community Team, and also have the ability to directly moderate events.
 
 <div class="community team-grid">
-	<TeamMembers list={["Bubblie", "Fusion", "Octal", "Starchild", "TibiNonEst"]} />
+	<TeamMembers fromTeam="community" />
 </div>
 
 ## Outreach Team
@@ -85,7 +58,7 @@ The Events Team is responsible for organising and managing events within our com
 The outreach team is responsible for communications outside of and within Quilt. They write blog posts, manage social media and website content, and run developer meetings, among other things.
 
 <div class="community team-grid">
-	<TeamMembers list={["gdude2002", "Southpaw", "Starchild"]} />
+	<TeamMembers fromTeam="outreach" />
 </div>
 
 # Development Teams
@@ -105,7 +78,7 @@ The build tools team is responsible for several projects that are instrumental f
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers list={["EnnuiL", "glitch", "TibiNonEst"]} />
+	<TeamMembers fromTeam="build-tools" />
 </div>
 
 ## Chasm
@@ -122,9 +95,7 @@ This team is responsible for the following projects:
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers
-		list={["CheaterCodes", "Earthcomputer", "Kroppeb", "Pyrofab"]}
-	/>
+	<TeamMembers fromTeam="chasm" />
 </div>
 
 ## Community Tooling
@@ -136,18 +107,7 @@ The Community Tooling team is responsible for projects that power Quilt's commun
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers
-		list={[
-			"AppleTheGolden",
-			"gdude2002",
-			"glitch",
-			"Leah",
-			"objobj",
-			"Redblueflame",
-			"sschr15",
-			"Starchild",
-		]}
-	/>
+	<TeamMembers fromTeam="community-tooling" />
 </div>
 
 ## Decompilers
@@ -161,15 +121,7 @@ The Decompilers team is responsible for projects relating to JVM bytecode decomp
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers
-		list={[
-			"Kroppeb",
-			"Luna",
-			"MartrixX",
-			"skyrising",
-			"SuperCoder79",
-		]}
-	/>
+	<TeamMembers fromTeam="decompilers" />
 </div>
 
 ## Infrastructure
@@ -183,7 +135,7 @@ The Infrastructure team is responsible for Quilt's service infrastructure, inclu
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers list={["gdude2002", "HavenKing", "Southpaw", "Starchild"]} />
+	<TeamMembers fromTeam="infrastructure" />
 </div>
 
 ## Kotlin
@@ -196,7 +148,7 @@ The Kotlin Team is responsible for maintaining the Quilt Kotlin Libraries (QKL),
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers list={["NoComment", "Octal", "Potatoboy", "SilverAndro", "sschr15"]} />
+	<TeamMembers fromTeam="kotlin" />
 </div>
 
 ## Loader
@@ -213,7 +165,7 @@ The Loader team is responsible for projects relating to Quilt Loader, the projec
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers list={["AlexIIL", "Earthcomputer", "glitch", "HavenKing"]} />
+	<TeamMembers fromTeam="loader" />
 </div>
 
 ## Mappings
@@ -234,25 +186,14 @@ The Mappings team is responsible for projects relating to remapping obfuscated n
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers
-		list={[
-			"2xsaiko",
-			"CheaterCodes",
-			"EnnuiL",
-			"ix0rai",
-			"LambdaFoxes",
-			"MartrixX",
-			"NoComment",
-			"OroArmor",
-		]}
-	/>
+	<TeamMembers fromTeam="mappings" />
 </div>
 
 # Quilt Standard Libraries (QSL)
 
 The QSL team is responsible for maintaining a library of modules that provide extra APIs for modders to use when creating their mods. These APIs are designed to make certain tasks easier, and to help mods remain compatible with each other.
 
-The QSL team is divided into subteams, and each team is responsible for specific QSL modules. These modules represent specific, distinct sets of library functionality -- while they may depend on each other, they're maintained individually.
+The QSL team contains a subteam responsible for the Quilted Fabric API compatibility module.
 
 This team is responsible for the following projects:
 
@@ -261,70 +202,14 @@ This team is responsible for the following projects:
 	<ProjectButton name="quilted-fabric-api" />
 </div>
 
-## Core (Team Leaders)
-
-The Core QSL team represents the QSL team's leadership. The QSL Core team is responsible for the overall direction of the QSL project, as well as setting project standards and handling governance tasks, including assigning and removing team members from the QSL sub-teams.
-
 <div class="developer team-grid">
-	<TeamMembers list={["EnnuiL", "LambdaFoxes", "OroArmor"]} />
-</div>
-
-## Sub-Team: Block
-
-This sub-team doesn't have any members, so its modules are maintained by the Core team.
-
-## Sub-Team: Data
-
-<div class="developer team-grid">
-	<TeamMembers list={["ADudeCalledLeo", "LambdaFoxes"]} />
-</div>
-
-## Sub-Team: Entity
-
-<div class="developer team-grid">
-	<TeamMembers list={["Bubblie", "WillBL"]} />
-</div>
-
-## Sub-Team: GUI
-
-<div class="developer team-grid">
-	<TeamMembers list={["AlphaMode", "EnnuiL", "maximum"]} />
-</div>
-
-## Sub-Team: Item
-
-<div class="developer team-grid">
-	<TeamMembers list={["OroArmor"]} />
-</div>
-
-## Sub-Team: Management
-
-<div class="developer team-grid">
-	<TeamMembers list={["WillBL"]} />
-</div>
-
-## Sub-Team: Rendering
-
-<div class="developer team-grid">
-	<TeamMembers list={["Pepper"]} />
-</div>
-
-## Sub-Team: Transfer
-
-<div class="developer team-grid">
-	<TeamMembers list={["AlphaMode"]} />
-</div>
-
-## Sub-Team: Worldgen
-
-<div class="developer team-grid">
-	<TeamMembers list={["Noah", "snoozestudios", "zOnlyKroks"]} />
+	<TeamMembers fromTeam="quilt-standard-libraries" />
 </div>
 
 ## Sub-Team: Quilted Fabric API
 
 <div class="developer team-grid">
-	<TeamMembers list={["EnnuiL"]} />
+	<TeamMembers fromTeam="quilted-fabric-api" />
 </div>
 
 # Triage Teams
@@ -341,14 +226,5 @@ This team is responsible for handling triage tasks for the following projects:
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers
-		list={[
-			"Bubblie",
-			"Jamalam",
-			"Noah",
-			"Orchid",
-			"supersaiyansubtlety",
-			"Sylv",
-		]}
-	/>
+	<TeamMembers fromTeam="mappings-triage"/>
 </div>
