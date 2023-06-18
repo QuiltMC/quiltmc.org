@@ -414,17 +414,6 @@ export default {
 		avatar: "/assets/img/team/Redblueflame.png",
 		links: [{ icon: "fas fa-link", url: "https://redblueflame.com/" }],
 	},
-	SilverAndro: {
-		name: "Silver",
-		discord: "Silver <3",
-		github: "SilverAndro",
-		avatar: "https://avatars.githubusercontent.com/u/52360088",
-		description: "Trans programmer working with Kotlin. Plays too much warframe.",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/SilverAndro" },
-			{ icon: "fab fa-tumblr", url: "https://silverandro.tumblr.com"}
-		],
-	},
 	Southpaw: {
 		name: "Southpaw1496",
 		discord: "Southpaw1496",
