@@ -9,6 +9,7 @@ hasDownloads: true
 ---
 
 import InstallerVersion from "@parts/install/InstallerVersion.astro";
+import MavenInstallerButton from "@atoms/MavenInstallerButton.astro";
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer. You'll also need to make sure you've [installed Java](https://adoptium.net/temurin/releases/).
 
@@ -16,14 +17,8 @@ Before getting started, you'll need to make sure you download a copy of the Quil
 	<InstallerVersion />
 	<div class="field-body">
 		<div class="field">
-			<div class="control">
-				<a
-					id="universal-download"
-					href="https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/latest/quilt-installer-latest.jar"
-					class="button is-primary mt-1"
-				>
-					Universal (.jar)
-				</a>
+			<div class="control is-flex">
+				<MavenInstallerButton arch="java-universal" title="Universal (.jar)" icon="java" class_="button is-primary" />
 			</div>
 		</div>
 	</div>

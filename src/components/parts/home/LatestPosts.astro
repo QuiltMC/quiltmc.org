@@ -6,7 +6,7 @@ import i18next from "i18next";
 import { localizePath, sortByDescending } from "src/util/Util";
 
 const allPosts = (await Astro.glob("/src/pages/**/blog/*.md")).filter((p) =>
-	p.url.startsWith(`/${i18next.language}/`)
+	p.url.startsWith(`/${i18next.language}/`) && p.frontmatter.index !== false
 );
 sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
 

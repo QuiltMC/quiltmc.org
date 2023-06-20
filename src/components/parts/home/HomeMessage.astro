@@ -7,11 +7,12 @@ export interface Props {
 	style: string;
 	iconType: string;
 	icon: string;
-	tKey: string;
+	tKey?: string;
+	header?: string;
 }
 
-const { style, iconType, icon, tKey } = Astro.props as Props;
-const header = t(`message-${tKey}`, { ns: "home" });
+const { style, iconType, icon, tKey, header } = Astro.props as Props;
+const msgHeader = tKey !== undefined ? t(`message-${tKey}`, { ns: "home" }) : header;
 ---
 
 <Message style={style}>
@@ -21,7 +22,7 @@ const header = t(`message-${tKey}`, { ns: "home" });
 				<i class={`fas fa-${icon}`}></i>
 			</span>
 
-			<span>{header}</span>
+			<span>{msgHeader}</span>
 		</span>
 	</h2>
 

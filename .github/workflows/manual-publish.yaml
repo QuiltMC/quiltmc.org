@@ -1,0 +1,36 @@
+on: workflow_dispatch
+name: Manual publish
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    name: Publish website
+    steps:
+      - name: Checkout
+        uses: akarys42/checkout-with-filter@main
+        with:
+          filter: 'blob:none'
+          fetch-depth: 0
+
+      - name: Enable Corepack shims
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build the project
+        run: pnpm build
+
+      - name: Publish to Pages
+        uses: cloudflare/pages-action@1
+        id: publish
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: quiltmc-org
+          directory: dist
+          branch: main

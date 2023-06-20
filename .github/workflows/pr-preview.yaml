@@ -15,8 +15,8 @@ jobs:
           filter: 'blob:none'
           fetch-depth: 0
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - name: Enable Corepack shims
+        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install
@@ -24,9 +24,25 @@ jobs:
       - name: Build the project
         run: pnpm build
 
-      - name: Upload artifact
+      - name: Upload HTML artifact
         uses: actions/upload-artifact@v2
         with:
           name: website-html
           path: dist
+          retention-days: 1
+
+      - name: Upload Functions artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website-functions
+          path: functions
+          retention-days: 1
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website-package
+          path: |
+            package.json
+            pnpm-lock.yaml
           retention-days: 1

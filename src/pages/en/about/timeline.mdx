@@ -8,6 +8,8 @@ import Header from "@parts/timeline/Header.astro";
 import Item from "@parts/timeline/Item.astro";
 import rtlSettings from "@data/RtlSettings";
 
+import site from "@data/Site";
+
 <div class:list={["timeline", rtlSettings().rtl ? "is-rtl" : ""]}>
   <Header>2021</Header>
 
@@ -94,6 +96,10 @@ import rtlSettings from "@data/RtlSettings";
     </figure>
 
   </Item>
-  <Header>Present Day</Header>
+  <Item id="2023-05-09" title="May 5th, 2023" icon="fab fa-discord">
+    Quilt officially sunsets the <a href={site.discordToolchain}>Toolchain Discord server</a>, merging its channels into the <a href={site.discordCommunity}>main Discord server</a>, previously the community server - in an attempt to bring the developers closer to the users.
 
+		This server was made read-only three days later, but may still be accessed - just in case anyone needs to refer to something that was discussed there.
+  </Item>
+  <Header>Present Day</Header>
 </div>
