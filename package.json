@@ -26,7 +26,7 @@
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:pluiedev/i18next-fs-fluent-backend",
 		"node-fetch": "^3.3.0",
-		"quilt-bulma": "^0.0.21",
+		"quilt-bulma": "0.0.23",
 		"rehype-autolink-headings": "^6.1.1",
 		"rollup": "^3.14.0",
 		"sass": "^1.58.0",
@@ -34,6 +34,7 @@
 		"bulma-toast": "^2.4.2"
 	},
 	"dependencies": {
-		"@tsndr/cloudflare-worker-jwt": "^2.2.1"
+		"@tsndr/cloudflare-worker-jwt": "^2.2.1",
+		"semver-sort": "^1.0.0"
 	}
 }
