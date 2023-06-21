@@ -76,19 +76,6 @@ export default {
 		description:
 			"Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems.",
 	},
-	Earthcomputer: {
-		name: "Earthcomputer",
-		discord: "Earthcomputer",
-		github: "Earthcomputer",
-		avatar: " https://avatars.githubusercontent.com/u/13084089",
-		description: "Game developer and Minecraft modder.",
-		links: [
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/Earthcomputer_",
-			},
-		],
-	},
 	Ember: {
 		name: "Ember",
 		discord: "Ember",
@@ -162,12 +149,6 @@ export default {
 			},
 		],
 	},
-	HavenKing: {
-		name: "Haven King",
-		discord: "Haven King",
-		github: "Haven-King",
-		avatar: "/assets/img/team/HavenKing.png",
-	},
 	Jamalam: {
 		name: "Jamalam",
 		discord: "jamalam",
@@ -224,23 +205,9 @@ export default {
 				icon: "fab fa-git-alt",
 				url: "https://git.lambdaurora.dev/",
 			},
-		],
-	},
-	Larry: {
-		name: "Larry",
-		discord: "Larry",
-		github: "Laarryy",
-		avatar: "/assets/img/team/Larry.jpg",
-		description:
-			"A big fan of the Minecraft server community, always looking for ways to help out!",
-		links: [
 			{
-				icon: "fas fa-link",
-				url: "https://laarryy.dev",
-			},
-			{
-				icon: "fab fa-reddit-alien",
-				url: "https://old.reddit.com/r/Syscraft",
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/LambdAurora",
 			},
 		],
 	},
@@ -270,12 +237,6 @@ export default {
 			},
 		],
 	},
-	Luna: {
-		name: "Luna",
-		discord: "🌟Luna🌟",
-		github: "l-Luna",
-		avatar: "/assets/img/team/Luna.png",
-	},
 	MartrixX: {
 		name: "MartrixX",
 		discord: "MartrixX",
@@ -283,6 +244,12 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/47987888",
 		description: "Java programmer and Minecraft modder.",
 		links: [{ icon: "fas fa-link", url: "https://bymartrixx.me/" }],
+	},
+	Mazzie: {
+		name: "Mazzie",
+		github: "mazziechai",
+		description: "it/its 🏳️‍🌈🏳️‍⚧️🇵🇭 Ferret connoisseur and programmer, fluent in English and Toki Pona",
+		avatar: "https://avatars.githubusercontent.com/u/68652959?v=4"
 	},
 	MrMangoHands: {
 		name: "MrMangoHands",
@@ -480,6 +447,19 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/37983572?v=4",
 		links: [{ icon: "fas fa-link", url: "https://tibinonest.me/" }],
 	},
+	Valeria: {
+		name: "Valeria Nairi (\"SnugglyBun\")",
+		discord: "snugglybun_scsp",
+		github: "Curly68",
+		description: "22 year old, she/buns, can't code stuff but can help in other areas like translation. First language is Spanish but i'm also really good at English .Also a musician for some reason. On my Quilt arc",
+		avatar: "https://avatars.githubusercontent.com/u/104454752?v=4",
+		links: [
+			{
+				icon: "fab fa-youtube",
+				url: "https://www.youtube.com/channel/UCXQEFjYWWYikjNCHqxbBQNg",
+			}
+		]
+	},
 	WillBL: {
 		name: "Will BL",
 		discord: "Will BL",
@@ -501,23 +481,25 @@ export default {
 			},
 		],
 	},
-	gdude2002: {
-		name: "Gareth Coles",
-		discord: "gdude",
-		github: "gdude2002",
-		avatar: "/assets/img/team/gdude2002.png",
-		description:
-			"Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience.",
+	Woodie: {
+		name: "Woodie",
+		discord: "woodiertexas",
+		github: "woodiertexas",
+		description: "Autistic and gay. I work on Minecraft mods and I am also a welder-in-training.",
+		avatar: "https://avatars.githubusercontent.com/u/17211100?v=4",
 		links: [
 			{
-				icon: "fas fa-link",
-				url: "https://gserv.me",
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/woodiertexas",
 			},
-			{
-				icon: "fab fa-twitter",
-				url: "https://twitter.com/gdude2003",
-			},
-		],
+		]
+	},
+	Zxhir: {
+		name: "Zxhir",
+		discord: ".zxhir",
+		github: "Imzxhir",
+		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
+		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
 	},
 	glitch: {
 		name: "Glitch",
@@ -531,12 +513,6 @@ export default {
 		github: "ix0rai",
 		avatar: "/assets/img/team/ix0rai.png",
 		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
-	},
-	kashike: {
-		name: "kashike",
-		discord: "kashike",
-		github: "kashike",
-		avatar: "https://avatars.githubusercontent.com/u/5474071?v=4",
 	},
 	levy: {
 		name: "Levy",
