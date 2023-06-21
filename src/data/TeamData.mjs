@@ -451,7 +451,7 @@ export default {
 		name: "Valeria Nairi (\"SnugglyBun\")",
 		discord: "snugglybun_scsp",
 		github: "Curly68",
-		description: "22 year old, she/buns, can't code stuff but can help in other areas like translation. First language is Spanish but i'm also really good at English .Also a musician for some reason. On my Quilt arc",
+		description: "22 year old, she/buns, can't code stuff but can help in other areas like translation. First language is Spanish but i'm also really good at English. Also a musician for some reason. On my Quilt arc",
 		avatar: "https://avatars.githubusercontent.com/u/104454752?v=4",
 		links: [
 			{
