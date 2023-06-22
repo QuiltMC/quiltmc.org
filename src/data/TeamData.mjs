@@ -254,6 +254,7 @@ export default {
 	},
 	Mazzie: {
 		name: "Mazzie",
+		discord: "mazziechai",
 		github: "mazziechai",
 		description: "it/its 🏳️‍🌈🏳️‍⚧️🇵🇭 Ferret connoisseur and programmer, fluent in English and Toki Pona",
 		avatar: "https://avatars.githubusercontent.com/u/68652959?v=4"
