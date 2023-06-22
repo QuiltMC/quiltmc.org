@@ -26,6 +26,13 @@ export default {
 			},
 		],
 	},
+	Alakey: {
+		name: "Alakey",
+		discord: "SplendidAlakey",
+		github: "SplendidAlakey",
+		avatar: "https://avatars.githubusercontent.com/u/86702831?v=4",
+		description: "Maintaining my own modpack and helping people with various mod related issues in my free time.",
+	},
 	AlexIIL: {
 		name: "AlexIIL",
 		discord: "AlexIIL",
