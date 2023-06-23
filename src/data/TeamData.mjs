@@ -218,6 +218,19 @@ export default {
 			},
 		],
 	},
+	Lapis: {
+		name: "Lapis Liozuli",
+		discord: "lapisliozuli",
+		github: "LapisLiozuli",
+		avatar: "https://avatars.githubusercontent.com/u/70147943?v=4",
+		description: "Shorthand enjoyer. Java, Python and bio. Chinese in the SEA.",
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://linktr.ee/lapisliozuli",
+			}
+		]
+	},
 	Leah: {
 		name: "Leah",
 		discord: "pluie",
