@@ -40,7 +40,7 @@ If that month is the current month and you haven't opted out, Loader will move o
 
 When Loader has assessed that you're not yet considered an active user for this month, it sends a simple request with no data;
 no body or headers, to an endpoint at https://quiltmc.org. The server updates the counter without storing any identifying data.
-Then, Loader updates its persistent file with the current month, and continues on its merry way. If a failure occurs, a warning will be issued and Loader will retry next time you boot the game.
+Then, Loader updates its persistent file with the current month, and continues on its merry way.
 
 ### Will this steal my data, the family cat, and possibly my wife as well?
 
