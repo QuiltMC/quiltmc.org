@@ -34,20 +34,20 @@ As neatly laid out [in the RFC](https://github.com/QuiltMC/rfcs/blob/main/specif
 the process is very simple.
 When you load up your game, Quilt Loader will check for a file that's shared by all your instances of Minecraft,
 that contains the last date that it told our infrastructure you're a user.
-If that month is the current month and you haven't opted out, Loader will move on to updating the stats. This process is entirely separate to loading your game, and won't slow anything down.
+If that month is the current month and you haven't opted out, Loader will move on to updating the stats. After running the opt-out and date checks, this process is entirely separate to loading your game, and won't slow anything down.
 
 ![A cute graph explaining the process Quilt Loader goes through to update the MAU beacon](/assets/img/writing/blog/2023-06-21-mau-beacon/beacon-update-process.png)
 
 When Loader has assessed that you're not yet considered an active user for this month, it sends a simple request with no data;
 no body or headers, to an endpoint at https://quiltmc.org. The server updates the counter without storing any identifying data.
-Then, Loader updates its persistent file with the current month, and continues on its merry way.
+Then, Loader updates its persistent file with the current month, and continues on its merry way. If a failure occurs, a warning will be issued and Loader will retry next time you boot the game.
 
 ### Will this steal my data, the family cat, and possibly my wife as well?
 
 The biggest consideration when designing this feature was privacy: we want to get the numbers, and absolutely nothing else.
 This means that while your IP address will be sent to our website once a month, we discard all information except the +1 to
 our counter as per [the restrictions in the RFC](link). The server accepting the signal is [fully open source](https://github.com/QuiltMC/beacon.quiltmc.org)
-and will remain that way so anyone can see what we're doing with what you send us. Additionally, since Quilt Loader is open source as well, you can see all the code sending the signal in [the MAU beacon pull request](TODO LINK!).
+and will remain that way so anyone can see what we're doing with what you send us. Additionally, since Quilt Loader is open source as well, you can see all the code sending the signal in [the MAU beacon pull request](https://github.com/QuiltMC/quilt-loader/pull/326).
 
 ![A screenshot of the table of signals sent to the beacon, showing that it stores date, time and nothing else](/assets/img/writing/blog/2023-06-21-mau-beacon/beacon-signals.png)
 
