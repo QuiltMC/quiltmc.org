@@ -26,6 +26,13 @@ export default {
 			},
 		],
 	},
+	Alakey: {
+		name: "Alakey",
+		discord: "SplendidAlakey",
+		github: "SplendidAlakey",
+		avatar: "https://avatars.githubusercontent.com/u/86702831?v=4",
+		description: "Maintaining my own modpack and helping people with various mod related issues in my free time.",
+	},
 	AlexIIL: {
 		name: "AlexIIL",
 		discord: "AlexIIL",
@@ -211,6 +218,19 @@ export default {
 			},
 		],
 	},
+	Lapis: {
+		name: "Lapis Liozuli",
+		discord: "lapisliozuli",
+		github: "LapisLiozuli",
+		avatar: "https://avatars.githubusercontent.com/u/70147943?v=4",
+		description: "Shorthand enjoyer. Java, Python and bio. Chinese in the SEA.",
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://linktr.ee/lapisliozuli",
+			}
+		]
+	},
 	Leah: {
 		name: "Leah",
 		discord: "pluie",
@@ -247,6 +267,7 @@ export default {
 	},
 	Mazzie: {
 		name: "Mazzie",
+		discord: "mazziechai",
 		github: "mazziechai",
 		description: "it/its 🏳️‍🌈🏳️‍⚧️🇵🇭 Ferret connoisseur and programmer, fluent in English and Toki Pona",
 		avatar: "https://avatars.githubusercontent.com/u/68652959?v=4"
