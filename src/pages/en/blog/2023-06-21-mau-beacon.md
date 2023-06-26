@@ -46,7 +46,8 @@ Then, Loader updates its persistent file with the current month, and continues o
 
 The biggest consideration when designing this feature was privacy: we want to get the numbers, and absolutely nothing else.
 This means that while your IP address will be sent to our website once a month, we discard all information except the +1 to
-our counter as per [the restrictions in the RFC](link). The server accepting the signal is [fully open source](https://github.com/QuiltMC/beacon.quiltmc.org)
+our counter as per [the restrictions in the RFC](https://github.com/QuiltMC/rfcs/blob/main/specification/0081-active-user-beacon.md#beacon-server-restrictions).
+The server accepting the signal is [fully open source](https://github.com/QuiltMC/beacon.quiltmc.org)
 and will remain that way so anyone can see what we're doing with what you send us. Additionally, since Quilt Loader is open source as well, you can see all the code sending the signal in [the MAU beacon pull request](https://github.com/QuiltMC/quilt-loader/pull/326).
 
 ![A screenshot of the table of signals sent to the beacon, showing that it stores date, time and nothing else](/assets/img/writing/blog/2023-06-21-mau-beacon/beacon-signals.png)
