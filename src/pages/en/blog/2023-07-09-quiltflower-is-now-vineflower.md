@@ -5,7 +5,7 @@ authors:
   - Southpaw1496
 layout: /src/layouts/Post.astro
 ---
-The Quiltflower decompiler is an integral part of Quilt's toolchain, and has been quietly developed by jaskrath and the rest of the Decompilers team since our earliest beginnings. Yesterday, the team decided to separate from Quilt and continue development under the [Vineflower](https://github.com/Vineflower) organisation. 
+The Quiltflower decompiler is an integral part of Quilt's toolchain, and has been quietly developed by jaskarth and the rest of the Decompilers team since our earliest beginnings. Yesterday, the team decided to separate from Quilt and continue development under the [Vineflower](https://github.com/Vineflower) organisation. 
 <!-- MORE -->
 Despite the separation and the change in name, we expect that very little will change for Quilt developers: We will continue to use Quiltflower — now Vineflower — in our toolchain as we always have.
 
