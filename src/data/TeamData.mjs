@@ -156,6 +156,14 @@ export default {
 			},
 		],
 	},
+	gdude2002: {
+		name: "Gareth Coles",
+		discord: "gdude",
+		github: "gdude2002",
+		avatar: "/assets/img/team/gdude2002.png",
+		description:
+			"Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience.",
+	},
 	Jamalam: {
 		name: "Jamalam",
 		discord: "jamalam",
