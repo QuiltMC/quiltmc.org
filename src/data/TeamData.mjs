@@ -571,13 +571,6 @@ export default {
 			},
 		],
 	},
-	skyrising: {
-		name: "Simon Wanner",
-		discord: "skyrising",
-		github: "skyrising",
-		avatar: "/assets/img/team/skyrising.png",
-		links: [{ icon: "fab fa-twitter", url: "https://twitter.com/skyrising97" }],
-	},
 	snoozestudios: {
 		name: "snoozestudios",
 		discord: "snoozestudios",
