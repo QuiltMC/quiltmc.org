@@ -274,25 +274,6 @@ export default {
 			"An autistic programmer that likes to talk about their interests, a lot.",
 		systemMembers: "---",
 	},
-	Orchid: {
-		name: "Orchid system ⚘",
-		discord: "Emmaffle",
-		github: "wafflecoffee",
-		description:
-			"Tries to be well-intentioned, ends up causing problems anyway.",
-		avatar: "https://avatars.githubusercontent.com/u/60205699?v=4",
-		systemMembers: "pk:oopmz",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://waffle.coffee/",
-			},
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/emmaffle",
-			},
-		],
-	},
 	OroArmor: {
 		name: "OroArmor",
 		discord: "OroArmor",
