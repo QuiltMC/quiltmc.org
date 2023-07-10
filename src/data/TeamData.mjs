@@ -144,6 +144,19 @@ export default {
 		description:
 			"Kotlin enthusiast, open-source developer and long-time community manager with almost 20 years of experience.",
 	},
+	glitch: {
+		name: "Glitch",
+		discord: "glitch",
+		github: "TheGlitch76",
+		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
+	},
+	ix0rai: {
+		name: "ix0rai",
+		discord: "ix0rai",
+		github: "ix0rai",
+		avatar: "/assets/img/team/ix0rai.png",
+		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
+	},
 	Jamalam: {
 		name: "Jamalam",
 		discord: "jamalam",
@@ -243,6 +256,14 @@ export default {
 		description: "Java programmer and Minecraft modder.",
 		links: [{ icon: "fas fa-link", url: "https://bymartrixx.me/" }],
 	},
+	maximum: {
+		name: "Boxed",
+		discord: "maximum",
+		github: "maximumpower55",
+		description:
+			"Open-source developer, Game Modder with over 2 years of experience.",
+		avatar: "https://avatars.githubusercontent.com/u/62370320?v=4",
+	},
 	Mazzie: {
 		name: "Mazzie",
 		discord: "mazziechai",
@@ -264,6 +285,19 @@ export default {
 			"Chaotic puppet on fire that likes to program in Kotlin and write Discord bots, while matching quilt-mappings",
 		avatar: "https://avatars.githubusercontent.com/u/67918617?v=4",
 		systemMembers: "pk:loobg"
+	},
+	objobj: {
+		name: "[object Object]",
+		discord: "[object Object]",
+		github: "obj-obj",
+		avatar: "https://avatars.githubusercontent.com/u/57120300",
+		description: "Professional memer",
+		links: [
+			{
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/obj-obj",
+			},
+		],
 	},
 	Octal: {
 		name: "Octal",
@@ -356,6 +390,17 @@ export default {
 		avatar: "/assets/img/team/Redblueflame.png",
 		links: [{ icon: "fas fa-link", url: "https://redblueflame.com/" }],
 	},
+	snoozestudios: {
+		name: "snoozestudios",
+		discord: "snoozestudios",
+		github: "peaceheis",
+		avatar: "/assets/img/team/snoozestudios.png",
+		description: "Student, Coder & Much More!",
+		links: [
+			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
+		],
+		systemMembers: "---",
+	},
 	Southpaw: {
 		name: "Southpaw1496",
 		discord: "Southpaw1496",
@@ -367,6 +412,24 @@ export default {
 			{
 				icon: "fab fa-mastodon",
 				url: "https://mastodon.southpaw1496.me",
+			},
+		],
+	},
+	sschr15: {
+		name: "sschr15",
+		discord: "sschr15",
+		github: "sschr15",
+		avatar: "/assets/img/team/sschr15.png",
+		description:
+			"A person who used to know nothing about programming and now makes fun of himself for it. Also likes Kotlin.",
+		links: [
+			{
+				icon: "fas fa-link",
+				url: "https://concern.i.ng",
+			},
+			{
+				icon: "fa-brands fa-mastodon",
+				url: "vmst.io/@sschr15",
 			},
 		],
 	},
@@ -404,6 +467,20 @@ export default {
 				url: "https://sr.ht/~hanna"
 			}
 		]
+	},
+	supersaiyansubtlety: {
+		name: "supersaiyansubtlety",
+		discord: "supersaiyansubtlety",
+		github: "supersaiyansubtlety",
+		description: "Software engineering and MC modding enthusiast.",
+		avatar:
+			"https://gitlab.com/uploads/-/system/user/avatar/3853177/avatar.png?width=400",
+		links: [
+			{
+				icon: "fab fa-gitlab",
+				url: "https://gitlab.com/supersaiyansubtlety",
+			},
+		],
 	},
 	Sylv: {
 		name: "Sylv",
@@ -448,90 +525,6 @@ export default {
 			},
 		]
 	},
-	Zxhir: {
-		name: "Zxhir",
-		discord: ".zxhir",
-		github: "Imzxhir",
-		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
-		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
-	},
-	glitch: {
-		name: "Glitch",
-		discord: "glitch",
-		github: "TheGlitch76",
-		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
-	},
-	ix0rai: {
-		name: "ix0rai",
-		discord: "ix0rai",
-		github: "ix0rai",
-		avatar: "/assets/img/team/ix0rai.png",
-		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
-	},
-	maximum: {
-		name: "Boxed",
-		discord: "maximum",
-		github: "maximumpower55",
-		description:
-			"Open-source developer, Game Modder with over 2 years of experience.",
-		avatar: "https://avatars.githubusercontent.com/u/62370320?v=4",
-	},
-	objobj: {
-		name: "[object Object]",
-		discord: "[object Object]",
-		github: "obj-obj",
-		avatar: "https://avatars.githubusercontent.com/u/57120300",
-		description: "Professional memer",
-		links: [
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/obj-obj",
-			},
-		],
-	},
-	snoozestudios: {
-		name: "snoozestudios",
-		discord: "snoozestudios",
-		github: "peaceheis",
-		avatar: "/assets/img/team/snoozestudios.png",
-		description: "Student, Coder & Much More!",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
-		],
-		systemMembers: "---",
-	},
-	sschr15: {
-		name: "sschr15",
-		discord: "sschr15",
-		github: "sschr15",
-		avatar: "/assets/img/team/sschr15.png",
-		description:
-			"A person who used to know nothing about programming and now makes fun of himself for it. Also likes Kotlin.",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://concern.i.ng",
-			},
-			{
-				icon: "fa-brands fa-mastodon",
-				url: "vmst.io/@sschr15",
-			},
-		],
-	},
-	supersaiyansubtlety: {
-		name: "supersaiyansubtlety",
-		discord: "supersaiyansubtlety",
-		github: "supersaiyansubtlety",
-		description: "Software engineering and MC modding enthusiast.",
-		avatar:
-			"https://gitlab.com/uploads/-/system/user/avatar/3853177/avatar.png?width=400",
-		links: [
-			{
-				icon: "fab fa-gitlab",
-				url: "https://gitlab.com/supersaiyansubtlety",
-			},
-		],
-	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
 		discord: "zOnlyKroks | Finn",
@@ -539,6 +532,13 @@ export default {
 		avatar: "/assets/img/team/zOnlyKroks.png",
 		description:
 			"Minecraft Modder who enjoys the comfortable feeling of crocs on their feet",
+	},
+	Zxhir: {
+		name: "Zxhir",
+		discord: ".zxhir",
+		github: "Imzxhir",
+		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
+		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
 	},
 	_NotFound_: {
 		name: "Member not found",
