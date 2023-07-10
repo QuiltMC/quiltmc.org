@@ -468,13 +468,6 @@ export default {
 		avatar: "/assets/img/team/ix0rai.png",
 		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
 	},
-	levy: {
-		name: "Levy",
-		discord: "remote_getaway",
-		github: "remotegetaway",
-		avatar: "https://avatars.githubusercontent.com/u/111402697?v=4",
-		description: "whiten't"
-	},
 	maximum: {
 		name: "Boxed",
 		discord: "maximum",
