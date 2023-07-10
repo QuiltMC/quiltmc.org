@@ -435,27 +435,6 @@ export default {
 			}
 		]
 	},
-	WillBL: {
-		name: "Will BL",
-		discord: "Will BL",
-		github: "williambl",
-		description: "Java and Kotlin developer who enjoys making Minecraft mods.",
-		avatar: "https://avatars.githubusercontent.com/u/5115825?v=4",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://willbl.dev",
-			},
-			{
-				icon: "fak fa-curseforge",
-				url: "https://www.curseforge.com/members/the_will_bl/projects",
-			},
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/G41cEWi2",
-			},
-		],
-	},
 	Woodie: {
 		name: "Woodie",
 		discord: "woodiertexas",
