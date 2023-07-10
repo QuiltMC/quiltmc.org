@@ -67,20 +67,6 @@ export default {
 		github: "Scotsguy",
 		avatar: "https://avatars.githubusercontent.com/u/20385973?v=4",
 	},
-	Bubblie: {
-		name: "Bubblie",
-		discord: "Bubblie",
-		github: "Bubblie01",
-		avatar: "/assets/img/team/Bubblie.png",
-		description:
-			"Indian coder who likes being funny and is kinda lazy, also is an entity connoisseur",
-		links: [
-			{
-				icon: "fab fa-youtube",
-				url: "https://www.youtube.com/channel/UCTocwYOu2vxGTo0W8GsfIvg/videos",
-			},
-		],
-	},
 	CheaterCodes: {
 		name: "CheaterCodes",
 		discord: "CheaterCodes",
