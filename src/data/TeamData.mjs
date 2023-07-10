@@ -49,6 +49,12 @@ export default {
 			},
 		],
 	},
+	Alice: {
+		name: "Alice",
+		discord: "no.nit.ro.alice",
+		github: "lenrik1589",
+		avatar: "/assets/img/team/Alice.png"
+	},
 	AlphaMode: {
 		name: "AlphaMode",
 		discord: "AlphaMode",
@@ -366,6 +372,19 @@ export default {
 				url: "https://modrinth.com/user/h74rYEcI",
 			},
 		],
+	},
+	Owlsys: {
+		name: "Owlsys",
+		discord: "owlsys",
+		github: "moehreag",
+		avatar: "/assets/img/team/Owlsys.png",
+		systemMembers: "---",
+		links: [
+			{
+				icon: "fak fa-modrinth-small",
+				url: "https://modrinth.com/user/moehreag"
+			}
+		]
 	},
 	Pepper: {
 		name: "PepperCode1",
