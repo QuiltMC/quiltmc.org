@@ -166,16 +166,6 @@ export default {
 			},
 		],
 	},
-	Jasmine: {
-		name: "Jasmine",
-		discord: "Jasmine",
-		github: "jaskarth",
-		avatar: "https://avatars.githubusercontent.com/u/25208576",
-		description: "Compiler developer, reverse engineer, Minecraft modder.",
-		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/jaskarth4" },
-		],
-	},
 	Kroppeb: {
 		name: "Kroppeb",
 		discord: "Kroppeb",
