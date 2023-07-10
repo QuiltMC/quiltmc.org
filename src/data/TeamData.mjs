@@ -265,24 +265,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/67918617?v=4",
 		systemMembers: "pk:loobg"
 	},
-	Noah: {
-		name: "Noah van der Aa",
-		discord: "NoahvdAa",
-		github: "NoahvdAa",
-		description:
-			"Open source developer who mainly works on Minecraft-related projects.",
-		avatar: "https://avatars.githubusercontent.com/u/44026893?v=4",
-		links: [
-			{
-				icon: "fak fa-curseforge",
-				url: "https://www.curseforge.com/members/noahvdaa/projects",
-			},
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/NoahvdAa",
-			},
-		],
-	},
 	Octal: {
 		name: "Octal",
 		discord: "Octal",
