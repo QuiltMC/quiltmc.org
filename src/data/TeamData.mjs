@@ -55,12 +55,6 @@ export default {
 		github: "lenrik1589",
 		avatar: "/assets/img/team/Alice.png"
 	},
-	AlphaMode: {
-		name: "AlphaMode",
-		discord: "AlphaMode",
-		github: "AlphaMode",
-		avatar: "https://avatars.githubusercontent.com/u/26313415",
-	},
 	AppleTheGolden: {
 		name: "AppleTheGolden",
 		discord: "AppleTheGolden",
