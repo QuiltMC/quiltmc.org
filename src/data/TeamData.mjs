@@ -55,6 +55,14 @@ export default {
 		github: "lenrik1589",
 		avatar: "/assets/img/team/Alice.png"
 	},
+	applejuice: {
+		name: "applejuice",
+		discord: "applejuice__",
+		github: "applejuiceyy",
+		avatar: "/assets/img/team/applejuice.png",
+		description:
+			"juice made of apple"
+	},
 	AppleTheGolden: {
 		name: "AppleTheGolden",
 		discord: "AppleTheGolden",
