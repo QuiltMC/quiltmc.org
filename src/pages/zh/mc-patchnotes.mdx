@@ -1,0 +1,21 @@
+import PatchNotes from "@layouts/PatchNotes.astro";
+
+<PatchNotes
+	content={{
+		title: "Minecraft补丁说明",
+		description: "Quilt的Minecraft启动器补丁说明查看器。",
+	}}
+>
+	<div slot="noScript">
+		此页面需要启用JavaScript才能获取Minecraft启动器的补丁说明。
+		请启用JavaScript并重新加载页面以继续。
+	</div>
+	<div slot="missingVersions">缺少版本？</div>
+	<div slot="missingVersionsExplanation">
+		如果刚发布了Minecraft的新版本，它可能不会立即显示在这里。
+		这是因为补丁说明不总是立即可用，而且在不同地区可能以不同的时间可用。
+		新的补丁说明不应该超过一小时才会出现在这里。
+	</div>
+	<div slot="patchnotes">Minecraft补丁说明</div>
+	<div slot="patchnotesPrompt">选择您想查看补丁说明的版本。</div>
+</PatchNotes>

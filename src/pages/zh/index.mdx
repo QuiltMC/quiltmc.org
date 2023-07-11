@@ -1,0 +1,48 @@
+import Home from "/src/layouts/Home.astro";
+import site from "@data/Site";
+
+<Home content={{}}>
+  <div slot="info">
+    # Quilt项目
+
+		Quilt项目是一个开源、社区驱动的模组工具链，主要用于Minecraft。Quilt致力于提供一个快速、易用和模块化的现代化模组工具链，并构建一个开放的生态系统。
+
+    Quilt 项目是在 Minecraft 模组化生态系统需要改变的背景下诞生的。我们的团队中有许多经验丰富的模组开发者，他们的熟悉度有助于避免过去的错误，无论是关于社区管理、多样性与包容性、项目治理还是透明度方面的错误。有关更多信息，请参阅我们的["关于"页面](/en/about)。
+
+ </div>
+  <div slot="wip">
+    **Quilt目前处于测试版阶段。**可能会有一些问题，但我们将尽快修复！
+
+    如果您想帮助我们测试 Quilt ，请随时[安装它](/en/install)，尝试使用，并告诉我们您的体验！
+
+  </div>
+  <div slot="caring">
+    Quilt是由社区驱动的，没有用户和贡献者就无法存在。我们关心我们的社区；无论您是我们社区空间的成员，偶尔为我们的项目做贡献者，还是仅仅是用户：**Quilt存在是为了满足您的需求**，而不是忽视它们。
+  </div>
+  <div slot="modular">
+    Quilt的模块化不仅仅用于组织其代码，**也将扩展到用户和模组开发者**。如果您是模组开发者，我们的构建工具将跟踪您的模组使用的Quilt库。如果您是用户，Quilt将能够自动下载运行您的模组所需的Quilt库。
+
+		**注意：**这是一个未来的目标，我们仍在努力中。
+
+  </div>
+  <div slot="powerful">
+    Quilt具备额外的功能和工具，使您的模组能够取得成功。从丰富的模块库，帮助您以更少的工作量编写更兼容的模组，到提供的最准确的反编译工具，Quilt为**您的模组提供了可靠的支持**。
+  </div>
+  <div slot="joinTheCommunity">
+    # 加入社区
+
+		请随意通过点击下面的按钮加入我们的官方社区空间。请注意，**我们的社区（和开发）空间的所有用户都应遵守[我们的行为准则](/en/community/code-of-conduct)和[我们的规则](/en/community/rules)。**我们建议您在加入或与我们互动之前阅读并熟悉这些准则和规则。
+
+  </div>
+  <div slot="getInvolved">
+    # 参与其中
+
+    	即使您不是开发者，也有许多方式可以帮助我们。您可以在我们的[Help Wanted页面](/en/help-wanted)上找到需要帮助的项目列表。
+
+    	如果您想做出贡献，最好的方法是加入我们的GitHub和<a href={site.discordCommunity}>Discord服务器</a>。我们总是需要更多的帮助，因此有很多事情可以做！
+
+  </div>
+  <div slot="latestPosts">
+    # 最新文章
+  </div>
+</Home>

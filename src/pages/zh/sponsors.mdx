@@ -1,0 +1,94 @@
+---
+title: 赞助商
+description: Quilt赞助商列表，以及有关赞助流程的一般信息
+layout: /src/layouts/Page.astro
+sidebar: false
+---
+
+import site from "@data/Site";
+import Button from "@atoms/Button.astro";
+import SponsorBlock from "@parts/sponsors/SponsorBlock.astro";
+
+这个页面列出了 Quilt 过去和现在的所有赞助商，以及他们通过这些赞助为我们提供的支持，并提供申请成为 Quilt 赞助商的说明。
+
+虽然 Quilt 不是一个以盈利为目标的项目（希望也永远不是），但赞助商帮助我们抵消成本，或者提供对我们来说否则无法获得的工具或服务。此外，为了保持透明度并避免问题（如接受赞助并支持有问题的公司），我们有一个详细的过程，用于评估和接受赞助。你可以在[这里](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md)查看详细的流程。
+
+赞助可以分为认可和非认可两种。如果赞助获得认可，那么我们已经审核了该公司，确保他们符合我们的[赞助指南](https://github.com/QuiltMC/rfcs/blob/main/rfc/0061-sponsorships.md#sponsor-guidelines)，并且我们很乐意向我们的社区成员推荐他们的服务。
+
+# 当前赞助商（认可）
+
+以下赞助商得到了 Quilt 的认可，并在各个地方（包括此网站的主页）中获得了我们的认可。我们很自豪与这些赞助商合作，并愿意向我们的用户推荐他们的服务。
+
+<SponsorBlock
+	href="[https://cloudflare.com/](https://cloudflare.com/)"
+	name="Cloudflare"
+	iconDark="/assets/img/sponsors/cloudflare/logomark.svg"
+	iconLight="/assets/img/sponsors/cloudflare/logomark.svg"
+>
+	Cloudflare是边缘服务的全球领导者，提供非常全面的免费计划。它是我们服务的核心，为我们提供DNS、DDoS保护、CDN、边缘计算等。
+	Cloudflare为我们提供了免费的Pro计划，其中包含额外的功能，以增强我们的安全性和性能。
+</SponsorBlock>
+# 当前赞助商（非认可）
+
+以下赞助商不需要 Quilt 的认可。
+
+<SponsorBlock
+	href="[https://1password.com](https://1password.com)"
+	name="1Password"
+	iconDark="/assets/img/sponsors/1password.png"
+	iconLight="/assets/img/sponsors/1password.png"
+>
+	1Password是一个注重隐私的密码管理器，旨在安全存储您的凭据，并在需要时以方便的方式提供访问。
+
+    1Password通过他们的[1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source)计划为我们提供了一个免费的1Password团队账户，我们用它来在需要使用的具体团队之间共享凭据和其他敏感数据。这使我们能够安全地存储这些凭据，并确保它们仅提供给需要它们的人员。
+
+</SponsorBlock>
+# 过去的赞助商（认可）
+
+在与下列过去的赞助商合作期间，他们得到了 Quilt 的认可。我们很自豪与这些赞助商合作，并愿意向我们的用户推荐他们的服务。
+
+<SponsorBlock
+	name="Starchild Systems"
+	iconDark="/assets/img/sponsors/starchild-systems-white.svg"
+	iconLight="/assets/img/sponsors/starchild-systems.svg"
+>
+
+Starchild Systems 是一家基础设施即服务和软件即服务公司。他们在他们的基础设施上免费为我们托管了[Quilt 论坛](site.forum)，[Collab Wiki](site.wikis.collab)和一些我们的 Discord 机器人。
+
+虽然 Starchild Systems 不再赞助我们，但公司的所有者（Starchild System）是 Quilt 基础设施团队的一部分，他们帮助我们部署、管理和运行我们的所有服务，包括我们的[Meta 服务器](site.meta)和[Maven 仓库](site.maven)。我们还使用他们付费的 ModMail+服务，这是一个 Discord 机器人，为我们的社区成员提供了与社区团队交流的简单方式。
+
+</SponsorBlock>
+
+# 过去的赞助商（非认可）
+
+在与下列过去的赞助商合作期间，他们不需要 Quilt 的认可。
+
+<SponsorBlock
+	href="[https://aws.amazon.com](https://aws.amazon.com)"
+	name="Amazon Web Services"
+	iconDark="/assets/img/sponsors/aws-dark.png"
+	iconLight="/assets/img/sponsors/aws-dark.png"
+	radius={1}
+>
+Amazon Web Services (AWS)是亚马逊旗下的云计算服务提供商。他们是全球最大的基础设施提供商之一，负责保持互联网的运行。
+AWS通过他们的[Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/)计划提供我们用于抵消运营成本的优惠券。我们使用AWS来托管我们的Maven仓库，并作为官方Quilt电子邮件地址的电子邮件提供商。
+
+</SponsorBlock>
+# 赞助Quilt
+
+有关接受和处理赞助的详细信息，请参阅[Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md)。
+
+如果你只是希望支持我们并帮助我们支付成本，最好的方式是直接在我们的[OpenCollective 页面](https://opencollective.com/quiltmc)上捐款。
+
+除了认可和非认可赞助商之外，还有两种类型的赞助：金融赞助和非金融赞助。金融赞助是指通过我们的[OpenCollective 页面](https://opencollective.com/quiltmc)直接提供直接财务支持给 Quilt 的赞助，非金融赞助是指以折扣或免费提供工具或服务给我们的赞助。当向我们提供赞助时，请说明它是金融赞助还是非金融赞助，以及您是否希望获得认可。
+
+在决定是否接受赞助时，我们寻找提供高质量产品以公平竞争价格的赞助商，以透明和诚实的方式推广其产品，并且不歧视少数群体，不具有反消费者行为的历史，也不以对环境特别有害的方式开展业务。有关赞助指南的完整列表，请参阅[Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md)。
+
+一个好的赞助提议应该包括以下内容：
+
+- 关于您作为赞助商的信息
+- 赞助内容（工具、服务或金钱）
+- 任何额外的赞助条款（如果适用）
+- 您的网站、社交媒体等的链接 - 如果您有一个网站，并且有关您的产品的详细信息，我们更有可能接受您的赞助
+
+要向我们提供赞助，请发送电子邮件至 Outreach 团队：<a href="mailto:outreach@quiltmc.org">[outreach@quiltmc.org](mailto:outreach@quiltmc.org)</a>。我们期待您的来信！
