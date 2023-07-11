@@ -6,130 +6,127 @@ layout: /src/layouts/Page.astro
 
 import Message from "@atoms/Message.astro";
 
-# General Questions
+# 常见问题
 
 <Message>
 
-## What is Quilt?
+## 什么是 Quilt？
 
-Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project, primarily due to concerns around governance, project management and moderation. You can read more about the Quilt project and where it came from on [the About Us page](/en/about).
+Quilt 是一个主要用于 Minecraft 的模组工具链，它是从 Fabric 项目中分叉出来的，主要是由于对治理、项目管理和管理规范的关注。您可以在[关于我们页面](/zh/about)上了解更多关于 Quilt 项目以及它的来源。
 
 </Message>
 
 <Message>
 
-## Which parts of Fabric is Quilt forking?
+## Quilt 分叉了 Fabric 的哪些部分？
 
-All of them. Quilt is a hard fork of Fabric, and we aim to fork and maintain all projects necessary to exist independently of it.
-
-</Message>
-
-<Message>
-
-## Why should I use Quilt?
-
-For users, Quilt provides the following advantages:
-
-- Mods that should be more compatible with each other, despite their use of powerful modding tools
-- Compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favorites
-- An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff team, and works with its users to improve over time
-- **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly -- and only -- what you need for your mods to work
+全部都分叉了。Quilt 是 Fabric 的一个硬分叉，并且我们的目标是分叉和维护所有必要的项目，以便独立存在。
 
 </Message>
 
 <Message>
 
-## How can I support Quilt?
+## 为什么我应该使用 Quilt？
 
-If you'd like to help us out, here's just a few ways we've come up with:
+对于用户来说，Quilt 提供以下优势：
 
-- Join [our community spaces](/en/community), hang out and give your input
-- Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and opinions
-- Support other projects that make use of Quilt, or Quilt's tools and libraries
-- Talk about Quilt on social media (in a responsible manner)
+- 模组之间应该更加兼容，尽管它们使用了强大的模组工具
+- 兼容 Fabric 和 Quilt 模组，这意味着您无需停止使用您喜爱的模组
+- 开放、透明和友好的官方社区，关心社会问题，拥有经验丰富的团队，并与用户一起不断改进
+- **未来目标：** 自动下载 Quilt 的库（可以禁用），这样您始终会有确切且仅需所需的库来使您的模组正常工作
 
-[//]: # "* Help with ongoing costs by [supporting us financially on OpenCollective](https://opencollective.com/quiltmc)"
+</Message>
+<Message>
 
-Ultimately, even simply making use of Quilt or hanging out in our community spaces helps us. All activity, input and contributions are appreciated!
+## 如何支持 Quilt？
+
+如果您想帮助我们，以下是一些我们想到的方式：
+
+- 加入[我们的社区空间](/zh/community)，参与讨论并提供您的意见
+- 对我们在 GitHub 上的项目进行贡献，可以直接参与代码编写，也可以提供审核和意见
+- 支持其他使用 Quilt 或 Quilt 工具和库的项目
+- 在社交媒体上谈论 Quilt（负责任地）
+
+最重要的是，即使只是使用 Quilt 或在我们的社区空间中参与讨论，这对我们也是有帮助的。我们欢迎各种活动、意见和贡献！
 
 </Message>
 
-# Usage Questions
+# 使用问题
 
 <Message>
 
-## Can Quilt load Forge mods?
+## Quilt 能加载 Forge 模组吗？
 
-No, Quilt can't load Forge mods and support for this is not planned. There are third-party projects (such as Patchwork) that plan to add this functionality, but they're not maintained by Quilt -- and they're not part of The Quilt Project.
-
-</Message>
-
-<Message>
-
-## Can Quilt load Fabric mods?
-
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and provide its developers with the support they need to keep working on it.
-
-It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be happy to work with mod developers that need an alternative approach for Quilt.
-
-</Message>
-
-<Message>
-
-## If I'm using Fabric mods, do I need Fabric API installed?
-
-**No, you don't** - in fact, we recommend against this for compatibility reasons.
-
-Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard QSL distribution, which you can [download from Modrinth](https://modrinth.com/mod/qsl).
-
-As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work correctly with QSL.
+不，Quilt 无法加载 Forge 模组，也不计划支持此功能。有一些第三方项目（如 Patchwork）计划添加此功能，但它们不由 Quilt 维护，并且它们不属于 Quilt 项目的一部分。
 
 </Message>
 
 <Message>
 
-## Can Fabric load Quilt mods?
+## Quilt 能加载 Fabric 模组吗？
 
-No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
+在大多数情况下，是的。由于 Quilt 是基于 Fabric 进行的分支，大多数 Fabric 模组应与 Quilt 兼容。只要维护 Fabric 兼容性不会对项目产生负面影响，我们将继续支持。但如果到了无法维护的地步，我们将帮助将其移至一个由社区运营的项目，并为开发人员提供他们继续工作所需的支持。
 
-</Message>
-
-<Message>
-
-## When will Quilt be released?
-
-Quilt's first beta released on the 20th of April 2022, and we've been full steam ahead since then!
-
-If you'd like to try Quilt out, please take a look at [the install page](/en/install). [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
-
-</Message>
-
-# Management Questions
-
-<Message>
-
-## How is Quilt structured?
-
-Quilt's staff is split into three distinct groups:
-
-- The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
-- The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
-- The development teams, which independently oversee specific project that are assigned to them
-
-Between these three groups, the structure is more or less flat -- no one group of people has the final say over the whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
-
-You can find more about this in the governance section on [the About Us page](/en/about/#governance).
+需要注意的是，截至目前，Quilt 支持包含 mixin 插件的 Fabric 模组，但这在将来将会改变。这并不是一个主要问题，因为绝大多数模组都不使用 mixin 插件，但我们将乐意与需要在 Quilt 上使用其他方法的模组开发者合作。
 
 </Message>
 
 <Message>
 
-## What's an RFC? How do they work?
+## 如果我使用 Fabric 模组，是否需要安装 Fabric API？
 
-**RFC** is short for **R**equest **F**or **C**omments. The RFC process refers to a system whereby important process and policy changes, technical standards and definitions are created, discussed and approved by the community before being put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the rationale is for the proposal.
+**不需要** - 实际上，出于兼容性的考虑，我们建议不要安装 Fabric API。
 
-RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs), with the RFC number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
+许多 Quilt 模组使用 Quilt Standard Libraries（QSL），而这些库与 Fabric API 直接不兼容。为了解决这个问题，QSL 包含了一个特殊版本的 Fabric API，它不会产生冲突 - 它是标准的 QSL 发行版的一部分，您可以从 [Modrinth](https://modrinth.com/mod/qsl) 下载。
 
-Quilt's RFC process is documented in [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
+只要 Fabric 模组正确地使用了来自 Fabric API 的预期公共 API，它们应该与 QSL 正常工作。
+
+</Message>
+
+<Message>
+
+## Fabric 能加载 Quilt 模组吗？
+
+不行。Quilt 模组与 Fabric 模组是不同的，并且不以相同的方式定义。
+
+</Message>
+
+<Message>
+
+## Quilt 何时发布？
+
+Quilt 的第一个 beta 版本于 2022 年 4 月 20 日发布，自那时以来我们一直在全力以赴！
+
+如果您想尝试 Quilt，请查看[安装页面](/zh/install)。 [<i class="fas fa-cannabis has-text-dark is-pulled-right"></i>](https://www.youtube.com/watch?v=DJfg39WkMvE)
+
+</Message>
+
+# 管理问题
+
+<Message>
+
+## Quilt 的组织结构是什么样的？
+
+Quilt 的人员分为三个不同的团队：
+
+- 管理委员会（Admin Board），负责监督项目的发展方向，管理 GitHub 的权限，并决定投票的结果
+- 社区团队（Community Team），负责社区管理和监管任务，以及社交媒体账户和公共关系
+- 开发团队，负责独立监督分配给他们的特定项目
+
+在这三个团队之间，结构基本上是平等的 - 没有一个团队有绝对决策权。此外，社区团队没有对任何官方社区空间的直接所有权，它在一个无关的、选举产生的关键持有人的监督下进行工作。
+
+您可以在[关于我们页面](/zh/about/#governance)的治理部分了解更多信息。
+
+</Message>
+
+<Message>
+
+## 什么是 RFC？它们是如何工作的？
+
+**RFC** 是 **R**equest **F**or **C**omments 的缩写。RFC 过程指的是在实施之前，社区创建、讨论和批准重要的流程和政策变更、技术标准和定义的系统。这是通过创建详细说明提案内容和理由的长篇文档来实现的。
+
+RFC 通过向 [GitHub 上的 RFC 仓库](https://github.com/QuiltMC/rfcs) 提交拉取请求来提出。RFC 的编号与拉取请求的编号相对应（除非是修订）。任何人都可以提交提案，但我们建议有意提交提案的人在 Discord 上与我们进行讨论，或在 GitHub 上提出问题。
+
+Quilt 的 RFC 过程在 [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md) 中有详细记录。
 
 </Message>
