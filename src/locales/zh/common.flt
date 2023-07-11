@@ -13,7 +13,7 @@ serial-comma = {$prev}、{$next}
 -import-utility = Quilt 导入工具
 -help-wanted = 需要帮助
 -patch-notes = 更新日志
--sponsors = 赞助人员
+-sponsors = 赞助商
 -staff-resources = 内部资源
 -template-mod = 模组模板
 
@@ -31,7 +31,7 @@ page-authors =
 	}: {$names}
 page-edited = 编辑于：{DATETIME($date, month: "long", year: "numeric", day: "numeric")}
 post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
-edit-on-github = 在GitHub上编辑这个页面
+edit-on-github = 在 GitHub 上编辑这个页面
 
 
 nav-about = 关于
