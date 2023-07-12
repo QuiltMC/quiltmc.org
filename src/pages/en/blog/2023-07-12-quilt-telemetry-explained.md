@@ -1,5 +1,5 @@
 ---
-title: "Quilt Telemetry Explained"
+title: "Quilt Loader Telemetry Explained"
 date: 2023-07-12 12:25:00 -00:00
 authors:
   - Southpaw1496
