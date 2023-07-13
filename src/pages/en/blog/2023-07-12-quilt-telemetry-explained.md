@@ -40,9 +40,10 @@ Additionally, all of those methods simply measure download count, which, while a
 ## How to disable the telemetry
 If, despite the precautions we've taken to measure telemetry in a privacy-preserving way, you'd still like to disable it, there are a couple of ways that you can do so.
 1. Add the Java argument `-Dloader.disable_beacon=true`. In the vanilla launcher, you can add Java arguments in Installations -> Edit -> More Options -> JVM Arguments. Note that this will only disable the telemetry for the Installation that you add the Java argument to.
-2. Set the environment variables `QUILT_DISABLE_BEACON` or `CI` to `true`. How to do this varies in complexity based on your OS:
+2. Set the environment variables `QUILT_LOADER_DISABLE_BEACON` or `CI` to `true`. How to do this varies in complexity based on your OS:
    - In Windows, you can [add a new environment variable in Control Panel](https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/)
-   - In Linux, you can usually add the line `QUILT_DISABLE_BEACON=true` to the `/etc/environment` file, but this can vary by distribution.
+   - In Linux, you can usually add the line `QUILT_LOADER_DISABLE_BEACON=true` to the `/etc/environment` file, but this can vary by distribution.
    - In macOS, there seems to be no reliable way to set environment variables for the entire system, as opposed to just the zsh shell. We recommend using Java arguments instead.
 
 **Edit: 2023/07/12 12:50PM GMT:** Clarified that CurseForge takes Monthly Active Users as a consideration, not as a requirement. Also clarified that the Beacon server saves a timestamp, and fixed instructions about adding the beacon-disabling environment variable (thanks [Leo](https://60228.dev/@leo)!)
+**Edit: 2023/07/13 19:45 GMT:** The environment variable to disable telemetry is `QUILT_LOADER_DISABLE_BEACON`, not `QUILT_DISABLE_BEACON` (thanks esoterica!)
