@@ -418,6 +418,10 @@ export default {
 			"Inside of Quilt I help moderate community spaces and lead the Outreach team. Outside of Quilt I tinker with things to varying degrees of failure, and write things now and then. I also like cats.",
 		links: [
 			{
+				icon: "fal fa-globe",
+				url: "https://southpaw1496.me",
+			},
+			{
 				icon: "fab fa-mastodon",
 				url: "https://mastodon.southpaw1496.me",
 			},
