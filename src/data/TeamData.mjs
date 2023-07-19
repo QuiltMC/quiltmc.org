@@ -445,14 +445,6 @@ export default {
 			},
 		],
 	},
-	Starchild: {
-		name: "Ambre Bertucci",
-		discord: "Akarys",
-		github: "Akarys42",
-		avatar: "/assets/img/team/Starchild.png",
-		description:
-			"Second year student in engineering who loves bringing chaos and laughs everywhere she goes.",
-	},
 	Stardew: {
 		name: "Stardew",
 		discord: "Hanna",
