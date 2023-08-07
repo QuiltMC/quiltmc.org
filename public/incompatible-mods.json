@@ -49,20 +49,6 @@
   },
 
   {
-    "ids": [
-      "terraform-biome-remapper-api-v1",
-      "terraform-config-api-v1",
-      "terraform-dirt-api-v1",
-      "terraform-surfaces-api-v1",
-      "terraform-tree-api-v1",
-      "terraform-wood-api-v1"
-    ],
-    "name": "Terraform",
-    "type": "GAME",
-    "note": "Only on minecraft `1.19.3` and above"
-  },
-
-  {
     "ids": ["viafabricplus"],
     "name": "ViaFabricPlus",
     "type": "GAME",
