@@ -407,7 +407,6 @@ export default {
 		links: [
 			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
 		],
-		systemMembers: "---",
 	},
 	Southpaw: {
 		name: "Southpaw1496",
