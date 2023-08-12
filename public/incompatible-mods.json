@@ -103,5 +103,11 @@
     "name": "Fast Leaf Decay (Hydos)",
     "type": "GAME",
     "note": "Tries to crash the game as part of a targetted harassment campaign against Quilt and its users"
+  },
+  {
+    "ids": ["levelz"],
+    "name": "LevelZ",
+    "type": "GAME",
+    "note": "Crashes due to use of an internal Fabric API Class. There is [an open Pull Request](https://github.com/Globox1997/LevelZ/pull/286) to fix the incompatibility on GitHub"
   }
 ]
