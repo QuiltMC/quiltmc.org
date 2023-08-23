@@ -3,11 +3,6 @@ import rss from "@astrojs/rss";
 const postImportResult = import.meta.glob("./en/blog/**/*.md", { eager: true });
 const posts = Object.values(postImportResult);
 
-function getExcerptOfCompiledPost(post) {
-	const content = post.compiledContent();
-	return content.slice(0, content.indexOf("<!-- MORE -->"));
-}
-
 // TODO(apple): Multiple feeds, one per language (RSS doesn't support multi-language feeds).
 // That would be too easy.
 export const get = () =>
@@ -23,7 +18,7 @@ export const get = () =>
 			link: post.url,
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.date,
-			description: getExcerptOfCompiledPost(post),
+			description: post.compiledContent(),
 		})),
 		// (optional) inject custom xml
 		customData: `<language>en-us</language>`,
