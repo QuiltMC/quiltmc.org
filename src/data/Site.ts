@@ -70,7 +70,7 @@ const config: Config = {
 	twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
 
 	twitter: {
-		handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
+		handle: new SocialMediaHandle("https://x.com/", "quilt_mc"),
 		card: "summary",
 	},
 
@@ -78,7 +78,7 @@ const config: Config = {
 		name: "QuiltMC",
 
 		links: [
-			new URL("https://twitter.com/quilt_mc"),
+			new URL("https://x.com/quilt_mc"),
 			new URL("https://github.com/QuiltMC"),
 			new URL("https://twitch.tv/quiltmc"),
 		],
