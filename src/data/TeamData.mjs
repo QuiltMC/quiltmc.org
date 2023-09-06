@@ -178,7 +178,7 @@ export default {
 				url: "https://jamalam.tech/",
 			},
 			{
-				icon: "fab fa-twitter",
+				icon: "fab fa-x-twitter",
 				url: "https://x.com/jamalamisadev",
 			},
 			{
@@ -329,7 +329,7 @@ export default {
 				url: "https://oroarmor.com/",
 			},
 			{
-				icon: "fab fa-twitter",
+				icon: "fab fa-x-twitter",
 				url: "https://x.com/realOroArmor",
 			},
 			{
@@ -405,7 +405,7 @@ export default {
 		avatar: "/assets/img/team/snoozestudios.png",
 		description: "Student, Coder & Much More!",
 		links: [
-			{ icon: "fab fa-twitter", url: "https://x.com/snoozestudios" },
+			{ icon: "fab fa-x-twitter", url: "https://x.com/snoozestudios" },
 		],
 	},
 	Southpaw: {
