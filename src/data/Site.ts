@@ -78,7 +78,7 @@ const config: Config = {
 		name: "QuiltMC",
 
 		links: [
-			new URL("https://x.com/quilt_mc"),
+			new URL("https://twitter.com/quilt_mc"),
 			new URL("https://github.com/QuiltMC"),
 			new URL("https://twitch.tv/quiltmc"),
 		],

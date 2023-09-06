@@ -179,7 +179,7 @@ export default {
 			},
 			{
 				icon: "fab fa-x-twitter",
-				url: "https://x.com/jamalamisadev",
+				url: "https://twitter.com/jamalamisadev",
 			},
 			{
 				icon: "fak fa-curseforge",
@@ -330,7 +330,7 @@ export default {
 			},
 			{
 				icon: "fab fa-x-twitter",
-				url: "https://x.com/realOroArmor",
+				url: "https://twitter.com/realOroArmor",
 			},
 			{
 				icon: "fak fa-curseforge",
@@ -405,7 +405,7 @@ export default {
 		avatar: "/assets/img/team/snoozestudios.png",
 		description: "Student, Coder & Much More!",
 		links: [
-			{ icon: "fab fa-x-twitter", url: "https://x.com/snoozestudios" },
+			{ icon: "fab fa-x-twitter", url: "https://twitter.com/snoozestudios" },
 		],
 	},
 	Southpaw: {
