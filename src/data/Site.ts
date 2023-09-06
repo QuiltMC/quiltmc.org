@@ -70,7 +70,7 @@ const config: Config = {
 	twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
 
 	twitter: {
-		handle: new SocialMediaHandle("https://x.com/", "quilt_mc"),
+		handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
 		card: "summary",
 	},
 
