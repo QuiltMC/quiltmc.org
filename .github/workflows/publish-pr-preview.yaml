@@ -1,0 +1,54 @@
+on:
+  workflow_run:
+    workflows: ["PR preview"]
+    types: [completed]
+name: Publish PR preview
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    name: Publish PR preview
+    steps:
+      - name: Download HTML artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: website-html
+          path: dist
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Download Functions artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: website-functions
+          path: functions
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Download package artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: website-package
+          run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Enable Corepack shims
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Gather PR details
+        uses: potiuk/get-workflow-origin@v1_1
+        id: pr-details
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sourceRunId: ${{ github.event.workflow_run.id }}
+
+      - name: Publish to Pages
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: quiltmc-org
+          directory: dist
+          branch: preview-${{ steps.pr-details.outputs.pullRequestNumber }}

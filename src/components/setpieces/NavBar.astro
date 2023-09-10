@@ -110,8 +110,8 @@ const { style = "is-dark" } = Astro.props as Props;
 					<NavLink href={localizePath("/mc-patchnotes")} icon="fas fa-notebook">
 						{t("nav-page-patch-notes")}
 					</NavLink>
-					<NavLink href={localizePath("/openings")} icon="fas fa-briefcase">
-						{t("nav-page-openings")}
+					<NavLink href={localizePath("/help-wanted")} icon="fas fa-briefcase">
+						{t("nav-page-help-wanted")}
 					</NavLink>
 					<NavLink href={localizePath("/sponsors")} icon="fas fa-dollar-sign">
 						{t("nav-page-sponsors")}
@@ -125,6 +125,12 @@ const { style = "is-dark" } = Astro.props as Props;
 					</NavLink>
 					<NavLink href={localizePath("/legal")} icon="fas fa-scale-balanced">
 						{t("nav-page-legal")}
+					</NavLink>
+
+					<div class="divider">{t("divider-external-links")}</div>
+
+					<NavLink href="https://opencollective.com/quiltmc" icon="fas fa-circle-dollar-to-slot">
+						{t("nav-page-donate")}
 					</NavLink>
 				</div>
 			</div>

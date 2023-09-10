@@ -1,0 +1,107 @@
+[{
+    "ids": ["armored-elytra"],
+    "name": "Armored Elytra",
+    "type": "WORKAROUND",
+    "note": "Add `-Dloader.debug.loadLate=armored-elytra` to your java args"
+  },
+
+  {
+    "ids": ["better_loading_screen"],
+    "name": "Better Loading Screen",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["bigbeacons"],
+    "name": "Big Beacons",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["cenchants"],
+    "name": "Combat Enchatments",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["decorative_blocks"],
+    "name": "Decorative Blocks",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["logbegone"],
+    "name": "Log Begone",
+    "type": "SELF",
+    "note": "Not all log messages are passed through the mod's filter."
+  },
+
+  {
+    "ids": ["mbp"],
+    "name": "More Block Predicates",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["semitranslucency"],
+    "name": "Semitranslucency Fix",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["viafabricplus"],
+    "name": "ViaFabricPlus",
+    "type": "GAME",
+    "note": "Only occurs on linux"
+  },
+
+  {
+    "ids": ["vulkanmod"],
+    "name": "VulkanMod",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["essential-container"],
+    "name": "Essential",
+    "type": "SELF",
+    "note": "Will not be present in Mod Menu"
+  },
+
+  {
+    "ids": ["seamless_loading_screen"],
+    "name": "Seamless Loading Screen",
+    "type": "SELF"
+  },
+
+  {
+    "ids": ["codex"],
+    "name": "Codex",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["libjf"],
+    "name": "LibJF",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["optifabric", "optifine"],
+    "name": "OptiFabric/OptiFine",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["rpgdifficulty"],
+    "name": "Rpg Difficulty",
+    "type": "GAME"
+  },
+
+  {
+    "ids": ["fldf"],
+    "name": "Fast Leaf Decay (Hydos)",
+    "type": "GAME",
+    "note": "Tries to crash the game as part of a targetted harassment campaign against Quilt and its users"
+  }
+]

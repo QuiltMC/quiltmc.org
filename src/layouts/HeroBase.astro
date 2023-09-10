@@ -32,6 +32,7 @@ const { rtl } = rtlSettings();
 		media="(prefers-color-scheme: light)"
 	/>
 </head>
+
 <Base navless content={props.content}>
 	<section class="hero is-dark has-background-patches">
 		<div class="hero-head">
@@ -105,6 +106,13 @@ const { rtl } = rtlSettings();
 						type="github"
 						icon="fab fa-github"
 						textKey="button-github"
+					/>
+					<Button
+						href="https://opencollective.com/quiltmc"
+						target="_blank"
+						type="link"
+						icon="fas fa-circle-dollar-to-slot"
+						textKey="button-donate"
 					/>
 				</div>
 			</div>
