@@ -5,6 +5,7 @@
 -technic = Technic
 -curseforge = CurseForge
 -gdlauncher = GDLauncher
+-modrinth = Modrinth App
 
 platform-client = Client
 platform-server = Server
@@ -12,6 +13,7 @@ platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
+platform-modrinth = {-modrinth}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
 
@@ -21,6 +23,7 @@ logo-atlauncher = {-atlauncher} logo
 logo-multimc = {-multimc} logo
 logo-prismlauncher = {-prismlauncher} logo
 logo-technic = Technic Launcher logo
+logo-modrinth = {-modrinth} logo
 logo-curseforge = {-curseforge} logo
 logo-gdlauncher = {-gdlauncher} logo
 
