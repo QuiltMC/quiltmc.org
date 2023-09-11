@@ -11,10 +11,7 @@ jobs:
     name: Generate commit preview
     steps:
       - name: Checkout
-        uses: akarys42/checkout-with-filter@main
-        with:
-          filter: 'blob:none'
-          fetch-depth: 0
+        uses: actions/checkout@v3
 
       - name: Enable Corepack shims
         run: corepack enable
