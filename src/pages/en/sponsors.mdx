@@ -9,15 +9,15 @@ import site from "@data/Site";
 import Button from "@atoms/Button.astro"
 import SponsorBlock from "@parts/sponsors/SponsorBlock.astro"
 
-This page contains a list of all of Quilt's past and present sponsorships, what they provide/provided us through those sponsorships, and instructions for applying to become a Quilt sponsor.
+This page contains a record of all Quilt sponsorships, past and present, as well as instructions on how to apply to sponsor Quilt. 
 
-While Quilt is not (and hopefully never will be) a financially-driven project, sponsors help us to offset our costs, or provide tools or services that would otherwise be inaccessible to us. Additionally, in order to maintain transparency and to try to avoid problems (such as accepting a sponsorship and endorsing a problematic company), we have a [detailed process](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md) that we follow when evaluating and accepting sponsorships.
+While Quilt is not (and hopefully never will be) a financially-driven project, sponsors help us to offset our costs, or provide tools or services that would otherwise be inaccessible to us. Additionally, in order to maintain transparency and to try to avoid problems (such as accepting a sponsorship and endorsing a problematic company), we have [a detailed process](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md) that we follow when evaluating and accepting sponsorships.
 
-Sponsorships may be endorsed, or non-endorsed. If a sponsorship is endorsed, then we've vetted the company to ensure they meet our [sponsorship guidelines](https://github.com/QuiltMC/rfcs/blob/main/rfc/0061-sponsorships.md#sponsor-guidelines) and we're happy to recommend their services to our community members.
+Sponsorships may be endorsed, or non-endorsed. If a sponsorship is currently endorsed, it means that they require an endorsement from us, such as a link on our homepage. Because of this, endorsed sponsors undergo a more thorough vetting process, including a review by the community [on the Quilt forum](https://forum.quiltmc.org/c/quilt/sponsorship/23). Non-endorsed sponsors do not require an endorsement.
 
-# Current Sponsors (Endorsed)
+## Current Sponsors (Endorsed)
 
-The following sponsors are endorsed by Quilt, and are credited by us in various places - including the homepage of this website. We are proud to work with these sponsors, and we're happy to recommend their services to our users.
+The following sponsors are endorsed by Quilt.
 
 <SponsorBlock
 	href="https://chs.gg"
@@ -25,14 +25,22 @@ The following sponsors are endorsed by Quilt, and are credited by us in various 
 	iconDark="/assets/img/sponsors/chs/cloud-white.svg"
 	iconLight="/assets/img/sponsors/chs/cloud-dark.svg"
 >
-	Capitol Hosting Solutions is a small game server and website hosting company headquartered in Seattle, which aims to make use of as much open-source technology as possible to provide their services, at a cost that won't break the bank.
+Capitol Hosting Solutions are a hosting provider based in Seattle and Australia, with offerings for gaming, dedicated, web, and Discord bot hosting. They provide us with servers to host much of our infrastructure, including the forum, collab wiki, Modmail, and Cozy.
+</SponsorBlock>
+<SponsorBlock
+	href="https://cloudflare.com/"
+	name="Cloudflare"
+	iconDark="/assets/img/sponsors/cloudflare/logomark.svg"
+	iconLight="/assets/img/sponsors/cloudflare/logomark.svg"
+>
+	Cloudflare is an Edge Services provider, with offerings including DNS management, static hosting, edge computing, network security and protection, and CDNs. We use Cloudflare to host our website, serve our Maven, and to protect the rest of our infrastructure from attacks. 
 
-	Capitol Hosting Solutions provides hosting for most of Quilt's infrastructure at no cost to us - including our <a href={ site.forum }>forum</a> and <a href={ site.wikis.collab }>Community Collab wiki</a>. They also partner with Quilt and Modfest to provide hosting for official events such as [BlanketCon](https://blanketcon.modfest.net).
+	Cloudflare provides us with a free Pro plan, which comes with some extra performance and security features, such as image optimisation and more firewall rules.
 </SponsorBlock>
 
 ---
 
-# Current Sponsors (Non-Endorsed)
+## Current Sponsors (Non-Endorsed)
 
 The following sponsors do not require an endorsement by Quilt.
 
@@ -42,10 +50,37 @@ The following sponsors do not require an endorsement by Quilt.
 	iconDark="/assets/img/sponsors/1password.png"
 	iconLight="/assets/img/sponsors/1password.png"
 >
-	1Password is a privacy-focused password manager, designed to safely store your credentials, and provide access to them in a convenient way whenever you need them.
-
-	1Password provides us with a free 1Password Team account as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program, which we use to share credentials and other sensitive data among the specific teams that need to use them. This allows us to securely store those credentials and ensure that they're only provided to the people that need them.
+	1Password is a software for managing passwords and other types of sensitive data. They  provide us with a free 1Password Team account as part of their [1Password for Open Source Projects](https://github.com/1Password/1password-teams-open-source) program, which we use to safely share credentials and other sensitive data within various teams.
 </SponsorBlock>
+
+<SponsorBlock
+	href="https://sentry.io"
+	name="Sentry"
+	iconDark="/assets/img/sponsors/sentry/sentry-dark.svg"
+	iconLight="/assets/img/sponsors/sentry/sentry-light.svg"
+	>
+	Sentry is an open-source error-tracking and performance monitoring service, which we use to monitor parts of our infrastructure for errors and issues. They provide us with a free Business plan on their cloud platform as part of their [Sentry for Open Source](https://sentry.io/for/open-source/) project.
+</SponsorBlock>
+
+---
+
+## Past Sponsors (Endorsed)
+
+The following past sponsors were endorsed by Quilt while we were working with them.
+
+<SponsorBlock
+	name="Starchild Systems"
+	iconDark="/assets/img/sponsors/starchild-systems-white.svg"
+	iconLight="/assets/img/sponsors/starchild-systems.svg"
+>
+	Starchild Systems is an Infrastructure-as-a-Service and Software-as-a-Service company. They hosted the <a href={site.forum}>Quilt Forum</a>, <a href={site.wikis.collab}>Collab Wiki</a> and several of our Discord bots on their infrastructure at no cost to us.
+</SponsorBlock>
+
+---
+
+## Past Sponsors (Non-Endorsed)
+
+The following past sponsors did not require an endorsement from Quilt while we were working with them.
 
 <SponsorBlock
 	href="https://aws.amazon.com"
@@ -54,36 +89,13 @@ The following sponsors do not require an endorsement by Quilt.
 	iconLight="/assets/img/sponsors/aws-dark.png"
 	radius={ 1 }
 >
-	Amazon Web Services (AWS) is an Amazon-owned company providing cloud computing services. They're one of the largest infrastructure providers in the world, responsible for keeping much of the Internet online.
+	Amazon Web Services (AWS) is a general-purpose cloud-computing company. In Quilt's early days, AWS hosted our Meta, Maven, and emails, and they provided us with credits to offset those costs through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program.
 
-	AWS provides credits that we use to offset our operational costs, through their [Promotional Credits for Open Source Projects](https://aws.amazon.com/blogs/opensource/aws-promotional-credits-open-source-projects/) program. We use AWS to host our Maven repository, and as an email provider for official Quilt email addresses.
 </SponsorBlock>
 
 ---
 
-# Past Sponsors (Endorsed)
-
-The following past sponsors were endorsed by Quilt while we were working with them. We were proud to work with these sponsors, and we're happy to recommend their services to our users.
-
-<SponsorBlock
-	name="Starchild Systems"
-	iconDark="/assets/img/sponsors/starchild-systems-white.svg"
-	iconLight="/assets/img/sponsors/starchild-systems.svg"
->
-	Starchild Systems is an Infrastructure-as-a-Service and Software-as-a-Service company. They hosted the <a href={site.forum}>Quilt Forum</a>, <a href={site.wikis.collab}>Collab Wiki</a> and several of our Discord bots on their infrastructure at no cost to us.
-
-	While Starchild Systems is no longer sponsoring us, the company owners (the Starchild System) are part of Quilt's Infrastructure Team, and they help us to deploy, manage and run all of our services, including our <a href={site.meta}>Meta server</a> and <a href={site.maven}>Maven repo</a>. We also make use of their paid ModMail+ offering, which is a Discord bot that provides a simple way for our community members to communicate with the Community Team.
-</SponsorBlock>
-
----
-
-{/* # Past Sponsors (Non-Endorsed)
-
-The following past sponsors did not require an endorsement by Quilt while we were working with them.
-
----*/}
-
-# Sponsoring Quilt
+## Sponsoring Quilt
 
 For detailed information on our processes for accepting and handling sponsors, please see the [Sponsorships RFC](https://github.com/QuiltMC/rfcs/blob/master/rfc/0061-sponsorships.md).
 
