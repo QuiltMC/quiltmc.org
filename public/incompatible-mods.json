@@ -103,5 +103,12 @@
     "name": "Fast Leaf Decay (Hydos)",
     "type": "GAME",
     "note": "Tries to crash the game as part of a targetted harassment campaign against Quilt and its users"
+  },
+
+  {
+    "ids": ["deeperdarker"],
+    "name": "Deeper And Darker",
+    "type": "GAME",
+    "note": "Uses Fabric API internals. See https://github.com/KyaniteMods/DeeperAndDarker/issues/189."
   }
 ]
