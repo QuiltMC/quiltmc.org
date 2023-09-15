@@ -10,7 +10,7 @@ jobs:
     name: Generate PR preview
     steps:
       - name: Checkout
-        uses: checkout/actions@v3
+        uses: actions/checkout@v3
 
       - name: Enable Corepack shims
         run: corepack enable
