@@ -49,13 +49,6 @@
   },
 
   {
-    "ids": ["viafabricplus"],
-    "name": "ViaFabricPlus",
-    "type": "GAME",
-    "note": "Only occurs on linux"
-  },
-
-  {
     "ids": ["vulkanmod"],
     "name": "VulkanMod",
     "type": "GAME"
