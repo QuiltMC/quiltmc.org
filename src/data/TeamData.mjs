@@ -426,6 +426,13 @@ export default {
 		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
 		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
 	},
+	Zoe: {
+		name: "Zoe",
+		discord: "antikyth",
+		github: "Antikyth",
+		description: "Student and hobbyist programmer trying to make the world a better place.  Wants to make software more approachable for all.",
+		avatar: "https://avatars.githubusercontent.com/u/104020300"
+	},
 	_NotFound_: {
 		name: "Member not found",
 		github: "ghost",
