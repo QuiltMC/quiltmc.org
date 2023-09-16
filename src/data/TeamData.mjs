@@ -131,6 +131,13 @@ export default {
 		github: "TheGlitch76",
 		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
 	},
+	Iota: {
+		name: "Iota",
+		discord: "iotabread",
+		github: "IotaBread",
+		avatar: "https://avatars.githubusercontent.com/u/47987888",
+		description: "Java programmer and Minecraft modder.",
+	},
 	ix0rai: {
 		name: "ix0rai",
 		discord: "ix0rai",
@@ -202,14 +209,6 @@ export default {
 				url: "https://linktr.ee/lapisliozuli",
 			}
 		]
-	},
-	MartrixX: {
-		name: "MartrixX",
-		discord: "MartrixX",
-		github: "ByMartrixx",
-		avatar: "https://avatars.githubusercontent.com/u/47987888",
-		description: "Java programmer and Minecraft modder.",
-		links: [{ icon: "fas fa-link", url: "https://bymartrixx.me/" }],
 	},
 	Mazzie: {
 		name: "Mazzie",
