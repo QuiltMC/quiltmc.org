@@ -5,7 +5,9 @@ authors:
   - Southpaw1496
 layout: /src/layouts/Post.astro
 ---
-**Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was errorneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
+**Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
+
+**Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was erroneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
 
 Quilt Loader 0.19.2 adds beacon functionality to count Quilt's Monthly Active Users, or MAUs. There has recently been some confusion about how this functionality works and why it was added, so this blog post is intended to provide a clear explanation of both of those things.
 
