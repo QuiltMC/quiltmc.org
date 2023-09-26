@@ -96,5 +96,11 @@
     "name": "Fast Leaf Decay (Hydos)",
     "type": "GAME",
     "note": "Tries to crash the game as part of a targetted harassment campaign against Quilt and its users"
+  },
+  {
+    "ids": ["dynmap"],
+    "name": "Dynmap",
+    "type": "GAME",
+    "note": "[Relevent GitHub Issue](https://github.com/webbukkit/dynmap/issues/4016)"
   }
 ]
