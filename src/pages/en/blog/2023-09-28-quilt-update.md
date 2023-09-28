@@ -1,13 +1,12 @@
 ---
-title: "Quilt's (VERY late) November Update"
+title: "Quilt's (EXTREMELY LATE) November Update"
 date: 2023-09-28 15:00:00 -00:00
 authors:
   - ix0rai
-  - Southpaw1496
 layout: /src/layouts/Post.astro
 ---
 
-We haven't posted about updates to Quilt's tooling, APIs, and other things since entering beta, so here's a review of almost a full year of Quilt. We'll be going through Quilt Standard Libraries, Quilt Loader, Quilt Mappings, Quilted Fabric API, Chasm, Quilt Kotlin Libraries, Cozy, and a few other things. Taking the crown for the new longest blog post, I hope you enjoy seeing what we've been working on!
+It's been quite a while since the last proper development update here, with the last one being our 2021 October update. In this fairly enormous post, we'll be covering all the biggest developments since entering beta! We'll be going through Quilt Standard Libraries, Quilt Loader, Quilt Mappings, Quilted Fabric API, Chasm, Quilt Kotlin Libraries, Cozy, and a few other things. Taking the crown for the new longest blog post, I hope you enjoy seeing what we've been working on!
 
 <!-- MORE -->
 
@@ -100,7 +99,7 @@ Quilt Mappings has had an amazing year, and it's not even because I made my debu
 
 To start off our post-beta bettering, we moved over the functionality of Fabric's [Stitch](https://github.com/FabricMC/stitch) tools into our own in-house [Enigma plugin](https://github.com/QuiltMC/quilt-enigma-plugin), which makes the structure of mappings as a whole quite a bit cleaner. Neat!
 
-Next, in July, we upgraded our newly created plugin with a new feature: automagic mapping for simple fields. This allows [Enigma](https://github.com/QuiltMC/enigma), the tool we use to make mappings, to derive names for fields and parameters out of a manually written file. For example, since in most classes there's only one `Codec` field, it will automatically be named `CODEC` by the plugin. Lovely! This allows our mappers to do less work, and is generally really cool. 
+Next, in July, we upgraded our newly created plugin with a new feature: automagic mapping for simple fields. This allows [Enigma](https://github.com/QuiltMC/enigma), the tool we use to make mappings, to derive names for fields and parameters out of a manually written file. For example, since in most classes there's only one `Codec` field, it will automatically be named `CODEC` by the plugin. Lovely! This allows our mappers to do less work, and is generally really cool.
 
 Moving on to October, we introduced the single most important addition to QM: intermediary publishing! Those who aren't deep into modding are probably asking: what in the name of Pineapple does that mean? Good news: I'll tell you. Quilt uses our own system called [Hashed Mojmap](https://github.com/QuiltMC/mappings-hasher), which takes Mojang's official names and scrambles them into copyright-free hashes for us to use at runtime, making sure that we're not violating the terms of Mojang's official mappings while decreasing the chance that names will change with Minecraft updates. A Quilt mapping looks like this:
 ```
