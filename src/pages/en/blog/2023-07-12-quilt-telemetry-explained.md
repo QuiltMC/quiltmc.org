@@ -17,7 +17,7 @@ Most telemetry is gathered with the intention of precisely learning how differen
 When Quilt Loader is launched, it first checks if the user has opted out of telemetry (more on this later), or if it has already added you to this month's active user count. If it neither of those apply, it sends an empty request to `beacon.quiltmc.org`, containing no data except the bare minimum that it needs to establish a connection. No identification, no information about how you're using Quilt Loader, no nothing. It then records the fact that it has made this request in a local file that is shared among all your Minecraft instances, so that it doesn't send any more requests that month. After receiving the request, the Beacon server increments the Monthly Active User counter, logs the request as a simple timestamp, then deletes all the connection data associated with the request that it just received.
 
 ![A cute graph explaining the process Quilt Loader goes through to update the MAU beacon.](/assets/img/writing/blog/2023-06-26-mau-beacon/beacon-update-process.png)
-Image Credit: ixorai
+Image Credit: ix0rai
 
 It's important to emphasise just how little data is being sent here. You're sending more data away if you:
 - Play Minecraft itself.
