@@ -102,5 +102,11 @@
     "name": "Dynmap",
     "type": "GAME",
     "note": "[Relevent GitHub Issue](https://github.com/webbukkit/dynmap/issues/4016)"
+  },
+  {
+    "ids": ["chattriggers"],
+    "name": "ChatTriggers",
+    "type": "SELF",
+    "note": "Modules can be loaded and managed, but are unable to be executed on Quilt."
   }
 ]
