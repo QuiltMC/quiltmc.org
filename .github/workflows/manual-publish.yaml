@@ -11,7 +11,10 @@ jobs:
     name: Publish website
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: akarys42/checkout-with-filter@main
+        with:
+          filter: 'blob:none'
+          fetch-depth: 0
 
       - name: Enable Corepack shims
         run: corepack enable
