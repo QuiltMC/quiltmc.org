@@ -15,14 +15,18 @@ import { t } from "i18next";
 		const INSTALLER_URL_BASE =
 			"https://maven.quiltmc.org/repository/release/org/quiltmc/quilt-installer/";
 		const MAVEN_METADATA_URL = INSTALLER_URL_BASE + "maven-metadata.xml";
-
-		const metadataRequest = await fetch(MAVEN_METADATA_URL, { headers: { "User-Agent": "QuiltMC Website API" } })
-		const metadata = await metadataRequest.text()
-		const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
-		const latest = semverSort.desc(allVersion)[0]
-
-		if (document.getElementById("installer-version")) {
-			document.getElementById("installer-version").textContent = latest;
+		try {
+			const metadataRequest = await fetch(MAVEN_METADATA_URL, { headers: { "User-Agent": "QuiltMC Website API" } })
+			const metadata = await metadataRequest.text()
+			const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
+			const latest = semverSort.desc(allVersion)[0]
+	
+			if (document.getElementById("installer-version")) {
+				document.getElementById("installer-version").textContent = latest;
+			}
+		}
+		catch(error) {
+			console.log(error)
 		}
 	</script>
 </div>
