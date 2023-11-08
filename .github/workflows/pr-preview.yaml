@@ -10,7 +10,10 @@ jobs:
     name: Generate PR preview
     steps:
       - name: Checkout
-        uses: checkout/actions@v3
+        uses: akarys42/checkout-with-filter@main
+        with:
+          filter: 'blob:none'
+          fetch-depth: 0
 
       - name: Enable Corepack shims
         run: corepack enable
