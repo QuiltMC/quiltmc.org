@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@babel/traverse':
-    specifier: '7.23'
+    specifier: '>=7.23.2'
     version: 7.23.2
   '@tsndr/cloudflare-worker-jwt':
     specifier: ^2.2.5
