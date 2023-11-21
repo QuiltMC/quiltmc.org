@@ -37,5 +37,10 @@
 		"@tsndr/cloudflare-worker-jwt": "^2.2.5",
 		"astro-compress": "^2.0.15",
 		"semver-sort": "^1.0.0"
+	},
+	"pnpm": {
+		"overrides": {
+			"sharp": "0.32.6"
+		}
 	}
 }
