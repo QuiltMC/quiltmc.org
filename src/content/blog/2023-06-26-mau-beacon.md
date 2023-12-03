@@ -3,7 +3,6 @@ title: "Evil Modding Project Adds Telemetry"
 date: 2023-06-26 12:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 **Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
 
