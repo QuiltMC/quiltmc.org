@@ -4,14 +4,13 @@ import sitemap from "@astrojs/sitemap";
 import purgecss from "astro-purgecss";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
-import astroI18next from "astro-i18next";
 
 import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://quiltmc.org",
-  integrations: [mdx(), sitemap(), purgecss(), compress(), astroI18next()],
+  integrations: [mdx(), sitemap(), purgecss(), compress()],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [[rehypeAutolinkHeadings, {
