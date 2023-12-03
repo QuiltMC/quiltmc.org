@@ -21,9 +21,6 @@
 		"execa": "^8.0.1",
 		"glob": "^10.3.10",
 		"hast-util-from-html": "^2.0.1",
-		"i18next": "^23.7.7",
-		"i18next-fluent": "^2.0.0",
-		"i18next-fs-fluent-backend": "github:pluiedev/i18next-fs-fluent-backend",
 		"node-fetch": "^3.3.2",
 		"quilt-bulma": "0.0.23",
 		"rehype-autolink-headings": "^7.1.0",
@@ -34,7 +31,6 @@
 	"dependencies": {
 		"@tsndr/cloudflare-worker-jwt": "^2.3.2",
 		"astro-compress": "^2.2.3",
-		"astro-i18next": "1.0.0-beta.21",
 		"semver-sort": "^1.0.0"
 	}
 }
