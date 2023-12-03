@@ -1,0 +1,34 @@
+---
+import PostInfo from "@atoms/PostInfo.astro";
+import Default from "@layouts/Default.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import type { BaseProps } from "@layouts/Base.astro";
+import Post from "@layouts/Post.astro";
+
+interface Props {
+	blogPost: CollectionEntry<"blog">
+}
+export async function getStaticPaths() {
+  const blogPosts = await getCollection("blog");
+  return blogPosts.map((blogPost) => ({
+    params: { slug: blogPost.slug },
+    props: { blogPost },
+  }));
+
+}
+const { blogPost } = Astro.props;
+const { Content } = await blogPost.render();
+const contentProps: BaseProps = {
+	title: blogPost.data.title,
+	date: blogPost.data.date.toUTCString()
+}
+---
+
+<Default content={contentProps}>
+	<div class="blog-post">
+		<h1>{blogPost.data.title}</h1>
+		<PostInfo authors={blogPost.data.authors} date={blogPost.data.date} />
+
+		<Content />
+	</div>
+</Default>

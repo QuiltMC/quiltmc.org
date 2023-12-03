@@ -18,3 +18,7 @@ const page = defineCollection({
 		description: z.string()
 	})
 })
+
+export const collections = {
+	"blog": blogPost
+}
