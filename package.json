@@ -16,7 +16,6 @@
 		"@astrojs/sitemap": "^3.0.3",
 		"@types/luxon": "^3.3.6",
 		"astro": "3.0.13",
-		"astro-i18next": "1.0.0-beta.21",
 		"astro-purgecss": "^3.2.1",
 		"bulma-toast": "^2.4.3",
 		"execa": "^8.0.1",
@@ -35,6 +34,7 @@
 	"dependencies": {
 		"@tsndr/cloudflare-worker-jwt": "^2.3.2",
 		"astro-compress": "^2.2.3",
+		"astro-i18next": "1.0.0-beta.21",
 		"semver-sort": "^1.0.0"
 	}
 }
