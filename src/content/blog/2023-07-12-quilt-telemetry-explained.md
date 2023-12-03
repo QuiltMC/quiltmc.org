@@ -3,7 +3,6 @@ title: "Quilt Loader Telemetry Explained"
 date: 2023-07-12 11:25:00 -00:00
 authors:
   - Southpaw1496
-layout: /src/layouts/Post.astro
 ---
 **Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was errorneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
 

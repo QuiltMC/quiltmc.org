@@ -3,7 +3,6 @@ title: "Quilt's (VERY LATE) October Update"
 date: 2021-11-10 14:00:00 -00:00
 authors:
   - ToffeeMax
-layout: /src/layouts/Post.astro
 ---
 
 It is now _well_ past the End of October and closer to Halloween then I'd like to admit. Here is some of the more fleshed out updates about the Quilt Project:

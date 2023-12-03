@@ -3,7 +3,6 @@ title: "Evil Modding Project Adds Telemetry"
 date: 2023-06-26 12:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 
 If you've been keeping tabs on our RFC, or Request For Comment, [repository](https://github.com/QuiltMC/rfcs), you may have noticed that we've

@@ -3,7 +3,6 @@ title: "Five vulnerabilities found in mrpack installer implementations"
 date: 2023-02-04 17:00:00 -00:00
 authors:
   - Ambre Bertucci
-layout: /src/layouts/Post.astro
 ---
 
 On Tuesday, 31st January, a member of the Quilt team discovered path traversal vulnerabilities in five different mrpack
