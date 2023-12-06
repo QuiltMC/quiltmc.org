@@ -108,5 +108,11 @@
     "name": "ChatTriggers",
     "type": "SELF",
     "note": "Modules can be loaded and managed, but are unable to be executed on Quilt."
+  },
+  {
+    "ids":["dml-refabricated"],
+    "name": "Deep Mob Learning: Refabricated",
+    "type": "GAME",
+    "note": "Crashes the game if there is another mod that utilises QSL libraries (as opposed to Quilted Fabric API ones)"
   }
 ]
