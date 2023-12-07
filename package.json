@@ -11,12 +11,12 @@
 	},
 	"devDependencies": {
 		"@astrojs/markdown-component": "^1.0.5",
-		"@astrojs/mdx": "^1.1.5",
-		"@astrojs/rss": "^3.0.0",
+		"@astrojs/mdx": "^2.0.0",
+		"@astrojs/rss": "^4.0.1",
 		"@astrojs/sitemap": "^3.0.3",
-		"@types/luxon": "^3.3.6",
-		"astro": "3.0.13",
-		"astro-purgecss": "^3.2.1",
+		"@types/luxon": "^3.3.7",
+		"astro": "4.0.3",
+		"astro-purgecss": "^4.0.0",
 		"bulma-toast": "^2.4.3",
 		"execa": "^8.0.1",
 		"glob": "^10.3.10",
@@ -24,9 +24,9 @@
 		"node-fetch": "^3.3.2",
 		"quilt-bulma": "0.0.23",
 		"rehype-autolink-headings": "^7.1.0",
-		"rollup": "^3.29.4",
+		"rollup": "^4.6.1",
 		"sass": "^1.69.5",
-		"typescript": "^5.3.2"
+		"typescript": "^5.2.2"
 	},
 	"dependencies": {
 		"@tsndr/cloudflare-worker-jwt": "^2.3.2",
