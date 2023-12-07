@@ -15,10 +15,12 @@ const page = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
-		description: z.string()
+		description: z.string(),
+		sidebar: z.boolean().default(true)
 	})
 })
 
 export const collections = {
-	"blog": blogPost
+	"blog": blogPost,
+	"page": page
 }
