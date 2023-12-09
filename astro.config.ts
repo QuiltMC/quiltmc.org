@@ -9,6 +9,14 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    routing: {
+      prefixDefaultLocale: true,
+      strategy: "pathname"
+  },
+  },
   site: "https://quiltmc.org",
   integrations: [mdx(), sitemap(), purgecss(), compress()],
   markdown: {
