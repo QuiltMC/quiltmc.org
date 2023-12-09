@@ -4,8 +4,9 @@ import sitemap from "@astrojs/sitemap";
 import purgecss from "astro-purgecss";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
-
 import compress from "astro-compress";
+
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +16,7 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: true,
       strategy: "pathname"
-  },
+    }
   },
   site: "https://quiltmc.org",
   integrations: [mdx(), sitemap(), purgecss(), compress()],
@@ -30,5 +31,9 @@ export default defineConfig({
     build: {
       assetsInlineLimit: 0
     }
-  }
+  },
+  output: "hybrid",
+  adapter: node({
+    mode: "standalone"
+  })
 });
