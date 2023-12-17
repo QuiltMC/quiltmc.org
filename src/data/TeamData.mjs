@@ -418,13 +418,6 @@ export default {
 		description:
 			"Minecraft Modder who enjoys the comfortable feeling of crocs on their feet",
 	},
-	Zxhir: {
-		name: "Zxhir",
-		discord: ".zxhir",
-		github: "Imzxhir",
-		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
-		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
-	},
 	Zoe: {
 		name: "Zoe",
 		discord: "antikyth",
