@@ -96,8 +96,11 @@ import Base from "./Base.astro";
 	</style>
 
 	<script is:inline>
+		const baseUrl = "https://launchercontent.mojang.com";
+		const v2Url = baseUrl+"/v2";
+
 		// Fetch launcher metadata
-		fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
+		fetch(v2Url + "/javaPatchNotes.json")
 			.then((response) => response.json())
 			.then((data) => {
 				// Render patch notes
@@ -109,18 +112,23 @@ import Base from "./Base.astro";
 					if (entry) {
 						document.getElementById("title").scrollIntoView();
 
-						const body = entry.body
-							.replaceAll("​", "")
-							.replaceAll("<p></p>", "");
-
 						// Replace title, body and image url with the selected version
 						document.getElementById("title").innerText = entry.title;
+
+						fetch(v2Url + "/" + entry.contentPath)
+							.then((response) => response.json())
+							.then((content) => {
+								const body = content.body
+									.replaceAll("​", "")
+									.replaceAll("<p></p>", "");
 						document.getElementById("body").innerHTML = body;
+							});
+
 						document
 							.getElementById("image")
 							.setAttribute(
 								"src",
-								"https://launchercontent.mojang.com" + entry.image.url
+								baseUrl + entry.image.url
 							);
 
 						for (let elem of document.getElementsByClassName(
