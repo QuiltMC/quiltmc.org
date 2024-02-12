@@ -167,6 +167,14 @@ export default {
 			},
 		],
 	},
+	Ghoul: {
+		name: "Ghoul",
+		discord: "shinysprigatito",
+		github: "Kitty-Therapist",
+		avatar: "https://cdn.discordapp.com/avatars/298618155281154058/a_83ab26b9b4753486762730774f20be16.gif",
+		description:
+			"I am an cat lover, which I happen to have over 20 cats which I try to spend my time with them. In my off time, you can usually catch me playing various games - usually the Sims 4 or Pokemon game. Sometimes I will draw or color, or I'd just hang out with my cats.",
+	},
 	Kroppeb: {
 		name: "Kroppeb",
 		discord: "Kroppeb",
