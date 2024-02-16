@@ -1,0 +1,117 @@
+---
+title: "Toberfest贡献指南"
+description: 参与 Hacktoberfest 或 Modtoberfest 对 Quilt 的贡献指南
+layout: /src/layouts/Page.astro
+sidebar: false
+---
+
+import site from "@data/Site";
+
+在今年的十月，Quilt 将参加两个开源贡献挑战活动：[Hacktoberfest](https://hacktoberfest.com) 和 [Modtoberfest](https://modtoberfest.com)。如果您想作为这些挑战的一部分为 Quilt 做出贡献，非常感谢！我们创建了这个指南，以帮助您做出最好的贡献，并最大化您被接受的机会。
+
+## 使用 Git 和 GitHub
+
+对于大多数开发人员来说，Git 和 GitHub 的工作原理都是很熟悉的，但是今年的 Hacktoberfest 接受低代码或非代码贡献来计入您的总数，所以本节将为您提供一个基本概述，介绍它们的工作方式，以防您对此还不熟悉。这不是一个高级指南，仅仅是基础知识的概述，如果您已经熟悉提交、分支、推送和拉取请求，可以跳过本节。
+
+### 设置 GitHub 账户
+
+GitHub 是一个托管 git 存储库的服务（也就是说，托管了由 git 跟踪的文件夹），以便人们可以轻松地下载并共同工作。我们将在后面更详细地介绍 git 的工作原理，但首先，您需要前往 [https://github.com/signup](https://github.com/signup) 创建一个账户。完成后，点击右上角的头像，然后点击"Settings"。这里有很多设置可以查看，但只有几个需要更改。点击侧边栏中的"Email"，确保"Keep my email address private"和"Block command line pushes that expose my email"两项都被勾选。这是为了确保您不会意外泄露您的电子邮件地址，因为所有的 git 提交都必须包含一个电子邮件地址，但是通过启用这些设置，GitHub 会默认为您提供一个公开的地址来关联您的提交，并阻止您意外上传使用个人电子邮件的提交。
+
+### Fork 一个存储库
+
+如果您找到了一个您想要贡献的 GitHub 存储库，第一步是将其 Fork。这将创建一个您可以控制的存储库的副本，这样您就可以在不影响原始存储库的情况下安全地进行更改，然后通过拉取请求将它们提交回原始存储库（稍后会详细介绍）。Fork 一个存储库很简单，只需转到您想要工作的存储库，并点击右上角的"Fork"按钮。在下一个屏幕中，保持默认设置，然后点击"Create fork"。几秒钟后，您将被带到一个由您控制的存储库副本，并且您的 Fork 将准备就绪。
+
+### 使用 github.dev 进行更改
+
+在本地安装和配置 git 可能是一个复杂的过程，但如果您不做任何复杂的更改（例如编写文档或进行翻译），使用 github.dev 可能会更容易。github.dev 是一个在浏览器中运行的几乎完整功能的 Visual Studio Code 编辑器版本。您进行的所有提交都将直接发送到 GitHub，所以不需要在本地运行 git。要使用 github.dev，您只需访问您 Fork 的存储库，并在键盘上按下`.`键，您将进入在浏览器中运行的 VSCode 实例，您的存储库已打开并准备进行编辑。继续按照本指南，跳到"Commits"一节。
+
+### 在本地安装 git
+
+如果您希望在本地工作，可以根据您的操作系统选择多种方式安装 git：
+
+#### Windows
+
+您可以从 [https://git-scm.com/download/win](https://git-scm.com/download/win) 下载 Windows 版的 Git。
+
+### macOS
+
+苹果在其 Xcode 命令行工具中包含了 git，您可以通过打开 Terminal 应用程序并键入`xcode-select --install`来下载它。请注意，这还附带了许多其他工具，不会造成任何损害，但可能会占用您不希望占用的计算机空间。如果您使用 [Homebrew](https://brew.sh)，可以通过在终端中运行`brew install git`来安装它。
+
+### Linux
+
+如果 git 没有随您的发行版一起安装，您几乎肯定可以使用您选择的软件包管理器进行安装。
+
+### 安装 GitHub Desktop
+
+Git 是为终端使用而设计的，但如果您不是开发人员，可能会感到有些吃力，因此我们将使用[GitHub Desktop](https://desktop.github.com)来为我们设置一切。有许多内置了 git 功能的文本编辑器和集成开发环境（IDE），如 Visual Studio Code，它驱动着 github.dev，但我们将使用 GitHub Desktop，因为它可以与几乎任何您想使用的文本编辑器一起使用。下载并安装 GitHub Desktop 时，使用您的 GitHub 用户名和电子邮件设置 git。
+
+在接下来的屏幕中，搜索您的 fork 仓库，并点击"Clone"按钮
+![GitHub Desktop克隆仓库屏幕截图](/assets/img/writing/toberfest/toberfest-1.png)
+确保您对仓库的本地路径感到满意，然后点击 Clone 按钮。
+![GitHub Desktop克隆确认屏幕截图](/assets/img/writing/toberfest/toberfest-2.png)
+
+### Commits
+
+Commits 是 git 的基本构建块。每个 commit 代表着某个时间点的快照，而 git 的真正强大之处在于整个仓库的历史记录，从第一个 commit 到最后一个 commit，都被保存在其中。有了正确的知识，您可以回到任何时间点，并查看仓库当时的状态，没有任何东西会真正丢失。
+
+每当您对仓库进行更改时，都需要提交(commit)这些更改。不必担心您提交了太多的 commits，因为当它们被添加到主要仓库时，它们都将被"压缩"成一个单独的 commit。在提交(commit)时，您需要编写一个 commit 概要(summary)，以及可选的 commit 描述(description)，如果您觉得需要更详细的信息。在 GitHub Desktop 中，commits 显示在窗口的左侧，同时还会显示将在该 commit 中更改的所有文件的列表。
+
+commit 消息通常使用现在时来编写，例如"Update the site information"而不是"Updated the site information"。这是因为 commit 消息被视为描述 commit 如何改变仓库，而不是记录已更改内容的记录。虽然刚开始可能难以适应，但这是一个与他人合作时应养成的好习惯。
+
+定期"push"或上传您的 commits 到 GitHub 是个好主意，例如，每当您休息一下工作时。这样做可以确保如果您丢失或意外损坏了本地仓库的副本，您仍然有一个相对最新的版本，可以随时从 GitHub 获取。在 GitHub Desktop 中，您可以点击窗口顶部的"Push to Origin"按钮来推送您的更改。
+
+如果您使用的是 github.dev，则 Commit 菜单位于搜索放大镜下方的侧边栏。无需推送更改，因为它们将自动发送到 GitHub。
+
+![Visual Studio Code侧边栏的部分截图，显示Source Control图标](/assets/img/writing/toberfest/toberfest-3.png)
+
+### Branches
+
+分支是 Git 的另一个关键概念。在核心上，分支是一系列提交记录的路径，它们在某个时刻从主分支（可以将其视为主干）分离出来并独立存在。这在你想要进行更改，但又不想让文件在主分支上面临损坏风险时非常有用，因此你可以创建一个分支，在不影响主分支的情况下继续工作。例如，在 [quiltmc.org 仓库](https://github.com/quiltmc/quiltmc.org) 中，任何提交到 `stable` 分支（即主分支）的内容都会自动发布到主要网站上，因此我们始终确保在将更改发送到主分支之前，在其他分支上开发和测试新页面或功能。
+
+当对你打算发送回原始仓库的分叉进行更改时，优秀的行为准则是为自己创建一个工作分支，而不是直接提交到主分支。在 GitHub Desktop 中，点击 "Current Branch" 按钮，然后点击 "New Branch"，给分支命名，并点击 "Create Branch"。你将自动切换到新分支。
+![显示 GitHub Desktop 的分支选择界面的截图](/assets/img/writing/toberfest/toberfest-4.png)
+在 github.dev 中，有一个位于左下角的绿色 GitHub 文本旁边的小按钮。点击它，然后点击 "Create New Branch" 创建一个新的分支。
+
+![显示 Visual Studio Code 的分支选择界面的截图](/assets/img/writing/toberfest/toberfest-5.png)
+
+### Pull Requests
+
+关于 Git 和 GitHub，你需要了解的最后一件事是 Pull Request 的概念。Pull Request 是 GitHub 用于在分支之间发送更改的系统，或者更重要的是，从一个仓库的分支派生的 Fork 回到原始仓库。要创建 Pull Request，请访问你在 GitHub 上的 Fork，点击左上角的"current branch"，然后选择具有你的更改的分支以切换到该分支。
+
+![在github.com上突出显示分支切换界面的屏幕截图](/assets/img/writing/toberfest/toberfest-6.png)
+
+然后点击"Contribute"，然后点击"Create Pull Request"。关于在 Pull Request 中需要包含的更多信息可以在页面的下方找到。
+
+这就是使用 git 和 GitHub 的基础知识。如果你有兴趣了解更多关于 git 的工作原理的知识，可以参考 [https://learngitbranching.js.org](https://learngitbranching.js.org) 这个优秀的可视化教程。如果你遇到困难，不要害怕在<a href={site.discordCommunity}>Discord</a>上寻求帮助。
+
+## 寻找要贡献的项目
+
+以下 Quilt 项目正在接受 Hacktoberfest 和 Modtoberfest 的**代码**Pull Request：
+
+- [Chasm](https://github.com/quiltmc/chasm)
+- [Developer Wiki](https://github.com/quiltmc/developer-wiki)
+- [Enigma](https://github.com/quiltmc/enigma)
+- [Mappings Hasher](https://github.com/quiltmc/mappings-hasher)
+- [Quilt Loom](https://github.com/quiltmc/quilt-loom)
+- [quiltmc.org](https://github.com/quiltmc/quiltmc.org)
+- [Quilted Fabric API](https://github.com/quiltmc/quilted-fabric-api)
+- [Quiltflower](https://github.com/quiltmc/quiltflower)
+- [Quilt Mappings](https://github.com/quiltmc/quilt-mappings)
+- [Quilt Standard Libraries](https://github.com/quiltmc/quilt-standard-libraries)
+
+此外，以下 Quilt 项目接受 Hacktoberfest 的**低代码或非代码**Pull Request：
+
+- Developer Wiki（文档）
+- quiltmc.org（翻译）
+
+在确定要贡献的仓库后，一个很好的起点是查看 Issues 标签，找到你认为可以帮助的内容，除非你已经有具体想法。如果你找到了你认为自己可以做的事情，请留下评论说明你打算参与，并在开始工作之前澄清任何你不确定的细节。同样，如果你尝试的内容没有在问题中被跟踪，请务必在 GitHub 上创建一个问题或与开发人员在<a href={site.discordCommunity}>Discord</a>上交流确认这对项目是否有益，我们不希望你的工作白费！我们不会接受明显低努力或无帮助的贡献，Pull Request 将由负责该仓库的团队自行决定是否接受。
+
+一旦确定了要做的工作，请务必阅读仓库的贡献指南，通常可以在 README 或 CONTRIBUTING.md 文件中找到。这些指南不仅会给出在本地开发仓库的建议，而且通常还包含有关提交贡献的适当程序和代码约定的信息。遵循正确的程序和约定提交的贡献很可能会被迅速审查和接受。一些仓库还可能有其他与贡献相关的文件，这些文件可能不那么明显，比如在 quiltmc.org 中的`ARCHITECTURE.md`，所以在开始之前最好好好查看一下。
+
+### Pull Requests
+
+完成并测试你的工作后，现在是将其作为 Pull Request 提交的时候了。所有的贡献都必须以 Pull Request 的形式提交，以便在 Hacktoberfest 和 Modtoberfest 中进行跟踪，包括低负荷或非代码贡献。
+
+在你的 Pull Request 标题中，简要概述你的更改，在描述中提供更详细的信息。请确保说明你希望你的贡献计入 Hacktoberfest、Modtoberfest，或者两者都计入。记住，书写良好的 Pull Request 会让每个人的生活更轻松，也更有可能被及时地审查和接受。
+
+如果你对 Pull Request 的流程不熟悉，通常的流程如下：在提交 Pull Request 后，负责接收你的 Pull Request 的团队成员会检查你的工作，并告诉你需要做出哪些修改，然后才能将其合并到主要仓库中。要对 Pull Request 中的文件进行任何更改，只需将它们提交到你用来创建 Pull Request 的分支中，只要你记得将它们推送到 GitHub，它们就会自动添加进去。

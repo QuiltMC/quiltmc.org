@@ -1,0 +1,76 @@
+---
+title: FAQ (Developers)
+description: Frequently asked questions, but for developers.
+layout: /src/layouts/Page.astro
+---
+
+import Message from "@atoms/Message.astro";
+
+<Message>
+
+## 开发者文档在哪里？
+
+Quilt 的开发者文档目前还处于极为初步的阶段，远未达到可用的状态。然而，我们正在努力完善，并且您可以在[modder.wiki.quiltmc.org](https://modder.wiki.quiltmc.org)上预览到目前为止的内容。
+
+</Message> <Message>
+
+## 为什么我应该选择 Quilt 而不是 Fabric 进行我的模组开发？
+
+对于开发者来说，Quilt 相比于 Fabric 提供了以下优势：
+
+- 更全面的 API，可以更快、更轻松地开发兼容性更好的模组
+- 模块化的 API 方法也适用于您的模组，无需将 API 模块以 jar-in-jar 方式打包，也不需要让用户单独下载它们
+- 改进的反编译器（相较于[Fabric 的 Fernflower 分支](https://github.com/FabricMC/intellij-fernflower)），提供了更可读、更准确、更易理解的输出，让您更好地了解 Minecraft 的代码
+- 对映射的替代方法，基于 Yarn 但移除了清空规则，可以提供更准确的命名，而不影响质量，同时在使用不同映射集时更容易在官方渠道寻求支持
+- 更注重社区的方法，确保每个人在提出问题和发表意见时都能被听到，无论他们是开发者的数量还是知名度如何
+- **未来目标：**一种新的碰撞处理 ASM 后端（Chasm），它作为我们 mixin 和访问拓展实现的支撑，使这些和其他字节码操作工具能够在 Quilt 的构建工具或加载器中无需特殊处理而正常工作，并帮助模组保持互相兼容
+
+</Message>
+
+<Message>
+
+## 什么是所谓的无干扰(clean-room)方法，为什么它很重要？
+
+当谈到**无干扰(clean-room)**时，我们指的是[Fabric 的 Yarn 映射项目](https://github.com/FabricMC/yarn)采取的一种特定贡献方法。Yarn 采用一种方法来确保项目的安全性，拒绝明显受到其他映射项目（如 MCP 和 Mojang 官方映射）名称启发的名称。它还阻止贡献者查看其他映射项目的名称，并要求在 Fabric 的官方社区空间中的讨论不涉及非 Yarn 名称。
+
+然而，Quilt Mappings（以下简称 QM）采取了不同的方法。由于该项目使用[知识共享零许可证](https://creativecommons.org/share-your-work/public-domain/cc0)（与 Yarn 类似），QM 明确表示不主张对这些名称拥有所有权，而是对可能派生自其他映射项目的任何贡献的名称保留了相应的所有权。此外，QM 还包含明确显示某些名称的所有权可能属于其他映射项目（并提供适当的致谢）的许可通知等，这使得 QM 的贡献者可以参考其他映射项目来确定某个名称的最佳选择。这也意味着我们不必在官方社区空间中禁止涉及其他项目名称的讨论。
+
+然而值得注意的是，**某个名称出现在其他映射项目中并不意味着我们会接受它**。所有贡献的名称都必须能够独立自立，无论 Mojang 或其他组织提供什么名称。
+
+</Message>
+
+<Message>
+
+## 移植我的 Fabric 模组有多难？
+
+我们计划尽可能减少这个过渡带来的不便。我们将匹配 Fabric 的 API 表面，允许您继续使用 Yarn 的映射，并为正在移植其模组的开发人员提供支持。值得注意的是，在撰写本文时，Quilt 的向后兼容性工作支持包含 mixin 插件（例如用于条件混入）的 Fabric 模组，但一旦[Chasm](#what-the-heck-is-chasm-exactly)添加到工具链中，这种支持将不再存在。Quilt 将提供一种具有适当工具链支持的替代方法，并且我们将帮助您找到如何切换到该方法的方式，如果您需要支持的话。
+
+</Message>
+
+<Message>
+
+## 加载 Fabric mod 的向后兼容性能持续多久？
+
+只要保持与 Fabric 的兼容性不会对项目产生负面影响，我们将继续这样做。但是，如果维护兼容性变得不可行，我们将帮助将其转移到一个由社区运行的项目，并为其开发人员提供所需的支持，以便他们可以继续工作。
+
+简而言之，向后兼容性将一直持续到无法继续维护为止。
+
+</Message>
+
+<Message>
+
+## 如何开始编写 Quilt 模组？
+
+虽然我们目前仍在努力完善开发者文档，但我们有一个[模板模组](https://github.com/QuiltMC/quilt-template-mod)，您可以将其用作模板，或者仅用作入门参考。我们将在测试期间和之后继续完善文档，敬请关注！
+
+</Message> <Message>
+
+## 到底什么是 Chasm？
+
+Chasm 是**碰撞处理 ASM（Collision Handling ASM）**的缩写。Chasm 是一个字节码转换库，作为一个后端用于通过单独的前端使用，而不是供模组直接使用。它旨在提供一种更安全的运行时修改字节码的方式，自动处理碰撞并努力帮助模组保持兼容性。
+
+使用 Chasm 的前端包括 Access Widener 和 Mixin。然而，Quilt 或社区也可以编写其他额外的前端。
+
+目前 Chasm 尚未实现，但我们正在努力开发中！
+
+</Message>

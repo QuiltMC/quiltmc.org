@@ -1,6 +1,6 @@
 lang-name = 简体中文
 
-title = The Quilt Project
+title = Quilt 项目
 short-title = QuiltMC
 description = 真正关心你的模组加载器。
 
@@ -11,7 +11,9 @@ serial-comma = {$prev}、{$next}
 -developer-wiki = 开发者 Wiki
 -forum = 论坛
 -import-utility = Quilt 导入工具
+-help-wanted = 需要帮助
 -patch-notes = 更新日志
+-sponsors = 赞助商
 -staff-resources = 内部资源
 -template-mod = 模组模板
 
@@ -22,7 +24,15 @@ serial-comma = {$prev}、{$next}
 -twitter = Twitter
 -twitch = Twitch
 
-page-authors = 作者：{$names}
+page-authors =
+	{ $count ->
+        [one] Author
+        *[other] Authors
+	}: {$names}
+page-edited = 编辑于：{DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+post-date = {DATETIME($date, month: "long", year: "numeric", day: "numeric")}
+edit-on-github = 在 GitHub 上编辑这个页面
+
 
 nav-about = 关于
 nav-blog = 博客
@@ -36,24 +46,30 @@ divider-external-links = 外部链接
 
 nav-page-developer-wiki = {-developer-wiki}
 nav-page-import-utility = {-import-utility}
-nav-page-maven-repo = Maven 库
+nav-page-maven-repo = Maven 仓库
 nav-page-help-wanted = {-help-wanted}
 nav-page-patch-notes = {-patch-notes}
+nav-page-sponsors = {-sponsors}
 nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
+nav-page-legal = 准则
+nav-page-donate = 捐赠
 
 button-close = 关闭
 button-discord = {-discord}
-button-discord-toolchain = 开发服务器
+button-discord-toolchain = 工具链
 button-developer-wiki = {-developer-wiki}
+button-donate = 捐赠
 button-forum = {-forum}
 button-github = {-github}
 button-install = 安装
+button-join-npo = Join The Non-Profit
 button-mastodon = {-mastodon}
 button-maven-repo = Maven 库
 button-more = 更多
 button-more-posts = 更多文章
 button-help-wanted = {-help-wanted}
+button-official-site = 官方网站
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS
 button-template-mod = {-template-mod}
@@ -64,6 +80,7 @@ button-usage-docs = 使用文档
 sidebar-pages = 页面
 sidebar-resources = 资源
 sidebar-teams = 团队
+sidebar-versions = 版本
 
 paginator-button-first = 第一页
 paginator-button-previous = 上页
@@ -77,5 +94,6 @@ prompt-error-noscript = 你已禁用 JavaScript。请启用 JavaScript 以使用
 prompt-search-language = 在这里查找你的语言……
 
 page-404 = 404
-page-404-title = 页面失踪了 :(
+page-404-title = 页面未找到 :(
 page-404-subtitle = 找不到你要访问的页面 orz
+page-404-image-title = Sad Pineapple :(

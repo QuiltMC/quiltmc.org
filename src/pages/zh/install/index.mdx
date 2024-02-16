@@ -1,0 +1,25 @@
+import Install from "/src/layouts/Install.astro";
+import Message from "@atoms/Message.astro";
+
+<Install content={{ title: "Install", permalink: "/install/" }}>
+<div slot="direct">
+    直接安装
+</div>
+
+<div slot="launchers">
+    <h1 class="mb-0">启动器</h1>
+
+    **请注意：**本页面上第三方启动器的存在并不代表 Quilt 项目的认可。我们只是相信用户的选择很重要！
+
+</div>
+
+<div slot="awaitingSupport">
+    # 等待支持
+
+    <Message style="primary" bodyStyle="has-text-left">
+        此列表中的启动器目前尚不支持 Quilt ，但已有人提出要求，或者他们正在进行相关的工作。您可以点击它们了解更多有关它们的进展情况，或者在可能的情况下了解使用它们安装 Quilt 的解决方法。
+    </Message>
+
+</div>
+
+</Install>

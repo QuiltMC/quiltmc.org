@@ -8,3 +8,6 @@ disclaimer-icons =
 # NOTE: <0></0> is the pineapple emote.
 made-with =
     制作中使用了 <0></0> 、<1>Bulma</1>、以及 <2>CreativeBulma 插件</2>
+
+sponsored-by =
+	Powered by <0>Cloudflare</0>.
