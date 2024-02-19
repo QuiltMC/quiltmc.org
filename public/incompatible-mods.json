@@ -49,13 +49,6 @@
   },
 
   {
-    "ids": ["viafabricplus"],
-    "name": "ViaFabricPlus",
-    "type": "GAME",
-    "note": "Only occurs on linux"
-  },
-
-  {
     "ids": ["vulkanmod"],
     "name": "VulkanMod",
     "type": "GAME"
@@ -105,9 +98,21 @@
     "note": "Tries to crash the game as part of a targetted harassment campaign against Quilt and its users"
   },
   {
-    "ids": ["levelz"],
-    "name": "LevelZ",
+    "ids": ["dynmap"],
+    "name": "Dynmap",
     "type": "GAME",
-    "note": "Crashes due to use of an internal Fabric API Class. There is [an open Pull Request](https://github.com/Globox1997/LevelZ/pull/286) to fix the incompatibility on GitHub"
+    "note": "[Relevent GitHub Issue](https://github.com/webbukkit/dynmap/issues/4016)"
+  },
+  {
+    "ids": ["chattriggers"],
+    "name": "ChatTriggers",
+    "type": "SELF",
+    "note": "Modules can be loaded and managed, but are unable to be executed on Quilt."
+  },
+  {
+    "ids":["dml-refabricated"],
+    "name": "Deep Mob Learning: Refabricated",
+    "type": "GAME",
+    "note": "Crashes the game if there is another mod that utilises QSL libraries (as opposed to Quilted Fabric API ones)"
   }
 ]

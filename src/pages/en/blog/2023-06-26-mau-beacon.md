@@ -5,6 +5,7 @@ authors:
   - ix0rai
 layout: /src/layouts/Post.astro
 ---
+**Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
 
 If you've been keeping tabs on our RFC, or Request For Comment, [repository](https://github.com/QuiltMC/rfcs), you may have noticed that we've
 just merged a proposal for Quilt Loader to keep tabs on how many people are using it each month. All considered, it's unfortunate that it was RFC 81,

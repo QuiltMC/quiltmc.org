@@ -6,6 +6,7 @@
 -technic = Technic
 -curseforge = CurseForge
 -gdlauncher = GDLauncher
+-modrinth = Modrinth App
 
 platform-bakaxl = BakaXL
 platform-client = Client
@@ -14,6 +15,7 @@ platform-atlauncher = {-atlauncher}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
+platform-modrinth = {-modrinth}
 platform-curseforge = {-curseforge}
 platform-gdlauncher = {-gdlauncher}
 
@@ -24,6 +26,7 @@ logo-bakaxl = {-bakaxl} logo
 logo-multimc = {-multimc} logo
 logo-prismlauncher = {-prismlauncher} logo
 logo-technic = Technic Launcher logo
+logo-modrinth = {-modrinth} logo
 logo-curseforge = {-curseforge} logo
 logo-gdlauncher = {-gdlauncher} logo
 

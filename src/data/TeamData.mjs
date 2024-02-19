@@ -49,12 +49,6 @@ export default {
 			},
 		],
 	},
-	Alice: {
-		name: "Alice",
-		discord: "no.nit.ro.alice",
-		github: "lenrik1589",
-		avatar: "/assets/img/team/Alice.png"
-	},
 	applejuice: {
 		name: "applejuice",
 		discord: "applejuice__",
@@ -76,15 +70,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/49926638?v=4",
 		description:
 			"Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems.",
-	},
-	Ember: {
-		name: "Ember",
-		discord: "Ember",
-		github: "Ember-ruby",
-		avatar: "https://avatars.githubusercontent.com/u/48266942",
-		description:
-			"Trans & Autistic person with an interest in most things tech. it/its",
-		links: [{ icon: "fa fa-link", url: "https://emberdev.me" }],
 	},
 	EnnuiL: {
 		name: "Ennui Langeweile",
@@ -114,18 +99,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/1300078?v=4",
 		description: "Resident silverware expert.",
 		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
-	},
-	Foxes: {
-		name: "&foxes",
-		discord: "foxes",
-		github: "0xf24",
-		avatar: "/assets/img/team/foxes/foxes.png",
-		description: "foxbox compliance officers",
-		systemMembers: [
-			{name: "lily", icon: "/assets/img/team/foxes/lily.png"},
-			{name: "scarlet", icon: "/assets/img/team/foxes/scarlet.png"},
-			{name: "violet", icon: "/assets/img/team/foxes/violet.png"},
-		]
 	},
 	Fusion: {
 		name: "Fusion Flux",
@@ -158,6 +131,13 @@ export default {
 		github: "TheGlitch76",
 		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
 	},
+	Iota: {
+		name: "Iota",
+		discord: "iotabread",
+		github: "IotaBread",
+		avatar: "https://avatars.githubusercontent.com/u/47987888",
+		description: "Java programmer and Minecraft modder.",
+	},
 	ix0rai: {
 		name: "ix0rai",
 		discord: "ix0rai",
@@ -186,6 +166,14 @@ export default {
 				url: "https://www.curseforge.com/members/Jamalam360/projects",
 			},
 		],
+	},
+	Ghoul: {
+		name: "Ghoul",
+		discord: "shinysprigatito",
+		github: "Kitty-Therapist",
+		avatar: "https://cdn.discordapp.com/avatars/298618155281154058/a_83ab26b9b4753486762730774f20be16.gif",
+		description:
+			"I am an cat lover, which I happen to have over 20 cats which I try to spend my time with them. In my off time, you can usually catch me playing various games - usually the Sims 4 or Pokemon game. Sometimes I will draw or color, or I'd just hang out with my cats.",
 	},
 	Kroppeb: {
 		name: "Kroppeb",
@@ -230,48 +218,6 @@ export default {
 			}
 		]
 	},
-	Leah: {
-		name: "Leah",
-		discord: "pluie",
-		github: "pluiedev",
-		avatar: "/assets/img/team/Leah.png",
-		description:
-			"Chinese girl writing code, drawing paintings, loving Rust, loathing JavaScript, what have you.",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://pluie.me/",
-			},
-			{
-				icon: "fak fa-modrinth-small",
-				url: "https://modrinth.com/user/PTgBL2mx",
-			},
-			{
-				icon: "fab fa-mastodon",
-				url: "https://blobfox.coffee/@pluie",
-			},
-			{
-				icon: "fab fa-youtube",
-				url: "https://youtube.com/@pluiedev",
-			},
-		],
-	},
-	MartrixX: {
-		name: "MartrixX",
-		discord: "MartrixX",
-		github: "ByMartrixx",
-		avatar: "https://avatars.githubusercontent.com/u/47987888",
-		description: "Java programmer and Minecraft modder.",
-		links: [{ icon: "fas fa-link", url: "https://bymartrixx.me/" }],
-	},
-	maximum: {
-		name: "Boxed",
-		discord: "maximum",
-		github: "maximumpower55",
-		description:
-			"Open-source developer, Game Modder with over 2 years of experience.",
-		avatar: "https://avatars.githubusercontent.com/u/62370320?v=4",
-	},
 	Mazzie: {
 		name: "Mazzie",
 		discord: "mazziechai",
@@ -284,15 +230,6 @@ export default {
 		discord: "Mrn'tMangoHands",
 		github: "mrmangohands",
 		avatar: "/assets/img/team/MrMangoHands.png",
-	},
-	NoComment: {
-		name: "NoComment",
-		discord: "NoComment",
-		github: "NoComment1105",
-		description:
-			"Chaotic puppet on fire that likes to program in Kotlin and write Discord bots, while matching quilt-mappings",
-		avatar: "https://avatars.githubusercontent.com/u/67918617?v=4",
-		systemMembers: "pk:loobg"
 	},
 	objobj: {
 		name: "[object Object]",
@@ -391,13 +328,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/25536265",
 		description: "Busy blowing up new things.",
 	},
-	Redblueflame: {
-		name: "Valentin Ricard",
-		discord: "Redblueflame",
-		github: "Redblueflame",
-		avatar: "/assets/img/team/Redblueflame.png",
-		links: [{ icon: "fas fa-link", url: "https://redblueflame.com/" }],
-	},
 	snoozestudios: {
 		name: "snoozestudios",
 		discord: "snoozestudios",
@@ -444,33 +374,6 @@ export default {
 			},
 		],
 	},
-	Stardew: {
-		name: "Stardew",
-		discord: "Hanna",
-		github: "hqnna",
-		avatar: "/assets/img/team/stardew/stardew.png",
-		systemMembers: [
-			{name: "Hanna", icon: "/assets/img/team/stardew/hanna.png"},
-			{name: "Rose", icon: "/assets/img/team/stardew/rose.png"},
-			{name: "Mira", icon: "/assets/img/team/stardew/mira.png"},
-			{name: "Jay", icon: "/assets/img/team/stardew/jay.png"},
-			{name: "Chloe", icon: "/assets/img/team/stardew/chloe.png"}
-		],
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://hanna.lol"
-			},
-			{
-				icon: "fas fa-message",
-				url: "https://fedi.hanna.lol"
-			},
-			{
-				icon: "far fa-circle",
-				url: "https://sr.ht/~hanna"
-			}
-		]
-	},
 	supersaiyansubtlety: {
 		name: "supersaiyansubtlety",
 		discord: "supersaiyansubtlety",
@@ -502,19 +405,6 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/37983572?v=4",
 		links: [{ icon: "fas fa-link", url: "https://tibinonest.me/" }],
 	},
-	Valeria: {
-		name: "Valeria Nairi (\"SnugglyBun\")",
-		discord: "snugglybun_scsp",
-		github: "Curly68",
-		description: "22 year old, she/buns, can't code stuff but can help in other areas like translation. First language is Spanish but i'm also really good at English. Also a musician for some reason. On my Quilt arc",
-		avatar: "https://avatars.githubusercontent.com/u/104454752?v=4",
-		links: [
-			{
-				icon: "fab fa-youtube",
-				url: "https://www.youtube.com/channel/UCXQEFjYWWYikjNCHqxbBQNg",
-			}
-		]
-	},
 	Woodie: {
 		name: "Woodie",
 		discord: "woodiertexas",
@@ -536,12 +426,12 @@ export default {
 		description:
 			"Minecraft Modder who enjoys the comfortable feeling of crocs on their feet",
 	},
-	Zxhir: {
-		name: "Zxhir",
-		discord: ".zxhir",
-		github: "Imzxhir",
-		description: "I am a potato who does random things and tries to improve on my own skills one at a time. I also like to write",
-		avatar: "https://avatars.githubusercontent.com/u/98621617?v=4",
+	Zoe: {
+		name: "Zoe",
+		discord: "antikyth",
+		github: "Antikyth",
+		description: "Student and hobbyist programmer trying to make the world a better place.  Wants to make software more approachable for all.",
+		avatar: "https://avatars.githubusercontent.com/u/104020300"
 	},
 	_NotFound_: {
 		name: "Member not found",

@@ -5,7 +5,9 @@ authors:
   - Southpaw1496
 layout: /src/layouts/Post.astro
 ---
-**Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was errorneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
+**Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
+
+**Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was erroneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
 
 Quilt Loader 0.19.2 adds beacon functionality to count Quilt's Monthly Active Users, or MAUs. There has recently been some confusion about how this functionality works and why it was added, so this blog post is intended to provide a clear explanation of both of those things.
 
@@ -17,7 +19,7 @@ Most telemetry is gathered with the intention of precisely learning how differen
 When Quilt Loader is launched, it first checks if the user has opted out of telemetry (more on this later), or if it has already added you to this month's active user count. If it neither of those apply, it sends an empty request to `beacon.quiltmc.org`, containing no data except the bare minimum that it needs to establish a connection. No identification, no information about how you're using Quilt Loader, no nothing. It then records the fact that it has made this request in a local file that is shared among all your Minecraft instances, so that it doesn't send any more requests that month. After receiving the request, the Beacon server increments the Monthly Active User counter, logs the request as a simple timestamp, then deletes all the connection data associated with the request that it just received.
 
 ![A cute graph explaining the process Quilt Loader goes through to update the MAU beacon.](/assets/img/writing/blog/2023-06-26-mau-beacon/beacon-update-process.png)
-Image Credit: ixorai
+Image Credit: ix0rai
 
 It's important to emphasise just how little data is being sent here. You're sending more data away if you:
 - Play Minecraft itself.

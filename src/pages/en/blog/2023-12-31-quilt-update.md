@@ -1,0 +1,43 @@
+---
+title: "Quilt Development Update: December 2023"
+date: 2023-12-31 15:00:00 -00:00
+authors:
+  - ix0rai
+layout: /src/layouts/Post.astro
+---
+
+Welcome back to your favourite series recapping the month's Quilt development! This month saw tons of work on mappings with Enigma `2.0`, plenty of new beta releases for Quilt Loader, work on porting Quilted Fabric API to new Fabric API releases and Minecraft versions, and work on the wiki, Quilt Config, the website, and more for our lovely miscellaneous section.
+
+<!-- MORE -->
+
+## Quilt Standard Libraries
+This month saw just one new pull request on the QSL repository: an [update to `1.20.2`](https://github.com/QuiltMC/quilt-standard-libraries/pull/356) by moe of mappings team fame. Neat!
+
+While QSL development has remained quiet this month, the QFAPI cogs have begun spinning again, with two new pull requests: unilock's [1.19.2 update](https://github.com/QuiltMC/quilted-fabric-api/pull/141), bringing our support up to FAPI `0.77.0`, and Kneelawk's [1.20.1 update](https://github.com/QuiltMC/quilted-fabric-api/pull/140), bringing Fabric API `0.91.0`. That's not all that's gone on, however: our lovely OroArmor has continued to finalise the work on bringing Fabric compatibility to `1.20.2`. The inside scoop is that the number of files with compilation errors has been whittled down from hundreds to just four, so make sure to show him some love for his hard work.
+## Quilt Loader
+Loader has seen quite a bit of activity in the background this month, with the beginning of the betas for `0.22.1` as well the `0.23` release. Among the improvements slated for the next versions are [improvements to debugging](https://github.com/QuiltMC/quilt-loader/commit/d8dc29ae07199526d7687e310909d00eed64f3ef), [expanded crash reports](https://github.com/QuiltMC/quilt-loader/commit/b64aa65aedbf074d7066f2c3110cda8875e10dc0), [support for Mixin Extras](https://github.com/QuiltMC/quilt-loader/commit/93d4f65443d3e199f67877f98200d9d9fdc7acbc) to match Fabric Loader's recent implementation, [new API methods](https://github.com/QuiltMC/quilt-loader/commit/076ad1c197e0f5ca128795a4e93d4ee2f059f4b1), and of course tons of bugfixes.
+
+Alex has also continued working in the background on the huge [path retention PR](https://github.com/QuiltMC/quilt-loader/pull/385), making tons of improvements. For a sneak peek, here's the new set of user-friendly errors for unsupported mod files:
+![Some very descriptive loader startup errors for unsupported mod files](/assets/img/writing/blog/2023-12-31-quilt-update/quilt-loader-errors.png)
+
+## Quilt Mappings
+As always, QM has stayed up to date with the latest versions, being ported to `1.20.3-rc1`, `1.20.3`, `1.20.4-rc1`, `1.20.4`, `23w51a`, `23w51b` this month. New mappings have been light, but the lovely [moe](https://github.com/moehreag) came through with a [bunch of new classes ](https://github.com/QuiltMC/quilt-mappings/pull/516) for you! We also got a [new class](https://github.com/QuiltMC/quilt-mappings/pull/519) courtesy of Kneelawk that came with the added bonus of fixing a game crash when breaking chests. The diverse ways that mapping issues can crash the game continue to amaze.
+
+This has been a huge month for [Enigma](https://github.com/QuiltMC/enigma), the tool we use to create mappings, with the release of Enigma `2.0`! Half a year in the making, this is our largest update to Enigma ever, or as I called it in the announcement, the greatest revolution in mapping technology since the last time we updated Enigma. Instead of giving you what we did on the update just this month, here's the highlight reel of the whole thing.
+
+In the backend, we've done some major reorganisation: the base package is now `org.quiltmc.enigma`, and we've moved every class into either an `api` or `impl` package. This means that you can trust we're not going to make any breaking changes to functionality in the `api` package until `3.0`! We also introduced indexing for mappings, meaning that just like how Enigma analyses JAR files to provide utilities, you can now do the same with mappings! Currently, we use this in the UI to tell you when a rename will create a new package. Finally, we did quite a few reworks to the plugin API, especially in the name proposal department. Now, the API is event-based, which means your plugin can provide names after two events: opening a JAR file, and when the mappings change. This took quite a few API changes, so make sure to read the [full changelog](https://github.com/QuiltMC/enigma/blob/master/CHANGELOG.md#200) if you're interested in writing a plugin.
+
+The command line got slightly less love, but nonetheless a few neat updates:
+1. All commands now automatically detect the format of their input mappings: one less argument for you to write!
+2. Errors and help have been improved: you can now run the `help` command to see all commands and descriptions of their function. Additionally, in the error message for a command, it will now show you all of its required and optional arguments, as well as descriptions of how to write them and what they do.
+3. All commands now use `kebab-case`, making their names nice and predictable.
+
+The user interface got the most updates here, with some major improvements to help you map faster. We've expanded the statistic system in the class tree: stats are now explicitly stored per-class, giving us the power to display stat icons on packages as well as classes. Additionally, instead of generating statistics for individual classes as they come into view, the stats for the full tree are generated at startup, making navigating the tree much snappier. Moving on to the code view, we added a new feature: the entry navigator. This consists of two buttons and a dropdown, which let you quickly navigate between entries of any token type. The token types are `DEOBFUSCATED`, `OBFUSCATED`, `JAR_PROPOSED`, and `DYNAMIC_PROPOSED`. For an example usage of this, instead of having to scroll through a big class looking for the one entry that you missed, you can simply switch to `OBFUSCATED` in the navigator and use the `ctrl + down arrow` hotkey to navigate to the next unmapped entry. For the final big update to the UI, we've moved over to [Quilt Config](https://github.com/QuiltMC/quilt-config), our in-house config library, for configuration. Your old config will not be migrated, and we've removed our old config library which was built into Enigma. The config now contains helpful comments and is sensibly organised into `net`, `decompiler`, `keybind`, `main`, and `docker` sections. Lovely!
+
+There are tons more updates, including merging tons of changes from Fabric's Enigma (thanks YanisBFT for giving us permission to steal them!), adding more tests and documentation, fixing tons of bugs, and piles of smaller changes we made to the backend and user interface. You can see everything in the [full changelog](https://github.com/QuiltMC/enigma/blob/master/CHANGELOG.md#200)!
+
+Enigma continues to be developed, with `2.1` already on the way, fixing issues and adding yet more features. We've already ported our [Enigma plugin](https://github.com/QuiltMC/quilt-enigma-plugin) and [moved QM over to `2.0`](https://github.com/QuiltMC/quilt-mappings/pull/517), so write some mappings and try them out!
+## Miscellaneous
+First thing we did this month outside of the Big Three projects? Released the [November update](https://quiltmc.org/en/blog/2023-11-30-quilt-update/). We're starting off strong with the release schedule of these posts. That isn't the only thing that happened on the website this month: our brilliant [Southpaw](https://github.com/Southpaw1496), who edits these posts, has been working in the background on updating its backing tech to the latest versions. [Cozy](https://github.com/QuiltMC/cozy-discord), our discord bot, has been getting the same treatment, with sschr15 giving it an aptly named [Big Update tm](https://github.com/QuiltMC/cozy-discord/commit/7e7305d581e0fbf47cbc7d06ebb13c89a28ce021). For one last update to our Web Stuff, our developer wiki got an [awesome PR](https://github.com/QuiltMC/developer-wiki/pull/65) from new contributor c-leri to support multiple languages and translate some articles into French.
+
+To round things off, I dipped my feet into working on Quilt Config, adding some interesting new features to `1.1`, which is currently in beta. It should be released out of beta soon!
