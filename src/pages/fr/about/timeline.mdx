@@ -1,0 +1,105 @@
+---
+title: Chronologie
+description: La chronologie officielle de Quilt - du début à aujourd'hui.
+layout: /src/layouts/Page.astro
+---
+
+import Header from "@parts/timeline/Header.astro";
+import Item from "@parts/timeline/Item.astro";
+import rtlSettings from "@data/RtlSettings";
+
+import site from "@data/Site";
+
+<div class:list={["timeline", rtlSettings().rtl ? "is-rtl" : ""]}>
+  <Header>2021</Header>
+
+  <Item id="2021-02-02" title="2 février 2021" icon="fas fa-wrench">
+    Le serveur Discord de l'initiative Quilt est créé, comme un lieu temporaire pour mettre en place un plan initial pour le projet Quilt.
+
+    <figure>
+      <img alt="i509VCB présente le serveur de l'initiative à ses premiers membres"
+          src="/assets/img/history/2021-02-02_first-initiative-message.png" />
+
+      <figcaption>
+        i509VCB présente le serveur de l'initiative à ses premiers membres
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2021-04-04" title="4 avril 2021" icon="fas fa-people-carry-box">
+    Le serveur Discord de la communauté Quilt est créé, afin de fournir un espace communautaire officiel et public. Pendant que les choses sont encore en train d'être mises en place et planifiées, des invitations à usage unique sont distribuées à des membres de confiance et éminents de la communauté Fabric -- le serveur n'est pas rendu public immédiatement.
+  </Item>
+  <Item id="2021-04-05" title="5 avril 2021" icon="fas fa-eyes">
+    Pour susciter l'intérêt et savoir ce que la communauté des moddeurs pense de Quilt, l'un des membres fondateurs publie un [Pastebin "divulgué"](https://pastebin.com/spNgyCMD) sur un serveur de théâtre. Le document contient des informations sur la gouvernance et la politique de modération d'un nouveau projet nommé "Fabrique", un faux nom utilisé pour éviter de dévoiler les projets de Quilt avant qu'ils ne soient prêts à être rendus publics.
+
+    <figure>
+      <img alt="Le message qui relie le document Pastebin 'divulgué'"
+          src="/assets/img/history/2021-04-05_not-quite-a-leak.png" />
+
+      <figcaption>
+        Le message qui relie le document Pastebin "divulgué".
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2021-04-17" title="17 avril 2021" icon="fab fa-github">
+    L'organisation GitHub de Quilt a atteint la limite de minutes gratuites pour Github Actions, ce qui signifie que ses dépôts doivent être rendus publics. Il ne faut pas longtemps pour que les gens les trouvent !
+
+    <figure>
+      <img alt="i509VCB et Prospector parlent des personnes qui ont trouvé le fork du dépôt Loom."
+          src="/assets/img/history/2021-04-18_out-of-minutes.png" />
+
+      <figcaption>
+        i509VCB et Prospector parlent des personnes qui ont trouvé le fork du dépôt Loom.
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2021-04-20" title="20 avril 2021" icon="fas fa-message-smile">
+    Le serveur Discord de la communauté Quilt est officiellement rendu public, les invitations appropriées étant créées et distribuées. Près de 350 utilisateurs rejoignent le serveur en ce premier jour, ce qui est emblématique de l'intérêt des gens pour le projet et sa communauté.
+
+    Le même jour, le serveur Discord Quilt Toolchain est mis en place et ouvert au public. Ce serveur a été conçu pour les discussions sur le développement des projets, comme un endroit où les gens peuvent travailler ensemble sur Quilt et ses projets, et pour que tout le monde puisse avoir un aperçu des processus de développement de Quilt.
+
+    <figure>
+      <img alt="Earthcomputer et i509VCB partagent des crabes de célébration sur le nouveau serveur Toolchain"
+          src="/assets/img/history/2021-04-20_toolchain-crabs.png" />
+
+      <figcaption>
+        Earthcomputer et i509VCB partagent des "crabes de célébration" sur le nouveau serveur Toolchain
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2021-04-20-later" title="20 avril 2021 (plus tard)" icon="fas fa-pumpkin">
+    Sur le serveur communautaire, une partie de [skribbl.io](https://skribbl.io) a été jouée pour célébrer l'ouverture du serveur au public. Au cours de cette partie, un joueur a été chargé de dessiner une citrouille, et beaucoup de joueurs ont deviné "ananas". Ce dessin est rapidement devenu le préféré de la communauté, et Ananas était né - la première mascotte de la communauté de Quilt.
+
+    <figure>
+      <img alt="Les utilisateurs spamment la nouvelle émote Ananas"
+          src="/assets/img/history/2021-04-20_pineapple-spam.png" />
+
+      <figcaption>
+        Les utilisateurs spamment la nouvelle émote Ananas
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2021-04-22" title="20 avril 2022" icon="fas fa-tags">
+    Quilt entre officiellement dans sa première version bêta ce jour, attirant un afflux de nouveaux utilisateurs et une quantité incroyable de soutien et de commentaires positifs. À la fin de la journée, Quilt chargeait joyeusement les mods Quilt et Fabric, et avait [mis en ligne QSL sur Modrinth](https://modrinth.com/mod/qsl).
+
+    <figure>
+      <img alt="Graphique des nouveaux arrivants sur le Discord du projet Quilt au moment de la sortie de la version bêta"
+          src="/assets/img/history/2022-04-20_join-stats.png" />
+
+      <figcaption>
+        Graphique des nouveaux arrivants sur le Discord du projet Quilt au moment de la sortie de la version bêta.
+      </figcaption>
+    </figure>
+
+  </Item>
+  <Item id="2023-05-09" title="5 mai 2023" icon="fab fa-discord">
+    Quilt met officiellement fin au serveur Discord <a href={site.discordToolchain}>Toolchain</a>, en fusionnant ses canaux avec le serveur Discord <a href={site.discordCommunity}>principal</a>, anciennement le serveur communautaire - dans le but de rapprocher les développeurs des utilisateurs.
+
+		Ce serveur a été mis en lecture seule trois jours plus tard, mais il est toujours possible d'y accéder - au cas où quelqu'un aurait besoin de se référer à un sujet déjà évoqué.
+  </Item>
+  <Header>Aujourd'hui</Header>
+</div>
