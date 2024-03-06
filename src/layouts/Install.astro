@@ -2,7 +2,6 @@
 import Default from "./Default.astro";
 import Main from "@parts/install/Main.astro";
 import Launchers from "@parts/install/Launchers.astro";
-import Awaiting from "@parts/install/Awaiting.astro";
 import WipWarning from "@parts/install/WipWarning.astro";
 ---
 
@@ -31,16 +30,6 @@ import WipWarning from "@parts/install/WipWarning.astro";
 
 			<div class="grid-picker">
 				<Launchers />
-			</div>
-		</div>
-
-		<div class="column is-5">
-			<div class="has-text-centered content mb-0 pb-0">
-				<slot name="awaitingSupport" />
-			</div>
-
-			<div class="grid-picker">
-				<Awaiting />
 			</div>
 		</div>
 	</div>
