@@ -73,6 +73,10 @@ const { style = "is-dark" } = Astro.props as Props;
 
 			<div class="navbar-item has-dropdown is-hoverable">
 				<Dropdown category="usage" name={t("nav-usage")} right>
+					<NavLink href={localizePath("/changelog")} subpage>
+						{t("nav-page-changelog")}
+					</NavLink>
+
 					<div class="divider">{` ${t("divider-development")} `}</div>
 
 					<NavLink href="https://wiki.quiltmc.org">
