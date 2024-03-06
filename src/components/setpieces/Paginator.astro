@@ -89,7 +89,7 @@ const { left, right } = rtlSettings();
 				<a
 					class="pagination-next"
 					disabled={onLastPage}
-					href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}
+					href={!onLastPage && localizePath(`/blog/${nextPage}`)}
 				>
 					<span class="icon"><i class={`fas fa-angle-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-next")}</span>
@@ -99,7 +99,7 @@ const { left, right } = rtlSettings();
 				<a
 					class="pagination-next"
 					disabled={onLastPage}
-					href={!onLastPage && localizePath(`/blog/${nextPage}`)}
+					href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}
 				>
 					<span class="icon"><i class={`fas fa-angles-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-last")}</span>
