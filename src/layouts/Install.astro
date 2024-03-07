@@ -6,31 +6,27 @@ import WipWarning from "@parts/install/WipWarning.astro";
 ---
 
 <Default content={Astro.props.content}>
+	<div class="has-text-centered content mb-0 pb-0">
+		<h1 class="mb-4">
+			<slot name="direct" />
+		</h1>
+	</div>
+
 	<div class="columns is-centered">
+		<div class="grid-picker">
+			<Main />
+		</div>
+
 		<div class="column is-half">
 			<WipWarning />
 		</div>
 	</div>
 
-	<div class="columns">
-		<div class="column is-7">
-			<div class="has-text-centered content mb-0 pb-0">
-				<h1 class="mb-0">
-					<slot name="direct" />
-				</h1>
-			</div>
+	<div class="has-text-centered content mb-0 pb-0">
+		<slot name="launchers" />
+	</div>
 
-			<div class="grid-picker">
-				<Main />
-			</div>
-
-			<div class="has-text-centered content mb-0 pb-0">
-				<slot name="launchers" />
-			</div>
-
-			<div class="grid-picker">
-				<Launchers />
-			</div>
-		</div>
+	<div class="grid-picker">
+		<Launchers />
 	</div>
 </Default>
