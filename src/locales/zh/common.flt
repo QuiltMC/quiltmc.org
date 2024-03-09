@@ -19,7 +19,7 @@ serial-comma = {$prev}、{$next}
 -mastodon = Mastodon
 -github = GitHub
 -discord = Discord
--twitter = Twitter
+-twitter = X
 -twitch = Twitch
 
 page-authors = 作者：{$names}
