@@ -9,7 +9,7 @@ async function main() {
 	prepareCacheDirectory();
 	copyCSS();
 	generateRedirectFunctions();
-	await Promise.all([queryPluralKit(), queryTeamInfo()]);
+	await Promise.all([queryPluralKit(), queryTeamInfo(), queryChangelogs()]);
 
 	console.log("preprocess: done\n");
 }
@@ -180,6 +180,59 @@ async function queryTeamInfo() {
 
 	console.log("queryTeamInfo: writing to team info cache");
 	fs.writeFileSync(paths.TEAM_INFO_CACHE_FILE, await response.text());
+}
+
+async function queryChangelogs() {
+	if (fs.existsSync(paths.CHANGELOG_DIR)) {
+		console.log("queryChangelogs: using existing changelog data");
+		return;
+	}
+
+	console.log("queryChangelogs: refreshing changelog data");
+	fs.mkdirSync(paths.CHANGELOG_DIR);
+
+	// We're supposed to query the GitHub API for repositories with a changelog, through custom properties,
+	// although it appears to be broken right now. This will have to be hardcoded for now.
+	//
+	// Query : https://api.github.com/search/repositories?q=org:quiltmc+props.has-changelog:true
+	// Report : https://github.com/orgs/community/discussions/111042
+	const projects = ["enigma"]
+
+	for (const project of projects) {
+		const response = await tryToRunPromiseWithTimeout(
+			(signal) =>
+				fetch(`https://api.github.com/repos/quiltmc/${project}/contents/CHANGELOG.md`, {
+					headers: {
+						"Accept": "application/vnd.github.v3.raw",
+					},
+					signal,
+				}),
+			3 * 1000,
+			(retriesLeft) => {
+				console.error(
+					`queryChangelogs: failed to download changelog for ${project}; ${retriesLeft} retries left`
+				);
+			},
+			(retries) => {
+				throw new Error(
+					`queryChangelogs: failed to download changelog for ${project} after ${retries} retries`
+				);
+			}
+		);
+
+		console.log(`queryChangelogs: writing to changelog cache for ${project}`);
+		fs.mkdirSync(`${paths.CHANGELOG_DIR}/${project}`);
+
+		const versionRegex = /^# (?<version>.+?)\n(?<body>(.|\n)+?)(?=^# |$(?![\r\n]))/gm;
+		const fullChangelog = await response.text();
+		let match;
+
+		while ((match = versionRegex.exec(fullChangelog)) !== null) {
+			const { version, body } = match.groups;
+
+			fs.writeFileSync(`${paths.CHANGELOG_DIR}/${project}/${version}.md`, body);
+		}
+	}
 }
 
 main();

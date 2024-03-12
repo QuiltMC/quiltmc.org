@@ -39,3 +39,10 @@ export async function getModifyDate(file: string): Promise<Date> {
 	// JS expects the time to be in milliseconds and not seconds
 	return new Date(timestamp * 1000);
 }
+
+export function objectMap(object, mapFn) {
+	return Object.keys(object).reduce(function(result, key) {
+		result[key] = mapFn(key, object[key])
+		return result
+	}, {})
+}

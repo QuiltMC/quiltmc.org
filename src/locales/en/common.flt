@@ -54,6 +54,7 @@ nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 nav-page-legal = Legal
 nav-page-donate = Donate
+nav-page-changelog = Changelog
 
 button-close = Close
 button-discord = {-discord}
