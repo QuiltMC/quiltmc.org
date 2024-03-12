@@ -43,7 +43,7 @@ for (const project of fs.readdirSync("cache/changelogs")) {
 
 const sidebar = objectMap(versions, (project, projectVersions) => {
 	return {
-		pages: projectVersions.map((version) => `/en/changelog/${project}/${version}`)
+		pages: projectVersions.map((version) => `/en/changelog/${project}/${version}/`)
 	}
 })
 
@@ -72,13 +72,13 @@ const body = changelogs.find((changelog) => changelog.file.endsWith(`/${project}
 						<Sidebar
 							value={{
 								"sidebar-pages": {
-									pages: ["/en/changelog"],
+									pages: ["/en/changelog/"],
 									subPages: sidebar
 									}
 								}
 							}}
 							nameOverride={{
-								"/en/changelog": "Index"
+								"/en/changelog/": "Index"
 							}}
 						/>
 					</div>

@@ -16,7 +16,7 @@ for (const project of fs.readdirSync("cache/changelogs")) {
 
 const sidebar = objectMap(versions, (project, projectVersions) => {
 	return {
-		pages: projectVersions.map((version) => `/en/changelog/${project}/${version}`)
+		pages: projectVersions.map((version) => `/en/changelog/${project}/${version}/`)
 	}
 })
 ---
@@ -39,12 +39,12 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 						<Sidebar
 							value={{
 								"sidebar-pages": {
-									pages: ["/en/changelog"],
+									pages: ["/en/changelog/"],
 									subPages: sidebar
 								}
 							}}
 							nameOverride={{
-								"/en/changelog": "Index"
+								"/en/changelog/": "Index"
 							}}
 						/>
 					</div>
@@ -58,7 +58,7 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 								<h2 style="text-transform: capitalize">{project}</h2>
 								<ul>
 									{projectVersions.map((version) => (
-										<li><a href={`/en/changelog/${project}/${version}`}>{version}</a></li>
+										<li><a href={`/en/changelog/${project}/${version}/`}>{version}</a></li>
 									))}
 								</ul>
 							</div>
