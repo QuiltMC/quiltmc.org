@@ -119,6 +119,6 @@
     "ids": ["creativecore"],
     "name": "CreativeCore",
     "type": "WORKAROUND",
-    "note": "Occasionally breaks the search tab in the creative mode item screen, and spams errors in logs. The issue can be fixed via using its `/cmdclientconfig` command to set `playSoundWithOffset` to `false`."
+    "note": "Occasionally breaks the search tab in the creative mode item screen, and spams errors in logs. The issue can be fixed via using its `/cmdclientconfig` command to set `playSoundWithOffset` to `false`. Relevant issue: https://github.com/CreativeMD/CreativeCore/issues/205."
   }
 ]
