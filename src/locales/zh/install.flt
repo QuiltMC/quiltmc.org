@@ -5,6 +5,7 @@
 -prismlauncher = Prism Launcher
 -technic = Technic
 -curseforge = CurseForge
+-gdlauncher = GDLauncher
 
 platform-bakaxl = BakaXL
 platform-client = 客户端
@@ -14,6 +15,7 @@ platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
 platform-curseforge = {-curseforge}
+platform-gdlauncher = {-gdlauncher}
 
 logo-minecraft = Minecraft 的标志
 logo-java = Java 的标志
@@ -23,6 +25,7 @@ logo-multimc = {-multimc} 的标志
 logo-prismlauncher = {-prismlauncher} 的标志
 logo-technic = Technic 启动器的标志
 logo-curseforge = {-curseforge} 的标志
+logo-gdlauncher = {-gdlauncher} 的标志
 
 button-back = 返回
 	.full = 返回到列表
