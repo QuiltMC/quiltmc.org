@@ -3,7 +3,6 @@ import Default from "./Default.astro";
 import { BaseProps } from "./Base.astro";
 //@ts-ignore
 import Button from "@atoms/Button.astro";
-import Awaiting from "@parts/install/Awaiting.astro";
 import Launchers from "@parts/install/Launchers.astro";
 import Main from "@parts/install/Main.astro";
 import WipWarning from "@parts/install/WipWarning.astro";
@@ -58,10 +57,6 @@ const { left } = rtlSettings();
 				</div>
 
 				<hr class="my-0" />
-
-				<div class="grid-picker">
-					<Awaiting />
-				</div>
 
 				<hr class="is-hidden-desktop is-hidden-tablet my-0" />
 			</div>

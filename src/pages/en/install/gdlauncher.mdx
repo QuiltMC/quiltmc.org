@@ -4,28 +4,26 @@ permalink: /install/gdlauncher/
 
 layout: /src/layouts/InstallPage.astro
 platformKey: platform-gdlauncher
-website: https://gdevs.io
+website: https://gdlauncher.com/
 ---
 
 import Message from "@atoms/Message.astro";
 
-### Status: Work In Progress
+GDLauncher is an open-source, feature-rich launcher. To install Quilt as a GDLauncher instance, follow these steps:
 
-GDLauncher does not currently support Quilt, but a member of the community has [submitted a Pull Request](https://github.com/gorilla-devs/GDLauncher/pull/1400) that adds Quilt support. If you're interested in seeing Quilt support in GDLauncher, feel free to take a look at that PR.
+1. Click "Add Instance" in the top right of the user interface
+2. Select "Quilt" from the list of mod loaders
+3. Select the Minecraft version and Quilt Loader version you'd like to use (we recommend the latest stable (non-beta) version of Quilt Loader!)
+4. Click "Create"
 
-# Workarounds
+Done! You can find your Quilt instance in the Library tab.
 
-<Message style={"danger"}>
-	Please note that the following solutions are maintained by third party developers. We cannot guarantee their efficacy over time -- and, while we believe them to be entirely safe, we can't take responsibility for any issues caused by them.
+# Installing Mods
 
-	**Please remember to back up your worlds if you attempt to use the following solutions on an existing launcher profile!**
-</Message>
+1. Click on your Quilt instance
+2. Navigate to the "Mods" tab
+3. Click "Add Mod"
+4. Search for the mod you'd like to install
+5. Either click "Download latest" or navigate to the mod's "Versions" tab to find the specific version you need
 
-If you can't wait for GDLauncher to support Quilt, then [kb1000](https://www.curseforge.com/members/kb1000) maintains one possible solution:
-
-1. Create a Forge profile
-2. Add [JumpQuilt](https://www.curseforge.com/minecraft/mc-mods/jumpquilt), which will hijack the Forge loading process to load Quilt instead
-3. Add your mods as usual
-4. Ensure you have also added the **Quilted Fabric API/Quilt Standard Libraries** bundle, which you can find [on CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl)
-
-We're aware that this isn't an ideal solution for a number of reasons. Please show your support on the Pull Request linked above if you'd like to see a better solution!
+Done! Dependencies will be handled for you by GDLauncher.
