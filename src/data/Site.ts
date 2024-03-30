@@ -53,7 +53,7 @@ const config: Config = {
 
 	maven: new URL("https://maven.quiltmc.org"),
 	meta: new URL("https://meta.quiltmc.org"),
-	wiki: new URL("https://wiki.quiltmc.org"),
+	wiki: new URL("https://wiki.quiltmc.org/en"),
 
 	fileEditBaseUrl: new URL("https://github.com/QuiltMC/quiltmc.org/edit/main"),
 
