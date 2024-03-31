@@ -6,39 +6,46 @@ name: Publish PR preview
 
 jobs:
   publish:
+    name: Publish PR preview
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
-    name: Publish PR preview
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: "pnpm"
+          node-version: "20"
+
+      - name: Enable Corepack shims
+        run: corepack enable
+
       - name: Download HTML artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
         with:
           name: website-html
           path: dist
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Download Functions artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
         with:
           name: website-functions
           path: functions
           run_id: ${{ github.event.workflow_run.id }}
 
       - name: Download package artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
         with:
           name: website-package
           run_id: ${{ github.event.workflow_run.id }}
 
-      - name: Enable Corepack shims
-        run: corepack enable
-
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
+      # TODO this action is deprecated!
       - name: Gather PR details
-        uses: potiuk/get-workflow-origin@v1_1
+        uses: potiuk/get-workflow-origin@08219db9dbbbec802d571eaf0e14ece0bc005f72 # v1_6
         id: pr-details
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

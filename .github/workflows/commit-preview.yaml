@@ -2,28 +2,57 @@ on: [push]
 name: Commit preview
 
 jobs:
-  build:
+  generate-preview:
+    name: Generate commit preview
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
 
-    name: Generate commit preview
     steps:
       - name: Checkout
-        uses: akarys42/checkout-with-filter@main
+        uses: akarys42/checkout-with-filter@ede52d9749a9e87df3ec67e17cc798745cf88d93 # main
         with:
-          filter: 'blob:none'
+          filter: "blob:none"
           fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: "pnpm"
+          node-version: "20"
 
       - name: Enable Corepack shims
         run: corepack enable
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build the project
         run: pnpm build
+
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-html
+          path: dist
+          retention-days: 1
+
+      - name: Upload Functions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-functions
+          path: functions
+          retention-days: 1
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-package
+          path: |
+            package.json
+            pnpm-lock.yaml
+          retention-days: 1
 
       - name: Publish to Pages
         uses: cloudflare/pages-action@1
@@ -35,7 +64,7 @@ jobs:
           directory: dist
 
       - name: Add a comment on the commit
-        uses: peter-evans/commit-comment@v1
+        uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
         with:
           token: ${{ secrets.COZY_PAT }}
           repository: ${{ github.repository }}
