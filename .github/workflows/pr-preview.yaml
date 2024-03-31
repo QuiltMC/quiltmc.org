@@ -15,20 +15,17 @@ jobs:
           filter: "blob:none"
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          cache: "pnpm"
+          cache: "npm"
           node-version: "20"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Build the project
-        run: pnpm build
+        run: npm build
 
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4
@@ -50,5 +47,5 @@ jobs:
           name: website-package
           path: |
             package.json
-            pnpm-lock.yaml
+            package-lock.json
           retention-days: 1
