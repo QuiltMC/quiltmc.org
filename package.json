@@ -2,7 +2,7 @@
 	"name": "quiltmc-website",
 	"version": "1.0.0",
 	"description": "Website for the Quilt modloader",
-	"packageManager": "pnpm@7.14.1",
+	"private": true,
 	"scripts": {
 		"dev": "node scripts/preprocess.mjs && astro dev",
 		"build": "node scripts/preprocess.mjs && astro build",
@@ -38,9 +38,7 @@
 		"astro-compress": "^2.0.15",
 		"semver-sort": "^1.0.0"
 	},
-	"pnpm": {
-		"overrides": {
-			"sharp": "0.32.6"
-		}
-	}
+	"engines": {
+        "node": ">=20"
+    }
 }
