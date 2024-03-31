@@ -33,7 +33,7 @@ jobs:
 
       # TODO this action is deprecated!
       - name: Gather PR details
-        uses: potiuk/get-workflow-origin@08219db9dbbbec802d571eaf0e14ece0bc005f72 # v1_6
+        uses: potiuk/get-workflow-origin@e2dae063368361e4cd1f510e8785cd73bca9352e # v1_5 (v1_6 is broken!)
         id: pr-details
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
