@@ -11,7 +11,7 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: "https://quiltmc.org",
-  integrations: [mdx(), astroI18next(), sitemap(), purgecss(), compress()],
+  integrations: [mdx(), astroI18next(), sitemap(), purgecss(), compress({ SVG: false, })],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [[rehypeAutolinkHeadings, {
