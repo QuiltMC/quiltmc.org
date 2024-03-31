@@ -11,15 +11,6 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: "pnpm"
-          node-version: "20"
-
-      - name: Setup pnpm
-        run: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
-
       - name: Download HTML artifact
         uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
         with:
@@ -39,6 +30,15 @@ jobs:
         with:
           name: website-package
           run_id: ${{ github.event.workflow_run.id }}
+
+      - name: Setup pnpm
+        run: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: "pnpm"
+          node-version: "20"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
