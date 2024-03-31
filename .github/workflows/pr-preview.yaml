@@ -21,8 +21,8 @@ jobs:
           cache: "pnpm"
           node-version: "20"
 
-      - name: Enable Corepack shims
-        run: corepack enable
+      - name: Setup pnpm
+        uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3.0.0
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
