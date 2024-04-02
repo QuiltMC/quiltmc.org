@@ -196,7 +196,7 @@ async function queryChangelogs() {
 	//
 	// Query : https://api.github.com/search/repositories?q=org:quiltmc+props.has-changelog:true
 	// Report : https://github.com/orgs/community/discussions/111042
-	const projects = ["enigma"]
+	const projects = ["enigma", "quilt-config"]
 
 	for (const project of projects) {
 		const response = await tryToRunPromiseWithTimeout(
