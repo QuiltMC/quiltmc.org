@@ -122,9 +122,9 @@
     "note": "Occasionally breaks the search tab in the creative mode item screen, and spams errors in logs. The issue can be fixed via using its `/cmdclientconfig` command to set `playSoundWithOffset` to `false`. Relevant issue: https://github.com/CreativeMD/CreativeCore/issues/205."
   },
   {
-	"ids": ["wetlands"],
-	"name": "Beneath the Wetlands",
-	"type": "SELF",
-	"note": "Tracking issue: https://github.com/birchfolks/Beneath-the-Wetlands/issues/13"
+    "ids": ["wetlands"],
+    "name": "Beneath the Wetlands",
+    "type": "GAME",
+    "note": "Tracking issue: https://github.com/birchfolks/Beneath-the-Wetlands/issues/13"
   }	  
 ]
