@@ -130,7 +130,7 @@
   {
     "ids": ["essential"],
     "name": "Essential",
-    "type": "GAME",
-    "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2+. Provided direct help to developers and was turned down. Issue on their end. See: https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29"
+    "type": "WORKAROUND",
+    "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2+. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments.\nProvided direct help to developers and was turned down. Issue on their end. See: https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29"
   }	 	  
 ]
