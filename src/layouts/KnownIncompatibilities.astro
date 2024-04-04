@@ -15,7 +15,12 @@ const props = Astro.props;
 const data = rawData.sort((a, b) => a.name.localeCompare(b.name))
 ---
 <Page content={props.content} frontmatter={props.frontmatter}>
-	<p>On this page you may find all the reported incompatibilities with Quilt. If you believe this list is missing anything, please feel free to tell us <a href="https://discord.quiltmc.org">on Discord</a>.</p>
+	<p>
+		On this page you may find all the reported incompatibilities with Quilt.
+		You can hover the symbol on the left to see the current status of the issue, and click the link icon to go to the tracking issue.
+		If you believe this list is missing anything, please feel free to tell us <a href="https://discord.quiltmc.org">on Discord</a>.
+		You can also directly <a href="https://github.com/QuiltMC/quiltmc.org/blob/main/public/api/v1/incompatible-mods.json">update the data on GitHub</a>.
+	</p>
 
 	<h2>Requires a workaround</h2>
 	<p>This is the simplest form of problems, the issue can simply be fixed by following the instructions provided.</p>
