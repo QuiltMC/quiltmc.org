@@ -6,16 +6,14 @@
     "tracking": "https://github.com/shedaniel/BetterLoadingScreen/issues/20",
     "icon": "https://media.forgecdn.net/avatars/511/148/637829105007128197.png"
   },
-
   {
     "ids": ["bigbeacons"],
     "name": "Big Beacons",
     "type": "GAME",
     "status": "UNKNOWN",
     "tracking": "UNKNOWN",
-	"icon": "https://media.forgecdn.net/avatars/348/332/637499126404745895.png"
+    "icon": "https://media.forgecdn.net/avatars/348/332/637499126404745895.png"
   },
-
   {
     "ids": ["decorative_blocks"],
     "name": "Decorative Blocks",
@@ -24,7 +22,6 @@
     "tracking": "https://github.com/lilypuree/Decorative-Blocks/issues/76",
     "icon": "https://media.forgecdn.net/avatars/248/967/637171183613258353.png"
   },
-
   {
     "ids": ["logbegone"],
     "name": "Log Begone",
@@ -34,7 +31,6 @@
     "note": "Not all log messages are passed through the mod's filter.",
     "icon": "https://media.forgecdn.net/avatars/557/92/637903174661344067.png"
   },
-
   {
     "ids": ["vulkanmod"],
     "name": "VulkanMod",
@@ -43,7 +39,6 @@
     "tracking": "https://github.com/xCollateral/VulkanMod/issues/204",
     "icon": "https://cdn.modrinth.com/data/JYQhtZtO/05e927ce5f83fd03e9575441d18707d8bd72437d.png"
   },
-
   {
     "ids": ["codex"],
     "name": "Codex",
@@ -52,7 +47,6 @@
     "tracking": "https://github.com/IMB11/Codex/issues/3",
     "icon": "https://media.forgecdn.net/avatars/893/179/638335912397170484.png"
   },
-
   {
     "ids": ["libjf"],
     "name": "LibJF",
@@ -61,7 +55,6 @@
     "tracking": "https://github.com/Fabulously-Optimized/fabulously-optimized/issues/210#issuecomment-1232601249",
     "icon": "https://media.forgecdn.net/avatars/382/525/637566912042948257.png"
   },
-
   {
     "ids": ["optifabric", "optifine"],
     "name": "OptiFabric/OptiFine",
@@ -70,7 +63,6 @@
     "tracking": "https://github.com/Chocohead/OptiFabric/issues/751",
     "icon": "https://media.forgecdn.net/avatars/204/621/636941511294490034.png"
   },
-
   {
     "ids": ["rpgdifficulty"],
     "name": "Rpg Difficulty",
@@ -79,7 +71,6 @@
     "tracking": "https://github.com/Globox1997/RpgDifficulty/issues/39",
     "icon": "https://media.forgecdn.net/avatars/380/837/637563157215396535.png"
   },
-
   {
     "ids": ["fldf"],
     "name": "Fast Leaf Decay",
