@@ -1,0 +1,53 @@
+---
+import Page from "./Page.astro";
+
+import rawData from "../../public/api/v1/incompatible-mods.json";
+import IncompatibleModCard from "../components/atoms/IncompatibleModCard.astro";
+
+const TYPE_TO_HUMAN = {
+	"GAME": "Breaks the game",
+	"OTHERS": "Breaks other mods",
+	"WORKAROUND": "Requires a workaround",
+	"SELF": "Non-fatal errors or broken features"
+}
+
+const props = Astro.props;
+const data = rawData.sort((a, b) => a.name.localeCompare(b.name))
+---
+<Page content={props.content} frontmatter={props.frontmatter}>
+	<p>On this page you may find all the reported incompatibilities with Quilt. If you believe this list is missing anything, please feel free to tell us <a href="https://discord.quiltmc.org">on Discord</a>.</p>
+
+	<h2>Requires a workaround</h2>
+	<p>This is the simplest form of problems, the issue can simply be fixed by following the instructions provided.</p>
+	{
+		data.filter(mod => mod.type === "WORKAROUND").map((mod) => (
+			<IncompatibleModCard mod={mod} />
+		))
+	}
+
+	<h2>Non-fatal errors or broken features</h2>
+	<p>These mods are not compatible with Quilt, but they do not break the game or other mods. They may have broken features or other errors that do not crash the game.</p>
+	{
+		data.filter(mod => mod.type === "SELF").map((mod) => (
+			<IncompatibleModCard mod={mod} />
+		))
+	}
+
+	<h2>Breaks other mods</h2>
+	<p>These mods are not compatible with Quilt, and they break other mods.</p>
+	{
+		data.filter(mod => mod.type === "OTHERS").map((mod) => (
+			<IncompatibleModCard mod={mod} />
+		))
+	}
+
+	<h2>Breaks the game</h2>
+	<p>These mods are not compatible with Quilt, and they break the game.</p>
+	{
+		data.filter(mod => mod.type === "GAME").map((mod) => (
+			<IncompatibleModCard mod={mod} />
+		))
+	}
+
+	<p>This data is also available in machine-readable format at <a href="/api/v1/incompatible-mods.json" target="_blank"><code>/api/v1/incompatible-mods.json</code></a>.</p>
+</Page>

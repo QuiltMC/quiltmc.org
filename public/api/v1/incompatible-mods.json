@@ -1,0 +1,135 @@
+[{
+    "ids": ["better_loading_screen"],
+    "name": "Better Loading Screen",
+    "type": "GAME",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/shedaniel/BetterLoadingScreen/issues/20",
+    "icon": "https://media.forgecdn.net/avatars/511/148/637829105007128197.png"
+  },
+
+  {
+    "ids": ["bigbeacons"],
+    "name": "Big Beacons",
+    "type": "GAME",
+    "status": "UNKNOWN",
+    "tracking": "UNKNOWN",
+	"icon": "https://media.forgecdn.net/avatars/348/332/637499126404745895.png"
+  },
+
+  {
+    "ids": ["decorative_blocks"],
+    "name": "Decorative Blocks",
+    "type": "GAME",
+    "status": "IN_PROGRESS",
+    "tracking": "https://github.com/lilypuree/Decorative-Blocks/issues/76",
+    "icon": "https://media.forgecdn.net/avatars/248/967/637171183613258353.png"
+  },
+
+  {
+    "ids": ["logbegone"],
+    "name": "Log Begone",
+    "type": "SELF",
+    "status": "BLOCKED",
+    "tracking": "https://github.com/AzureDoom/Log-Begone/issues/3",
+    "note": "Not all log messages are passed through the mod's filter.",
+    "icon": "https://media.forgecdn.net/avatars/557/92/637903174661344067.png"
+  },
+
+  {
+    "ids": ["vulkanmod"],
+    "name": "VulkanMod",
+    "type": "GAME",
+    "status": "NO_ANSWER",
+    "tracking": "https://github.com/xCollateral/VulkanMod/issues/204",
+    "icon": "https://cdn.modrinth.com/data/JYQhtZtO/05e927ce5f83fd03e9575441d18707d8bd72437d.png"
+  },
+
+  {
+    "ids": ["codex"],
+    "name": "Codex",
+    "type": "GAME",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/IMB11/Codex/issues/3",
+    "icon": "https://media.forgecdn.net/avatars/893/179/638335912397170484.png"
+  },
+
+  {
+    "ids": ["libjf"],
+    "name": "LibJF",
+    "type": "GAME",
+    "status": "ON_HOLD",
+    "tracking": "https://github.com/Fabulously-Optimized/fabulously-optimized/issues/210#issuecomment-1232601249",
+    "icon": "https://media.forgecdn.net/avatars/382/525/637566912042948257.png"
+  },
+
+  {
+    "ids": ["optifabric", "optifine"],
+    "name": "OptiFabric/OptiFine",
+    "type": "GAME",
+    "status": "NO_ANSWER",
+    "tracking": "https://github.com/Chocohead/OptiFabric/issues/751",
+    "icon": "https://media.forgecdn.net/avatars/204/621/636941511294490034.png"
+  },
+
+  {
+    "ids": ["rpgdifficulty"],
+    "name": "Rpg Difficulty",
+    "type": "GAME",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/Globox1997/RpgDifficulty/issues/39",
+    "icon": "https://media.forgecdn.net/avatars/380/837/637563157215396535.png"
+  },
+
+  {
+    "ids": ["fldf"],
+    "name": "Fast Leaf Decay",
+    "type": "GAME",
+    "status": "UNKNOWN",
+    "tracking": "UNKNOWN",
+    "note": "Tries to crash the game as part of a targeted harassment campaign against Quilt and its users.",
+    "icon": "https://quiltmc.org/assets/img/unknown.png"
+  },
+  {
+    "ids": ["dynmap"],
+    "name": "Dynmap",
+    "type": "GAME",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/webbukkit/dynmap/issues/4016",
+    "icon": "https://media.forgecdn.net/avatars/467/189/637748639594181930.png"
+  },
+  {
+    "ids": ["chattriggers"],
+    "name": "ChatTriggers",
+    "type": "SELF",
+    "status": "UNKNOWN",
+    "tracking": "UNKNOWN",
+    "note": "Modules can be loaded and managed, but are unable to be executed on Quilt.",
+    "icon": "https://media.forgecdn.net/avatars/497/51/637812567601108749.png"
+  },
+  {
+    "ids": ["creativecore"],
+    "name": "CreativeCore",
+    "type": "WORKAROUND",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/CreativeMD/CreativeCore/issues/205",
+    "note": "Occasionally breaks the search tab in the creative mode item screen, and spams errors in logs. The issue can be fixed via using its `/cmdclientconfig` command to set `playSoundWithOffset` to `false`.",
+    "icon": "https://media.forgecdn.net/avatars/86/225/636207446427836220.png"
+  },
+  {
+    "ids": ["wetlands"],
+    "name": "Beneath the Wetlands",
+    "type": "GAME",
+    "status": "NO_ANSWER",
+    "tracking": "https://github.com/birchfolks/Beneath-the-Wetlands/issues/13",
+    "icon": "https://media.forgecdn.net/avatars/953/375/638444045210140536.png"
+  },
+  {
+    "ids": ["essential-container"],
+    "name": "Essential",
+    "type": "WORKAROUND",
+    "status": "WONT_FIX",
+    "tracking": "https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29",
+    "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2+. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments. Provided direct help to developers and was turned down. Issue on their end. Will also not be present in Mod Menu.",
+    "icon": "https://media.forgecdn.net/avatars/597/210/637973904487237935.png"
+  }	 	  
+]

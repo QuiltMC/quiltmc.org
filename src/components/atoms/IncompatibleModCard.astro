@@ -1,0 +1,71 @@
+---
+import { marked } from "marked";
+
+export interface Mod {
+    name: string;
+    ids: string[];
+    icon: string;
+    note?: string;
+    tracking: string;
+    status: string;
+}
+
+export interface Props {
+    mod: Mod;
+}
+
+const mod = Astro.props.mod;
+
+const [statusText, statusIcon] = {
+    "UNKNOWN": ["Status is currently unknown", "fa-question"],
+    "WONT_FIX": ["Will not be fixed", "fa-ban"],
+    "IN_PROGRESS": ["Fix in progress", "fa-spinner"],
+    "BLOCKED": ["Fix is blocked by an external factor", "fa-shield-halved"],
+    "NO_ANSWER": ["The tracking issue is awaiting a response from maintainers", "fa-hourglass-half"],
+    "ON_HOLD": ["Fix is currently on hold", "fa-pause"],
+}[mod.status || "UNKNOWN"]
+---
+<div class="mod">
+    <div class="card">
+        <div class="card-content p-3 mb-3">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64" style="margin-left: 1vw; margin-right: 1vw">
+                        <img
+                                src={mod.icon}
+                                alt="Mod icon"
+                        />
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">{mod.name}</p>
+                    <p class="subtitle is-6">{mod.ids.join(', ')}</p>
+                </div>
+                <div>
+                    <div class="icon has-tooltip-arrow has-tooltip-left" data-tooltip={statusText}>
+                      <i class={"fas fa-lg " + statusIcon}></i>
+                    </div>
+                    {
+                        (mod.tracking === "UNKNOWN") ? (
+                            <span class="icon">
+                              <i class="fas fa-lg fa-question"></i>
+                            </span>
+                        ) : (
+                            <a href={mod.tracking} target="_blank" class="icon" style="color: inherit">
+                              <i class="fas fa-lg fa-external-link-alt"></i>
+                            </a>
+                        )
+                    }
+                </div>
+            </div>
+
+            {
+                (mod.note) && (
+                            <div class="content">
+                                <p set:html={marked.parse(mod.note)}></p>
+                            </div>
+                )
+            }
+        </div>
+    </div>
+</div>
