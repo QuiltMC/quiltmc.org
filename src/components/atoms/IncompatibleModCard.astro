@@ -61,9 +61,7 @@ const [statusText, statusIcon] = {
 
             {
                 (mod.note) && (
-                            <div class="content">
-                                <p set:html={marked.parse(mod.note)}></p>
-                            </div>
+                    <div class="content" set:html={marked.parse(mod.note)}></div>
                 )
             }
         </div>
