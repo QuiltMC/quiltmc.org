@@ -57,9 +57,9 @@
   {
     "ids": ["essential-container"],
     "name": "Essential",
-    "type": "SELF",
-    "note": "Will not be present in Mod Menu"
-  },
+    "type": "WORKAROUND",
+    "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2-1.20.4. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments.\nProvided direct help to developers and was turned down. Issue on their end. See: https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29. Also will not be present in Mod Menu."
+  }	,
 
   {
     "ids": ["seamless_loading_screen"],
@@ -126,11 +126,5 @@
     "name": "Beneath the Wetlands",
     "type": "GAME",
     "note": "Tracking issue: https://github.com/birchfolks/Beneath-the-Wetlands/issues/13"
-  },
-  {
-    "ids": ["essential"],
-    "name": "Essential",
-    "type": "WORKAROUND",
-    "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2+. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments.\nProvided direct help to developers and was turned down. Issue on their end. See: https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29"
-  }	 	  
+  } 	  
 ]
