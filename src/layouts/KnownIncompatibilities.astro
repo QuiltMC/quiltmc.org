@@ -29,30 +29,34 @@ const data = rawData.sort((a, b) => a.name.localeCompare(b.name))
 			<IncompatibleModCard mod={mod} />
 		))
 	}
+	{ data.find(mod => mod.type === "WORKAROUND") || (<div class="card"><div class="card-content">Currently nothing to report!</div></div>) }
 
 	<h2>Non-fatal errors or broken features</h2>
 	<p>These mods are not compatible with Quilt, but they do not break the game or other mods. They may have broken features or other errors that do not crash the game.</p>
 	{
 		data.filter(mod => mod.type === "SELF").map((mod) => (
 			<IncompatibleModCard mod={mod} />
-		))
+		)) || (<p>Currently nothing to report!</p>)
 	}
+	{ data.find(mod => mod.type === "SELF") || (<div class="card"><div class="card-content">Currently nothing to report!</div></div>) }
 
 	<h2>Breaks other mods</h2>
 	<p>These mods are not compatible with Quilt, and they break other mods.</p>
 	{
 		data.filter(mod => mod.type === "OTHERS").map((mod) => (
 			<IncompatibleModCard mod={mod} />
-		))
+		)) || (<p>Currently nothing to report!</p>)
 	}
+	{ data.find(mod => mod.type === "OTHERS") || (<div class="card"><div class="card-content">Currently nothing to report!</div></div>) }
 
 	<h2>Breaks the game</h2>
 	<p>These mods are not compatible with Quilt, and they break the game.</p>
 	{
 		data.filter(mod => mod.type === "GAME").map((mod) => (
 			<IncompatibleModCard mod={mod} />
-		))
+		)) || (<p>Currently nothing to report!</p>)
 	}
+	{ data.find(mod => mod.type === "GAME") || (<div class="card"><div class="card-content">Currently nothing to report!</div></div>) }
 
 	<p>This data is also available in machine-readable format at <a href="/api/v1/incompatible-mods.json" target="_blank"><code>/api/v1/incompatible-mods.json</code></a>.</p>
 </Page>
