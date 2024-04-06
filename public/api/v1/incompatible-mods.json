@@ -75,10 +75,10 @@
     "ids": ["fldf"],
     "name": "Fast Leaf Decay",
     "type": "GAME",
-    "status": "UNKNOWN",
     "tracking": "UNKNOWN",
-    "note": "Tries to crash the game as part of a targeted harassment campaign against Quilt and its users.",
-    "icon": "https://quiltmc.org/assets/img/unknown.png"
+    "status": "WONT_FIX",
+    "note": "Tries to display an information screen as part of a disinformation campaign against Quilt, often resulting in an outright crash.",
+    "icon": "https://media.forgecdn.net/avatars/597/438/637974406525551211.png"
   },
   {
     "ids": ["dynmap"],
