@@ -23,7 +23,7 @@ const [statusText, statusIcon] = {
     "BLOCKED": ["Fix is blocked by an external factor", "fa-shield-halved"],
     "NO_ANSWER": ["The tracking issue is awaiting a response from maintainers", "fa-hourglass-half"],
     "ON_HOLD": ["Fix is currently on hold", "fa-pause"],
-}[mod.status || "UNKNOWN"]
+}[mod.status ?? "UNKNOWN"]
 ---
 <div class="mod">
     <div class="card">
