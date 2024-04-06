@@ -4,13 +4,6 @@ import Page from "./Page.astro";
 import rawData from "../../public/api/v1/incompatible-mods.json";
 import IncompatibleModCard from "../components/atoms/IncompatibleModCard.astro";
 
-const TYPE_TO_HUMAN = {
-	"GAME": "Breaks the game",
-	"OTHERS": "Breaks other mods",
-	"WORKAROUND": "Requires a workaround",
-	"SELF": "Non-fatal errors or broken features"
-}
-
 const props = Astro.props;
 const data = rawData.sort((a, b) => a.name.localeCompare(b.name))
 ---
