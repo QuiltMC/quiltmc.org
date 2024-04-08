@@ -32,7 +32,7 @@
 		"rehype-autolink-headings": "^6.1.1",
 		"rollup": "^3.29.4",
 		"sass": "^1.69.4",
-		"swagger-ui": "^5.14.0",
+		"swagger-ui": "4.5.2",
 		"typescript": "^4.9.5"
 	},
 	"dependencies": {
