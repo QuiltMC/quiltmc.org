@@ -11,7 +11,7 @@ info:
     | v1      | 6 months           | TBD            | TBD    |
     
     # User agents
-    Please make sure to set a proper [user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) when accessing this service. W may block empty or non-personalized user agents.
+    Please make sure to set a proper [user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) when accessing this service. We may block empty or non-personalized user agents.
 
 servers:
   - url: https://quiltmc.org/api
