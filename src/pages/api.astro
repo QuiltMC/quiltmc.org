@@ -1,0 +1,26 @@
+---
+import Base from "@layouts/Base.astro";
+import "swagger-ui/dist/swagger-ui.css";
+import "../styles/swagger-dark.css";
+---
+
+<script>
+    import SwaggerUI from 'swagger-ui';
+
+    window.addEventListener("load", () => {
+        window.ui = SwaggerUI({
+            url: '/api/openapi.yaml',
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+        });
+    });
+</script>
+<style is:global>
+    pre.version {
+        background-color: inherit !important;
+    }
+</style>
+
+<Base content={{title: "Quilt API Index", description: "Index for the Quilt Website API"}}>
+    <div id="swagger-ui"></div>
+</Base>
