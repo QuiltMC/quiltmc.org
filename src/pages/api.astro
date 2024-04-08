@@ -1,7 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
-import "swagger-ui/dist/swagger-ui.css";
-import "../styles/swagger-dark.css";
+import swaggerCss from "swagger-ui/dist/swagger-ui.css?raw";
+import swaggerDarkCss from "../styles/swagger-dark.css?raw";
 ---
 
 <script>
@@ -15,11 +15,13 @@ import "../styles/swagger-dark.css";
         });
     });
 </script>
-<style is:global>
+<style is:inline>
     pre.version {
         background-color: inherit !important;
     }
 </style>
+<style is:inline set:html={swaggerCss}></style>
+<style is:inline set:html={swaggerDarkCss}></style>
 
 <Base content={{title: "Quilt API Index", description: "Index for the Quilt Website API"}}>
     <div id="swagger-ui"></div>
