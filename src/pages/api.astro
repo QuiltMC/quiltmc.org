@@ -7,12 +7,10 @@ import "../styles/swagger-dark.css";
 <script>
     import SwaggerUI from 'swagger-ui';
 
-    window.addEventListener("load", () => {
-        window.ui = SwaggerUI({
-            url: '/api/openapi.yaml',
-            dom_id: '#swagger-ui',
-            deepLinking: true,
-        });
+    SwaggerUI({
+        url: '/api/openapi.yaml',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
     });
 </script>
 <style is:global>
