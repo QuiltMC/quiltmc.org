@@ -3,6 +3,7 @@ import { t } from "i18next";
 import Dropdown from "@parts/nav/Dropdown.astro";
 import NavLink from "@parts/nav/NavLink.astro";
 import { localizePath } from "@util/Util";
+import Search from "../parts/nav/Search.astro";
 
 export interface Props {
 	style?: string;
@@ -55,6 +56,10 @@ const { style = "is-dark" } = Astro.props as Props;
 
 	<div class="navbar-menu">
 		<div class="navbar-end">
+			<div class="is-hidden-mobile">  <!-- I really can't be fucked to make this work on mobile, if you wish to do that, be my guest -->
+				<Search />
+			</div>
+
 			<div class="navbar-item has-dropdown is-hoverable">
 				<Dropdown category="about" name={t("nav-about")} />
 			</div>

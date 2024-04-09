@@ -1,0 +1,179 @@
+---
+---
+
+<div id="dummy-search-field" class="field pt-2 pr-4">
+    <p class="control has-icons-right">
+        <input aria-label="search" class="input" type="text" placeholder="Search" style="border: 0" />
+        <span class="icon is-small is-right is-clickable">
+            <i class="fas fa-magnifying-glass"></i>
+        </span>
+    </p>
+</div>
+
+<div id="search-modal" class="modal">
+    <div id="search-box" class="box" style="z-index: 1; width: 60vw">
+        <div class="field pt-2 pr-4">
+            <p class="control has-icons-right is-expanded">
+                <input id="search-field" autocomplete="off" aria-label="search" class="input is-medium" type="text" placeholder="Search" />
+                <span class="icon is-small is-right is-clickable">
+                    <i class="fas fa-magnifying-glass"></i>
+                </span>
+             </p>
+        </div>
+
+        <p id="search-loading" class="has-text-centered is-hidden">Loading...</p>
+        <p id="search-hint" class="has-text-centered">Start typing to search</p>
+        <p id="search-no-result" class="has-text-centered is-hidden">No results found</p>
+
+        <div id="search-result-container">
+        </div>
+    </div>
+    <div id="search-modal-background" class="modal-background"></div>
+</div>
+
+<script>
+    import lunr from "lunr";
+
+    let isPopupOpen = false;
+    let isIndexReady = false;
+    let isIndexLoading = false;
+    let index = null;
+    let rawData = null;
+
+    const SNIPPET_LENGTH = 256;
+
+    function gid(id) {
+        return document.getElementById(id);
+    }
+
+    async function loadIndex() {
+        if (isIndexLoading) {
+            return;
+        }
+        isIndexLoading = true;
+
+        gid('search-loading').classList.remove('is-hidden');
+
+        await fetch('/search-index.json')
+            .then(response => response.json())
+            .then(data => {
+                rawData = data;
+
+                index = lunr(function () {
+                    this.ref("url");
+                    this.field("title", { boost: 10 });
+                    this.field("content");
+                    this.metadataWhitelist = ['position']
+
+                    for (const url in data) {
+                        this.add({
+                            url: url,
+                            title: data[url].title,
+                            content: data[url].content
+                        });
+                    }
+                });
+
+                gid('search-loading').classList.add('is-hidden');
+                isIndexReady = true;
+            });
+    }
+
+    function highlight(text, startIndex, match) {
+        const highlightColor = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'link' : 'warning';
+
+        const positions = match.position;
+        let highlightedText = '';
+
+        let currentIndex = 0;
+        for (const position of positions) {
+            let [start, length] = position;
+            start -= startIndex;
+
+            highlightedText += text.slice(currentIndex, start);
+            highlightedText += `<span class="has-background-${highlightColor}">${text.slice(start, start + length)}</span>`;
+
+            currentIndex = start + length;
+        }
+
+        highlightedText += text.slice(currentIndex);
+
+        return highlightedText;
+    }
+
+    gid("search-field").addEventListener("keyup", async function (event) {
+        gid('search-hint').classList.add('is-hidden');
+
+        if (!index) {
+            await loadIndex();
+        }
+
+        const query = gid("search-field").value;
+
+        const results = index.search(query);
+        gid('search-result-container').innerHTML = '';
+
+        if (results.length === 0) {
+            gid('search-no-result').classList.remove('is-hidden');
+            return;
+        }
+
+        gid('search-no-result').classList.add('is-hidden');
+
+        if (query.length === 0) {
+            return;
+        }
+
+        results.slice(0, 5).forEach(result => {
+            const url = result.ref;
+            const title = rawData[url].title;
+
+            let content = '';
+
+            for (const match of Object.values(result.matchData.metadata)) {
+                if (!Object.keys(match).includes('content')) {
+                    continue;
+                }
+
+                const [firstMatchStart, _] = match.content.position[0];
+                const startIndex = Math.max(0, firstMatchStart - 10);
+
+                content = (startIndex > 0 ? "..." : "") + highlight(rawData[url].content.slice(startIndex, startIndex + SNIPPET_LENGTH), startIndex, match.content);
+            }
+
+            const card = document.createElement('div');
+            card.classList.add('card', 'mb-2');
+            card.innerHTML = `
+                <div class="card-content">
+                    <a href="${url}">
+                        <div class="content">
+                            <p class="title is-3 mb-2">${title}</p>
+                            <p class="is-6" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap">${content}</p>
+                        </div>
+                    </a>
+                </div>
+            `;
+
+            gid('search-result-container').appendChild(card);
+        });
+    });
+
+    function openPopup() {
+        isPopupOpen = true;
+        gid('search-modal').classList.add('is-active');
+    }
+
+    function closePopup() {
+        isPopupOpen = false;
+        gid('search-modal').classList.remove('is-active');
+    }
+
+    gid('dummy-search-field').addEventListener('click', function () {
+        openPopup();
+        gid('search-field').focus();
+    });
+
+    gid('search-modal-background').addEventListener('click', function () {
+        closePopup();
+    });
+</script>

@@ -11,6 +11,7 @@
 		"types": ["astro/client"],
 		"outDir": "./dist",
 		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
 		"paths": {
 			"@assets/*": ["src/assets/*"],
 			"@atoms/*": ["src/components/atoms/*"],

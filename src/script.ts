@@ -1,6 +1,6 @@
 export {};
 
-document.body.onload = () => {
+window.addEventListener("load", () => {
 	const lowContrast = document.getElementById(
 		"low-contrast"
 	) as HTMLInputElement;
@@ -13,4 +13,4 @@ document.body.onload = () => {
 	lowContrast.onchange = () => {
 		localStorage.setItem("lowContrast", lowContrast.checked.toString());
 	};
-};
+});
