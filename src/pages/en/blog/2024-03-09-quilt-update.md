@@ -29,7 +29,7 @@ Back to your regularly scheduled writer. Loader has mostly been getting minor fi
 # Quilt Mappings
 
 As always, your favourite team has delivered day 1 updates for every snapshot: `24w09a`, `24w07a`, and `24w06a` this month. Let's hit the highlights in terms of pull requests. Realms screens as well as particles have once again hit 100% completions thanks to work from Iota and pyrox, and we've seen lots of new coverage in snapshot features like trial spawners and world events. Despite the valiant efforts of our mappers, we've lost 0.5% coverage this month. A single perfect tear rolls down my smooth, emotionless visage.
-![A beautiful comparison of mapping statistics, going from 94.8% to 94.3%](/assets/img/writing/blog/2024-03-09-quilt-update/mapping-comparison.png)
+![A beautiful comparison of mapping statistics, going from 94.8% to 93.3%](/assets/img/writing/blog/2024-03-09-quilt-update/mapping-comparison.png)
 
 To discuss something *other* than coverage for once, we're planning to go ahead with a major change to QM in the future: [matching Mojang's package structure](https://github.com/QuiltMC/quilt-mappings/issues/550). Note that we've hardly started on the implementation of this change, so it's still very much to feedback from the community (including you, dear reader!). This means that while QM will still define its own package names, all classes will be organised in the same packages as they are in Mojmap. This allows for a few major benefits:
 - It gives us the ability to map `package-info` files, which allow giving more context to users as to what an overall package is meant for.
