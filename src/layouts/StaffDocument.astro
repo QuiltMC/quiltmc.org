@@ -97,14 +97,14 @@ if (pageUrl != staffUrl) {
 						/>
 					</div>
 
-					<div class="content column">
+					<main class="content column">
 						<PageTitle
 							title={title}
 							authors={authors}
 							file={Astro.props.frontmatter.file}
 						/>
 						<slot />
-					</div>
+					</main>
 				</div>
 			</section>
 		</div>
