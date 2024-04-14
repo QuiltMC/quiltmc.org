@@ -55,6 +55,7 @@ nav-page-template-mod = {-template-mod}
 nav-page-legal = Legal
 nav-page-donate = Donate
 nav-page-changelog = Changelog
+nav-page-api-home = API Home
 
 button-close = Close
 button-discord = {-discord}
