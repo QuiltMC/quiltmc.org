@@ -43,7 +43,8 @@
 		"@babel/traverse": "^7.23.4",
 		"@tsndr/cloudflare-worker-jwt": "^2.2.5",
 		"astro-compress": "^2.0.15",
-		"semver-sort": "^1.0.0"
+		"semver-sort": "^1.0.0",
+		"xml-js": "^1.6.11"
 	},
 	"engines": {
 		"node": ">=20"

@@ -18,6 +18,8 @@ servers:
     description: Production server
   - url: https://quiltmc-testing.xyz/api
     description: Testing server, may not always be available
+  - url: /api
+    description: Local server
 
 paths:
   /v1/incompatible-mods.json:
@@ -62,12 +64,28 @@ paths:
     get:
       summary: Download the latest installer for the given architecture.
       tags:
-        - v3
+        - v1
       responses:
         '307':
           description: Redirects to the maven artifact.
         '404':
           description: The specified architecture is not supported.
+
+  /v1/latest-version-components:
+    get:
+      summary: |
+        Get the latest version of Gradle components for each supported Minecraft version, as they would appear in the template mod `gradle.properties`.
+      tags:
+        - v1
+      responses:
+        '200':
+          description: Mapping of supported Minecraft versions to Gradle components.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/GradleComponentsV1'
 
 components:
   schemas:
@@ -145,3 +163,29 @@ components:
             type: string
             description: A note about the incompatibility. May not be present.
             example: "This mod made an oopsie and used fabric internals."
+
+    GradleComponentsV1:
+        type: object
+        required: [loom, quilt_mappings, quilt_loader, quilted_fabric_api]
+        properties:
+            loom:
+                type: string
+                description: The version of Loom to use.
+                example: "1.5.7"
+
+            quilt_mappings:
+                type: string
+                description: The version of Quilt mappings to use.
+                example: "1.20.4+build.3"
+                nullable: true
+
+            quilt_loader:
+                type: string
+                description: The version of Quilt Loader to use.
+                example: "0.24.0"
+
+            quilted_fabric_api:
+                type: string
+                description: The version of Quilted Fabric API to use.
+                example: "9.0.0-alpha.5+0.96.11-1.20.4"
+                nullable: true
