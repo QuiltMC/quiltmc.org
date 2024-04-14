@@ -1,0 +1,147 @@
+openapi: 3.0.0
+info:
+  title: Quilt Meta API
+  version: "2024-04-08"
+  description: |
+    This is the Quilt Website API. You can use it to inspect various information about our project.
+    
+    # Versioning
+    | Version | Support commitment | End of support | Sunset |
+    |---------|--------------------|----------------|--------|
+    | v1      | 6 months           | TBD            | TBD    |
+    
+    # User agents
+    Please make sure to set a proper [user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) when accessing this service. We may block empty or non-personalized user agents.
+
+servers:
+  - url: https://quiltmc.org/api
+    description: Production server
+  - url: https://quiltmc-testing.xyz/api
+    description: Testing server, may not always be available
+
+paths:
+  /v1/incompatible-mods.json:
+    get:
+      summary: Get various information about mods known to be incompatible with Quilt.
+      tags:
+        - v1
+      responses:
+        '200':
+          description: |
+            List of incompatible mods.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IncompatibleModV1'
+
+  /v1/download-latest-installer/{architecture}:
+    parameters:
+      - name: architecture
+        in: path
+        required: true
+        description: >
+          The architecture to query:
+          
+          - `windows-x86_64`
+          
+          - `windows-i686`
+          
+          - `windows-aarch64`
+          
+          - `java-universal` (jar installer)
+        schema:
+          type: string
+          example: "windows-x86_64"
+          enum:
+            - windows-x86_64
+            - windows-i686
+            - windows-aarch64
+            - java-universal
+    get:
+      summary: Download the latest installer for the given architecture.
+      tags:
+        - v3
+      responses:
+        '307':
+          description: Redirects to the maven artifact.
+        '404':
+          description: The specified architecture is not supported.
+
+components:
+  schemas:
+    IncompatibleModV1:
+      type: object
+      required: [ids, name, type, status, tracking, icon]
+      properties:
+        ids:
+          type: array
+          items:
+            type: string
+          description: The mod IDs that are known to be incompatible with Quilt.
+          example: ["modid1", "modid2"]
+
+        name:
+            type: string
+            description: The name of the mod.
+            example: "Example Mod"
+
+        type:
+          type: string
+          description: >
+            The type of incompatibility:
+            
+            - `GAME`: Breaks the game in an unrecoverable way.
+            
+            - `OTHERS`: Breaks other mods in an unrecoverable way.
+            
+            - `SELF`: Causes non-fatal errors or broken features in the mod itself.
+            
+            - `WORKAROUND`: Requires a workaround to function properly. Please see the attached note.
+          enum:
+            - GAME
+            - OTHERS
+            - SELF
+            - WORKAROUND
+          example: "GAME"
+
+        status:
+          type: string
+          description: >
+            The status of the incompatibility:
+            
+            - `UNKNOWN`: The status of the incompatibility is unknown, due to a lack of report or the inability for us to find it.
+            
+            - `WONT_FIX`: The incompatibility is known, but the mod authors have stated they won't fix it.
+            
+            - `IN_PROGRESS`: The incompatibility is known, and the mod authors are working on a fix.
+            
+            - `BLOCKED`: The incompatibility is known, but the fix is blocked by an external factor.
+            
+            - `NO_ANSWER`: The mod authors have not responded yet to the report.
+            
+            - `ON_HOLD`: The incompatibility is known, but the mod authors wish to wait before implementing a fix.
+          enum:
+            - UNKNOWN
+            - WONT_FIX
+            - IN_PROGRESS
+            - BLOCKED
+            - NO_ANSWER
+            - ON_HOLD
+          example: "IN_PROGRESS"
+
+        tracking:
+          type: string
+          description: The tracking URL for the report. Set to `UNKNOWN` if the tracking URL is not available.
+          example: "https://example.com/tracking"
+
+        icon:
+          type: string
+          description: The URL to the mod's icon. Solely for display purposes.
+          example: "https://example.com/icon.png"
+
+        note:
+            type: string
+            description: A note about the incompatibility. May not be present.
+            example: "This mod made an oopsie and used fabric internals."
