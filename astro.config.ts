@@ -12,7 +12,14 @@ import searchIndex from "./src/integration/search-index";
 // https://astro.build/config
 export default defineConfig({
   site: "https://quiltmc.org",
-  integrations: [mdx(), astroI18next(), sitemap(), purgecss(), compress({ SVG: false, }), searchIndex()],
+  integrations: [
+      mdx(),
+    astroI18next(),
+    sitemap(),
+    purgecss({ safelist: ["has-background-info", "has-background-link"] }),
+    compress({ SVG: false, }),
+    searchIndex()
+  ],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [[rehypeAutolinkHeadings, {
