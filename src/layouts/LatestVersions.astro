@@ -83,7 +83,9 @@ loom = "${version.loom}"
 ${quiltMappings}
 quilt_loader = "${version.quilt_loader}"
 
-${quiltedFabricApi}`;
+${quiltedFabricApi}
+
+# ... (rest of the file)`;
 
             document.getElementById("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
 
@@ -99,7 +101,7 @@ ${quiltedFabricApi}`;
         }
 
         document.getElementById("copy-button").addEventListener("click", () => {
-            navigator.clipboard.writeText(document.getElementById("code-block").textContent);
+            navigator.clipboard.writeText(document.getElementById("code-block").textContent.replace("\n\n# ... (rest of the file)", ""));
 
             toast({
                 message: "Copied to clipboard!",
