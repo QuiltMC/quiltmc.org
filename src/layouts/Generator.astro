@@ -94,8 +94,15 @@ const props = Astro.props;
         <div id="container-domain" class="control">
             <input id="input-domain" class="input" type="text" placeholder="Domain name">
         </div>
-        <div id="container-github" class="control is-hidden">
-            <input id="input-github" class="input" type="text" placeholder="GitHub username">
+        <div id="container-github" class="field has-addons is-hidden">
+            <div class="control is-expanded">
+                <input id="input-github" class="input" type="text" placeholder="Your handle">
+            </div>
+            <p class="control">
+                <a class="button" disabled>
+                    .github.io
+                </a>
+            </p>
         </div>
         <div id="container-provide" class="field has-addons is-hidden">
             <div class="control is-expanded">
