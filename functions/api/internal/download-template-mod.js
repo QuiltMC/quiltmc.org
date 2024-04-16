@@ -7,8 +7,6 @@ export async function onRequest(context) {
         .then(res => res.json())
         .then(data => data.default_branch);
 
-    console.log(defaultBranch)
-
     return fetch(`https://github.com/QuiltMC/quilt-template-mod/archive/refs/heads/${defaultBranch}.zip`, {
         headers: {
             "User-Agent": "QuiltMC Website API"
