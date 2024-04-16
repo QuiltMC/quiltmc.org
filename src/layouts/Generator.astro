@@ -13,12 +13,12 @@ const props = Astro.props;
     </noscript>
 
     <p>
-        This page provides the latest versions of Quilt and its components, ready to copy paste into your <code>libs.versions.toml</code> file.
-        It is located in the <code>gradle</code> folder if you are using our template mod.
+        By filling the fields below, you can generate a version of the <a href="https://github.com/quiltmc/Template-Mod">Template Mod</a> that is tailored to your project.
+        Fields with an asterisk (*) are required.
     </p>
 
     <div class="field">
-        <label class="label">Minecraft version:*</label>
+        <label id="version-label" class="label">Minecraft version:* (loading)</label>
         <div class="control">
             <div class="select">
                 <select id="version-select">
@@ -196,6 +196,7 @@ const props = Astro.props;
         ]);
 
         gib("version-select").innerHTML = gameVersions.map(version => `<option value="${version.version}">${version.version}</option>`).join("");
+        gib("version-label").textContent = "Minecraft version:*";
 
         gib("version-select").addEventListener("change", e => {
             const components = latestVersionComponents[e.target.value];

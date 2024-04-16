@@ -87,7 +87,11 @@ ${quiltedFabricApi}
 
 # ... (rest of the file)`;
 
-            document.getElementById("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.getElementById("code-block").innerText = content;
+            } else {
+                document.getElementById("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
+            }
 
             document.getElementById("unavailability-warning").classList.toggle("is-hidden", version.quilt_mappings && version.quilted_fabric_api);
         });
