@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Quilt Meta API
-  version: "2024-04-08"
+  version: "2024-04-16"
   description: |
     This is the Quilt Website API. You can use it to inspect various information about our project.
     
