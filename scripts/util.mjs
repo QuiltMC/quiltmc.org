@@ -53,3 +53,10 @@ export async function tryToRunPromiseWithTimeout(
 		return responses;
 	}
 }
+
+export function linkIssues(text, repo) {
+	return text.replaceAll(
+		/\[#(\d+)]/,
+		(_, issueNumber) => `[#${issueNumber}](https://quiltmc.org/${repo}/issues/${issueNumber})`
+	)
+}

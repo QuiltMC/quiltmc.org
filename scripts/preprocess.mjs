@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
-import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE } from "./util.mjs";
+import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE, linkIssues } from "./util.mjs";
 import fetch from "node-fetch";
 import glob from "glob";
 
@@ -232,7 +232,7 @@ async function queryChangelogs() {
 				while ((match = versionRegex.exec(fullChangelog)) !== null) {
 					const { version, body } = match.groups;
 
-					fs.writeFileSync(`${paths.CHANGELOG_DIR}/${project}/${version}.md`, body);
+					fs.writeFileSync(`${paths.CHANGELOG_DIR}/${project}/${version}.md`, linkIssues(body, project));
 				}
 				break;
 			case "SPLIT":
@@ -286,7 +286,7 @@ async function queryChangelogs() {
 							);
 						}
 					).then(r => r.text())
-						.then(body => fs.writeFileSync(`${paths.CHANGELOG_DIR}/${project}/${version}.md`, body)))
+						.then(body => fs.writeFileSync(`${paths.CHANGELOG_DIR}/${project}/${version}.md`, linkIssues(body, project))));
 				}
 
 				console.log(`queryChangelogs: writing to changelog cache for ${project}`);
