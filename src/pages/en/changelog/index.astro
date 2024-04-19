@@ -5,13 +5,14 @@ import { t } from "i18next";
 import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
+import semverCompare from "semver-compare";
 
 const { project, version } = Astro.params;
 
 const versions = {}
 
 for (const project of fs.readdirSync("cache/changelogs")) {
-	versions[project] = fs.readdirSync(`cache/changelogs/${project}`).map((version) => version.replace(".md", ""));
+	versions[project] = fs.readdirSync(`cache/changelogs/${project}`).map((version) => version.replace(".md", "")).sort(semverCompare).reverse();
 }
 
 const sidebar = objectMap(versions, (project, projectVersions) => {
