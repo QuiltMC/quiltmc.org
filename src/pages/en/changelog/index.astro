@@ -56,7 +56,7 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 
 						{Object.entries(versions).map(([project, projectVersions]) => (
 							<div>
-								<h2 style="text-transform: capitalize">{project}</h2>
+								<h2 style="text-transform: capitalize">{project.replaceAll("-", " ")}</h2>
 								<ul>
 									{projectVersions.map((version) => (
 										<li><a href={`/en/changelog/${project}/${version}/`}>{version}</a></li>
