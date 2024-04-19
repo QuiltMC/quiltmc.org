@@ -20,9 +20,19 @@ const props = Astro.props;
         It is located in the <code>gradle</code> folder if you are using our template mod.
     </p>
 
-    <div class="select">
-        <select id="version-select">
-        </select>
+    <div class="is-flex is-flex-direction-row">
+        <div class="select">
+            <select id="version-select">
+            </select>
+        </div>
+        <div class="field pl-2">
+            <p class="control has-icons-left">
+                <input id="version-search" class="input" placeholder="Search" />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-magnifying-glass"></i>
+                </span>
+            </p>
+        </div>
     </div>
 
     <pre id="code-block" class="mt-4">
@@ -52,6 +62,8 @@ const props = Astro.props;
         let data;
         let versions;
 
+        const gib = document.getElementById.bind(document);
+
         await Promise.all([
             await fetch("https://meta.quiltmc.org/v3/versions/game")
                 .then(res => res.json())
@@ -66,9 +78,9 @@ const props = Astro.props;
                 })
         ]);
 
-        document.getElementById("version-select").innerHTML = versions.map(version => `<option value="${version.version}">${version.version}</option>`).join("");
+        gib("version-select").innerHTML = versions.map(version => `<option value="${version.version}">${version.version}</option>`).join("");
 
-        document.getElementById("version-select").addEventListener("change", e => {
+        gib("version-select").addEventListener("change", e => {
             const version = data[e.target.value];
 
             if (!data) {
@@ -91,24 +103,35 @@ ${quiltedFabricApi}
 # ... (rest of the file)`;
 
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                document.getElementById("code-block").innerText = content;
+                gib("code-block").innerText = content;
             } else {
-                document.getElementById("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
+                gib("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
             }
 
-            document.getElementById("unavailability-warning").classList.toggle("is-hidden", version.quilt_mappings && version.quilted_fabric_api);
+            gib("unavailability-warning").classList.toggle("is-hidden", version.quilt_mappings && version.quilted_fabric_api);
         });
 
         for (const version of versions) {
             if (version.stable) {
-                document.getElementById("version-select").value = version.version;
-                document.getElementById("version-select").dispatchEvent(new Event("change"));
+                gib("version-select").value = version.version;
+                gib("version-select").dispatchEvent(new Event("change"));
                 break;
             }
         }
 
-        document.getElementById("copy-button").addEventListener("click", () => {
-            navigator.clipboard.writeText(document.getElementById("code-block").textContent.replace("\n\n# ... (rest of the file)", ""));
+        gib("version-search").addEventListener("keyup", e => {
+            for (const option of document.querySelectorAll("#version-select option")) {
+                option.classList.toggle("is-hidden", !option.value.startsWith(gib("version-search").value));
+            }
+            
+            if (!gib("version-select").value.startsWith(gib("version-search").value)) {
+                gib("version-select").value = document.querySelector("#version-select option:not(.is-hidden)").value;
+                gib("version-select").dispatchEvent(new Event("change"));
+            }
+        });
+
+        gib("copy-button").addEventListener("click", () => {
+            navigator.clipboard.writeText(gib("code-block").textContent.replace("\n\n# ... (rest of the file)", ""));
 
             toast({
                 message: "Copied to clipboard!",
