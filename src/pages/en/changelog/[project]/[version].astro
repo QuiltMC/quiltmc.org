@@ -48,7 +48,7 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 	}
 })
 
-const uppercaseProject = `${project[0].toUpperCase()}${project.slice(1)}`;
+const uppercaseProject = `${project[0].toUpperCase()}${project.slice(1).replaceAll("-", " ")}`;
 const title = `${uppercaseProject} ${version} Changelog`;
 const content = { title, description: `Changelog for the version ${version} of ${uppercaseProject}`, date: null }
 
