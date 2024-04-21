@@ -3,11 +3,7 @@ import Page from "./Page.astro";
 
 const props = Astro.props;
 ---
-
 <Page content={props.content} frontmatter={props.frontmatter}>
-    <link rel="preload" href="/api/v1/latest-version-components" as="fetch" crossorigin="anonymous">
-    <link rel="preload" href="https://meta.quiltmc.org/v3/versions/game" as="fetch" crossorigin="anonymous">
-
     <noscript>
         <article class="message is-danger">
             <div class="message-body">
