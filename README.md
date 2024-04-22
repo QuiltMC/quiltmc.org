@@ -59,7 +59,7 @@ Some functionalities of the website, such as redirects or functions, use some Cl
 To test these features, you can run the following command:
 
 ```sh
-$ npx wrangler pages dev -- pnpm dev --host
+$ npx wrangler pages dev -- npm run dev --host
 ```
 
 Make sure to use the url provided by wrangler, as it will be different from the one provided by Astro. It should appear underneath `Worker reloaded!`.

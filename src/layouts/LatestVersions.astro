@@ -1,0 +1,138 @@
+---
+import Page from "./Page.astro";
+
+const props = Astro.props;
+---
+<Page content={props.content} frontmatter={props.frontmatter}>
+    <noscript>
+        <article class="message is-danger">
+            <div class="message-body">
+                <p>Javascript is required to view this page</p>
+            </div>
+        </article>
+    </noscript>
+
+    <p>
+        This page provides the latest versions of Quilt and its components, ready to copy paste into your <code>libs.versions.toml</code> file.
+        It is located in the <code>gradle</code> folder if you are using our template mod.
+    </p>
+
+    <div class="is-flex is-flex-direction-row">
+        <div class="select">
+            <select id="version-select">
+            </select>
+        </div>
+        <div class="field pl-2">
+            <p class="control has-icons-left">
+                <input id="version-search" class="input" placeholder="Search" />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-magnifying-glass"></i>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <pre id="code-block" class="mt-4">
+# Loading data, please wait...
+</pre>
+
+    <article id="unavailability-warning" class="message is-danger is-hidden">
+        <div class="message-body">
+            <p><strong>Warning:</strong> Quilt Mappings and/or Quilted Fabric API is currently unavailable for this version.</p>
+        </div>
+    </article>
+
+    <button id="copy-button" class="button">
+        <span class="icon">
+            <i class="fas fa-copy"></i>
+        </span>
+        <span>Copy to Clipboard</span>
+    </button>
+</Page>
+
+<script>
+    import "prismjs";
+    import "prismjs/components/prism-toml";
+    import { toast } from 'bulma-toast';
+
+    if (window.location.pathname.startsWith("/en/usage/latest-versions")) {
+        let data;
+        let versions;
+
+        const gib = document.getElementById.bind(document);
+
+        await Promise.all([
+            await fetch("https://meta.quiltmc.org/v3/versions/game")
+                .then(res => res.json())
+                .then(data => {
+                    versions = data;
+                }),
+
+            await fetch("/api/v1/latest-version-components")
+                .then(res => res.json())
+                .then(data_ => {
+                    data = data_;
+                })
+        ]);
+
+        gib("version-select").innerHTML = versions.map(version => `<option value="${version.version}">${version.version}</option>`).join("");
+
+        gib("version-select").addEventListener("change", e => {
+            const version = data[e.target.value];
+
+            if (!data) {
+                return;
+            }
+
+            const quiltMappings = version.quilt_mappings ? `quilt_mappings = "${version.quilt_mappings}"` : "# Quilt Mappings is currently unavailable for this version";
+            const quiltedFabricApi = version.quilted_fabric_api ? `quilted_fabric_api = "${version.quilted_fabric_api}"` : "# Quilted Fabric API is currently unavailable for this version";
+
+            const content = `[versions]
+# Latest versions are available at https://quiltmc.org/en/usage/latest-versions
+minecraft = "${e.target.value}"
+loom = "${version.loom}"
+
+${quiltMappings}
+quilt_loader = "${version.quilt_loader}"
+
+${quiltedFabricApi}
+
+# ... (rest of the file)`;
+
+            gib("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
+
+            gib("unavailability-warning").classList.toggle("is-hidden", version.quilt_mappings && version.quilted_fabric_api);
+        });
+
+        for (const version of versions) {
+            if (version.stable) {
+                gib("version-select").value = version.version;
+                gib("version-select").dispatchEvent(new Event("change"));
+                break;
+            }
+        }
+
+        gib("version-search").addEventListener("keyup", e => {
+            for (const option of document.querySelectorAll("#version-select option")) {
+                option.classList.toggle("is-hidden", !option.value.startsWith(gib("version-search").value));
+            }
+            
+            if (!gib("version-select").value.startsWith(gib("version-search").value)) {
+                gib("version-select").value = document.querySelector("#version-select option:not(.is-hidden)").value;
+                gib("version-select").dispatchEvent(new Event("change"));
+            }
+        });
+
+        gib("copy-button").addEventListener("click", () => {
+            navigator.clipboard.writeText(gib("code-block").textContent.replace("\n\n# ... (rest of the file)", ""));
+
+            toast({
+                message: "Copied to clipboard!",
+                type: "is-info",
+                dismissible: true,
+                duration: 3000,
+                position: "bottom-right",
+            });
+        });
+    }
+</script>
