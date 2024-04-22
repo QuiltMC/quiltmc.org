@@ -99,11 +99,7 @@ ${quiltedFabricApi}
 
 # ... (rest of the file)`;
 
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                gib("code-block").innerText = content;
-            } else {
-                gib("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
-            }
+            gib("code-block").innerHTML = Prism.highlight(content, Prism.languages.toml, "toml");
 
             gib("unavailability-warning").classList.toggle("is-hidden", version.quilt_mappings && version.quilted_fabric_api);
         });
