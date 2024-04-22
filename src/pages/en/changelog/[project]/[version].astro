@@ -1,4 +1,5 @@
 ---
+import semverCompare from "semver-compare";
 import PageTitle from "@atoms/PageTitle.astro";
 import Sidebar from "@setpieces/Sidebar.astro";
 import { t } from "i18next";
@@ -38,7 +39,7 @@ const { project, version } = Astro.params;
 const versions = {}
 
 for (const project of fs.readdirSync("cache/changelogs")) {
-	versions[project] = fs.readdirSync(`cache/changelogs/${project}`).map((version) => version.replace(".md", ""));
+	versions[project] = fs.readdirSync(`cache/changelogs/${project}`).map((version) => version.replace(".md", "")).sort(semverCompare).reverse();
 }
 
 const sidebar = objectMap(versions, (project, projectVersions) => {
@@ -47,7 +48,7 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 	}
 })
 
-const uppercaseProject = `${project[0].toUpperCase()}${project.slice(1)}`;
+const uppercaseProject = `${project[0].toUpperCase()}${project.slice(1).replaceAll("-", " ")}`;
 const title = `${uppercaseProject} ${version} Changelog`;
 const content = { title, description: `Changelog for the version ${version} of ${uppercaseProject}`, date: null }
 
