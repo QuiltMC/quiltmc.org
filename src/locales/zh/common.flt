@@ -10,7 +10,6 @@ serial-comma = {$prev}、{$next}
 # Common strings
 -developer-wiki = 开发者 Wiki
 -forum = 论坛
--import-utility = Quilt 导入工具
 -patch-notes = 更新日志
 -staff-resources = 内部资源
 -template-mod = 模组模板
@@ -35,7 +34,6 @@ divider-development = 开发资源
 divider-external-links = 外部链接
 
 nav-page-developer-wiki = {-developer-wiki}
-nav-page-import-utility = {-import-utility}
 nav-page-maven-repo = Maven 库
 nav-page-help-wanted = {-help-wanted}
 nav-page-patch-notes = {-patch-notes}
