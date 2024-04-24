@@ -10,7 +10,6 @@ serial-comma = {$prev}, {$next}
 # Common strings
 -developer-wiki = Developer Wiki
 -forum = Forum
--import-utility = Quilt Import Utility
 -help-wanted = Help Wanted
 -patch-notes = Patch Notes
 -sponsors = Sponsors
@@ -45,7 +44,6 @@ divider-development = Development
 divider-external-links = External Links
 
 nav-page-developer-wiki = {-developer-wiki}
-nav-page-import-utility = {-import-utility}
 nav-page-maven-repo = Maven Repository
 nav-page-help-wanted = {-help-wanted}
 nav-page-patch-notes = {-patch-notes}
