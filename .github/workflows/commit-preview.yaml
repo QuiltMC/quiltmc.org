@@ -51,6 +51,7 @@ jobs:
           retention-days: 1
 
       - name: Publish to Pages
+        if: github.repository == 'QuiltMC/quiltmc.org'
         uses: cloudflare/pages-action@1
         id: publish
         with:
