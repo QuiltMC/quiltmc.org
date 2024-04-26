@@ -61,6 +61,7 @@ jobs:
           directory: dist
 
       - name: Add a comment on the commit
+        if: github.repository == 'QuiltMC/quiltmc.org'
         uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
         with:
           token: ${{ secrets.COZY_PAT }}
