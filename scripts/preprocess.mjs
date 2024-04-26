@@ -196,7 +196,12 @@ async function queryChangelogs() {
 	//
 	// Query : https://api.github.com/search/repositories?q=org:quiltmc+props.has-changelog:true
 	// Report : https://github.com/orgs/community/discussions/111042
-	const projects = {"enigma": "SINGLE", "quilt-config": "SINGLE", "quilt-loader": "SPLIT"}
+	const projects = {
+		"enigma": "SINGLE",
+		"launchermeta-parser": "SINGLE",
+		"quilt-config": "SINGLE",
+		"quilt-loader": "SPLIT"
+	};
 
 	for (const [project, strategy] of Object.entries(projects)) {
 		switch (strategy) {
