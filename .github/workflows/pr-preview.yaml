@@ -9,11 +9,7 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout
-        uses: akarys42/checkout-with-filter@ede52d9749a9e87df3ec67e17cc798745cf88d93 # main
-        with:
-          filter: "blob:none"
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
