@@ -89,8 +89,8 @@ const props = Astro.props;
         <label class="label">Java namespace:*</label>
         <div class="tabs is-toggle mb-4">
             <ul class="mt-0">
-                <li id="tab-domain" class="is-active"><a>I have my own domain</a></li>
-                <li id="tab-github"><a>I am a GitHub user</a></li>
+				<li id="tab-github" class="is-active"><a>I am a GitHub user</a></li>
+                <li id="tab-domain"><a>I have my own domain</a></li>
                 <li id="tab-provide"><a>I have neither of those</a></li>
             </ul>
         </div>
@@ -350,18 +350,19 @@ const props = Astro.props;
             modZip.file("README.md", readme);
 
             // libs.versions.toml
-            const topOfFile = `[versions]
-# The latest versions are available at https://quiltmc.org/en/usage/latest-versions
+            const topOfFile = `# The latest versions are available at https://quiltmc.org/en/usage/latest-versions
+[versions]
 minecraft = "${version}"
-loom = "${components.loom}"
-
 quilt_mappings = "${components.quilt_mappings}"
+
+quilt_loom = "${components.loom}"
 quilt_loader = "${components.quilt_loader}"
 
-quilted_fabric_api = "${components.quilted_fabric_api}"`
-            const bottomOfFile = (await origZip.file("gradle/libs.versions.toml").async("string")).replace(/\[versions\](.|\n)*?\[/, "");
+quilted_fabric_api = "${components.quilted_fabric_api}"`;
+			const origFile = await origZip.file("gradle/libs.versions.toml").async("string");
+            const bottomOfFile = origFile.substring(origFile.indexOf("[libraries]"));
 
-            const libsVersionToml = topOfFile + "\n\n[" + bottomOfFile;
+            const libsVersionToml = topOfFile + "\n\n" + bottomOfFile;
             modZip.file("gradle/libs.versions.toml", libsVersionToml);
 
             // LICENSE.md
