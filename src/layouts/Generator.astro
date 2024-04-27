@@ -359,9 +359,9 @@ quilt_mappings = "${components.quilt_mappings}"
 quilt_loader = "${components.quilt_loader}"
 
 quilted_fabric_api = "${components.quilted_fabric_api}"`
-            const bottomOfFile = (await origZip.file("gradle/libs.versions.toml").async("string")).replace(/\[versions\](.|\n)*?\[/, "");
+            const bottomOfFile = (await origZip.file("gradle/libs.versions.toml").async("string")).replace(/\[versions\](.|\n)*?/, "");
 
-            const libsVersionToml = topOfFile + "\n\n[" + bottomOfFile;
+            const libsVersionToml = topOfFile + "\n\n" + bottomOfFile;
             modZip.file("gradle/libs.versions.toml", libsVersionToml);
 
             // LICENSE.md
