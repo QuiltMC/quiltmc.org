@@ -1,0 +1,95 @@
+---
+import semverCompare from "semver-compare";
+import PageTitle from "@atoms/PageTitle.astro";
+import Sidebar from "@setpieces/Sidebar.astro";
+import { t } from "i18next";
+import Base from "@layouts/Base.astro";
+import * as fs from "fs";
+import { objectMap } from "src/util/Util"
+
+// Interface
+
+interface PagePath {
+	params: {
+		project: string;
+		version: string;
+	};
+}
+
+// Metadata
+
+export async function getStaticPaths() {
+	const paths: PagePath[] = [];
+
+	for (const project of fs.readdirSync("cache/changelogs")) {
+		for (const version of fs.readdirSync(`cache/changelogs/${project}`)) {
+			paths.push({ params: { project, version: version.replace(".md", "") } });
+		}
+	}
+
+	return paths;
+}
+
+const changelogs = await Astro.glob("/cache/changelogs/**/*.md");
+
+// Page generation
+
+const { project, version } = Astro.params;
+
+const versions = {}
+
+for (const project of fs.readdirSync("cache/changelogs")) {
+	versions[project] = fs.readdirSync(`cache/changelogs/${project}`).map((version) => version.replace(".md", "")).sort(semverCompare).reverse();
+}
+
+const sidebar = objectMap(versions, (project, projectVersions) => {
+	return {
+		pages: projectVersions.map((version) => `/en/changelog/${project}/${version}/`)
+	}
+})
+
+const uppercaseProject = `${project[0].toUpperCase()}${project.slice(1).replaceAll("-", " ")}`;
+const title = `${uppercaseProject} ${version} Changelog`;
+const content = { title, description: `Changelog for the version ${version} of ${uppercaseProject}`, date: null }
+
+const body = changelogs.find((changelog) => changelog.file.endsWith(`/${project}/${version}.md`)).compiledContent();
+---
+
+<Base content={content}>
+	<div class="columns is-centered">
+		<div class="column is-10">
+			<section class="section">
+				<div class="columns">
+					<div class="column is-narrow">
+						<div class="is-hidden-tablet">
+							<label class="button is-primary" for="toggle-sidebar">
+								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<span>{t("sidebar-pages")}</span>
+							</label>
+							<br />
+							<br />
+						</div>
+
+						<Sidebar
+							value={{
+								"sidebar-pages": {
+									pages: ["/en/changelog/"],
+									subPages: sidebar
+									}
+								}
+							}}
+							nameOverride={{
+								"/en/changelog/": "Index"
+							}}
+						/>
+					</div>
+
+					<main class="content column">
+						<PageTitle title={title} />
+						<Fragment set:html={body}/>
+					</main>
+				</div>
+			</section>
+		</div>
+	</div>
+</Base>

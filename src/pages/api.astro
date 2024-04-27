@@ -1,0 +1,36 @@
+---
+import Base from "@layouts/Base.astro";
+import swaggerCss from "swagger-ui/dist/swagger-ui.css?raw";
+import swaggerDarkCss from "../styles/swagger-dark.css?raw";
+---
+
+<script>
+    import SwaggerUI from 'swagger-ui';
+
+    window.addEventListener("load", () => {
+        window.ui = SwaggerUI({
+            url: '/api/openapi.yaml',
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+        });
+    });
+</script>
+<style is:inline>
+    pre.version {
+        background-color: inherit !important;
+    }
+</style>
+<style is:inline set:html={swaggerCss}></style>
+<style is:inline set:html={swaggerDarkCss}></style>
+
+<Base content={{title: "Quilt API Index", description: "Index for the Quilt Website API"}}>
+    <div id="swagger-ui"></div>
+
+    <noscript>
+        <article class="message is-danger">
+            <div class="message-body">
+                <p>Javascript is required to view this page</p>
+            </div>
+        </article>
+    </noscript>
+</Base>

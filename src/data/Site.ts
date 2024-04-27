@@ -19,6 +19,7 @@ export interface Config {
 
 	maven: URL;
 	meta: URL;
+	wiki: URL;
 
 	fileEditBaseUrl: URL;
 
@@ -41,11 +42,6 @@ export interface Config {
 		name: string;
 		links: URL[];
 	};
-
-	wikis: {
-		modder: URL;
-		collab: URL;
-	}
 }
 
 const config: Config = {
@@ -57,6 +53,7 @@ const config: Config = {
 
 	maven: new URL("https://maven.quiltmc.org"),
 	meta: new URL("https://meta.quiltmc.org"),
+	wiki: new URL("https://wiki.quiltmc.org/en"),
 
 	fileEditBaseUrl: new URL("https://github.com/QuiltMC/quiltmc.org/edit/main"),
 
@@ -82,11 +79,6 @@ const config: Config = {
 			new URL("https://github.com/QuiltMC"),
 			new URL("https://twitch.tv/quiltmc"),
 		],
-	},
-
-	wikis: {
-		collab: new URL("https://collab.wiki.quiltmc.org"),
-		modder: new URL("https://modder.wiki.quiltmc.org"),
 	}
 };
 

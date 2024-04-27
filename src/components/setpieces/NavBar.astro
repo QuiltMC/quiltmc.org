@@ -3,6 +3,7 @@ import { t } from "i18next";
 import Dropdown from "@parts/nav/Dropdown.astro";
 import NavLink from "@parts/nav/NavLink.astro";
 import { localizePath } from "@util/Util";
+import Search from "../parts/nav/Search.astro";
 
 export interface Props {
 	style?: string;
@@ -55,6 +56,10 @@ const { style = "is-dark" } = Astro.props as Props;
 
 	<div class="navbar-menu">
 		<div class="navbar-end">
+			<div class="is-hidden-mobile">  <!-- I really can't be fucked to make this work on mobile, if you wish to do that, be my guest -->
+				<Search />
+			</div>
+
 			<div class="navbar-item has-dropdown is-hoverable">
 				<Dropdown category="about" name={t("nav-about")} />
 			</div>
@@ -73,9 +78,13 @@ const { style = "is-dark" } = Astro.props as Props;
 
 			<div class="navbar-item has-dropdown is-hoverable">
 				<Dropdown category="usage" name={t("nav-usage")} right>
+					<NavLink href={localizePath("/changelog")} subpage>
+						{t("nav-page-changelog")}
+					</NavLink>
+
 					<div class="divider">{` ${t("divider-development")} `}</div>
 
-					<NavLink href="https://modder.wiki.quiltmc.org">
+					<NavLink href="https://wiki.quiltmc.org">
 						{t("nav-page-developer-wiki")}
 					</NavLink>
 					<NavLink target="_blank" href="https://maven.quiltmc.org">
@@ -88,11 +97,8 @@ const { style = "is-dark" } = Astro.props as Props;
 						{t("nav-page-template-mod")}
 					</NavLink>
 
-					<div class="divider">{t("divider-external-links")}</div>
+					<!-- <div class="divider">{t("divider-external-links")}</div> -->
 
-					<NavLink href="https://lambdaurora.dev/tools/import_quilt.html">
-						{t("nav-page-import-utility")}
-					</NavLink>
 				</Dropdown>
 			</div>
 
@@ -122,6 +128,9 @@ const { style = "is-dark" } = Astro.props as Props;
 						subpage={true}
 					>
 						{t("nav-page-staff-resources")}
+					</NavLink>
+					<NavLink href="/api" icon="fas fa-plug-circle-plus">
+						{t("nav-page-api-home")}
 					</NavLink>
 					<NavLink href={localizePath("/legal")} icon="fas fa-scale-balanced">
 						{t("nav-page-legal")}

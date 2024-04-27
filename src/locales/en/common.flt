@@ -10,7 +10,6 @@ serial-comma = {$prev}, {$next}
 # Common strings
 -developer-wiki = Developer Wiki
 -forum = Forum
--import-utility = Quilt Import Utility
 -help-wanted = Help Wanted
 -patch-notes = Patch Notes
 -sponsors = Sponsors
@@ -45,7 +44,6 @@ divider-development = Development
 divider-external-links = External Links
 
 nav-page-developer-wiki = {-developer-wiki}
-nav-page-import-utility = {-import-utility}
 nav-page-maven-repo = Maven Repository
 nav-page-help-wanted = {-help-wanted}
 nav-page-patch-notes = {-patch-notes}
@@ -54,6 +52,8 @@ nav-page-staff-resources = {-staff-resources}
 nav-page-template-mod = {-template-mod}
 nav-page-legal = Legal
 nav-page-donate = Donate
+nav-page-changelog = Changelog
+nav-page-api-home = API Home
 
 button-close = Close
 button-discord = {-discord}
@@ -71,7 +71,7 @@ button-help-wanted = {-help-wanted}
 button-official-site = Official Site
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS
-button-template-mod = {-template-mod}
+button-mod-generator = Mod Generator
 button-twitter = {-twitter}
 button-twitch = {-twitch}
 button-usage-docs = Usage Docs

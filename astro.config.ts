@@ -7,11 +7,19 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
 
 import compress from "astro-compress";
+import searchIndex from "./src/integration/search-index";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://quiltmc.org",
-  integrations: [mdx(), astroI18next(), sitemap(), purgecss(), compress()],
+  integrations: [
+      mdx(),
+    astroI18next(),
+    sitemap(),
+    purgecss({ safelist: ["has-background-info", "has-background-link"] }),
+    compress({ SVG: false, }),
+    searchIndex()
+  ],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [[rehypeAutolinkHeadings, {

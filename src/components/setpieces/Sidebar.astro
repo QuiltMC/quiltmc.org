@@ -8,8 +8,9 @@ export interface Pages {
 }
 export interface Props {
 	value: Record<string, Pages>;
+	nameOverride?: Record<string, string>;
 }
-const { value } = Astro.props as Props;
+const { value, nameOverride } = Astro.props as Props;
 
 function defaultActiveCriteria(url: string): boolean {
 	return url == Astro.url.pathname || url + "/" == Astro.url.pathname;
@@ -65,8 +66,10 @@ for (const page of allPages) {
 															: ""
 													}
 												>
-													{mappedPages[url]?.frontmatter?.title ||
-														mappedPages[url]?.title}
+													{nameOverride?.[url] ||
+														mappedPages[url]?.frontmatter?.title ||
+														mappedPages[url]?.title ||
+														url.split("/").slice(-2)}
 												</a>
 											</li>
 										))}

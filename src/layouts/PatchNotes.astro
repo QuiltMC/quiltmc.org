@@ -5,7 +5,7 @@ import Base from "./Base.astro";
 ---
 
 <Base content={Astro.props.content}>
-	<div class="columns is-centered">
+	<main class="columns is-centered">
 		<div class="column is-10">
 			<section class="section">
 				<div class="columns">
@@ -85,7 +85,7 @@ import Base from "./Base.astro";
 				</div>
 			</section>
 		</div>
-	</div>
+	</main>
 
 	<style lang="scss">
 		#close-missing-versions:checked ~ {
@@ -96,8 +96,11 @@ import Base from "./Base.astro";
 	</style>
 
 	<script is:inline>
+		const baseUrl = "https://launchercontent.mojang.com";
+		const v2Url = baseUrl+"/v2";
+
 		// Fetch launcher metadata
-		fetch("https://launchercontent.mojang.com/javaPatchNotes.json")
+		fetch(v2Url + "/javaPatchNotes.json")
 			.then((response) => response.json())
 			.then((data) => {
 				// Render patch notes
@@ -109,18 +112,23 @@ import Base from "./Base.astro";
 					if (entry) {
 						document.getElementById("title").scrollIntoView();
 
-						const body = entry.body
-							.replaceAll("​", "")
-							.replaceAll("<p></p>", "");
-
 						// Replace title, body and image url with the selected version
 						document.getElementById("title").innerText = entry.title;
-						document.getElementById("body").innerHTML = body;
+
+						fetch(v2Url + "/" + entry.contentPath)
+							.then((response) => response.json())
+							.then((content) => {
+								const body = content.body
+									.replaceAll("​", "")
+									.replaceAll("<p></p>", "");
+								document.getElementById("body").innerHTML = body;
+							});
+
 						document
 							.getElementById("image")
 							.setAttribute(
 								"src",
-								"https://launchercontent.mojang.com" + entry.image.url
+								baseUrl + entry.image.url
 							);
 
 						for (let elem of document.getElementsByClassName(
@@ -135,22 +143,39 @@ import Base from "./Base.astro";
 				};
 
 				// Create nav-links
-				data.entries.forEach((entry) => {
-					const listItem = document.createElement("li");
-					const newRef = document.createElement("a");
 
-					newRef.classList.add("version-item");
-					newRef.dataset["action"] = "click->sidebar#toggle";
-					newRef.id = entry.version;
-					newRef.innerText = entry.version;
-					newRef.setAttribute(
-						"href",
-						window.location.pathname + "#" + entry.version
-					);
+				// Query meta, because meta contains the versions in their proper order
+				fetch("https://meta.quiltmc.org/v3/versions/game")
+					.then((response) => response.json())
+					.then((meta) => {
+						const version2index = {};
+						var i = 0;
+						meta.forEach((entry) => {
+							version2index[entry.version] = i++;
+						});
 
-					listItem.appendChild(newRef);
-					document.getElementById("sidebar").appendChild(listItem);
-				});
+						data.entries.sort((a,b) => version2index[a.version] - version2index[b.version]);
+					})
+					.catch(e => console.warn("Failed to sort versions", e))
+					.finally(() => {
+						// Insert the (hopefully sorted) entries into the dom
+						data.entries.forEach((entry) => {
+							const listItem = document.createElement("li");
+							const newRef = document.createElement("a");
+
+							newRef.classList.add("version-item");
+							newRef.dataset["action"] = "click->sidebar#toggle";
+							newRef.id = entry.version;
+							newRef.innerText = entry.version;
+							newRef.setAttribute(
+								"href",
+								window.location.pathname + "#" + entry.version
+							);
+
+							listItem.appendChild(newRef);
+							document.getElementById("sidebar").appendChild(listItem);
+						});
+					});
 
 				// Rerender the patch note when the url changes
 				window.onhashchange = render;
