@@ -8,6 +8,10 @@ jobs:
     permissions:
       contents: read
       deployments: write
+    env:
+      GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
     steps:
       - uses: actions/checkout@v4
@@ -51,18 +55,20 @@ jobs:
           retention-days: 1
 
       - name: Publish to Pages
-        uses: cloudflare/pages-action@1
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        uses: cloudflare/pages-action@v1
         id: publish
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           projectName: quiltmc-org
           directory: dist
 
       - name: Add a comment on the commit
+        if: env.GITHUB_PUBLISH_TOKEN != ''
         uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
         with:
-          token: ${{ secrets.COZY_PAT }}
+          token: ${{ env.GITHUB_PUBLISH_TOKEN }}
           repository: ${{ github.repository }}
           sha: ${{ github.sha }}
           body: "See preview on Cloudflare Pages: ${{ steps.publish.outputs.url }}"
