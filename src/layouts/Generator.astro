@@ -95,10 +95,7 @@ const props = Astro.props;
             </ul>
         </div>
 
-        <div id="container-domain" class="control">
-            <input id="input-domain" class="input" type="text" placeholder="Domain name">
-        </div>
-        <div id="container-github" class="field has-addons is-hidden">
+		<div id="container-github" class="field has-addons">
             <div class="control is-expanded">
                 <input id="input-github" class="input" type="text" placeholder="Your handle">
             </div>
@@ -108,13 +105,16 @@ const props = Astro.props;
                 </a>
             </p>
         </div>
+        <div id="container-domain" class="control is-hidden">
+            <input id="input-domain" class="input" type="text" placeholder="Domain name">
+        </div>
         <div id="container-provide" class="field has-addons is-hidden">
             <div class="control is-expanded">
                 <input id="input-provide" class="input" type="text" placeholder="Your handle">
             </div>
             <p class="control">
                 <a class="button" disabled>
-                    .quiltusers.dev
+                    .users.quiltmc.net
                 </a>
             </p>
         </div>
@@ -229,7 +229,7 @@ const props = Astro.props;
             }
         }
 
-        let namespaceType = "domain";
+        let namespaceType = "github";
 
         function switchTab(tab)  {
             namespaceType = tab;
@@ -309,12 +309,12 @@ const props = Astro.props;
             const modDescription = gib("mod-description-input").value;
             const modAuthor = gib("mod-author-input").value;
 
-            const mavenGroup = (namespaceType === "domain" ? gib("input-domain").value : namespaceType === "github" ? gib("input-github").value.toLowerCase() + ".github.io" : gib("input-provide").value + ".quiltusers.dev").split(".").reverse().join(".");
+            const mavenGroup = (namespaceType === "domain" ? gib("input-domain").value : namespaceType === "github" ? gib("input-github").value.toLowerCase() + ".github.io" : gib("input-provide").value + ".users.quiltmc.net").split(".").reverse().join(".");
             const modNamespace = modId.replace(/-/g, "_").toLowerCase();
             const src = `src/main/java/${mavenGroup.replace(/\./g, "/")}/${modNamespace}`;
             const modClass = modId.replace(/[-_]([a-zA-Z])/g, (_, c) => c.toUpperCase()).replace(/^[a-z]/, c => c.toUpperCase()).replace(/[-_]/g, "");
 
-            const namespaceDomain = namespaceType === "domain" ? gib("input-domain").value : namespaceType === "github" ? gib("input-github").value : gib("input-provide").value + ".quiltusers.dev";
+            const namespaceDomain = namespaceType === "domain" ? gib("input-domain").value : namespaceType === "github" ? gib("input-github").value : gib("input-provide").value + ".users.quiltmc.net";
 
             const license = document.querySelector("input[name=license]:checked")?.nextElementSibling.textContent.split(" - ")[0];
 
