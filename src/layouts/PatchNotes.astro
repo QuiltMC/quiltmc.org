@@ -94,6 +94,15 @@ import Base from "./Base.astro";
 			}
 		}
 
+		@media screen and (min-width: 769px), print {
+			#body {
+				// Reserves extra height equal to the version selection sidebar's height.
+				// This ensures that the scrollbar can fit fully on-screen. Even if the
+				// page has been scrolled such that the title of the body is exactly on top.
+				min-height: calc(100vh - 2rem);
+			}
+		}
+
 		.reset-overflow {
 			overflow-x: unset !important;
 		}
