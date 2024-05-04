@@ -11,7 +11,8 @@ import Base from "./Base.astro";
 				<div class="columns reset-overflow">
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
-							<button class="button is-primary" id="sidebar-button">
+							<button class="button is-primary" id="sidebar-button"
+									aria-controls="sidebar-box" aria-haspopup="menu">
 								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
 								<span>{t("sidebar-versions")}</span>
 							</button>
@@ -123,6 +124,7 @@ import Base from "./Base.astro";
 		var mobileSidebarEnabled = false;
 		function updateSidebar(enabled) {
 			mobileSidebarEnabled = enabled;
+			document.getElementById("sidebar-button").ariaExpanded = enabled;
 			if (mobileSidebarEnabled) {
 				// Sidebar is enabled, so we need to un-hide it
 				document.getElementById("sidebar-box").classList.remove("is-hidden-mobile");
