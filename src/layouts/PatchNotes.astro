@@ -5,10 +5,10 @@ import Base from "./Base.astro";
 ---
 
 <Base content={Astro.props.content}>
-	<main class="columns is-centered">
+	<main class="columns is-centered reset-overflow">
 		<div class="column is-10">
 			<section class="section">
-				<div class="columns">
+				<div class="columns reset-overflow">
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
 							<button class="button is-primary" id="sidebar-button">
@@ -92,6 +92,10 @@ import Base from "./Base.astro";
 			#missing-versions-warning {
 				display: none !important;
 			}
+		}
+
+		.reset-overflow {
+			overflow-x: unset !important;
 		}
 	</style>
 
