@@ -159,7 +159,7 @@ import Base from "./Base.astro";
 							elem.classList.remove("is-active");
 						}
 
-						document.getElementById(entry.version).classList.add("is-active");
+						document.getElementById("button-"+entry.version).classList.add("is-active");
 						// document.getElementsByClassName("menu")[0].scrollIntoView()
 					} else {
 						// If no version is selected currently, open the sidebar
@@ -189,7 +189,7 @@ import Base from "./Base.astro";
 							const newRef = document.createElement("a");
 
 							newRef.classList.add("version-item");
-							newRef.id = entry.version;
+							newRef.id = "button-"+entry.version;
 							newRef.innerText = entry.version;
 							newRef.setAttribute(
 								"href",
