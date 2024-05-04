@@ -11,7 +11,7 @@ import Base from "./Base.astro";
 				<div class="columns">
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
-							<button class="button is-primary">
+							<button class="button is-primary" id="sidebar-button">
 								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
 								<span>{t("sidebar-versions")}</span>
 							</button>
@@ -20,7 +20,7 @@ import Base from "./Base.astro";
 							<br />
 						</div>
 
-						<div class="box is-hidden-mobile is-sticky">
+						<div class="box is-hidden-mobile is-sticky" id="sidebar-box">
 							<aside class="menu">
 								<p class="menu-label">{t("sidebar-versions")}</p>
 
@@ -99,6 +99,22 @@ import Base from "./Base.astro";
 		const baseUrl = "https://launchercontent.mojang.com";
 		const v2Url = baseUrl+"/v2";
 
+		// This only applies to mobile. On desktop the sidebar is always enabled.
+		var mobileSidebarEnabled = false;
+		function updateSidebar(enabled) {
+			mobileSidebarEnabled = enabled;
+			if (mobileSidebarEnabled) {
+				// Sidebar is enabled, so we need to un-hide it
+				document.getElementById("sidebar-box").classList.remove("is-hidden-mobile");
+			} else {
+				// Sidebar is disabled, so we need to hide it
+				document.getElementById("sidebar-box").classList.add("is-hidden-mobile");
+			}
+		}
+
+		// Toggle sidebar when button is pressed
+		document.getElementById("sidebar-button").onclick = () => updateSidebar(!mobileSidebarEnabled);
+
 		// Fetch launcher metadata
 		fetch(v2Url + "/javaPatchNotes.json")
 			.then((response) => response.json())
@@ -110,6 +126,8 @@ import Base from "./Base.astro";
 					var entry = data.entries.find((e) => e.version === version);
 
 					if (entry) {
+						// Once a version is selected, we close the sidebar
+						updateSidebar(false);
 						document.getElementById("title").scrollIntoView();
 
 						// Replace title, body and image url with the selected version
@@ -139,6 +157,9 @@ import Base from "./Base.astro";
 
 						document.getElementById(entry.version).classList.add("is-active");
 						// document.getElementsByClassName("menu")[0].scrollIntoView()
+					} else {
+						// If no version is selected currently, open the sidebar
+						updateSidebar(true);
 					}
 				};
 
@@ -164,7 +185,6 @@ import Base from "./Base.astro";
 							const newRef = document.createElement("a");
 
 							newRef.classList.add("version-item");
-							newRef.dataset["action"] = "click->sidebar#toggle";
 							newRef.id = entry.version;
 							newRef.innerText = entry.version;
 							newRef.setAttribute(
