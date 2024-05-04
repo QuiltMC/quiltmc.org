@@ -68,6 +68,8 @@ import Base from "./Base.astro";
 							</div>
 						</div>
 
+						<div id="before-content"></div>
+
 						<h1 id="title" class="title">
 							<slot name="patchnotes" />
 						</h1>
@@ -101,6 +103,11 @@ import Base from "./Base.astro";
 				// page has been scrolled such that the title of the body is exactly on top.
 				min-height: calc(100vh - 2rem);
 			}
+		}
+
+		#before-content {
+			// Translation equal to the padding which is above the title of the changelog.
+			transform: translateY(-1.5rem);
 		}
 
 		.reset-overflow {
@@ -141,7 +148,9 @@ import Base from "./Base.astro";
 					if (entry) {
 						// Once a version is selected, we close the sidebar
 						updateSidebar(false);
-						document.getElementById("title").scrollIntoView();
+
+						// Scroll to the top of the changelog
+						document.getElementById("before-content").scrollIntoView();
 
 						// Replace title, body and image url with the selected version
 						document.getElementById("title").innerText = entry.title;
