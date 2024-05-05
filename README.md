@@ -24,7 +24,8 @@ For VSCode, you should see a popup in the bottom right when you open the project
 
 To run the development server, you first need to have `npm` installed in your system. Usually this comes pre-installed with [Node.js](https://nodejs.org), so you might want to install that first.
 
-##### Only `npm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager.
+> [!NOTE]
+> Only `npm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager.
 
 Once `npm` is installed, clone this repository, navigate into the project folder and run `npm install` to install dependencies:
 ```sh
