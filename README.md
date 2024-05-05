@@ -22,20 +22,21 @@ For VSCode, you should see a popup in the bottom right when you open the project
 
 ### Running the Dev Server
 
-To run the development server, you first need to have `npm`/`pnpm`/`yarn` installed in your system.
-Only `pnpm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager. [Instructions on how to install `pnpm` can be found on its official installation page.](https://pnpm.io/installation)
+To run the development server, you first need to have `npm` installed in your system. Usually this comes pre-installed with [Node.js](https://nodejs.org), so you might want to install that first.
 
-Once `pnpm` is installed, clone this repository, navigate into the project folder and run `pnpm i` to install dependencies:
+##### Only `npm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager.
+
+Once `npm` is installed, clone this repository, navigate into the project folder and run `npm install` to install dependencies:
 ```sh
 $ git clone https://github.com/QuiltMC/quiltmc.org
 $ cd quiltmc.org
-$ pnpm i
+$ npm install
 ```
 
-Once installation is complete, then run `pnpm dev` to start the dev server.
+Once installation is complete, then run `npm run dev` to start the dev server.
 The server application should have an output like this:
 ```sh
-$ pnpm dev
+$ npm run dev
 
 > quiltmc-website@1.0.0 dev
 > node csscopy.mjs && astro dev
@@ -46,10 +47,10 @@ $ pnpm dev
   ┃ Network  use --host to expose
 ```
 
-At this point, open your browser, and you should be able to see the generated site at `localhost:3000`.
+At this point, open your browser, and you should be able to see the generated site at `http://localhost:3000`.
 
 As Astro utilizes hot module reloading (HMR), any changes you make would be reflected in the browser quickly.
-However, sometimes components and layouts don't get rebuilt with HMR and you might have to restart the Astro server to see your changes, which is easily done by pressing <kbd>Ctrl+C</kbd> and rerunning `pnpm run dev`.
+However, sometimes components and layouts don't get rebuilt with HMR and you might have to restart the Astro server to see your changes, which is easily done by pressing <kbd>Ctrl+C</kbd> and rerunning `npm run dev`.
 
 You're all set! Although, I would recommend reading about [the architecture of this site](ARCHITECTURE.md) before making any changes, to familiarize yourself with the project structure. Have fun contributing!
 
@@ -66,16 +67,16 @@ Make sure to use the url provided by wrangler, as it will be different from the 
 
 ### Building
 
-To build the site as seen in production, simply run `pnpm run build`.
+To build the site as seen in production, simply run `npm run build`.
 Astro will then build the site and emit the output in `dist/`.
 
 ```sh
-$ pnpm run build
+$ npm run build
 ```
 
-To view the built site, you can run `astro preview`:
+To view the built site, you can run `npm run preview`:
 ```sh
-$ pnpm preview
+$ npm run preview
 
 > quiltmc-website@1.0.0 preview
 > node csscopy.mjs && astro preview
@@ -86,4 +87,4 @@ $ pnpm preview
   ┃ Network  use --host to expose
 ```
 
-You can then visit the built site at `localhost:3000`.
+You can then visit the built site at `http://localhost:3000`.
