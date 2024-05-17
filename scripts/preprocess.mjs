@@ -200,6 +200,7 @@ async function queryChangelogs() {
 		"enigma": "SINGLE",
 		"launchermeta-parser": "SINGLE",
 		"quilt-config": "SINGLE",
+		"quilt-installer": "SINGLE",
 		"quilt-loader": "SPLIT"
 	};
 
