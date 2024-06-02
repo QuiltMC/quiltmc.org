@@ -21,7 +21,7 @@ export default {
 				url: "https://tech.lgbt/@ADudeCalledLeo",
 			},
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/ADudeCalledLeo",
 			},
 		],
@@ -44,7 +44,7 @@ export default {
 				url: "https://alexiil.uk",
 			},
 			{
-				icon: "fak fa-curseforge",
+				icon: "custom:curseforge",
 				url: "https://www.curseforge.com/members/alexiil/projects",
 			},
 		],
@@ -83,11 +83,11 @@ export default {
 				url: "https://tech.lgbt/@ennui",
 			},
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/Ennui",
 			},
 			{
-				icon: "fak fa-curseforge",
+				icon: "custom:curseforge",
 				url: "https://www.curseforge.com/members/ennuilangeweile",
 			},
 		],
@@ -162,7 +162,7 @@ export default {
 				url: "https://twitter.com/jamalamisadev",
 			},
 			{
-				icon: "fak fa-curseforge",
+				icon: "custom:curseforge",
 				url: "https://www.curseforge.com/members/Jamalam360/projects",
 			},
 		],
@@ -200,7 +200,7 @@ export default {
 				url: "https://git.lambdaurora.dev/",
 			},
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/LambdAurora",
 			},
 		],
@@ -239,7 +239,7 @@ export default {
 		description: "Professional memer",
 		links: [
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/obj-obj",
 			},
 		],
@@ -270,11 +270,11 @@ export default {
 				url: "https://twitter.com/realOroArmor",
 			},
 			{
-				icon: "fak fa-curseforge",
+				icon: "custom:curseforge",
 				url: "https://www.curseforge.com/members/oroarmor/projects",
 			},
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/h74rYEcI",
 			},
 		],
@@ -287,7 +287,7 @@ export default {
 		systemMembers: "---",
 		links: [
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/moehreag"
 			}
 		]
@@ -312,11 +312,11 @@ export default {
 				url: "https://quiltservertools.net",
 			},
 			{
-				icon: "fak fa-curseforge",
+				icon: "custom:curseforge",
 				url: "https://www.curseforge.com/members/potatoboy99999/projects",
 			},
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/Potatoboy9999",
 			},
 		],
@@ -413,7 +413,7 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/17211100?v=4",
 		links: [
 			{
-				icon: "fak fa-modrinth-small",
+				icon: "custom:modrinth-small",
 				url: "https://modrinth.com/user/woodiertexas",
 			},
 		]
