@@ -369,7 +369,7 @@ export default {
 				url: "https://concern.i.ng",
 			},
 			{
-				icon: "fa-brands fa-mastodon",
+				icon: "fab fa-mastodon",
 				url: "vmst.io/@sschr15",
 			},
 		],
