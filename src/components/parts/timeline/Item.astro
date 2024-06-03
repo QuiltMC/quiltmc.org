@@ -9,7 +9,7 @@ export interface Props {
 
 const { id, title, icon } = Astro.props as Props;
 
-const customIcons: any[any] = {
+const customIcons: Record<string, string> = {
 	'pumpkin': PumpkinIcon,
 }
 ---

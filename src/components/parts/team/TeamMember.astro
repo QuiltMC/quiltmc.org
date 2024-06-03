@@ -16,7 +16,7 @@ const { member, isLeader } = Astro.props as Props;
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
 
-let customIcons: any[any] = {
+let customIcons: Record<string, string> = {
 	'curseforge': CurseforgeLogo,
 	'modrinth': ModrinthLogo,
 	'modrinth-small': ModrinthLogoSmall,
