@@ -1,0 +1,74 @@
+---
+title: "Installer: Serveur"
+permalink: /install/server/
+
+layout: /src/layouts/InstallPage.astro
+platformKey: platform-server
+
+hasDownloads: true
+---
+
+import InstallerVersion from "@parts/install/InstallerVersion.astro";
+import MavenInstallerButton from "@atoms/MavenInstallerButton.astro";
+
+Avant de commencer, vous devez vous assurer que vous avez téléchargé une copie du programme d'installation de Quilt. Vous devez également vous assurer que vous avez [installé Java](https://java.com/fr/download).
+
+<div class="field is-horizontal">
+	<InstallerVersion />
+	<div class="field-body">
+		<div class="field">
+			<div class="control is-flex">
+				<MavenInstallerButton arch="java-universal" title="Universal (.jar)" icon="java" class_="button is-primary" />
+			</div>
+		</div>
+	</div>
+</div>
+
+## Installation utilisant l'interface graphique
+
+Une fois que vous avez téléchargé une copie du programme d'installation de Quilt, suivez les étapes suivantes :
+
+1. Trouvez le programme d'installation de Quilt que vous avez téléchargé et exécutez-le
+2. Assurez-vous que l'onglet **Server** est sélectionné
+3. Sélectionnez la version de Minecraft pour laquelle vous souhaitez installer Quilt
+4. Sélectionnez la version du _loader_ de Quilt que vous souhaitez utiliser
+5. Sélectionnez l'emplacement où vous souhaitez installer le serveur
+6. Cochez la case **Download server jar**
+7. Cliquez sur le bouton **Install**.
+
+Ceci téléchargera une copie du serveur Minecraft à l'emplacement que vous avez spécifié, et installera Quilt, en fournissant un JAR de lancement pour démarrer le serveur. Une fois que cela est fait, créez un fichier `.bat` (pour Windows) ou `.sh` (pour Mac/Linux), avec le contenu suivant :
+
+```bash
+java -jar quilt-server-launch.jar nogui
+```
+
+C'est tout ce qu'il y a à faire - utilisez le fichier `.bat` ou `.sh` correspondant pour démarrer le serveur pour la première fois, puis arrêtez-le (avec `/stop` ou `ctrl+c`) et configurez-le comme vous le feriez normalement.
+
+## Installation utilisant la CLI
+
+Une fois que vous avez téléchargé une copie de l'installateur de Quilt, vous devez le lancer depuis votre terminal, en remplaçant `INSTALLER_VERSION` et `MINECRAFT_VERSION` si nécessaire :
+
+```bash
+java -jar quilt-installer-INSTALLER_VERSION.jar \
+  install server MINECRAFT_VERSION \
+  --download-server
+```
+
+Ceci téléchargera une copie du serveur Minecraft dans `server/` et y installera Quilt, en fournissant un JAR de lancement pour démarrer le serveur. Une fois que cela est fait, créez un fichier `.bat` (pour Windows) ou `.sh` (pour Mac/Linux), avec le contenu suivant :
+
+```bash
+java -jar quilt-server-launch.jar nogui
+```
+
+C'est tout ce qu'il y a à faire - utilisez le fichier `.bat` ou `.sh` correspondant pour démarrer le serveur pour la première fois, puis arrêtez-le (avec `/stop` ou `ctrl+c`) et configurez-le comme vous le feriez normalement.
+
+# Installer des mods
+
+Installer des mods est un processus assez simple :
+
+1. Téléchargez les mods que vous souhaitez installer
+2. Créez un dossier nommé `mods`, s'il n'en existe pas déjà un
+3. Copiez vos fichiers de mods dans le dossier `mods/`
+4. Assurez-vous que vous avez également ajouté la librairie **Quilted Fabric API/Quilt Standard Libraries**, que vous pouvez trouver [sur CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl) ou [sur Modrinth](https://modrinth.com/mod/qsl)
+
+Lancez votre installation, et les mods devraient être disponibles immédiatement. Si vous rencontrez des problèmes, jetez un coup d'œil à la [page de dépannage](/fr/usage/troubleshooting), ou [rejoignez-nous sur Discord](https://discord.quiltmc.org) pour demander de l'aide!

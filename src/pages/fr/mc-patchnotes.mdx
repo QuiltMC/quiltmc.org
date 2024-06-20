@@ -1,0 +1,28 @@
+import PatchNotes from "@layouts/PatchNotes.astro";
+
+<PatchNotes content={{
+    title: "Minecraft Patch Notes",
+    description: "Quilt's Minecraft launcher patch-notes viewer."
+}}>
+    <div slot="noScript">
+        This page requires JavaScript to retrieve the Minecraft launcher's patch notes.
+        Please enable it and reload the page to continue.
+    </div>
+    <div slot="missingVersions">
+        Missing versions?
+    </div>
+    <div slot="missingVersionsExplanation">
+        If a new version of Minecraft has just released, it may be not be shown here
+        immediately. This is because the patch notes are not always available right away,
+        and may even become available at different times in different regions.
+
+        It should never take more than an hour for a new set of patch notes to appear here.
+    </div>
+    <div slot="patchnotes">
+        Minecraft Patch-notes
+    </div>
+    <div slot="patchnotesPrompt">
+        Select the version you'd like to see patch notes for.
+    </div>
+
+</PatchNotes>

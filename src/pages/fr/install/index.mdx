@@ -1,0 +1,22 @@
+import Install from "/src/layouts/Install.astro";
+import Message from "@atoms/Message.astro";
+
+<Install content={{ title: "Installer", permalink: "/install/" }}>
+    <div slot="direct">
+        Installation directe
+    </div>
+
+    <div slot="launchers">
+        <h1 class="mb-0">Launchers</h1>
+
+        **Veuillez noter que:** la présence d'un lanceur tiers sur cette page ne signifie pas que le projet Quilt l'approuve. Nous pensons simplement que le choix de l'utilisateur est important !
+    </div>
+
+    <div slot="awaitingSupport">
+        # En attente de support
+
+        <Message style="primary" bodyStyle="has-text-left">
+            Les lanceurs de cette liste ne supportent pas Quilt actuellement -- mais quelqu'un leur a demandé de le faire, ou ils y travaillent déjà. Vous pouvez cliquer dessus pour en savoir plus sur leur fonctionnement -- ou pour connaître les solutions de contournement permettant d'installer Quilt en les utilisant, lorsque cela est possible.
+        </Message>
+    </div>
+</Install>
