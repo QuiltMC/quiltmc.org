@@ -13,7 +13,7 @@ import searchIndex from "./src/integration/search-index";
 export default defineConfig({
   site: "https://quiltmc.org",
   integrations: [
-      mdx(),
+    mdx(),
     astroI18next(),
     sitemap(),
     purgecss({ safelist: ["has-background-info", "has-background-link"] }),
