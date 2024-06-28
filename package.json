@@ -22,7 +22,7 @@
 		"@types/semver-compare": "^1.0.3",
 		"@types/semver-sort": "^0.0.5",
 		"@types/swagger-ui": "^3.52.4",
-		"astro": "1.6.14",
+		"astro": "^2.2.0",
 		"astro-i18next": "1.0.0-beta.12",
 		"astro-purgecss": "^1.3.2",
 		"bulma-toast": "^2.4.3",
