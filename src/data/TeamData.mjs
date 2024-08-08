@@ -10,7 +10,7 @@ export default {
 	},
 	ADudeCalledLeo: {
 		name: "ADudeCalledLeo",
-		discord: "ADudeCalledLeo",
+		discord: "adudecalledleo",
 		github: "Leo40Git",
 		avatar: "/assets/img/team/ADudeCalledLeo.png",
 		description:
@@ -28,14 +28,14 @@ export default {
 	},
 	Alakey: {
 		name: "Alakey",
-		discord: "SplendidAlakey",
+		discord: "splendidalakey",
 		github: "SplendidAlakey",
 		avatar: "https://avatars.githubusercontent.com/u/86702831?v=4",
 		description: "Maintaining my own modpack and helping people with various mod related issues in my free time.",
 	},
 	AlexIIL: {
 		name: "AlexIIL",
-		discord: "AlexIIL",
+		discord: "alexiil",
 		github: "AlexIIL",
 		avatar: "/assets/img/team/AlexIIL.png",
 		links: [
@@ -59,38 +59,17 @@ export default {
 	},
 	AppleTheGolden: {
 		name: "AppleTheGolden",
-		discord: "AppleTheGolden",
+		discord: "applethegolden",
 		github: "Scotsguy",
 		avatar: "https://avatars.githubusercontent.com/u/20385973?v=4",
 	},
 	CheaterCodes: {
 		name: "CheaterCodes",
-		discord: "CheaterCodes",
+		discord: "cheatercodes",
 		github: "CheaterCodes",
 		avatar: "https://avatars.githubusercontent.com/u/49926638?v=4",
 		description:
 			"Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems.",
-	},
-	EnnuiL: {
-		name: "Ennui Langeweile",
-		discord: "Ennui",
-		github: "EnnuiL",
-		avatar: "/assets/img/team/Ennui.png",
-		description: "A Minecraft modder who wants to Revolutionize The World™! I also do some art and other things.",
-		links: [
-			{
-				icon: "fab fa-mastodon",
-				url: "https://tech.lgbt/@ennui",
-			},
-			{
-				icon: "custom:modrinth-small",
-				url: "https://modrinth.com/user/Ennui",
-			},
-			{
-				icon: "custom:curseforge",
-				url: "https://www.curseforge.com/members/ennuilangeweile",
-			},
-		],
 	},
 	Forkk: {
 		name: "Forkk",
@@ -102,7 +81,7 @@ export default {
 	},
 	Fusion: {
 		name: "Fusion Flux",
-		discord: "Fusion Flux",
+		discord: "fusionflux",
 		github: "Fusion-Flux",
 		avatar: "/assets/img/team/Fusion.png",
 		description: "Part time speedrunner, mod developer, and game developer.",
@@ -127,7 +106,7 @@ export default {
 	},
 	glitch: {
 		name: "Glitch",
-		discord: "glitch",
+		discord: "glitch___",
 		github: "TheGlitch76",
 		avatar: "https://avatars.githubusercontent.com/u/19521552?v=4",
 	},
@@ -139,7 +118,7 @@ export default {
 		description: "Java programmer and Minecraft modder.",
 	},
 	ix0rai: {
-		name: "ix0rai",
+		name: "rai",
 		discord: "ix0rai",
 		github: "ix0rai",
 		avatar: "/assets/img/team/ix0rai.png",
@@ -189,7 +168,7 @@ export default {
 	},
 	Kroppeb: {
 		name: "Kroppeb",
-		discord: "Kroppeb",
+		discord: "kroppeb",
 		github: "Kroppeb",
 		description:
 			"Friendly dude who loves to dabble into anything programming related.",
@@ -210,13 +189,13 @@ export default {
 	},
 	MrMangoHands: {
 		name: "MrMangoHands",
-		discord: "Mrn'tMangoHands",
+		discord: "mrmangohands",
 		github: "mrmangohands",
 		avatar: "/assets/img/team/MrMangoHands.png",
 	},
 	objobj: {
 		name: "[object Object]",
-		discord: "[object Object]",
+		discord: "objobj",
 		github: "obj-obj",
 		avatar: "https://avatars.githubusercontent.com/u/57120300",
 		description: "Professional memer",
@@ -229,7 +208,7 @@ export default {
 	},
 	OroArmor: {
 		name: "OroArmor",
-		discord: "OroArmor",
+		discord: "oroarmor",
 		github: "OroArmor",
 		avatar: "/assets/img/team/OroArmor.jpg",
 		description:
@@ -268,7 +247,7 @@ export default {
 	},
 	Potatoboy: {
 		name: "Potatoboy9999",
-		discord: "Potatoboy",
+		discord: "potatoboy9999",
 		github: "PotatoPresident",
 		avatar: "/assets/img/team/Potatoboy.png",
 		description:
@@ -290,7 +269,7 @@ export default {
 	},
 	Pyrofab: {
 		name: "Pyrofab",
-		discord: "Pyrofab",
+		discord: "pyrofab",
 		github: "Pyrofab",
 		avatar: "https://avatars.githubusercontent.com/u/25536265",
 		description: "Busy blowing up new things.",
@@ -307,7 +286,7 @@ export default {
 	},
 	Southpaw: {
 		name: "Southpaw1496",
-		discord: "Southpaw1496",
+		discord: "southpaw1496",
 		github: "Southpaw1496",
 		avatar: "https://www.gravatar.com/avatar/d357970001cdbe299dd790817dee30af",
 		description:
@@ -357,7 +336,7 @@ export default {
 	},
 	Sylv: {
 		name: "Sylv",
-		discord: "Niko",
+		discord: "sylv256",
 		github: "AlsoSylv",
 		description:
 			"Novice programmer and open-source supporter, enjoys Java and Python in my free time.",
@@ -387,7 +366,6 @@ export default {
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
-		discord: "zOnlyKroks | Finn",
 		github: "zOnlyKroks",
 		avatar: "/assets/img/team/zOnlyKroks.png",
 		description:
