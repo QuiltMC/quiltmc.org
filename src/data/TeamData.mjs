@@ -175,6 +175,18 @@ export default {
 		description:
 			"I am an cat lover, which I happen to have over 20 cats which I try to spend my time with them. In my off time, you can usually catch me playing various games - usually the Sims 4 or Pokemon game. Sometimes I will draw or color, or I'd just hang out with my cats.",
 	},
+	Janil: {
+		name: "Janil",
+		discord: "anonym123",
+		github: "anonymous123-code",
+		avatar: "https://avatars.githubusercontent.com/u/61744596?v=4",
+		links: [
+			{
+				icon: "custom:modrinth-small",
+				url: "https://modrinth.com/user/anonymous123-code",
+			},
+		],
+	},
 	Kroppeb: {
 		name: "Kroppeb",
 		discord: "Kroppeb",
@@ -182,28 +194,6 @@ export default {
 		description:
 			"Friendly dude who loves to dabble into anything programming related.",
 		avatar: "https://avatars.githubusercontent.com/u/7889478?v=4",
-	},
-	LambdaFoxes: {
-		name: "LambdAurora",
-		discord: "LambdAurora",
-		github: "LambdAurora",
-		avatar: "https://gravatar.com/avatar/fe50cfce4f4c81ba494f5f56b36a0a62",
-		description:
-			"Active Minecraft modder, Java enthusiast. I try to improve mod interoperability, which is reflected through my mod designs and my work on Quilt.",
-		links: [
-			{
-				icon: "fas fa-link",
-				url: "https://lambdaurora.dev/",
-			},
-			{
-				icon: "fab fa-git-alt",
-				url: "https://git.lambdaurora.dev/",
-			},
-			{
-				icon: "custom:modrinth-small",
-				url: "https://modrinth.com/user/LambdAurora",
-			},
-		],
 	},
 	Lapis: {
 		name: "Lapis Liozuli",
@@ -217,13 +207,6 @@ export default {
 				url: "https://linktr.ee/lapisliozuli",
 			}
 		]
-	},
-	Mazzie: {
-		name: "Mazzie",
-		discord: "mazziechai",
-		github: "mazziechai",
-		description: "it/its 🏳️‍🌈🏳️‍⚧️🇵🇭 Ferret connoisseur and programmer, fluent in English and Toki Pona",
-		avatar: "https://avatars.githubusercontent.com/u/68652959?v=4"
 	},
 	MrMangoHands: {
 		name: "MrMangoHands",
@@ -243,15 +226,6 @@ export default {
 				url: "https://modrinth.com/user/obj-obj",
 			},
 		],
-	},
-	Octal: {
-		name: "Octal",
-		discord: "Octal",
-		github: "Oliver-makes-code",
-		avatar: "/assets/img/team/Octal.png",
-		description:
-			"An autistic programmer that likes to talk about their interests, a lot.",
-		systemMembers: "---",
 	},
 	OroArmor: {
 		name: "OroArmor",
@@ -291,13 +265,6 @@ export default {
 				url: "https://modrinth.com/user/moehreag"
 			}
 		]
-	},
-	Pepper: {
-		name: "PepperCode1",
-		discord: "Pepper",
-		github: "PepperCode1",
-		description: "Developer of various Minecraft mods and APIs.",
-		avatar: "https://avatars.githubusercontent.com/u/44146161?v=4",
 	},
 	Potatoboy: {
 		name: "Potatoboy9999",
