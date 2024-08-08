@@ -336,7 +336,6 @@ export default {
 	},
 	Sylv: {
 		name: "Sylv",
-		discord: "sylv256",
 		github: "AlsoSylv",
 		description:
 			"Novice programmer and open-source supporter, enjoys Java and Python in my free time.",
@@ -366,6 +365,7 @@ export default {
 	},
 	zOnlyKroks: {
 		name: "zOnlyKroks",
+		discord: "zonlykroks",
 		github: "zOnlyKroks",
 		avatar: "/assets/img/team/zOnlyKroks.png",
 		description:
