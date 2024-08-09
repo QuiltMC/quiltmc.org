@@ -334,13 +334,6 @@ export default {
 			},
 		],
 	},
-	Sylv: {
-		name: "Sylv",
-		github: "AlsoSylv",
-		description:
-			"Novice programmer and open-source supporter, enjoys Java and Python in my free time.",
-		avatar: "https://avatars.githubusercontent.com/u/64978191?v=4",
-	},
 	TibiNonEst: {
 		name: "Tibs",
 		discord: "tibs",
