@@ -50,9 +50,15 @@
 		"@babel/traverse": "^7.25.3",
 		"@tsndr/cloudflare-worker-jwt": "^2.5.3",
 		"astro-compress": "^2.3.1",
+		"astro-icon": "^1.1.0",
 		"semver-sort": "^1.0.0",
 		"xml-js": "^1.6.11"
 	},
+	"pnpm": {
+    "overrides": {
+      "@iconify/tools": "^4.0.0"
+    }
+  },
 	"engines": {
 		"node": ">=20"
 	}
