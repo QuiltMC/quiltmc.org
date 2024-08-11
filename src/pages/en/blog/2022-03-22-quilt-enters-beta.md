@@ -3,6 +3,7 @@ title: Quilt enters Beta
 date: 2022-03-22 5:30:00 -00:00
 authors:
   - Southpaw1496
+layout: /src/layouts/Post.astro
 ---
 
 In February's final bi-weekly developer meeting (which you can listen to [as a podcast](https://anchor.fm/quiltmc-dev-meetings)), an exciting announcement was made: **Quilt is releasing its first beta on April 20th, 2022**.

@@ -3,6 +3,7 @@ title: "October: Month of the 'toberfests"
 date: 2022-10-02 19:20:00 -00:00
 authors:
   - Southpaw1496
+layout: /src/layouts/Post.astro
 ---
 
 October is most well known as a month of spookiness, of sugary treats, and of pumpkins (Pineapples, excuse me). But for developers, October is also a month of what I like to call "'toberfests", and today we're excited to announce that Quilt will be participating in two of them: Hacktoberfest and Modtoberfest.
