@@ -1,5 +1,6 @@
 ---
 import { marked } from "marked";
+import { Icon } from "astro-icon/components"
 
 export interface Mod {
     name: string;
@@ -17,12 +18,12 @@ export interface Props {
 const mod = Astro.props.mod;
 
 const [statusText, statusIcon] = {
-    "UNKNOWN": ["Status is currently unknown", "fa-question"],
-    "WONT_FIX": ["Will not be fixed", "fa-ban"],
-    "IN_PROGRESS": ["Fix in progress", "fa-spinner"],
-    "BLOCKED": ["Fix is blocked by an external factor", "fa-shield-halved"],
-    "NO_ANSWER": ["The tracking issue is awaiting a response from maintainers", "fa-hourglass-half"],
-    "ON_HOLD": ["Fix is currently on hold", "fa-pause"],
+    "UNKNOWN": ["Status is currently unknown", "mdi:question-mark-circle-outline"],
+    "WONT_FIX": ["Will not be fixed", "mdi:ban"],
+    "IN_PROGRESS": ["Fix in progress", "mdi:progress-clock"],
+    "BLOCKED": ["Fix is blocked by an external factor", "mdi:shield-half"],
+    "NO_ANSWER": ["The tracking issue is awaiting a response from maintainers", "mdi:hourglass"],
+    "ON_HOLD": ["Fix is currently on hold", "mdi:pause"],
 }[mod.status ?? "UNKNOWN"]
 ---
 <div class="mod">
@@ -43,16 +44,16 @@ const [statusText, statusIcon] = {
                 </div>
                 <div>
                     <div class="icon has-tooltip-arrow has-tooltip-left" data-tooltip={statusText}>
-                      <i class={"fas fa-lg " + statusIcon}></i>
+                      <Icon name={statusIcon}/>
                     </div>
                     {
                         (mod.tracking === "UNKNOWN") ? (
                             <span class="icon">
-                              <i class="fas fa-lg fa-question"></i>
+                              <Icon name="mdi:question-mark-circle-outline" />
                             </span>
                         ) : (
                             <a href={mod.tracking} target="_blank" class="icon" style="color: inherit">
-                              <i class="fas fa-lg fa-external-link-alt"></i>
+                              <Icon name="mdi:external-link"></i>
                             </a>
                         )
                     }
