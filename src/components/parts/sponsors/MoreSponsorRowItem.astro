@@ -2,6 +2,7 @@
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 const { rtl } = rtlSettings();
 const text = t("button-sponsors", { ns: "home" })
@@ -15,6 +16,7 @@ const text = t("button-sponsors", { ns: "home" })
 	<span>{ text }</span>
 
 	<span class="icon">
-		<i class={`fas fa-arrow-${rtl ? "left" : "right"}`}></i>
+		<Icon name=`mdi:arrow-${rtl ? "left" : "right"}-thick`/>
+		<!-- <i class={`fas fa-arrow-${rtl ? "left" : "right"}`}></i> -->
 	</span>
 </a>
