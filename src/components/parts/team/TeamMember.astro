@@ -2,10 +2,7 @@
 import type { TeamMember,} from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
-
-import CurseforgeLogo from '../../assets/icon/solid/curseforge.svg?raw';
-import ModrinthLogo from '../../assets/icon/solid/modrinth.svg?raw';
-import ModrinthLogoSmall from '../../assets/icon/solid/modrinth-small.svg?raw';
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	member: TeamMember;
@@ -15,12 +12,6 @@ const { member, isLeader } = Astro.props as Props;
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
-
-let customIcons: Record<string, string> = {
-	'curseforge': CurseforgeLogo,
-	'modrinth': ModrinthLogo,
-	'modrinth-small': ModrinthLogoSmall,
-}
 
 ---
 <style>
@@ -54,12 +45,12 @@ let customIcons: Record<string, string> = {
 				</p>
 
 				<p class="subtitle is-6">
-					<i class="fab fa-fw fa-discord"></i>
+					<Icon name="cib:discord" />
 					{member.discord ?? na}
 				</p>
 
 				<p class="subtitle is-6">
-					<i class="fab fa-fw fa-github"></i>
+					<Icon name="cib:github" />
 
 					{
 						member.github ? (
@@ -77,7 +68,7 @@ let customIcons: Record<string, string> = {
 						<p class="subtitle is-6 is-links">
 							{member.links.map((link) => (
 								<a href={link.url}>
-									{link.icon.startsWith('custom:') ? (<span style="width: 1.25em; vertical-align: -.2em; display:inline-block;"><Fragment set:html={customIcons[link.icon.substring('custom:'.length)]} /></span>) : (<i class:list={["fa-lg", link.icon]} />)}
+									<Icon name={link.icon}/>
 								</a>
 							))}
 						</p>
@@ -99,3 +90,12 @@ let customIcons: Record<string, string> = {
 		}
 	</div>
 </div>
+
+<style>
+	[data-icon] {
+		vertical-align: middle;
+		width: 1.2em;
+		height: 1.2em;
+		padding-right: 0.05em;
+	}
+</style>

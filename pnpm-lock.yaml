@@ -14,6 +14,15 @@ importers:
       '@babel/traverse':
         specifier: ^7.25.3
         version: 7.25.3
+      '@iconify-json/cib':
+        specifier: ^1.1.10
+        version: 1.1.10
+      '@iconify-json/material-symbols':
+        specifier: ^1.1.87
+        version: 1.1.87
+      '@iconify-json/mdi':
+        specifier: ^1.1.68
+        version: 1.1.68
       '@tsndr/cloudflare-worker-jwt':
         specifier: ^2.5.3
         version: 2.5.3
@@ -439,6 +448,15 @@ packages:
   '@fluent/syntax@0.19.0':
     resolution: {integrity: sha512-5D2qVpZrgpjtqU4eNOcWGp1gnUCgjfM+vKGE2y03kKN6z5EBhtx0qdRFbg8QuNNj8wXNoX93KJoYb+NqoxswmQ==}
     engines: {node: '>=14.0.0', npm: '>=7.0.0'}
+
+  '@iconify-json/cib@1.1.10':
+    resolution: {integrity: sha512-AisBsRyUDWOMv2M++O7h/9TFyNCqMBHUcmR5ARkZHi7xJHfLQvZ5qaFuSW3cQ9UYc+LXS+nK1QXWsiopxj16ug==}
+
+  '@iconify-json/material-symbols@1.1.87':
+    resolution: {integrity: sha512-Da6IB5y0QIs3YtvL/VkrPK/j8rLtW2ur9wVfaUAzpNWuxvqnaIn3gCAYXMWPXXx4QtehZ5K3fyb4ne1z+ckseQ==}
+
+  '@iconify-json/mdi@1.1.68':
+    resolution: {integrity: sha512-7//TKCiXLU6kNWeOJRTBbisofVO7rF1sD1TZTL4/V9nqlmVNczQ5IOY0GgKOTsitkcTnX9GXgrgbjw3OI5B69w==}
 
   '@iconify/tools@4.0.5':
     resolution: {integrity: sha512-l8KoA1lxlN/FFjlMd3vjfD7BtcX/QnFWtlBapILMlJSBgM5zhDYak/ldw/LkKG3258q/0YmXa48sO/QpxX7ptg==}
@@ -3933,6 +3951,18 @@ snapshots:
   '@fluent/bundle@0.13.0': {}
 
   '@fluent/syntax@0.19.0': {}
+
+  '@iconify-json/cib@1.1.10':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.1.87':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.1.68':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/tools@4.0.5':
     dependencies:
