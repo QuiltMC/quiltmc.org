@@ -1,11 +1,12 @@
 ---
+import { Icon } from "astro-icon/components"
 ---
 
 <div id="dummy-search-field" class="field pt-2 pr-4">
     <p class="control has-icons-right">
         <input aria-label="search" class="input" type="text" placeholder="Search" style="border: 0" />
         <span class="icon is-small is-right is-clickable">
-            <i class="fas fa-magnifying-glass"></i>
+            <Icon name="mdi:magnify" />
         </span>
     </p>
 </div>
@@ -16,7 +17,7 @@
             <p class="control has-icons-right is-expanded">
                 <input id="search-field" autocomplete="off" aria-label="search" class="input is-medium" type="text" placeholder="Search" />
                 <span class="icon is-small is-right is-clickable">
-                    <i class="fas fa-magnifying-glass"></i>
+                    <Icon name="mdi:magnify" />
                 </span>
              </p>
         </div>

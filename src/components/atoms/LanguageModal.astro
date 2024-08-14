@@ -1,5 +1,6 @@
 ---
 import i18next, { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 const langs = [...i18next.languages].sort();
 ---
@@ -26,7 +27,7 @@ const langs = [...i18next.languages].sort();
 						placeholder={t("prompt-search-language")}
 					/>
 					<span class="icon is-small is-left">
-						<i class="fas fa-search"></i>
+						<Icon name="mdi:magnify" />
 					</span>
 				</div>
 				<div id="jump-links" class="columns is-multiline m-2">
@@ -64,7 +65,7 @@ const langs = [...i18next.languages].sort();
 					aria-label="close"
 					for="language-switcher"
 				>
-					<span class="icon"><i class="fas fa-x"></i></span>
+					<span class="icon"><Icon name="mdi:close-circle-outline"></span>
 					<span>{t("button-close")}</span>
 				</label>
 			</div>

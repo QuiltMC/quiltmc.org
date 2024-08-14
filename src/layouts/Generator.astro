@@ -1,5 +1,6 @@
 ---
 import Page from "./Page.astro";
+import { Icon } from "astro-icon/components"
 
 const props = Astro.props;
 ---
@@ -28,7 +29,7 @@ const props = Astro.props;
                 <p class="control has-icons-left">
                     <input id="version-search" class="input" placeholder="Search" />
                     <span class="icon is-small is-left">
-                        <i class="fas fa-magnifying-glass"></i>
+                        <Icon name="mdi:magnify" />
                     </span>
                 </p>
             </div>

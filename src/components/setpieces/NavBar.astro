@@ -3,6 +3,7 @@ import { t } from "i18next";
 import Dropdown from "@parts/nav/Dropdown.astro";
 import NavLink from "@parts/nav/NavLink.astro";
 import { localizePath } from "@util/Util";
+import { Icon } from "astro-icon/components"
 import Search from "../parts/nav/Search.astro";
 
 export interface Props {
@@ -30,7 +31,7 @@ const { style = "is-dark" } = Astro.props as Props;
 			for="language-switcher"
 			data-tooltip={t("tooltip-switch-language")}
 		>
-			<i class="fas fa-language fa-2xl"></i>
+			<Icon name="mdi:translate"/>
 		</label>
 
 		<label
@@ -39,11 +40,11 @@ const { style = "is-dark" } = Astro.props as Props;
 			data-tooltip={t("tooltip-toggle-low-contrast")}
 		>
 			<span id="theme-normal-contrast">
-				<i class="fas fa-circle-half-stroke fa-xl"></i>
+				<Icon name="mdi:circle-half-full" />
 			</span>
 
 			<span id="theme-low-contrast">
-				<i class="fal fa-circle-half-stroke fa-xl"></i>
+				<Icon name="mdi:circle-half" />
 			</span>
 		</label>
 
@@ -108,37 +109,37 @@ const { style = "is-dark" } = Astro.props as Props;
 						{t("nav-more-pages")}
 					</span>
 					<span class="icon is-hidden-mobile is-hidden-tablet-only">
-						<i class="fas fa-ellipsis-v fa-xl"></i>
+						<Icon name="mdi:dots-vertical" />
 					</span>
 				</a>
 
 				<div class="navbar-dropdown is-right is-boxed">
-					<NavLink href={localizePath("/mc-patchnotes")} icon="fas fa-notebook">
+					<NavLink href={localizePath("/mc-patchnotes")} icon="mdi:book">
 						{t("nav-page-patch-notes")}
 					</NavLink>
-					<NavLink href={localizePath("/help-wanted")} icon="fas fa-briefcase">
+					<NavLink href={localizePath("/help-wanted")} icon="mdi:briefcase">
 						{t("nav-page-help-wanted")}
 					</NavLink>
-					<NavLink href={localizePath("/sponsors")} icon="fas fa-dollar-sign">
+					<NavLink href={localizePath("/sponsors")} icon="mdi:dollar">
 						{t("nav-page-sponsors")}
 					</NavLink>
 					<NavLink
 						href={localizePath("/staff")}
-						icon="fas fa-clipboard-user"
+						icon="mdi:user-badge-outline"
 						subpage={true}
 					>
 						{t("nav-page-staff-resources")}
 					</NavLink>
-					<NavLink href="/api" icon="fas fa-plug-circle-plus">
+					<NavLink href="/api" icon="mdi:power-plug">
 						{t("nav-page-api-home")}
 					</NavLink>
-					<NavLink href={localizePath("/legal")} icon="fas fa-scale-balanced">
+					<NavLink href={localizePath("/legal")} icon="mdi:scale-balance">
 						{t("nav-page-legal")}
 					</NavLink>
 
 					<div class="divider">{t("divider-external-links")}</div>
 
-					<NavLink href="https://opencollective.com/quiltmc" icon="fas fa-circle-dollar-to-slot">
+					<NavLink href="https://opencollective.com/quiltmc" icon="mdi:dollar">
 						{t("nav-page-donate")}
 					</NavLink>
 				</div>

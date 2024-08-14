@@ -10,6 +10,7 @@ import WipWarning from "@parts/install/WipWarning.astro";
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 export interface Props extends BaseProps {
 	platformKey: string;
@@ -31,7 +32,7 @@ const { left } = rtlSettings();
 					textKey="install:button-back"
 				/>
 				<button class="button is-primary">
-					<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+					<Icon name="mdi:dots-vertical" />
 					<span>{t("install:button-menu")}</span>
 				</button>
 

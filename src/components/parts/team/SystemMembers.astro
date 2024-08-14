@@ -2,6 +2,7 @@
 import pkCache from "cache/pk.json";
 import type { SystemMember, PkId, SystemMembers } from "@data/Team";
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	members: SystemMembers;
@@ -52,7 +53,7 @@ if (members !== "---") {
 				class="has-tooltip-arrow"
 				data-tooltip={t("team:member-list-redacted")}
 			>
-				<i class="fa-2xl pl-1 fas fa-box-heart" />
+				<Icon name="mdi:heart-box-outline" />
 			</div>
 		)
 	}
