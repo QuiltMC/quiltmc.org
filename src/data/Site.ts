@@ -57,7 +57,7 @@ const config: Config = {
 
 	fileEditBaseUrl: new URL("https://github.com/QuiltMC/quiltmc.org/edit/main"),
 
-	discordCommunity: new URL("https://quiltmc.org/en/dev/features"),
+	discordCommunity: new URL("https://discord.quiltmc.org/"),
 	discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
 	forum: new URL("https://forum.quiltmc.org/"),
 	github: new SocialMediaHandle("https://github.com/", "QuiltMC"),
