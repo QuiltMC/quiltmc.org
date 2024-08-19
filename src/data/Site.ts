@@ -51,13 +51,13 @@ const config: Config = {
 	author: "QuiltMC",
 	logo: "/assets/img/logo-square.png",
 
-	maven: new URL("https://quiltmc.org/en/dev/features"),
+	maven: new URL("https://maven.quiltmc.org"),
 	meta: new URL("https://meta.quiltmc.org"),
 	wiki: new URL("https://wiki.quiltmc.org/en"),
 
 	fileEditBaseUrl: new URL("https://github.com/QuiltMC/quiltmc.org/edit/main"),
 
-	discordCommunity: new URL("https://discord.quiltmc.org/"),
+	discordCommunity: new URL("https://quiltmc.org/en/dev/features"),
 	discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
 	forum: new URL("https://forum.quiltmc.org/"),
 	github: new SocialMediaHandle("https://github.com/", "QuiltMC"),
