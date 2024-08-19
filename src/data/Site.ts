@@ -51,7 +51,7 @@ const config: Config = {
 	author: "QuiltMC",
 	logo: "/assets/img/logo-square.png",
 
-	maven: new URL("https://maven.quiltmc.org"),
+	maven: new URL("https://quiltmc.org/en/dev/features"),
 	meta: new URL("https://meta.quiltmc.org"),
 	wiki: new URL("https://wiki.quiltmc.org/en"),
 
