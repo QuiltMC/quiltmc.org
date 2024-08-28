@@ -10,7 +10,7 @@
 		"clean": "node scripts/clean.mjs"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^3.1.3",
+		"@astrojs/mdx": "^3.1.5",
 		"@astrojs/rss": "^4.0.7",
 		"@astrojs/sitemap": "^3.1.6",
 		"@types/file-saver": "^2.0.7",
@@ -21,7 +21,7 @@
 		"@types/semver-compare": "^1.0.3",
 		"@types/semver-sort": "^0.0.5",
 		"@types/swagger-ui": "^3.52.4",
-		"astro": "4.13.2",
+		"astro": "^4.14.6",
 		"astro-i18next": "github:quiltmc/astro-i18next#74e0be3",
 		"astro-purgecss": "^4.3.0",
 		"bulma-toast": "^2.4.4",
