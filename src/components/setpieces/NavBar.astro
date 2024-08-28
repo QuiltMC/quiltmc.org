@@ -39,13 +39,9 @@ const { style = "is-dark" } = Astro.props as Props;
 			for="low-contrast"
 			data-tooltip={t("tooltip-toggle-low-contrast")}
 		>
-			<span id="theme-normal-contrast">
-				<Icon name="mdi:circle-half-full" />
-			</span>
+				<Icon name="mdi:circle-half-full" id="theme-normal-contrast"/>
 
-			<span id="theme-low-contrast">
-				<Icon name="mdi:circle-half" />
-			</span>
+				<Icon name="mdi:circle-half" id="theme-low-contrast"/>
 		</label>
 
 		<label class="navbar-burger" for="toggle-navbar" aria-label="menu">
