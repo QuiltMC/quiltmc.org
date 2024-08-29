@@ -12,7 +12,7 @@ import searchIndex from "./src/integration/search-index";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://quiltmc.org",
+  site: "https://quiltmc.org/",
   integrations: [
       mdx(),
     astroI18next(),
