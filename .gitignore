@@ -32,3 +32,4 @@ functions/*
 
 # Local development
 .wrangler
+.astro

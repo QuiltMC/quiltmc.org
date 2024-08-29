@@ -6,7 +6,7 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/3987560",
 		description:
 			"Modder and software developer who has way too many ambitious projects.",
-		links: [{ icon: "fas fa-link", url: "https://dblsaiko.net/" }],
+		links: [{ icon: "mdi:link-variant", url: "https://dblsaiko.net/" }],
 	},
 	ADudeCalledLeo: {
 		name: "ADudeCalledLeo",
@@ -17,11 +17,11 @@ export default {
 			"The local project abandoning expert. Also may or may not exist.",
 		links: [
 			{
-				icon: "fab fa-mastodon",
+				icon: "cib:mastodon",
 				url: "https://tech.lgbt/@ADudeCalledLeo",
 			},
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/ADudeCalledLeo",
 			},
 		],
@@ -40,11 +40,11 @@ export default {
 		avatar: "/assets/img/team/AlexIIL.png",
 		links: [
 			{
-				icon: "fas fa-link",
+				icon: "mdi:link-variant",
 				url: "https://alexiil.uk",
 			},
 			{
-				icon: "custom:curseforge",
+				icon: "curseforge",
 				url: "https://www.curseforge.com/members/alexiil/projects",
 			},
 		],
@@ -77,7 +77,7 @@ export default {
 		github: "Forkk",
 		avatar: "https://avatars.githubusercontent.com/u/1300078?v=4",
 		description: "Resident silverware expert.",
-		links: [{ icon: "fas fa-link", url: "https://forkk.net/" }],
+		links: [{ icon: "mdi:link-variant", url: "https://forkk.net/" }],
 	},
 	Fusion: {
 		name: "Fusion Flux",
@@ -87,11 +87,11 @@ export default {
 		description: "Part time speedrunner, mod developer, and game developer.",
 		links: [
 			{
-				icon: "fab fa-youtube",
+				icon: "cib:youtube",
 				url: "https://www.youtube.com/channel/UCyzsPpD0PPB7FQy93Yo6xfQ",
 			},
 			{
-				icon: "fab fa-twitch",
+				icon: "cib:twitch",
 				url: "https://www.twitch.tv/fusion_flux",
 			},
 		],
@@ -122,7 +122,7 @@ export default {
 		discord: "ix0rai",
 		github: "ix0rai",
 		avatar: "/assets/img/team/ix0rai.png",
-		links: [{ icon: "fab fa-tumblr", url: "https://ix0rai.tumblr.com/" }],
+		links: [{ icon: "cib:tumblr", url: "https://ix0rai.tumblr.com/" }],
 	},
 	Jamalam: {
 		name: "Jamalam",
@@ -133,15 +133,15 @@ export default {
 			"Modder and programmer trying to create cool things using Java, Kotlin, and TypeScript/Deno.",
 		links: [
 			{
-				icon: "fas fa-link",
+				icon: "mdi:link-variant",
 				url: "https://jamalam.tech/",
 			},
 			{
-				icon: "fab fa-twitter",
+				icon: "cib:twitter",
 				url: "https://twitter.com/jamalamisadev",
 			},
 			{
-				icon: "custom:curseforge",
+				icon: "curseforge",
 				url: "https://www.curseforge.com/members/Jamalam360/projects",
 			},
 		],
@@ -161,7 +161,7 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/61744596?v=4",
 		links: [
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/anonymous123-code",
 			},
 		],
@@ -182,7 +182,7 @@ export default {
 		description: "Shorthand enjoyer. Java, Python and bio. Chinese in the SEA.",
 		links: [
 			{
-				icon: "fas fa-link",
+				icon: "mdi:link-variant",
 				url: "https://linktr.ee/lapisliozuli",
 			}
 		]
@@ -201,7 +201,7 @@ export default {
 		description: "Professional memer",
 		links: [
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/obj-obj",
 			},
 		],
@@ -215,19 +215,19 @@ export default {
 			"Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making items extendable and improving everything about mappings in the Quilt Toolchain.",
 		links: [
 			{
-				icon: "fas fa-link",
+				icon: "mdi:link-variant",
 				url: "https://oroarmor.com/",
 			},
 			{
-				icon: "fab fa-twitter",
+				icon: "cib:twitter",
 				url: "https://twitter.com/realOroArmor",
 			},
 			{
-				icon: "custom:curseforge",
+				icon: "curseforge",
 				url: "https://www.curseforge.com/members/oroarmor/projects",
 			},
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/h74rYEcI",
 			},
 		],
@@ -240,7 +240,7 @@ export default {
 		systemMembers: "---",
 		links: [
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/moehreag"
 			}
 		]
@@ -254,15 +254,15 @@ export default {
 			"Java programmer and modder, passionate about Kotlin and serverside technology.",
 		links: [
 			{
-				icon: "fal fa-globe",
+				icon: "mdi:link-variant",
 				url: "https://quiltservertools.net",
 			},
 			{
-				icon: "custom:curseforge",
+				icon: "curseforge",
 				url: "https://www.curseforge.com/members/potatoboy99999/projects",
 			},
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/Potatoboy9999",
 			},
 		],
@@ -281,7 +281,7 @@ export default {
 		avatar: "/assets/img/team/snoozestudios.png",
 		description: "Student, Coder & Much More!",
 		links: [
-			{ icon: "fab fa-twitter", url: "https://twitter.com/snoozestudios" },
+			{ icon: "cib:twitter", url: "https://twitter.com/snoozestudios" },
 		],
 	},
 	Southpaw: {
@@ -293,11 +293,11 @@ export default {
 			"Inside of Quilt I help moderate community spaces and lead the Outreach team. Outside of Quilt I tinker with things to varying degrees of failure, and write things now and then. I also like cats.",
 		links: [
 			{
-				icon: "fal fa-globe",
+				icon: "mdi:link-variant",
 				url: "https://southpaw1496.me",
 			},
 			{
-				icon: "fab fa-mastodon",
+				icon: "cib:mastodon",
 				url: "https://mastodon.southpaw1496.me",
 			},
 		],
@@ -311,11 +311,11 @@ export default {
 			"A person who used to know nothing about programming and now makes fun of himself for it. Also likes Kotlin.",
 		links: [
 			{
-				icon: "fas fa-link",
+				icon: "mdi:link-variant",
 				url: "https://concern.i.ng",
 			},
 			{
-				icon: "fab fa-mastodon",
+				icon: "cib:mastodon",
 				url: "vmst.io/@sschr15",
 			},
 		],
@@ -329,7 +329,7 @@ export default {
 			"https://gitlab.com/uploads/-/system/user/avatar/3853177/avatar.png?width=400",
 		links: [
 			{
-				icon: "fab fa-gitlab",
+				icon: "cib:mastodon",
 				url: "https://gitlab.com/supersaiyansubtlety",
 			},
 		],
@@ -341,7 +341,7 @@ export default {
 		description:
 			"Programming enthusiast, theater and music nerd, Gradle denier.",
 		avatar: "https://avatars.githubusercontent.com/u/37983572?v=4",
-		links: [{ icon: "fas fa-link", url: "https://tibinonest.me/" }],
+		links: [{ icon: "mdi:link-variant", url: "https://tibinonest.me/" }],
 	},
 	Woodie: {
 		name: "Woodie",
@@ -351,7 +351,7 @@ export default {
 		avatar: "https://avatars.githubusercontent.com/u/17211100?v=4",
 		links: [
 			{
-				icon: "custom:modrinth-small",
+				icon: "modrinth-small",
 				url: "https://modrinth.com/user/woodiertexas",
 			},
 		]

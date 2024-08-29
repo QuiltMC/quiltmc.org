@@ -4,6 +4,7 @@ import Base from "./Base.astro";
 import PageTitle from "@atoms/PageTitle.astro";
 import Sidebar from "@setpieces/Sidebar.astro";
 import { localizePath } from "@util/Util";
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	title: string;
@@ -58,7 +59,7 @@ if (pageUrl != staffUrl) {
 						<div class="is-hidden-tablet">
 							<button class="button is-primary">
 								<label class="button is-primary" for="toggle-sidebar">
-									<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+									<Icon name="mdi:dots-vertical" />
 									<span>{t("sidebar-pages")}</span>
 								</label>
 							</button>

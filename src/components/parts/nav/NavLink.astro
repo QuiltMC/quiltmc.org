@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components"
 export interface Props {
 	href: string;
 	klass?: string;
@@ -26,7 +27,7 @@ const isActive = isSubpage || href === pageUrl ? "is-active" : "";
 	{
 		icon && (
 			<span class="icon">
-				<i class={`fa-xl ${icon}`} />
+				<Icon name={icon}/>
 			</span>
 		)
 	}

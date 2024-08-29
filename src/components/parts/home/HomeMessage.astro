@@ -2,6 +2,7 @@
 import Message from "@atoms/Message.astro";
 // @ts-ignore
 import { t } from "i18next";
+import {Icon} from "astro-icon/components"
 
 export interface Props {
 	style: string;
@@ -19,12 +20,11 @@ const msgHeader = tKey !== undefined ? t(`message-${tKey}`, { ns: "home" }) : he
 	<h2 class="has-text-centered">
 		<span class="icon-text">
 			<span class={`icon has-text-${iconType} mr-3`}>
-				<i class={`fas fa-${icon}`}></i>
+				<Icon name={icon} />
 			</span>
 
 			<span>{msgHeader}</span>
 		</span>
 	</h2>
-
 	<slot />
 </Message>

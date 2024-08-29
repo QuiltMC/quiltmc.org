@@ -11,6 +11,7 @@ hasDownloads: true
 
 import InstallerVersion from "@parts/install/InstallerVersion.astro";
 import MavenInstallerButton from "@atoms/MavenInstallerButton.astro";
+import { Icon } from "astro-icon/components"
 
 Before getting started, you'll need to make sure you download a copy of the Quilt installer.
 
@@ -24,14 +25,14 @@ If you're not sure which to pick, use the **Universal** download. If you need to
 	<div class="field-body">
 		<div class="field">
 			<div class="control buttons">
-				<MavenInstallerButton arch="java-universal" title="Universal (.jar)" icon="java" class_="button is-primary" />
-				<MavenInstallerButton arch="windows-x86_64" title="Windows (.exe)" icon="windows" class_="button" />
+				<MavenInstallerButton arch="java-universal" title="Universal (.jar)" icon="cib:java" class_="button is-primary" />
+				<MavenInstallerButton arch="windows-x86_64" title="Windows (.exe)" icon="cib:windows" class_="button" />
 
 				<div class="dropdown is-right is-hoverable">
 					<div class="dropdown-trigger">
 						<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
 							<span class="icon is-small">
-								<i class="fas fa-ellipsis" aria-hidden="true"></i>
+								<Icon name="mdi:dots-vertical"/>
 						  	</span>
 
 							<span>More</span>
@@ -40,8 +41,8 @@ If you're not sure which to pick, use the **Universal** download. If you need to
 
 					<div class="dropdown-menu" id="dropdown-menu" role="menu">
 						<div class="dropdown-content">
-							<MavenInstallerButton arch="windows-aarch64" title="Windows (.exe, ARM64)" icon="windows" class_="dropdown-item" />
-							<MavenInstallerButton arch="windows-i686" title="Windows (.exe, 32-bit)" icon="windows" class_="dropdown-item" />
+							<MavenInstallerButton arch="windows-aarch64" title="Windows (.exe, ARM64)" icon="cib:windows" class_="dropdown-item" />
+							<MavenInstallerButton arch="windows-i686" title="Windows (.exe, 32-bit)" icon="cib:windows" class_="dropdown-item" />
 						</div>
 					</div>
 				</div>

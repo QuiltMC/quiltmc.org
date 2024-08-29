@@ -10,6 +10,7 @@ import WipWarning from "@parts/install/WipWarning.astro";
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 export interface Props extends BaseProps {
 	platformKey: string;
@@ -27,11 +28,11 @@ const { left } = rtlSettings();
 				<Button
 					type="link"
 					href={localizePath("/install")}
-					icon={`fas fa-arrow-${left}`}
+					icon={`mdi:arrow-${left}-thick`}
 					textKey="install:button-back"
 				/>
 				<button class="button is-primary">
-					<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+					<Icon name="mdi:dots-vertical" />
 					<span>{t("install:button-menu")}</span>
 				</button>
 
@@ -43,7 +44,7 @@ const { left } = rtlSettings();
 				<Button
 					type="link is-hidden-mobile mb-2"
 					href={localizePath("/install")}
-					icon={`fas fa-arrow-${left}`}
+					icon={`mdi:arrow-${left}-thick`}
 					textKey="install:button-back.full"
 				/>
 				<div class="grid-picker mb-0">
@@ -73,7 +74,7 @@ const { left } = rtlSettings();
 						<Button
 							href={content?.website}
 							type="link"
-							icon="fas fa-globe"
+							icon="mdi:external-link"
 							textKey="install:button-website"
 						/>
 					)

@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import purgecss from "astro-purgecss";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
+import icon from "astro-icon"
 
 import compress from "astro-compress";
 import searchIndex from "./src/integration/search-index";
@@ -18,7 +19,8 @@ export default defineConfig({
     sitemap(),
     purgecss({ safelist: ["has-background-info", "has-background-link"] }),
     compress({ SVG: false, }),
-    searchIndex()
+    searchIndex(),
+    icon()
   ],
   markdown: {
     syntaxHighlight: "prism",
@@ -30,6 +32,13 @@ export default defineConfig({
   vite: {
     build: {
       assetsInlineLimit: 0
+    }
+  },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    routing: {
+      prefixDefaultLocale: true
     }
   }
 });

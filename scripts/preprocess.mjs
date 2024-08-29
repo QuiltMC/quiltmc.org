@@ -3,7 +3,7 @@ import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
 import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE, linkIssues } from "./util.mjs";
 import fetch from "node-fetch";
-import glob from "glob";
+import {glob} from "glob";
 
 async function main() {
 	prepareCacheDirectory();

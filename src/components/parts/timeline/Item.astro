@@ -1,5 +1,5 @@
 ---
-import PumpkinIcon from '../../assets/icon/solid/pumpkin.svg?raw';
+import {Icon} from "astro-icon/components"
 
 export interface Props {
 	id: string;
@@ -9,14 +9,11 @@ export interface Props {
 
 const { id, title, icon } = Astro.props as Props;
 
-const customIcons: Record<string, string> = {
-	'pumpkin': PumpkinIcon,
-}
 ---
 
 <div class="timeline-item">
 	<div class="timeline-marker is-icon is-dark">
-		{icon.startsWith('custom:') ? (<div style="min-width: 1.25em; padding-top: 0.4em; display:inline-block;"><Fragment set:html={customIcons[icon.substring('custom:'.length)]} /></div>) : (<i class={icon} />)}
+		 <Icon name={icon} style="min-width: 1.2em; min-height: 1.2em;  display:block;"/>
 	</div>
 
 	<div class="timeline-content">

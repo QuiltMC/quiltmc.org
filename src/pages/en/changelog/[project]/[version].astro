@@ -6,6 +6,7 @@ import { t } from "i18next";
 import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
+import { Icon } from "astro-icon/components"
 
 // Interface
 
@@ -63,7 +64,7 @@ const body = changelogs.find((changelog) => changelog.file.endsWith(`/${project}
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
 							<label class="button is-primary" for="toggle-sidebar">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<Icon name="mdi:dots-vertical" />
 								<span>{t("sidebar-pages")}</span>
 							</label>
 							<br />

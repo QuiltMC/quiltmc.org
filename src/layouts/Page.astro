@@ -5,6 +5,7 @@ import i18next, { t } from "i18next";
 import Base from "./Base.astro";
 import SiteConfig from "@data/Site"
 import { cwd } from "process"
+import { Icon } from "astro-icon/components"
 
 const { content } = Astro.props;
 const { title, sidebar = true } = content;
@@ -25,7 +26,7 @@ const githubUrl = SiteConfig.fileEditBaseUrl + Astro.props.frontmatter.file.repl
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
 							<label class="button is-primary" for="toggle-sidebar">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<Icon name="mdi:dots-vertical" />
 								<span>{t("sidebar-pages")}</span>
 							</label>
 							<br />
@@ -52,7 +53,7 @@ const githubUrl = SiteConfig.fileEditBaseUrl + Astro.props.frontmatter.file.repl
 						<p class="subtitle is-italic is-6 has-text-weight-medium is-family-primary mt-5">
 							<span class="icon-text">
 								<span class="icon">
-								   <i class="fas fa-pencil"></i>
+								   <Icon name="mdi:pencil" />
 								</span>
 								<span>
 									<a href={githubUrl} style="color: inherit">{t("edit-on-github")}</a>
