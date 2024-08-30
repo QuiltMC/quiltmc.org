@@ -44,5 +44,5 @@ jobs:
           name: website-package
           path: |
             package.json
-            package-lock.json
+            pnpm-lock.yaml
           retention-days: 1
