@@ -5,7 +5,7 @@ const posts = Object.values(postImportResult);
 
 // TODO(apple): Multiple feeds, one per language (RSS doesn't support multi-language feeds).
 // That would be too easy.
-export const get = () =>
+export const GET = () =>
 	rss({
 		// `<title>` field in output xml
 		title: "The Quilt Project",

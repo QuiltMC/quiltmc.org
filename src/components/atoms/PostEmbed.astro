@@ -7,7 +7,7 @@ const { post } = Astro.props;
 const { title } = post.frontmatter;
 
 function getExcerptOfPost<T extends Record<string, any>>(md: MarkdownInstance<T>): string {
-	const content = md.rawContent();
+	const content = md.compiledContent();
 	return content.slice(0, content.indexOf("<!-- MORE -->"));
 }
 ---
@@ -17,7 +17,7 @@ function getExcerptOfPost<T extends Record<string, any>>(md: MarkdownInstance<T>
 
 	<PostInfo {post} />
 
-	<Markdown>{getExcerptOfPost(post)}</Markdown>
+	<Fragment set:html={getExcerptOfPost(post)}/>
 
 	<p></p>
 </article>

@@ -2,6 +2,7 @@
 import Message from "@atoms/Message.astro";
 import { t } from "i18next";
 import Base from "./Base.astro";
+import { Icon } from "astro-icon/components"
 ---
 
 <Base content={Astro.props.content}>
@@ -13,7 +14,7 @@ import Base from "./Base.astro";
 						<div class="is-hidden-tablet">
 							<button class="button is-primary" id="sidebar-button"
 									aria-controls="sidebar-box" aria-haspopup="menu">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<Icon name="mdi:dots-vertical" />
 								<span>{t("sidebar-versions")}</span>
 							</button>
 
@@ -57,7 +58,7 @@ import Base from "./Base.astro";
 													data-tooltip="Dismiss"
 												>
 													<span class="icon"
-														><i class="fas fa-2x fa-circle-xmark"></i>
+														><Icon name="mdi:close-circle-outline" />
 													</span>
 												</label>
 											</div>

@@ -5,25 +5,23 @@ import sitemap from "@astrojs/sitemap";
 import purgecss from "astro-purgecss";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
-import searchIndex from "./src/integration/search-index";
+import icon from "astro-icon"
 
-import playformCompress from "@playform/compress";
+import compress from "astro-compress";
+import searchIndex from "./src/integration/search-index";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://quiltmc.org",
+  site: "https://quiltmc.org/",
   integrations: [
-		mdx(),
-		astroI18next(),
-		sitemap(),
-		purgecss({
-    	safelist: ["has-background-info", "has-background-link"]
-  	}),
-		searchIndex(),
-		playformCompress({
-			SVG: false,
-		}),
-	],
+      mdx(),
+    astroI18next(),
+    sitemap(),
+    purgecss({ safelist: ["has-background-info", "has-background-link"] }),
+    compress({ SVG: false, }),
+    searchIndex(),
+    icon()
+  ],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [[rehypeAutolinkHeadings, {
@@ -34,6 +32,13 @@ export default defineConfig({
   vite: {
     build: {
       assetsInlineLimit: 0
+    }
+  },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    routing: {
+      prefixDefaultLocale: true
     }
   }
 });

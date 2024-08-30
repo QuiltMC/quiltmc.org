@@ -1,5 +1,6 @@
 ---
 import Message from "./Message.astro";
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	id: string;
@@ -17,7 +18,7 @@ const { id } = Astro.props as Props;
 
 			<div class="is-flex-grow-1 mt-1">
 				<a href={`#${id}`} class="is-pulled-right">
-					<i class="fas fa-link" />
+					<Icon name="mdi:link-variant">
 				</a>
 			</div>
 		</summary>

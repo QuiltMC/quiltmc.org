@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components"
+
 export interface Props {
 	arch: string;
 	title: string;
@@ -15,7 +17,7 @@ const {
 
 <a href={"/api/v1/download-latest-installer/" + arch} class={"is-flex is-flex-direction-row is-flex-grow-0 " + class_}>
 	<span class="icon is-small mr-2">
-		<i class:list={["fab", "fa-" + icon]} aria-hidden="true"></i>
+		<Icon name={icon}>
 	</span>
 	{title}
 </a>

@@ -30,15 +30,19 @@ jobs:
         with:
           name: website-package
           run_id: ${{ github.event.workflow_run.id }}
-
-      - name: Setup Node.js
+      
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          cache: "npm"
-          node-version: "20"
+          node-version-file: package.json
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Setup PNPM and install dependencies
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: |
+            - args: [--frozen-lockfile]
+
 
       # TODO this action is deprecated!
       - name: Gather PR details

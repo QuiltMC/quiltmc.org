@@ -3,7 +3,7 @@ import teamData from "../src/data/TeamData.mjs";
 import * as paths from "./paths.mjs";
 import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE, linkIssues } from "./util.mjs";
 import fetch from "node-fetch";
-import glob from "glob";
+import { glob } from "glob";
 
 async function main() {
 	prepareCacheDirectory();
@@ -52,33 +52,33 @@ function generateRedirectFunctions() {
 
 	const pathPrefix = paths.SOURCE_LOCATION + "en";
 
-	glob(paths.SOURCE_LOCATION + "en/**/*.md?(x)", function (_, files) {
-		files.forEach((file) => {
-			file = file.slice(pathPrefix.length)
-				.split(".")
-				.slice(0, -1)
-				.join(".");
+	var files = glob.sync(paths.SOURCE_LOCATION + "en/**/*.md?(x)")
+	files.forEach((file) => {
+		file = file.slice(pathPrefix.length -1)
+			.split(".")
+			.slice(0, -1)
+			.join(".");
 
-			const availableLanguages = [];
-			allLanguages.forEach((language) => {
+		const availableLanguages = [];
+		allLanguages.forEach((language) => {
+			try {
+				fs.statSync(paths.SOURCE_LOCATION + language + file + ".md")
+				availableLanguages.push(language)
+			} catch {
 				try {
-					fs.statSync(paths.SOURCE_LOCATION + language + file + ".md")
+					fs.statSync(paths.SOURCE_LOCATION + language + file + ".mdx")
 					availableLanguages.push(language)
-				} catch {
-					try {
-						fs.statSync(paths.SOURCE_LOCATION + language + file + ".mdx")
-						availableLanguages.push(language)
-					} catch {}
-				}
-			})
-
-			const functionLocation = paths.FUNCTION_LOCATION + file + ".js";
-			const parentFolder = functionLocation.split("/").slice(0, -1).join("/");
-
-			fs.mkdirSync(parentFolder, { recursive: true });
-			const content = `const al = [${availableLanguages.map(l => '"' + l + '"').join(", ")}]\n${functionSource}`;
-			fs.writeFile(functionLocation, content, () => null);
+				} catch { }
+			}
 		})
+
+		const functionLocation = paths.FUNCTION_LOCATION + "/" + file + ".js";
+		const parentFolder = functionLocation.split("/").slice(0, -1).join("/");
+
+		fs.mkdirSync(parentFolder, { recursive: true });
+		const content = `const al = [${availableLanguages.map(l => '"' + l + '"').join(", ")}]\n${functionSource}`;
+		fs.writeFile(functionLocation, content, () => null);
+		return
 	})
 }
 
