@@ -30,6 +30,11 @@ jobs:
         with:
           name: website-package
           run_id: ${{ github.event.workflow_run.id }}
+      
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
 
       - name: Setup PNPM and install dependencies
         uses: pnpm/action-setup@v4
