@@ -16,12 +16,14 @@ jobs:
       needs: build-website
       permissions:
         contents: read
+      env:
+        GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
       steps:
           - name: Comment on the Comment
-            if: ${{ secrets.COZY_PAT }} != ''
+            if: env.GITHUB_PUBLISH_TOKEN != ''
             uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
             with:
-              token: ${{ secrets.COZY_PAT }}
+              token: ${{ env.GITHUB_PUBLISH_TOKEN }}
               repository: ${{ github.repository }}
               sha: ${{ github.sha }}
               body: "See preview on Cloudflare Pages: ${{ needs.publish.output.deployment-url }}"
