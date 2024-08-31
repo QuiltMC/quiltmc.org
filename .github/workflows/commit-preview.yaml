@@ -8,6 +8,7 @@ jobs:
   publish:
     uses: ./.github/workflows/publish.yml
     needs: build-website
+    secrets: inherit
   
   comment-on-commit:
       name: Add a comment on the commit
@@ -17,10 +18,10 @@ jobs:
         contents: read
       steps:
           - name: Comment on the Comment
-            if: env.GITHUB_PUBLISH_TOKEN != ''
+            if: secrets.COZY_PAT != ''
             uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
             with:
-              token: ${{ env.GITHUB_PUBLISH_TOKEN }}
+              token: ${{ secrets.COZY_PAT }}
               repository: ${{ github.repository }}
               sha: ${{ github.sha }}
               body: "See preview on Cloudflare Pages: ${{ needs.publish.output.deployment-url }}"
