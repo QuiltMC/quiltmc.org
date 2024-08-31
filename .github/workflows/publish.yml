@@ -5,13 +5,17 @@ on:
         required: false
         default: ${{ github.ref_name }}
         type: string
+    outputs:
+      deployment-url:
+        description: The URL of the deployed site.
+        value: ${{ jobs.publish.outputs.deployment-url }}
 
 jobs:
   publish:
     name: "Publish to Cloudflare Pages"
     runs-on: ubuntu-latest
     outputs:
-      deployment-url: http://example.com
+      deployment-url: ${{ steps.cloudflare-publish.outputs.url }}
     permissions:
       contents: read
     env:
