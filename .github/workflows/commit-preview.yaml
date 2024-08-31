@@ -18,7 +18,7 @@ jobs:
         contents: read
       env:
         GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
-        DEPLOYMENT_URL: ${{ needs.publish.outputs.deployment-url }}
+        DEPLOYMENT_URL: ${{ needs.publish.publish.outputs.deployment-url }}
       steps:
           - name: Comment on the Comment
             if: env.GITHUB_PUBLISH_TOKEN != ''
