@@ -37,7 +37,7 @@ jobs:
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4
         with:
-          name: website-html
+          name: html
           path: dist
           retention-days: 1
 

@@ -1,0 +1,19 @@
+on: [pull_request]
+name: Build PR preview
+
+jobs:
+  publish-pr-number:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write PR Number to file
+        env: 
+          PR_NUMBER: ${{ github.event.number }}
+        run: mkdir ./pr && echo $PR_NUMBER > ./pr/pr_number
+      - name: Upload PR Number as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr_number
+          path: pr/
+  build:
+    needs: publish-pr-number # The subsequent deploy workflow will fail if the PR number fails, so there's no point building the site.
+    uses: ./.github/workflows/build-website.yml
