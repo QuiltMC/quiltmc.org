@@ -13,7 +13,7 @@ jobs:
   comment-on-commit:
       name: Add a comment on the commit
       runs-on: ubuntu-latest
-      needs: build-website
+      needs: publish
       permissions:
         contents: read
       env:
