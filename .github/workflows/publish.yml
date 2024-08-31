@@ -11,7 +11,7 @@ jobs:
     name: "Publish to Cloudflare Pages"
     runs-on: ubuntu-latest
     outputs:
-      deployment-url: ${{ steps.cloudflare-publish.outputs.url }}
+      deployment-url: http://example.com
     permissions:
       contents: read
     env:
