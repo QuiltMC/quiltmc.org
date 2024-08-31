@@ -20,7 +20,7 @@ jobs:
         GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
       steps:
           - name: Print publish outputs
-            run: echo ${{ needs.publish.output.deployment-url }}
+            run: echo ${{ needs.publish.output }}
           - name: Comment on the Comment
             if: env.GITHUB_PUBLISH_TOKEN != '' && ${{ needs.publish.output.deployment-url }} !=null
             uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
