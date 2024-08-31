@@ -33,12 +33,5 @@ export default defineConfig({
     build: {
       assetsInlineLimit: 0
     }
-  },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-    routing: {
-      prefixDefaultLocale: true
-    }
   }
 });
