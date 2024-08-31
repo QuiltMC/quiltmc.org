@@ -28,6 +28,15 @@ jobs:
         with:
           name: functions
           path: functions
+      
+      # The following hacky mess is required because Cloudflare can't compile the workeers in the functions/ directory seperately from deploying, so it needs the packages they use in order to compile them at deployment time, but installing *everything* in package.json would be a waste. The build and publish steps can't go in the same job, because PR Previews have to build the site without publishing it (since they can't access secrets). Hopefully we can remove the need for this in the future by switching to Astro Actions, which should be compiled with the rest of the site.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: false
+      - name: Install packages required by functions
+        run: pnpm install xml-js semver-sort
       - name: Publish to Cloudflare Pages
         id: cloudflare-publish # This step needs an ID because its outputs may be needed in subsequent jobs.
         uses: cloudflare/pages-action@v1
