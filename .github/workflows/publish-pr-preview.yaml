@@ -18,11 +18,13 @@ jobs:
       - name: Download Artifact from triggering workflow
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
+          GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
         uses: actions/download-artifact@v4
         with:
           name: pr_number
           path: pr
           run-id: ${{ env.RUN_ID }}
+          github-token: ${{ env.GITHUB_TOKEN }}
       - name: Output PR Number
         id: output-pr-number
         run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
