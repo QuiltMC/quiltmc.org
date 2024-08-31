@@ -1,0 +1,36 @@
+on:
+  workflow_call:
+    inputs:
+      branch:
+        required: false
+        default: ${{ github.ref_name }}
+        type: string
+
+jobs:
+  publish:
+    name: "Publish to Cloudflare Pages"
+    runs-on: ubuntu-latest
+    outputs:
+      deployment-url: ${{ steps.cloudflare-publish.outputs.url }}
+    permissions:
+      contents: read
+    steps:
+      - name: Download Website HTML
+        uses: actions/download-artifact@v4
+        with:
+          name: html
+          path: dist
+      - name: Download Website Functions
+        uses: actions/download-artifact@v4
+        with:
+          name: functions
+          path: functions
+      - name: Publish to Cloudflare Pages
+        id: cloudflare-publish # This step needs an ID because its outputs may be needed in subsequent jobs.
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: quiltmc-org
+          directory: dist
+          branch: ${{ inputs.branch }}
