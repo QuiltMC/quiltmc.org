@@ -30,7 +30,7 @@ jobs:
         run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
     
   publish-preview:
-    uses: ./.github/workflows/publish.yaml
+    uses: ./.github/workflows/publish-website.yaml
     needs: get-pr-number
     with:
       branch: preview-${{ needs.get-pr-number.outputs.pr-number }}

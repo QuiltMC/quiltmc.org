@@ -6,6 +6,6 @@ jobs:
     uses: ./.github/workflows/build-website.yaml
   
   publish:
-    uses: ./.github/workflows/publish.yaml
+    uses: ./.github/workflows/publish-website.yaml
     needs: build-website
     secrets: inherit

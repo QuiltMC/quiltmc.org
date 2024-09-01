@@ -7,6 +7,7 @@ on:
         type: string
       run-id:
         required: false
+        default: ${{ github.run_id }}
         type: string
     outputs:
       deployment-url:
