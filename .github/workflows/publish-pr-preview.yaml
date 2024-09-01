@@ -28,7 +28,7 @@ jobs:
           github-token: ${{ env.GITHUB_TOKEN }}
       - name: Output PR Number
         id: output-pr-number
-        run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT" && echo "$GITHUB_OUTPUT"
+        run: cat ./pr/pr_number
     
   # publish-preview:
   #   uses: ./.github/workflows/publish.yml
@@ -37,12 +37,3 @@ jobs:
   #     branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
   #     run-id: ${{ github.event.workflow_run.id }}
   #   secrets: inherit
-  echo-tests:
-    runs-on: ubuntu-latest
-    needs: get-pr-number
-    env:
-      EXPECTED_OUTPUT: preview-${{ needs.get-pr-number.outputs.pr-number }}
-      HARDCODED_OUTPUT: ${{ needs.get-pr-number.outputs.hardcoded }}
-    steps:
-      - name: Echo expected outputs
-        run: echo "$EXPECTED_OUTPUT\n$HARDCODED_OUTPUT)"
