@@ -35,3 +35,4 @@ jobs:
     with:
       branch: preview-${{ needs.get-pr-number.pr-number }}
       run-id: ${{ github.event.workflow_run.id }}
+    secrets: inherit
