@@ -2,60 +2,10 @@ on: workflow_dispatch
 name: Manual publish
 
 jobs:
-  build:
-    name: Publish website
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          filter: 'blob:none'
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: "npm"
-          node-version: "20"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build the project
-        run: npm run build
-
-      - name: Upload HTML artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: website-html
-          path: dist
-          retention-days: 1
-
-      - name: Upload Functions artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: website-functions
-          path: functions
-          retention-days: 1
-
-      - name: Upload package artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: website-package
-          path: |
-            package.json
-            package-lock.json
-          retention-days: 1
-
-      - name: Publish to Pages
-        uses: cloudflare/pages-action@1
-        id: publish
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: quiltmc-org
-          directory: dist
-          branch: main
+  build-website:
+    uses: ./.github/workflows/build-website.yml
+  
+  publish:
+    uses: ./.github/workflows/publish.yml
+    needs: build-website
+    secrets: inherit
