@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@astro-openapi/gui-swagger':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@babel/traverse':
         specifier: ^7.25.3
         version: 7.25.3
@@ -156,6 +159,9 @@ packages:
 
   '@antfu/utils@0.7.10':
     resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
+
+  '@astro-openapi/gui-swagger@0.0.5':
+    resolution: {integrity: sha512-G4IVGirWt89Jogo+jEZrwIWdQFWPVMqI1CSS0l7QeeTX0i2Fuct2z5/ww0KwXboxbw/qoDIe8CUVf7rZlgze9g==}
 
   '@astrojs/compiler@2.10.3':
     resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
@@ -3319,6 +3325,9 @@ packages:
   swagger-client@3.28.2:
     resolution: {integrity: sha512-g30KCdSVyZlMulWOJnheNo7Ea+L06OZebl0oRU6zHd5Zf5AZKHTqurKRdNOLsMWA3l3bWJiEh7s3JlzFJHRmoQ==}
 
+  swagger-ui-dist@4.19.1:
+    resolution: {integrity: sha512-n/gFn+R7G/BXWwl5UZLw6F1YgWOlf3zkwGlsPhTMhNtAAolBGKg0JS5b2RKt5NI6/hSopVaSrki2wTIMUDDy2w==}
+
   swagger-ui@5.17.14:
     resolution: {integrity: sha512-z9pOymwowrgkoMKNsRSN6QjOyYrMAnc4iohEebnS/ELT5jjdB13Lu4f3Bl4+o2Mw5B6QOyo4vibr/A/Vb7UbMQ==}
 
@@ -3709,6 +3718,10 @@ snapshots:
       find-up: 5.0.0
 
   '@antfu/utils@0.7.10': {}
+
+  '@astro-openapi/gui-swagger@0.0.5':
+    dependencies:
+      swagger-ui-dist: 4.19.1
 
   '@astrojs/compiler@2.10.3': {}
 
@@ -7765,6 +7778,8 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - ramda
+
+  swagger-ui-dist@4.19.1: {}
 
   swagger-ui@5.17.14(@types/react@18.3.3)(ramda@0.30.1):
     dependencies:
