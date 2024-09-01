@@ -1,62 +1,38 @@
 on:
   workflow_run:
-    workflows: ["PR preview"]
+    workflows: ["Build PR preview"]
     types: [completed]
 name: Publish PR preview
 
 jobs:
-  publish:
-    name: Publish PR preview
+  get-pr-number:
+    # We need the PR number to generate the branch URL for Cloudflare Pages, but GitHub doesn't seem to have a way to derive the PR number (or receive any input at all) from the triggering workflow, so we use artifacts instead.
+    name: Get PR Number
     runs-on: ubuntu-latest
+    outputs:
+      pr-number: ${{ steps.output-pr-number.outputs.pr-number }}
+    permissions:
+      actions: read
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
     steps:
-      - name: Download HTML artifact
-        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
+      - name: Download Artifact from triggering workflow
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
+        uses: actions/download-artifact@v4
         with:
-          name: website-html
-          path: dist
-          run_id: ${{ github.event.workflow_run.id }}
-
-      - name: Download Functions artifact
-        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
-        with:
-          name: website-functions
-          path: functions
-          run_id: ${{ github.event.workflow_run.id }}
-
-      - name: Download package artifact
-        uses: dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe # v3.1.4
-        with:
-          name: website-package
-          run_id: ${{ github.event.workflow_run.id }}
-      
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-
-      - name: Setup PNPM and install dependencies
-        uses: pnpm/action-setup@v4
-        with:
-          version: latest
-          run_install: |
-            - args: [--frozen-lockfile]
-
-
-      # TODO this action is deprecated!
-      - name: Gather PR details
-        uses: potiuk/get-workflow-origin@e2dae063368361e4cd1f510e8785cd73bca9352e # v1_5 (v1_6 is broken!)
-        id: pr-details
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sourceRunId: ${{ github.event.workflow_run.id }}
-
-      - name: Publish to Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: quiltmc-org
-          directory: dist
-          branch: preview-${{ steps.pr-details.outputs.pullRequestNumber }}
+          name: pr_number
+          path: pr
+          run-id: ${{ env.RUN_ID }}
+          github-token: ${{ env.GITHUB_TOKEN }}
+      - name: Output PR Number
+        id: output-pr-number
+        run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
+    
+  publish-preview:
+    uses: ./.github/workflows/publish.yml
+    needs: get-pr-number
+    with:
+      branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
+      run-id: ${{ github.event.workflow_run.id }}
+    secrets: inherit

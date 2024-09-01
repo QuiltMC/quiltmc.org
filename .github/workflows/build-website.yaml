@@ -1,48 +1,59 @@
-on: [pull_request]
-name: PR preview
+on:
+  workflow_call:
+
+name: Build Website
 
 jobs:
-  build:
-    name: Generate PR preview
+  build-website:
+    name: Build Website
     runs-on: ubuntu-latest
     permissions:
       contents: read
-
+      deployments: write
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           filter: 'blob:none'
-
-      - name: Setup PNPM and install dependencies
+    
+      - name: Set Up PNPM
         uses: pnpm/action-setup@v4
         with:
           version: latest
-          run_install: |
-            - args: [--frozen-lockfile]
+          run_install: false # Install can't run without Node set up, and Node needs to be set up after PNPM to enable caching
 
-      - name: Build the project
+      
+      - name: Set Up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      
+      - name: Install Packages
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the website
         run: pnpm run build
-
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4
         with:
-          name: website-html
+          name: html
           path: dist
           retention-days: 1
 
       - name: Upload Functions artifact
         uses: actions/upload-artifact@v4
         with:
-          name: website-functions
+          name: functions
           path: functions
           retention-days: 1
 
       - name: Upload package artifact
         uses: actions/upload-artifact@v4
         with:
-          name: website-package
+          name: package
           path: |
             package.json
             pnpm-lock.yaml
           retention-days: 1
+
