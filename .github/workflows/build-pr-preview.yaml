@@ -16,4 +16,4 @@ jobs:
           path: pr/
   build:
     needs: publish-pr-number # The subsequent deploy workflow will fail if the PR number fails, so there's no point building the site.
-    uses: ./.github/workflows/build-website.yml
+    uses: ./.github/workflows/build-website.yaml

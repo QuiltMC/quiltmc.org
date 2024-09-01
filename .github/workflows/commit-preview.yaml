@@ -3,10 +3,10 @@ name: Commit preview
 
 jobs:
   build-website:
-    uses: ./.github/workflows/build-website.yml
+    uses: ./.github/workflows/build-website.yaml
   
   publish:
-    uses: ./.github/workflows/publish.yml
+    uses: ./.github/workflows/publish.yaml
     needs: build-website
     secrets: inherit
   
