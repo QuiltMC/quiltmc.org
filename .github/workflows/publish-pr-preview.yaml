@@ -28,7 +28,7 @@ jobs:
           github-token: ${{ env.GITHUB_TOKEN }}
       - name: Output PR Number
         id: output-pr-number
-        run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
+        run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT" && echo "$GITHUB_OUTPUT"
     
   # publish-preview:
   #   uses: ./.github/workflows/publish.yml
@@ -45,4 +45,4 @@ jobs:
       HARDCODED_OUTPUT: ${{ needs.get-pr-number.outputs.hardcoded }}
     steps:
       - name: Echo expected outputs
-        run: echo "$(EXPECTED_OUTPUT)\n$(HARDCODED_OUTPUT)"
+        run: echo "$EXPECTED_OUTPUT\n$HARDCODED_OUTPUT)"
