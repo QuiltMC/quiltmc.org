@@ -10,8 +10,7 @@ jobs:
     name: Get PR Number
     runs-on: ubuntu-latest
     outputs:
-      pr-number: ${{ steps.output-pr-number.pr-number }}
-      hardcoded: A hardcoded value
+      pr-number: ${{ steps.output-pr-number.outputs.pr-number }}
     permissions:
       actions: read
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
@@ -28,12 +27,12 @@ jobs:
           github-token: ${{ env.GITHUB_TOKEN }}
       - name: Output PR Number
         id: output-pr-number
-        run: cat ./pr/pr_number
+        run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
     
-  # publish-preview:
-  #   uses: ./.github/workflows/publish.yml
-  #   needs: get-pr-number
-  #   with:
-  #     branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
-  #     run-id: ${{ github.event.workflow_run.id }}
-  #   secrets: inherit
+  publish-preview:
+    uses: ./.github/workflows/publish.yml
+    needs: get-pr-number
+    with:
+      branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
+      run-id: ${{ github.event.workflow_run.id }}
+    secrets: inherit
