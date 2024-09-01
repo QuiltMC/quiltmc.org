@@ -33,6 +33,6 @@ jobs:
     uses: ./.github/workflows/publish.yml
     needs: get-pr-number
     with:
-      branch: preview-${{ needs.get-pr-number.pr-number }}
+      branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
       run-id: ${{ github.event.workflow_run.id }}
     secrets: inherit
