@@ -4,88 +4,80 @@ Website for the Quilt Project.
 
 ## Contributing
 
-Thanks for contributing to the site!
-There's a couple of things worth noting about our infrastructure, which we will cover below.
+This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/).
 
 ### IDE/Editor Choice
 
-For contributors, we recommend using [Visual Studio Code](https://code.visualstudio.com) or [VSCodium](https://vscodium.com/) as your IDE, as it features Astro support via [the official Astro plugin](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
-Additionally, you would need to install [the MDX plugin](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) to have syntax highlighting for the `.mdx` files,
-and [the `vscode-fluent` plugin](https://marketplace.visualstudio.com/items?itemName=macabeus.vscode-fluent) if you need to translate the site or otherwise tinker with Fluent's `.ftl` files.
+The simplest editor to use is [Visual Studio Code](https://code.visualstudio.com) (VSCode), because it has official language extensions for [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) and [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx). When you open the repository in VSCode, you will see a popup in the bottom-right corner offering to install some recommended extensions. You can also type `@recommended` in the extension search bar to browse the recommended extensions and manually install the ones you want.
 
-In theory, you can use any editor to your liking that supports the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), hooked up to the [Astro Language Server](https://github.com/withastro/language-tools/tree/main/packages/language-server) and optionally other LSPs for MDX and Fluent.
-Unfortunately as of the date of writing (Sept 11, 2022) no pre-built integrations of the Astro Language Server actually exist, which is why we still recommend using VS Code as your IDE.
-
-For VSCode, you should see a popup in the bottom right when you open the project with recommended extensions. You can also type `@recommended` in the extensions page to see the recommended extensions:
 <img src="./public/assets/img/writing/recommended-extensions.jpg" width="300">
 
+If you would prefer not to use VSCode, you can use any editor that supports a subset of the following tools, based on what you're doing:
 
-### Running the Dev Server
+- If you just want to write blog articles or edit pages that are mostly simple text, you only need an editor that supports [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- If you want to work with layouts or components, you need an editor with support for .astro files, such as:
+  - [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
+  - [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
+  - [JetBrains IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) or [WebStorm](https://www.jetbrains.com/webstorm/) with the [Astro extension](https://plugins.jetbrains.com/plugin/20959-astro)
+- If you want to work with more complex pages, you may want an editor with support for MDX, though many editors with Markdown support render MDX fairly accurately.
+- If you want work with the i18n system, you may want an editor with support for [Fluent](https://projectfluent.org). However, this isn't strictly necessary if you only want to translate the website.
 
-To run the development server, you first need to have `npm` installed in your system. Usually this comes pre-installed with [Node.js](https://nodejs.org), so you might want to install that first.
+### Building or running in Dev mode
+As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org).
 
-> [!NOTE]
-> Only `npm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager.
+#### Installing Node.js
+Node.js is a cross-platform JavaScript runtime. It can be [installed directly](https://nodejs.org/en), or is likely available for your favourite package manager.
 
-Once `npm` is installed, clone this repository, navigate into the project folder and run `npm install` to install dependencies:
-```sh
-$ git clone https://github.com/QuiltMC/quiltmc.org
-$ cd quiltmc.org
-$ npm install
+#### Installing PNPM
+We use [PNPM](https://pnpm.io) as our Node.js package manager. It can be installed in the following ways:
+- Using NPM (included with Node.js): `npm install -g pnpm`
+- Using [a different package manager](https://pnpm.io/installation#using-other-package-managers)
+
+For more options, see [PNPM's docs](https://pnpm.io/installation#on-posix-systems)
+
+#### Setting up the project
+Inside the project, install all the required packages using PNPM:
+```shell
+pnpm i
 ```
 
-Once installation is complete, then run `npm run dev` to start the dev server.
-The server application should have an output like this:
-```sh
-$ npm run dev
+#### Running the dev server
+Astro includes a development server that automatically reloads itself as you change files inside the project. To start it, run `pnpm dev`:
+```
+> pnpm dev
+15:05:32 [types] Generated 1ms
 
-> quiltmc-website@1.0.0 dev
-> node csscopy.mjs && astro dev
+ astro  v4.15.2 ready in 702 ms
 
-  🚀  astro  v1.2.1 started in 56ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
 
-  ┃ Local    http://localhost:3000/
-  ┃ Network  use --host to expose
+15:05:32 watching for file changes...
+```
+The dev server builds pages as you visit them to reduce start time, so its performance is worse than the fully built site.
+#### Building the site
+To build a full copy of the final site:
+```
+pnpm build
+```
+The site will be built into the `dist` folder. Building the site is a useful way to check that you haven't broken anything without noticing.
+
+You can preview the built site using `pnpm astro preview`, but in most cases the only advantage this has over the dev server is performance.
+
+### Previewing with Cloudflare Wrangler
+If you need to test Cloudflare Pages-sepcific functionality (such as anything in the `functions` directory), you can preview the site using Cloudflare's [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) to emulate a Cloudflare Pages deployment.
+
+First, install Wrangler
+```shell
+pnpm install -g wrangler
+```
+Build the site:
+```shell
+pnpm build
+```
+Run the outputted `dist` folder using Wrangler:
+```
+wrangler pages dev dist
 ```
 
-At this point, open your browser, and you should be able to see the generated site at `http://localhost:3000`.
-
-As Astro utilizes hot module reloading (HMR), any changes you make would be reflected in the browser quickly.
-However, sometimes components and layouts don't get rebuilt with HMR and you might have to restart the Astro server to see your changes, which is easily done by pressing <kbd>Ctrl+C</kbd> and rerunning `npm run dev`.
-
-You're all set! Although, I would recommend reading about [the architecture of this site](ARCHITECTURE.md) before making any changes, to familiarize yourself with the project structure. Have fun contributing!
-
-#### Cloudflare Pages Dev server
-
-Some functionalities of the website, such as redirects or functions, use some Cloudflare Pages specific features.
-To test these features, you can run the following command:
-
-```sh
-$ npx wrangler pages dev -- npm run dev --host
-```
-
-Make sure to use the url provided by wrangler, as it will be different from the one provided by Astro. It should appear underneath `Worker reloaded!`.
-
-### Building
-
-To build the site as seen in production, simply run `npm run build`.
-Astro will then build the site and emit the output in `dist/`.
-
-```sh
-$ npm run build
-```
-
-To view the built site, you can run `npm run preview`:
-```sh
-$ npm run preview
-
-> quiltmc-website@1.0.0 preview
-> node csscopy.mjs && astro preview
-
-  🚀  astro  v1.2.1 started in 2ms
-
-  ┃ Local    http://localhost:3000/
-  ┃ Network  use --host to expose
-```
-
-You can then visit the built site at `http://localhost:3000`.
+Unlike the dev server, Wrangler can only preview a site that is fully built.
