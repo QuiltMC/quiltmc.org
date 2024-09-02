@@ -122,5 +122,14 @@
     "tracking": "https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29",
     "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2-1.20.4. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments. Provided direct help to developers and was turned down. Issue on their end. Will also not be present in Mod Menu.",
     "icon": "https://media.forgecdn.net/avatars/597/210/637973904487237935.png"
+  },
+  {
+    "ids": ["farm_and_charm"],
+    "name": "[Let's Do] Farm & Charm",
+    "type": "SELF",
+    "status": "UNKNOWN",
+    "tracking": "UNKNOWN",
+    "note": "Compostable items cannot be composted on Quilt",
+    "icon": "https://cdn.modrinth.com/data/HJetCzWo/baf9ea57b7784e743aa33441105723205d743351.png"
   }	 	  
 ]
