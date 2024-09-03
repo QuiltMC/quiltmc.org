@@ -84,6 +84,9 @@ wrangler pages dev dist
 
 Unlike Astro's dev server, Wrangler can only preview a site that is fully built.
 
+### Architecture
+For a detailed explanation of how the repository is laid out, see [`ARCHITECTURE.md`](ARCHITECTURE.md)
+
 ### Common Contributions
 Instructions for making various common types of contributions.
 
