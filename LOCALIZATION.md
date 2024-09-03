@@ -1,5 +1,10 @@
 # Localization Guide
 
+> [!WARNING]
+> The website is currently undergoing major revisions to its internal workings following an upgrade to Astro 4. These revisions may include changes to the localization system.
+>
+> For the time being, attempting to translate the site is not recommended.
+
 Welcome! In this guide, we will cover how the site's localization system works, and how you can contribute translations of the site.
 
 ## Setup
