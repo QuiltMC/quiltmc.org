@@ -6,6 +6,8 @@ Website for the Quilt Project.
 
 This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/).
 
+If you get stuck or have questions, please join us in the [`#Website`](https://discord.com/channels/817576132726620200/1103986836415713300) thread on our [Discord server](https://discord.quiltmc.org).
+
 ### IDE/Editor Choice
 The simplest editor to use is [Visual Studio Code](https://code.visualstudio.com) (VSCode), because it has official language extensions for [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) and [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx). When you open the repository in VSCode, you will see a popup in the bottom-right corner offering to install some recommended extensions. You can also type `@recommended` in the extension search bar to browse the recommended extensions and manually install the ones you want.
 
@@ -15,14 +17,14 @@ If you would prefer not to use VSCode, you can use any editor that supports a su
 
 - If you just want to write blog articles or edit pages that are mostly simple text, you only need an editor that supports [Markdown](https://en.wikipedia.org/wiki/Markdown)
 - If you want to work with layouts or components, you need an editor with support for .astro files, such as:
-  - [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
-  - [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
-  - [JetBrains IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) or [WebStorm](https://www.jetbrains.com/webstorm/) with the [Astro extension](https://plugins.jetbrains.com/plugin/20959-astro)
+	- [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
+    - [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
+  - JetBrains [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) or [WebStorm](https://www.jetbrains.com/webstorm/) with the [Astro extension](https://plugins.jetbrains.com/plugin/20959-astro)
 - If you want to work with more complex pages, you may want an editor with support for MDX, though many editors with Markdown support render MDX fairly accurately.
 - If you want work with the i18n system, you may want an editor with support for [Fluent](https://projectfluent.org). However, this isn't strictly necessary if you only want to translate the website.
 
 ### Setting up a development environment
-As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org), so you will need a Node.js-compatible JavaScript runtime in order to build and run it for development. If you only making a simple contribution, such as an [incompatible mod](#adding-an-incompatible-mod) or a [blog post](#writing-a-blog-post), setting up a development environment isn't strictly necessary: A preview version of the site will be built when you submit a pull request to ensure that everything works as expected.
+As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org), so you will need a Node.js-compatible JavaScript runtime in order to build and run it for development. If you only making a simple contribution, such as an [incompatible mod](#adding-an-incompatible-mod) or a [blog post](#writing-a-blog-post), setting up a development environment isn't essential: A preview version of the site will be built when you submit a pull request to ensure that everything works as expected.
 
 #### Installing Node.js
 Node.js is a cross-platform JavaScript runtime. It can be [installed directly](https://nodejs.org/en), or is likely available for your favourite package manager.
@@ -60,12 +62,12 @@ To build a full copy of the final site:
 ```
 pnpm build
 ```
-The site will be built into the `dist` folder. Building the site is a useful way to check that you haven't broken anything without noticing.
+The site will be built into the `dist/` folder. Building the site is a useful way to check that you haven't broken anything without noticing.
 
 You can preview the built site using `pnpm astro preview`, but in most cases the only advantage this has over the dev server is performance.
 
 ### Previewing with Cloudflare Wrangler
-If you need to test Cloudflare Pages-sepcific functionality (such as anything in the `functions` directory), you can preview the site using Cloudflare's [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) to emulate a Cloudflare Pages deployment.
+If you need to test Cloudflare Pages-specific functionality (such as anything in the `functions/` directory), you can preview the site using Cloudflare's [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/)to emulate a Cloudflare Pages deployment.
 
 First, install Wrangler
 ```shell
@@ -80,7 +82,7 @@ Run the outputted `dist` folder using Wrangler:
 wrangler pages dev dist
 ```
 
-Unlike the dev server, Wrangler can only preview a site that is fully built.
+Unlike Astro's dev server, Wrangler can only preview a site that is fully built.
 
 ### Common Contributions
 Instructions for making various common types of contributions.
@@ -89,27 +91,28 @@ Instructions for making various common types of contributions.
 Open the `incompatible-mods.json` file in `public/api/v1/incompatible-mods.json` and add a new entry at the bottom of the list.
 
 Your entry must have the following fields:
-- `"ids":`	- A list of mod IDs that are affected.
+
+- `"ids":` - A list of mod IDs that are affected.
 - `"Name":`	- The full name of the affected mod.
 - `"type":` - The type of incompatibility. Can be one of the following:
-	- `"GAME"`	 	 - Crashes or breaks the vanilla game.
-	- `"OTHERS"` 	 - Breaks one or more other mods.
-	- `"SELF"` 		 - Breaks itself.
+	- `"GAME"` - Crashes or breaks the vanilla game.
+	- `"OTHERS"` - Breaks one or more other mods.
+	- `"SELF"` - Breaks itself.
 	- `"WORKAROUND"` - Has a workaround that allows it to function properly.
 - `"Status":` - How close the incompatibility is to being fixed. Can be one of the following:
-	- `"BLOCKED"` 		- The mod authors are aware of the issue, but a fix is blocked by an external factor.
-	- `"IN_PROGRESS"` 	- The mod authors are implementing a fix.
-	- `"NO_ANSWER"` 	- The issue has been reported, but the mod authors have not responded.
-	- `"ON_HOLD"` 		- The mod authors are waiting to implement or release the fix.
-	- `"UNKNOWN"` 		- The issue hasn't been reported to the mod authors, or you can't find a report.
-	- `"WON'T FIX"` 	- The issue has been reported, but the mod authors refuse to fix it.
+	- `"BLOCKED"` - The mod authors are aware of the issue, but a fix is blocked by an external factor.
+	- `"IN_PROGRESS"` - The mod authors are implementing a fix.
+	- `"NO_ANSWER"` - The issue has been reported, but the mod authors have not responded.
+	- `"ON_HOLD"` 	- The mod authors are waiting to implement or release the fix.
+	- `"UNKNOWN"` 	- The issue hasn't been reported to the mod authors, or you can't find a report.
+	- `"WON'T FIX"` - The issue has been reported, but the mod authors refuse to fix it.
 - `"tracking":` - A link to the report tracking the incompatibility, for example, a GitHub issue. Set to `"UNKNOWN"` if you don't know.
 - `"notes":` (optional) - Any other notes, for example, the a known workaround.
 
 #### Writing a Blog Post
-Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`). A full file might be `2024-03-09-example-post.md`.
+Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`.
 
-At the top of the file, you need to add *front matter*, which is metadata about the post written in YAML. The front matter for blog post looks like this:
+At the top of the file, you need to add *front matter*, which is metadata written in YAML. The front matter for a blog post looks like this:
 ```yaml
 ---
 title: "An Example Title" # The full title of the post
@@ -135,13 +138,14 @@ If you are a part of one of Quilt's developer or community teams, you likely hav
 Each team member has an object in this file with data about them. The section(s) of the page that you're listed in is based on which teams you're in on GitHub.
 
 You can change the following data to customise your card:
+
 - `name:` - The name at the top of your card. It can be anything you want.
 - `discord:` - Your Discord username.
 - `github:` - Your GitHub username. This is used to identify which teams you're in on GitHub.
 - `avatar:` - This is a URL to any image you like. For best results, it should be square and not too large. You can put a file in `public/assets/team/images` to have it hosted on the website, or use any other image URL you like.
 - `description:` (optional) - A sentence or small paragraph about who you are.
 - `links:` (optional) - A list of links to your various webpages or social media profiles. Each link is represented by the following object:
-	- `icon`: An icon that represents the link. You can choose from the icon sets [CoreUI Brands](https://icon-sets.iconify.design/cib/?keyword=cib), or (`cib:`), Material Design Icons (`mdi:`) [Material Design Icons](https://icon-sets.iconify.design/cib/?keyword=mdi) (`material-symbols:`); or use our custom icons for CurseForge (`curseforge`) and Modrinth (`modrinth-small`). When using an icon from an icon set (as opposed to a custom one), you must prefix the icon name with the name of the icon set, for example, `cib:youtube` to use the `youtube` icon from CoreUI Brands.
+	- `icon`: An icon that represents the link. You can choose from the icon sets [CoreUI Brands](https://icon-sets.iconify.design/cib/?keyword=cib)(`cib:`),  [Material Design Icons](https://icon-sets.iconify.design/cib/?keyword=mdi) (`mdi:`), or [Material Symbols](https://icon-sets.iconify.design/material-symbols) (`material-symbols:`); or use our custom icons for CurseForge (`curseforge`) and Modrinth (`modrinth-small`). When using an icon from an icon set (as opposed to a custom one), you must prefix the icon name with the name of the icon set, for example, `cib:youtube` to use the `youtube` icon from CoreUI Brands.
 	- `url`: The link to the webpage.
 - `systemMembers:` (optional) - This field is intended for plural systems to display each of their members. It has a few possible values:
 	- `"---"` will show you as being a plural system with your members hidden.
