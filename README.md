@@ -7,7 +7,6 @@ Website for the Quilt Project.
 This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/).
 
 ### IDE/Editor Choice
-
 The simplest editor to use is [Visual Studio Code](https://code.visualstudio.com) (VSCode), because it has official language extensions for [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) and [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx). When you open the repository in VSCode, you will see a popup in the bottom-right corner offering to install some recommended extensions. You can also type `@recommended` in the extension search bar to browse the recommended extensions and manually install the ones you want.
 
 <img src="./public/assets/img/writing/recommended-extensions.jpg" width="300">
@@ -22,8 +21,8 @@ If you would prefer not to use VSCode, you can use any editor that supports a su
 - If you want to work with more complex pages, you may want an editor with support for MDX, though many editors with Markdown support render MDX fairly accurately.
 - If you want work with the i18n system, you may want an editor with support for [Fluent](https://projectfluent.org). However, this isn't strictly necessary if you only want to translate the website.
 
-### Building or running in Dev mode
-As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org).
+### Setting up a development environment
+As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org), so you will need a Node.js-compatible JavaScript runtime in order to build and run it for development. If you only making a simple contribution, such as an [incompatible mod](#adding-an-incompatible-mod) or a [blog post](#writing-a-blog-post), setting up a development environment isn't strictly necessary: A preview version of the site will be built when you submit a pull request to ensure that everything works as expected.
 
 #### Installing Node.js
 Node.js is a cross-platform JavaScript runtime. It can be [installed directly](https://nodejs.org/en), or is likely available for your favourite package manager.
@@ -33,7 +32,7 @@ We use [PNPM](https://pnpm.io) as our Node.js package manager. It can be install
 - Using NPM (included with Node.js): `npm install -g pnpm`
 - Using [a different package manager](https://pnpm.io/installation#using-other-package-managers)
 
-For more options, see [PNPM's docs](https://pnpm.io/installation#on-posix-systems)
+For more options, see [PNPM's docs](https://pnpm.io/installation).
 
 #### Setting up the project
 Inside the project, install all the required packages using PNPM:
@@ -55,6 +54,7 @@ Astro includes a development server that automatically reloads itself as you cha
 15:05:32 watching for file changes...
 ```
 The dev server builds pages as you visit them to reduce start time, so its performance is worse than the fully built site.
+
 #### Building the site
 To build a full copy of the final site:
 ```
