@@ -81,3 +81,50 @@ wrangler pages dev dist
 ```
 
 Unlike the dev server, Wrangler can only preview a site that is fully built.
+
+### Common Contributions
+Instructions for making various common types of contributions.
+
+#### Adding an Incompatible Mod
+Open the `incompatible-mods.json` file in `public/api/v1/incompatible-mods.json` and add a new entry at the bottom of the list.
+
+Your entry must have the following fields:
+- `"ids":`	- A list of mod IDs that are affected.
+- `"Name":`	- The full name of the affected mod.
+- `"type":` - The type of incompatibility. Can be one of the following:
+	- `"GAME"`	 	 - Crashes or breaks the vanilla game.
+	- `"OTHERS"` 	 - Breaks one or more other mods.
+	- `"SELF"` 		 - Breaks itself.
+	- `"WORKAROUND"` - Has a workaround that allows it to function properly.
+- `"Status":` - How close the incompatibility is to being fixed. Can be one of the following:
+	- `"BLOCKED"` 		- The mod authors are aware of the issue, but a fix is blocked by an external factor.
+	- `"IN_PROGRESS"` 	- The mod authors are implementing a fix.
+	- `"NO_ANSWER"` 	- The issue has been reported, but the mod authors have not responded.
+	- `"ON_HOLD"` 		- The mod authors are waiting to implement or release the fix.
+	- `"UNKNOWN"` 		- The issue hasn't been reported to the mod authors, or you can't find a report.
+	- `"WON'T FIX"` 	- The issue has been reported, but the mod authors refuse to fix it.
+- `"tracking":` - A link to the report tracking the incompatibility, for example, a GitHub issue. Set to `"UNKNOWN"` if you don't know.
+- `"notes":` (optional) - Any other notes, for example, the a known workaround.
+
+#### Writing a Blog Post
+Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`). A full file might be `2024-03-09-example-post.md`.
+
+At the top of the file, you need to add *front matter*, which is metadata about the post written in YAML. The front matter for blog post looks like this:
+```yaml
+---
+title: "An Example Title" # The full title of the post
+date: 2024-09-03 20:00:00 -00:00 #	The date, time, and timezone that the post was written, relative to UTC. It is best practice to give the time in UTC and use an offset of -00:00, as shown.
+authors: # A list of one or more authors
+- Pineapple
+layout: /src/layouts/Post.astro # This tells Astro what layout to use for the page, and should always be the same.
+---
+```
+Write a short first paragraph, then insert two lines, put `<!-- MORE -->`, then two more lines. For example:
+```
+A succinct first paragraph.
+
+<!-- MORE -->
+
+More text here.
+```
+This tells the website what to include in the short preview that goes on the home page and in the list of blog posts. From here on, you can keep writing Markdown to your heart's content. Syntax highlighting in code blocks is also supported.
