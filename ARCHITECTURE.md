@@ -1,8 +1,19 @@
-# Architecture of This Site
+# Architecture
+quiltmc.org is a [JAMStack](https://jamstack.org/) site, built using [TypeScript](https://typescriptlang.org), [Astro](https://astro.build), and [i18next](https://i18next.com); and hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). It is largely a static site, although there is some server-side functionality.
 
-Contributors should also familiarize themselves with the architecture of this repository, which is best done by taking a look at the folder structure:
-
+The architecture of the site is explained below in terms of its folder structure:
 ```
+functions/
+	api/
+		internal/
+		v1/
+public/
+	.gpg/
+	.well-known/
+	assets/
+	favicon/
+scripts/
+	resources/
 src/
 	components/
 		atoms/
@@ -17,57 +28,71 @@ src/
 		...
 	pages/
 	util/
-public/
-	assets/
-	favicon/
 ```
 
-## Source (`src/`)
+## Functions (`functions/`)
+Although Astro compiles an entirely static site, files in this folder are added by Cloudflare to the deployed site and served dynamically using file-based routing. Most of them are auto-generated files that redirect users to the correct page based on their browser's `Accept-Language` header. Only the `api/` contains manually written functions that are tracked by git.
 
-This folder contains all of the code and content of the site.
-As a rule of thumb, you should put all non-assets here.
-
-### Components (`src/components/`)
-
-The components folder contains components, which are divided into three kinds—atoms, parts and setpieces.
-
-Atoms (available under `@atoms`) are simple, reusable components that follow the Unix philosophy—do one thing, and do one thing well.
-They are practically found everywhere, often used as a building block of pages, parts, setpieces, and so on. Examples of atoms include buttons and messages.
-
-Parts (`@parts`) are more complex components than atoms, and are often specialized for one purpose or for a single page—for example, the grid of launchers in the install page is a single part, which consists of several `InstallerButton`s, which are atoms.
-
-Setpieces (`@setpieces`) are very complex structures that typically provide a large chunk of functionality of a page, such as the navbar, the footer and the sidebar.
-These gigantic components are intended to be used alone in pages, and not in other components.
-
-### Data (`src/data/`, `@data`)
-
-The data folder contains some TypeScript files for storing some common variables used throughout the site, such as links, account names, localization settings, etc.
-
-### Layouts (`src/layouts/`, `@layouts`)
-
-This folder contains every layout of the site, used by all pages of the site. Nothing much to say about that.
-
-### Locales (`src/locales/`)
-
-This folder contains the translated strings used in the site. Under this folder, each locale gets its own folder—`en/` for English, `zh/` for Chinese, etc.
-Under that, you will see a bunch of `.flt` files—they are [Fluent](https://projectfluent.org) files, parsed and substituted into the site.
-
-It is worth noting that most of the site's text doesn't get translated this way—as you will see, we only use Fluent for short and common strings.
-Long paragraphs of text remain in Astro and Markdown files, which need to be translated as Astro and Markdown files.
-
-### Pages (`src/pages/`)
-
-Pretty self-explanatory—the main content of this site. Edit this section if you're looking to add content, to fix a typo, etc.
-
-### Utilities (`src/util`, `@util`)
-
-This folder contains a bunch of TypeScript files containing common functions for doing tasks like localizing paths, getting the edit date of a page, fetching launcher updates, etc.
+### `api/`
+- `api/internal`: Contains a function that downloads the [template mod](https://github.com/quiltmc/quilt-template-mod) from GitHub for the Mod Generator. This API is not designed to be used by external programs.
+- `api/v1`: Contains the public website API. For more information about the available routes and their responses, see https://quiltmc.org/api/ .
 
 ## Public (`public/`)
+Files in the in the `/public` folder are copied directly to the built site without any processing. They are copied to the root of the site instead of a `public` directory, so they should be referenced without a leading `public` path (`/image.png`, not `/public/image.png`).
 
-This folder stores assets that can be included in the built site *verbatim*—these files are not processed at all while building—good for images, processed stylesheets, favicons, and more!
+### `_headers` and `_redirects`
+Files that Cloudflare Pages uses to send extra headers and HTTP redirects for certain requests. For more information, see the Cloudflare's documentation for [Headers](https://developers.cloudflare.com/pages/configuration/headers/) and [Redirects](https://developers.cloudflare.com/pages/configuration/redirects/).
 
-Minutiae:
-- Note that in the built site, the assets stored here are directly placed under the root path: for example, a file at `public/image.png` should be accessed with the path `/image.png`.
-- Files under `public/assets/css/` are currently precompiled from SCSS files from the `quilt-bulma` package. This may change in the future!
-- We currently bundle a CSS/WebFonts copy of Font Awesome 6 Free under `public/assets/fontawesome/` as a fallback option for users who have disabled JavaScript. This again, may change in the future.
+### `.gpg/`
+Holds public GPG keys for the Infrastructure Team and the Admin Board.
+
+###  `.well-known/security.txt`
+Outlines our security policy for reporting exploits and vulnerabilities using the proposed [security.txt standard](https://securitytxt.org).
+
+### `api/`
+Static routes for the API, including the OpenAPI specification and the incompatible mods JSON file.
+
+### `assets/`
+Static files used in various places on the website:
+- `css/`: Custom CSS files.
+- `img/`: Images used around the site.
+- `license-templates/`: Templates for software licenses used as part of the Mod Generator.
+
+### `favicon/`
+Various incarnations of the site's favicon.
+
+## Scripts (`scripts/`)
+This folder contains scripts that are run during the build process of the site: They fetch and cache data from GitHub and [PluralKit](https://pluralkit.me) to use in the [teams page](https://quiltmc.org/about/teams) and change logs, and they generate functions for routing the user based on their requested language (see "Functions").
+
+Most functionality is in `preprocess.mjs`, the other scripts are utilities that it imports. `resources` contains the base code used to generate each auto-generated function. `clean` clears cached PluralKit data, and can be invoked using `pnpm clean`.
+
+## Source (`src/`)
+This folder contains all the files that are processed by Astro when the site is built. Many of its sub-folders have [TypeScript import path aliases](https://www.typescriptlang.org/docs/handbook/modules/reference.html#paths) which you can use instead of relative paths in import statements. These are prefixed with an `@` and inside (parentheses)
+
+### Components (`src/components/`)
+Small pieces of code that form parts of larger pages. They are split into three categories:
+
+**Atoms** (`@atoms`): Fundamental, reusable components that are designed to each do one thing well. They are widely used, often as building blocks for more complex pages.
+
+**Parts** (`@parts`): More complex components that are specialised for a specific page or set piece. For example, the cards on the team page and the home page.
+
+**Set Pieces** (`@setpieces`): Large components that form a part of many pages, such as the nav bar, header, and footer. Set Pieces are the highest-level components and should not be reused inside of other components.
+
+### Data (`src/data`, `@data`)
+This folder contains type definitions and objects for various pieces of data used elsewhere in the site. Of particular interest is `TeamData.mjs`, which contains the information used to generate the info cards on the [Team Listings page](https://quiltmc.org/about/teams).
+
+### Layouts (`src/layouts/`, `@layouts`)
+While the content of pages is stored in `src/pages`, this folder stores their layouts separately, which makes translating the pages easier, and allows the same layouts to be shared by pages in multiple languages. Some layouts are used by multiple pages, such as `Page.astro` and `Post.astro`; while others are dedicated to a single page, such as `Home.astro` and `InstallPage.astro`. Some layouts build on top of others others: for example,`LatestVersions.astro` uses `Page.astro`.
+
+### Locales (`src/locales/`)
+This folder contains [Fluent](https://projectfluent.org) files with translations for terms and phrases that are commonly used throughout the site. Not all localization occurs in this folder: Only short words and phrases that are used in multiple places. Each language has a folder with its language code, containing files with phrases to be translated.
+
+### Pages (`src/pages/`)
+This folder stores the content of all the pages on the site, mostly in Markdown or [MDX](https://mdxjs.com) files, depending on the complexity of the page. Pages are stored in a folder specific to their language: English pages in `en/` and so on. Some special pages are excepted from this, for example, `api.astro`.
+
+This folder is special to Astro: It is used to generate the routing and structure of the final site. Each file corresponds to a page, and they are structured in the same way that the site will be when it is generated, so `src/pages/api.astro` becomes `https://quiltmc.org/api`. Files called `index` are named after the folder they are inside, so `src/pages/en/about/index.astro` becomes `https://quiltmc.org/en/about/`. JavaScript and TypeScript files in this folder are executed at build time to generate a page in the final site, for example, `src/pages/feed.xml.js` generates the RSS feed at https://quiltmc.org/feed.xml .
+
+Some files are surrounded by brackets, such as `src/en/blog/[page].astro`. These files generate multiple pages using Astro's [Dynamic Routes](https://docs.astro.build/en/guides/routing/#dynamic-routes).
+
+### Utilities (`src/util`, `@util`)
+This folder contains simple utility functions for things like localizing paths, sorting lists, and getting the last modified date of a page.
