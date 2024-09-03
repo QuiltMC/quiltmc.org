@@ -128,3 +128,24 @@ A succinct first paragraph.
 More text here.
 ```
 This tells the website what to include in the short preview that goes on the home page and in the list of blog posts. From here on, you can keep writing Markdown to your heart's content. Syntax highlighting in code blocks is also supported.
+
+#### Updating your team member card
+If you are a part of one of Quilt's developer or community teams, you likely have a card on the website's [Team Listings](https://quiltmc.org/about/teams) page. The data inside the cards on this page is built from the `TeamData.mjs` file in `src/data/`.
+
+Each team member has an object in this file with data about them. The section(s) of the page that you're listed in is based on which teams you're in on GitHub.
+
+You can change the following data to customise your card:
+- `name:` - The name at the top of your card. It can be anything you want.
+- `discord:` - Your Discord username.
+- `github:` - Your GitHub username. This is used to identify which teams you're in on GitHub.
+- `avatar:` - This is a URL to any image you like. For best results, it should be square and not too large. You can put a file in `public/assets/team/images` to have it hosted on the website, or use any other image URL you like.
+- `description:` (optional) - A sentence or small paragraph about who you are.
+- `links:` (optional) - A list of links to your various webpages or social media profiles. Each link is represented by the following object:
+	- `icon`: An icon that represents the link. You can choose from the icon sets [CoreUI Brands](https://icon-sets.iconify.design/cib/?keyword=cib), or (`cib:`), Material Design Icons (`mdi:`) [Material Design Icons](https://icon-sets.iconify.design/cib/?keyword=mdi) (`material-symbols:`); or use our custom icons for CurseForge (`curseforge`) and Modrinth (`modrinth-small`). When using an icon from an icon set (as opposed to a custom one), you must prefix the icon name with the name of the icon set, for example, `cib:youtube` to use the `youtube` icon from CoreUI Brands.
+	- `url`: The link to the webpage.
+- `systemMembers:` (optional) - This field is intended for plural systems to display each of their members. It has a few possible values:
+	- `"---"` will show you as being a plural system with your members hidden.
+	- A [PluralKit](https://pluralkit.me) system ID will automatically fetch and display the names and avatars of all the public members of that system.
+	- You can manually build a system using a list of the following objects:
+		- `name:` The name of the system member.
+		- `icon:` - An avatar for the member. You can use any URL you want, or host an image on this site in `public/assets/team/images/<your-system-name>/`.
