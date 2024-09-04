@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking your time to report this bug!
+        Thanks for taking the time to report this bug!
 
   - type: textarea
     id: how-to-reproduce
@@ -34,7 +34,8 @@ body:
   - type: input
     id: device-and-os
     attributes:
-        label: What device are you using and what OS is it running?
+        label: Device and OS
+        description: The type of device and operating system you were using when the error occurred.
     validations:
         required: true
 
@@ -42,6 +43,6 @@ body:
     id: browser
     attributes:
       label: Browser information.
-      description: "The browser you're using and its version, if you know it."
+      description: "The browser you were using and its version, if you know it."
     validations:
       required: true

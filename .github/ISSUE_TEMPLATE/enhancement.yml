@@ -15,8 +15,3 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: additional-info
-    attributes:
-      label: Additional Information
-      description: "Add any other information about your feature request here."
