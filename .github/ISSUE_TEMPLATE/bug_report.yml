@@ -8,7 +8,7 @@ body:
         Thanks for taking your time to report this bug! If you need real-time help, join us on [Discord](https://discord.quiltmc.org).
 
   - type: textarea
-    id: description
+    id: how-to-reproduce
     attributes:
       label: Reproduction steps
       description: "Please describe how to reproduce the bug."
@@ -16,7 +16,7 @@ body:
       required: true
 
   - type: textarea
-    id: description
+    id: expected-results
     attributes:
       label: Expected results
       description: "Please describe what you expected to happen."
@@ -24,7 +24,7 @@ body:
       required: true
 
   - type: textarea
-    id: description
+    id: actual-results
     attributes:
       label: Actual results
       description: "Please describe what actually happened."
@@ -32,14 +32,14 @@ body:
       required: true
 
   - type: textarea
-    id: environment
+    id: device-and-os
     attributes:
         label: What device are you using and what OS is it running?
     validations:
         required: true
 
   - type: textarea
-    id: environment
+    id: browser
     attributes:
       label: Which browser are you using? If you know your browser version, please specify it.
       description: "Please be sure you're on the latest version of the browser you are currently using."
