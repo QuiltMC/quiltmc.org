@@ -19,6 +19,7 @@ body:
     id: environment
     attributes:
       label: Which browser are you using?
+      description: "Please be sure you're on the latest version of the browser you are currently using"
       options:
         - Firefox
         - Chrome
