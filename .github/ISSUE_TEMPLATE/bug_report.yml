@@ -19,7 +19,7 @@ body:
     id: expected-results
     attributes:
       label: Expected results
-      description: "Please describe what you expected to happen."
+      description: "What should happen when you follow the reproduction steps?"
     validations:
       required: true
 
@@ -27,21 +27,21 @@ body:
     id: actual-results
     attributes:
       label: Actual results
-      description: "Please describe what actually happened."
+      description: "What actually happened?"
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: device-and-os
     attributes:
         label: What device are you using and what OS is it running?
     validations:
         required: true
 
-  - type: textarea
+  - type: input
     id: browser
     attributes:
-      label: Which browser are you using? If you know your browser version, please specify it.
-      description: "Please be sure you're on the latest version of the browser you are currently using."
+      label: Browser information.
+      description: "The browser you're using and its version, if you know it."
     validations:
       required: true

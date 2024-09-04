@@ -1,6 +1,6 @@
 name: Content Issue Report
 description: Report a content issue on the website.
-labels: [bug]
+labels: [content issue]
 body:
   - type: markdown
     attributes:
@@ -11,7 +11,7 @@ body:
     id: description
     attributes:
       label: Describe the issue
-      description: "Please describe what went wrong with the website content."
+      description: "Please describe the content issue you found."
     validations:
       required: true
 
