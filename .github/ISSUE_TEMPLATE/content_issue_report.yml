@@ -14,11 +14,3 @@ body:
       description: "Please describe the content issue you found."
     validations:
       required: true
-
-  - type: textarea
-    id: browser
-    attributes:
-      label: Which browser are you using? If you know your browser version, please specify it.
-      description: "Please be sure you're on the latest version of the browser you are currently using."
-    validations:
-      required: true
