@@ -3,20 +3,20 @@ description: Create a feature request for the Quilt website.
 labels: [enhancement]
 body:
   - type: markdown
-  attributes:
-    value: |
-      Thanks for taking your time to create your feature request! If you want to discuss your request, join us on [Discord](https://discord.quiltmc.org).
+    attributes:
+      value: |
+        Thanks for taking your time to create your feature request! If you want to discuss your request, join us on [Discord](https://discord.quiltmc.org).
 
   - type: textarea
-  id: description
-  attributes:
-    label: Describe what feature(s) you want.
-    description: "Describe what feature you believe the website should have. What does the feature do? The more detailed your request is the easier it will be for people to begin implementation of the feature."
-  validations:
-    required: true
+    id: description
+    attributes:
+      label: Describe what feature(s) you want.
+      description: "Describe what feature you believe the website should have. What does the feature do? The more detailed your request is the easier it will be for people to begin implementation of the feature."
+    validations:
+      required: true
 
   - type: textarea
-  id: additional-info
-  attributes:
-    label: Additional Information
-    description: "Add any other information about your feature request here."
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: "Add any other information about your feature request here."
