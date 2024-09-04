@@ -10,22 +10,38 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
-      description: "Describe the bug as clearly as possible. The more detail you provide means the sooner the bug can be fixed! This includes: steps to reproduce or situation you encountered the bug in, or any additional context that could be helpful."
+      label: Reproduction steps
+      description: "Please describe how to reproduce the bug."
     validations:
       required: true
 
-  - type: dropdown
+  - type: textarea
+    id: description
+    attributes:
+      label: Expected results
+      description: "Please describe what you expected to happen."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Actual results
+      description: "Please describe what actually happened."
+    validations:
+      required: true
+
+  - type: textarea
     id: environment
     attributes:
-      label: Which browser are you using?
-      description: "Please be sure you're on the latest version of the browser you are currently using"
-      options:
-        - Firefox
-        - Chrome
-        - Edge
-        - Opera
-        - Vivaldi
-        - Brave
+        label: What device are you using and what OS is it running?
+    validations:
+        required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Which browser are you using? If you know your browser version, please specify it.
+      description: "Please be sure you're on the latest version of the browser you are currently using."
     validations:
       required: true
