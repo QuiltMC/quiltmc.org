@@ -1,5 +1,5 @@
 name: Feature Request
-description: Create a feature request for the Quilt website.
+description: Suggest a new feature or improvement for the website.
 labels: [enhancement]
 body:
   - type: markdown
@@ -11,7 +11,7 @@ body:
     id: description
     attributes:
       label: Describe what feature(s) you want.
-      description: "Describe what feature you believe the website should have. What does the feature do? The more detailed your request is the easier it will be for people to begin implementation of the feature."
+      description: "Describe the enhancement in as much detail as possible. What does it do? What problem does it solve? How might it work?"
     validations:
       required: true
 
