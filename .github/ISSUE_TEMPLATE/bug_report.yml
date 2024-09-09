@@ -1,0 +1,48 @@
+name: Bug Report
+description: Report a bug or unexpected behaviour with the website.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this bug!
+
+  - type: textarea
+    id: how-to-reproduce
+    attributes:
+      label: Reproduction steps
+      description: "Please describe how to reproduce the bug."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-results
+    attributes:
+      label: Expected results
+      description: "What should happen when you follow the reproduction steps?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-results
+    attributes:
+      label: Actual results
+      description: "What actually happened?"
+    validations:
+      required: true
+
+  - type: input
+    id: device-and-os
+    attributes:
+        label: Device and OS
+        description: The type of device and operating system you were using when the error occurred.
+    validations:
+        required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser information.
+      description: "The browser you were using and its version, if you know it."
+    validations:
+      required: true

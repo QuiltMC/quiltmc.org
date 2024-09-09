@@ -1,0 +1,16 @@
+name: Content Issue Report
+description: Report a content issue on the website.
+labels: [content issue]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this content issue!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: "Please describe the content issue you found."
+    validations:
+      required: true
