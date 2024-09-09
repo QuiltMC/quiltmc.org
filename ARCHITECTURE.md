@@ -62,7 +62,7 @@ Static files used in various places on the website:
 Various incarnations of the site's favicon.
 
 ## Scripts (`scripts/`)
-This folder contains scripts that are run during the build process of the site: They fetch and cache data from GitHub and [PluralKit](https://pluralkit.me) to use in the [teams page](https://quiltmc.org/about/teams) and change logs, and they generate functions for routing the user based on their requested language (see "Functions").
+This folder contains scripts that are run during the build process of the site: They fetch and cache data from GitHub and [PluralKit](https://pluralkit.me) to use in the [teams page](https://quiltmc.org/about/teams) and [changelogs](https://quiltmc.org/en/changelog/), and they generate functions for routing the user based on their requested language (see "Functions").
 
 Most functionality is in `preprocess.mjs`, the other scripts are utilities that it imports. `resources` contains the base code used to generate each auto-generated function. `clean` clears cached PluralKit data, and can be invoked using `pnpm clean`.
 
