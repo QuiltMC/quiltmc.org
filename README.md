@@ -4,88 +4,155 @@ Website for the Quilt Project.
 
 ## Contributing
 
-Thanks for contributing to the site!
-There's a couple of things worth noting about our infrastructure, which we will cover below.
+This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). If you want to get more familiar with Astro, you can read [its documentation](https://docs.astro.build).
+
+If you get stuck or have questions, please join us in the [`#Website`](https://discord.com/channels/817576132726620200/1103986836415713300) thread on our [Discord server](https://discord.quiltmc.org).
 
 ### IDE/Editor Choice
+The simplest editor to use is [Visual Studio Code](https://code.visualstudio.com) (VSCode), because it has official language extensions for [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) and [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx). When you open the repository in VSCode, you will see a popup in the bottom-right corner offering to install some recommended extensions. You can also type `@recommended` in the extension search bar to browse the recommended extensions and manually install the ones you want.
 
-For contributors, we recommend using [Visual Studio Code](https://code.visualstudio.com) or [VSCodium](https://vscodium.com/) as your IDE, as it features Astro support via [the official Astro plugin](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
-Additionally, you would need to install [the MDX plugin](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) to have syntax highlighting for the `.mdx` files,
-and [the `vscode-fluent` plugin](https://marketplace.visualstudio.com/items?itemName=macabeus.vscode-fluent) if you need to translate the site or otherwise tinker with Fluent's `.ftl` files.
-
-In theory, you can use any editor to your liking that supports the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), hooked up to the [Astro Language Server](https://github.com/withastro/language-tools/tree/main/packages/language-server) and optionally other LSPs for MDX and Fluent.
-Unfortunately as of the date of writing (Sept 11, 2022) no pre-built integrations of the Astro Language Server actually exist, which is why we still recommend using VS Code as your IDE.
-
-For VSCode, you should see a popup in the bottom right when you open the project with recommended extensions. You can also type `@recommended` in the extensions page to see the recommended extensions:
 <img src="./public/assets/img/writing/recommended-extensions.jpg" width="300">
 
+If you would prefer not to use VSCode, you can use any editor that supports a subset of the following tools, based on what you're doing:
 
-### Running the Dev Server
+- If you just want to write blog articles or edit pages that are mostly simple text, you only need an editor that supports [Markdown](https://en.wikipedia.org/wiki/Markdown).
+- If you want to work with layouts or components, you need an editor with support for .astro files, such as:
+	- [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
+	- [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
+	- JetBrains [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) or [WebStorm](https://www.jetbrains.com/webstorm/) with the [Astro extension](https://plugins.jetbrains.com/plugin/20959-astro)
+- If you want to work with more complex pages, you may want an editor with support for MDX, though many editors with Markdown support render MDX fairly accurately.
+- If you want work with the i18n system, you may want an editor with support for [Fluent](https://projectfluent.org). However, this isn't strictly necessary if you only want to translate the website.
 
-To run the development server, you first need to have `npm` installed in your system. Usually this comes pre-installed with [Node.js](https://nodejs.org), so you might want to install that first.
+### Setting up a development environment
+As mentioned previously, the website is built using Astro, which is written in [TypeScript](https://www.typescriptlang.org), so you will need a Node.js-compatible JavaScript runtime in order to build and run it for development. If you only making a simple contribution, such as an [incompatible mod](#adding-an-incompatible-mod) or a [blog post](#writing-a-blog-post), setting up a development environment isn't essential: A preview version of the site will be built when you submit a pull request to ensure that everything works as expected.
 
-> [!NOTE]
-> Only `npm` is regularly used and tested for the site, so you might encounter bugs or incompatibilities using an alternate package manager.
+#### Installing Node.js
+Node.js is a cross-platform JavaScript runtime. It can be [installed directly](https://nodejs.org/en), or is likely available for your favourite package manager.
 
-Once `npm` is installed, clone this repository, navigate into the project folder and run `npm install` to install dependencies:
-```sh
-$ git clone https://github.com/QuiltMC/quiltmc.org
-$ cd quiltmc.org
-$ npm install
+#### Installing PNPM
+We use [PNPM](https://pnpm.io) as our Node.js package manager. It can be installed in the following ways:
+- Using NPM (included with Node.js): `npm install -g pnpm`
+- Using [a different package manager](https://pnpm.io/installation#using-other-package-managers)
+
+For more options, see [PNPM's docs](https://pnpm.io/installation).
+
+#### Setting up the project
+Inside the project, install all the required packages using PNPM:
+```shell
+pnpm i
 ```
 
-Once installation is complete, then run `npm run dev` to start the dev server.
-The server application should have an output like this:
-```sh
-$ npm run dev
+#### Running the dev server
+Astro includes a development server that automatically reloads itself as you change files inside the project. To start it, run `pnpm dev`:
+```
+> pnpm dev
+15:05:32 [types] Generated 1ms
 
-> quiltmc-website@1.0.0 dev
-> node csscopy.mjs && astro dev
+ astro  v4.15.2 ready in 702 ms
 
-  🚀  astro  v1.2.1 started in 56ms
+┃ Local	http://localhost:4321/
+┃ Network  use --host to expose
 
-  ┃ Local    http://localhost:3000/
-  ┃ Network  use --host to expose
+15:05:32 watching for file changes...
+```
+The dev server builds pages as you visit them to reduce start time, so its performance is worse than the fully built site.
+
+#### Building the site
+To build a full copy of the final site:
+```
+pnpm build
+```
+The site will be built into the `dist/` folder. Building the site is a useful way to check that you haven't broken anything without noticing.
+
+You can preview the built site using `pnpm astro preview`, but in most cases the only advantage this has over the dev server is performance.
+
+### Previewing with Cloudflare Wrangler
+If you need to test Cloudflare Pages-specific functionality (such as anything in the `functions/` directory), you can preview the site using Cloudflare's [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/)to emulate a Cloudflare Pages deployment.
+
+First, install Wrangler
+```shell
+pnpm install -g wrangler
+```
+Build the site:
+```shell
+pnpm build
+```
+Run the outputted `dist` folder using Wrangler:
+```
+wrangler pages dev dist
 ```
 
-At this point, open your browser, and you should be able to see the generated site at `http://localhost:3000`.
+Unlike Astro's dev server, Wrangler can only preview a site that is fully built.
 
-As Astro utilizes hot module reloading (HMR), any changes you make would be reflected in the browser quickly.
-However, sometimes components and layouts don't get rebuilt with HMR and you might have to restart the Astro server to see your changes, which is easily done by pressing <kbd>Ctrl+C</kbd> and rerunning `npm run dev`.
+### Architecture
+For a detailed explanation of how the repository is laid out, see [`ARCHITECTURE.md`](ARCHITECTURE.md)
 
-You're all set! Although, I would recommend reading about [the architecture of this site](ARCHITECTURE.md) before making any changes, to familiarize yourself with the project structure. Have fun contributing!
+### Common Contributions
+Instructions for making various common types of contributions.
 
-#### Cloudflare Pages Dev server
+#### Adding an Incompatible Mod
+Open the `incompatible-mods.json` file in `public/api/v1/incompatible-mods.json` and add a new entry at the bottom of the list.
 
-Some functionalities of the website, such as redirects or functions, use some Cloudflare Pages specific features.
-To test these features, you can run the following command:
+Your entry must have the following fields:
 
-```sh
-$ npx wrangler pages dev -- npm run dev --host
+- `"ids":` - A list of mod IDs that are affected.
+- `"Name":`	- The full name of the affected mod.
+- `"type":` - The type of incompatibility. Can be one of the following:
+	- `"GAME"` - Crashes or breaks the vanilla game.
+	- `"OTHERS"` - Breaks one or more other mods.
+	- `"SELF"` - Breaks itself.
+	- `"WORKAROUND"` - Has a workaround that allows it to function properly.
+- `"Status":` - How close the incompatibility is to being fixed. Can be one of the following:
+	- `"BLOCKED"` - The mod authors are aware of the issue, but a fix is blocked by an external factor.
+	- `"IN_PROGRESS"` - The mod authors are implementing a fix.
+	- `"NO_ANSWER"` - The issue has been reported, but the mod authors have not responded.
+	- `"ON_HOLD"` 	- The mod authors are waiting to implement or release the fix.
+	- `"UNKNOWN"` 	- The issue hasn't been reported to the mod authors, or you can't find a report.
+	- `"WONT_FIX"` - The issue has been reported, but the mod authors refuse to fix it.
+- `"tracking":` - A link to the report tracking the incompatibility, for example, a GitHub issue. Set to `"UNKNOWN"` if you don't know.
+- `"notes":` (optional) - Any other notes, for example, the a known workaround.
+
+#### Writing a Blog Post
+Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`.
+
+At the top of the file, you need to add *front matter*, which is metadata written in YAML. The front matter for a blog post looks like this:
+```yaml
+---
+title: "An Example Title" # The full title of the post
+date: 2024-09-03 20:00:00 -00:00 #	The date, time, and timezone that the post was written, relative to UTC. It is best practice to give the time in UTC and use an offset of -00:00, as shown.
+authors: # A list of one or more authors
+- Pineapple
+layout: /src/layouts/Post.astro # This tells Astro what layout to use for the page, and should always be the same.
+---
 ```
-
-Make sure to use the url provided by wrangler, as it will be different from the one provided by Astro. It should appear underneath `Worker reloaded!`.
-
-### Building
-
-To build the site as seen in production, simply run `npm run build`.
-Astro will then build the site and emit the output in `dist/`.
-
-```sh
-$ npm run build
+Write a short first paragraph, then insert two lines, put `<!-- MORE -->`, then two more lines. For example:
 ```
+A succinct first paragraph.
 
-To view the built site, you can run `npm run preview`:
-```sh
-$ npm run preview
+<!-- MORE -->
 
-> quiltmc-website@1.0.0 preview
-> node csscopy.mjs && astro preview
-
-  🚀  astro  v1.2.1 started in 2ms
-
-  ┃ Local    http://localhost:3000/
-  ┃ Network  use --host to expose
+More text here.
 ```
+This tells the website what to include in the short preview that goes on the home page and in the list of blog posts. From here on, you can keep writing Markdown to your heart's content. Syntax highlighting in code blocks is also supported.
 
-You can then visit the built site at `http://localhost:3000`.
+#### Updating your team member card
+If you are a part of one of Quilt's developer or community teams, you likely have a card on the website's [Team Listings](https://quiltmc.org/about/teams) page. The data inside the cards on this page is built from the `TeamData.mjs` file in `src/data/`.
+
+Each team member has an object in this file with data about them. The section(s) of the page that you're listed in is based on which teams you're in on GitHub.
+
+You can change the following data to customise your card:
+
+- `name:` - The name at the top of your card. It can be anything you want.
+- `discord:` - Your Discord username.
+- `github:` - Your GitHub username. This is used to identify which teams you're in on GitHub.
+- `avatar:` - This is a URL to any image you like. For best results, it should be square and not too large. You can put a file in `public/assets/team/images` to have it hosted on the website, or use any other image URL you like.
+- `description:` (optional) - A sentence or small paragraph about who you are.
+- `links:` (optional) - A list of links to your various webpages or social media profiles. Each link is represented by the following object:
+	- `icon`: An icon that represents the link. You can choose from the icon sets [CoreUI Brands](https://icon-sets.iconify.design/cib/?keyword=cib)(`cib:`),  [Material Design Icons](https://icon-sets.iconify.design/cib/?keyword=mdi) (`mdi:`), or [Material Symbols](https://icon-sets.iconify.design/material-symbols) (`material-symbols:`); or use our custom icons for CurseForge (`curseforge`) and Modrinth (`modrinth-small`). When using an icon from an icon set (as opposed to a custom one), you must prefix the icon name with the name of the icon set, for example, `cib:youtube` to use the `youtube` icon from CoreUI Brands.
+	- `url`: The link to the webpage.
+- `systemMembers:` (optional) - This field is intended for plural systems to display each of their members. It has a few possible values:
+	- `"---"` will show you as being a plural system with your members hidden.
+	- A [PluralKit](https://pluralkit.me) system ID will automatically fetch and display the names and avatars of all the public members of that system.
+	- You can manually build a system using a list of the following objects:
+		- `name:` The name of the system member.
+		- `icon:` - An avatar for the member. You can use any URL you want, or host an image on this site in `public/assets/team/images/<your-system-name>/`.
