@@ -15,7 +15,7 @@ The simplest editor to use is [Visual Studio Code](https://code.visualstudio.com
 
 If you would prefer not to use VSCode, you can use any editor that supports a subset of the following tools, based on what you're doing:
 
-- If you just want to write blog articles or edit pages that are mostly simple text, you only need an editor that supports [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- If you just want to write blog articles or edit pages that are mostly simple text, you only need an editor that supports [Markdown](https://en.wikipedia.org/wiki/Markdown).
 - If you want to work with layouts or components, you need an editor with support for .astro files, such as:
 	- [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
 	- [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
@@ -108,7 +108,7 @@ Your entry must have the following fields:
 	- `"NO_ANSWER"` - The issue has been reported, but the mod authors have not responded.
 	- `"ON_HOLD"` 	- The mod authors are waiting to implement or release the fix.
 	- `"UNKNOWN"` 	- The issue hasn't been reported to the mod authors, or you can't find a report.
-	- `"WON'T FIX"` - The issue has been reported, but the mod authors refuse to fix it.
+	- `"WONT_FIX"` - The issue has been reported, but the mod authors refuse to fix it.
 - `"tracking":` - A link to the report tracking the incompatibility, for example, a GitHub issue. Set to `"UNKNOWN"` if you don't know.
 - `"notes":` (optional) - Any other notes, for example, the a known workaround.
 
