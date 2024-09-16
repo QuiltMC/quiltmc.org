@@ -3,6 +3,7 @@ import PostEmbed from "@atoms/PostEmbed.astro";
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 const { page } = Astro.props;
 const previousPage = page.currentPage - 1;
@@ -31,7 +32,7 @@ const { left, right } = rtlSettings();
 					disabled={onFirstPage}
 					href={!onFirstPage && localizePath("/blog/1")}
 				>
-					<span class="icon"><i class={`fas fa-angles-${left}`}></i></span>
+					<Icon name="mdi:chevron-double-left" />
 					<span class="is-hidden-mobile">{t("paginator-button-first")}</span>
 				</a>
 
@@ -41,7 +42,7 @@ const { left, right } = rtlSettings();
 					disabled={onFirstPage}
 					href={!onFirstPage && localizePath(`/blog/${previousPage}`)}
 				>
-					<span class="icon"><i class={`fas fa-angle-${left}`}></i></span>
+					<Icon name="mdi:chevron-left" />
 					<span class="is-hidden-mobile">{t("paginator-button-previous")}</span>
 				</a>
 
@@ -91,8 +92,8 @@ const { left, right } = rtlSettings();
 					disabled={onLastPage}
 					href={!onLastPage && localizePath(`/blog/${nextPage}`)}
 				>
-					<span class="icon"><i class={`fas fa-angle-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-next")}</span>
+					<Icon name="mdi:chevron-right" />
 				</a>
 
 				{/*@ts-ignore*/}
@@ -101,10 +102,17 @@ const { left, right } = rtlSettings();
 					disabled={onLastPage}
 					href={!onLastPage && localizePath(`/blog/${page.lastPage}`)}
 				>
-					<span class="icon"><i class={`fas fa-angles-${right}`}></i></span>
 					<span class="is-hidden-mobile">{t("paginator-button-last")}</span>
+					<Icon name="mdi:chevron-double-right" />
 				</a>
 			</nav>
 		</section>
 	</div>
 </div>
+
+<style>
+	[data-icon] {
+		width: 1.3em;
+		height: 1.3em
+	}
+</style>
