@@ -14,9 +14,10 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://quiltmc.org/",
-	integrations: [
-		mdx(),
+  site: "https://quiltmc.org/",
+
+  integrations: [
+      mdx(),
 	astroI18next(),
 	sitemap(),
 	purgecss({ safelist: ["has-background-info", "has-background-link"] }),
@@ -24,15 +25,17 @@ export default defineConfig({
 	searchIndex(),
 	icon()
 	],
-	markdown: {
+
+  markdown: {
 	syntaxHighlight: "prism",
 	rehypePlugins: [[rehypeAutolinkHeadings, {
-		behavior: "append"
+      behavior: "append"
 	}]]
 	},
-	vite: {
+
+  vite: {
 	build: {
-		assetsInlineLimit: 0
+      assetsInlineLimit: 0
 	}
 	},
 
