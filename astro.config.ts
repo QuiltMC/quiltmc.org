@@ -10,6 +10,8 @@ import icon from "astro-icon"
 import compress from "astro-compress";
 import searchIndex from "./src/integration/search-index";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
 	site: "https://quiltmc.org/",
@@ -32,5 +34,12 @@ export default defineConfig({
 	build: {
 		assetsInlineLimit: 0
 	}
+	},
+
+  output: "server",
+  adapter: cloudflare({
+	platformProxy: {
+		enabled: true // Enables bindings, secrets, etc. in Astro's dev server
 	}
+  }),
 });

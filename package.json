@@ -46,6 +46,7 @@
 		"typescript": "^5.8.3"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^11.0.5",
 		"@babel/traverse": "^7.27.0",
 		"@iconify-json/cib": "^1.2.2",
 		"@iconify-json/material-symbols": "^1.2.17",
