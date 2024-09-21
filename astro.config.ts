@@ -39,7 +39,7 @@ export default defineConfig({
 	}
 	},
 
-  output: "server",
+  output: "hybrid",
   adapter: cloudflare({
 	platformProxy: {
 		enabled: true // Enables bindings, secrets, etc. in Astro's dev server
