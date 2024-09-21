@@ -1,10 +1,12 @@
-export const prerendered = false
+export const prerender = false
 
-import { xml2js } from "xml-js";
-import semverSort from "semver-sort";
+import { XMLParser } from "fast-xml-parser";
+import semverSort from "semver/functions/sort"
 
 const META_GAME_VERSIONS = "https://meta.quiltmc.org/v3/versions/game"
 const MAVEN = "https://maven.quiltmc.org/repository/release/org/quiltmc/"
+
+const xml = new XMLParser()
 
 async function fetchMetadata(path) {
 	const metadataUrl = MAVEN + path + "/maven-metadata.xml";
@@ -21,19 +23,18 @@ function getLatestVersion(versions) {
 	// handle null, undefined, empty array
 	if (!versions) return null;
 
-	return semverSort.asc(versions).toReversed()[0];
+	return semverSort(versions).toReversed()[0];
 }
 
 function getLatestVersionFromMavenMetadataXML(metaXML, latestVersionSelector) {
-	const json = xml2js(metaXML, { compact: true, ignoreAttributes: true });
+	const json = xml.parse(metaXML, { compact: true, ignoreAttributes: true });
 
-	const allVersions = json.metadata.versioning.versions.version.map((version) => version._text);
+	const allVersions = json.metadata.versioning.versions.version
 
 	return latestVersionSelector(allVersions);
 }
 
 export async function GET(context) {
-	try {
 		const gameVersionsRequest = await fetch(META_GAME_VERSIONS, { headers: { "User-Agent": "QuiltMC Website API" } })
 		const gameVersions = await gameVersionsRequest.json()
 
@@ -46,7 +47,7 @@ export async function GET(context) {
 			return versions.sort((a, b) => b.split(".").slice(-1) - a.split(".").slice(-1));
 		}));
 
-		const qfapiVersions = await fetchMetadata("quilted-fabric-api/quilted-fabric-api").then(meta => getLatestVersionFromMavenMetadataXML(meta, versions => semverSort.asc(versions).toReversed()));
+		const qfapiVersions = await fetchMetadata("quilted-fabric-api/quilted-fabric-api").then(meta => getLatestVersionFromMavenMetadataXML(meta, versions => semverSort(versions).toReversed()));
 
 		for (const { version } of gameVersions) {
 			const mappingsVersion = mappingsVersions.find((versioning) => versioning.split("+")[0] === version) || null
@@ -60,9 +61,8 @@ export async function GET(context) {
 			}
 		}
 
-		return new Response(JSON.stringify(output), { status: 200, headers: { "Content-Type": "application/json" } });
-	}
-	catch (error) {
-		return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: { "Content-Type": "application/json" } });
-	}
+		return new Response(JSON.stringify(output), { status: 200, headers: { "Content-Type": "application/json" } })
+	// catch (error) {
+	// 	return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: { "Content-Type": "application/json" } });
+	// }
 }

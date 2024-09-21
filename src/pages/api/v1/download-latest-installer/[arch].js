@@ -1,6 +1,6 @@
 export const prerender = false
 
-import semverSort from "semver-sort"
+import semverRSort from "semver/functions/rsort"
 
 const MAVEN = "https://maven.quiltmc.org/repository/release"
 
@@ -32,7 +32,7 @@ export async function GET(context) {
 
 	const metadata = await metadataRequest.text()
 	const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
-	const latest = semverSort.desc(allVersion)[0]
+	const latest = semverRSort(allVersion)[0]
 
 	let artifactUrl
 	if (context.params.arch === UNIVERSAL_ARCH) {
