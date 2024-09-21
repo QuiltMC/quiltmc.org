@@ -1,3 +1,5 @@
+export const prerendered = false
+
 import { xml2js } from "xml-js";
 import semverSort from "semver-sort";
 
@@ -30,7 +32,7 @@ function getLatestVersionFromMavenMetadataXML(metaXML, latestVersionSelector) {
 	return latestVersionSelector(allVersions);
 }
 
-export async function onRequest(context) {
+export async function GET(context) {
 	try {
 		const gameVersionsRequest = await fetch(META_GAME_VERSIONS, { headers: { "User-Agent": "QuiltMC Website API" } })
 		const gameVersions = await gameVersionsRequest.json()

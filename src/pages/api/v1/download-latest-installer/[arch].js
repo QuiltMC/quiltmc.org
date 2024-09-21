@@ -1,3 +1,5 @@
+export const prerender = false
+
 import semverSort from "semver-sort"
 
 const MAVEN = "https://maven.quiltmc.org/repository/release"
@@ -10,7 +12,7 @@ const NATIVE_PATH = MAVEN + "/org/quiltmc/quilt-installer-native-bootstrap/"
 const METADATA = "maven-metadata.xml"
 const VERSION_REGEX = /<version>(.+?)<\/version>/g
 
-export async function onRequest(context) {
+export async function GET(context) {
 	let base
 
 	if (context.params.arch === UNIVERSAL_ARCH) {
