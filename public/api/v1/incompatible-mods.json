@@ -72,15 +72,6 @@
     "icon": "https://media.forgecdn.net/avatars/380/837/637563157215396535.png"
   },
   {
-    "ids": ["fldf"],
-    "name": "Fast Leaf Decay",
-    "type": "GAME",
-    "tracking": "UNKNOWN",
-    "status": "WONT_FIX",
-    "note": "Tries to display an information screen as part of a disinformation campaign against Quilt, often resulting in an outright crash.",
-    "icon": "https://media.forgecdn.net/avatars/597/438/637974406525551211.png"
-  },
-  {
     "ids": ["dynmap"],
     "name": "Dynmap",
     "type": "GAME",
