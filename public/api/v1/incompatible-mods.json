@@ -131,13 +131,5 @@
     "tracking": "https://github.com/Ladysnake/Requiem/issues/670",
     "note": "Creating an obelisk crashes the game when using some versions of QSL. Use [QSL 4.0.0-beta.30](https://modrinth.com/mod/qsl/version/4.0.0-beta.30+0.76.0-1.19.2) as a workaround.",
     "icon": "https://cdn.modrinth.com/data/bYmqMxlQ/41b48c13bc4acd691dccc93b09c97995f0509880_96.webp"
-  },
-  {
-    "ids": ["progressive-archery"],
-    "name": "Progressive Archery",
-    "type": "GAME",
-    "status": "UNKNOWN",
-    "tracking": "UNKNOWN",
-    "icon": "https://cdn.modrinth.com/data/QgHW53j5/590f3d5c405da0ffe21dd6fb12d2360d382531e7.png"
   }
 ]
