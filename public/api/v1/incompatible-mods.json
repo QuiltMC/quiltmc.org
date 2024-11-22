@@ -122,5 +122,14 @@
     "tracking": "UNKNOWN",
     "note": "Compostable items cannot be composted on Quilt",
     "icon": "https://cdn.modrinth.com/data/HJetCzWo/baf9ea57b7784e743aa33441105723205d743351.png"
-  }	 	  
+  },
+  {
+    "ids": ["requiem"],
+    "name": "Requiem",
+    "type": "WORKAROUND",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/Ladysnake/Requiem/issues/670",
+    "note": "Creating an obelisk crashes the game when using some versions of QSL. Use [QSL 4.0.0-beta.30](https://modrinth.com/mod/qsl/version/4.0.0-beta.30+0.76.0-1.19.2) as a workaround.",
+    "icon": "https://cdn.modrinth.com/data/bYmqMxlQ/41b48c13bc4acd691dccc93b09c97995f0509880_96.webp"
+  }
 ]
