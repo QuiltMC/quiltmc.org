@@ -22,7 +22,7 @@
 		"@types/semver-sort": "^0.0.5",
 		"@types/swagger-ui": "^3.52.4",
 		"astro": "^4.15.2",
-		"astro-i18next": "github:quiltmc/astro-i18next#a16bacd",
+		"astro-i18next": "github:quiltmc/astro-i18next#da5ff6e",
 		"astro-purgecss": "4.5.0",
 		"bulma-toast": "^2.4.4",
 		"execa": "^9.3.1",
