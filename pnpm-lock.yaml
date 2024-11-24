@@ -77,8 +77,8 @@ importers:
         specifier: ^4.15.2
         version: 4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4)
       astro-i18next:
-        specifier: github:quiltmc/astro-i18next#74e0be3
-        version: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/74e0be3(astro@4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4))(i18next@23.14.0)
+        specifier: github:quiltmc/astro-i18next#a16bacd
+        version: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/a16bacd(astro@4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4))(i18next@23.14.0)
       astro-purgecss:
         specifier: 4.4.0
         version: 4.4.0(astro@4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4))(purgecss@6.0.0)
@@ -1123,8 +1123,8 @@ packages:
   astro-compress@2.3.1:
     resolution: {integrity: sha512-W2rv6Vr8dZEw2CEA0/QcBEFmXCERbY8onlyixfRul1nY5moPNkk3zdiw7Id3TkIJyHpqQTP6OyfTmTp6MhOqjw==}
 
-  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/74e0be3:
-    resolution: {tarball: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/74e0be3}
+  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/a16bacd:
+    resolution: {tarball: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/a16bacd}
     version: 1.0.0-beta.18
     hasBin: true
     peerDependencies:
@@ -4860,7 +4860,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/74e0be3(astro@4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4))(i18next@23.14.0):
+  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/a16bacd(astro@4.15.2(@types/node@22.5.2)(lightningcss@1.26.0)(rollup@4.21.2)(sass@1.77.8)(terser@5.31.6)(typescript@5.5.4))(i18next@23.14.0):
     dependencies:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1(@proload/core@0.3.3)
@@ -4950,7 +4950,7 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.2(@types/node@22.5.2)(lightningcss@1.25.1)(sass@1.77.8)(terser@5.31.3)
-      vitefu: 0.2.5(vite@5.4.2(@types/node@22.5.2)(lightningcss@1.25.1)(sass@1.77.8)(terser@5.31.3))
+      vitefu: 0.2.5(vite@5.4.2(@types/node@22.5.2)(lightningcss@1.26.0)(sass@1.77.8)(terser@5.31.6))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -7922,10 +7922,6 @@ snapshots:
       lightningcss: 1.26.0
       sass: 1.77.8
       terser: 5.31.6
-
-  vitefu@0.2.5(vite@5.4.2(@types/node@22.5.2)(lightningcss@1.25.1)(sass@1.77.8)(terser@5.31.3)):
-    optionalDependencies:
-      vite: 5.4.2(@types/node@22.5.2)(lightningcss@1.25.1)(sass@1.77.8)(terser@5.31.3)
 
   vitefu@0.2.5(vite@5.4.2(@types/node@22.5.2)(lightningcss@1.26.0)(sass@1.77.8)(terser@5.31.6)):
     optionalDependencies:
