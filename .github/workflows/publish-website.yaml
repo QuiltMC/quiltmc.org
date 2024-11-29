@@ -43,7 +43,7 @@ jobs:
           run-id: ${{ env.GITHUB_RUN_ID }}
           github-token: ${{ env.GITHUB_TOKEN }}
 
-      # The following hack is required because Cloudflare can't compile the workeers in the functions/ directory seperately from deploying, so it needs the packages they use in order to compile them at deployment time, but installing *everything* in package.json would be a waste. The build and publish steps can't go in the same job, because PR Previews have to build the site without publishing it (since they can't access secrets). Hopefully we can remove the need for this in the future by switching to Astro Actions, which should be compiled with the rest of the site.
+      # The following hack is required because Cloudflare can't compile the workers in the functions/ directory separately from deploying, so it needs the packages they use in order to compile them at deployment time, but installing *everything* in package.json would be a waste. The build and publish steps can't go in the same job, because PR Previews have to build the site without publishing it (since they can't access secrets). Hopefully we can remove the need for this in the future by switching to Astro Actions, which should be compiled with the rest of the site.
       - name: Install packages required by functions
         run: npm install xml-js semver-sort string_decoder buffer
       - name: Publish to Cloudflare Pages
