@@ -4,7 +4,12 @@ Website for the Quilt Project.
 
 ## Contributing
 
-This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). If you want to get more familiar with Astro, you can read [its documentation](https://docs.astro.build).
+This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). If you want to get more familiar with Astro, you can read [its documentation](https://docs.astro.build). The following articles from the documentation explain how Astro works without being tutorials for anything specific:
+- [Why Astro](https://docs.astro.build/en/concepts/why-astro/)
+- [Project Structure](https://docs.astro.build/en/basics/project-structure/)
+- [Develop and Build](<https://docs.astro.build/en/develop-and-build/>)
+- [Routing](https://docs.astro.build/en/guides/routing/)
+- [Markdown](https://docs.astro.build/en/guides/markdown-content/) and [MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/#usage)
 
 If you get stuck or have questions, please join us in the [`#Website`](https://discord.com/channels/817576132726620200/1103986836415713300) thread on our [Discord server](https://discord.quiltmc.org).
 
@@ -19,7 +24,6 @@ If you would prefer not to use VSCode, you can use any editor that supports a su
 - If you want to work with layouts or components, you need an editor with support for .astro files, such as:
 	- [Sublime Text](https://www.sublimetext.com) with the [Astro extension](https://packagecontrol.io/packages/Astro)
 	- [Neovim](https://neovim.io) with [tree-sitter-astro](https://github.com/virchau13/tree-sitter-astro) and the [Astro lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
-	- JetBrains [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) or [WebStorm](https://www.jetbrains.com/webstorm/) with the [Astro extension](https://plugins.jetbrains.com/plugin/20959-astro)
 - If you want to work with more complex pages, you may want an editor with support for MDX, though many editors with Markdown support render MDX fairly accurately.
 - If you want work with the i18n system, you may want an editor with support for [Fluent](https://projectfluent.org). However, this isn't strictly necessary if you only want to translate the website.
 
@@ -116,7 +120,7 @@ Your entry must have the following fields:
 - `"notes":` (optional) - Any other notes, for example, the a known workaround.
 
 #### Writing a Blog Post
-Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`.
+Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`. The file *must* end with `.md` and *not* `.mdx`
 
 At the top of the file, you need to add *front matter*, which is metadata written in YAML. The front matter for a blog post looks like this:
 ```yaml
