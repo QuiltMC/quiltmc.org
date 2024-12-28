@@ -7,6 +7,7 @@ import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
 import { Icon } from "astro-icon/components"
+import type { MarkdownInstance } from "astro"
 
 // Interface
 
@@ -31,8 +32,7 @@ export async function getStaticPaths() {
 	return paths;
 }
 
-const changelogs = await Astro.glob("/cache/changelogs/**/*.md");
-
+const changelogs = Object.values(import.meta.glob("/cache/changelogs/**/*.md", {eager: true})) as [MarkdownInstance<any>]; // Astro's MarkdownInstance type doesn't seem to recognise that some Markdown files may not *have* frontmatter, so we have to use `any`.
 // Page generation
 
 const { project, version } = Astro.params;

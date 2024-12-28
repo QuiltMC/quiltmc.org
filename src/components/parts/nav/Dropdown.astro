@@ -2,6 +2,8 @@
 import { localizePath } from "@util/Util";
 import i18next from "i18next";
 import NavLink from "./NavLink.astro";
+import type { MarkdownInstance } from "astro"
+import type { PageFrontMatter } from "@layouts/Page.astro"
 
 export interface Props {
 	category: string;
@@ -12,7 +14,7 @@ export interface Props {
 const pageUrl = Astro.url.pathname;
 const { category, name, right = false } = Astro.props as Props;
 
-const pages = (await Astro.glob("/src/pages/**/*"))
+const pages = (Object.values(import.meta.glob("/src/pages/**/*", {eager: true})) as [MarkdownInstance<PageFrontMatter>])
 	.filter((page) => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 

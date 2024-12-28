@@ -3,6 +3,12 @@ import PostInfo from "@atoms/PostInfo.astro";
 import Default from "./Default.astro";
 
 const props = Astro.props;
+
+export interface BlogFrontMatter {
+	title: string
+	date: string
+	authors: [string]
+}
 ---
 
 <Default content={props.content}>
