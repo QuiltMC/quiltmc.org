@@ -57,6 +57,9 @@ Astro includes a development server that automatically reloads itself as you cha
 ```
 The dev server builds pages as you visit them to reduce start time, so its performance is worse than the fully built site.
 
+> [!Note]
+> In Astro 5, the dev server has introduced some strange encoding issues, like displaying apostrophes as "â€™". These issues do not appear in the finally built site.
+
 #### Building the site
 To build a full copy of the final site:
 ```
@@ -64,7 +67,7 @@ pnpm build
 ```
 The site will be built into the `dist/` folder. Building the site is a useful way to check that you haven't broken anything without noticing.
 
-You can preview the built site using `pnpm astro preview`, but in most cases the only advantage this has over the dev server is performance.
+You can preview the built site using `pnpm astro preview`. This has similar performance to the production website, and avoids the strange encoding issues that the dev server seems to have.
 
 ### Previewing with Cloudflare Wrangler
 If you need to test Cloudflare Pages-specific functionality (such as anything in the `functions/` directory), you can preview the site using Cloudflare's [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/)to emulate a Cloudflare Pages deployment.
