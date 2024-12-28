@@ -46,11 +46,7 @@ export default function (): AstroIntegration {
                     if (route.type !== "page") {
                         continue;
                     }
-					console.log(route)
-					console.log(route.distURL.pathname)
                     let filePath = cleanPath(route.distURL[0].pathname); // Hack to work around function returning a list instead of a string. The search will be replaced soon anyway.
-					console.log("Search index file path: " + filePath)
-
                     const rawContent = readFileSync(filePath, "utf-8");
                     const dom = new JSDOM(rawContent).window.document;
 
