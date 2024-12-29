@@ -4,7 +4,7 @@ Website for the Quilt Project.
 
 ## Contributing
 
-This site built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). If you want to get more familiar with Astro, you can read [its documentation](https://docs.astro.build). The following articles from the documentation explain how Astro works without being tutorials for anything specific:
+This site is built with [Astro](https://astro.build), [MDX](https://mdxjs.com), and [i18next](https://www.i18next.com). It is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/). If you want to get more familiar with Astro, you can read [its documentation](https://docs.astro.build). The following articles from the documentation explain how Astro works without being tutorials for anything specific:
 - [Why Astro](https://docs.astro.build/en/concepts/why-astro/)
 - [Project Structure](https://docs.astro.build/en/basics/project-structure/)
 - [Develop and Build](<https://docs.astro.build/en/develop-and-build/>)
