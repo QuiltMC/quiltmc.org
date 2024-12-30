@@ -30,7 +30,6 @@ export default function (): AstroIntegration {
         hooks: {
             "astro:build:done": ({ dir, routes }) => {
                 console.log("Building search index")
-
                 const rawIndex = {};
 
                 for (const route of routes) {
@@ -47,9 +46,7 @@ export default function (): AstroIntegration {
                     if (route.type !== "page") {
                         continue;
                     }
-
-                    let filePath = cleanPath(route.distURL.pathname);
-
+                    let filePath = cleanPath(route.distURL[0].pathname); // Hack to work around function returning a list instead of a string. The search will be replaced soon anyway.
                     const rawContent = readFileSync(filePath, "utf-8");
                     const dom = new JSDOM(rawContent).window.document;
 

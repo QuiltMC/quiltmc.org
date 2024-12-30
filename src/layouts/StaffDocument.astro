@@ -5,6 +5,8 @@ import PageTitle from "@atoms/PageTitle.astro";
 import Sidebar from "@setpieces/Sidebar.astro";
 import { localizePath } from "@util/Util";
 import { Icon } from "astro-icon/components"
+import type { MarkdownInstance } from "astro"
+import type { PageFrontMatter } from "@layouts/Page.astro";
 
 export interface Props {
 	title: string;
@@ -25,7 +27,7 @@ function getLayer(url: string): number {
 }
 
 // read: get every subpage under /staff/, excluding the main staff page, sorted by filename
-const pages = (await Astro.glob("/src/pages/**/staff/**"))
+const pages = (Object.values(import.meta.glob("/src/pages/**/staff/**", {eager: true})) as [MarkdownInstance<PageFrontMatter>])
 	.filter((page) => page.url != staffUrl && page.url?.startsWith(staffUrl))
 	.sort((a, b) => a.file.localeCompare(b.file));
 
