@@ -62,7 +62,16 @@
 	"pnpm": {
 		"overrides": {
 			"@iconify/tools": "^4.0.0"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"@parcel/watcher",
+			"core-js-pure",
+			"esbuild",
+			"workerd"
+		],
+		"ignoredBuiltDependencies": [
+			"workerd"
+		]
 	},
 	"engines": {
 		"node": ">=20"
