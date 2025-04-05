@@ -1,4 +1,6 @@
-import semverSort from "semver-sort"
+export const prerender = false
+
+import semverRSort from "semver/functions/rsort"
 
 const MAVEN = "https://maven.quiltmc.org/repository/release"
 
@@ -10,7 +12,7 @@ const NATIVE_PATH = MAVEN + "/org/quiltmc/quilt-installer-native-bootstrap/"
 const METADATA = "maven-metadata.xml"
 const VERSION_REGEX = /<version>(.+?)<\/version>/g
 
-export async function onRequest(context) {
+export async function GET(context) {
 	let base
 
 	if (context.params.arch === UNIVERSAL_ARCH) {
@@ -30,7 +32,7 @@ export async function onRequest(context) {
 
 	const metadata = await metadataRequest.text()
 	const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1])
-	const latest = semverSort.desc(allVersion)[0]
+	const latest = semverRSort(allVersion)[0]
 
 	let artifactUrl
 	if (context.params.arch === UNIVERSAL_ARCH) {

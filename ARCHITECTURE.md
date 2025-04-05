@@ -31,11 +31,7 @@ src/
 ```
 
 ## Functions (`functions/`)
-Although Astro compiles an entirely static site, files in this folder are added by Cloudflare to the deployed site and served dynamically using file-based routing. Most of them are auto-generated files that redirect users to the correct page based on their browser's `Accept-Language` header. Only the `api/` contains manually written functions that are tracked by git.
-
-### `api/`
-- `api/internal`: Contains a function that downloads the [template mod](https://github.com/quiltmc/quilt-template-mod) from GitHub for the Mod Generator. This API is not designed to be used by external programs.
-- `api/v1`: Contains the public website API. For more information about the available routes and their responses, see https://quiltmc.org/api/ .
+Files in this folder are added by Cloudflare to the deployed site and served dynamically using file-based routing. Most of them are auto-generated files that redirect users to the correct page based on their browser's `Accept-Language` header. Only the `api/` contains manually written functions that are tracked by git.
 
 ## Public (`public/`)
 Files in the in the `/public` folder are copied directly to the built site without any processing. They are copied to the root of the site instead of a `public` directory, so they should be referenced without a leading `public` path (`/image.png`, not `/public/image.png`).
@@ -93,6 +89,12 @@ This folder stores the content of all the pages on the site, mostly in Markdown 
 This folder is special to Astro: It is used to generate the routing and structure of the final site. Each file corresponds to a page, and they are structured in the same way that the site will be when it is generated, so `src/pages/api.astro` becomes `https://quiltmc.org/api`. Files called `index` are named after the folder they are inside, so `src/pages/en/about/index.astro` becomes `https://quiltmc.org/en/about/`. JavaScript and TypeScript files in this folder are executed at build time to generate a page in the final site, for example, `src/pages/feed.xml.js` generates the RSS feed at https://quiltmc.org/feed.xml .
 
 Some files are surrounded by brackets, such as `src/en/blog/[page].astro`. These files generate multiple pages using Astro's [Dynamic Routes](https://docs.astro.build/en/guides/routing/#dynamic-routes).
+
+#### `/src/pages/api`
+Although most of the site is statically generated, some pages---notably those in `/src/pages/api`---are generated dynamically using [on-demand rendering](https://docs.astro.build/en/guides/on-demand-rendering/). Dynamically-generated pages are marked with `export const prerender = false`.
+
+- `api/internal`: Contains a function that downloads the [template mod](https://github.com/quiltmc/quilt-template-mod) from GitHub for the Mod Generator. This API is not designed to be used by external programs.
+- `api/v1`: Contains the public website API. For more information about the available routes and their responses, see https://quiltmc.org/api/ .
 
 ### Utilities (`src/util`, `@util`)
 This folder contains simple utility functions for things like localizing paths, sorting lists, and getting the last modified date of a page.

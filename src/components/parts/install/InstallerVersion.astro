@@ -9,7 +9,7 @@ import { t } from "i18next";
 </div>
 
 <script>
-	import semverSort from "semver-sort";
+	import semverRSort from "semver/functions/rsort"
 
 	const VERSION_REGEX = /<version>(.+?)<\/version>/g;
 	const INSTALLER_URL_BASE =
@@ -25,7 +25,7 @@ import { t } from "i18next";
 			const metadataRequest = await fetch(MAVEN_METADATA_URL, { headers: { "User-Agent": "QuiltMC Website API" } });
 			const metadata = await metadataRequest.text();
 			const allVersion = Array.from(metadata.matchAll(VERSION_REGEX)).map(match => match[1]);
-			this.textContent = semverSort.desc(allVersion)[0]; // latest
+			this.textContent = semverRSort(allVersion)[0]; // latest
 		}
 	}
 
