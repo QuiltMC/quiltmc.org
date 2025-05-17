@@ -1,5 +1,7 @@
 ---
 import Redirect from "@layouts/Redirect.astro";
+import type { MarkdownInstance } from "astro"
+import type { PageFrontMatter } from "@layouts/Page.astro";
 
 interface PagePath {
 	params: {
@@ -11,7 +13,7 @@ interface PagePath {
 const { page } = Astro.params;
 
 export async function getStaticPaths() {
-	const allEnglishPages = await Astro.glob("/src/pages/en/**/*.md*");
+	const allEnglishPages = Object.values(import.meta.glob("/src/pages/en/**/*.md*", {eager: true})) as [MarkdownInstance<PageFrontMatter>];
 
 	const pages: PagePath[] = [];
 	allEnglishPages.forEach((p) => {

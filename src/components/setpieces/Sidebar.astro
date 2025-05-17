@@ -1,5 +1,7 @@
 ---
 import i18next, { t } from "i18next";
+import type { MarkdownInstance } from "astro"
+import type { PageFrontMatter } from "@layouts/Page.astro";
 
 export interface Pages {
 	pages: string[];
@@ -29,7 +31,7 @@ function getAllUrls(headerToPages: Record<string, Pages>): string[] {
 }
 const allUrls = getAllUrls(value);
 
-const allPages = (await Astro.glob("/src/pages/**"))
+const allPages = (Object.values(import.meta.glob("/src/pages/**", {eager: true})) as [MarkdownInstance<PageFrontMatter>])
 	.filter((page) => page.url?.startsWith(`/${i18next.language}`))
 	.filter((page) => allUrls.includes(page.url));
 

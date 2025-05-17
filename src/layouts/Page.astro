@@ -6,16 +6,22 @@ import Base from "./Base.astro";
 import SiteConfig from "@data/Site"
 import { cwd } from "process"
 import { Icon } from "astro-icon/components"
+import type { MarkdownInstance } from "astro"
 
 const { content } = Astro.props;
 const { title, sidebar = true } = content;
 
 const category = Astro.url.pathname.split("/")[2];
-const pages = (await Astro.glob("/src/pages/**/*"))
+const pages = (Object.values(import.meta.glob("/src/pages/**/*", {eager: true})) as [MarkdownInstance<PageFrontMatter>])
 	.filter((page) => page.url?.startsWith(`/${i18next.language}/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 
 const githubUrl = SiteConfig.fileEditBaseUrl + Astro.props.frontmatter.file.replace(cwd(), "")
+
+export interface PageFrontMatter {
+	title: string
+	description: string
+}
 ---
 
 <Base content={Astro.props.content}>
