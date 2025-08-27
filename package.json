@@ -59,7 +59,8 @@
 	},
 	"pnpm": {
 		"overrides": {
-			"@iconify/tools": "^4.0.0"
+			"@iconify/tools": "^4.0.0",
+			"devalue": "^5.3.2"
 		},
 		"onlyBuiltDependencies": [
 			"@parcel/watcher",
