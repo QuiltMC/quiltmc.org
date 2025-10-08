@@ -161,10 +161,19 @@ import { Icon } from "astro-icon/components"
 						fetch(v2Url + "/" + entry.contentPath)
 							.then((response) => response.json())
 							.then((content) => {
+								// Fix paragraphs inside of the body
 								const body = content.body
 									.replaceAll("​", "")
 									.replaceAll("<p></p>", "");
-								document.getElementById("body").innerHTML = body;
+								const bodyElement = document.getElementById("body");
+								bodyElement.innerHTML = body;
+								// Replace urls to the official mojira with a mojira.dev
+								[...bodyElement.getElementsByTagName("a")].forEach((link) => {
+									const m = /https:\/\/bugs\.mojang\.com\/browse\/MC-(\d+)/.exec(link.href);
+									if (m) {
+										link.href = `https://mojira.dev/MC-${m[1]}`
+									}
+								})
 							});
 
 						document
