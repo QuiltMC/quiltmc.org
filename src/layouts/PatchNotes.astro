@@ -2,17 +2,19 @@
 import Message from "@atoms/Message.astro";
 import { t } from "i18next";
 import Base from "./Base.astro";
+import { Icon } from "astro-icon/components"
 ---
 
 <Base content={Astro.props.content}>
-	<main class="columns is-centered">
+	<main class="columns is-centered reset-overflow">
 		<div class="column is-10">
 			<section class="section">
-				<div class="columns">
+				<div class="columns reset-overflow">
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
-							<button class="button is-primary">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+							<button class="button is-primary" id="sidebar-button"
+									aria-controls="sidebar-box" aria-haspopup="menu">
+								<Icon name="mdi:dots-vertical" />
 								<span>{t("sidebar-versions")}</span>
 							</button>
 
@@ -20,7 +22,7 @@ import Base from "./Base.astro";
 							<br />
 						</div>
 
-						<div class="box is-hidden-mobile is-sticky">
+						<div class="box is-hidden-mobile is-sticky" id="sidebar-box">
 							<aside class="menu">
 								<p class="menu-label">{t("sidebar-versions")}</p>
 
@@ -56,7 +58,7 @@ import Base from "./Base.astro";
 													data-tooltip="Dismiss"
 												>
 													<span class="icon"
-														><i class="fas fa-2x fa-circle-xmark"></i>
+														><Icon name="mdi:close-circle-outline" />
 													</span>
 												</label>
 											</div>
@@ -67,6 +69,8 @@ import Base from "./Base.astro";
 								</div>
 							</div>
 						</div>
+
+						<div id="before-content"></div>
 
 						<h1 id="title" class="title">
 							<slot name="patchnotes" />
@@ -93,11 +97,46 @@ import Base from "./Base.astro";
 				display: none !important;
 			}
 		}
+
+		@media screen and (min-width: 769px), print {
+			#body {
+				// Reserves extra height equal to the version selection sidebar's height.
+				// This ensures that the scrollbar can fit fully on-screen. Even if the
+				// page has been scrolled such that the title of the body is exactly on top.
+				min-height: calc(100vh - 2rem);
+			}
+		}
+
+		#before-content {
+			// Translation equal to the padding which is above the title of the changelog.
+			transform: translateY(-1.5rem);
+		}
+
+		.reset-overflow {
+			overflow-x: unset !important;
+		}
 	</style>
 
 	<script is:inline>
 		const baseUrl = "https://launchercontent.mojang.com";
 		const v2Url = baseUrl+"/v2";
+
+		// This only applies to mobile. On desktop the sidebar is always enabled.
+		var mobileSidebarEnabled = false;
+		function updateSidebar(enabled) {
+			mobileSidebarEnabled = enabled;
+			document.getElementById("sidebar-button").ariaExpanded = enabled;
+			if (mobileSidebarEnabled) {
+				// Sidebar is enabled, so we need to un-hide it
+				document.getElementById("sidebar-box").classList.remove("is-hidden-mobile");
+			} else {
+				// Sidebar is disabled, so we need to hide it
+				document.getElementById("sidebar-box").classList.add("is-hidden-mobile");
+			}
+		}
+
+		// Toggle sidebar when button is pressed
+		document.getElementById("sidebar-button").onclick = () => updateSidebar(!mobileSidebarEnabled);
 
 		// Fetch launcher metadata
 		fetch(v2Url + "/javaPatchNotes.json")
@@ -110,7 +149,11 @@ import Base from "./Base.astro";
 					var entry = data.entries.find((e) => e.version === version);
 
 					if (entry) {
-						document.getElementById("title").scrollIntoView();
+						// Once a version is selected, we close the sidebar
+						updateSidebar(false);
+
+						// Scroll to the top of the changelog
+						document.getElementById("before-content").scrollIntoView();
 
 						// Replace title, body and image url with the selected version
 						document.getElementById("title").innerText = entry.title;
@@ -146,45 +189,32 @@ import Base from "./Base.astro";
 							elem.classList.remove("is-active");
 						}
 
-						document.getElementById(entry.version).classList.add("is-active");
+						document.getElementById("button-"+entry.version).classList.add("is-active");
 						// document.getElementsByClassName("menu")[0].scrollIntoView()
+					} else {
+						// If no version is selected currently, open the sidebar
+						updateSidebar(true);
 					}
 				};
 
 				// Create nav-links
 
-				// Query meta, because meta contains the versions in their proper order
-				fetch("https://meta.quiltmc.org/v3/versions/game")
-					.then((response) => response.json())
-					.then((meta) => {
-						const version2index = {};
-						var i = 0;
-						meta.forEach((entry) => {
-							version2index[entry.version] = i++;
-						});
+				data.entries.sort((a,b) => Date.parse(b.date) - Date.parse(a.date));
+				data.entries.forEach((entry) => {
+					const listItem = document.createElement("li");
+					const newRef = document.createElement("a");
 
-						data.entries.sort((a,b) => version2index[a.version] - version2index[b.version]);
-					})
-					.catch(e => console.warn("Failed to sort versions", e))
-					.finally(() => {
-						// Insert the (hopefully sorted) entries into the dom
-						data.entries.forEach((entry) => {
-							const listItem = document.createElement("li");
-							const newRef = document.createElement("a");
+					newRef.classList.add("version-item");
+					newRef.id = "button-"+entry.version;
+					newRef.innerText = entry.version;
+					newRef.setAttribute(
+						"href",
+						window.location.pathname + "#" + entry.version
+					);
 
-							newRef.classList.add("version-item");
-							newRef.dataset["action"] = "click->sidebar#toggle";
-							newRef.id = entry.version;
-							newRef.innerText = entry.version;
-							newRef.setAttribute(
-								"href",
-								window.location.pathname + "#" + entry.version
-							);
-
-							listItem.appendChild(newRef);
-							document.getElementById("sidebar").appendChild(listItem);
-						});
-					});
+					listItem.appendChild(newRef);
+					document.getElementById("sidebar").appendChild(listItem);
+				});
 
 				// Rerender the patch note when the url changes
 				window.onhashchange = render;

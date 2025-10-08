@@ -6,6 +6,8 @@ import { t } from "i18next";
 import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
+import { Icon } from "astro-icon/components"
+import type { MarkdownInstance } from "astro"
 
 // Interface
 
@@ -30,8 +32,7 @@ export async function getStaticPaths() {
 	return paths;
 }
 
-const changelogs = await Astro.glob("/cache/changelogs/**/*.md");
-
+const changelogs = Object.values(import.meta.glob("/cache/changelogs/**/*.md", {eager: true})) as [MarkdownInstance<any>]; // Astro's MarkdownInstance type doesn't seem to recognise that some Markdown files may not *have* frontmatter, so we have to use `any`.
 // Page generation
 
 const { project, version } = Astro.params;
@@ -63,7 +64,7 @@ const body = changelogs.find((changelog) => changelog.file.endsWith(`/${project}
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
 							<label class="button is-primary" for="toggle-sidebar">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<Icon name="mdi:dots-vertical" />
 								<span>{t("sidebar-pages")}</span>
 							</label>
 							<br />

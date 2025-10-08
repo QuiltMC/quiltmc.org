@@ -6,6 +6,7 @@ import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
 import semverCompare from "semver-compare";
+import { Icon } from "astro-icon/components"
 
 const { project, version } = Astro.params;
 
@@ -30,7 +31,7 @@ const sidebar = objectMap(versions, (project, projectVersions) => {
 					<div class="column is-narrow">
 						<div class="is-hidden-tablet">
 							<label class="button is-primary" for="toggle-sidebar">
-								<span class="icon"><i class="fas fa-ellipsis-h"></i></span>
+								<Icon name="mdi:dots-vertical"/>
 								<span>{t("sidebar-pages")}</span>
 							</label>
 							<br />

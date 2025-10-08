@@ -1,11 +1,12 @@
 ---
 import Button from "@atoms/Button.astro";
 import PostEmbed from "@atoms/PostEmbed.astro";
-
+import type { MarkdownInstance } from "astro";
 import i18next from "i18next";
 import { localizePath, sortByDescending } from "src/util/Util";
+import type { BlogFrontMatter } from "@layouts/Post.astro"
 
-const allPosts = (await Astro.glob("/src/pages/**/blog/*.md")).filter((p) =>
+const allPosts = (Object.values(import.meta.glob("/src/pages/**/blog/*.md", {eager: true})) as [MarkdownInstance<BlogFrontMatter>]).filter((p) =>
 	p.url.startsWith(`/${i18next.language}/`) && p.frontmatter.index !== false
 );
 sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
@@ -18,7 +19,7 @@ const latestPosts = allPosts.slice(0, 3);
 	<Button
 		href={localizePath("/blog/1")}
 		type="primary"
-		icon="fas fa-ellipsis-h"
+		icon="mdi:dots-vertical"
 		textKey="button-more-posts"
 	/>
 </div>

@@ -2,6 +2,7 @@
 import type { TeamMember,} from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	member: TeamMember;
@@ -11,6 +12,7 @@ const { member, isLeader } = Astro.props as Props;
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
+
 ---
 <style>
 	.z-60 { z-index: 60; }
@@ -19,7 +21,7 @@ const na = t("team:n-a");
 <div class="card is-team-member">
 	{ isLeader &&
 		<div class="icon is-large is-pulled-right z-60 has-tooltip-arrow" data-tooltip={t("team:team-lead")}>
-			<i class="fas fa-2x fa-star"></i>
+			<Icon name="mdi:star" />
 		</div>
 	}
 	<div class="card-content">
@@ -43,12 +45,12 @@ const na = t("team:n-a");
 				</p>
 
 				<p class="subtitle is-6">
-					<i class="fab fa-fw fa-discord"></i>
+					<Icon name="discord" />
 					{member.discord ?? na}
 				</p>
 
 				<p class="subtitle is-6">
-					<i class="fab fa-fw fa-github"></i>
+					<Icon name="cib:github" />
 
 					{
 						member.github ? (
@@ -66,7 +68,7 @@ const na = t("team:n-a");
 						<p class="subtitle is-6 is-links">
 							{member.links.map((link) => (
 								<a href={link.url}>
-									<i class:list={["fa-lg", link.icon]} />
+									<Icon name={link.icon}/>
 								</a>
 							))}
 						</p>
@@ -88,3 +90,12 @@ const na = t("team:n-a");
 		}
 	</div>
 </div>
+
+<style>
+	[data-icon] {
+		vertical-align: middle;
+		width: 1.2em;
+		height: 1.2em;
+		padding-right: 0.05em;
+	}
+</style>

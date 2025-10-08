@@ -1,11 +1,16 @@
 # Localization Guide
 
+> [!WARNING]
+> The website is currently undergoing major revisions to its internal workings following an upgrade to Astro 4. These revisions may include changes to the localization system.
+>
+> For the time being, attempting to translate the site is not recommended.
+
 Welcome! In this guide, we will cover how the site's localization system works, and how you can contribute translations of the site.
 
 ## Setup
 
 First, please set up a development environment [as documented in the README](README.md#contributing)—for translators, we highly recommend installing the `vscode-fluent` and LanguageTools extensions, as they can catch potential mistakes and correct them for you.
-You should also check that the site builds and runs by running `pnpm run dev` after installation.
+You should also check that the site builds and runs by running `npm run dev` after installation.
 
 ## Adding a New Language
 

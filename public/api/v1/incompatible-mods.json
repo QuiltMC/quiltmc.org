@@ -72,15 +72,6 @@
     "icon": "https://media.forgecdn.net/avatars/380/837/637563157215396535.png"
   },
   {
-    "ids": ["fldf"],
-    "name": "Fast Leaf Decay",
-    "type": "GAME",
-    "tracking": "UNKNOWN",
-    "status": "WONT_FIX",
-    "note": "Tries to display an information screen as part of a disinformation campaign against Quilt, often resulting in an outright crash.",
-    "icon": "https://media.forgecdn.net/avatars/597/438/637974406525551211.png"
-  },
-  {
     "ids": ["dynmap"],
     "name": "Dynmap",
     "type": "GAME",
@@ -122,5 +113,32 @@
     "tracking": "https://gist.github.com/OroArmor/66632962acdd4bbbacc71d858befab29",
     "note": "Prevents Quilt clients from connecting to local worlds on 1.20.2-1.20.4. Add `-Dquilt.networking.reserialize_custom_payloads=true` to the java arguments. Provided direct help to developers and was turned down. Issue on their end. Will also not be present in Mod Menu.",
     "icon": "https://media.forgecdn.net/avatars/597/210/637973904487237935.png"
-  }	 	  
+  },
+  {
+    "ids": ["farm_and_charm"],
+    "name": "[Let's Do] Farm & Charm",
+    "type": "SELF",
+    "status": "UNKNOWN",
+    "tracking": "UNKNOWN",
+    "note": "Compostable items cannot be composted on Quilt",
+    "icon": "https://cdn.modrinth.com/data/HJetCzWo/baf9ea57b7784e743aa33441105723205d743351.png"
+  },
+  {
+    "ids": ["requiem"],
+    "name": "Requiem",
+    "type": "WORKAROUND",
+    "status": "WONT_FIX",
+    "tracking": "https://github.com/Ladysnake/Requiem/issues/670",
+    "note": "Creating an obelisk crashes the game when using some versions of QSL. Use [QSL 4.0.0-beta.30](https://modrinth.com/mod/qsl/version/4.0.0-beta.30+0.76.0-1.19.2) as a workaround.",
+    "icon": "https://cdn.modrinth.com/data/bYmqMxlQ/41b48c13bc4acd691dccc93b09c97995f0509880_96.webp"
+  },
+  {
+	"ids": ["feather-loader"],
+	"name": "Feather Client",
+	"type": "GAME",
+	"status": "UNKNOWN",
+	"tracking": "UNKNOWN",
+	"note": "Does not finish launching Minecraft due to a missing method.",
+	"icon": "https://avatars.githubusercontent.com/u/84419436"
+  }
 ]

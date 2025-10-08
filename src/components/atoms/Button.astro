@@ -1,5 +1,6 @@
 ---
 import { t } from "i18next";
+import { Icon } from "astro-icon/components"
 
 export interface Props {
 	href: URL | string;
@@ -49,7 +50,7 @@ if (textKey) {
 	{
 		icon && (
 			<span class="icon">
-				<i class={icon} />
+				<Icon name={icon}/ >
 			</span>
 		)
 	}

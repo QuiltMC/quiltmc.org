@@ -5,15 +5,16 @@ import swaggerDarkCss from "../styles/swagger-dark.css?raw";
 ---
 
 <script>
-    import SwaggerUI from 'swagger-ui';
-
-    window.addEventListener("load", () => {
-        window.ui = SwaggerUI({
-            url: '/api/openapi.yaml',
-            dom_id: '#swagger-ui',
-            deepLinking: true,
-        });
-    });
+	const swaggerUiNode = document.getElementById('swagger-ui');
+	if (swaggerUiNode) {
+		import('swagger-ui').then(({ default: renderSwagger }) => {
+			window.ui = renderSwagger({
+				url: '/api/openapi.yaml',
+				domNode: swaggerUiNode,
+				deepLinking: true,
+			});
+		});
+	}
 </script>
 <style is:inline>
     pre.version {

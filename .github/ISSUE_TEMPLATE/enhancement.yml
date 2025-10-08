@@ -1,0 +1,17 @@
+name: Enhancement
+description: Suggest a new feature or improvement for the website.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest this enhancement!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe what feature(s) you want.
+      description: "Describe the enhancement in as much detail as possible. What does it do? What problem does it solve? How might it work?"
+    validations:
+      required: true
+
