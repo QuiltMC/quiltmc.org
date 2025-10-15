@@ -1,4 +1,7 @@
-export async function onRequest(context) {
+// This should eventually be migrated to an Astro Action or made public.
+export const prerendered = false
+
+export async function GET() {
     const defaultBranch = await fetch(`https://api.github.com/repos/quiltmc/quilt-template-mod`, {
         headers: {
             "User-Agent": "QuiltMC Website API"

@@ -18,6 +18,7 @@
 		"@types/lunr": "^2.3.7",
 		"@types/luxon": "^3.7.1",
 		"@types/prismjs": "^1.26.5",
+		"@types/semver": "^7.7.0",
 		"@types/semver-compare": "^1.0.3",
 		"@types/semver-sort": "^0.0.5",
 		"@types/swagger-ui": "^3.52.4",
@@ -31,7 +32,7 @@
 		"i18next": "^24.2.3",
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:quiltmc/i18next-fs-fluent-backend",
-		"jsdom": "^25.0.1",
+		"jsdom": "^26.0.0",
 		"jszip": "^3.10.1",
 		"lunr": "^2.3.9",
 		"marked": "^15.0.12",
@@ -46,6 +47,7 @@
 		"typescript": "^5.9.2"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^12.4.0",
 		"@babel/traverse": "^7.28.3",
 		"@iconify-json/cib": "^1.2.3",
 		"@iconify-json/material-symbols": "^1.2.33",
@@ -53,9 +55,9 @@
 		"@tsndr/cloudflare-worker-jwt": "^3.2.0",
 		"astro-compress": "^2.3.8",
 		"astro-icon": "^1.1.5",
-		"astro-purgecss": "5.0.0",
-		"semver-sort": "^1.0.0",
-		"xml-js": "^1.6.11"
+		"astro-purgecss": "5.2.2",
+		"fast-xml-parser": "^5.2.0",
+		"semver": "^7.7.1"
 	},
 	"pnpm": {
 		"overrides": {
