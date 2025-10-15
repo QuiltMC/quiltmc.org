@@ -44,7 +44,8 @@ export default defineConfig({
   output: "static",
   adapter: cloudflare({
 	platformProxy: {
-		enabled: true // Enables bindings, secrets, etc. in Astro's dev server
-	}
+		enabled: true // Enables bindings, secrets, etc. in Astro's dev server,
+	},
+	imageService: "compile"
   }),
 });
