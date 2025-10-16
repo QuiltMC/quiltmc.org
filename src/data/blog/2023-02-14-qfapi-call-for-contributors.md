@@ -3,11 +3,9 @@ title: "Quilted Fabric API: A call for contributors"
 date: 2023-02-14 12:15:00 -00:00
 authors:
   - Southpaw1496
+excerpt: "[Quilted Fabric API](https://github.com/quiltmc/quilted-fabric-api) is our fork of Fabric API which runs alongside QSL to ensure mods using the Fabric API can work on Quilt. Since almost all Fabric mods make use of the Fabric API in some way or another, it's a critical part of Quilt's compatibility with Fabric mods, but despite this, it is largely updated and maintained by a single person:"
+includeExcerptInMainPost: true
 ---
-
-[Quilted Fabric API](https://github.com/quiltmc/quilted-fabric-api) is our fork of Fabric API which runs alongside QSL to ensure mods using the Fabric API can work on Quilt. Since almost all Fabric mods make use of the Fabric API in some way or another, it's a critical part of Quilt's compatibility with Fabric mods, but despite this, it is largely updated and maintained by a single person:
-
-<!-- MORE -->
 
 ![A screenshot of the Quilted Fabric API team on the Teams page, showing Ennui all by herself](/assets/img/writing/blog/2023-02-14-qfapi-call-for-contributors/lonley-ennui.png)
 

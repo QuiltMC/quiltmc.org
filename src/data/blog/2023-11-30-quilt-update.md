@@ -3,11 +3,9 @@ title: "Quilt Development Update: November 2023"
 date: 2023-11-30 15:00:00 -00:00
 authors:
   - ix0rai
+excerpt: "Hello! This is the first entry in a newly consistent series on the blog, chronicling what's been going on in Quilt development."
+includeExcerptInMainPost: true
 ---
-
-Hello! This is the first entry in a newly consistent series on the blog, chronicling what's been going on in Quilt development.
-
-<!-- MORE -->
 
 We intend to publish an update at the end of each month, and they're going to replace the development update meetings hosted on [Discord](https://discord.quiltmc.org). We're still going to be hosting Q&A sessions there monthly (dates are TBD), but we'll no longer be having developers read out updates to you via the voice channels. With that said, we hope that this move will make development updates more accessible and easier to follow!
 

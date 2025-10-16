@@ -3,11 +3,9 @@ title: "Quilt Development Update: March 2024"
 date: 2024-04-08 15:00:00 -00:00
 authors:
   - ix0rai
+excerpt: "In my journeys through the many QuiltMC codebases, I've learned many things. One of those teachings is that I should keep this intro short and sweet. This month saw tons of work on QSL, a big release of Quilt Loader, and a ton of new mappings. Simply delightful. Grab your machete, and I'll show you the path to enlightenment via learning about updates to our block game modding toolchain."
+includeExcerptInMainPost: true
 ---
-
-In my journeys through the many QuiltMC codebases, I've learned many things. One of those teachings is that I should keep this intro short and sweet. This month saw tons of work on QSL, a big release of Quilt Loader, and a ton of new mappings. Simply delightful. Grab your machete, and I'll show you the path to enlightenment via learning about updates to our block game modding toolchain.
-
-<!-- MORE -->
 
 # Quilt Standard Libraries
 Despite not officially being on the program today, OroArmor has been hard at work updating [Quilt Standard Libraries](https://github.com/QuiltMC/quilt-standard-libraries) and [Quilted Fabric API](https://github.com/QuiltMC/quilted-fabric-api). This time, they've been updated to 1.20.4, squashing countless bugs, including one from 2021! In addition, he squeezed in a rework of the Recipe Remainder API.

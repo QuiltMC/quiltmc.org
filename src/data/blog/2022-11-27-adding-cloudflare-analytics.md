@@ -3,10 +3,9 @@ title: "Adding Cloudflare Web Analytics to quiltmc.org"
 date: 2022-11-26 23:45:00 -00:00
 authors:
   - Southpaw1496
+excerpt: "Today, we're adding the Cloudflare Web Analytics to quiltmc.org. We know that analytics tools have a reputation of being both greedy and careless with user data, and that some people might feel that we're putting meaningless numbers before their privacy, which, given the general perception of web analytics, is not an unfair assumption. However, we have put thought and care into the decision, and so this article explains what data is collected, how we could use it, and how we collect it without impacting your privacy."
+includeExcerptInMainPost: true
 ---
-Today, we're adding the Cloudflare Web Analytics to quiltmc.org. We know that analytics tools have a reputation of being both greedy and careless with user data, and that some people might feel that we're putting meaningless numbers before their privacy, which, given the general perception of web analytics, is not an unfair assumption. However, we have put thought and care into the decision, and so this article explains what data is collected, how we could use it, and how we collect it without impacting your privacy.
-
-<!-- MORE -->
 
 #### Contents:
 - [Contents:](#contents)

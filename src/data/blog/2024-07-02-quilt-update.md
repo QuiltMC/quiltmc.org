@@ -3,11 +3,9 @@ title: "Quilt Development Update: April, May & June 2024"
 date: 2024-07-02 23:00:00 -00:00
 authors:
 - ix0rai
+excerpt: "Welcome back to the blog, quilters. It's been three months since the last time I wrote up one of these big update posts, three months since you skipped to the parts you cared about without reading my whole post, and one month since Eminem released a new Slim Shady song and took away my chance to start this post with a \"guess who's back\" joke. Which is fine. I'm not mad. Not even a little. Let's see what happened with Quilt in the last few months!"
+includeExcerptInMainPost: true
 ---
-
-Welcome back to the blog, quilters. It's been three months since the last time I wrote up one of these big update posts, three months since you skipped to the parts you cared about without reading my whole post, and one month since Eminem released a new Slim Shady song and took away my chance to start this post with a "guess who's back" joke. Which is fine. I'm not mad. Not even a little. Let's see what happened with Quilt in the last few months!
-
-<!-- MORE -->
 
 ## Quilt Loader
 

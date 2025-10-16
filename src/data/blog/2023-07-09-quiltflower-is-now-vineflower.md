@@ -3,9 +3,9 @@ title: "Quiltflower is now Vineflower"
 date: 2023-07-09 14:55:00 -00:00
 authors:
   - Southpaw1496
+excerpt: "The Quiltflower decompiler is an integral part of Quilt's toolchain, and has been quietly developed by jaskarth and the rest of the Decompilers team since our earliest beginnings. Yesterday, the team decided to separate from Quilt and continue development under the [Vineflower](https://github.com/Vineflower) organisation. "
+includeExcerptInMainPost: true
 ---
-The Quiltflower decompiler is an integral part of Quilt's toolchain, and has been quietly developed by jaskarth and the rest of the Decompilers team since our earliest beginnings. Yesterday, the team decided to separate from Quilt and continue development under the [Vineflower](https://github.com/Vineflower) organisation. 
-<!-- MORE -->
 Despite the separation and the change in name, we expect that very little will change for Quilt developers: We will continue to use Quiltflower — now Vineflower — in our toolchain as we always have.
 
 ## Why did this happen?

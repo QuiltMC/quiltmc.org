@@ -3,11 +3,9 @@ title: Announcing the Quilt Forum
 date: 2022-05-07 4:30:00 -00:00
 authors:
   - Southpaw1496
+excerpt: "Hey everyone! I and the rest of the Community Team are excited to announce the final result of just over six months of planning, development, and a not insignificant amount of DevOps headaches. Namely, Quilt's new community space, **the official Quilt Forum**. The forum is being hosted and kindly sponsored by Starchild and their upcoming startup, Starchild Systems."
+includeExcerptInMainPost: true
 ---
-
-Hey everyone! I and the rest of the Community Team are excited to announce the final result of just over six months of planning, development, and a not insignificant amount of DevOps headaches. Namely, Quilt's new community space, **the official Quilt Forum**. The forum is being hosted and kindly sponsored by Starchild and their upcoming startup, Starchild Systems.
-
-<!-- MORE -->
 
 You may have some questions about why we've launched a forum, and what will happen to our existing Discord spaces, but before we answer those, let's get one universal question out the way:
 

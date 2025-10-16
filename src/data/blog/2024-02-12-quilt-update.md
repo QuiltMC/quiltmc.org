@@ -3,11 +3,9 @@ title: "Quilt Development Update: January 2024"
 date: 2024-02-12 15:00:00 -00:00
 authors:
   - ix0rai
+excerpt: "As a homunculus constructed of mappings and Swing, barely tied together by a high-voltage web of electricity and emotion, I try to deliver a nuanced view of each month's development in the Quiltosphere, to varying degrees of success. Let's see what happened in the last 31 days of development."
+includeExcerptInMainPost: true
 ---
-
-As a homunculus constructed of mappings and Swing, barely tied together by a high-voltage web of electricity and emotion, I try to deliver a nuanced view of each month's development in the Quiltosphere, to varying degrees of success. Let's see what happened in the last 31 days of development.
-
-<!-- MORE -->
 
 As always, Mappings won the month, delivering two releases of Enigma and tons of changes to Quilt Mappings. Loader and QSL tried their best, but unfortunately can't even come close to comparing to the glory of the Quilt Mappings suite of projects. Let's get right into their pathetic attempts in the latest edition of Quilt Development Update: Unbiased Edition.
 
