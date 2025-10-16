@@ -3,6 +3,8 @@ title: "Quilt September Update"
 date: 2021-09-19 15:00:00 -00:00
 authors:
   - ToffeeMax
+excerpt: "It has been a few months since the last update on the Quilt Project.\n\n Quilt has progressed far since that initial \"This is Quilt\" blog with: new teams set up; several important RFCs being published and developments in many key areas."
+includeExcerptInMainPost: true
 ---
 
 It has been a few months since the last update on the Quilt Project.
