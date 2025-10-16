@@ -3,7 +3,6 @@ title: "QSL and QFAPI for 1.20.6 and beyond"
 date: 2024-07-03 20:00:00 -00:00
 authors:
 - glitch
-layout: /src/layouts/Post.astro
 ---
 QFAPI is out *now* for 1.20.6 and 1.21. However, the version of QSL (the Quilt-only tools we provide developers) bundled in these versions is much smaller than before, and currently only contains the `qsl_base` and `crash_info` modules. More APIs will be reintroduced to QSL as time goes on. This means that mods written using Quilt Standard Libraries may need extra work to be ported to 1.20.6 and beyond, while Fabric mods for these versions will work fine. Additionally, delays on updating to new versions should be significantly shorter in the future.
 

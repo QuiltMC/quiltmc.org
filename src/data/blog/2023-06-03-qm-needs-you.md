@@ -3,7 +3,6 @@ title: "Quilt Mappings needs you!"
 date: 2023-06-03 12:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 
 Hello quilters!\

@@ -4,7 +4,6 @@ date: 2024-03-09 15:00:00 -00:00
 authors:
   - ix0rai
   - OroArmor
-layout: /src/layouts/Post.astro
 ---
 
 Well gamers. Another month another late blog post from your local insomniac. This month, to break up the monotony of my ramblings, we've brought local QSL guy OroArmor onto the program to tell us about, you guessed it, QSL. Come sit by the fireside with him.

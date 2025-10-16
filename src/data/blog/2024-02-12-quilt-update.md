@@ -3,7 +3,6 @@ title: "Quilt Development Update: January 2024"
 date: 2024-02-12 15:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 
 As a homunculus constructed of mappings and Swing, barely tied together by a high-voltage web of electricity and emotion, I try to deliver a nuanced view of each month's development in the Quiltosphere, to varying degrees of success. Let's see what happened in the last 31 days of development.

@@ -3,7 +3,6 @@ title: "Quilt Development Update: November 2023"
 date: 2023-11-30 15:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 
 Hello! This is the first entry in a newly consistent series on the blog, chronicling what's been going on in Quilt development.

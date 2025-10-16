@@ -3,7 +3,6 @@ title: "Quilt Development Update: March 2024"
 date: 2024-04-08 15:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
 ---
 
 In my journeys through the many QuiltMC codebases, I've learned many things. One of those teachings is that I should keep this intro short and sweet. This month saw tons of work on QSL, a big release of Quilt Loader, and a ton of new mappings. Simply delightful. Grab your machete, and I'll show you the path to enlightenment via learning about updates to our block game modding toolchain.
