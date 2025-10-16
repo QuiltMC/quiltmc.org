@@ -3,12 +3,10 @@ title: "Quilt Mappings needs you!"
 date: 2023-06-03 12:00:00 -00:00
 authors:
   - ix0rai
+excerpt: "Hello quilters!
+	An important announcement from the Quilt Mappings team today (you can tell, because I’ve pulled out proper punctuation for the first time in my Quilt career). I’ll cut straight to the point and say it: Quilt Mappings is in need of contributions. The team and I have been working hard to keep up with Minecraft lately, but with a backlog of missing mappings since before I joined and Mojang always working to improve the game, we can’t hold up our completion by ourselves."
+includeExcerptInMainPost: true
 ---
-
-Hello quilters!\
-An important announcement from the Quilt Mappings team today (you can tell, because I’ve pulled out proper punctuation for the first time in my Quilt career). I’ll cut straight to the point and say it: Quilt Mappings is in need of contributions. The team and I have been working hard to keep up with Minecraft lately, but with a backlog of missing mappings since before I joined and Mojang always working to improve the game, we can’t hold up our completion by ourselves.
-
-<!-- MORE -->
 
 #### What's holding the team back?
 

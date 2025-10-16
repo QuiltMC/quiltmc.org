@@ -3,12 +3,12 @@ title: "October: Month of the 'toberfests"
 date: 2022-10-02 19:20:00 -00:00
 authors:
   - Southpaw1496
-excerpt: "October is most well known as a month of spookiness, of sugary treats, and of pumpkins (Pineapples, excuse me). But for developers, October is also a month of what I like to call "'toberfests", and today we're excited to announce that Quilt will be participating in two of them: Hacktoberfest and Modtoberfest."
+excerpt: "October is most well known as a month of spookiness, of sugary treats, and of pumpkins (Pineapples, excuse me). But for developers, October is also a month of what I like to call \"'toberfests\", and today we're excited to announce that Quilt will be participating in two of them: Hacktoberfest and Modtoberfest."
 includeExcerptInMainPost: true
 ---
 
 ## But what **are** 'toberfests?
-Aside from the German beer festival Oktoberfest, the original and most famous 'toberfest is [Hacktoberfest](https://hacktoberfest.com). Began by Digital Ocean in 2013, Hacktoberfest is, at it's core, a challenge: during the month of October, you must contribute to four participating open-source projects, and the first 40,000 to complete the challenge get a choice of either a t-shirt or a tree planted in your name. 
+Aside from the German beer festival Oktoberfest, the original and most famous 'toberfest is [Hacktoberfest](https://hacktoberfest.com). Began by Digital Ocean in 2013, Hacktoberfest is, at it's core, a challenge: during the month of October, you must contribute to four participating open-source projects, and the first 40,000 to complete the challenge get a choice of either a t-shirt or a tree planted in your name.
 
 Inspired by Hacktoberfest, several other groups have held smaller challenges, usually focused on a specific type of project. One of these, which this year Quilt is proud to be sponsoring, is [Modtoberfest](https://modtoberfest.com/), which focuses on contributions to the Minecraft community. While the prizes might not get you the street cred of a Hacktoberfest t-shirt, a tree will be planted for every accepted pull request, and if you submit four accepted pull requests, you will receive a sticker pack containing, among other things, something that no-one else will have: the world's **first** tangible Pineapple. Behold it in all its fruity glory!
 

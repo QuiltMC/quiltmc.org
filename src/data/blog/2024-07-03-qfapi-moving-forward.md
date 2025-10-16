@@ -3,8 +3,9 @@ title: "QSL and QFAPI for 1.20.6 and beyond"
 date: 2024-07-03 20:00:00 -00:00
 authors:
 - glitch
+excerpt: "QFAPI is out *now* for 1.20.6 and 1.21. However, the version of QSL (the Quilt-only tools we provide developers) bundled in these versions is much smaller than before, and currently only contains the `qsl_base` and `crash_info` modules. More APIs will be reintroduced to QSL as time goes on. This means that mods written using Quilt Standard Libraries may need extra work to be ported to 1.20.6 and beyond, while Fabric mods for these versions will work fine. Additionally, delays on updating to new versions should be significantly shorter in the future."
+includeExcerptInMainPost: true
 ---
-QFAPI is out *now* for 1.20.6 and 1.21. However, the version of QSL (the Quilt-only tools we provide developers) bundled in these versions is much smaller than before, and currently only contains the `qsl_base` and `crash_info` modules. More APIs will be reintroduced to QSL as time goes on. This means that mods written using Quilt Standard Libraries may need extra work to be ported to 1.20.6 and beyond, while Fabric mods for these versions will work fine. Additionally, delays on updating to new versions should be significantly shorter in the future.
 
 More importantly, however, you may have noticed that this is the second blog post in two days! That's not even enough time for Eminem to write another song. This is because rai (your usual blog post correspondent) now has competition! If she doesn't turn in the next monthly blog post on time, I'm replacing her with an AI trained on speeches given by members of the Canadian Parliament. What could go wrong?
 <!-- MORE -->
