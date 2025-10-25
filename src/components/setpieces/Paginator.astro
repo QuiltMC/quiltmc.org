@@ -18,8 +18,6 @@ interface Props {
 	page: Page<CollectionEntry<"blog">>
  }
 
- console.log("Paginator received: " + JSON.stringify(Astro.props))
-
 const { left, right } = rtlSettings();
 ---
 

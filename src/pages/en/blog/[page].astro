@@ -7,9 +7,6 @@ import type { CollectionEntry } from "astro:content";
 import type { Page, GetStaticPaths } from "astro"
 import type { BaseProps } from "@layouts/Base.astro";
 
-console.log("Output from paginate: " + Astro.props.page)
-
-
 interface Props {
 	page: Page<CollectionEntry<"blog">>
 	content: BaseProps
