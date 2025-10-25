@@ -4,12 +4,21 @@ import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
 import { Icon } from "astro-icon/components"
+import { CollectionEntry } from "astro:content";
+import { Page } from "astro"
+import Post from "@layouts/Post.astro";
 
 const { page } = Astro.props;
 const previousPage = page.currentPage - 1;
 const nextPage = page.currentPage + 1;
 const onFirstPage = previousPage <= 0;
 const onLastPage = nextPage > page.lastPage;
+
+interface Props {
+	page: Page<CollectionEntry<"blog">>
+ }
+
+ console.log("Paginator received: " + JSON.stringify(Astro.props))
 
 const { left, right } = rtlSettings();
 ---

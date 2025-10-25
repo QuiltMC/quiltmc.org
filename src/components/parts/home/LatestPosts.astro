@@ -1,15 +1,13 @@
 ---
 import Button from "@atoms/Button.astro";
 import PostEmbed from "@atoms/PostEmbed.astro";
-import type { MarkdownInstance } from "astro";
+import { getCollection } from "astro:content";
 import i18next from "i18next";
 import { localizePath, sortByDescending } from "src/util/Util";
 import type { BlogFrontMatter } from "@layouts/Post.astro"
 
-const allPosts = (Object.values(import.meta.glob("/src/pages/**/blog/*.md", {eager: true})) as [MarkdownInstance<BlogFrontMatter>]).filter((p) =>
-	p.url.startsWith(`/${i18next.language}/`) && p.frontmatter.index !== false
-);
-sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
+let allPosts = await getCollection("blog")
+sortByDescending(allPosts, (post) => new Date(post.data.date));
 
 const latestPosts = allPosts.slice(0, 3);
 ---

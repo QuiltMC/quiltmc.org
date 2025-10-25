@@ -3,7 +3,7 @@ import { localizeList } from "@util/Util";
 import { t } from "i18next";
 
 const { post } = Astro.props;
-const { authors = [], date } = post.frontmatter;
+const { authors = [], date } = post.data;
 ---
 
 <div class="media">
