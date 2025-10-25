@@ -52,6 +52,7 @@
 		"@iconify-json/cib": "^1.2.3",
 		"@iconify-json/material-symbols": "^1.2.41",
 		"@iconify-json/mdi": "^1.2.3",
+		"@studiocms/markdown-remark": "^1.2.0",
 		"@tsndr/cloudflare-worker-jwt": "^3.2.0",
 		"astro-compress": "^2.3.8",
 		"astro-icon": "^1.1.5",
