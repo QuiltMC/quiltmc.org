@@ -120,27 +120,20 @@ Your entry must have the following fields:
 - `"notes":` (optional) - Any other notes, for example, the a known workaround.
 
 #### Writing a Blog Post
-Create a new Markdown file in `src/pages/en/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`. The file *must* end with `.md` and *not* `.mdx`
+Create a new Markdown file in `src/data/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`. The file *must* end with `.md` and *not* `.mdx`
 
-At the top of the file, you need to add *front matter*, which is metadata written in YAML. The front matter for a blog post looks like this:
+At the top of the file, you need to add *front matter*, which is metadata written in YAML, enclosed by three hyphens (`---`) The front matter for a blog post looks like this:
 ```yaml
 ---
 title: "An Example Title" # The full title of the post
 date: 2024-09-03 20:00:00 -00:00 #	The date, time, and timezone that the post was written, relative to UTC. It is best practice to give the time in UTC and use an offset of -00:00, as shown.
 authors: # A list of one or more authors
-- Pineapple
-layout: /src/layouts/Post.astro # This tells Astro what layout to use for the page, and should always be the same.
+  - Pineapple
+excerpt: "An example post showing you how to write a real one" # A short summary or teaser for the post, which is shown on the front page and the main blog page. Markdown is supported.
+includeExcerptInMainPost: true # Optional: Whether you want the excerpt to be the first paragraph of the full post, to prevent duplicating text.
 ---
 ```
-Write a short first paragraph, then insert two lines, put `<!-- MORE -->`, then two more lines. For example:
-```
-A succinct first paragraph.
-
-<!-- MORE -->
-
-More text here.
-```
-This tells the website what to include in the short preview that goes on the home page and in the list of blog posts. From here on, you can keep writing Markdown to your heart's content. Syntax highlighting in code blocks is also supported.
+From here on, you can keep writing Markdown to your heart's content. Syntax highlighting in code blocks is also supported.
 
 #### Updating your team member card
 If you are a part of one of Quilt's developer or community teams, you likely have a card on the website's [Team Listings](https://quiltmc.org/about/teams) page. The data inside the cards on this page is built from the `TeamData.mjs` file in `src/data/`.

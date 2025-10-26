@@ -20,7 +20,7 @@ src/
 		parts/
 		setpieces/
 	data/
-		team/
+		blog/
 	layouts/
 	locales/
 		en/
@@ -75,7 +75,9 @@ Small pieces of code that form parts of larger pages. They are split into three 
 **Set Pieces** (`@setpieces`): Large components that form a part of many pages, such as the nav bar, header, and footer. Set Pieces are the highest-level components and should not be reused inside of other components.
 
 ### Data (`src/data`, `@data`)
-This folder contains type definitions and objects for various pieces of data used elsewhere in the site. Of particular interest is `TeamData.mjs`, which contains the information used to generate the info cards on the [Team Listings page](https://quiltmc.org/about/teams).
+This folder contains type definitions and objects for various pieces of data used elsewhere in the site, as well as pages which are available through [content collections](https://docs.astro.build/en/guides/content-collections/). Of particular interest is `TeamData.mjs`, which contains the information used to generate the info cards on the [Team Listings page](https://quiltmc.org/about/teams).
+#### `src/data/blog`
+This folder contains Markdown files with blog posts, which are available to the rest of the site through the `blog` [content collection](https://docs.astro.build/en/guides/content-collections/).
 
 ### Layouts (`src/layouts/`, `@layouts`)
 While the content of pages is stored in `src/pages`, this folder stores their layouts separately, which makes translating the pages easier, and allows the same layouts to be shared by pages in multiple languages. Some layouts are used by multiple pages, such as `Page.astro` and `Post.astro`; while others are dedicated to a single page, such as `Home.astro` and `InstallPage.astro`. Some layouts build on top of others others: for example,`LatestVersions.astro` uses `Page.astro`.
