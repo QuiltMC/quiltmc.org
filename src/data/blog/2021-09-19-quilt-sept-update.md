@@ -6,13 +6,6 @@ authors:
 excerpt: "It has been a few months since the last update on the Quilt Project.\n\n Quilt has progressed far since that initial \"This is Quilt\" blog with: new teams set up; several important RFCs being published and developments in many key areas."
 includeExcerptInMainPost: true
 ---
-
-It has been a few months since the last update on the Quilt Project.
-
-Quilt has progressed far since that initial "This is Quilt" blog with: new teams set up; several important RFCs being published and developments in many key areas.
-
-<!-- MORE -->
-
 ## Clean Room RFC-33
 
 [RFC-33 has been merged](https://github.com/QuiltMC/rfcs/blob/master/rfc/0033-quilt-mappings-and-clean-room.md). This RFC changes how Quilt is dealing with other mappings (such as MojMap, MCP and Yarn).
