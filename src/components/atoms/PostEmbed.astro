@@ -1,22 +1,21 @@
 ---
 import PostInfo from "./PostInfo.astro";
-import type { MarkdownInstance } from "astro";
+import { Markdown } from "studiocms:markdown-remark"
+import { CollectionEntry } from "astro:content";
+import { localizePath } from "@util/Util";
 
 const { post } = Astro.props;
-const { title } = post.frontmatter;
+const title = post.data.title;
 
-async function getExcerptOfPost<T extends Record<string, any>>(md: MarkdownInstance<T>): Promise<string> {
-	const content = await md.compiledContent();
-	return content.slice(0, content.indexOf("<!-- MORE -->"));
+interface Props {
+	post: CollectionEntry<"blog">
 }
 ---
 
 <article class="blog-post with-divider">
-	<h2 class="subtitle"><a href={post.url}>{title}</a></h2>
+	<h2 class="subtitle"><a href={localizePath("/blog/" + post.id)}>{title}</a></h2>
 
 	<PostInfo {post} />
-
-	<Fragment set:html={getExcerptOfPost(post)}/>
-
+	<Markdown content={post.data.excerpt} />
 	<p></p>
 </article>

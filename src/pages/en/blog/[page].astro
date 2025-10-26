@@ -1,17 +1,22 @@
 ---
 import Base from "@layouts/Base.astro";
-//@ts-ignore
 import Paginator from "@setpieces/Paginator.astro";
 import { sortByDescending } from "@util/Util";
-import type { MarkdownInstance } from "astro"
-import type { BlogFrontMatter } from "@layouts/Post.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import type { Page, GetStaticPaths } from "astro"
+import type { BaseProps } from "@layouts/Base.astro";
 
-export async function getStaticPaths({ paginate }) {
-	const allPosts = Object.values(import.meta.glob("./*.md", {eager: true})) as [MarkdownInstance<BlogFrontMatter>];
-	sortByDescending(allPosts, (post) => new Date(post.frontmatter.date));
-
-	return paginate(allPosts, { pageSize: 5 });
+interface Props {
+	page: Page<CollectionEntry<"blog">>
+	content: BaseProps
 }
+
+export const getStaticPaths = (async ({ paginate }) => {
+  let allPosts = await getCollection("blog")
+  sortByDescending(allPosts, (post) => new Date(post.data.date));
+  return paginate(allPosts, { pageSize: 5 });
+}) satisfies GetStaticPaths;
 ---
 
 <Base content={Astro.props.content}>

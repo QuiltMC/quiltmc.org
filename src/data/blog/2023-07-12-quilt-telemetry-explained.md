@@ -3,15 +3,12 @@ title: "Quilt Loader Telemetry Explained"
 date: 2023-07-12 11:25:00 -00:00
 authors:
   - Southpaw1496
-layout: /src/layouts/Post.astro
+excerpt: "Quilt Loader 0.19.2 adds beacon functionality to count Quilt's Monthly Active Users, or MAUs. There has recently been some confusion about how this functionality works and why it was added, so this blog post is intended to provide a clear explanation of both of those things."
+includeExcerptInMainPost: true
 ---
 **Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
 
 **Update 17/07/2023:** The beacon has been temporarily disabled following a report that it was erroneously storing IP addresses. Please see [this forum post](https://forum.quiltmc.org/t/important-monthly-active-user-beacon-update/1649) for more information.
-
-Quilt Loader 0.19.2 adds beacon functionality to count Quilt's Monthly Active Users, or MAUs. There has recently been some confusion about how this functionality works and why it was added, so this blog post is intended to provide a clear explanation of both of those things.
-
-<!-- MORE -->
 
 ## How the telemetry works
 Most telemetry is gathered with the intention of precisely learning how different demographics of people are using a product, perhaps with the intention of analysing behaviour to fine-tune an algorithm, interface, or marketing campaign. The word "telemetry" is associated with all sorts of sensitive data: your IP address, your location, the intimate details of how you're using an app, but we're not collecting anything like that. In Quilt's case, we only need to know how many people are using Quilt in the wild, so we optimised for sharing as little data as we possibly could while still accomplishing this goal.

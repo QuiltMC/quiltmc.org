@@ -3,12 +3,9 @@ title: "Quilt's (EXTREMELY LATE) November Update"
 date: 2023-09-28 15:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
+excerpt: "It's been quite a while since the last proper development update here, with the last one being our 2021 October update. In this fairly enormous post, we'll be covering all the biggest developments since entering beta! We'll be going through Quilt Standard Libraries, Quilt Loader, Quilt Mappings, Quilted Fabric API, Chasm, Quilt Kotlin Libraries, Cozy, and a few other things. Taking the crown for the new longest blog post, I hope you enjoy seeing what we've been working on!"
+includeExcerptInMainPost: true
 ---
-
-It's been quite a while since the last proper development update here, with the last one being our 2021 October update. In this fairly enormous post, we'll be covering all the biggest developments since entering beta! We'll be going through Quilt Standard Libraries, Quilt Loader, Quilt Mappings, Quilted Fabric API, Chasm, Quilt Kotlin Libraries, Cozy, and a few other things. Taking the crown for the new longest blog post, I hope you enjoy seeing what we've been working on!
-
-<!-- MORE -->
 
 ## Quilt Standard Libraries
 QSL has received just over 30 new APIs in the time since we last posted about QSL development on the blog. We're making the executive decision that that reflects on how amazing its contributors are at making APIs, and not how slow us over in the writing team are with releasing our blog posts. Before you start thinking about just how long it's been, let's get into the updates!

@@ -1,0 +1,27 @@
+---
+import type {GetStaticPaths} from "astro"
+import type { BaseProps } from "@layouts/Base.astro"
+import { getCollection, render } from "astro:content"
+// Because this page is "[post].astro", you can't have an import called "post"
+import BlogPost from "@layouts/Post.astro"
+import { Markdown } from "studiocms:markdown-remark"
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection("blog")
+	return posts.map(post => {
+		return {
+			params: {post: post.id},
+			props: { post }
+
+		}
+	})
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props
+const { Content } = await render(post)
+
+---
+<BlogPost title={post.data.title} data={{authors: post.data.authors, date: post.data.date}}>
+	{post.data.includeExcerptInMainPost && <Markdown content={post.data.excerpt} />}
+	<Content />
+</BlogPost>

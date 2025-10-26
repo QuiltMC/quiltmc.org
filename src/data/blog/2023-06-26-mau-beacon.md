@@ -3,20 +3,14 @@ title: "Evil Modding Project Adds Telemetry"
 date: 2023-06-26 12:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
+excerpt: "If you've been keeping tabs on our RFC, or Request For Comment, [repository](https://github.com/QuiltMC/rfcs), you may have noticed that we've just merged a proposal for Quilt Loader to keep tabs on how many people are using it each month. All considered, it's unfortunate that it was RFC 81,not RFC 1984."
+includeExcerptInMainPost: true
 ---
 **Update 17/09/2023:** The beacon has been permanently removed in Loader `0.20.0` following the decision that the usefulness of the MAU statistic is outweighed by community concerns and confusion regarding telemetry.
-
-If you've been keeping tabs on our RFC, or Request For Comment, [repository](https://github.com/QuiltMC/rfcs), you may have noticed that we've
-just merged a proposal for Quilt Loader to keep tabs on how many people are using it each month. All considered, it's unfortunate that it was RFC 81,
-not RFC 1984.
-
-<!-- MORE -->
-
 ## Why are we doing this?
 
-Excellent question, dear user. Over the last couple years of Quilt, we've been running [a website](https://quiltmc.org/), 
-[a repository of compiled binaries called a Maven](https://maven.quiltmc.org/), and other miscellaneous bits that we need hosting for.
+Excellent question, dear user. Over the last couple years of Quilt, we've been running [a website](https://quiltmc.org/),
+ [a repository of compiled binaries called a Maven](https://maven.quiltmc.org/), and other miscellaneous bits that we need hosting for.
 One of the best ways for projects like us to pay for our infrastructure is by getting a sponsorship: a company agrees to pay some
 of our costs, for the low low price of an icon on the website or something similar. Since they're a company, before agreeing to take
 on the financial burden of an entire project, they first want to make sure that people will actually see that icon: that's where Monthly
@@ -24,7 +18,7 @@ Active Users, or MAU, come in. MAU is a pretty universal statistic that shows ho
 which is just me coming back every once in a while when I add something interesting, while a big service like Github has millions of MAU
 from people coming back all the time to view and commit code. Every unique person who visits that month bumps the MAU number by one.
 Our potential sponsor gets to see that and go "ah, there are a pile of people playing on Quilt, that means a bunch of folks will see our
-little ad and check us out!". 
+little ad and check us out!".
 
 Another huge benefit of having an MAU statistic is that Quilt developers like me get to see just how many people are using our passion
 project, which is great motivation for us to keep improving it! I'm sure it'll always be fun to see how many of you are running around inside a Quilt-powered version of the silly block game.

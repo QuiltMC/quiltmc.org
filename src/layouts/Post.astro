@@ -13,7 +13,7 @@ export interface BlogFrontMatter {
 
 <Default content={props.content}>
 	<div class="blog-post">
-		<h1>{props.frontmatter.title}</h1>
+		<h1>{props.title}</h1>
 		<PostInfo post={props} />
 
 		<slot />

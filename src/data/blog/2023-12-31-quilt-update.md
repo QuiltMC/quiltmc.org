@@ -3,12 +3,9 @@ title: "Quilt Development Update: December 2023"
 date: 2023-12-31 15:00:00 -00:00
 authors:
   - ix0rai
-layout: /src/layouts/Post.astro
+excerpt: "Welcome back to your favourite series recapping the month's Quilt development! This month saw tons of work on mappings with Enigma `2.0`, plenty of new beta releases for Quilt Loader, work on porting Quilted Fabric API to new Fabric API releases and Minecraft versions, and work on the wiki, Quilt Config, the website, and more for our lovely miscellaneous section."
+includeExcerptInMainPost: true
 ---
-
-Welcome back to your favourite series recapping the month's Quilt development! This month saw tons of work on mappings with Enigma `2.0`, plenty of new beta releases for Quilt Loader, work on porting Quilted Fabric API to new Fabric API releases and Minecraft versions, and work on the wiki, Quilt Config, the website, and more for our lovely miscellaneous section.
-
-<!-- MORE -->
 
 ## Quilt Standard Libraries
 This month saw just one new pull request on the QSL repository: an [update to `1.20.2`](https://github.com/QuiltMC/quilt-standard-libraries/pull/356) by moe of mappings team fame. Neat!
