@@ -27,6 +27,7 @@ const incomatibleMods = defineCollection({
 		type: z.enum(["GAME", "OTHERS", "SELF", "WORKAROUND"]),
 		status: z.enum(["BLOCKED", "IN_PROGRESS", "NO_ANSWER", "ON_HOLD", "UNKNOWN", "WONT_FIX"]),
 		tracking: z.string().url().or(z.literal("UNKNOWN")),
+		note: z.optional(z.string()),
 		icon: z.string().url()
 	})
 })
