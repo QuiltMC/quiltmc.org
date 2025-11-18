@@ -1,18 +1,10 @@
 ---
 import { marked } from "marked";
 import { Icon } from "astro-icon/components"
-
-export interface Mod {
-    name: string;
-    ids: string[];
-    icon: string;
-    note?: string;
-    tracking: string;
-    status: string;
-}
+import type { InferEntrySchema } from "astro:content";
 
 export interface Props {
-    mod: Mod;
+    mod: InferEntrySchema<"incomatibleMods">;
 }
 
 const mod = Astro.props.mod;
