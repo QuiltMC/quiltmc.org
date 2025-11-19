@@ -46,7 +46,7 @@ Holds public GPG keys for the Infrastructure Team and the Admin Board.
 Outlines our security policy for reporting exploits and vulnerabilities using the proposed [security.txt standard](https://securitytxt.org).
 
 ### `api/`
-Static routes for the API, including the OpenAPI specification and the incompatible mods JSON file.
+The OpenAPI specification for the website's API.
 
 ### `assets/`
 Static files used in various places on the website:
@@ -75,7 +75,9 @@ Small pieces of code that form parts of larger pages. They are split into three 
 **Set Pieces** (`@setpieces`): Large components that form a part of many pages, such as the nav bar, header, and footer. Set Pieces are the highest-level components and should not be reused inside of other components.
 
 ### Data (`src/data`, `@data`)
-This folder contains type definitions and objects for various pieces of data used elsewhere in the site, as well as pages which are available through [content collections](https://docs.astro.build/en/guides/content-collections/). Of particular interest is `TeamData.mjs`, which contains the information used to generate the info cards on the [Team Listings page](https://quiltmc.org/about/teams).
+This folder contains type definitions and objects for various pieces of data used elsewhere in the site, as well as pages which are available through [content collections](https://docs.astro.build/en/guides/content-collections/). Items of particular interest are:
+- `TeamData.mjs`: Data used to generate the info cards on the [Team Listings page](https://quiltmc.org/about/teams).
+- `incompatible-mods.json`: Data for the [incompatible mods](https://quiltmc.org/known-incompatibilities) page and API.
 #### `src/data/blog`
 This folder contains Markdown files with blog posts, which are available to the rest of the site through the `blog` [content collection](https://docs.astro.build/en/guides/content-collections/).
 
