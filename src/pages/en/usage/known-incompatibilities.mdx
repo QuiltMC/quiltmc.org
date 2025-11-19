@@ -2,5 +2,31 @@
 permalink: /usage/
 title: Known Incompatibilities
 description: See all the known incompatibilities with Quilt in this page.
-layout: /src/layouts/KnownIncompatibilities.astro
+layout: /src/layouts/Page.astro
 ---
+import IncompatibleModList from "@parts/IncompatibleModList.astro"
+import { getCollection } from "astro:content";
+
+export const rawData = await getCollection("incomatibleMods")
+export const data = rawData.sort((a, b) => a.data.name.localeCompare(b.data.name))
+
+
+This page lists mods which are known to be incompatible with Quilt. You can hover the symbol on the left to see the current status of the issue, and click the link icon to go to the tracking issue. If you believe this list is missing anything, please feel free to tell us [on Discord](https://discord.quiltmc.org) You can also directly [update the data on GitHub](https://github.com/QuiltMC/quiltmc.org/blob/main/public/api/v1/incompatible-mods.json).
+
+## Requires a Workaround
+This is the simplest form of problems, the issue can simply be fixed by following the instructions provided.
+
+<IncompatibleModList mods={data} type="WORKAROUND" />
+
+## Non-Fatal Errors or Broken Features
+These mods are not compatible with Quilt, but they do not break the game or other mods. They may have broken features or other errors that do not crash the game.
+
+<IncompatibleModList mods={data} type="SELF" />
+
+## Breaks other mods
+These mods are not compatible with Quilt, and they break other mods.
+<IncompatibleModList mods={data} type="OTHERS" />
+
+## Breaks the game
+These mods are not compatible with Quilt, and they break the game.
+<IncompatibleModList mods={data} type="GAME" />

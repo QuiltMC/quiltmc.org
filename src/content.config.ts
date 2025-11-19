@@ -1,6 +1,5 @@
 import { defineCollection, z } from "astro:content";
 import {file, glob} from "astro/loaders"
-import { console } from "inspector";
 
 const blog = defineCollection({
 	loader: glob({pattern: "**/*.md", base: "src/data/blog"}),

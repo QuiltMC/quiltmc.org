@@ -1,0 +1,18 @@
+---
+import { CollectionEntry } from "astro:content"
+import IncompatibleModCard from "@atoms/IncompatibleModCard.astro"
+
+export interface Props {
+	mods: CollectionEntry<"incomatibleMods">[]
+	type: string
+}
+
+const { mods, type } = Astro.props
+const filteredMods = mods.filter((mod) => mod.data.type === type)
+console.log("Filtered to " + filteredMods.length)
+---
+{
+	filteredMods.length > 0 ? filteredMods.map(mod => (
+		 <IncompatibleModCard mod={mod.data} />
+	 )) : <div class="card"><div class="card-content">Currently nothing to report!</div></div>
+}
