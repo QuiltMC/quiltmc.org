@@ -1,5 +1,5 @@
 ---
-import { marked } from "marked";
+import { Markdown } from "studiocms:markdown-remark"
 import { Icon } from "astro-icon/components"
 import type { InferEntrySchema } from "astro:content";
 
@@ -54,7 +54,7 @@ const [statusText, statusIcon] = {
 
             {
                 (mod.note) && (
-                    <div class="content" set:html={marked.parse(mod.note)}></div>
+			<div class="content"><Markdown content={mod.note} /></div>
                 )
             }
         </div>
