@@ -98,7 +98,7 @@ For a detailed explanation of how the repository is laid out, see [`ARCHITECTURE
 Instructions for making various common types of contributions.
 
 #### Adding an Incompatible Mod
-Open the `incompatible-mods.json` file in `public/api/v1/incompatible-mods.json` and add a new entry at the bottom of the list.
+Open the `incompatible-mods.json` file in `src/data/incompatible-mods.json` and add a new entry at the bottom of the list.
 
 Your entry must have the following fields:
 
@@ -117,7 +117,10 @@ Your entry must have the following fields:
 	- `"UNKNOWN"` 	- The issue hasn't been reported to the mod authors, or you can't find a report.
 	- `"WONT_FIX"` - The issue has been reported, but the mod authors refuse to fix it.
 - `"tracking":` - A link to the report tracking the incompatibility, for example, a GitHub issue. Set to `"UNKNOWN"` if you don't know.
+- `icon`: A link to a file that will be used as an icon on the incompatible mods page.
 - `"notes":` (optional) - Any other notes, for example, the a known workaround.
+
+To validate your changes, You can build the site locally (see ["Building the Site"](#Building-the-site)) to validate your changes. They will also be validated when you open a pull request.
 
 #### Writing a Blog Post
 Create a new Markdown file in `src/data/blog`, named with the current date and a shortened version of the title. The date should be in the format `yyyy-mm-dd`, and the title should be in lowercase and separated by hyphens (`-`), for example, `2024-03-09-example-post.md`. The file *must* end with `.md` and *not* `.mdx`
