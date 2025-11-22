@@ -10,22 +10,24 @@ export const rawData = await getCollection("incomatibleMods")
 export const data = rawData.sort((a, b) => a.data.name.localeCompare(b.data.name))
 
 
-This page lists mods which are known to be incompatible with Quilt. You can hover the symbol on the left to see the current status of the issue, and click the link icon to go to the tracking issue. If you believe this list is missing anything, please feel free to tell us [on Discord](https://discord.quiltmc.org). You can also directly [update the data on GitHub](https://github.com/QuiltMC/quiltmc.org/blob/main/public/api/v1/incompatible-mods.json).
+This page lists mods which are incompatible with Quilt. You can hover the symbol on the left to see the current status of the bug report tracking the incompatibility, and click the link icon to visit the report. If you find an incompatible mod that is not on the list, please tell us [on Discord](https://discord.quiltmc.org). You can also submit a Pull Request to update the data [on GitHub](https://github.com/QuiltMC/quiltmc.org?tab=readme-ov-file#adding-an-incompatible-mod).
 
 ## Requires a Workaround
-This is the simplest form of problems, the issue can simply be fixed by following the instructions provided.
+These mods have problems with Quilt that can easily be fixed by following the instructions.
 
 <IncompatibleModList mods={data} type="WORKAROUND" />
 
-## Non-Fatal Errors or Broken Features
-These mods are not compatible with Quilt, but they do not break the game or other mods. They may have broken features or other errors that do not crash the game.
+## Broken Features
+These mods have broken functionality or features when loaded using Quilt.
 
 <IncompatibleModList mods={data} type="SELF" />
 
 ## Breaks other mods
-These mods are not compatible with Quilt, and they break other mods.
+These mods break other mods when loaded using Quilt.
+
 <IncompatibleModList mods={data} type="OTHERS" />
 
 ## Breaks the game
-These mods are not compatible with Quilt, and they break the game.
+These mods cause the game to crash when loaded using Quilt.
+
 <IncompatibleModList mods={data} type="GAME" />
