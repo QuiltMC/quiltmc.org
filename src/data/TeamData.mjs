@@ -336,8 +336,8 @@ export default {
 	},
 	TibiNonEst: {
 		name: "Tibs",
-		discord: "tibs",
-		github: "TibiNonEst",
+		discord: "violet.sh",
+		github: "violet-sh",
 		description:
 			"Programming enthusiast, theater and music nerd, Gradle denier.",
 		avatar: "https://avatars.githubusercontent.com/u/37983572?v=4",
