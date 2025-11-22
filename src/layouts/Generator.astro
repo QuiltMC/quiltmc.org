@@ -217,9 +217,9 @@ const props = Astro.props;
         gib("version-select").addEventListener("change", e => {
             const components = latestVersionComponents[e.target.value];
 
-            gib("unavailability-warning").classList.toggle("is-hidden", components.quilt_mappings && components.quilted_fabric_api);
-            errors.quilt_mappings = !components.quilt_mappings;
-            errors.quilted_fabric_api = !components.quilted_fabric_api;
+            gib("unavailability-warning").classList.toggle("is-hidden", components.quilt_mappings/* && components.quilted_fabric_api */);
+            errors.quilted_fabric_api = false; // this should not prevent users from downloading a template!!
+            errors.quilt_mappings = !components.quilt_mappings; // nor should this, really, but i suppose that's up for discussion
         });
 
         for (const version of gameVersions) {
