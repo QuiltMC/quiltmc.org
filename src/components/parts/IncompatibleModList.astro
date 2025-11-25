@@ -1,0 +1,20 @@
+---
+import { CollectionEntry } from "astro:content"
+import IncompatibleModCard from "@atoms/IncompatibleModCard.astro"
+import { getCollection, InferEntrySchema } from "astro:content"
+
+export interface Props {
+	type: InferEntrySchema<"incompatibleMods">["type"]
+}
+
+const { type } = Astro.props
+
+const mods = (await getCollection("incompatibleMods", ({ data }) => {
+	return data.type === type
+})).sort((a, b) => a.data.name.localeCompare(b.data.name))
+---
+{
+	mods.length > 0 ? mods.map(mod => (
+		 <IncompatibleModCard mod={mod.data} />
+	 )) : <div class="card"><div class="card-content">Currently nothing to report!</div></div>
+}

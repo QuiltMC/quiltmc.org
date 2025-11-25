@@ -1,18 +1,10 @@
 ---
-import { marked } from "marked";
+import { Markdown } from "studiocms:markdown-remark"
 import { Icon } from "astro-icon/components"
-
-export interface Mod {
-    name: string;
-    ids: string[];
-    icon: string;
-    note?: string;
-    tracking: string;
-    status: string;
-}
+import type { InferEntrySchema } from "astro:content";
 
 export interface Props {
-    mod: Mod;
+    mod: InferEntrySchema<"incompatibleMods">;
 }
 
 const mod = Astro.props.mod;
@@ -62,7 +54,7 @@ const [statusText, statusIcon] = {
 
             {
                 (mod.note) && (
-                    <div class="content" set:html={marked.parse(mod.note)}></div>
+			<div class="content"><Markdown content={mod.note} /></div>
                 )
             }
         </div>

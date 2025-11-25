@@ -1,0 +1,28 @@
+---
+title: Incompatible Mods
+description: All mods that are known to be incompatible with Quilt.
+layout: /src/layouts/Page.astro
+---
+import IncompatibleModList from "@parts/IncompatibleModList.astro"
+
+This page lists mods which are incompatible with Quilt. You can hover the symbol on the right to see the current status of the bug report tracking the incompatibility, and click the link icon to visit the report. If you find an incompatible mod that is not on the list, please tell us [on Discord](https://discord.quiltmc.org). You can also submit a Pull Request to update the data [on GitHub](https://github.com/QuiltMC/quiltmc.org?tab=readme-ov-file#adding-an-incompatible-mod).
+
+## Requires a Workaround
+These mods have problems with Quilt that can easily be fixed by following the instructions.
+
+<IncompatibleModList type="WORKAROUND" />
+
+## Broken Features
+These mods have broken functionality or features when loaded using Quilt.
+
+<IncompatibleModList type="SELF" />
+
+## Breaks other mods
+These mods break other mods when loaded using Quilt.
+
+<IncompatibleModList type="OTHERS" />
+
+## Breaks the game
+These mods cause the game to crash when loaded using Quilt.
+
+<IncompatibleModList type="GAME" />
