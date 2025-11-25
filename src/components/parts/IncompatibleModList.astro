@@ -4,12 +4,12 @@ import IncompatibleModCard from "@atoms/IncompatibleModCard.astro"
 import { getCollection, InferEntrySchema } from "astro:content"
 
 export interface Props {
-	type: InferEntrySchema<"incomatibleMods">["type"]
+	type: InferEntrySchema<"incompatibleMods">["type"]
 }
 
 const { type } = Astro.props
 
-const mods = (await getCollection("incomatibleMods", ({ data }) => {
+const mods = (await getCollection("incompatibleMods", ({ data }) => {
 	return data.type === type
 })).sort((a, b) => a.data.name.localeCompare(b.data.name))
 ---

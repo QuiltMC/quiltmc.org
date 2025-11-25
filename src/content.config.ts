@@ -13,7 +13,7 @@ const blog = defineCollection({
 	})
 })
 
-const incomatibleMods = defineCollection({
+const incompatibleMods = defineCollection({
 	// A custom parser is necessary because Astro requires an id field which these entries don't have
 	loader: file("src/data/incompatible-mods.json", {parser: (text) => {
 		let parsedContent: any[] = JSON.parse(text)
@@ -31,4 +31,4 @@ const incomatibleMods = defineCollection({
 	})
 })
 
-export const collections = {blog, incomatibleMods}
+export const collections = {blog, incompatibleMods}
