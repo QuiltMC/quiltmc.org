@@ -19,7 +19,7 @@ export default defineConfig({
       mdx(),
 	astroI18next(),
 	sitemap(),
-	purgecss({ safelist: ["has-background-info", "has-background-link"] }),
+	purgecss(),
 	compress({ SVG: false, }),
 	searchIndex(),
 	icon(),

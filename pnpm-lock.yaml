@@ -33,6 +33,9 @@ importers:
       '@studiocms/markdown-remark':
         specifier: ^1.2.0
         version: 1.2.0(astro@5.14.5(@types/node@24.7.2)(lightningcss@1.29.3)(rollup@4.52.4)(sass@1.93.2)(terser@5.39.0)(typescript@5.9.3))(vite@6.4.0(@types/node@24.7.2)(lightningcss@1.29.3)(sass@1.93.2)(terser@5.39.0))
+      '@studiocms/markdown-remark-processor':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@tsndr/cloudflare-worker-jwt':
         specifier: ^3.2.0
         version: 3.2.0
