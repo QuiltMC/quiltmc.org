@@ -11,3 +11,7 @@
 /en/community/tupperbox				/community/pluralkit			308
 /en/blog							/blog/1							308
 /en/usage/known-incompatibilities	/en/usage/incompatible-mods		308
+
+
+# Original article linked in CVE database - do not remove without consideration.
+/en/blog/2023-02-04-five-installer-vulnerabilities	https://akarys.me/en/blog/mrpack-vulnerabilities
