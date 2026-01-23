@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
-import purgecss from "astro-purgecss";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { fromHtml } from 'hast-util-from-html';
 import icon from "astro-icon"
@@ -19,7 +18,6 @@ export default defineConfig({
       mdx(),
 	astroI18next(),
 	sitemap(),
-	purgecss(),
 	compress({ SVG: false, }),
 	searchIndex(),
 	icon(),

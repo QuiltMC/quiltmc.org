@@ -1,15 +1,15 @@
 openapi: 3.0.0
 info:
-  title: Quilt Meta API
+  title: Quilt Website API
   version: "2024-04-16"
   description: |
     This is the Quilt Website API. You can use it to inspect various information about our project.
-    
+
     # Versioning
     | Version | Support commitment | End of support | Sunset |
     |---------|--------------------|----------------|--------|
     | v1      | 6 months           | TBD            | TBD    |
-    
+
     # User agents
     Please make sure to set a proper [user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) when accessing this service. We may block empty or non-personalized user agents.
 
@@ -45,13 +45,13 @@ paths:
         required: true
         description: >
           The architecture to query:
-          
+
           - `windows-x86_64`
-          
+
           - `windows-i686`
-          
+
           - `windows-aarch64`
-          
+
           - `java-universal` (jar installer)
         schema:
           type: string
@@ -109,13 +109,13 @@ components:
           type: string
           description: >
             The type of incompatibility:
-            
+
             - `GAME`: Breaks the game in an unrecoverable way.
-            
+
             - `OTHERS`: Breaks other mods in an unrecoverable way.
-            
+
             - `SELF`: Causes non-fatal errors or broken features in the mod itself.
-            
+
             - `WORKAROUND`: Requires a workaround to function properly. Please see the attached note.
           enum:
             - GAME
@@ -128,17 +128,17 @@ components:
           type: string
           description: >
             The status of the incompatibility:
-            
+
             - `UNKNOWN`: The status of the incompatibility is unknown, due to a lack of report or the inability for us to find it.
-            
+
             - `WONT_FIX`: The incompatibility is known, but the mod authors have stated they won't fix it.
-            
+
             - `IN_PROGRESS`: The incompatibility is known, and the mod authors are working on a fix.
-            
+
             - `BLOCKED`: The incompatibility is known, but the fix is blocked by an external factor.
-            
+
             - `NO_ANSWER`: The mod authors have not responded yet to the report.
-            
+
             - `ON_HOLD`: The incompatibility is known, but the mod authors wish to wait before implementing a fix.
           enum:
             - UNKNOWN

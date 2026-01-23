@@ -1,37 +1,13 @@
 ---
 import Base from "@layouts/Base.astro";
-import swaggerCss from "swagger-ui/dist/swagger-ui.css?raw";
-import swaggerDarkCss from "../../styles/swagger-dark.css?raw"
+import Swagger from "@astro-openapi/gui-swagger/OpenApiGuiSwagger.astro"
 ---
-
-<script>
-	const swaggerUiNode = document.getElementById('swagger-ui');
-	if (swaggerUiNode) {
-		import('swagger-ui').then(({ default: renderSwagger }) => {
-			window.ui = renderSwagger({
-				url: '/api/openapi.yaml',
-				domNode: swaggerUiNode,
-				deepLinking: true,
-			});
-		});
-	}
-</script>
-<style is:inline>
-    pre.version {
-        background-color: inherit !important;
-    }
-</style>
-<style is:inline set:html={swaggerCss}></style>
-<style is:inline set:html={swaggerDarkCss}></style>
-
-<Base content={{title: "Quilt API Index", description: "Index for the Quilt Website API"}}>
-    <div id="swagger-ui"></div>
-
-    <noscript>
-        <article class="message is-danger">
-            <div class="message-body">
-                <p>Javascript is required to view this page</p>
-            </div>
-        </article>
-    </noscript>
+<Base content={{title: "Quilt API Documentation", description: "Documentation for the Quilt Website API"}}>
+	<Swagger schemaUrl="/api/openapi.yaml" />
 </Base>
+
+<style is:global>
+	pre.version, code[class="language-json"] {
+		background-color: transparent !important;
+	}
+</style>
