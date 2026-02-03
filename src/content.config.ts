@@ -31,4 +31,39 @@ const incompatibleMods = defineCollection({
 	})
 })
 
-export const collections = {blog, incompatibleMods}
+const teamMembers = defineCollection({
+	loader: file("src/data/teamMembers.json", {parser: (text) => {
+		let data = JSON.parse(text) as any[]
+		data.forEach((entry) => entry.id = entry.github)
+		return data
+	}}),
+	schema: z.object({
+			name: z.string(),
+			discord: z.string(),
+			github: z.string(),
+			avatar: z.string().optional(),
+			description: z.string().optional(),
+			links: z.array(z.object({
+				icon: z.string(),
+				url: z.string().url()
+			})).optional(),
+			teams: z.array(z.enum([
+				// I wish we could define this array elsewhere, but Zod doesn't like it.
+				"admin-board",
+				"build-tools",
+				"community-managers",
+				"community-tooling",
+				"events",
+				"infrastructure",
+				"loader",
+				"mappings",
+				"moderators",
+				"outreach",])).default([]),
+			systemMembers: z.array(z.object({
+				name: z.string(),
+				icon: z.string().url()
+			})).or(z.literal("---")).optional()
+		})
+})
+
+export const collections = {blog, incompatibleMods, teamMembers}

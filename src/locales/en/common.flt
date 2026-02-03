@@ -9,8 +9,7 @@ serial-comma = {$prev}, {$next}
 
 # Common strings
 -developer-wiki = Developer Wiki
--forum = Forum
--help-wanted = Help Wanted
+-help-wanted = Contribute
 -patch-notes = Patch Notes
 -sponsors = Sponsors
 -staff-resources = Staff Resources
@@ -20,7 +19,6 @@ serial-comma = {$prev}, {$next}
 -mastodon = Mastodon
 -github = GitHub
 -discord = Discord
--twitter = Twitter
 -twitch = Twitch
 
 page-authors =
@@ -60,7 +58,6 @@ button-discord = {-discord}
 button-discord-toolchain = Toolchain
 button-developer-wiki = {-developer-wiki}
 button-donate = Donate
-button-forum = {-forum}
 button-github = {-github}
 button-install = Install
 button-mastodon = {-mastodon}
@@ -72,7 +69,6 @@ button-official-site = Official Site
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS
 button-mod-generator = Mod Generator
-button-twitter = {-twitter}
 button-twitch = {-twitch}
 button-usage-docs = Usage Docs
 

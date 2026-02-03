@@ -5,8 +5,6 @@ import { BaseProps } from "./Base.astro";
 import Button from "@atoms/Button.astro";
 import Launchers from "@parts/install/Launchers.astro";
 import Main from "@parts/install/Main.astro";
-import WipWarning from "@parts/install/WipWarning.astro";
-
 import rtlSettings from "@data/RtlSettings";
 import { localizePath } from "@util/Util";
 import { t } from "i18next";
@@ -64,8 +62,6 @@ const { left } = rtlSettings();
 		</div>
 
 		<div class="column">
-			<WipWarning />
-
 			<div class="heading-with-button">
 				<h1>{t(content?.platformKey, { ns: "install" })}</h1>
 

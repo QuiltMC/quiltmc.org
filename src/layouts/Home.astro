@@ -2,7 +2,7 @@
 import HeroContent from "./HeroContent.astro";
 //@ts-ignore
 import Button from "@atoms/Button.astro";
-import HomeMessage from "@parts/home/HomeMessage.astro";
+import Card from "@atoms/Card.astro"
 import LatestPosts from "@parts/home/LatestPosts.astro";
 
 import { localizePath } from "@util/Util";
@@ -13,74 +13,32 @@ import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 <HeroContent content={Astro.props.content}>
 
 	<main slot="main">
-		<div class="columns is-centered mb-5">
-			<div class="column is-6">
-				<slot name="info" />
-			</div>
-
-			<div class="column is-4">
-				<HomeMessage style="warning" iconType="warning" icon="mdi:warning-octagon-outline" tKey="wip">
-					<slot name="wip" />
-				</HomeMessage>
-			</div>
-		</div>
-
-		<div class="columns mb-5 mt-2">
-			<div class="column">
-				<HomeMessage
-					style="primary is-fullheight"
-					iconType="primary"
-					icon="mdi:cards-heart"
-					tKey="caring"
-				>
-					<slot name="caring" />
-				</HomeMessage>
-			</div>
-			<div class="column">
-				<HomeMessage
-					style="link has-text-left is-fullheight"
-					iconType="link"
-					icon="mdi:cube-unfolded"
-					tKey="modular"
-				>
-					<slot name="modular" />
-				</HomeMessage>
-			</div>
-			<div class="column">
-				<HomeMessage
-					style="success has-text-left is-fullheight"
-					iconType="success"
-					icon="mdi:wrench"
-					tKey="powerful"
-				>
-					<slot name="powerful" />
-				</HomeMessage>
-			</div>
-		</div>
-
+	<div class="has-text-centered" style="font-size: 1.4em; font-weight: bold;">
+		<slot name="info"/>
+	</div>
+	<h2 class="has-text-centered">Our Projects</h2>
 		<div class="columns is-centered">
 			<div class="column is-10">
 				<div class="button-grid">
-					<Button
-						href="https://maven.quiltmc.org"
-						target="_blank"
-						type="gradle"
-						icon="cib:apache"
-						textKey="button-maven-repo"
-					/>
-					<Button
-						href={localizePath("/mc-patchnotes")}
-						type="info"
-						icon="mdi:book"
-						textKey="button-patch-notes"
-					/>
-					<Button
-						href={localizePath("/help-wanted")}
-						type="primary"
-						icon="mdi:briefcase"
-						textKey="button-help-wanted"
-					/>
+
 				</div>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column">
+				<Card title="Quilt Loader" link={localizePath("/install")} linkText="Install Quilt Loader" color="#8b2df5">
+					<slot name="loader" />
+				</Card>
+			</div>
+			<div class="column">
+				<Card title="Enigma" link="https://github.com/quiltmc/enigma/" linkText="View on GitHub" color="#3643f5">
+					<slot name="enigma" />
+				</Card>
+			</div>
+			<div class="column">
+				<Card title="Quilt Config" link="https://wiki.quiltmc.org/en/configuration/getting-started" linkText="Get Started" color="#6fd04a">
+					<slot name="quilt-config" />
+				</Card>
 			</div>
 		</div>
 	</main>
@@ -104,27 +62,11 @@ import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 					/>
 
 					<Button
-						href={site.forum}
-						target="_blank"
-						type="gradle"
-						icon="cib:discourse"
-						textKey="button-forum"
-					/>
-
-					<Button
 						href={site.mastodon.link}
 						target="_blank"
 						type="mastodon"
 						icon="cib:mastodon"
 						textKey="button-mastodon"
-					/>
-
-					<Button
-						href={site.twitter.handle.link}
-						target="_blank"
-						type="twitter"
-						icon="cib:twitter"
-						textKey="button-twitter"
 					/>
 
 					<Button
@@ -139,14 +81,6 @@ import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 
 				<div class="button-grid">
 					<Button
-						href={site.forum}
-						target="_blank"
-						type="gradle"
-						icon="cib:discourse"
-						textKey="button-forum"
-					/>
-
-					<Button
 						href={site.github.link}
 						target="_blank"
 						type="github"
@@ -155,9 +89,9 @@ import SponsorRow from "@parts/sponsors/SponsorRow.astro";
 					/>
 
 					<Button
-						href={localizePath("/help-wanted")}
+						href={localizePath("/contribute")}
 						type="primary"
-						icon="mdi:briefcase"
+						icon="mdi:hand-heart-outline"
 						textKey="button-help-wanted"
 					/>
 

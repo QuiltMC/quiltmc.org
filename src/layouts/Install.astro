@@ -2,7 +2,6 @@
 import Default from "./Default.astro";
 import Main from "@parts/install/Main.astro";
 import Launchers from "@parts/install/Launchers.astro";
-import WipWarning from "@parts/install/WipWarning.astro";
 ---
 
 <Default content={Astro.props.content}>
@@ -15,10 +14,6 @@ import WipWarning from "@parts/install/WipWarning.astro";
 	<div class="columns is-centered">
 		<div class="grid-picker">
 			<Main />
-		</div>
-
-		<div class="column is-half">
-			<WipWarning />
 		</div>
 	</div>
 

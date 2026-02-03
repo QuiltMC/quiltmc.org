@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components"
+export interface Props {
+	title: string
+	link?: string
+	linkText?: string
+	color?: string
+}
+
+const { title, link, linkText, color } = Astro.props
+---
+<a href={link} style={`background-color:${color ?? ""}25;border-color:${color}`}>
+<h3>{title}</h3>
+<slot />
+{linkText && <span id="link">{linkText}</span>}
+</a>
+
+<style>
+	a {
+		padding: 1.5em;
+		/* border-radius: 15px; */
+		border: 1.5px solid;
+		transition: all .3s ease;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		color: inherit;
+	}
+	a:hover {
+		/* box-shadow: 4px 8px 8px hsl(262 30 10); */
+		transform: scale(1.02);
+		color: inherit
+	}
+	a:hover #link {
+		color: #1571b7;
+		transform: all .3s ease;
+	}
+	h3 {
+		text-align: center;
+	}
+	p {
+		padding: 2em;
+	}
+	#link {
+		display: block;
+		text-align: end;
+		justify-content: flex-end;
+		padding-top: 1em;
+		font-size: 1.25em;
+		font-weight: 501;
+		margin-top: auto;
+		color: #27a2fd /* Preferably this should be a CSS variable of some sort but we don't have those. */
+	}
+</style>

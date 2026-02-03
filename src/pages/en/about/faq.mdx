@@ -1,135 +1,102 @@
 ---
 title: FAQ
-description: Frequently asked questions, for the burning topics that need addressing regularly.
+description: Frequently Asked Questions about Quilt
 layout: /src/layouts/Page.astro
 ---
 
 import Message from "@atoms/Message.astro";
 
-# General Questions
+## General Questions
 
 <Message>
 
-## What is Quilt?
+### What is Quilt?
 
-Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project, primarily due to concerns around governance, project management and moderation. You can read more about the Quilt project and where it came from on [the About Us page](/en/about).
+Quilt is a modding toolchain developed primarily for Minecraft. We make [Quilt Loader](https://github.com/QuiltMC/quilt-loader), a powerful mod loader which is compatible with Fabric mods; [Quilt Config](https://github.com/QuiltMC/quilt-config), a loader-agnostic config library; [Enigma](https://github.com/QuiltMC/Enigma), a tool for de-obfuscating and remapping Java bytecode; and more! For more information, see the [About page](/en/about).
 
 </Message>
 
 <Message>
 
-## Which parts of Fabric is Quilt forking?
-
-All of them. Quilt is a hard fork of Fabric, and we aim to fork and maintain all projects necessary to exist independently of it.
+### What Happened to Quilt Standard Libraries?
+[Quilt Standard Libraries](https://github.com/QuiltMC/quilt-standard-libraries) was an alternative to Fabric API that was released when Quilt first launched. It brought several new tools for developers, but we found that keeping up with new releases of Minecraft while maintaining compatibility with Fabric API wasn't feasible, so it was discontinued in December 2025. It is still available for older versions of Minecraft from [Modrinth](https://modrinth.com/mod/qsl) and [CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl).
 
 </Message>
 
+## User Questions
+
 <Message>
 
-## Why should I use Quilt?
+### Why should I use Quilt?
 
 For users, Quilt provides the following advantages:
 
-- Mods that should be more compatible with each other, despite their use of powerful modding tools
-- Compatibility with both Fabric and Quilt mods, meaning you don't need to stop using your favorites
-- An inclusive, transparent and friendly official community that cares about social issues, has an experienced staff team, and works with its users to improve over time
-- **Future goal:** Automatic downloading of Quilt's libraries (which can be disabled), so you always have exactly -- and only -- what you need for your mods to work
+- Better and more readable crash reports, with warnings if you accidentally load a mod that is built for an incompatible loader.
+- The ability to [load mods from sub-folders of your `mods` folder](https://github.com/QuiltMC/quilt-loader/wiki/Mod-Loading-Behaviour), with the option to only load certain folders in specific versions.
+- Lots of [configuration options](https://github.com/QuiltMC/quilt-loader/wiki/Configuration-options) and [Java/JVM Arguments](https://github.com/QuiltMC/quilt-loader/wiki/System-Properties)
+- Seamless compatibility with almost all Fabric mods.
 
 </Message>
 
 <Message>
 
-## How can I support Quilt?
+### Can Quilt load Forge/Neoforge mods?
 
-If you'd like to help us out, here's just a few ways we've come up with:
-
-- Join [our community spaces](/en/community), hang out and give your input
-- Contribute to [our projects on GitHub](https://github.com/quiltmc), either directly or by providing reviews and opinions
-- Support other projects that make use of Quilt, or Quilt's tools and libraries
-- Talk about Quilt on social media (in a responsible manner)
-
-[//]: # "* Help with ongoing costs by [supporting us financially on OpenCollective](https://opencollective.com/quiltmc)"
-
-Ultimately, even simply making use of Quilt or hanging out in our community spaces helps us. All activity, input and contributions are appreciated!
-
-</Message>
-
-# Usage Questions
-
-<Message>
-
-## Can Quilt load Forge mods?
-
-No, Quilt can't load Forge mods and support for this is not planned. There are third-party projects (such as Patchwork) that plan to add this functionality, but they're not maintained by Quilt -- and they're not part of The Quilt Project.
+No, Quilt can't load Forge or Neoforge mods and support is not planned. Quilt Loader has a plugin system that would allow someone to add this in theory, but it wouldn't be officially supported.
 
 </Message>
 
 <Message>
 
-## Can Quilt load Fabric mods?
+### Can Quilt load Fabric mods?
 
-In most cases, yes. As Quilt is a fork, most Fabric mods should be compatible with Quilt. As long as maintaining Fabric compatibility doesn't negatively impact the project, we'll keep doing it -- but if it does get to the point where maintaining it is no longer feasible, we'll help move it to a community-run project and provide its developers with the support they need to keep working on it.
-
-It's also worth noting that -- as of this writing -- Fabric mods that contain mixin plugins are supported, but this will change in the future. This isn't a major issue as the vast majority of mods don't use mixin plugins, but we'll be happy to work with mod developers that need an alternative approach for Quilt.
+In most cases, yes! We have [a list](/en/usage/incompatible-mods) of all Fabric mods that aren't compatible with Quilt, and it's a pretty small number.
 
 </Message>
 
 <Message>
 
-## If I'm using Fabric mods, do I need Fabric API installed?
+### Can Fabric load Quilt mods?
 
-**No, you don't** - in fact, we recommend against this for compatibility reasons.
-
-Many Quilt mods make use of the Quilt Standard Libraries (QSL), which are directly incompatible with Fabric API. To deal with this problem, QSL includes a special version of Fabric API which doesn't conflict -- it's part of the standard QSL distribution, which you can [download from Modrinth](https://modrinth.com/mod/qsl).
-
-As long as Fabric mods are correctly written to use only the intended public APIs from Fabric API, they should work correctly with QSL.
+No. A mod may be compatible with both Fabric and Quilt, but a mod which is made for Quilt won't work on Fabric.
 
 </Message>
 
 <Message>
 
-## Can Fabric load Quilt mods?
+### When will Quilt be released?
 
-No. Quilt mods are distinct from Fabric mods, and not defined in the same way.
+Quilt Loader has been in beta since April 2022. If you'd like to try it out, visit [the install page](/en/install).
+
+</Message>
+
+## Developer Questions
+
+<Message>
+
+### Why should I choose Quilt Loader for my mods?
+
+Here are some features that Quilt Loader offers developers:
+
+- [A `@Requires` annotation](https://quiltmc.org/en/changelog/quilt-loader/0.25.0/) to remove a given element if the specified mod is not present, similar to `@ClientOnly` or `@DedicatedServerOnly`.
+- Built-in support for [Quilt Config](https://github.com/QuiltMC/quilt-config), our loader-agnostic config library.
+- APIs to display errors in the loader's GUI and add buttons to fix them.
+- An API to partition off your mod's internals and prevent them from being accessed by other mods.
 
 </Message>
 
 <Message>
 
-## When will Quilt be released?
+### Where's the developer documentation?
 
-Quilt's first beta released on the 20th of April 2022, and we've been full steam ahead since then!
-
-If you'd like to try Quilt out, please take a look at [the install page](/en/install).
-
-</Message>
-
-# Management Questions
-
-<Message>
-
-## How is Quilt structured?
-
-Quilt's staff is split into three distinct groups:
-
-- The Admin Board, which exists to oversee the project’s direction, manage permissions on GitHub, and break voting ties
-- The Community Team, which handles community management and moderation tasks, as well as social media accounts and public relations
-- The development teams, which independently oversee specific project that are assigned to them
-
-Between these three groups, the structure is more or less flat -- no one group of people has the final say over the whole project. Additionally, the Community Team doesn't have direct ownership over any of the official community spaces, acting under the oversight of an otherwise uninvolved, elected keyholder.
-
-You can find more about this in the governance section on [the About Us page](/en/about/#governance).
+Quilt's developer documentation is **incredibly work-in-progress** and nowhere near a usable state. An early preview is available at [wiki.quiltmc.org](https://wiki.quiltmc.org).
 
 </Message>
 
 <Message>
 
-## What's an RFC? How do they work?
+### How do I get started with writing a Quilt mod?
 
-**RFC** is short for **R**equest **F**or **C**omments. The RFC process refers to a system whereby important process and policy changes, technical standards and definitions are created, discussed and approved by the community before being put into place. This is done by creating long-form documents that explain exactly what's being proposed, and what the rationale is for the proposal.
-
-RFCs are proposed via a pull request to [the RFCs repository on GitHub](https://github.com/QuiltMC/rfcs), with the RFC number matching the pull request number (unless it's an amendment). Anyone is welcome to submit a proposal, but we recommend that anyone who's considering doing so talks with us about it on Discord, or raises an issue on GitHub.
-
-Quilt's RFC process is documented in [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md).
+Documentation is still in the works, but we do have a [template mod](https://github.com/QuiltMC/quilt-template-mod) that you can use as a starting point.
 
 </Message>

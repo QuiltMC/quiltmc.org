@@ -1,14 +1,13 @@
 ---
-import type { TeamMember,} from "@data/Team";
 import { t } from "i18next";
 import SystemMembers from "./SystemMembers.astro";
 import { Icon } from "astro-icon/components"
+import { CollectionEntry } from "astro:content";
 
 export interface Props {
-	member: TeamMember;
-	isLeader: boolean,
+	member: CollectionEntry<"teamMembers">;
 }
-const { member, isLeader } = Astro.props as Props;
+const member = Astro.props.member.data
 
 // this is the "N/A" text, for anyone wondering
 const na = t("team:n-a");
@@ -19,17 +18,11 @@ const na = t("team:n-a");
 </style>
 
 <div class="card is-team-member">
-	{ isLeader &&
-		<div class="icon is-large is-pulled-right z-60 has-tooltip-arrow" data-tooltip={t("team:team-lead")}>
-			<Icon name="mdi:star" />
-		</div>
-	}
 	<div class="card-content">
 		{
 			member.avatar && (
 				<div class="avatar">
 					<img
-						class={member.pixelateAvatar ? "is-pixelated" : ""}
 						src={member.avatar}
 						alt={t("team:avatar-alt")}
 					/>
@@ -41,12 +34,12 @@ const na = t("team:n-a");
 			<div class="media-content">
 
 				<p class="title is-5 mb-5">
-					{member.name ?? <>&nbsp;</>}
+					{member.name}
 				</p>
 
 				<p class="subtitle is-6">
 					<Icon name="discord" />
-					{member.discord ?? na}
+					{member.discord}
 				</p>
 
 				<p class="subtitle is-6">

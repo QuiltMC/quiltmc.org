@@ -1,29 +1,26 @@
 ---
 title: About Us
-description: Learn about where Quilt came from, how its governance works, and how to get involved in structural changes.
+description: About Quilt
 layout: /src/layouts/Page.astro
 ---
+Quilt makes tools for modding Minecraft. We make [Quilt Loader](https://github.com/quiltmc/quilt-loader), a powerful mod loader that is compatible with Fabric mods; [Quilt Config](https://github.com/QuiltMC/quilt-config), a loader-agnostic configuration library designed for simplicity; [Enigma](https://github.com/QuiltMC/enigma), a utility for de-obfuscating and remapping Java bytecode; [and more!](#our-projects) We also run [the Quilt Community](https://discord.quiltmc.org), a safe and friendly place to discuss modding, Minecraft, technology, and other things.
 
-Quilt is a mod-loader project -- primarily aimed at Minecraft. It was founded by users and contributors from the Fabric project, as a last-resort attempt to address the controversies and issues stemming from that project. Because Fabric had a solid technological foundation with code that still did many things right, Quilt's founders decided that the best option would be to take the standard open source approach to disagreements over management -- they forked the Fabric project into a new mod-loader project, with the following ideas in mind:
+Quilt was started in 2021, building on top of the modding technology developed by [The Fabric Project](https://fabricmc.net). From 2021 to 2025, we developed [Quilt Standard Libraries](https://github.com/QuiltMC/QSL) and [Quilt Mappings](https://github.com/QuiltMC/quilt-mappings). These are no longer maintained, but are still available for older versions of Minecraft.
 
-- Allowing contributors to move fast and break things when appropriate, and allowing for experimental work
-- Building transparency into official community spaces and policies
-- Creating a community team that understands the importance of Quilt's values, and that fosters inclusivity, diversity and safety through an understanding hands-on moderation approach, which is backed by a strong [Code of Conduct](/en/community/code-of-conduct)
-- Providing a governance structure that doesn't give anyone too much power, and avoids creating opportunities for staff members to operate without oversight
-- Providing ways to keep the community involved with important project decisions
+To get started with Quilt, you can [install Quilt Loader](/install) in your launcher, use [our template](github.com/QuiltMC/quilt-template-mod) to get started developing your own mod, or [join the Quilt Community on Discord](https://discord.quiltmc.org) to talk with other Quilt users and developers, and get help using Quilt software.
 
-Quilt has grown quickly since its inception, with relatively broad support from the wider community. While some corners of the community have attempted to push back against its modern progressive values, Quilt continues to grow, attracting developers and users from all walks of life.
+## Our Projects
+### Current Projects
+- [**Quilt Loader**](https://github.com/QuiltMC/quilt-loader): A Fabric-compatible mod loader with comprehensive crash reporting, more APIs for modders, and [lots of advanced configuration options](https://github.com/QuiltMC/quilt-loader/wiki/Configuration-options)
+- [**Quilt Config**](https://github.com/QuiltMC/quilt-config): A configuration library which works in any Java program and is [included in Quilt Loader](https://wiki.quiltmc.org/en/configuration/getting-started)
+- [**Enigma**](https://github.com/QuiltMC/enigma): A utility for de-obfuscating and remapping Java bytecode, with comprehensive analysis and statistics tools to help you map
+- [**Quilt Loom**](https://github.com/QuiltMC/quilt-loom): A Gradle plugin based on [Loom](https://github.com/fabricmc/fabric-loom) with support for the [`quilt.mod.json` specification](https://github.com/QuiltMC/rfcs/blob/main/specification/0002-quilt.mod.json.md)
+- [**The Quilt Community**](https://discord.quiltmc.org): A safe and friendly Discord community to discuss modding, Minecraft, technology, and more
 
-# Governance
-
-Quilt takes an unusual approach to project governance, attempting to avoid giving any one person too much power over the project as a whole. This isn't a particularly easy task, especially when it comes to managing community spaces (and platforms like Discord that don't have the concept of group ownership). Quilt attempts to solve this problem by approaching it in a few specific ways:
-
-- Electing an Admin Board from its members, which exists to oversee the project's direction, manage permissions on GitHub, and break voting ties
-- Electing a key-holder to act as the de-facto owner for Quilt's official community spaces, who is a reputable, respected and well-known face in the Minecraft modding sphere -- but otherwise doesn't have any involvement with Quilt
-- Electing a Community Team to run Quilt's official community spaces and social media accounts, which acts somewhat independently of the rest of the organisation and consists of staff members that can focus on community management, rather than the development of Quilt's projects
-- Splitting the responsibilities for each development project into individual teams, each with its own leadership and hierarchy -- including sub-teams and triage teams, as required
-- Providing sets of process documents that need to be followed for actions such as forming new teams, electing team members, electing new Admin Board members, and other project management tasks
-
-With this approach, Quilt aims to avoid the problems that often occur when small groups of people have ultimate power over the entire project. Additionally, allowing teams to operate independently means that they end up working more efficiently and effectively.
-
-Because transparency is a core part of Quilt's values, it also makes use of a Request For Comments system, in the form of Pull Requests to [a GitHub repository](https://github.com/QuiltMC/rfcs). This system exists to allow anyone to see, review and suggest changes to any of the project's important processes, and even to suggest new ones via creating an issue or Pull Request. The process is itself detailed in [RFC 0001: The RFC Process](https://github.com/QuiltMC/rfcs/blob/master/structure/0001-rfc-process.md), and anyone may take part in it that wishes to.
+### Past Projects
+- [**Quilt Standard Libraries**](https://github.com/QuiltMC/quilt-standard-libraries): An alternative to Fabric API. It was discontinued when keeping up-to-date with the changes in both Minecraft and Fabric API became infeasible, but is still available for older versions of Minecraft on [Modrinth](https://modrinth.com/mod/qsl) and [CurseForge](https://www.curseforge.com/minecraft/mc-mods/qsl).
+- [**Quilted Fabric API**](https://github.com/QuiltMC/quilted-fabric-api): A compatibility layer which allowed mods written with Fabric API to work with Quilt Standard Libraries. It was discontinued with QSL, but is bundled with it on Modrinth and CurseForge.
+- [**Quilt Mappings**](https://github.com/QuiltMC/quilt-mappings): A set of mappings for de-obfuscating Minecraft code. It was made obsolete in 2025 when Mojang [removed obfuscation from Minecraft](https://www.minecraft.net/en-us/article/removing-obfuscation-in-java-edition).
+- [**Quilt Kotlin Libraries**](https://github.com/QuiltMC/quilt-kotlin-libraries): A set of libraries for developing Quilt mods using [Kotlin](https://kotlinlang.org). It was discontinued due to a lack of demand and maintainers.
+- [**Chasm**](https://github.com/QuiltMC/chasm): An experimental project designed to facilitate conflict-free bytecode manipulation. While an interesting concept, it was extremely difficult to implement in practice, and many of the theoretical benefits are now available in [MixinExtras](https://github.com/LlamaLad7/MixinExtras).
+- [**The Quilt Forum**](https://forum.quiltmc.org): An alternative community space to Discord. It was discontinued due to a lack of activity, but the archives are still available to browse.

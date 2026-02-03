@@ -4,7 +4,7 @@ description: How to report a security vulnerability in a Quilt project.
 layout: /src/layouts/Page.astro
 ---
 
-This notice details how to report any security vulnerabilities you find in a QuiltMC project. Please **do not** use GitHub issues or other public spaces (Discord, the Quilt Forum, etc.) to report security vulnerabilities.
+This notice details how to report any security vulnerabilities you find in a QuiltMC project. Please **do not** use GitHub issues or other public spaces (Discord, etc.) to report security vulnerabilities.
 
 ## What to include
 When submitting your report, please include the following:

@@ -1,0 +1,388 @@
+[
+	{
+		"name": "ADudeCalledLeo",
+		"discord": "adudecalledleo",
+		"github": "Leo40Git",
+		"avatar": "/assets/img/team/ADudeCalledLeo.png",
+		"description": "The local project abandoning expert. Also may or may not exist.",
+		"links": [
+			{
+				"icon": "cib:mastodon",
+				"url": "https://tech.lgbt/@ADudeCalledLeo"
+			},
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/ADudeCalledLeo"
+			}
+		]
+	},
+	{
+		"name": "Alakey",
+		"discord": "splendidalakey",
+		"github": "SplendidAlakey",
+		"avatar": "https://avatars.githubusercontent.com/u/86702831?v=4",
+		"description": "Maintaining my own modpack and helping people with various mod related issues in my free time.",
+		"teams": [
+			"outreach"
+		]
+	},
+	{
+		"name": "AlexIIL",
+		"discord": "alexiil",
+		"github": "AlexIIL",
+		"avatar": "/assets/img/team/AlexIIL.png",
+		"teams": [
+			"loader"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://alexiil.uk"
+			},
+			{
+				"icon": "curseforge",
+				"url": "https://www.curseforge.com/members/alexiil/projects"
+			}
+		]
+	},
+	{
+		"name": "AppleTheGolden",
+		"discord": "applethegolden",
+		"github": "Scotsguy",
+		"avatar": "https://avatars.githubusercontent.com/u/20385973?v=4",
+		"teams": [
+			"community-tooling",
+			"outreach"
+		]
+	},
+	{
+		"name": "CheaterCodes",
+		"discord": "cheatercodes",
+		"github": "CheaterCodes",
+		"avatar": "https://avatars.githubusercontent.com/u/49926638?v=4",
+		"description": "Thinker, not Doer, enjoys Rust and other technical challenges and difficult problems."
+	},
+	{
+		"name": "Forkk",
+		"discord": "Forkk",
+		"github": "Forkk",
+		"avatar": "https://avatars.githubusercontent.com/u/1300078?v=4",
+		"description": "Resident silverware expert.",
+		"teams": [
+			"moderators"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://forkk.net/"
+			}
+		]
+	},
+	{
+		"name": "Fusion Flux",
+		"discord": "fusionflux",
+		"github": "Fusion-Flux",
+		"avatar": "/assets/img/team/Fusion.png",
+		"description": "Part time speedrunner, mod developer, and game developer.",
+		"teams": [
+			"admin-board",
+			"events"
+		],
+		"links": [
+			{
+				"icon": "cib:youtube",
+				"url": "https://www.youtube.com/channel/UCyzsPpD0PPB7FQy93Yo6xfQ"
+			},
+			{
+				"icon": "cib:twitch",
+				"url": "https://www.twitch.tv/fusion_flux"
+			}
+		]
+	},
+	{
+		"name": "Glitch",
+		"discord": "glitch___",
+		"github": "TheGlitch76",
+		"avatar": "https://avatars.githubusercontent.com/u/19521552?v=4",
+		"teams": [
+			"build-tools",
+			"loader",
+			"outreach"
+		]
+	},
+	{
+		"name": "Iota",
+		"discord": "iotabread",
+		"github": "IotaBread",
+		"avatar": "https://avatars.githubusercontent.com/u/47987888",
+		"description": "Java programmer and Minecraft modder.",
+		"teams": [
+			"mappings"
+		]
+	},
+	{
+		"name": "rai",
+		"discord": "ix0rai",
+		"github": "ix0rai",
+		"avatar": "/assets/img/team/ix0rai.png",
+		"description": "Java developer, modder, runner, and resident hot girl. Always busy working on Enigma and Quilt Config.",
+		"teams": [
+			"admin-board",
+			"mappings",
+			"loader",
+			"outreach"
+		],
+		"links": [
+			{
+				"icon": "cib:tumblr",
+				"url": "https://ix0rai.tumblr.com/"
+			},
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/ix0rai"
+			},
+			{
+				"icon": "curseforge",
+				"url": "https://www.curseforge.com/members/ix0rai"
+			}
+		]
+	},
+	{
+		"name": "Ghoul",
+		"discord": "shinysprigatito",
+		"github": "Kitty-Therapist",
+		"avatar": "https://avatars.githubusercontent.com/u/31807465",
+		"description": "I am an cat lover, which I happen to have over 20 cats which I try to spend my time with them. In my off time, you can usually catch me playing various games - usually the Sims 4 or Pokemon game. Sometimes I will draw or color, or I'd just hang out with my cats.",
+		"teams": [
+			"community-managers",
+			"moderators"
+		]
+	},
+	{
+		"name": "Janil",
+		"discord": "anonym123",
+		"github": "anonymous123-code",
+		"avatar": "https://avatars.githubusercontent.com/u/61744596?v=4",
+		"teams": [
+			"community-tooling"
+		],
+		"links": [
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/anonymous123-code"
+			}
+		]
+	},
+	{
+		"name": "Kroppeb",
+		"discord": "kroppeb",
+		"github": "Kroppeb",
+		"description": "Friendly dude who loves to dabble into anything programming related.",
+		"avatar": "https://avatars.githubusercontent.com/u/7889478?v=4"
+	},
+	{
+		"name": "MrMangoHands",
+		"discord": "mrmangohands",
+		"github": "mrmangohands",
+		"avatar": "/assets/img/team/MrMangoHands.png",
+		"teams": [
+			"community-managers",
+			"moderators"
+		]
+	},
+	{
+		"name": "[object Object]",
+		"discord": "objobj",
+		"github": "obj-obj",
+		"avatar": "https://avatars.githubusercontent.com/u/57120300",
+		"description": "Professional memer",
+		"teams": [
+			"community-tooling"
+		],
+		"links": [
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/obj-obj"
+			}
+		]
+	},
+	{
+		"name": "OroArmor",
+		"discord": "oroarmor",
+		"github": "OroArmor",
+		"avatar": "/assets/img/team/OroArmor.jpg",
+		"description": "Enthusiastic modder, University student, creator of Netherite Plus. Has a special interest in making items extendable and improving everything about mappings in the Quilt Toolchain.",
+		"teams": [
+			"admin-board",
+			"community-tooling",
+			"mappings"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://oroarmor.com/"
+			},
+			{
+				"icon": "cib:twitter",
+				"url": "https://twitter.com/realOroArmor"
+			},
+			{
+				"icon": "curseforge",
+				"url": "https://www.curseforge.com/members/oroarmor/projects"
+			},
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/h74rYEcI"
+			}
+		]
+	},
+	{
+		"name": "Owlsys",
+		"discord": "owlsys",
+		"github": "moehreag",
+		"avatar": "/assets/img/team/Owlsys.png",
+		"teams": [
+			"mappings"
+		],
+		"systemMembers": "---",
+		"links": [
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/moehreag"
+			}
+		]
+	},
+	{
+		"name": "Potatoboy9999",
+		"discord": "potatoboy9999",
+		"github": "PotatoPresident",
+		"avatar": "/assets/img/team/Potatoboy.png",
+		"description": "Java programmer and modder, passionate about Kotlin and serverside technology.",
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://quiltservertools.net"
+			},
+			{
+				"icon": "curseforge",
+				"url": "https://www.curseforge.com/members/potatoboy99999/projects"
+			},
+			{
+				"icon": "modrinth-small",
+				"url": "https://modrinth.com/user/Potatoboy9999"
+			}
+		]
+	},
+	{
+		"name": "Pyrofab",
+		"discord": "pyrofab",
+		"github": "Pyrofab",
+		"avatar": "https://avatars.githubusercontent.com/u/25536265",
+		"description": "Busy blowing up new things.",
+		"teams": [
+			"infrastructure"
+		]
+	},
+	{
+		"name": "snoozestudios",
+		"discord": "snoozestudios",
+		"github": "peaceheis",
+		"avatar": "/assets/img/team/snoozestudios.png",
+		"description": "Student, Coder & Much More!",
+		"teams": [
+			"moderators"
+		],
+		"links": [
+			{
+				"icon": "cib:twitter",
+				"url": "https://twitter.com/snoozestudios"
+			}
+		]
+	},
+	{
+		"name": "Southpaw1496",
+		"discord": "southpaw1496",
+		"github": "Southpaw1496",
+		"avatar": "https://www.gravatar.com/avatar/d357970001cdbe299dd790817dee30af",
+		"description": "Inside of Quilt I help moderate community spaces and lead the Outreach team. Outside of Quilt I tinker with things to varying degrees of failure, and write things now and then. I also like cats.",
+		"teams": [
+			"community-managers",
+			"infrastructure",
+			"moderators",
+			"outreach"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://southpaw1496.me"
+			},
+			{
+				"icon": "cib:mastodon",
+				"url": "https://mastodon.southpaw1496.me"
+			}
+		]
+	},
+	{
+		"name": "sschr15",
+		"discord": "sschr15",
+		"github": "sschr15",
+		"avatar": "/assets/img/team/sschr15.png",
+		"description": "A person who used to know nothing about programming and now makes fun of himself for it. Also likes Kotlin.",
+		"teams": [
+			"community-tooling"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://concern.i.ng"
+			},
+			{
+				"icon": "cib:mastodon",
+				"url": "https://vmst.io/@sschr15"
+			}
+		]
+	},
+	{
+		"name": "supersaiyansubtlety",
+		"discord": "supersaiyansubtlety",
+		"github": "supersaiyansubtlety",
+		"description": "Software engineering and MC modding enthusiast.",
+		"avatar": "https://gitlab.com/uploads/-/system/user/avatar/3853177/avatar.png?width=400",
+		"teams": [
+			"mappings"
+		],
+		"links": [
+			{
+				"icon": "cib:mastodon",
+				"url": "https://gitlab.com/supersaiyansubtlety"
+			}
+		]
+	},
+	{
+		"name": "Tibs",
+		"discord": "violet.sh",
+		"github": "violet-sh",
+		"description": "Programming enthusiast, theater and music nerd, Gradle denier.",
+		"avatar": "https://avatars.githubusercontent.com/u/37983572?v=4",
+		"teams": [
+			"build-tools",
+			"infrastructure"
+		],
+		"links": [
+			{
+				"icon": "mdi:link-variant",
+				"url": "https://tibinonest.me/"
+			}
+		]
+	},
+	{
+		"name": "Zoe",
+		"discord": "antikyth",
+		"github": "Antikyth",
+		"description": "Student and hobbyist programmer trying to make the world a better place.  Wants to make software more approachable for all.",
+		"teams": [
+			"mappings"
+		],
+		"avatar": "https://avatars.githubusercontent.com/u/104020300"
+	}
+]

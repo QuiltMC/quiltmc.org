@@ -9,7 +9,6 @@ serial-comma = {$prev}、{$next}
 
 # Common strings
 -developer-wiki = 开发者 Wiki
--forum = 论坛
 -patch-notes = 更新日志
 -staff-resources = 内部资源
 -template-mod = 模组模板
@@ -18,7 +17,6 @@ serial-comma = {$prev}、{$next}
 -mastodon = Mastodon
 -github = GitHub
 -discord = Discord
--twitter = Twitter
 -twitch = Twitch
 
 page-authors = 作者：{$names}
@@ -44,7 +42,6 @@ button-close = 关闭
 button-discord = {-discord}
 button-discord-toolchain = 开发服务器
 button-developer-wiki = {-developer-wiki}
-button-forum = {-forum}
 button-github = {-github}
 button-install = 安装
 button-mastodon = {-mastodon}
@@ -55,7 +52,6 @@ button-help-wanted = {-help-wanted}
 button-patch-notes = Minecraft {-patch-notes}
 button-rss = RSS
 button-template-mod = {-template-mod}
-button-twitter = {-twitter}
 button-twitch = {-twitch}
 button-usage-docs = 使用文档
 

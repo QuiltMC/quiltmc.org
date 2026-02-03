@@ -1,16 +1,20 @@
-/qsl 								https://modrinth.com/mod/qsl	308
-/incompatible-mods.json				/api/v1/incompatible-mods.json	308
+/qsl 								https://modrinth.com/mod/qsl		308
+/incompatible-mods.json				/api/v1/incompatible-mods.json		308
 
-/faq								/about/faq						308
-/community/moderation				/staff/moderation/moderation	308
-/community/tupperbox				/community/pluralkit			308
-/blog								/blog/1							308
+/faq								/about/faq							308
+/en/about/faq-devs					/en/about/faq#developer-questions	308
+/community/moderation				/staff/moderation/moderation		308
+/community/tupperbox				/community/pluralkit				308
+/blog								/blog/1								308
+/help-wanted						/contributing
 
-/en/faq								/about/faq						308
-/en/community/moderation			/staff/moderation/moderation	308
-/en/community/tupperbox				/community/pluralkit			308
-/en/blog							/blog/1							308
-/en/usage/known-incompatibilities	/en/usage/incompatible-mods		308
+/en/faq								/about/faq							308
+/en/community/moderation			/staff/moderation/moderation		308
+/en/community/tupperbox				/community/pluralkit				308
+/en/blog							/blog/1								308
+/en/usage/known-incompatibilities	/en/usage/incompatible-mods			308
+/en/about/newcomer-guide			/en/about/faq						308
+/en/help-wanted						/en/contributing					308
 
 
 # Original article linked in CVE database - do not remove without consideration.

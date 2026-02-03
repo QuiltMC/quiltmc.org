@@ -26,7 +26,6 @@ export interface Config {
 	// Social media handles
 	discordCommunity: URL;
 	discordToolchain: URL;
-	forum: URL;
 	github: SocialMediaHandle;
 	gitlab: SocialMediaHandle;
 	mastodon: SocialMediaHandle;
@@ -34,7 +33,6 @@ export interface Config {
 	twitch: SocialMediaHandle;
 
 	twitter: {
-		handle: SocialMediaHandle;
 		card: string;
 	};
 
@@ -59,7 +57,6 @@ const config: Config = {
 
 	discordCommunity: new URL("https://discord.quiltmc.org/"),
 	discordToolchain: new URL("https://discord.quiltmc.org/toolchain/"),
-	forum: new URL("https://forum.quiltmc.org/"),
 	github: new SocialMediaHandle("https://github.com/", "QuiltMC"),
 	gitlab: new SocialMediaHandle("https://gitlab.com/", "quiltmc"),
 	mastodon: new SocialMediaHandle("https://tech.lgbt/", "@quiltmc"),
@@ -67,7 +64,6 @@ const config: Config = {
 	twitch: new SocialMediaHandle("https://twitch.tv/", "quiltmc"),
 
 	twitter: {
-		handle: new SocialMediaHandle("https://twitter.com/", "quilt_mc"),
 		card: "summary",
 	},
 
@@ -75,11 +71,10 @@ const config: Config = {
 		name: "QuiltMC",
 
 		links: [
-			new URL("https://twitter.com/quilt_mc"),
 			new URL("https://github.com/QuiltMC"),
 			new URL("https://twitch.tv/quiltmc"),
 		],
-	}
+	},
 };
 
 export default config;

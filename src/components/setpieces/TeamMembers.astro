@@ -1,47 +1,26 @@
 ---
 import TeamMember from "@parts/team/TeamMember.astro";
-import teamData from "@data/Team";
-import teamInfo from "cache/teamInfo.json";
+import { InferEntrySchema } from "astro:content";
+import { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
 
 export interface Props {
-	list: string[] | undefined;
-	leaderList: string[] | undefined;
-	fromTeam: string | undefined;
+	team: InferEntrySchema<"teamMembers">["teams"][0]
 }
 
-let { list, leaderList = [], fromTeam } = Astro.props as Props;
+let { team } = Astro.props
 
-if (fromTeam !== undefined) {
-	if (!teamInfo.hasOwnProperty(fromTeam)) {
-		throw new Error(`Team ${fromTeam} does not exist`);
-	}
-	type Team = keyof typeof teamInfo;
-
-	list = teamInfo[fromTeam as Team].map((github) => {
-		const member = Object.keys(teamData).find(
-			(member) => teamData[member].github === github
-		);
-
-		if (member === undefined) {
-			console.warn(`Member with github ${github} does not exist`);
-			return "_NotFound_";
-		}
-
-		return member;
-	});
-
-	const leaderTeam = fromTeam + "-leaders";
-	if (teamInfo.hasOwnProperty(leaderTeam)) {
-		leaderList = teamInfo[leaderTeam as Team];
-	}
-}
+const members = await getCollection("teamMembers", ({ data }) => {
+	const stringTeams = data.teams // Still figuring out how to type this properly
+	return stringTeams.includes(team)
+})
 ---
 
 {
-	list?.map((name) => (
+	members.map((member) => (
 		<TeamMember
-			member={teamData[name]}
-			isLeader={leaderList.includes(teamData[name].github)}
+			member={member}
 		/>
 	))
 }

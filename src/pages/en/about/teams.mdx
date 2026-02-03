@@ -1,121 +1,90 @@
 ---
 title: Team Listings
-description: Learn about Quilt's team structure, and find out who's involved.
+description: The people working on Quilt.
 layout: /src/layouts/Page.astro
 ---
 
 import TeamMembers from "@setpieces/TeamMembers.astro";
 import ProjectButton from "@parts/team/ProjectButton.astro";
 
-Quilt's governance is split up into many independent teams, some of which have their own subteams and/or leadership structure. Teams are largely responsible for their own management, taking an internally democratic approach towards restructuring and elections.
+Quilt is formed of several teams, each responsible for a small part of the work we do. The Community Team works with our community of users, and each Development Team works on a subset of the software that we develop.
 
-Additionally, each team also has its own responsibilities. Below, you'll find a full list of each team and a list of team members, including a description of the team and any relevant subteams and team roles.
+## Admin Board
 
-Teams also include one or more team leads. They are responsible for the team's overall direction and management, and are the primary point of contact for the team's responsibilities. They usually hold merge rights on the team's repositories, and are responsible for ensuring that the team's responsibilities are met. On this page, they will be indicated by a star.
-
-# Admin Board
-
-The Admin Board is responsible for breaking voting ties, managing permissions on GitHub, managing operational platforms that concern multiple teams and steering the project's general direction. The Admin Board must always have an odd number of members, to help ensure that ties can be broken cleanly.
+The Admin Board is responsible for steering and coordinating Quilt's development, and managing platforms used by multiple teams, such as GitHub. It must always have an odd number of members to prevent a voting deadlock.
 
 <div class="admin team-grid">
-	<TeamMembers fromTeam="administrative-board"/>
+	<TeamMembers team="admin-board"/>
 </div>
 
-# Community Team
+## Community Team
 
-The Community Team is a wide-ranging team that is in charge of managing all Quilt community spaces, as well as its social media accounts and public relations tasks. Because this work varies a lot, the Community Team is split up into several sub-teams, which have specific responsibilities.
+The Community Team is in charge of managing [the Quilt Community](https://discord.quiltmc.org), as well as Quilt's blog and social media accounts.
 
-## Keyholder
+### Community Managers
 
-The keyholder is a trusted community member who acts as the de-facto owner of Community Spaces that don't support shared ownership, such as Discord. They assist with server management when required by the platform, but are otherwise uninvolved in the Community Team.
-<div class="keyholder team-grid">
-<TeamMembers list={["gdude2002"]} />
-</div>
-
-## Community Managers
-
-Community Managers are administrative Community Team members that deal with the day-to-day tasks of maintaining Quilt's community spaces, as well as supporting and managing the rest of the community team. They're responsible for properly running elections, interviewing and training new Community Team members, managing the structure of Quilt's community spaces, writing and receiving feedback on Quilt's community policies.
+Community Managers administer the Quilt Community, support and manage the rest of the community team, and develop our [community policies](https://quiltmc.org/en/community/).
 
 <div class="moderator team-grid">
-	<TeamMembers fromTeam="community-managers" />
+	<TeamMembers team="community-managers" />
 </div>
 
-## Moderators
+### Moderators
 
-Quilt's Moderator team is responsible for daily moderation tasks in Quilt community spaces. This includes conflict resolution, defensive and reactive moderation tasks and general rule and policy enforcement. Moderators are the backbone of any Community Team, and Quilt's is no exception -- a diverse, active Moderator team has always been instrumental for Quilt's success.
+Moderators are responsible for daily moderation tasks in Quilt's community spaces, maintaining a safe and healthy environment for our users and community members.
 
 <div class="moderator team-grid">
-	<TeamMembers fromTeam="moderators"/>
+	<TeamMembers team="moderators"/>
 </div>
 
-## Events Team
+### Events Team
 
-The Events Team is responsible for organising and managing events within our community spaces, which can include anything from AMAs to fully-blown online modding conventions. While they aren't Moderators, they are always backed up by the rest of the Community Team, and also have the ability to directly moderate events.
+The Events team is responsible for organising and managing events in our community.
 
 <div class="community team-grid">
-	<TeamMembers fromTeam="community" />
+	<TeamMembers team="events" />
 </div>
 
-## Outreach Team
+### Outreach Team
 
-The outreach team is responsible for communications outside of and within Quilt. They write blog posts, manage social media and website content, and run developer meetings, among other things.
+The Outreach team is responsible for Quilt's public communications. They write blog posts and website content, and manage our social media accounts.
 
 <div class="community team-grid">
-	<TeamMembers fromTeam="outreach" />
+	<TeamMembers team="outreach" />
 </div>
 
-# Development Teams
+## Development Teams
 
-Development teams are responsible for specific parts of The Quilt Project, which itself comprises a number of projects. Developent teams operate largely independently, allowing for self-governance as long as the relevant RFCs are followed.
+Development teams are each responsible for different types of projects within Quilt.
 
 ## Build Tools
 
-The build tools team is responsible for several projects that are instrumental for creating Quilt mods, including compilation tooling and build system plugins. This team is responsible for the following projects:
+The Build Tools team is responsible for the tools used to compile Quilt mods.
 
 <div class="button-grid">
-	<ProjectButton name="dev-launch-injector" />
-	<ProjectButton name="gradle-convention-plugins" />
 	<ProjectButton name="quilt-template-mod" />
 	<ProjectButton name="quilt-loom" />
-	<ProjectButton name="sponge-mixin-compile-extensions" />
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers fromTeam="build-tools" />
+	<TeamMembers team="build-tools" />
 </div>
 
-## Chasm
+### Community Tooling
 
-The Chasm team is responsible for maintaining Chasm, the Collision Handling ASM toolset. Chasm aims to provide a safer backend for modifying JVM bytecode at runtime, allowing for more compatible mixins and extra bytecode modification frontends.
-
-**Note:** You may see projects with "ASMR" in the name on the QuiltMC GitHub organisation. This was the old, internal codename for Chasm, so those projects are associated with the Chasm team.
-
-This team is responsible for the following projects:
-
-<div class="button-grid">
-	<ProjectButton name="asmr-processor-prototype" />
-	<ProjectButton name="chasm" />
-</div>
-
-<div class="developer team-grid">
-	<TeamMembers fromTeam="chasm" />
-</div>
-
-## Community Tooling
-
-The Community Tooling team is responsible for projects that power Quilt's community spaces, such as custom Discord bots. This team is responsible for the following projects:
+The Community Tooling team is responsible for projects that run in Quilt's community spaces, such as custom Discord bots.
 
 <div class="button-grid">
 	<ProjectButton name="cozy-discord" />
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers fromTeam="community-tooling" />
+	<TeamMembers team="community-tooling" />
 </div>
 
-## Infrastructure
+### Infrastructure
 
-The Infrastructure team is responsible for Quilt's service infrastructure, including managing cloud platforms, server tooling, file repositories and API services for modders. This team is responsible for the following projects:
+The Infrastructure team is in charge of running the services Quilt needs to function, such as our website, [Quilt Meta](https://meta.quiltmc.org), the [Quilt Maven repository](https://maven.quiltmc.org), and the [Cozy Discord bot](https://github.com/quiltmc/cozy).
 
 <div class="button-grid">
 	<ProjectButton name="infrastructure" />
@@ -124,96 +93,35 @@ The Infrastructure team is responsible for Quilt's service infrastructure, inclu
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers fromTeam="infrastructure" />
+	<TeamMembers team="infrastructure" />
 </div>
 
-## Kotlin
+### Loader
 
-The Kotlin Team is responsible for maintaining the Quilt Kotlin Libraries (QKL), a set of libraries based off QSL and designed for use with the Kotlin programming language. These libraries provide an official way to use Kotlin on Quilt, as well as wrappers for QSL and the Minecraft codebase for easier use in Kotlin.
+The Loader team is responsible for Quilt Loader, as well as related projects like the Quilt installer, and libraries used for parsing and generating mod metadata.
 
 <div class="button-grid">
-	<ProjectButton name="quilt-kotlin-libraries" />
-	<ProjectButton name="quilt-kotlin-template-mod" />
-</div>
-
-<div class="developer team-grid">
-	<TeamMembers fromTeam="kotlin" />
-</div>
-
-## Loader
-
-The Loader team is responsible for projects relating to Quilt Loader, the project that actually handles loading mods into the game. This also includes projects like the installer and libraries used for parsing and generating mod metadata. This team is responsible for the following projects:
-
-<div class="button-grid">
-	<ProjectButton name="access-widener" />
-	<ProjectButton name="Mixin" />
-	<ProjectButton name="quilt-installer" />
-	<ProjectButton name="quilt-json5" />
 	<ProjectButton name="quilt-loader" />
-	<ProjectButton name="quilt-loader-sat4j" />
+	<ProjectButton name="quilt-config" />
+	<ProjectButton name="quilt-installer" />
+	<ProjectButton name="quilt-parsers" />
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers fromTeam="loader" />
+	<TeamMembers team="loader" />
 </div>
 
-## Mappings
+### Mappings
 
-The Mappings team is responsible for projects relating to remapping obfuscated names to human-readable names. This includes tools for matching names, mappings storage formats, javadoc generation tools, and much more besides. This team is responsible for the following projects:
+The Mappings team is responsible for maintaining Enigma, as well as the tools used to remap obfuscated code in older versions of Minecraft.
 
 <div class="button-grid">
 	<ProjectButton name="enigma" />
+	<ProjectButton name ="quilt-enigma-plugin" />
 	<ProjectButton name="javadoc-draftsman" />
-	<ProjectButton name="lorenz-tiny" />
-	<ProjectButton name="mapping-poet" />
 	<ProjectButton name="mappings-hasher" />
-	<ProjectButton name="quilt-mappings" />
-	<ProjectButton name="stitch" />
-	<ProjectButton name="tiny-mappings-parser" />
-	<ProjectButton name="tiny-remapper" />
-	<ProjectButton name="unpick" />
 </div>
 
 <div class="developer team-grid">
-	<TeamMembers fromTeam="mappings" />
-</div>
-
-# Quilt Standard Libraries (QSL)
-
-The QSL team is responsible for maintaining a library of modules that provide extra APIs for modders to use when creating their mods. These APIs are designed to make certain tasks easier, and to help mods remain compatible with each other.
-
-The QSL team contains a subteam responsible for the Quilted Fabric API compatibility module.
-
-This team is responsible for the following projects:
-
-<div class="button-grid">
-	<ProjectButton name="quilt-standard-libraries" />
-	<ProjectButton name="quilted-fabric-api" />
-</div>
-
-<div class="developer team-grid">
-	<TeamMembers fromTeam="quilt-standard-libraries" />
-</div>
-
-## Sub-Team: Quilted Fabric API
-
-<div class="developer team-grid">
-	<TeamMembers fromTeam="quilted-fabric-api" />
-</div>
-
-# Triage Teams
-
-Triage teams aren't directly involved with development, but they're still very important. They're mostly responsible for reviewing pull requests to active Quilt repositories, ensuring that they're up to spec and ready be merged. This allows for the development teams overseeing these repositories to focus on development, rather than reviewing PRs.
-
-## Mappings
-
-This team is responsible for handling triage tasks for the following projects:
-
-<div class="button-grid">
-	<ProjectButton name="enigma" />
-	<ProjectButton name="quilt-mappings" />
-</div>
-
-<div class="developer team-grid">
-	<TeamMembers fromTeam="mappings-triage"/>
+	<TeamMembers team="mappings" />
 </div>
