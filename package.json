@@ -48,7 +48,6 @@
 		"@iconify-json/mdi": "^1.2.3",
 		"@studiocms/markdown-remark": "^1.2.0",
 		"@studiocms/markdown-remark-processor": "^1.2.0",
-		"@tsndr/cloudflare-worker-jwt": "^3.2.1",
 		"astro-compress": "^2.3.9",
 		"astro-icon": "^1.1.5",
 		"fast-xml-parser": "^5.3.4",

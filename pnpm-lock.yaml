@@ -32,9 +32,6 @@ importers:
       '@studiocms/markdown-remark-processor':
         specifier: ^1.2.0
         version: 1.2.0
-      '@tsndr/cloudflare-worker-jwt':
-        specifier: ^3.2.1
-        version: 3.2.1
       astro-compress:
         specifier: ^2.3.9
         version: 2.3.9(@types/node@25.1.0)(rollup@4.57.1)(sass@1.97.3)(typescript@5.9.3)
@@ -1252,9 +1249,6 @@ packages:
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
-
-  '@tsndr/cloudflare-worker-jwt@3.2.1':
-    resolution: {integrity: sha512-1AfDEgu7DTbU0sXDSOKh4D5t7+RJ0dIRRaDmoX3LFeW0AxQdunuqTQ7AVGwNJqOnxrbxiruyvX01cf9HHqEvXQ==}
 
   '@types/css-tree@2.3.11':
     resolution: {integrity: sha512-aEokibJOI77uIlqoBOkVbaQGC9zII0A+JH1kcTNKW2CwyYWD8KM6qdo+4c77wD3wZOQfJuNWAr9M4hdk+YhDIg==}
@@ -4343,8 +4337,6 @@ snapshots:
       - supports-color
 
   '@trysound/sax@0.2.0': {}
-
-  '@tsndr/cloudflare-worker-jwt@3.2.1': {}
 
   '@types/css-tree@2.3.11': {}
 
