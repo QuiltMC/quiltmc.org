@@ -72,15 +72,6 @@ importers:
       '@types/semver':
         specifier: ^7.7.1
         version: 7.7.1
-      '@types/semver-compare':
-        specifier: ^1.0.3
-        version: 1.0.3
-      '@types/semver-sort':
-        specifier: ^0.0.5
-        version: 0.0.5
-      '@types/swagger-ui':
-        specifier: ^5.21.1
-        version: 5.21.1
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@25.1.0)(lightningcss@1.30.2)(rollup@4.57.1)(sass@1.97.3)(terser@5.44.1)(typescript@5.9.3)
@@ -1310,17 +1301,8 @@ packages:
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
 
-  '@types/semver-compare@1.0.3':
-    resolution: {integrity: sha512-mVZkB2QjXmZhh+MrtwMlJ8BqUnmbiSkpd88uOWskfwB8yitBT0tBRAKt+41VRgZD9zr9Sc+Xs02qGgvzd1Rq/Q==}
-
-  '@types/semver-sort@0.0.5':
-    resolution: {integrity: sha512-cIQG7kjdzHcsRrYYkP8N65BogntqItjMjG8uSgPEl1ej4dKj9QC8snCFJb3HHF/Cwqe0s0IflJjUU5wb1yrLDQ==}
-
   '@types/semver@7.7.1':
     resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
-
-  '@types/swagger-ui@5.21.1':
-    resolution: {integrity: sha512-DUmUH59eeOtvAqcWwBduH2ws0cc5i95KHsXCS4FsOfbUq/clW8TN+HqRBj7q5p9MSsSNK43RziIGItNbrAGLxg==}
 
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
@@ -4400,13 +4382,7 @@ snapshots:
     dependencies:
       '@types/node': 17.0.45
 
-  '@types/semver-compare@1.0.3': {}
-
-  '@types/semver-sort@0.0.5': {}
-
   '@types/semver@7.7.1': {}
-
-  '@types/swagger-ui@5.21.1': {}
 
   '@types/tough-cookie@4.0.5': {}
 
