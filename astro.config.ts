@@ -3,7 +3,6 @@ import mdx from "@astrojs/mdx";
 import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { fromHtml } from 'hast-util-from-html';
 import icon from "astro-icon"
 import compress from "astro-compress";
 import searchIndex from "./src/integration/search-index";

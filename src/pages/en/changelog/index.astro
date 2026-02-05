@@ -5,7 +5,7 @@ import { t } from "i18next";
 import Base from "@layouts/Base.astro";
 import * as fs from "fs";
 import { objectMap } from "src/util/Util"
-import semverCompare from "semver-compare";
+import semverCompare from "semver/functions/compare";
 import { Icon } from "astro-icon/components"
 
 const { project, version } = Astro.params;
