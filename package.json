@@ -46,7 +46,9 @@
 		"semver": "^7.7.3"
 	},
 	"pnpm": {
-		"overrides": {},
+		"overrides": {
+			"wrangler": "^4.59.1"
+		},
 		"onlyBuiltDependencies": [
 			"@parcel/watcher",
 			"@scarf/scarf",
