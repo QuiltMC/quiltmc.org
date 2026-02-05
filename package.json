@@ -35,7 +35,6 @@
 		"i18next-fs-fluent-backend": "github:quiltmc/i18next-fs-fluent-backend",
 		"jsdom": "^27.4.0",
 		"lunr": "^2.3.9",
-		"node-fetch": "^3.3.2",
 		"quilt-bulma": "0.0.24",
 		"rehype-autolink-headings": "^7.1.0",
 		"rollup": "^4.57.1",
@@ -61,6 +60,6 @@
 		]
 	},
 	"engines": {
-		"node": ">=20"
+		"node": ">=22"
 	}
 }
