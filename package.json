@@ -17,23 +17,23 @@
 		"@astrojs/sitemap": "^3.7.0",
 		"@babel/traverse": "^7.29.0",
 		"@iconify-json/cib": "^1.2.3",
-		"@iconify-json/material-symbols": "^1.2.53",
+		"@iconify-json/material-symbols": "^1.2.55",
 		"@iconify-json/mdi": "^1.2.3",
 		"@studiocms/markdown-remark": "^1.2.0",
 		"@studiocms/markdown-remark-processor": "^1.2.0",
 		"@types/jsdom": "^27.0.0",
 		"@types/lunr": "^2.3.7",
 		"@types/semver": "^7.7.1",
-		"astro": "^5.17.1",
+		"astro": "^5.17.2",
 		"astro-compress": "^2.3.9",
 		"astro-i18next": "github:quiltmc/astro-i18next#da5ff6e",
 		"astro-icon": "^1.1.5",
 		"execa": "^9.6.1",
-		"glob": "^13.0.1",
-		"i18next": "^25.8.4",
+		"glob": "^13.0.5",
+		"i18next": "^25.8.10",
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:quiltmc/i18next-fs-fluent-backend",
-		"jsdom": "^28.0.0",
+		"jsdom": "^28.1.0",
 		"lunr": "^2.3.9",
 		"quilt-bulma": "0.0.24",
 		"rehype-autolink-headings": "^7.1.0",
@@ -42,8 +42,8 @@
 		"typescript": "^5.9.3"
 	},
 	"dependencies": {
-		"fast-xml-parser": "^5.3.4",
-		"semver": "^7.7.3"
+		"fast-xml-parser": "^5.3.6",
+		"semver": "^7.7.4"
 	},
 	"pnpm": {
 		"overrides": {
