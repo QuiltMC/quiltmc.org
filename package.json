@@ -25,7 +25,7 @@
 		"@types/semver": "^7.7.1",
 		"astro": "^6.3.1",
 		"astro-compress": "^2.4.1",
-		"astro-i18next": "github:quiltmc/astro-i18next#da5ff6e",
+		"astro-i18next": "github:quiltmc/astro-i18next#9208ed1",
 		"astro-icon": "^1.1.5",
 		"execa": "^9.6.1",
 		"glob": "^13.0.6",
@@ -44,25 +44,7 @@
 	"dependencies": {
 		"fast-xml-parser": "^5.7.3",
 		"semver": "^7.8.0"
-	},
-	"pnpm": {
-		"overrides": {
-			"wrangler": "^4.59.1",
-			"svgo": "^4.0.1",
-			"unicorn-magic": "^0.4.0"
 		},
-		"onlyBuiltDependencies": [
-			"@parcel/watcher",
-			"@scarf/scarf",
-			"@tree-sitter-grammars/tree-sitter-yaml",
-			"core-js-pure",
-			"esbuild",
-			"sharp",
-			"tree-sitter",
-			"tree-sitter-json",
-			"astro-i18next"
-		]
-	},
 	"engines": {
 		"node": ">=22"
 	}

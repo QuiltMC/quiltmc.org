@@ -1,0 +1,15 @@
+overrides:
+  wrangler: ^4.59.1
+  svgo: ^4.0.1
+  unicorn-magic: ^0.4.0
+allowBuilds:
+  '@parcel/watcher': true
+  '@scarf/scarf': true
+  '@tree-sitter-grammars/tree-sitter-yaml': true
+  core-js-pure: true
+  esbuild: true
+  sharp: true
+  tree-sitter: true
+  tree-sitter-json: true
+  astro-i18next: true
+  workerd: false
