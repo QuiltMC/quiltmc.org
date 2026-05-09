@@ -4,7 +4,7 @@ import type { BaseProps } from "@layouts/Base.astro"
 import { getCollection, render } from "astro:content"
 // Because this page is "[post].astro", you can't have an import called "post"
 import BlogPost from "@layouts/Post.astro"
-import { Markdown } from "studiocms:markdown-remark"
+import { Markdown } from "@studiocms/markdown-remark/components"
 
 export const getStaticPaths = (async () => {
 	const posts = await getCollection("blog")

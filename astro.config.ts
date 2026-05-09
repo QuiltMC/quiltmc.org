@@ -34,6 +34,12 @@ export default defineConfig({
 	build: {
       assetsInlineLimit: 0
 	},
+	resolve: {
+		alias:{
+			// Fixes issue with unicorn-magic not exporting certain functions at bundle-time
+			"unicorn-magic": "unicorn-magic/node"
+		}
+	},
 	ssr: {
 		// These are all Node.js APIs that don't work on Cloudflare. They are only used at build-time, but Astro doesn't understand that they won't be needed in the Cloudflare environment, so they have to be explicitly allowed.
 		external: ["child_process", "crypto", "fs", "module", "node:buffer", "node:child_process", "node:events", "node:fs", "node:os", "node:process", "node:path", "node:stream", "node:stream/promises", "node:string_decoder", "node:timers/promises", "node:url", "node:util", "node:tty", "node:v8", "os", "path", "stream", "string_decoder", "tty", "url", "util", "worker_threads","process", "execa"]
@@ -42,9 +48,7 @@ export default defineConfig({
 
   output: "static",
   adapter: cloudflare({
-	platformProxy: {
-		enabled: true // Enables bindings, secrets, etc. in Astro's dev server,
-	},
-	imageService: "compile"
+	imageService: "compile",
+	prerenderEnvironment: "node"
   }),
 });

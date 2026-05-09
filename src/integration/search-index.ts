@@ -1,4 +1,4 @@
-import type { AstroIntegration} from "astro";
+import type { AstroIntegration, IntegrationResolvedRoute} from "astro";
 import { readFileSync, writeFileSync } from "fs";
 import { JSDOM } from "jsdom";
 
@@ -25,16 +25,21 @@ function cleanPath(path: string): string {
 
 
 export default function (): AstroIntegration {
+	let routes: IntegrationResolvedRoute[]
     return {
         name: "build-search-index",
         hooks: {
-            "astro:build:done": ({ dir, routes }) => {
+			"astro:routes:resolved": (params) => {
+				routes = params.routes
+			},
+            "astro:build:done": ({ dir, assets }) => {
                 console.log("Building search index")
                 const rawIndex = {};
 
                 for (const route of routes) {
-                    if (route.pathname === undefined) {
-                        console.warn(`Not indexing ${route.route}: dynamic page`);  // Can we support dynamic routes?
+					const asset = assets.get(route.pattern)
+                    if (!route.isPrerendered) {
+                        console.warn(`Not indexing ${asset}: dynamic page`);  // Can we support dynamic routes?
                         continue;
                     }
 

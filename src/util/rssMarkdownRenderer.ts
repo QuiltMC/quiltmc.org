@@ -1,6 +1,6 @@
 // Markdown renderer with a stripped-down configuration for rendering RSS posts
 
-import { type MarkdownProcessorRenderOptions, createMarkdownProcessor } from '@studiocms/markdown-remark-processor';
+import { createMarkdownProcessor } from '@studiocms/markdown-remark/core';
 
 const processor = await createMarkdownProcessor({
 	studiocms: {
@@ -8,8 +8,8 @@ const processor = await createMarkdownProcessor({
 	}
 })
 
-export async function render(content: string, options?: MarkdownProcessorRenderOptions) {
-	const result = await processor.render(content, options)
+export async function render(content: string) {
+	const result = await processor.render(content)
 
 	return {
 		html: result.astroHTML,

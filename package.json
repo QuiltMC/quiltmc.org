@@ -11,44 +11,45 @@
 	},
 	"devDependencies": {
 		"@astro-openapi/gui-swagger": "^0.0.5",
-		"@astrojs/cloudflare": "^12.6.12",
-		"@astrojs/mdx": "^4.3.13",
-		"@astrojs/rss": "^4.0.15",
-		"@astrojs/sitemap": "^3.7.0",
+		"@astrojs/cloudflare": "^13.5.0",
+		"@astrojs/mdx": "^5.0.4",
+		"@astrojs/rss": "^4.0.18",
+		"@astrojs/sitemap": "^3.7.2",
 		"@babel/traverse": "^7.29.0",
 		"@iconify-json/cib": "^1.2.3",
-		"@iconify-json/material-symbols": "^1.2.60",
+		"@iconify-json/material-symbols": "^1.2.71",
 		"@iconify-json/mdi": "^1.2.3",
-		"@studiocms/markdown-remark": "^1.2.0",
-		"@studiocms/markdown-remark-processor": "^1.2.0",
-		"@types/jsdom": "^28.0.0",
+		"@studiocms/markdown-remark": "^1.3.1",
+		"@types/jsdom": "^28.0.1",
 		"@types/lunr": "^2.3.7",
 		"@types/semver": "^7.7.1",
-		"astro": "^5.18.0",
-		"astro-compress": "^2.3.9",
+		"astro": "^6.3.1",
+		"astro-compress": "^2.4.1",
 		"astro-i18next": "github:quiltmc/astro-i18next#da5ff6e",
 		"astro-icon": "^1.1.5",
 		"execa": "^9.6.1",
 		"glob": "^13.0.6",
-		"i18next": "^25.8.14",
+		"i18next": "^26.0.10",
 		"i18next-fluent": "^2.0.0",
 		"i18next-fs-fluent-backend": "github:quiltmc/i18next-fs-fluent-backend",
-		"jsdom": "^28.1.0",
+		"jsdom": "^29.1.1",
 		"lunr": "^2.3.9",
 		"quilt-bulma": "0.0.24",
 		"rehype-autolink-headings": "^7.1.0",
-		"rollup": "^4.59.0",
-		"sass": "^1.97.3",
-		"typescript": "^5.9.3"
+		"rollup": "^4.60.3",
+		"sass": "^1.99.0",
+		"typescript": "^6.0.3",
+		"wrangler": "^4.90.0"
 	},
 	"dependencies": {
-		"fast-xml-parser": "^5.4.2",
-		"semver": "^7.7.4"
+		"fast-xml-parser": "^5.7.3",
+		"semver": "^7.8.0"
 	},
 	"pnpm": {
 		"overrides": {
 			"wrangler": "^4.59.1",
-			"svgo": "^4.0.1"
+			"svgo": "^4.0.1",
+			"unicorn-magic": "^0.4.0"
 		},
 		"onlyBuiltDependencies": [
 			"@parcel/watcher",

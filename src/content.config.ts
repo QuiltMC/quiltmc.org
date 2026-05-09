@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod"
 import {file, glob} from "astro/loaders"
 
 const blog = defineCollection({
@@ -25,9 +26,9 @@ const incompatibleMods = defineCollection({
 		name: z.string(),
 		type: z.enum(["GAME", "OTHERS", "SELF", "WORKAROUND"]),
 		status: z.enum(["BLOCKED", "IN_PROGRESS", "NO_ANSWER", "ON_HOLD", "UNKNOWN", "WONT_FIX"]),
-		tracking: z.string().url().or(z.literal("UNKNOWN")),
+		tracking: z.url().or(z.literal("UNKNOWN")),
 		note: z.optional(z.string()),
-		icon: z.string().url()
+		icon: z.url()
 	})
 })
 
@@ -45,7 +46,7 @@ const teamMembers = defineCollection({
 			description: z.string().optional(),
 			links: z.array(z.object({
 				icon: z.string(),
-				url: z.string().url()
+				url: z.url()
 			})).optional(),
 			teams: z.array(z.enum([
 				// I wish we could define this array elsewhere, but Zod doesn't like it.
@@ -61,7 +62,7 @@ const teamMembers = defineCollection({
 				"outreach",])).default([]),
 			systemMembers: z.array(z.object({
 				name: z.string(),
-				icon: z.string().url()
+				icon: z.url()
 			})).or(z.literal("---")).optional()
 		})
 })
