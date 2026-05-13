@@ -36,7 +36,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: html
-          path: dist
           run-id: ${{ env.GITHUB_RUN_ID }}
           github-token: ${{ env.GITHUB_TOKEN }}
       - name: Publish to Cloudflare Pages
