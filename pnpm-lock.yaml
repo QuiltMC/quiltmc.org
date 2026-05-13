@@ -67,7 +67,7 @@ importers:
         version: 2.4.1(@types/node@25.6.2)(rollup@4.60.3)(sass@1.99.0)
       astro-i18next:
         specifier: github:quiltmc/astro-i18next#9208ed1
-        version: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa(astro@6.3.1(@types/node@25.6.2)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.99.0)(terser@5.46.1))(i18next@26.0.10(typescript@6.0.3))
+        version: https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa(astro@6.3.1(@types/node@25.6.2)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.99.0)(terser@5.46.1))(i18next@25.10.10(typescript@6.0.3))
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
@@ -78,8 +78,8 @@ importers:
         specifier: ^13.0.6
         version: 13.0.6
       i18next:
-        specifier: ^26.0.10
-        version: 26.0.10(typescript@6.0.3)
+        specifier: ^25.10.10
+        version: 25.10.10(typescript@6.0.3)
       i18next-fluent:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1944,8 +1944,8 @@ packages:
   i18next-http-backend@2.7.3:
     resolution: {integrity: sha512-FgZxrXdRA5u44xfYsJlEBL4/KH3f2IluBpgV/7riW0YW2VEyM8FzVt2XHAOi6id0Ppj7vZvCZVpp5LrGXnc8Ig==}
 
-  i18next@26.0.10:
-    resolution: {integrity: sha512-k3yGPAlWR2RdMYoVXJoDZDT87qeHIWKH7gVksdZMpRty7QX/D9QZeYGvN08KGbKHke9wn01eYT+EEsrqX/YTlw==}
+  i18next@25.10.10:
+    resolution: {integrity: sha512-cqUW2Z3EkRx7NqSyywjkgCLK7KLCL6IFVFcONG7nVYIJ3ekZ1/N5jUsihHV6Bq37NfhgtczxJcxduELtjTwkuQ==}
     peerDependencies:
       typescript: ^5 || ^6
     peerDependenciesMeta:
@@ -4197,12 +4197,12 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa(astro@6.3.1(@types/node@25.6.2)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.99.0)(terser@5.46.1))(i18next@26.0.10(typescript@6.0.3)):
+  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa(astro@6.3.1(@types/node@25.6.2)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.99.0)(terser@5.46.1))(i18next@25.10.10(typescript@6.0.3)):
     dependencies:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1(@proload/core@0.3.3)
       astro: 6.3.1(@types/node@25.6.2)(lightningcss@1.32.0)(rollup@4.60.3)(sass@1.99.0)(terser@5.46.1)
-      i18next: 26.0.10(typescript@6.0.3)
+      i18next: 25.10.10(typescript@6.0.3)
       i18next-browser-languagedetector: 7.2.2
       i18next-fs-backend: 2.6.5
       i18next-http-backend: 2.7.3
@@ -5076,7 +5076,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  i18next@26.0.10(typescript@6.0.3):
+  i18next@25.10.10(typescript@6.0.3):
+    dependencies:
+      '@babel/runtime': 7.29.2
     optionalDependencies:
       typescript: 6.0.3
 
