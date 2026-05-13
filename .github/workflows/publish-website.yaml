@@ -44,4 +44,4 @@ jobs:
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
-          command: wrangler deploy --config dist/server/config.json
+          command: deploy --config dist/server/config.json
