@@ -9,6 +9,10 @@ on:
         required: false
         default: ${{ github.run_id }}
         type: string
+      project-name:
+        required: false
+        default: quiltmc-org
+        type: string
     outputs:
       deployment-url:
         description: The URL of the deployed site.
@@ -48,4 +52,4 @@ jobs:
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name quiltmc-org --branch ${{ inputs.branch }}
+          command: pages deploy dist --project-name ${{ inputs. }} --branch ${{ inputs.branch }}
