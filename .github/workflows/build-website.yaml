@@ -35,7 +35,7 @@ jobs:
       - name: Build the website
         run: pnpm run build
       - name: Upload HTML artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v8
         with:
           name: html
           path: |
