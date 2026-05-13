@@ -33,7 +33,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
     steps:
       - name: Download Website HTML
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: html
           run-id: ${{ env.GITHUB_RUN_ID }}
