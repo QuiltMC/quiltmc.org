@@ -40,5 +40,6 @@ jobs:
           name: html
           path: |
             dist/
-            .wrangler/
+            .wrangler/deploy
+          include-hidden-files: true
           retention-days: 1
