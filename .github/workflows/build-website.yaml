@@ -40,20 +40,3 @@ jobs:
           name: html
           path: dist
           retention-days: 1
-
-      - name: Upload Functions artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: functions
-          path: functions
-          retention-days: 1
-
-      - name: Upload package artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: package
-          path: |
-            package.json
-            pnpm-lock.yaml
-          retention-days: 1
-
