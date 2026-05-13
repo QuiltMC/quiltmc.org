@@ -39,6 +39,6 @@ jobs:
         with:
           name: html
           path: |
-            dist
-            .wrangler
+            dist/
+            .wrangler/
           retention-days: 1
