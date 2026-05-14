@@ -21,9 +21,9 @@ on:
       deployment-url:
         description: The URL of the deployed site.
         value: ${{ jobs.publish.outputs.deployment-url }}
-    version-id:
-      description: The ID of the Worker version that has been created
-      value: ${{ jobs.publish.outputs.version-id }}
+      version-id:
+        description: The ID of the Worker version that has been created
+        value: ${{ jobs.publish.outputs.version-id }}
 
 jobs:
   publish:
