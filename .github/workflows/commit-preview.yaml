@@ -4,12 +4,14 @@ name: Commit preview
 jobs:
   build-website:
     uses: ./.github/workflows/build-website.yaml
-  
+
   publish:
     uses: ./.github/workflows/publish-website.yaml
     needs: build-website
     secrets: inherit
-  
+    with:
+      deploy: ${{ github.ref_name == 'main' }}
+
   comment-on-commit:
       name: Add a comment on the commit
       runs-on: ubuntu-latest
@@ -27,4 +29,4 @@ jobs:
               token: ${{ env.GITHUB_PUBLISH_TOKEN }}
               repository: ${{ github.repository }}
               sha: ${{ github.sha }}
-              body: "See preview on Cloudflare Pages: ${{ env.DEPLOYMENT_URL }}"
+              body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-quiltmc-org.quiltmc.pages.dev"

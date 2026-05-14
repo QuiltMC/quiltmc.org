@@ -1,12 +1,10 @@
 import * as fs from "fs";
 import * as paths from "./paths.mjs";
-import { sortBy, tryToRunPromiseWithTimeout, NIL_DATE, linkIssues } from "./util.mjs";
-import { glob } from "glob";
+import { tryToRunPromiseWithTimeout, linkIssues } from "./util.mjs";
 
 async function main() {
 	prepareCacheDirectory();
 	copyCSS();
-	generateRedirectFunctions();
 	await Promise.all([queryChangelogs()]);
 
 	console.log("preprocess: done\n");
@@ -40,46 +38,6 @@ function copyCSS() {
 		}
 	});
 }
-
-function generateRedirectFunctions() {
-	const functionSource = fs.readFileSync(paths.REDIRECT_FUNCTION_LOCATION).toString('utf8');
-
-	const allLanguages = glob.sync(paths.SOURCE_LOCATION + "??/")
-		.map((file) => file.slice(-3, -1));
-	console.log(`Found ${allLanguages.length} languages`);
-
-	const pathPrefix = paths.SOURCE_LOCATION + "en";
-
-	var files = glob.sync(paths.SOURCE_LOCATION + "en/**/*.md?(x)")
-	files.forEach((file) => {
-		file = file.slice(pathPrefix.length -1)
-			.split(".")
-			.slice(0, -1)
-			.join(".");
-
-		const availableLanguages = [];
-		allLanguages.forEach((language) => {
-			try {
-				fs.statSync(paths.SOURCE_LOCATION + language + file + ".md")
-				availableLanguages.push(language)
-			} catch {
-				try {
-					fs.statSync(paths.SOURCE_LOCATION + language + file + ".mdx")
-					availableLanguages.push(language)
-				} catch { }
-			}
-		})
-
-		const functionLocation = paths.FUNCTION_LOCATION + "/" + file + ".js";
-		const parentFolder = functionLocation.split("/").slice(0, -1).join("/");
-
-		fs.mkdirSync(parentFolder, { recursive: true });
-		const content = `const al = [${availableLanguages.map(l => '"' + l + '"').join(", ")}]\n${functionSource}`;
-		fs.writeFile(functionLocation, content, () => null);
-		return
-	})
-}
-
 async function queryChangelogs() {
 	if (fs.existsSync(paths.CHANGELOG_DIR)) {
 		console.log("queryChangelogs: using existing changelog data");

@@ -9,10 +9,21 @@ on:
         required: false
         default: ${{ github.run_id }}
         type: string
+      project-name:
+        required: false
+        default: quiltmc-org
+        type: string
+      deploy:
+        required: false
+        default: false
+        type: boolean
     outputs:
       deployment-url:
         description: The URL of the deployed site.
         value: ${{ jobs.publish.outputs.deployment-url }}
+      version-id:
+        description: The ID of the Worker version that has been created
+        value: ${{ jobs.publish.outputs.version-id }}
 
 jobs:
   publish:
@@ -20,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       deployment-url: ${{ steps.cloudflare-publish.outputs.deployment-url }}
+      version-id: ${{ steps.version-id.outputs.version-id }}
     permissions:
       contents: read
     env:
@@ -29,23 +41,24 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
     steps:
       - name: Download Website HTML
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: html
-          path: dist
           run-id: ${{ env.GITHUB_RUN_ID }}
           github-token: ${{ env.GITHUB_TOKEN }}
-      - name: Download Website Functions
-        uses: actions/download-artifact@v4
-        with:
-          name: functions
-          path: functions
-          run-id: ${{ env.GITHUB_RUN_ID }}
-          github-token: ${{ env.GITHUB_TOKEN }}
-      - name: Publish to Cloudflare Pages
+      - name: Upload to Cloudflare
         id: cloudflare-publish # This step needs an ID because its outputs may be needed in subsequent jobs.
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name quiltmc-org --branch ${{ inputs.branch }}
+          command: versions upload --preview-alias ${{ inputs.branch }}
+      - name: Output Version ID
+        id: version-id
+        run: echo "version-id=$(npx wrangler versions list --json --config dist/server/wrangler.json | jq '.[0].id')" >> "$GITHUB_OUTPUT"
+      - name: Deploy to Production
+        if: ${{ inputs.deploy }}
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}

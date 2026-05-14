@@ -1,16 +1,5 @@
 export const NIL_DATE = new Date("0000-01-01T00:00:00Z");
 
-export function sortBy(arr, by) {
-	arr.sort((a, b) => {
-		const aKey = by(a);
-		const bKey = by(b);
-		if (aKey < bKey) return -1;
-		if (aKey > bKey) return 1;
-		return 0;
-	});
-	return arr;
-}
-
 export async function tryToRunPromiseWithTimeout(
 	signalToPromise,
 	timeout,
