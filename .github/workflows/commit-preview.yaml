@@ -10,7 +10,7 @@ jobs:
     needs: build-website
     secrets: inherit
     with:
-      deploy: ${{ github.ref_name == "main" }}
+      deploy: ${{ github.ref_name == 'main' }}
 
   comment-on-commit:
       name: Add a comment on the commit
