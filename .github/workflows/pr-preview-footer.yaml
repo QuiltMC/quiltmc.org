@@ -15,5 +15,5 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           body-template: |
             ---
-            See preview on Cloudflare Pages: https://preview-${{ github.event.number }}.quiltmc-org.pages.dev
+            See preview on Cloudflare Pages: https://preview-${{ github.event.number }}-quiltmc-org.quiltmc.workers.dev
           body-update-action: "suffix"
