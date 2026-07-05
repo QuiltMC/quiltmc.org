@@ -40,7 +40,15 @@ export async function GET(context) {
 	} else {
 		const extension = context.params.arch.startsWith("windows") ? ".exe" : ""
 
-		artifactUrl = base + latest + "/" + context.params.arch + "-" + latest + extension
+		const installerName = context.params.arch + "-" + latest + extension;
+
+		artifactUrl = base + latest + "/" + installerName;
+
+		const response = await fetch(artifactUrl);
+		const newResponse = new Response(response.body, response); // clone so it is no longer immutable
+
+		newResponse.headers.append("Content-Disposition", `attachment; filename="quilt-installer-${installerName}"`);
+		return newResponse;
 	}
 
 	return new Response(artifactUrl, { status: 307, headers: { "Location": artifactUrl } })
