@@ -11,5 +11,5 @@ allowBuilds:
   sharp: true
   tree-sitter: true
   tree-sitter-json: true
-  astro-i18next: true
   workerd: false
+  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa: true
