@@ -6,6 +6,7 @@ allowBuilds:
   '@parcel/watcher': true
   '@scarf/scarf': true
   '@tree-sitter-grammars/tree-sitter-yaml': true
+  'astro-i18next': true
   core-js-pure: true
   esbuild: true
   sharp: true
