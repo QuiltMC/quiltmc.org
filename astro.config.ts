@@ -15,7 +15,6 @@ export default defineConfig({
 
   integrations: [
       mdx(),
-	astroI18next(),
 	sitemap(),
 	compress({ SVG: false, }),
 	searchIndex(),
