@@ -24,10 +24,11 @@ jobs:
 
 
       - name: Set Up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version-file: package.json
           cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install Packages
         run: pnpm install --frozen-lockfile
