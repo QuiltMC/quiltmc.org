@@ -16,7 +16,6 @@ await i18next.init({
 		defaultNS: "common",
 		ns: ["common", "footer", "home", "install", "team"],
 		fallbackLng: "en",
-		debug: true,
 	})
 
 export const onRequest = defineMiddleware((_, next) => {
