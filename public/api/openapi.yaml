@@ -66,6 +66,8 @@ paths:
       tags:
         - v1
       responses:
+        '200':
+          description: Returns the requested installer as a file.
         '307':
           description: Redirects to the maven artifact.
         '404':
