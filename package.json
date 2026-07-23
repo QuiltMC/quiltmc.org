@@ -25,7 +25,6 @@
 		"@types/semver": "^7.7.1",
 		"astro": "^7.0.6",
 		"astro-compress": "^2.4.1",
-		"astro-i18next": "github:quiltmc/astro-i18next#9208ed1",
 		"astro-icon": "^1.1.5",
 		"execa": "^9.6.1",
 		"i18next": "^25.10.10",
