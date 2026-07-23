@@ -17,12 +17,7 @@ export default defineConfig({
 	compress({ SVG: false, }),
 	searchIndex(),
 	icon(),
-	markdownRemark(),
-	i18next({
-		supportedLngs: ["en"],
-		defaultNS: "common",
-		ns: ["common", "footer", "home", "install", "team"]
-	})
+	markdownRemark()
 	],
 
   markdown: {
