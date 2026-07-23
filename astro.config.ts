@@ -20,7 +20,11 @@ export default defineConfig({
 	searchIndex(),
 	icon(),
 	markdownRemark(),
-	i18next({})
+	i18next({
+		supportedLngs: ["en"],
+		defaultNS: "common",
+		ns: ["common", "footer", "home", "install", "team"]
+	})
 	],
 
   markdown: {
