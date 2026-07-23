@@ -1,5 +1,4 @@
 overrides:
-  wrangler: ^4.59.1
   svgo: ^4.0.1
   unicorn-magic: ^0.4.0
 allowBuilds:
