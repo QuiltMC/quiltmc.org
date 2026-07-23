@@ -3,7 +3,6 @@ import site from "@data/Site";
 // @ts-ignore
 import Button from "@atoms/Button.astro";
 // @ts-ignore
-import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
 ---
 
@@ -69,7 +68,6 @@ import { t } from "i18next";
 					</p>
 
 					<p>
-						<Trans i18nKey="disclaimer-unofficial" ns="footer">
 							Quilt is not an official Minecraft product, and is not approved by
 							or associated with Mojang Studios. "Minecraft" is a trademark of
 							Mojang AB and any usage of the Minecraft brand on this site is
@@ -78,11 +76,9 @@ import { t } from "i18next";
 								href="https://www.minecraft.net/en-us/terms#terms-brand_guidelines"
 								target="_blank">Brand and Asset Guidelines</a
 							>.
-						</Trans>
 					</p>
 
 					<p>
-						<Trans i18nKey="disclaimer-icons" ns="footer">
 							All logos used on this site are the property of their respective
 							owners. The CurseForge logo recreation we use in a few places on
 							this site
@@ -90,17 +86,13 @@ import { t } from "i18next";
 								href="https://gist.github.com/thecodewarrior/110057b210551c4ecf2c9be6d58ff824"
 								target="_blank">was created by thecodewarrior</a
 							>.
-						</Trans>
 					</p>
 
 					<p>
-						<Trans i18nKey="sponsored-by" ns="footer">
 							Powered by <a href="https://cloudflare.com/">Cloudflare</a>.
-						</Trans>
 					</p>
 
 					<p>
-						<Trans i18nKey="made-with" ns="footer">
 							Made with
 							<img
 								alt=":pineapple:"
@@ -114,7 +106,6 @@ import { t } from "i18next";
 							<a href="https://github.com/CreativeBulma"
 								>the CreativeBulma extensions</a
 							>.
-						</Trans>
 					</p>
 				</div>
 			</div>
