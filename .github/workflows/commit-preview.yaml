@@ -1,10 +1,4 @@
-on:
-  push:
-  workflow_call:
-    secrets:
-      token:
-        required: false
-        default: ${{ secrets.COZY_PAT }}
+on: [push, workflow_call]
 name: Commit preview
 
 jobs:
@@ -25,7 +19,7 @@ jobs:
       permissions:
         contents: read
       env:
-        GITHUB_PUBLISH_TOKEN: ${{ secrets.token }}
+        GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
         DEPLOYMENT_URL: ${{ needs.publish.outputs.deployment-url }}
       steps:
           - name: Comment on the Comment
