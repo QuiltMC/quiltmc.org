@@ -40,9 +40,6 @@ jobs:
       GITHUB_RUN_ID: ${{ inputs.run-id }}
       GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
     steps:
-      - name: Cozy PAT validation check
-        if: ${{ env.GITHUB_TOKEN != '' }}
-        run: "echo 'Seems Legit?'"
       - name: Download Website HTML
         uses: actions/download-artifact@v8
         with:
