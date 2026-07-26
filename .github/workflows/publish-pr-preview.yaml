@@ -9,6 +9,9 @@ jobs:
     # We need the PR number to generate the branch URL for Cloudflare Pages, but GitHub doesn't seem to have a way to derive the PR number (or receive any input at all) from the triggering workflow, so we use artifacts instead.
     name: Get PR Number
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
     outputs:
       pr-number: ${{ steps.output-pr-number.outputs.pr-number }}
     permissions:
@@ -18,20 +21,22 @@ jobs:
       - name: Download Artifact from triggering workflow
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
-          GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
         uses: actions/download-artifact@v4
         with:
           name: pr_number
           path: pr
           run-id: ${{ env.RUN_ID }}
-          github-token: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ github.token }}
       - name: Output PR Number
         id: output-pr-number
         run: echo "pr-number=$(cat ./pr/pr_number)" >> "$GITHUB_OUTPUT"
-    
+
   publish-preview:
     uses: ./.github/workflows/publish-website.yaml
     needs: get-pr-number
+    permissions:
+      actions: read
+      contents: read
     with:
       branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
       run-id: ${{ github.event.workflow_run.id }}
