@@ -20,6 +20,7 @@ on:
       config-path:
         required: false
         default: dist/server/wrangler.json
+        type: string
     outputs:
       deployment-url:
         description: The URL of the deployed site.
@@ -32,9 +33,6 @@ jobs:
   publish:
     name: "Publish to Cloudflare Pages"
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
     outputs:
       deployment-url: ${{ steps.cloudflare-publish.outputs.deployment-url }}
       version-id: ${{ steps.version-id.outputs.version-id }}
