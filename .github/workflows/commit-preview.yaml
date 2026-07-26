@@ -25,7 +25,6 @@ jobs:
         DEPLOYMENT_URL: ${{ needs.publish.outputs.deployment-url }}
       steps:
           - name: Comment on the Comment
-            if: env.GITHUB_PUBLISH_TOKEN != ''
             uses: peter-evans/commit-comment@v4 # v3.0.0
             with:
               body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-quiltmc-org.quiltmc.workers.dev"
