@@ -18,7 +18,7 @@ on:
         required: false
         default: false
         type: boolean
-      config-path:
+      wrangler-config-path:
         required: false
         default: dist/server/wrangler.json
         type: string
@@ -59,7 +59,7 @@ jobs:
       - name: Output Version ID
         id: version-id
         env:
-          CONFIG_PATH: ${{ inputs.config-path }}
+          CONFIG_PATH: ${{ inputs.wrangler-config-path }}
         run: echo "version-id=$(npx wrangler versions list --json --config ${CONFIG_PATH} | jq '.[0].id')" >> "$GITHUB_OUTPUT"
       - name: Deploy to Production
         if: ${{ inputs.deploy }}

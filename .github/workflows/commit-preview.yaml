@@ -1,4 +1,12 @@
-on: [push, workflow_call]
+on:
+  push:
+  workflow_call:
+    inputs:
+      wrangler-config-path:
+        required: false
+        default: dist/server/wrangler.json
+        type: string
+
 name: Commit preview
 
 jobs:
@@ -14,6 +22,7 @@ jobs:
       contents: read
     with:
       deploy: ${{ github.ref_name == 'main' }}
+      wrangler-config-path: ${{ inputs.wrangler-config-path }}
 
   comment-on-commit:
       name: Add a comment on the commit
