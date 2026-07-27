@@ -5,8 +5,6 @@ jobs:
   comment-on-commit:
       name: Add a comment on the commit
       runs-on: ubuntu-latest
-      permissions:
-        contents: read
       env:
         DEPLOYMENT_URL: http://example.com
       steps:
