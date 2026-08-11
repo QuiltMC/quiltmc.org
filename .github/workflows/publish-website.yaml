@@ -1,3 +1,4 @@
+name: Publish to Cloudflare
 on:
   workflow_call:
     inputs:
@@ -17,6 +18,10 @@ on:
         required: false
         default: false
         type: boolean
+      wrangler-config-path:
+        required: false
+        default: dist/server/wrangler.json
+        type: string
     outputs:
       deployment-url:
         description: The URL of the deployed site.
@@ -37,15 +42,13 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      GITHUB_RUN_ID: ${{ inputs.run-id }}
-      GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
     steps:
       - name: Download Website HTML
         uses: actions/download-artifact@v8
         with:
           name: html
-          run-id: ${{ env.GITHUB_RUN_ID }}
-          github-token: ${{ env.GITHUB_TOKEN }}
+          run-id: ${{ inputs.run-id }}
+          github-token: ${{ github.token }}
       - name: Upload to Cloudflare
         id: cloudflare-publish # This step needs an ID because its outputs may be needed in subsequent jobs.
         uses: cloudflare/wrangler-action@v4
@@ -55,7 +58,9 @@ jobs:
           command: versions upload --preview-alias ${{ inputs.branch }}
       - name: Output Version ID
         id: version-id
-        run: echo "version-id=$(npx wrangler versions list --json --config dist/server/wrangler.json | jq '.[0].id')" >> "$GITHUB_OUTPUT"
+        env:
+          CONFIG_PATH: ${{ inputs.wrangler-config-path }}
+        run: echo "version-id=$(npx wrangler versions list --json --config ${CONFIG_PATH:-dist/server/wrangler.json} | jq '.[0].id')" >> "$GITHUB_OUTPUT"
       - name: Deploy to Production
         if: ${{ inputs.deploy }}
         uses: cloudflare/wrangler-action@v4
