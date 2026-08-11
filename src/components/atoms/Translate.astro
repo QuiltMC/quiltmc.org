@@ -1,0 +1,22 @@
+---
+import i18next from 'i18next'
+interface Props {
+	key: string
+}
+const { key } = Astro.props
+let translatedString = i18next.t(key)
+
+const tagRegex = /<([\w\d]+)([^>]*)>/g // Detects HTML tags. Credit: Josh Kumar (astro-i18next)
+const inputString = await Astro.slots.render("default")
+const tags = [...inputString.matchAll(tagRegex)]
+
+for (let index = 0; index < tags.length; index++) {
+	let tag = tags[index]
+	let tagName = tag[1]
+	let tagAttributes = tag[2]
+	translatedString = translatedString.replace(`<${index}>`, `<${tagName}${tagAttributes}>`)
+	translatedString = translatedString.replace(`</${index}>`, `</${tagName}>`)
+}
+
+---
+<Fragment set:html={translatedString} />
