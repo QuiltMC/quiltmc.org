@@ -1,4 +1,12 @@
-on: [push]
+on:
+  push:
+  workflow_call:
+    inputs:
+      wrangler-config-path:
+        required: false
+        default: dist/server/wrangler.json
+        type: string
+
 name: Commit preview
 
 jobs:
@@ -9,24 +17,21 @@ jobs:
     uses: ./.github/workflows/publish-website.yaml
     needs: build-website
     secrets: inherit
+    permissions:
+      actions: read
+      contents: read
     with:
       deploy: ${{ github.ref_name == 'main' }}
+      wrangler-config-path: ${{ inputs.wrangler-config-path }}
 
   comment-on-commit:
       name: Add a comment on the commit
       runs-on: ubuntu-latest
       needs: publish
-      permissions:
-        contents: read
       env:
-        GITHUB_PUBLISH_TOKEN: ${{ secrets.COZY_PAT }}
         DEPLOYMENT_URL: ${{ needs.publish.outputs.deployment-url }}
       steps:
           - name: Comment on the Comment
-            if: env.GITHUB_PUBLISH_TOKEN != ''
-            uses: peter-evans/commit-comment@5a6f8285b8f2e8376e41fe1b563db48e6cf78c09 # v3.0.0
+            uses: peter-evans/commit-comment@v4
             with:
-              token: ${{ env.GITHUB_PUBLISH_TOKEN }}
-              repository: ${{ github.repository }}
-              sha: ${{ github.sha }}
               body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-quiltmc-org.quiltmc.workers.dev"
