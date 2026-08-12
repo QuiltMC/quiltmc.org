@@ -32,7 +32,6 @@
 		"i18next-fs-fluent-backend": "github:quiltmc/i18next-fs-fluent-backend",
 		"jsdom": "^30.0.1",
 		"lunr": "^2.3.9",
-		"quilt-bulma": "0.0.24",
 		"rehype-autolink-headings": "^7.1.0",
 		"rollup": "^4.62.4",
 		"sass": "^1.102.0",
@@ -40,6 +39,10 @@
 		"wrangler": "^4.120.0"
 	},
 	"dependencies": {
+		"@creativebulma/bulma-divider": "^1.1.0",
+		"@creativebulma/bulma-tooltip": "^1.2.0",
+		"@samlam140330/bulma-timeline": "^1.0.3",
+		"bulma": "^1.0.4",
 		"fast-xml-parser": "^5.10.1",
 		"semver": "^7.8.5"
 	},

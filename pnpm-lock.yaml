@@ -13,6 +13,18 @@ importers:
 
   .:
     dependencies:
+      '@creativebulma/bulma-divider':
+        specifier: ^1.1.0
+        version: 1.1.0
+      '@creativebulma/bulma-tooltip':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@samlam140330/bulma-timeline':
+        specifier: ^1.0.3
+        version: 1.0.3
+      bulma:
+        specifier: ^1.0.4
+        version: 1.0.4
       fast-xml-parser:
         specifier: ^5.10.1
         version: 5.10.1
@@ -86,9 +98,6 @@ importers:
       lunr:
         specifier: ^2.3.9
         version: 2.3.9
-      quilt-bulma:
-        specifier: 0.0.24
-        version: 0.0.24
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0
@@ -402,6 +411,12 @@ packages:
     engines: {node: '>=16'}
     cpu: [x64]
     os: [win32]
+
+  '@creativebulma/bulma-divider@1.1.0':
+    resolution: {integrity: sha512-Lx5MlUhgAnTF+wNZ5LXcaE1K0F2m0Pkwte1p08FBsIyRV6Oq7BuKPk/O9XJPcF+vR6BjCxNy/hjYFXtNmoXbNg==}
+
+  '@creativebulma/bulma-tooltip@1.2.0':
+    resolution: {integrity: sha512-ooImbeXEBxf77cttbzA7X5rC5aAWm9UsXIGViFOnsqB+6M944GkB28S5R4UWRqjFd2iW4zGEkEifAU+q43pt2w==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1664,6 +1679,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@samlam140330/bulma-timeline@1.0.3':
+    resolution: {integrity: sha512-XO9QeSthIEconoRBjvyVc+Et0i1BSsjR5m5Qih1rlTl369yf3SmVkvOrOhc2ygmztdsPMN3AhvIaXf8DTEpvJA==}
+
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
@@ -1885,6 +1903,9 @@ packages:
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+
+  bulma@1.0.4:
+    resolution: {integrity: sha512-Ffb6YGXDiZYX3cqvSbHWqQ8+LkX6tVoTcZuVB3lm93sbAVXlO0D6QlOTMnV6g18gILpAXqkG2z9hf9z4hCjz2g==}
 
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
@@ -2896,9 +2917,6 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  quilt-bulma@0.0.24:
-    resolution: {integrity: sha512-V5LQdPdxvQfgI22KQ5U2ls/KlH2tECB6hjziVPoW8ZkD1/ruERDHtOJ71FIuMkhnCuJmDbg4o05u77J9TK8tew==}
-
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
 
@@ -3851,6 +3869,10 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260801.1':
     optional: true
 
+  '@creativebulma/bulma-divider@1.1.0': {}
+
+  '@creativebulma/bulma-tooltip@1.2.0': {}
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -4678,6 +4700,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.62.4':
     optional: true
 
+  '@samlam140330/bulma-timeline@1.0.3': {}
+
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@shikijs/core@4.4.3':
@@ -5053,6 +5077,8 @@ snapshots:
   buffer-crc32@0.2.13: {}
 
   buffer-from@1.1.2: {}
+
+  bulma@1.0.4: {}
 
   camel-case@4.1.2:
     dependencies:
@@ -6511,8 +6537,6 @@ snapshots:
   quansync@0.2.11: {}
 
   queue-microtask@1.2.3: {}
-
-  quilt-bulma@0.0.24: {}
 
   radix3@1.1.2: {}
 
