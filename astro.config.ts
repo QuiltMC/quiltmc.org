@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
+import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import icon from "astro-icon"
 import compress from "astro-compress";
 import searchIndex from "./src/integration/search-index";
@@ -13,6 +15,7 @@ export default defineConfig({
 
   integrations: [
       mdx(),
+	astroI18next(),
 	sitemap(),
 	compress({ SVG: false, }),
 	searchIndex(),
@@ -22,6 +25,9 @@ export default defineConfig({
 
   markdown: {
 	syntaxHighlight: "prism",
+	rehypePlugins: [[rehypeAutolinkHeadings, {
+      behavior: "append"
+	}]]
 	},
 
   vite: {

@@ -1,7 +1,6 @@
 overrides:
   svgo: ^4.0.1
   unicorn-magic: ^0.4.0
-  i18next-fs-backend: ^2.6.6
 allowBuilds:
   '@parcel/watcher': true
   '@scarf/scarf': true
@@ -12,3 +11,4 @@ allowBuilds:
   tree-sitter: true
   tree-sitter-json: true
   workerd: false
+  astro-i18next@https://codeload.github.com/quiltmc/astro-i18next/tar.gz/9208ed1197a6a10c96b7a49713b1eb60ec8fd9aa: true

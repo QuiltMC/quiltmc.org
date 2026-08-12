@@ -7,7 +7,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"strict": true,
-		"verbaitumModuleSyntax": false,
+		"importsNotUsedAsValues": "error",
 		"types": ["astro/client"],
 		"outDir": "./dist",
 		"baseUrl": ".",
