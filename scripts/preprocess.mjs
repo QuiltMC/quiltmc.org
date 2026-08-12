@@ -4,7 +4,6 @@ import { tryToRunPromiseWithTimeout, linkIssues } from "./util.mjs";
 
 async function main() {
 	prepareCacheDirectory();
-	copyCSS();
 	await Promise.all([queryChangelogs()]);
 
 	console.log("preprocess: done\n");
@@ -20,24 +19,6 @@ function prepareCacheDirectory() {
 	}
 }
 
-function copyCSS() {
-	const files = fs.readdirSync(paths.CSS_LOCATION);
-
-	if (!fs.existsSync(paths.CSS_FINAL_LOCATION)) {
-		fs.mkdirSync(paths.CSS_FINAL_LOCATION);
-	}
-
-	files.forEach((file) => {
-		if (file.endsWith(".min.css")) {
-			console.log(`copyCSS: copying ${file}`);
-
-			fs.copyFileSync(
-				`${paths.CSS_LOCATION}/${file}`,
-				`${paths.CSS_FINAL_LOCATION}/${file}`
-			);
-		}
-	});
-}
 async function queryChangelogs() {
 	if (fs.existsSync(paths.CHANGELOG_DIR)) {
 		console.log("queryChangelogs: using existing changelog data");
