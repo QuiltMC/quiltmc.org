@@ -1,0 +1,44 @@
+@import "../util/funcs";
+
+.button-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	margin-bottom: 0.4rem;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	> * {
+		margin: 0.4rem !important;
+	}
+}
+
+.button-grid + .button-grid {
+	margin-top: -0.8rem;
+}
+
+.button {
+	@each $name, $colors in $brand-colors {
+		$background-color: nth($colors, 1);
+		$text-color: nth($colors, 2);
+		$active-color: nth($colors, 3);
+		$border-color: nth-or($colors, 4, $background-color);
+		$active-border-color: nth-or($colors, 5, $active-color);
+
+		&.is-#{$name} {
+			background-color: $background-color;
+			border-color: $border-color;
+			color: $text-color;
+
+			&:hover,
+			&:active {
+				background-color: $active-color;
+				border-color: $active-color;
+			}
+		}
+	}
+}

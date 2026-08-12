@@ -1,0 +1,39 @@
+@import "colours";
+
+$brand-colors: (
+	// name: background-color text-color active-color (border-color) (active-border-color)
+	discord: $blurple $white $blurple-dark,
+	twitter: $twitter-blue $white $twitter-blue-dark,
+	mastodon: $mastodon-blue $white $mastodon-blue-dark,
+	gradle: $gradle-blue $white $gradle-blue-dark,
+	github: $white $black $grey-lightest transparent,
+	rss: $rss $white $rss-dark
+);
+
+$admin-background: $admin-light !default;
+$community-background: $community-light !default;
+$developer-background: $developer-light !default;
+$keyholder-background: $keyholder-light !default;
+$moderator-background: $moderator-light !default;
+$trainee-background: $trainee-light !default;
+
+$role-colors: (
+	admin: $admin $admin-background,
+	community: $community $community-background,
+	developer: $developer $developer-background,
+	keyholder: $keyholder $keyholder-background,
+	moderator: $moderator $moderator-background,
+	trainee: $trainee $trainee-background,
+);
+
+$neutral-background: $white !default;
+
+$pagination-current-background-color: $primary !default;
+$pagination-current-border-color: $primary !default;
+
+$default-border-color: lighten($text, 20%) !default;
+$default-border: 1px solid $default-border-color !default;
+$pre-border: 1px solid darken($dark, 20%) !default;
+$navbar-transparent-background: rgba(255, 255, 255, 0.3) !default;
+
+$transparent-text: transparentize($text, 0.7) !default;

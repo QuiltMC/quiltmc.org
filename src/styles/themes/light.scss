@@ -1,0 +1,87 @@
+@import "../common/modifiers";
+
+$role-modifier-amount: 40%;
+$role-modifier-amount-secondary: 25%;
+$role-modifier-amount-tertiary: 40%;
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+@import "../common/colours";
+
+$warning: #e7b416;
+
+$primary-lighter: bulmaLighten($primary, 41%);
+$dark: $primary-lighter;
+$white: #fefcff;
+$link: #2291e6;
+
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+@import "../common/derived";
+
+$neutral-background: $white;
+$body-background-color: $neutral-background;
+
+$footer-background-color: $primary-lighter;
+$tabs-boxed-link-active-background-color: $white;
+$tabs-boxed-link-active-color: $text;
+
+$link-hover: $link-dark;
+$link-active: $link-dark;
+
+$message-background-color: $primary-lighter;
+$message-body-border-color: $primary;
+$message-body-color: $text !important;
+$message-body-border-width: 0.1rem;
+$message-header-background-color: $primary;
+$message-header-color: $text;
+
+$code-background: $primary-lighter;
+$code: $primary-dark;
+
+$tabs-link-active-color: $code;
+$tabs-link-hover-color: $code;
+$tabs-link-color: $code;
+
+$pre-background: $primary-lighter;
+
+$tag-background-color: $primary-lighter;
+
+$menu-item-active-background-color: $primary;
+$menu-item-hover-background-color: $primary-lighter;
+
+$content-blockquote-background-color: $primary-lighter;
+
+@if $rtl {
+	$content-blockquote-border-right: 5px solid $primary;
+} @else {
+	$content-blockquote-border-left: 5px solid $primary;
+}
+
+$navbar-item-active-background-color: $primary-lighter;
+$navbar-item-active-color: $text;
+$navbar-item-hover-background-color: $primary-lighter;
+$navbar-item-hover-color: $text;
+
+$timeline-icon-size: 1.5rem;
+$timeline-line-width: 2px;
+$timeline-line-color: $text;
+$timeline-marker-background-color: darken($dark, 10%);
+$timeline-marker-border: 2px solid $text;
+
+$card-background-color: $dark;
+
+$modal-close-dimensions: 80px;
+$modal-close-button-color: $black;
+
+$hr-color: $grey-lighter;
+$notification-link-color: $black;
+$inline-divider-color: $grey-lighter;
+
+$brand-colors: map-merge(
+	$brand-colors,
+	(
+		github: $white $black $white-bis $black $black,
+		rss: $rss $white $rss-light,
+	)
+);
+$theme-switcher-enabled: true;

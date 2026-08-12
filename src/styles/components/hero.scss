@@ -1,0 +1,23 @@
+.hero .tabs.is-boxed li.is-active a {
+	background-color: $body-background-color !important;
+	border-color: transparent !important;
+	color: $text !important;
+}
+
+.has-background-patches {
+	background-image: url("/assets/img/hero-bg-light.svg");
+	background-position: top;
+	background-repeat: repeat;
+	background-size: 25rem;
+
+	&.hero {
+		.navbar-menu,
+		.navbar-brand {
+			background-color: transparentize($dark, 0.3);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		background-image: url("/assets/img/hero-bg.svg");
+	}
+}

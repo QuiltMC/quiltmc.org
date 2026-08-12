@@ -1,0 +1,9 @@
+/// Tries to retrieve the element at the given index of the list.
+/// If no such element exists, returns a default value.
+@function nth-or($list, $index, $default) {
+	$value: $default;
+	@if length($list) >= $index {
+		$value: nth($list, $index);
+	}
+	@return $value;
+}

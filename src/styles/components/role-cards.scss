@@ -1,0 +1,21 @@
+.card,
+.message {
+	@each $name, $role in $role-colors {
+		$main-color: nth($role, 1);
+		$background-color: nth($role, 2);
+
+		&.#{$name} {
+			border: 0.1rem solid $main-color;
+			background: $background-color;
+
+			.system-members div img {
+				border: 1px solid $main-color;
+			}
+
+			.avatar img {
+				background-color: $background-color !important;
+				border-color: $main-color !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@import "modifiers";
+
+// Main palette
+$primary: #9722ff;
+$link: #27a2fd;
+$info: #3041f2;
+$success: #41d02a;
+$warning: #fcff22;
+$danger: #ff2222;
+
+// Role colors
+
+$admin: #e5aa01 !default;
+$admin-dark: darken($admin, $role-modifier-amount) !default;
+$admin-light: lighten($admin, $role-modifier-amount) !default;
+
+$community: #2ac48e !default;
+$community-dark: darken($community, $role-modifier-amount) !default;
+$community-light: lighten($community, $role-modifier-amount) !default;
+
+$developer: #41d02a !default;
+$developer-dark: darken($developer, $role-modifier-amount-tertiary) !default;
+$developer-light: lighten($developer, $role-modifier-amount-tertiary) !default;
+
+$keyholder: #05c5ff !default;
+$keyholder-dark: darken($keyholder, $role-modifier-amount-tertiary) !default;
+$keyholder-light: lighten($keyholder, $role-modifier-amount-tertiary) !default;
+
+$moderator: #e68675 !default;
+$moderator-dark: darken($moderator, $role-modifier-amount-secondary) !default;
+$moderator-light: lighten($moderator, $role-modifier-amount-secondary) !default;
+
+$trainee: #dea4b4 !default;
+$trainee-dark: darken($trainee, $role-modifier-amount) !default;
+$trainee-light: lighten($trainee, $role-modifier-amount) !default;
+
+$starchild: #de1f26;
+$starchild-light: lighten($starchild, 30%);
+$starchild-dark: darken($starchild, 30%);
+
+// Brand colors
+
+$blurple: #5865f2;
+$blurple-dark: darken($blurple, $brand-modifier-amount);
+$blurple-light: lighten($blurple, $brand-modifier-amount);
+
+$rss: #ff8c00;
+$rss-dark: darken($rss, $brand-modifier-amount);
+$rss-light: lighten($rss, $brand-modifier-amount);
+
+$twitter-blue: #1da1f2;
+$twitter-blue-dark: darken($twitter-blue, $brand-modifier-amount);
+$twitter-blue-light: lighten($twitter-blue, $brand-modifier-amount);
+
+$mastodon-blue: #6364ff;
+$mastodon-blue-dark: darken($mastodon-blue, $brand-modifier-amount);
+$mastodon-blue-light: lighten($mastodon-blue, $brand-modifier-amount);
+
+$gradle-blue: #28b3c7;
+$gradle-blue-dark: darken($gradle-blue, $brand-modifier-amount);
+$gradle-blue-light: lighten($gradle-blue, $brand-modifier-amount);
+
+$custom-colors: (
+	"blurple": $blurple,
+);

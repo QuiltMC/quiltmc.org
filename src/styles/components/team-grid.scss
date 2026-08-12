@@ -1,0 +1,114 @@
+.team-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	justify-content: center;
+
+	@each $name, $role in $role-colors {
+		$main-color: nth($role, 1);
+		$background-color: nth($role, 2);
+
+		&.#{$name} .card {
+			border: 0.1rem solid $main-color;
+			background: $background-color;
+
+			.system-members div img {
+				border: 1px solid $main-color;
+			}
+
+			.avatar img {
+				background-color: $background-color !important;
+				border-color: $main-color !important;
+			}
+		}
+	}
+
+	&.with-neutral .card .avatar img {
+		background-color: $neutral-background !important;
+	}
+}
+
+.card.is-team-member {
+	width: 17rem;
+
+	margin: 5rem 0.5rem 0;
+
+	.card-image img {
+		height: 8rem;
+		width: 100%;
+
+		object-fit: cover;
+	}
+
+	.card-content {
+		padding-top: 4rem;
+
+		.system-members {
+			display: flex;
+			flex-flow: row wrap;
+
+			justify-content: center;
+
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+
+			div {
+				height: 2rem;
+				width: 2rem;
+				margin: 0rem 0.1rem;
+
+				img {
+					height: 2rem;
+					width: 2rem;
+
+					border-radius: 100%;
+					border: 1px solid $text;
+				}
+			}
+		}
+
+		.media {
+			&.system-member-title {
+				margin-bottom: 0.2rem;
+			}
+
+			.subtitle {
+				color: transparentize($text, 0.2);
+
+				&.system-members {
+					margin-bottom: 0.3rem;
+				}
+
+				&.is-links {
+					margin-top: 0.5rem;
+
+					a:not(:last-child) {
+						margin-right: 0.2rem;
+					}
+				}
+			}
+		}
+
+		.avatar {
+			position: absolute;
+			top: -3.5rem;
+			left: 0;
+
+			display: flex;
+			justify-content: center;
+			width: 100%;
+
+			img {
+				display: inline-block;
+				height: 7rem;
+				width: 7rem;
+
+				background-color: $card-background-color;
+				border-radius: 100%;
+				border: 2px solid $text;
+			}
+		}
+	}
+}

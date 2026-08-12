@@ -1,0 +1,63 @@
+$theme-switcher-enabled: false !default;
+$low-contrast-switch-enabled: false !default;
+
+#theme-switcher {
+	display: if($theme-switcher-enabled, flex, none);
+}
+
+#language-switcher:checked ~ #language-modal {
+	display: flex;
+}
+
+@mixin low-contrast {
+	filter: brightness(70%) contrast(90%) saturate(90%);
+}
+
+#low-contrast {
+	&:not(:checked) ~ * {
+		#theme-low-contrast {
+			display: none;
+		}
+	}
+	&:checked ~ * {
+		@include low-contrast;
+
+		#theme-low-contrast {
+			display: block;
+		}
+
+		#theme-normal-contrast {
+			display: none;
+		}
+	}
+}
+
+#toggle-navbar:checked ~ {
+	section,
+	nav {
+		.navbar-menu {
+			display: block;
+		}
+	}
+}
+#toggle-sidebar:checked ~ div .sidebar {
+	display: block !important;
+}
+
+label[for="low-contrast"] {
+	display: if($low-contrast-switch-enabled, flex, none);
+}
+
+@if $low-contrast-switch-enabled {
+	/* For the low-contrast peeps out there, we'll do some filtering. Best we can do for now. */
+	@media (prefers-contrast: less) {
+		// This is not an error, your editor is just wrong.
+		body > * {
+			@include low-contrast;
+		}
+
+		label[for="low-contrast"] {
+			display: none !important;
+		}
+	}
+}
