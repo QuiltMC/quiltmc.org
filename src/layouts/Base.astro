@@ -3,6 +3,7 @@ import LanguageModal from "@atoms/LanguageModal.astro";
 import Footer from "@setpieces/Footer.astro";
 import HtmlHead, { HeadProps } from "@setpieces/HtmlHead.astro";
 import NavBar from "@setpieces/NavBar.astro";
+import initi18next from "@util/i18next"
 
 import i18next from "i18next";
 import rtlSettings from "@data/RtlSettings";
@@ -10,6 +11,9 @@ import rtlSettings from "@data/RtlSettings";
 export interface BaseProps extends HeadProps {
 	isPrivate?: boolean;
 }
+
+initi18next()
+console.log("i18next.languages is " + i18next.languages)
 const content = Astro.props.content as BaseProps;
 
 // extract locale from URL
