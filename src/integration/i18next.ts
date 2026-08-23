@@ -8,7 +8,6 @@ export default function i18nextIntegration(options: InitOptions<unknown>): Astro
 		name: "i18next",
 		hooks: {
 			"astro:config:done": async () => {
-				console.log("Initiating i18next...")
 				i18next.use(fluent)
 				i18next.use(backend)
 				await i18next.init(options)
