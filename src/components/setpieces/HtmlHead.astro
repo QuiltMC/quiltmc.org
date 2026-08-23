@@ -3,7 +3,6 @@ import site from "@data/Site";
 import i18next, { t } from "i18next";
 import rtlSettings from "@data/RtlSettings";
 
-import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface HeadProps {
 	title: string;
@@ -49,8 +48,6 @@ const titleFormatted = t("title-formatted", {
 	<meta name="theme-color" content="#1b112b" />
 
 	<link rel="canonical" href={Astro.url} />
-
-	<HeadHrefLangs />
 
 	<meta name="author" content={site.social.name} />
 	<meta name="description" content={description} />
