@@ -12,7 +12,7 @@ jobs:
       - name: Add preview footer to PR
         uses: devindford/Append_PR_Comment@32dd2619cd96ac8da9907c416c992fe265233ca8 # v1.1.3
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          repo-token: "${{ github.token }}"
           body-template: |
             ---
             See preview on Cloudflare Pages: https://preview-${{ github.event.number }}-quiltmc-org.quiltmc.workers.dev
