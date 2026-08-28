@@ -4,9 +4,9 @@ on:
     types: [completed]
   workflow_call:
     inputs:
-      run-id:
+      wrangler-config-path:
         type: string
-        required: true
+        required: false
 
 name: Publish PR preview
 
@@ -43,4 +43,5 @@ jobs:
     with:
       branch: preview-${{ needs.get-pr-number.outputs.pr-number }}
       run-id: ${{ github.event.workflow_run.id }}
+      wrangler-config-path: ${{ inputs.wrangler-config-path }}
     secrets: inherit
