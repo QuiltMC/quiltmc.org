@@ -56,11 +56,6 @@ jobs:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
           command: versions upload --preview-alias ${{ inputs.branch }}
-      - name: Output Version ID
-        id: version-id
-        env:
-          CONFIG_PATH: ${{ inputs.wrangler-config-path }}
-        run: echo "version-id=$(npx wrangler versions list --json --config ${CONFIG_PATH:-dist/server/wrangler.json} | jq '.[0].id')" >> "$GITHUB_OUTPUT"
       - name: Deploy to Production
         if: ${{ inputs.deploy }}
         uses: cloudflare/wrangler-action@v4
