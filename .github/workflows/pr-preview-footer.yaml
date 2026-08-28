@@ -1,6 +1,11 @@
 on:
   pull_request_target:
     types: [opened]
+  workflow_call:
+    inputs:
+      preview-domain:
+        type: string
+        required: false
 name: Add footer to PR
 
 jobs:
@@ -15,5 +20,5 @@ jobs:
           repo-token: "${{ github.token }}"
           body-template: |
             ---
-            See preview on Cloudflare Pages: https://preview-${{ github.event.number }}-quiltmc-org.quiltmc.workers.dev
+            See preview on Cloudflare Pages: https://preview-${{ github.event.number }}-${{ inputs.preview-domain || quiltmc-org.quiltmc.workers.dev }}
           body-update-action: "suffix"
