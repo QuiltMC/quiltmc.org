@@ -18,10 +18,6 @@ on:
         required: false
         default: false
         type: boolean
-      wrangler-config-path:
-        required: false
-        default: dist/server/wrangler.json
-        type: string
     outputs:
       deployment-url:
         description: The URL of the deployed site.
