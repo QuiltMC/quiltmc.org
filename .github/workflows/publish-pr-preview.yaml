@@ -3,10 +3,6 @@ on:
     workflows: ["Build PR preview"]
     types: [completed]
   workflow_call:
-    inputs:
-      run-id:
-        type: string
-        required: true
 
 name: Publish PR preview
 
