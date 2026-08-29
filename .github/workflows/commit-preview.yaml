@@ -1,6 +1,10 @@
 on:
   push:
   workflow_call:
+    inputs:
+      preview-domain:
+        type: string
+        required: false
 
 name: Commit preview
 
@@ -28,4 +32,4 @@ jobs:
           - name: Comment on the Comment
             uses: peter-evans/commit-comment@v4
             with:
-              body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-quiltmc-org.quiltmc.workers.dev"
+              body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-{{ inputs.preview-domain || 'quiltmc-org.quiltmc.workers.dev' }}"
