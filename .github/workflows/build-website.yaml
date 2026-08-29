@@ -22,7 +22,6 @@ jobs:
           version: 12
           runtime: node@lts
           cache: true
-          require-lockfile: true # Install can't run without Node set up, and Node needs to be set up after PNPM to enable caching
 
       - name: Build the website
         run: pnpm run build
