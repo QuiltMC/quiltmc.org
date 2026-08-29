@@ -1,4 +1,10 @@
-on: [pull_request]
+on:
+  pull_request:
+  workflow_call:
+    inputs:
+      pr-number:
+        type: number
+        required: true
 name: Build PR preview
 
 jobs:
@@ -6,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Write PR Number to file
-        env: 
-          PR_NUMBER: ${{ github.event.number }}
+        env:
+          PR_NUMBER: ${{ inputs.pr-number || github.event.number }}
         run: mkdir ./pr && echo $PR_NUMBER > ./pr/pr_number
       - name: Upload PR Number as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pr_number
           path: pr/

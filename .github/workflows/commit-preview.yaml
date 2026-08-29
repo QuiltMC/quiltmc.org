@@ -2,10 +2,9 @@ on:
   push:
   workflow_call:
     inputs:
-      wrangler-config-path:
-        required: false
-        default: dist/server/wrangler.json
+      preview-domain:
         type: string
+        required: false
 
 name: Commit preview
 
@@ -22,16 +21,13 @@ jobs:
       contents: read
     with:
       deploy: ${{ github.ref_name == 'main' }}
-      wrangler-config-path: ${{ inputs.wrangler-config-path }}
 
   comment-on-commit:
       name: Add a comment on the commit
       runs-on: ubuntu-latest
       needs: publish
-      env:
-        DEPLOYMENT_URL: ${{ needs.publish.outputs.deployment-url }}
       steps:
           - name: Comment on the Comment
             uses: peter-evans/commit-comment@v4
             with:
-              body: "See the preview on Cloudflare: ${{ env.DEPLOYMENT_URL }}\nBranch URL: https://${{ github.ref_name }}-quiltmc-org.quiltmc.workers.dev"
+              body: "See the preview on Cloudflare: ${{ needs.publish.outputs.deployment-url }}\nBranch URL: https://${{ github.ref_name }}-${{ inputs.preview-domain || 'quiltmc-org.quiltmc.workers.dev' }}"
