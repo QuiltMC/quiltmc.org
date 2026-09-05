@@ -1,6 +1,7 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -bakaxl = BakaXL
+-meshmc = MeshMC
 -multimc = MultiMC
 -prismlauncher = Prism Launcher
 -technic = Technic
@@ -12,6 +13,7 @@ platform-bakaxl = BakaXL
 platform-client = Client
 platform-server = Server
 platform-atlauncher = {-atlauncher}
+platform-meshmc = {-meshmc}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
@@ -23,6 +25,7 @@ logo-minecraft = Minecraft logo
 logo-java = Java logo
 logo-atlauncher = {-atlauncher} logo
 logo-bakaxl = {-bakaxl} logo
+logo-meshmc = {-meshmc} logo
 logo-multimc = {-multimc} logo
 logo-prismlauncher = {-prismlauncher} logo
 logo-technic = Technic Launcher logo

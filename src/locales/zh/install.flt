@@ -1,6 +1,7 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -bakaxl = BakaXL
+-meshmc = MeshMC
 -multimc = MultiMC
 -prismlauncher = Prism Launcher
 -technic = Technic
@@ -11,6 +12,7 @@ platform-bakaxl = BakaXL
 platform-client = 客户端
 platform-server = 服务端
 platform-atlauncher = {-atlauncher}
+platform-meshmc = {-meshmc}
 platform-multimc = {-multimc}
 platform-prismlauncher = {-prismlauncher}
 platform-technic = {-technic}
@@ -21,6 +23,7 @@ logo-minecraft = Minecraft 的标志
 logo-java = Java 的标志
 logo-atlauncher = {-atlauncher} 的标志
 logo-bakaxl = {-bakaxl} 的标志
+logo-meshmc = {-meshmc} 的标志
 logo-multimc = {-multimc} 的标志
 logo-prismlauncher = {-prismlauncher} 的标志
 logo-technic = Technic 启动器的标志
