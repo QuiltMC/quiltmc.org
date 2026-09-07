@@ -65,12 +65,12 @@ $message-header-color: $text;
 $message-colors: (
 	"light": (
 		$dark-light,
-		$light-invert,
+		// $light-invert,
 		darken($light, 20%),
 	),
 	"dark": (
 		lighten($dark, 15%),
-		$dark-invert,
+		// $dark-invert,
 		$dark,
 	),
 	"primary": (
