@@ -67,7 +67,7 @@ $unicode-ranges: (
 	(latin, latin-ext, devanagari)
 );
 
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/initial-variables";
 
 $header-font: join("Poppins", $family-sans-serif, $separator: "comma");
 $family-sans-serif: join(

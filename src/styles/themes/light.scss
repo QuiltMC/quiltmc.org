@@ -4,8 +4,8 @@ $role-modifier-amount: 40%;
 $role-modifier-amount-secondary: 25%;
 $role-modifier-amount-tertiary: 40%;
 
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-@import "../../node_modules/bulma/sass/utilities/functions";
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
 @import "../common/colours";
 
 $warning: #e7b416;
@@ -15,7 +15,7 @@ $dark: $primary-lighter;
 $white: #fefcff;
 $link: #2291e6;
 
-@import "../../node_modules/bulma/sass/utilities/derived-variables";
+@import "bulma/sass/utilities/derived-variables";
 @import "../common/derived";
 
 $neutral-background: $white;
