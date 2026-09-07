@@ -71,21 +71,6 @@ const titleFormatted = t("title-formatted", {
 	<meta property="twitter:image" content={site.logo} />
 	<meta property="twitter:title" content={props.title} />
 
-	<link
-		rel="stylesheet"
-		href={rtl
-			? "/assets/css/style-dark-rtl.min.css"
-			: "/assets/css/style-dark.min.css"}
-		media="(prefers-color-scheme: dark)"
-	/>
-	<link
-		rel="stylesheet"
-		href={rtl
-			? "/assets/css/style-light-rtl.min.css"
-			: "/assets/css/style-light.min.css"}
-		media="(prefers-color-scheme: light)"
-	/>
-
 	<script>
 		import "src/script";
 	</script>
