@@ -2,6 +2,8 @@ on:
   workflow_run:
     workflows: ["Build PR preview"]
     types: [completed]
+  workflow_call:
+
 name: Publish PR preview
 
 jobs:
@@ -18,7 +20,7 @@ jobs:
       - name: Download Artifact from triggering workflow
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: pr_number
           path: pr

@@ -1,4 +1,4 @@
-on: workflow_dispatch
+on: [workflow_dispatch, workflow_call]
 name: Manual publish
 
 jobs:

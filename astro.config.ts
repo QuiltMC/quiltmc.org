@@ -6,6 +6,7 @@ import compress from "astro-compress";
 import searchIndex from "./src/integration/search-index";
 import cloudflare from "@astrojs/cloudflare";
 import markdownRemark from "@studiocms/markdown-remark";
+import i18next from "src/integration/i18next";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,7 +18,12 @@ export default defineConfig({
 	compress({ SVG: false, }),
 	searchIndex(),
 	icon(),
-	markdownRemark()
+	markdownRemark(),
+	i18next({
+		supportedLngs: ["en"],
+		defaultNS: "common",
+		ns: ["common", "footer", "home", "install", "team"]
+	})
 	],
 
   markdown: {
