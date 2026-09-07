@@ -19,9 +19,6 @@ importers:
       '@creativebulma/bulma-tooltip':
         specifier: ^1.2.0
         version: 1.2.0
-      '@samlam140330/bulma-timeline':
-        specifier: ^1.0.3
-        version: 1.0.3
       bulma:
         specifier: ^1.0.4
         version: 1.0.4
@@ -1680,9 +1677,6 @@ packages:
     resolution: {integrity: sha512-/gDJaRs4gl0NPIwqCz+6PkpmhhjRAD2j6P4rSNHBzUkO3naEx2mIU0pRle1vUNRQ7mE/+8OOeXLTv/J56FKiQg==}
     cpu: [x64]
     os: [win32]
-
-  '@samlam140330/bulma-timeline@1.0.3':
-    resolution: {integrity: sha512-XO9QeSthIEconoRBjvyVc+Et0i1BSsjR5m5Qih1rlTl369yf3SmVkvOrOhc2ygmztdsPMN3AhvIaXf8DTEpvJA==}
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
@@ -4606,8 +4600,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.62.5':
     optional: true
-
-  '@samlam140330/bulma-timeline@1.0.3': {}
 
   '@sec-ant/readable-stream@0.4.1': {}
 
