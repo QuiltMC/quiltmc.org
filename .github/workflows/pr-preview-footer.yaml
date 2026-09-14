@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Add preview footer to PR
-        uses: devindford/Append_PR_Comment@v1
+        uses: devindford/Append_PR_Comment@main
         with:
           repo-token: "${{ github.token }}"
           body-template: |

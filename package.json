@@ -11,10 +11,10 @@
 	},
 	"devDependencies": {
 		"@astro-openapi/gui-swagger": "^0.0.5",
-		"@astrojs/cloudflare": "^14.2.3",
-		"@astrojs/mdx": "^7.0.7",
+		"@astrojs/cloudflare": "^14.3.1",
+		"@astrojs/mdx": "^8.0.1",
 		"@astrojs/rss": "^4.0.19",
-		"@astrojs/sitemap": "^3.7.3",
+		"@astrojs/sitemap": "^3.7.4",
 		"@babel/traverse": "^8.0.4",
 		"@iconify-json/cib": "^1.2.3",
 		"@iconify-json/material-symbols": "^1.2.89",
@@ -23,7 +23,7 @@
 		"@types/jsdom": "^30.0.0",
 		"@types/lunr": "^2.3.7",
 		"@types/semver": "^7.8.0",
-		"astro": "^7.2.4",
+		"astro": "^7.3.2",
 		"astro-compress": "^2.4.3",
 		"astro-icon": "^1.2.0",
 		"execa": "^10.0.1",
@@ -37,7 +37,7 @@
 		"rollup": "^4.62.5",
 		"sass": "^1.103.1",
 		"typescript": "^6.0.3",
-		"wrangler": "^4.125.0"
+		"wrangler": "^4.130.0"
 	},
 	"dependencies": {
 		"fast-xml-parser": "^5.11.0",
