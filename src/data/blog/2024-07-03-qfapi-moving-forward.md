@@ -16,7 +16,7 @@ On a more serious note, you may have noticed that 1.20.6 has been out since late
 ## why things have taken so darn long
 QSL updates are slow for a few reasons. For one, it's huge! It spans several very complex problems that normal modders don't need to think much about, like the internals of networking, synchronizing registries, and loading mod-provided resources. Additionally, these huge APIs touch parts of the Minecraft codebase that are refactored by Mojang all the time, meaning even an update like 1.20.4 to 1.20.5 might require a rewrite of half the networking module.
 
-Another hurdle for porting QSL is that its APIs must be implemented in a way that is compatible with QFAPI. This means that we not only have to design a new API that elegantly represents how the internal Minecraft code changed, while still being similar enough to Fabric that we can maintain compatability.
+Another hurdle for porting QSL is that its APIs must be implemented in a way that is compatible with QFAPI. This means that we not only have to design a new API that elegantly represents how the internal Minecraft code changed, while still being similar enough to Fabric that we can maintain compatibility.
 
 But perhaps the biggest problem with porting QSL is that these complex APIs are really old! The original contributors for these APIs, who intimately understood how they worked, have moved on from Quilt. That means that our "new guard" of core maintainers, who didn't write the now-broken APIs, have to learn how they work as we try to fix them, which is slow and very error-prone.
 

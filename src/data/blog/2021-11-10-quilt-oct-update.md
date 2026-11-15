@@ -68,7 +68,7 @@ Some key documents to be aware of **before** applying:
 - [Our Moderation Ethos](https://quiltmc.org/community/moderation.html)
 - [RFC-7 (The Community Team Structure)](https://github.com/QuiltMC/rfcs/blob/master/structure/0007-community-team.md)
 
-If the qualities outlined in the above documents, seem like you... please step forward and apply. The interview proccess will follow the steps outlined in RFC-7 (TL;DR):
+If the qualities outlined in the above documents, seem like you... please step forward and apply. The interview process will follow the steps outlined in RFC-7 (TL;DR):
 
 - Apply Via ModMail
 - Interview with a Community Manager (and the wider Community Team)
