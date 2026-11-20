@@ -1,6 +1,7 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -bakaxl = BakaXL
+-hmcl = HMCL
 -meshmc = MeshMC
 -multimc = MultiMC
 -prismlauncher = Prism Launcher
@@ -9,6 +10,7 @@
 -gdlauncher = GDLauncher
 
 platform-bakaxl = BakaXL
+platform-hmcl = {-hmcl}
 platform-client = 客户端
 platform-server = 服务端
 platform-atlauncher = {-atlauncher}

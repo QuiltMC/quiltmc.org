@@ -1,6 +1,7 @@
 # Proper nouns; you shouldn't need to edit them.
 -atlauncher = ATLauncher
 -bakaxl = BakaXL
+-hmcl = HMCL
 -meshmc = MeshMC
 -multimc = MultiMC
 -prismlauncher = Prism Launcher
@@ -10,6 +11,7 @@
 -modrinth = Modrinth App
 
 platform-bakaxl = BakaXL
+platform-hmcl = {-hmcl}
 platform-client = Client
 platform-server = Server
 platform-atlauncher = {-atlauncher}
